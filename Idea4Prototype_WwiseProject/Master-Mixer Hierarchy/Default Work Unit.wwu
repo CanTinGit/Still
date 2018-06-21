@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}" SchemaVersion="80">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+							<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="Effect1" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+							<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Meter (Custom)" ID="{8DC0E9FA-B970-44E7-8539-02C7093B00F2}" ShortID="731635156" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+											<PropertyList>
+												<Property Name="AttackTime" Type="Real32" Value="0.1"/>
+												<Property Name="MeterMode" Type="int32" Value="1"/>
+												<Property Name="ReleaseTime" Type="Real32" Value="0.5"/>
+											</PropertyList>
+											<PluginData>
+	<GameParameter Name="noise_detection" ID="{7B380775-F665-4749-A801-FD310080BD1B}"/>
+</PluginData>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</Bus>
+						<Bus Name="Ambience" ID="{872342CB-9CB7-4D3D-9945-F73AA2B59DA4}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{20B2C450-CFD9-42F9-AC1A-591A7C935355}" ShortID="609919567">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="noise_detection" ID="{7B380775-F665-4749-A801-FD310080BD1B}" WorkUnitID="{E016A5A6-0682-456F-BC10-81BBB135CFD0}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{2CDCB9F8-4C66-41E6-8C97-4B6CBBCEC9C8}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>-26</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-48</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="Music" ID="{6CC6408D-3CB5-4A61-8AD7-9F87AD07E265}"/>
+					</ChildrenList>
+				</Bus>
+				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>
+				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

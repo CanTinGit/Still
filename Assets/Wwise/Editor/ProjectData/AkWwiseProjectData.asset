@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55818213ce90921478a1f0802ff87a20, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  CurrentPluginConfig: 
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
+    m_lastTimePsrt1: -1879985920
+    m_lastTimePart2: -1999253004
+    List:
+    - Name: bubble_rise
+      Path: Default Work Unit\bubble_rise
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bubble_rise
+        ObjectType: 3
+      ID: -621016007
+      Guid: 284e521010388f41b1aaaf494b9056db
+      maxAttenuation: 0
+    - Name: bubble_shot
+      Path: Default Work Unit\bubble_shot
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bubble_shot
+        ObjectType: 3
+      ID: 1531020610
+      Guid: 326c18d20ee52d45970ebee7b9aacfaf
+      maxAttenuation: 0
+    - Name: button_click
+      Path: Default Work Unit\button_click
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_click
+        ObjectType: 3
+      ID: 814543256
+      Guid: 669e5d7a01bc7e45af86c4b6ca633b51
+      maxAttenuation: 0
+    - Name: camera_trigger
+      Path: Default Work Unit\camera_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: camera_trigger
+        ObjectType: 3
+      ID: 1860426137
+      Guid: a0dfc76367cfff468bb2d7269528e08b
+      maxAttenuation: 0
+    - Name: can_impact
+      Path: Default Work Unit\can_impact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: can_impact
+        ObjectType: 3
+      ID: 697519634
+      Guid: ac62c32a5eb5c843827b7269bfa7b694
+      maxAttenuation: 0
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
+    m_lastTimePsrt1: -800640000
+    m_lastTimePart2: -1999253024
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
+    m_lastTimePsrt1: -800640000
+    m_lastTimePart2: -1999253024
+    List:
+    - Name: Impact_Force
+      Path: Default Work Unit\Impact_Force
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Impact_Force
+        ObjectType: 9
+      ID: -1355178441
+      Guid: c6941b692515824894137953860bb854
+      values:
+      - Heavy
+      - Light
+      - Medium
+      - None
+      - Very_Light
+      ValueIcons:
+      - ElementName: Heavy
+        ObjectType: 8
+      - ElementName: Light
+        ObjectType: 8
+      - ElementName: Medium
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: Very_Light
+        ObjectType: 8
+      valueIDs: 767bdea223f05c73b08bd2a9db3ba32cc8a7218f
+      ValueGuids:
+      - bytes: df9dd67fa028254fb23e7c95e7f638f4
+      - bytes: 52be8bf7dbe479409bf6b2042ad91618
+      - bytes: f6fa0ea28cbe0042b767ede20e308839
+      - bytes: c7ff68a6d6c161438d27bd3d4826048b
+      - bytes: 4ce501d9a5dbec4180a9150eaa4c3954
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
+    m_lastTimePsrt1: 744061952
+    m_lastTimePart2: -1999253185
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
+    m_lastTimePsrt1: -1879985920
+    m_lastTimePart2: -1999253004
+    List:
+    - Name: Test
+      Path: Default Work Unit\Test
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Test
+        ObjectType: 7
+      ID: -1137964055
+      Guid: a269ae403d80f741a8e59cd8270e44ed
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
+    m_lastTimePsrt1: 1044192768
+    m_lastTimePart2: -1999253181
+    List:
+    - Name: noise_detection
+      Path: Default Work Unit\noise_detection
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: noise_detection
+        ObjectType: 13
+      ID: 866473373
+      Guid: 7507387b65f64947a801fd310080bd1b
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{423FF0F4-4C2C-49B0-BB98-500C1D5DAA9E}'
+    m_lastTimePsrt1: 744061952
+    m_lastTimePart2: -1999253185
+    List: []
+  ExpandedItems:
+  - /Idea4Prototype_WwiseProject
+  - /Idea4Prototype_WwiseProject/Events
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit
+  - /Idea4Prototype_WwiseProject/SoundBanks
+  - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
+  - /Idea4Prototype_WwiseProject/States
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+  autoPopulateEnabled: 1
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  preparePoolSize: 0
+  memoryCutoffThreshold: 0.95
+  callbackManagerBufferSize: 4
