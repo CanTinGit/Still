@@ -301,6 +301,7 @@ public class LevelBuilder : MonoBehaviour
                 }
                 Vector3 newAngle = new Vector3(interactedObject.transform.eulerAngles.x + rotateX, interactedObject.transform.eulerAngles.y + rotateY, interactedObject.transform.eulerAngles.z);
                 interactedObject.transform.eulerAngles = newAngle;
+                SetStartValues(GameObject.Find("Rotate"));
             }
         }
     }
@@ -321,8 +322,8 @@ public class LevelBuilder : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 1000.0f,placeObjectLayer))
         {
             interactedObject.transform.position =  hit.point;
-
             interactedObject.transform.Translate(0.0f, interactedObject.GetComponent<MeshRenderer>().bounds.extents.y + UpDownPlacement, 0.0f);
+            SetStartValues(GameObject.Find("Position"));
         }
     }
     void FlipObjectListPanel()

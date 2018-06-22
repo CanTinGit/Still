@@ -180,7 +180,7 @@ public class CameraAI : MonoBehaviour {
                                 //Setting the isDetect to true means finding player and rotate towards it
                                 isDetected = true;
                                 //Make the sound
-                                AkSoundEngine.PostEvent("camera_trigger", gameObject);
+                                //AkSoundEngine.PostEvent("camera_trigger", gameObject);
                                 //Target is the player that be found
                                 target = player.transform.position;
                                 //Turn the color to red
@@ -213,7 +213,7 @@ public class CameraAI : MonoBehaviour {
         //Initilize the bullet
         GameObject colonBullet = Instantiate(bullet, transform.position, transform.rotation) as GameObject;
         //Play sound
-        AkSoundEngine.PostEvent("bubble_shot", gameObject);
+        //AkSoundEngine.PostEvent("bubble_shot", gameObject);
         isShooted = true;
     }
 

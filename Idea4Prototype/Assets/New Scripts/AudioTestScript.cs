@@ -50,7 +50,7 @@ public class AudioTestScript : MonoBehaviour
             //plays the sound based on the material and the force and the psz group
             GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().PlayAudio(materialName, force, "Impact_Force");
             //the sound being played ( i think??? )
-            AkSoundEngine.PostEvent("can_impact", gameObject);
+            //AkSoundEngine.PostEvent("can_impact", gameObject);
             if (noiseMade > -20)
             {
                 //use this if you want to make the camera to move to this object ( replace "this.transform.position" with the object you want the camera to look at)

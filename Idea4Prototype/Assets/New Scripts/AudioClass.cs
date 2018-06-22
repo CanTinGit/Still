@@ -211,7 +211,7 @@ public class AudioClass:MonoBehaviour
             if ((force >= element.GetMinRange()) && (force <= element.GetMaxRange()))
             {
                 Debug.Log("WORKED YAY WOOOOOOOOOOO");
-                AkSoundEngine.SetState(pszGroup, element.GetPszState());
+                //AkSoundEngine.SetState(pszGroup, element.GetPszState());
                 break;
             }
         }

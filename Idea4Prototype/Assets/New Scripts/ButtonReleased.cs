@@ -29,9 +29,9 @@ public class ButtonReleased : MonoBehaviour
     void Update()
     {
         int type = 1;
-        float value;
-        AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
-        noise = value;
+        //float value;
+        //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
+        //noise = value;
     }
 
     /*void OnTriggerEnter(Collider other)

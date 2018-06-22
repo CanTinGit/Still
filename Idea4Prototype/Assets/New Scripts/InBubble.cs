@@ -19,7 +19,7 @@ public class InBubble : MonoBehaviour {
         gameObject.GetComponent<Rigidbody>().useGravity = false;
         gameObject.GetComponent<Rigidbody>().AddForce(transform.up*30.0f, ForceMode.Acceleration);
         gameObject.GetComponent<MovementUpdated>().enabled = false;
-        AkSoundEngine.PostEvent("bubble_rise", gameObject);
+        //AkSoundEngine.PostEvent("bubble_rise", gameObject);
 
         //Cancel gravity of player's hand
         rbs = gameObject.transform.GetChild(1).gameObject.GetComponentsInChildren<Rigidbody>();
