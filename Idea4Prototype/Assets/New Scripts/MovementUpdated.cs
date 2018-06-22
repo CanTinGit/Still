@@ -22,6 +22,8 @@ public class MovementUpdated : MonoBehaviour {
     public bool isInBubble;
     public bool isMoving;
     GameObject pausePanel;
+
+    Vector3 forward;
     // Use this for initialization
     void Awake()
     {
@@ -35,13 +37,15 @@ public class MovementUpdated : MonoBehaviour {
         jumpSpeed = playerKeys.GetJumpPower();
         moveSpeed = playerKeys.GetMoveSpeed();
         TurnSpeed = playerKeys.GetTurnSpeed();
-        isInBubble = false;      
+        isInBubble = false;
+        CalculateDirection();    
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(GameObject.FindObjectOfType<PauseScript>().GetActive()==false)
+
+        if (GameObject.FindObjectOfType<PauseScript>().GetActive()==false)
         {
             //movement controls for player - (S and W keys move forwards and back) & ( A and D keys rotate the player left and right)
             if (PlayerNum == 1)
@@ -91,58 +95,26 @@ public class MovementUpdated : MonoBehaviour {
             //The example of using controller to move
             if (PlayerNum == 2)
             {
-                if (Input.GetAxisRaw("Horizontal")>0.3f || Input.GetAxisRaw("Horizontal") < -0.3f)
+
+                if (Input.GetAxis("Horizontal")>0.5f || Input.GetAxis("Horizontal") < -0.5f)
                 {
-                    moveHorizontal = Input.GetAxisRaw("Horizontal");
                     isMoving = true;
                 }
-                if (Input.GetAxisRaw("Vertical") > 0.3f || Input.GetAxisRaw("Vertical") < -0.3f)
+                if (Input.GetAxis("Vertical") > 0.5f || Input.GetAxis("Vertical") < -0.5f)
                 {
-                    moveVertical = Input.GetAxisRaw("Vertical");
                     isMoving = true;
                 }
-                    //float moveHorizontal = Input.GetAxisRaw("Horizontal");
-                    //float moveVertical = Input.GetAxisRaw("Vertical");
-                if(isMoving==true)
+
+                if (isMoving == true)
                 {
-                    movement = new Vector3(-moveVertical, 0.0f, moveHorizontal);
-                    transform.rotation = Quaternion.LookRotation(movement);//Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.40f);
+                    movement = Input.GetAxis("Horizontal") * Camera.main.transform.right + Input.GetAxis("Vertical") * forward;
+                    if (movement!= Vector3.zero)
+                    {
+                        transform.rotation =Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.40f);// Quaternion.LookRotation(movement);
+                    }  
                     transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
                 }
 
-                //transform.LookAt(direction);
-                ////Using Axis button to move
-                //if (Input.GetAxis("Horizontal") > 0.3f)
-                //{
-                //    //Turn right
-                //    this.transform.Rotate(Vector3.up * TurnSpeed);
-                //    isMoving = true;
-                //}
-
-                //if (Input.GetAxis("Vertical") > 0.3f)
-                //{
-                //    //Move forward
-                //    this.transform.position += transform.forward * moveSpeed * Time.deltaTime;
-                //    isMoving = true;
-                //    //rigidbody.AddForce(transform.forward * moveSpeed, ForceMode.VelocityChange);
-                //    //rigidbody.velocity = transform.forward * moveSpeed;
-                //}
-
-                //if (Input.GetAxis("Horizontal") < -0.3f)
-                //{
-                //    //Turn left
-                //    this.transform.Rotate(Vector3.down * TurnSpeed);
-                //    isMoving = true;
-                //}
-
-                //if (Input.GetAxis("Vertical") < -0.3f)
-                //{
-                //    //Move backward
-                //    this.transform.position += (-transform.forward) * moveSpeed * Time.deltaTime;
-                //    isMoving = true;
-                //    //rigidbody.AddForce(-transform.forward * moveSpeed, ForceMode.VelocityChange);
-                //    //rigidbody.velocity = (-transform.forward) * moveSpeed;
-                //}
                 //if the player is grounded then he can jump
                 if (grounded)
                 {
@@ -157,19 +129,18 @@ public class MovementUpdated : MonoBehaviour {
                 if (Input.GetAxis("Vertical") > -0.1f && Input.GetAxis("Vertical") < 0.1f && Input.GetAxis("Horizontal") > -0.1f && Input.GetAxis("Horizontal") < 0.1f && !Input.GetKey(playerKeys.GetKeys()[5]))
                 {
                     isMoving = false;
-                    transform.rotation = Quaternion.LookRotation(movement);
+                    
                 }
             }
-            //OLD VELOCITY LIMIT
-            //if(rigidbody.velocity.magnitude>5)
-            //{
-            //    Vector3 newVelocity = rigidbody.velocity.normalized;
-            //    newVelocity *= 5;
-            //    rigidbody.velocity = newVelocity;
-            //}
+
         }
     }
 
+    // Calculate the direction based on Camera
+    void CalculateDirection()
+    {
+        forward = Vector3.Cross(Camera.main.transform.right, Vector3.up).normalized;
+    }
 
     //OLD CODE WILL BE UPDATED AS PROGRESS
     void OnCollisionStay(Collision col)

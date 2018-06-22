@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ButtonScript : MonoBehaviour {
 
     public bool isBackButton, isResetButton,isGoToNextLevelButton,isHelpButton;
+    public GameObject pausePanel;
     public GameObject helpUI;
 	// Use this for initialization
 	void Start ()
@@ -20,7 +21,7 @@ public class ButtonScript : MonoBehaviour {
         }
         else if (isGoToNextLevelButton)
         {
-            gameObject.GetComponent<Button>().onClick.AddListener(() => MenuScript.Instance.FadeToNextLevel());                   
+            gameObject.GetComponent<Button>().onClick.AddListener(() => MenuScript.Instance.FadeToNextLevel(pausePanel));                   
         }
         else if (isHelpButton)
         {

@@ -503,18 +503,32 @@ public class MenuScript : MonoBehaviour
     }
 
     // A fade effect to go to next level
-    public void FadeToNextLevel()
+    public void FadeToNextLevel(GameObject pause_)
     {
         int index = SceneManager.GetActiveScene().buildIndex;
         Debug.Log(" scene is " + SceneManager.GetSceneByBuildIndex(index).name);
         Debug.Log(" the pause panel is " + GameObject.Find("PausePanel")) ;
         if (SceneManager.GetActiveScene().buildIndex !=Application.levelCount-1)
         {
-            if(GameObject.Find("PausePanel").activeSelf==true)
+            if (pause_.activeSelf == true)
             {
-                GameObject.Find("PausePanel").SetActive(false);
+                pause_.SetActive(false);
             }
         
+            CompleteLevelAndRate();
+            //Turn the trigger on to play the fade animation
+            sceneFade = GameObject.Find("FadeSceneHolder").GetComponent<Animator>();
+            sceneFade.SetTrigger("FadeOut");
+        }
+    }
+
+    public void FadeToNextLevel()
+    {
+        int index = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(" scene is " + SceneManager.GetSceneByBuildIndex(index).name);
+        Debug.Log(" the pause panel is " + GameObject.Find("PausePanel"));
+        if (SceneManager.GetActiveScene().buildIndex != Application.levelCount - 1)
+        {
             CompleteLevelAndRate();
             //Turn the trigger on to play the fade animation
             sceneFade = GameObject.Find("FadeSceneHolder").GetComponent<Animator>();
