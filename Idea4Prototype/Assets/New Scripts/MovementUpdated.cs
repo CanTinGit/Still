@@ -44,98 +44,139 @@ public class MovementUpdated : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        if (GameObject.FindObjectOfType<PauseScript>().GetActive()==false)
+      
+        if (MenuScript.Instance.gamePaused==false)
         {
-            //movement controls for player - (S and W keys move forwards and back) & ( A and D keys rotate the player left and right)
-            if (PlayerNum == 1)
-            {
-                //Using custom keys to control
-                if (Input.GetKey(playerKeys.GetKeys()[3]))
-                {
-                    this.transform.Rotate(Vector3.up * TurnSpeed);
-                    isMoving = true;
-                }
+            ControllerMovement();
+            ////movement controls for player - (S and W keys move forwards and back) & ( A and D keys rotate the player left and right)
+            //if (PlayerNum == 1)
+            //{
+            //    //Using custom keys to control
+            //    if (Input.GetKey(playerKeys.GetKeys()[3]))
+            //    {
+            //        this.transform.Rotate(Vector3.up * TurnSpeed);
+            //        isMoving = true;
+            //    }
 
-                if (Input.GetKey(playerKeys.GetKeys()[0]))
-                {
-                    this.transform.position += transform.forward * moveSpeed * Time.deltaTime;
-                    isMoving = true;
-                    //rigidbody.AddForce(transform.forward * moveSpeed,ForceMode.VelocityChange);           
-                }
+            //    if (Input.GetKey(playerKeys.GetKeys()[0]))
+            //    {
+            //        this.transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            //        isMoving = true;
+            //        //rigidbody.AddForce(transform.forward * moveSpeed,ForceMode.VelocityChange);           
+            //    }
 
-                if (Input.GetKey(playerKeys.GetKeys()[2]))
-                {
-                    this.transform.Rotate(Vector3.down * TurnSpeed);
-                    isMoving = true;
-                }
+            //    if (Input.GetKey(playerKeys.GetKeys()[2]))
+            //    {
+            //        this.transform.Rotate(Vector3.down * TurnSpeed);
+            //        isMoving = true;
+            //    }
 
-                if (Input.GetKey(playerKeys.GetKeys()[1]))
-                {
-                    this.transform.position += (-transform.forward) * moveSpeed * Time.deltaTime;
-                    isMoving = true;
-                    //rigidbody.AddForce(-transform.forward * moveSpeed , ForceMode.VelocityChange);
-                }
-                //if the player is grounded then he can jump
-                if (grounded)
-                {
-                    //when the player presses k apply a force to make him jump
-                    if (Input.GetKeyDown(playerKeys.GetKeys()[5]))
-                    {
-                        rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
-                        isMoving = true;
-                    }
-                }
-                if (!Input.GetKey(playerKeys.GetKeys()[3]) && !Input.GetKey(playerKeys.GetKeys()[0]) && !Input.GetKey(playerKeys.GetKeys()[2]) && !Input.GetKey(playerKeys.GetKeys()[1]) && !Input.GetKey(playerKeys.GetKeys()[5]))
-                {
-                    isMoving = false;
-                }
-            }
+            //    if (Input.GetKey(playerKeys.GetKeys()[1]))
+            //    {
+            //        this.transform.position += (-transform.forward) * moveSpeed * Time.deltaTime;
+            //        isMoving = true;
+            //        //rigidbody.AddForce(-transform.forward * moveSpeed , ForceMode.VelocityChange);
+            //    }
+            //    //if the player is grounded then he can jump
+            //    if (grounded)
+            //    {
+            //        //when the player presses k apply a force to make him jump
+            //        if (Input.GetKeyDown(playerKeys.GetKeys()[5]))
+            //        {
+            //            rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
+            //            isMoving = true;
+            //        }
+            //    }
+            //    if (!Input.GetKey(playerKeys.GetKeys()[3]) && !Input.GetKey(playerKeys.GetKeys()[0]) && !Input.GetKey(playerKeys.GetKeys()[2]) && !Input.GetKey(playerKeys.GetKeys()[1]) && !Input.GetKey(playerKeys.GetKeys()[5]))
+            //    {
+            //        isMoving = false;
+            //    }
+            //}
 
-            //The example of using controller to move
-            if (PlayerNum == 2)
-            {
+            ////The example of using controller to move
+            //if (PlayerNum == 2)
+            //{
 
-                if (Input.GetAxis("Horizontal")>0.5f || Input.GetAxis("Horizontal") < -0.5f)
-                {
-                    isMoving = true;
-                }
-                if (Input.GetAxis("Vertical") > 0.5f || Input.GetAxis("Vertical") < -0.5f)
-                {
-                    isMoving = true;
-                }
+            //    if (Input.GetAxis("Horizontal")>0.5f || Input.GetAxis("Horizontal") < -0.5f)
+            //    {
+            //        isMoving = true;
+            //    }
+            //    if (Input.GetAxis("Vertical") > 0.5f || Input.GetAxis("Vertical") < -0.5f)
+            //    {
+            //        isMoving = true;
+            //    }
 
-                if (isMoving == true)
-                {
-                    movement = Input.GetAxis("Horizontal") * Camera.main.transform.right + Input.GetAxis("Vertical") * forward;
-                    if (movement!= Vector3.zero)
-                    {
-                        transform.rotation =Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.40f);// Quaternion.LookRotation(movement);
-                    }  
-                    transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
-                }
+            //    if (isMoving == true)
+            //    {
+            //        movement = Input.GetAxis("Horizontal") * Camera.main.transform.right + Input.GetAxis("Vertical") * forward;
+            //        if (movement!= Vector3.zero)
+            //        {
+            //            transform.rotation =Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.40f);// Quaternion.LookRotation(movement);
+            //        }  
+            //        transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
+            //    }
 
-                //if the player is grounded then he can jump
-                if (grounded)
-                {
-                    //when the player presses k apply a force to make him jump
-                    if (Input.GetKeyDown(playerKeys.GetKeys()[5]))
-                    {
-                        isMoving = true;
-                        rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
-                    }
-                }
+            //    //if the player is grounded then he can jump
+            //    if (grounded)
+            //    {
+            //        //when the player presses k apply a force to make him jump
+            //        if (Input.GetKeyDown(playerKeys.GetKeys()[5]))
+            //        {
+            //            isMoving = true;
+            //            rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
+            //        }
+            //    }
 
-                if (Input.GetAxis("Vertical") > -0.1f && Input.GetAxis("Vertical") < 0.1f && Input.GetAxis("Horizontal") > -0.1f && Input.GetAxis("Horizontal") < 0.1f && !Input.GetKey(playerKeys.GetKeys()[5]))
-                {
-                    isMoving = false;
+            //    if (Input.GetAxis("Vertical") > -0.1f && Input.GetAxis("Vertical") < 0.1f && Input.GetAxis("Horizontal") > -0.1f && Input.GetAxis("Horizontal") < 0.1f && !Input.GetKey(playerKeys.GetKeys()[5]))
+            //    {
+            //        isMoving = false;
                     
-                }
-            }
+            //    }
+            //}
 
         }
     }
+    void ControllerMovement()
+    {
+        //The example of using controller to move
 
+            if (Input.GetAxis("Horizontal"+PlayerNum.ToString()) > 0.5f || Input.GetAxis("Horizontal" + PlayerNum.ToString()) < -0.5f)
+            {
+                isMoving = true;
+            }
+            if (Input.GetAxis("Vertical" + PlayerNum.ToString()) > 0.5f || Input.GetAxis("Vertical" + PlayerNum.ToString()) < -0.5f)
+            {
+                isMoving = true;
+            }
+
+            if (isMoving == true)
+            {
+                movement = Input.GetAxis("Horizontal" + PlayerNum.ToString()) * Camera.main.transform.right + Input.GetAxis("Vertical" + PlayerNum.ToString()) * (-forward);
+                if (movement != Vector3.zero)
+                {
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.40f);// Quaternion.LookRotation(movement);
+                }
+                transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
+            }
+
+            //if the player is grounded then he can jump
+            if (grounded)
+            {
+                //when the player presses k apply a force to make him jump
+                if (Input.GetButtonDown(playerKeys.GetKeys()[5].ToString().Insert(8,PlayerNum.ToString())))
+                {
+                    isMoving = true;
+                    rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
+                }
+            }
+
+            if (Input.GetAxis("Vertical" + PlayerNum.ToString()) > -0.1f && Input.GetAxis("Vertical" + PlayerNum.ToString()) < 0.1f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) > -0.1f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) < 0.1f && !Input.GetKey(playerKeys.GetKeys()[5]))
+            {
+                isMoving = false;
+
+            }
+        
+    }
     // Calculate the direction based on Camera
     void CalculateDirection()
     {

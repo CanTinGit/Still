@@ -29,6 +29,7 @@ public class Bullet : MonoBehaviour {
                 // Make the player in Bubble
                 col.GetComponent<MovementUpdated>().isInBubble = true;
                 col.gameObject.AddComponent<InBubble>();
+                Destroy(gameObject);
             }
         }
     }

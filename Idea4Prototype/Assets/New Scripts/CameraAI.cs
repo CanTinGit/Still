@@ -140,58 +140,58 @@ public class CameraAI : MonoBehaviour {
     public void VisualDetect()
     {
         // Multiple player
-        //GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        //for(int i = 0; i < players.Length; i++)
-        //{
-        // GameObject player = players[i];
-        if (player != null && isDetected == false)
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        //GameObject player = GameObject.FindGameObjectWithTag("Player");
+        for(int i = 0; i < players.Length; i++)
         {
-            // Check the condition of player
-            MovementUpdated movement = player.GetComponent<MovementUpdated>();
-
-            // If the player is not in bubble
-            if (movement != null && movement.isInBubble == false)
+            GameObject player = players[i];
+            if (player != null && isDetected == false)
             {
-                
-                // Calculate the distance between player and 
-                float dist = Vector3.Distance(player.transform.position, transform.position);
+                // Check the condition of player
+                MovementUpdated movement = player.GetComponent<MovementUpdated>();
 
-                // Check if the player is in the range of sight
-                if (dist < sightRange)
+                // If the player is not in bubble
+                if (movement != null && movement.isInBubble == false)
                 {
-                    //Get the angle between player and camera
-                    Vector3 direction = player.transform.position - transform.position;
-                    float degree = Vector3.Angle(direction, transform.forward);
 
-                    // If the angle between player and camera is in the sight angle, which means camera can see the player
-                    if (degree < sightAngle / 2 && degree > -sightAngle / 2)
+                    // Calculate the distance between player and 
+                    float dist = Vector3.Distance(player.transform.position, transform.position);
+
+                    // Check if the player is in the range of sight
+                    if (dist < sightRange)
                     {
-                        Ray ray = new Ray();
-                        ray.origin = transform.position;
-                        ray.direction = direction;
-                        RaycastHit hitInfo;
-                        //Check if there is anything which may block the eyesight
-                        if (Physics.Raycast(ray, out hitInfo, sightRange))
+                        //Get the angle between player and camera
+                        Vector3 direction = player.transform.position - transform.position;
+                        float degree = Vector3.Angle(direction, transform.forward);
+
+                        // If the angle between player and camera is in the sight angle, which means camera can see the player
+                        if (degree < sightAngle / 2 && degree > -sightAngle / 2)
                         {
-                            // If the ray can hit the player, which means nothing block the sight of camera, and the camera acctually finds the player
-                            if (hitInfo.transform == player.transform && player.GetComponent<MovementUpdated>().isMoving == true)
+                            Ray ray = new Ray();
+                            ray.origin = transform.position;
+                            ray.direction = direction;
+                            RaycastHit hitInfo;
+                            //Check if there is anything which may block the eyesight
+                            if (Physics.Raycast(ray, out hitInfo, sightRange))
                             {
-                                //Setting the isDetect to true means finding player and rotate towards it
-                                isDetected = true;
-                                //Make the sound
-                                //AkSoundEngine.PostEvent("camera_trigger", gameObject);
-                                //Target is the player that be found
-                                target = player.transform.position;
-                                //Turn the color to red
-                                gameObject.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+                                // If the ray can hit the player, which means nothing block the sight of camera, and the camera acctually finds the player
+                                if (hitInfo.transform == player.transform && player.GetComponent<MovementUpdated>().isMoving == true)
+                                {
+                                    //Setting the isDetect to true means finding player and rotate towards it
+                                    isDetected = true;
+                                    //Make the sound
+                                    //AkSoundEngine.PostEvent("camera_trigger", gameObject);
+                                    //Target is the player that be found
+                                    target = player.transform.position;
+                                    //Turn the color to red
+                                    gameObject.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+                                }
                             }
                         }
                     }
                 }
+
             }
-            
-            //}
         }
     }
 

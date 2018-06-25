@@ -4109,7 +4109,7 @@ GameObject:
   - component: {fileID: 1135821744}
   - component: {fileID: 1135821743}
   m_Layer: 5
-  m_Name: SelectArrows
+  m_Name: SelectArrows2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4478,7 +4478,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1217700159}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2afb62b5af5731b46a942c82be68c9bc, type: 3}
   m_Name: 
@@ -5105,7 +5105,7 @@ GameObject:
   - component: {fileID: 1361713332}
   - component: {fileID: 1361713331}
   m_Layer: 5
-  m_Name: SelectArrows
+  m_Name: SelectArrows3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5248,7 +5248,7 @@ GameObject:
   - component: {fileID: 1373214939}
   - component: {fileID: 1373214938}
   m_Layer: 5
-  m_Name: SelectArrows
+  m_Name: SelectArrows4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5317,7 +5317,7 @@ GameObject:
   - component: {fileID: 1376063515}
   - component: {fileID: 1376063514}
   m_Layer: 5
-  m_Name: SelectArrows
+  m_Name: SelectArrows1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5385,6 +5385,7 @@ GameObject:
   - component: {fileID: 1390127591}
   - component: {fileID: 1390127593}
   - component: {fileID: 1390127592}
+  - component: {fileID: 1390127594}
   m_Layer: 5
   m_Name: controllerSelected
   m_TagString: Untagged
@@ -5444,6 +5445,22 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1390127590}
+--- !u!114 &1390127594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390127590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39063741764e0d4a91acbc9a679230b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInGame: 0
+  pressed123: 0
+  playerSprite: {fileID: 886256971}
+  DelayReturnInput: 0
+  FramePerSeconds: 0
 --- !u!1 &1396333280
 GameObject:
   m_ObjectHideFlags: 0
@@ -5599,14 +5616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39063741764e0d4a91acbc9a679230b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedControlSprite: {fileID: 21300000, guid: e6be2f981dba17343bdf712d5b9b379d,
-    type: 3}
-  deselectedControlSprite: {fileID: 21300000, guid: d49c47718cfb13d4ba6ac841798ab5e7,
-    type: 3}
-  selectedPlayerSprite: {fileID: 21300000, guid: 6538dd6f6cb360c43a41a8e96530b2c2,
-    type: 3}
-  deselectedPlayerSprite: {fileID: 21300000, guid: 2ab0644db48dc15458d5ff5a04d04a85,
-    type: 3}
   isInGame: 0
   pressed123: 0
   playerSprite: {fileID: 1927623212}
@@ -6413,6 +6422,7 @@ GameObject:
   - component: {fileID: 1580277740}
   - component: {fileID: 1580277742}
   - component: {fileID: 1580277741}
+  - component: {fileID: 1580277743}
   m_Layer: 5
   m_Name: controllerSelected
   m_TagString: Untagged
@@ -6472,6 +6482,22 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1580277739}
+--- !u!114 &1580277743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580277739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39063741764e0d4a91acbc9a679230b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInGame: 0
+  pressed123: 0
+  playerSprite: {fileID: 821209916}
+  DelayReturnInput: 0
+  FramePerSeconds: 0
 --- !u!1 &1582227473
 GameObject:
   m_ObjectHideFlags: 0
@@ -7308,6 +7334,7 @@ GameObject:
   - component: {fileID: 1832890106}
   - component: {fileID: 1832890108}
   - component: {fileID: 1832890107}
+  - component: {fileID: 1832890109}
   m_Layer: 5
   m_Name: controllerSelected
   m_TagString: Untagged
@@ -7367,6 +7394,22 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1832890105}
+--- !u!114 &1832890109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1832890105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39063741764e0d4a91acbc9a679230b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInGame: 0
+  pressed123: 0
+  playerSprite: {fileID: 126078970}
+  DelayReturnInput: 0
+  FramePerSeconds: 0
 --- !u!1 &1856066402
 GameObject:
   m_ObjectHideFlags: 0
