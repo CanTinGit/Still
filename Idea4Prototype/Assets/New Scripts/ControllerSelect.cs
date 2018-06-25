@@ -14,6 +14,7 @@ public class ControllerSelect : MonoBehaviour {
     PlayerKeys playerKeys;                              // Input key bindings
     public GameObject playerSprite;                     // Reference to player sprite
     public float DelayReturnInput,FramePerSeconds;
+    public string InputAxisName;                        // string name of the input axis name for this player
     // Use this for initialization
     void Start ()
     {
@@ -34,7 +35,7 @@ public class ControllerSelect : MonoBehaviour {
         if (isInGame == false)                                               // If the player has not "entered" the game
         {
             //Debug.Log(Input.GetAxis("XboxLeftStickXaxis"));
-            if (Input.GetAxis("XboxLeftStickXaxis") == 1  || Input.GetAxis("XboxLeftStickXaxis") == -1 || (Input.GetKeyDown(playerKeys.GetKeys()[3]) || Input.GetKeyDown(playerKeys.GetKeys()[2])) )                  // If the player uses the left or right key bindings
+            if (Input.GetAxis(InputAxisName) == 1  || Input.GetAxis(InputAxisName) == -1 || (Input.GetKeyDown(playerKeys.GetKeys()[3]) || Input.GetKeyDown(playerKeys.GetKeys()[2])) )                  // If the player uses the left or right key bindings
             {
                 ChangeSprite(isSelected);
             }
@@ -87,10 +88,10 @@ public class ControllerSelect : MonoBehaviour {
         if (isInGame == false)                                               // If the player has not "entered" the game
         {
             //Debug.Log(Input.GetAxis("XboxLeftStickXaxis"));
-            if (Input.GetAxis("XboxLeftStickXaxis") == 1 || Input.GetAxis("XboxLeftStickXaxis") == -1 || (Input.GetKeyDown(playerKeys.GetKeys()[3]) || Input.GetKeyDown(playerKeys.GetKeys()[2])))                 // If the player uses the left or right key bindings
+            if (Input.GetAxis(InputAxisName) == 1 || Input.GetAxis(InputAxisName) == -1 || (Input.GetKeyDown(playerKeys.GetKeys()[3]) || Input.GetKeyDown(playerKeys.GetKeys()[2])))                 // If the player uses the left or right key bindings
             {
                 //pressed123 = true;
-                Code();
+                SelectChange();
                 //if (isSelected == false)                                    // If the selected sprite isnt showing
                 //{
                 //    isSelected = true;                                      // Set selected boolean to true
@@ -129,7 +130,7 @@ public class ControllerSelect : MonoBehaviour {
         }
     }
 
-    void Code()
+    void SelectChange()
     {
         if(pressed123==false)
         {
