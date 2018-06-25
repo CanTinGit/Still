@@ -13,7 +13,10 @@ public class PressedButton : MonoBehaviour {
     public float noise;             //Noise value
     public string noise_detection;  //the name of the noise
     public GameObject SpecificObject; //Set the the specific object
-    
+    public string animatorVariable; //String of the animationVraiable boolean
+    public bool runAnimOnPressed;
+    public bool runAnimOnReleased;
+
     // Use this for initialization, set the button and original position of button
     void Start ()
     {
@@ -42,11 +45,11 @@ public class PressedButton : MonoBehaviour {
                 //Check if the trap just run once, if it is, use settrigger to run it, if not, use setbool to run it so that it can run multiply times
                 if (isRunOnce == true)
                 {
-                    animator.SetTrigger("TrapRun");
+                    animator.SetTrigger(animatorVariable);
                 }
                 else
                 {
-                    animator.SetBool("TrapRun", true);
+                    animator.SetBool(animatorVariable, runAnimOnPressed);
                 }
             }
             return;
@@ -62,11 +65,11 @@ public class PressedButton : MonoBehaviour {
             //Check if the trap just run once, if it is, use settrigger to run it, if not, use setbool to run it so that it can run multiply times
             if (isRunOnce == true)
             {
-                animator.SetTrigger("TrapRun");
+                animator.SetTrigger(animatorVariable);
             }
             else
             {
-                animator.SetBool("TrapRun", true);
+                animator.SetBool(animatorVariable, runAnimOnPressed);
             }
 
         }
@@ -78,7 +81,7 @@ public class PressedButton : MonoBehaviour {
         button.position = originalPosition;
         if (isRunOnce == false)
         {
-            animator.SetBool("TrapRun", false);
+            animator.SetBool(animatorVariable, runAnimOnReleased);
         }
     }
 

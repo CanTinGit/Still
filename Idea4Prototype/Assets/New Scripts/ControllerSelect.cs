@@ -33,52 +33,6 @@ public class ControllerSelect : MonoBehaviour {
         playerNum = int.Parse(this.transform.parent.name.Remove(0, this.transform.parent.name.Length - 1));
         Debug.Log(playerNum);
     }
-	void JoystickInputCharacterSelect()
-    {
-        Debug.Log(MenuScript.Instance.GetNumberofPlayers());
-        if (isInGame == false)                                               // If the player has not "entered" the game
-        {
-            //Debug.Log(Input.GetAxis("XboxLeftStickXaxis"));
-            if (Input.GetAxis("XboxLeftStickXaxis") == 1  || Input.GetAxis("XboxLeftStickXaxis") == -1 || (Input.GetKeyDown(playerKeys.GetKeys()[3]) || Input.GetKeyDown(playerKeys.GetKeys()[2])) )                  // If the player uses the left or right key bindings
-            {
-                ChangeSprite(isSelected);
-            }
-            
-            
-        }
-        if ((Input.GetButtonDown("Start") || Input.GetKeyDown(KeyCode.Return)) && isSelected == true)     // If the character is selected and the start/join button is pressed
-        {
-            isInGame = !isInGame;                                            // Player is in game
-            if (isInGame == true)
-            {// Add 1 to the number of in game players for use by later scenes
-                MenuScript.Instance.SetNumberofPlayers(1);
-            }
-            else
-            {
-                MenuScript.Instance.SetNumberofPlayers(-1);
-            }
-        }
-    }
-
-    void ChangeSprite(bool isSelected_)
-    {
-        CancelInvoke("JoystickInputCharacterSelect");
-        isSelected = isSelected_;
-        if (isSelected == false)                                    // If the selected sprite isnt showing
-        {
-            isSelected = true;                                      // Set selected boolean to true
-            this.GetComponent<Image>().sprite = selectedControlSprite;          // Set selected controller sprite
-            playerSprite.GetComponent<Image>().sprite = selectedPlayerSprite;   // Set selected chr                 
-        }
-        else
-        {
-            isSelected = false;                                                 // Else, i.e isSelected is true
-            this.GetComponent<Image>().sprite = deselectedControlSprite;        // Set deselected controller sprite
-            playerSprite.GetComponent<Image>().sprite = deselectedPlayerSprite; // Set deselected player sprite
-        }
-        Invoke("DelayInputBack", DelayReturnInput);
-
-    }
 
     void DelayInputBack()
     {
@@ -95,7 +49,7 @@ public class ControllerSelect : MonoBehaviour {
             if (Input.GetAxis("Horizontal" + playerNum) == 1 || Input.GetAxis("Horizontal" + playerNum) == -1 || (Input.GetKeyDown(playerKeys.GetKeys()[3]) || Input.GetKeyDown(playerKeys.GetKeys()[2])))                 // If the player uses the left or right key bindings
             {
                 //pressed123 = true;
-                Code();
+                SelectChange();
                 //if (isSelected == false)                                    // If the selected sprite isnt showing
                 //{
                 //    isSelected = true;                                      // Set selected boolean to true
@@ -134,7 +88,7 @@ public class ControllerSelect : MonoBehaviour {
         }
     }
 
-    void Code()
+    void SelectChange()
     {
         if(pressed123==false)
         {
