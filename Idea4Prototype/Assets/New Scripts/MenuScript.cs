@@ -32,11 +32,15 @@ public class MenuScript : MonoBehaviour
     int maxLevel;
     //NEW WAY TO RECORD PLAYER CURRENT LEVEL
     public PlayerData playerdata;
-    public int numPlayers;
+    int numPlayers;
     //the animator for the screen fade to level effect
     Animator sceneFade;
     // Reference to event system for menu navigation
     GameObject eventSystem;
+    //the player that pauses the screen
+    public int pausePlayerNum = 0;
+    //if the game is paused
+    public bool gamePaused = false;
     //Global variable to get the only one game manager
     public static MenuScript Instance
     {
@@ -500,6 +504,8 @@ public class MenuScript : MonoBehaviour
     public void ResetLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gamePaused = false;
+        pausePlayerNum = 0;
     }
 
     // A fade effect to go to next level
@@ -617,5 +623,10 @@ public class MenuScript : MonoBehaviour
     public int GetNumberofPlayers()
     {
         return numPlayers;
+    }
+    //turn the screen active or not
+    public void SetPlayerPaused(bool paused_)
+    {
+        gamePaused = paused_;
     }
 }
