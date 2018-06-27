@@ -29,6 +29,9 @@
 										</Effect>
 									</Custom>
 								</Reference>
+								<Reference Name="Effect1" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+									<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
 							</ReferenceList>
 						</Bus>
 						<Bus Name="Ambience" ID="{872342CB-9CB7-4D3D-9945-F73AA2B59DA4}">
@@ -70,6 +73,7 @@
 							</PropertyList>
 						</Bus>
 						<Bus Name="Music" ID="{6CC6408D-3CB5-4A61-8AD7-9F87AD07E265}"/>
+						<Bus Name="Voice" ID="{E146FB57-F776-4B95-9F29-555BCD4DD562}"/>
 					</ChildrenList>
 				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>

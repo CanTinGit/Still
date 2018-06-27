@@ -204,7 +204,7 @@ public class AudioClass:MonoBehaviour
     {       
         foreach (AudioForceStruct element in audioRange)
         {
-            //DEBUG MESSAGE FOR TESTING WHAT IS MINI MAX AND THE FORCE PASSING IN
+            //DEBUG MESSAGE FOR TESTING WHAT IS MIN MAX AND THE FORCE PASSING IN
             //Debug.Log(force.ToString() + " " + element.GetMinRange().ToString() + " " + force.ToString() + " " + element.GetMaxRange().ToString());
 
             //if statement that will be used for all the different states

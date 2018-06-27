@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: -1879985920
-    m_lastTimePart2: -1999253004
+    m_lastTimePsrt1: 927956540
+    m_lastTimePart2: -1999250809
     List:
     - Name: bubble_rise
       Path: Default Work Unit\bubble_rise
@@ -69,19 +69,91 @@ MonoBehaviour:
       ID: 697519634
       Guid: ac62c32a5eb5c843827b7269bfa7b694
       maxAttenuation: 0
+    - Name: player_accident
+      Path: Default Work Unit\Player\player_accident
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_accident
+        ObjectType: 3
+      ID: -89591574
+      Guid: 75420a1b77a7b746985a92183b693ef0
+      maxAttenuation: 0
+    - Name: player_carry
+      Path: Default Work Unit\Player\player_carry
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_carry
+        ObjectType: 3
+      ID: 662165722
+      Guid: 9a1d569815a4974d948c35a050d436dc
+      maxAttenuation: 0
+    - Name: player_catch
+      Path: Default Work Unit\Player\player_catch
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_catch
+        ObjectType: 3
+      ID: 1049036554
+      Guid: 93d156ad1b4a284f97fffe45bcc5a5e7
+      maxAttenuation: 0
+    - Name: player_drop
+      Path: Default Work Unit\Player\player_drop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_drop
+        ObjectType: 3
+      ID: 1922690190
+      Guid: 2c9919b737ebdb418b540d98f5b8a306
+      maxAttenuation: 0
+    - Name: player_jump
+      Path: Default Work Unit\Player\player_jump
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_jump
+        ObjectType: 3
+      ID: 1305133589
+      Guid: 5160cfa3feeedc48820917bf4b50b088
+      maxAttenuation: 0
+    - Name: player_lift
+      Path: Default Work Unit\Player\player_lift
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_lift
+        ObjectType: 3
+      ID: -532829526
+      Guid: 3b902838b8b01c4aba900eb0d9e3debc
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: -800640000
-    m_lastTimePart2: -1999253024
+    m_lastTimePsrt1: 927806540
+    m_lastTimePart2: -1999250809
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
-    m_lastTimePsrt1: -800640000
-    m_lastTimePart2: -1999253024
+    m_lastTimePsrt1: -838296922
+    m_lastTimePart2: -1999250816
     List:
     - Name: Impact_Force
       Path: Default Work Unit\Impact_Force
@@ -120,16 +192,34 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-    m_lastTimePsrt1: 744061952
-    m_lastTimePart2: -1999253185
+    m_lastTimePsrt1: -838140558
+    m_lastTimePart2: -1999250816
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -1879985920
-    m_lastTimePart2: -1999253004
+    m_lastTimePsrt1: -680790756
+    m_lastTimePart2: -1999250809
     List:
+    - Name: Enemy
+      Path: Default Work Unit\Enemy
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 7
+      ID: -1995645809
+      Guid: 167d28cba1cd3646ab2c5eb86708a848
+    - Name: Player
+      Path: Default Work Unit\Player
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 7
+      ID: 1069431850
+      Guid: beab3ab0018ed34bb34f5d96bbc19519
     - Name: Test
       Path: Default Work Unit\Test
       PathAndIcons:
@@ -143,8 +233,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
-    m_lastTimePsrt1: 1044192768
-    m_lastTimePart2: -1999253181
+    m_lastTimePsrt1: -849078394
+    m_lastTimePart2: -1999250816
     List:
     - Name: noise_detection
       Path: Default Work Unit\noise_detection
@@ -159,8 +249,8 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{423FF0F4-4C2C-49B0-BB98-500C1D5DAA9E}'
-    m_lastTimePsrt1: 744061952
-    m_lastTimePart2: -1999253185
+    m_lastTimePsrt1: -838140558
+    m_lastTimePart2: -1999250816
     List: []
   ExpandedItems:
   - /Idea4Prototype_WwiseProject

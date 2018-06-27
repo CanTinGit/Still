@@ -45,11 +45,12 @@ public class PickUpUpdated : MonoBehaviour
             //the pick ups key is pressed
             if (Input.GetKeyDown(pickUpKey))
             {
-                //if there is a objects that can be picked up and you are not holding something then pick it up
+                //if there is an object that can be picked up and you are not holding something then pick it up
                 if ((picked != null) & (holdingPickUp == false))
                 {
                     //set it so the player now is holding something
                     holdingPickUp = true;
+                    AkSoundEngine.PostEvent("player_lift", gameObject);
                     //turn off the visually icon since we are holding something
                     icon.GetComponent<MeshRenderer>().enabled = false;
                     //if the picked up item is a one of these two then run the script that makes the player carry the object
@@ -86,6 +87,7 @@ public class PickUpUpdated : MonoBehaviour
                 {
                     //since we are holding something we now drop it
                     holdingPickUp = false;
+                    AkSoundEngine.PostEvent("player_drop", gameObject);
                     //if the object is a pickup item or a bucket then do this
                     if ((picked.name == "Pickup") || (picked.name == "Bucket"))
                     {

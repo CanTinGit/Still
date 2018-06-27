@@ -7,9 +7,27 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="bubble_rise" ID="{10524E28-3810-418F-B1AA-AF494B9056DB}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="can_impact" ID="{2AC362AC-B55E-43C8-827B-7269BFA7B694}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="bubble_shot" ID="{D2186C32-E50E-452D-970E-BEE7B9AACFAF}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="button_click" ID="{7A5D9E66-BC01-457E-AF86-C4B6CA633B51}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="camera_trigger" ID="{63C7DFA0-CF67-46FF-8BB2-D7269528E08B}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Enemy" ID="{CB287D16-CDA1-4636-AB2C-5EB86708A848}">
+					<ObjectInclusionList>
+						<ObjectRef Name="bubble gun trigger" ID="{9DC48342-1BE8-4311-9943-82BCB9EDC1E5}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_bubble_gun_shot" ID="{0ED2D5EF-0F3D-4597-9C2A-ABD17E3A96CD}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Player" ID="{B03AABBE-8E01-4BD3-B34F-5D96BBC19519}">
+					<ObjectInclusionList>
+						<ObjectRef Name="player_drop" ID="{B719992C-EB37-41DB-8B54-0D98F5B8A306}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="player_accident" ID="{1B0A4275-A777-46B7-985A-92183B693EF0}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="player_jump" ID="{A3CF6051-EEFE-48DC-8209-17BF4B50B088}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="player_lift" ID="{3828903B-B0B8-4A1C-BA90-0EB0D9E3DEBC}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="player_carry" ID="{98561D9A-A415-4D97-948C-35A050D436DC}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="player_catch" ID="{AD56D193-4A1B-4F28-97FF-FE45BCC5A5E7}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

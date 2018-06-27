@@ -73,6 +73,94 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Player" ID="{AFD892B1-8234-4D41-BDC9-CF6E337F98A5}" ShortID="914907626">
+					<ChildrenList>
+						<Event Name="player_catch" ID="{AD56D193-4A1B-4F28-97FF-FE45BCC5A5E7}">
+							<ChildrenList>
+								<Action Name="" ID="{CDF39CCB-191B-4C91-A8D4-50EB95A9C90E}" ShortID="363891376">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="catch" ID="{D86DA42B-7704-4A86-8310-31AF4AE8823D}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="player_accident" ID="{1B0A4275-A777-46B7-985A-92183B693EF0}">
+							<ChildrenList>
+								<Action Name="" ID="{7749C111-4FF8-477B-86C4-6C44708379D3}" ShortID="271069977">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Accident" ID="{3A7B0D86-F053-4521-8B1A-51CB78AEC9E6}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="player_carry" ID="{98561D9A-A415-4D97-948C-35A050D436DC}">
+							<ChildrenList>
+								<Action Name="" ID="{A50D779A-8FB9-42FE-9B83-F896DD40A323}" ShortID="1064801928">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Carry" ID="{59168F63-ED16-4A7F-B376-0F8D180F444A}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="player_drop" ID="{B719992C-EB37-41DB-8B54-0D98F5B8A306}">
+							<ChildrenList>
+								<Action Name="" ID="{9B953927-BA2F-4831-9F5C-53B2E0060A9A}" ShortID="635173581">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Release" ID="{F1FFE0E1-6C66-46CA-9075-7B1612532563}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="player_jump" ID="{A3CF6051-EEFE-48DC-8209-17BF4B50B088}">
+							<ChildrenList>
+								<Action Name="" ID="{894B1BCC-2A61-4B8D-A6A3-2263269FCA92}" ShortID="295806496">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump" ID="{96A1BCC8-CBF9-475E-AEA1-F233978DCEA1}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="player_lift" ID="{3828903B-B0B8-4A1C-BA90-0EB0D9E3DEBC}">
+							<ChildrenList>
+								<Action Name="" ID="{BA2F2295-B7CE-496D-94D9-83E8B3D73336}" ShortID="11681707">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lift" ID="{6706D97E-CA8F-4E7F-88D1-BBF7066CD79F}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
