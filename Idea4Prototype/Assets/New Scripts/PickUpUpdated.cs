@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PickUpUpdated : MonoBehaviour
 {
-    PlayerKeys playerKeys;//the keys for the player
+    PlayerKeys[] playerKeys;//the keys for the player
     GameObject icon; //the icon to indicate if the player can pick something uo
+    public GameObject throwArc;     //Throw arc
     public GameObject picked; //the picked up object
     bool holdingPickUp = false; //indicates if we are holding on a item
     //percentage of how far infront and upwards a object should move based on its size
     float PercentageY = 0.50f;
     float Percentagez = 0.65f;
     //the power of the throw
-    public float throwPower = 0.0f;
+    //public float throwPower = 0.0f;
     //the joint that will be added to the player when the player drags a object
     CharacterJoint characterJoint;
     //the start distance for the player
@@ -20,40 +21,50 @@ public class PickUpUpdated : MonoBehaviour
     //the starting angle of the picked up object
     Vector3 startAngle;
     int maxPlayer;
+
+    //Setting of throw
+    public float maxVelocity,minVelocity, currentVelocity,offsetVelocity;
+    public float angle;
+    public int resolution;          //Decide how accuracy of the line
+    float offsetRotation;
+
     void Awake()
     {       
         //get the keys and stats for the player
         playerKeys = MenuScript.Instance.GetPlayerKeys();
         //get the power of the throw from the player geys
-        throwPower = playerKeys.GetThrowPower();
+        //throwPower = playerKeys.GetThrowPower();
         //Setting up icon for knowing if you can pick up item
         int iconChildIndex = this.gameObject.transform.parent.childCount - 1;
         //set the gameobject icon to the correct child object
         icon = this.gameObject.transform.parent.transform.GetChild(iconChildIndex).transform.gameObject;
+        //Get the throw arc
+        throwArc = gameObject.transform.parent.transform.GetChild(iconChildIndex - 1).transform.gameObject;
+        currentVelocity = minVelocity;
         maxPlayer = MenuScript.Instance.GetNumberofPlayers();
     }
     void FixedUpdate()
     {
         // PickUpAndThrowCode(1, playerKeys.GetKeys()[6].ToString().Insert(8,"1"), playerKeys.GetKeys()[4].ToString().Insert(8, "1"));
-        PickUpAndThrowCode(1, playerKeys.GetKeys()[6].ToString().Insert(8, "1"), playerKeys.GetKeys()[4].ToString().Insert(8, "1"));
-        if (maxPlayer>1)
+        PickUpAndThrowCode(1, playerKeys[0].GetKeys()[6].ToString().Insert(8, "1"), playerKeys[0].GetKeys()[4].ToString().Insert(8, "1"), playerKeys[0].GetThrowPower());
+        //if (maxPlayer>1)
         {
-            PickUpAndThrowCode(2, playerKeys.GetKeys()[6].ToString().Insert(8, "2"), playerKeys.GetKeys()[4].ToString().Insert(8, "2"));
+            PickUpAndThrowCode(2, playerKeys[1].GetKeys()[6].ToString().Insert(8, "2"), playerKeys[1].GetKeys()[4].ToString().Insert(8, "2"),playerKeys[1].GetThrowPower());
         }
-        if (maxPlayer > 2)
+        //if (maxPlayer > 2)
         {
-            PickUpAndThrowCode(2, playerKeys.GetKeys()[6].ToString().Insert(8, "3"), playerKeys.GetKeys()[4].ToString().Insert(8, "3"));
+            PickUpAndThrowCode(3, playerKeys[2].GetKeys()[6].ToString().Insert(8, "3"), playerKeys[2].GetKeys()[4].ToString().Insert(8, "3"), playerKeys[2].GetThrowPower());
         }
-        if (maxPlayer > 3)
+        //if (maxPlayer > 3)
         {
-            PickUpAndThrowCode(2, playerKeys.GetKeys()[6].ToString().Insert(8, "4"), playerKeys.GetKeys()[4].ToString().Insert(8, "4"));
+            PickUpAndThrowCode(4, playerKeys[3].GetKeys()[6].ToString().Insert(8, "4"), playerKeys[3].GetKeys()[4].ToString().Insert(8, "4"), playerKeys[3].GetThrowPower());
         }
 
    
     }
 
     //the picking up and throwing script
-    void PickUpAndThrowCode(int playerNumber_,string pickUpKey,string throwKey)
+    void PickUpAndThrowCode(int playerNumber_,string pickUpKey,string throwKey,float throwPower_)
     {
         if (MenuScript.Instance.gamePaused == false)
         {
@@ -71,12 +82,16 @@ public class PickUpUpdated : MonoBehaviour
                         //turn off the visually icon since we are holding something
                         icon.GetComponent<MeshRenderer>().enabled = false;
                         //if the picked up item is a one of these two then run the script that makes the player carry the object
-                        if ((picked.name == "Pickup") || (picked.name == "Bucket"))
+                        if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
                         {
                             //make it kinematic so gravity doesnt effect it
                             picked.GetComponent<Rigidbody>().isKinematic = true;
+                            picked.GetComponent<Rigidbody>().useGravity = false;
+                            offsetRotation = picked.transform.rotation.eulerAngles.y - this.gameObject.transform.parent.rotation.eulerAngles.y;
                             //start invoke repeating to keep the object in front of the object
                             InvokeRepeating("MovePickedUp", 0.0f, 0.01666f);
+                            //picked.transform.parent = gameObject.transform;
+                  
                         }
                         // if the item picked up is a draggable
                         else if (picked.name == "Drag")
@@ -105,12 +120,14 @@ public class PickUpUpdated : MonoBehaviour
                         //since we are holding something we now drop it
                         holdingPickUp = false;
                         //if the object is a pickup item or a bucket then do this
-                        if ((picked.name == "Pickup") || (picked.name == "Bucket"))
+                        if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
                         {
                             //set the kinematic back to false so the object is affected by gravity
                             picked.GetComponent<Rigidbody>().isKinematic = false;
+                            picked.GetComponent<Rigidbody>().useGravity = true;
                             //stop the loop of position the pick up item
                             CancelInvoke("MovePickedUp");
+                            picked.transform.parent = null;
                             // set the pick up item to null
                             picked = null;
                         }
@@ -139,14 +156,48 @@ public class PickUpUpdated : MonoBehaviour
                     //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
                     if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                     {
+                        //add force forwards and upwards to the picked up object
+                        //picked.GetComponent<Rigidbody>().AddForce((this.transform.forward + this.transform.up) * (throwPower_), ForceMode.VelocityChange);
+                        //Trun throw arc on
+                        throwArc.SetActive(true);
+                    }
+                }
+                //if the throw key is pressed and not realsed
+                if (Input.GetButton((throwKey.ToString())))
+                {
+                    if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
+                    {
+
+                        if (currentVelocity < maxVelocity)
+                        {
+
+                            currentVelocity = currentVelocity+offsetVelocity;
+                        }
+                        else
+                        {
+                            currentVelocity = maxVelocity;
+                        }
+                        throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, 10);
+                    }                   
+                }
+                //If the throw key is realsed
+                if (Input.GetButtonUp((throwKey.ToString())))
+                {
+                    if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
+                    {
+                        Debug.Log("pressing");
+                        throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
+                        throwArc.SetActive(false);
+                        SimulateThrow simulate = picked.AddComponent<SimulateThrow>();
+                        simulate.SetValue(currentVelocity, angle, resolution,picked.transform.position.y);
+                        currentVelocity = minVelocity;
                         //set it so we no longer are holding the object
                         holdingPickUp = false;
-                        //turn kinematic off so gravity effects the object again
-                        picked.GetComponent<Rigidbody>().isKinematic = false;
                         //turn off the movePickedUp script since we are no longer holding the object
                         CancelInvoke("MovePickedUp");
-                        //add force forwards and upwards to the picked up object
-                        picked.GetComponent<Rigidbody>().AddForce((this.transform.forward + this.transform.up) * (throwPower), ForceMode.VelocityChange);
+                        picked.transform.parent = null;
+                        //turn kinematic off so gravity effects the object again
+                        //picked.GetComponent<Rigidbody>().isKinematic = false;
                         //set the picked to null since we are no longer holding the object
                         picked = null;
                         //if the character joint is present then destroy it since we were holding the object
@@ -167,6 +218,7 @@ public class PickUpUpdated : MonoBehaviour
         float zDis = picked.GetComponent<BoxCollider>().bounds.size.z * Percentagez;
         //set the new position based on the percentage of the mesh's dimensions
         picked.transform.position = this.transform.position + (this.transform.forward*zDis) + new Vector3(0.0f,yDis,0.0f);
+        picked.transform.rotation = Quaternion.Euler(new Vector3(picked.transform.rotation.eulerAngles.x, this.transform.parent.rotation.eulerAngles.y , picked.transform.rotation.eulerAngles.z)); 
     }
     //the function which controls the drag
     void DragPickedUp()

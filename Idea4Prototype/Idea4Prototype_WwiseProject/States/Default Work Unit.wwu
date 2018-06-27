@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{31270FE0-9994-4DF9-9223-04075FC8517C}" SchemaVersion="80">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{31270FE0-9994-4DF9-9223-04075FC8517C}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Impact_Force" ID="{691B94C6-1525-4882-9413-7953860BB854}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{A668FFC7-C1D6-4361-8D27-BD3D4826048B}"/>
+						<State Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
+						<State Name="Medium" ID="{A20EFAF6-BE8C-4200-B767-EDE20E308839}"/>
+						<State Name="Light" ID="{F78BBE52-E4DB-4079-9BF6-B2042AD91618}"/>
+						<State Name="Very_Light" ID="{D901E54C-DBA5-41EC-80A9-150EAA4C3954}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

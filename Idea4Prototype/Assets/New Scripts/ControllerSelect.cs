@@ -11,7 +11,7 @@ public class ControllerSelect : MonoBehaviour {
     Sprite deselectedPlayerSprite;               // Sprite for de-selected player
     bool isSelected;                                    // Boolean to check if sprite should change
     public bool isInGame,pressed123;                               // Boolean to check if the player has pressed play on select screen, i.e they are going to be playing
-    PlayerKeys playerKeys;                              // Input key bindings
+    PlayerKeys[] playerKeys;                              // Input key bindings
     public GameObject playerSprite;                     // Reference to player sprite
     public float DelayReturnInput,FramePerSeconds;
     int playerNum;
@@ -31,7 +31,6 @@ public class ControllerSelect : MonoBehaviour {
         deselectedPlayerSprite = Resources.Load<Sprite>("UI/MenuSelectUI/deselectedPlayer");
 
         playerNum = int.Parse(this.transform.parent.name.Remove(0, this.transform.parent.name.Length - 1));
-        Debug.Log(playerNum);
     }
 
     void DelayInputBack()
@@ -46,7 +45,7 @@ public class ControllerSelect : MonoBehaviour {
         if (isInGame == false)                                               // If the player has not "entered" the game
         {
             //Debug.Log(Input.GetAxis("XboxLeftStickXaxis"));
-            if (Input.GetAxis("Horizontal" + playerNum) == 1 || Input.GetAxis("Horizontal" + playerNum) == -1 || (Input.GetKeyDown(playerKeys.GetKeys()[3]) || Input.GetKeyDown(playerKeys.GetKeys()[2])))                 // If the player uses the left or right key bindings
+            if (Input.GetAxis("Horizontal" + playerNum) == 1 || Input.GetAxis("Horizontal" + playerNum) == -1 || (Input.GetKeyDown(playerKeys[playerNum-1].GetKeys()[3]) || Input.GetKeyDown(playerKeys[playerNum-1].GetKeys()[2])))                 // If the player uses the left or right key bindings
             {
                 //pressed123 = true;
                 SelectChange();

@@ -46,7 +46,6 @@ public class AudioTestScript : MonoBehaviour
         {
             //gets the force of the hit
             float force = rigidBody.mass * rigidBody.velocity.magnitude;
-            Debug.Log(this.name + " did this force " + force);
             //plays the sound based on the material and the force and the psz group
             GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().PlayAudio(materialName, force, "Impact_Force");
             //the sound being played ( i think??? )

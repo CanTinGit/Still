@@ -210,7 +210,6 @@ public class AudioClass:MonoBehaviour
             //if statement that will be used for all the different states
             if ((force >= element.GetMinRange()) && (force <= element.GetMaxRange()))
             {
-                Debug.Log("WORKED YAY WOOOOOOOOOOO");
                 //AkSoundEngine.SetState(pszGroup, element.GetPszState());
                 break;
             }
