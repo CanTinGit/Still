@@ -1,5 +1,6 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	2939788855	Impact_Force			\Default Work Unit\Impact_Force	
+	3865314626	Material			\Default Work Unit\Material	
 
 State	ID	Name	State Group			Notes
 	748895195	None	Impact_Force			
@@ -7,6 +8,11 @@ State	ID	Name	State Group			Notes
 	2401347528	Very_Light	Impact_Force			
 	2732489590	Heavy	Impact_Force			
 	2849147824	Medium	Impact_Force			
+	468109460	metal_object	Material			
+	748895195	None	Material			
+	1453789772	ice_object	Material			
+	3350771019	plastic_object	Material			
+	3729124792	wood_object	Material			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	866473373	noise_detection			\Default Work Unit\noise_detection	
@@ -15,11 +21,16 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
 	393239870	Sfx			\Default Work Unit\Master Audio Bus\Sfx	
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	3170124113	Voice			\Default Work Unit\Master Audio Bus\Voice	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
 
 Effect plug-ins	ID	Name	Type				Notes
 	731635156	Wwise Meter (Custom)	Wwise Meter			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
 	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
 

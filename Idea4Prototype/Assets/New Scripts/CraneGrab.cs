@@ -13,7 +13,7 @@ public class CraneGrab : MonoBehaviour {
     }
 	void OnTriggerEnter(Collider other)
     {
-        if(other.name.Contains("Goal") == true)
+        if(other.name.Contains("Goal") == true || other.name.Contains("Player") == true)
         {
             other.transform.position = gameObject.transform.position;
         }
@@ -21,7 +21,7 @@ public class CraneGrab : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if (other.name.Contains("Goal") == true)
+        if (other.name.Contains("Goal") == true || other.name.Contains("Player") == true)
         {
             if (ReleaseTrigger.GetComponent<CraneCollider>().Release == false)
             {

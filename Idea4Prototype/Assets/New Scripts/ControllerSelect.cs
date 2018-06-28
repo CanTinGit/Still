@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class ControllerSelect : MonoBehaviour {
 
-    public Sprite selectedControlSprite;                // Sprite for when a player has joined 
-    public Sprite deselectedControlSprite;              // Sprite for when no player is selected
-    public Sprite selectedPlayerSprite;                 // Sprite for selected player
-    public Sprite deselectedPlayerSprite;               // Sprite for de-selected player
+    Sprite selectedControlSprite;                // Sprite for when a player has joined 
+    Sprite deselectedControlSprite;              // Sprite for when no player is selected
+    Sprite selectedPlayerSprite;                 // Sprite for selected player
+    Sprite deselectedPlayerSprite;               // Sprite for de-selected player
     bool isSelected;                                    // Boolean to check if sprite should change
     public bool isInGame,pressed123;                               // Boolean to check if the player has pressed play on select screen, i.e they are going to be playing
-    PlayerKeys playerKeys;                              // Input key bindings
+    PlayerKeys[] playerKeys;                              // Input key bindings
     public GameObject playerSprite;                     // Reference to player sprite
     public float DelayReturnInput,FramePerSeconds;
+    int playerNum;
     // Use this for initialization
     void Start ()
     {
@@ -24,55 +25,12 @@ public class ControllerSelect : MonoBehaviour {
         //InvokeRepeating("JoystickInputCharacterSelect", 0.0f, FramePerSeconds);
         DelayReturnInput = 0.5f;
         pressed123 = false;
+        selectedControlSprite = Resources.Load<Sprite>("UI/MenuSelectUI/PS_controller");
+        deselectedControlSprite = Resources.Load<Sprite>("UI/MenuSelectUI/PS_controllerUnknown");
+        selectedPlayerSprite = Resources.Load<Sprite>("UI/MenuSelectUI/player " +this.transform.parent.name.Remove(0,this.transform.parent.name.Length-1) );
+        deselectedPlayerSprite = Resources.Load<Sprite>("UI/MenuSelectUI/deselectedPlayer");
 
-
-
-    }
-	void JoystickInputCharacterSelect()
-    {
-        Debug.Log(MenuScript.Instance.GetNumberofPlayers());
-        if (isInGame == false)                                               // If the player has not "entered" the game
-        {
-            //Debug.Log(Input.GetAxis("XboxLeftStickXaxis"));
-            if (Input.GetAxis("XboxLeftStickXaxis") == 1  || Input.GetAxis("XboxLeftStickXaxis") == -1 || (Input.GetKeyDown(playerKeys.GetKeys()[3]) || Input.GetKeyDown(playerKeys.GetKeys()[2])) )                  // If the player uses the left or right key bindings
-            {
-                ChangeSprite(isSelected);
-            }
-            
-            
-        }
-        if ((Input.GetButtonDown("Start") || Input.GetKeyDown(KeyCode.Return)) && isSelected == true)     // If the character is selected and the start/join button is pressed
-        {
-            isInGame = !isInGame;                                            // Player is in game
-            if (isInGame == true)
-            {// Add 1 to the number of in game players for use by later scenes
-                MenuScript.Instance.SetNumberofPlayers(1);
-            }
-            else
-            {
-                MenuScript.Instance.SetNumberofPlayers(-1);
-            }
-        }
-    }
-
-    void ChangeSprite(bool isSelected_)
-    {
-        CancelInvoke("JoystickInputCharacterSelect");
-        isSelected = isSelected_;
-        if (isSelected == false)                                    // If the selected sprite isnt showing
-        {
-            isSelected = true;                                      // Set selected boolean to true
-            this.GetComponent<Image>().sprite = selectedControlSprite;          // Set selected controller sprite
-            playerSprite.GetComponent<Image>().sprite = selectedPlayerSprite;   // Set selected chr                 
-        }
-        else
-        {
-            isSelected = false;                                                 // Else, i.e isSelected is true
-            this.GetComponent<Image>().sprite = deselectedControlSprite;        // Set deselected controller sprite
-            playerSprite.GetComponent<Image>().sprite = deselectedPlayerSprite; // Set deselected player sprite
-        }
-        Invoke("DelayInputBack", DelayReturnInput);
-
+        playerNum = int.Parse(this.transform.parent.name.Remove(0, this.transform.parent.name.Length - 1));
     }
 
     void DelayInputBack()
@@ -87,10 +45,10 @@ public class ControllerSelect : MonoBehaviour {
         if (isInGame == false)                                               // If the player has not "entered" the game
         {
             //Debug.Log(Input.GetAxis("XboxLeftStickXaxis"));
-            if (Input.GetAxis("XboxLeftStickXaxis") == 1 || Input.GetAxis("XboxLeftStickXaxis") == -1 || (Input.GetKeyDown(playerKeys.GetKeys()[3]) || Input.GetKeyDown(playerKeys.GetKeys()[2])))                 // If the player uses the left or right key bindings
+            if (Input.GetAxis("Horizontal" + playerNum) == 1 || Input.GetAxis("Horizontal" + playerNum) == -1 || (Input.GetKeyDown(playerKeys[playerNum-1].GetKeys()[3]) || Input.GetKeyDown(playerKeys[playerNum-1].GetKeys()[2])))                 // If the player uses the left or right key bindings
             {
                 //pressed123 = true;
-                Code();
+                SelectChange();
                 //if (isSelected == false)                                    // If the selected sprite isnt showing
                 //{
                 //    isSelected = true;                                      // Set selected boolean to true
@@ -112,7 +70,7 @@ public class ControllerSelect : MonoBehaviour {
             //    MenuScript.Instance.SetNumberofPlayers(1);
             //}
         }
-        if ((Input.GetButtonDown("Start") || Input.GetKeyDown(KeyCode.Return)) && isSelected == true)     // If the character is selected and the start/join button is pressed
+        if ((Input.GetButtonDown("Start" + playerNum) || Input.GetKeyDown(KeyCode.Return)) && isSelected == true)     // If the character is selected and the start/join button is pressed
         {
             isInGame = !isInGame;                                            // Player is in game
             if (isInGame == true)
@@ -129,7 +87,7 @@ public class ControllerSelect : MonoBehaviour {
         }
     }
 
-    void Code()
+    void SelectChange()
     {
         if(pressed123==false)
         {

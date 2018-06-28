@@ -242,15 +242,15 @@ public class LevelBuilder : MonoBehaviour
     }
     void InteractKeyControls()
     {
-        if(Input.GetKeyDown(KeyCode.M))
+        if(Input.GetKeyDown(KeyCode.W))
         {
             ChangeState(EditorState.Move, GameObject.Find("MoveButton"));
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             ChangeState(EditorState.Rotate, GameObject.Find("RotateButton"));
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             ChangeState(EditorState.Scale, GameObject.Find("ScaleButton"));
         }
@@ -259,52 +259,123 @@ public class LevelBuilder : MonoBehaviour
     {
         if (editorState == EditorState.Move)
         {
-            if (Input.GetAxis("Mouse ScrollWheel") > 0.0f)
-            {
-                UpDownPlacement += 1.0f;
-            }
-            else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
-            {
-                UpDownPlacement -= 1.0f;
-            }
+            StateMove();
         }
         //rotation of x and y axis ( up and down and left and right)
         else if (editorState == EditorState.Rotate)
         {
-            //get the intial click location
-            if(Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                intialMouseClick = Input.mousePosition;
-            }
-            //we now get the updated click location
-            if((Input.GetKey(KeyCode.Mouse0)))
-            {
-                //the sensitivity of the movement for x and y axis
-                float sensitivityX = 0.005f;
-                float sensitivityY = 0.005f;
-                //the rotation value ( how much to rotate the object)
-                float rotateX = 0;
-                float rotateY = 0;
-                Vector3 Held = Input.mousePosition;
-                float DistanceX = Mathf.Abs(Held.x - intialMouseClick.x);
-                float DistanceY = Mathf.Abs(Held.y - intialMouseClick.y);
-                float ThresholdXDistance = 70;
-                float ThresholdYDistance = 30;
-                if (DistanceX> ThresholdXDistance)
-                {
-                    rotateY = (Held.x - intialMouseClick.x) * sensitivityY; // the rotation of the y axis by moving left and right on ouse
-
-                }
-                if (DistanceY > ThresholdYDistance)
-                {
-                    rotateX = (Held.y - intialMouseClick.y) * sensitivityX;
-                }
-                Vector3 newAngle = new Vector3(interactedObject.transform.eulerAngles.x + rotateX, interactedObject.transform.eulerAngles.y + rotateY, interactedObject.transform.eulerAngles.z);
-                interactedObject.transform.eulerAngles = newAngle;
-                SetStartValues(GameObject.Find("Rotate"));
-            }
+            StateRotate();
+        }
+        else if (editorState == EditorState.Scale)
+        {
+            StateScale();
+        }
+        else if (editorState == EditorState.None)
+        {
+            //StateNone();
         }
     }
+    void StateNone()
+    {
+        Vector3 intialMouseClick= Vector3.zero;
+    }
+    void StateMove()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") > 0.0f)
+        {
+            UpDownPlacement += 1.0f;
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
+        {
+            UpDownPlacement -= 1.0f;
+        }
+    }
+    void StateRotate()
+    {
+        //get the intial click location
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            intialMouseClick = Input.mousePosition;
+        }
+        //we now get the updated click location
+        if ((Input.GetKey(KeyCode.Mouse0)))
+        {
+            //the sensitivity of the movement for x and y axis
+            float sensitivityX = 0.005f;
+            float sensitivityY = 0.005f;
+            //the rotation value ( how much to rotate the object)
+            float rotateX = 0;
+            float rotateY = 0;
+            Vector3 Held = Input.mousePosition;
+            float DistanceX = Mathf.Abs(Held.x - intialMouseClick.x);
+            float DistanceY = Mathf.Abs(Held.y - intialMouseClick.y);
+            float ThresholdXDistance = 70;
+            float ThresholdYDistance = 30;
+            if (DistanceX > ThresholdXDistance)
+            {
+                rotateY = (Held.x - intialMouseClick.x) * sensitivityY; // the rotation of the y axis by moving left and right on ouse
+
+            }
+            if (DistanceY > ThresholdYDistance)
+            {
+                rotateX = (Held.y - intialMouseClick.y) * sensitivityX;
+            }
+            Vector3 newAngle = new Vector3(interactedObject.transform.eulerAngles.x + rotateX, interactedObject.transform.eulerAngles.y + -rotateY, interactedObject.transform.eulerAngles.z);
+            interactedObject.transform.eulerAngles = newAngle;
+            SetStartValues(GameObject.Find("Rotate"));
+        }
+    }
+    void StateScale()
+    {
+        //get the intial click location
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            intialMouseClick = Input.mousePosition;
+        }
+        //we now get the updated click location
+        if ((Input.GetKey(KeyCode.Mouse0)))
+        {          
+            //the sensitivity of the movement for x and y axis
+            float sensitivityX = 0.001f;
+            float sensitivityY = 0.001f;
+            float sensitivityZ = 0.005f;
+            //the rotation value ( how much to rotate the object)
+            float scaleX = 0;
+            float scaleY = 0;
+            float scaleZ = 0;
+            Vector3 Held = Input.mousePosition;
+            float DistanceX = Mathf.Abs(Held.x - intialMouseClick.x);
+            float DistanceY = Mathf.Abs(Held.y - intialMouseClick.y);
+            float ThresholdXDistance = 70;
+            float ThresholdYDistance = 70;
+            if (DistanceX > ThresholdXDistance)
+            {
+                scaleX = (Held.x - intialMouseClick.x) * sensitivityY; // the rotation of the y axis by moving left and right on ouse
+
+            }
+            if (DistanceY > ThresholdYDistance)
+            {
+                scaleZ = (Held.y - intialMouseClick.y) * sensitivityX;
+            }
+
+            Vector3 newScale = new Vector3(interactedObject.transform.localScale.x + scaleX, interactedObject.transform.localScale.y , interactedObject.transform.localScale.z+ scaleZ);
+            if(newScale.x<0)
+            {
+                newScale.x = 0.0f;
+            }
+            if (newScale.y < 0)
+            {
+                newScale.y = 0.0f;
+            }
+            if (newScale.z < 0)
+            {
+                newScale.z = 0.0f;
+            }
+            interactedObject.transform.localScale = newScale;
+            SetStartValues(GameObject.Find("Scale"));
+        }
+    }
+
     void FixAndUnfixObject()
     {
         UpDownPlacement = 0.0f;

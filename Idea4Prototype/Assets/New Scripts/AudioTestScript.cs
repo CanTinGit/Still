@@ -28,8 +28,8 @@ public class AudioTestScript : MonoBehaviour
     void LoopWwiseNoise()
     {
         rigidBody = GetComponent<Rigidbody>();
-        int type = 1;
-        float returnNoiseValue;
+       // int type = 1;
+       //float returnNoiseValue;
         //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out returnNoiseValue, ref type);
         //noiseMade = returnNoiseValue;
     }
@@ -45,8 +45,13 @@ public class AudioTestScript : MonoBehaviour
         if (col.transform.tag == "Ground")
         {
             //gets the force of the hit
-            float force = rigidBody.mass * rigidBody.velocity.magnitude;
-            Debug.Log(this.name + " did this force " + force);
+            //
+            // NEED TO RECALCULATE HOW MUCH FORCE
+            ///
+            //float force = rigidBody.mass * 
+            //float force = rigidBody.mass * rigidBody.velocity.magnitude;
+            //float force = rigidBody.mass * Physics.gravity.magnitude *  //rigidBody.mass * rigidBody.velocity.magnitude;
+            //Debug.Log("audio test force is " + force);
             //plays the sound based on the material and the force and the psz group
             GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().PlayAudio(materialName, force, "Impact_Force");
             //the sound being played ( i think??? )

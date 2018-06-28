@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 927956540
-    m_lastTimePart2: -1999250809
+    m_lastTimePsrt1: 606352640
+    m_lastTimePart2: -1999250363
     List:
     - Name: bubble_rise
       Path: Default Work Unit\bubble_rise
@@ -68,6 +68,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: 697519634
       Guid: ac62c32a5eb5c843827b7269bfa7b694
+      maxAttenuation: 0
+    - Name: crane_pickup
+      Path: Default Work Unit\crane_pickup
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: crane_pickup
+        ObjectType: 3
+      ID: 412826751
+      Guid: 6acad24ca58bf54897afa548d0693919
       maxAttenuation: 0
     - Name: player_accident
       Path: Default Work Unit\Player\player_accident
@@ -145,15 +155,26 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: 927806540
-    m_lastTimePart2: -1999250809
-    List: []
+    m_lastTimePsrt1: 1530469632
+    m_lastTimePart2: -1999250390
+    List:
+    - Name: Reverb
+      Path: Default Work Unit\Master Audio Bus\Reverb
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Reverb
+        ObjectType: 1
+      ID: 348963605
+      Guid: adc8318d689e2a4a957c4972f96d2159
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
-    m_lastTimePsrt1: -838296922
-    m_lastTimePart2: -1999250816
+    m_lastTimePsrt1: -489137920
+    m_lastTimePart2: -1999250379
     List:
     - Name: Impact_Force
       Path: Default Work Unit\Impact_Force
@@ -188,19 +209,52 @@ MonoBehaviour:
       - bytes: f6fa0ea28cbe0042b767ede20e308839
       - bytes: c7ff68a6d6c161438d27bd3d4826048b
       - bytes: 4ce501d9a5dbec4180a9150eaa4c3954
+    - Name: Material
+      Path: Default Work Unit\Material
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Material
+        ObjectType: 9
+      ID: -429652670
+      Guid: 1fb0041b20a78044b5f388c6fd17f99a
+      values:
+      - ice_object
+      - metal_object
+      - None
+      - plastic_object
+      - wood_object
+      ValueIcons:
+      - ElementName: ice_object
+        ObjectType: 8
+      - ElementName: metal_object
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: plastic_object
+        ObjectType: 8
+      - ElementName: wood_object
+        ObjectType: 8
+      valueIDs: 4c12a75694c8e61bdb3ba32c4bb5b8c7b8ed45de
+      ValueGuids:
+      - bytes: 99da7208607a68498f24e8bdc3807e88
+      - bytes: 6e1cd3dfd766ea478f951ab34a192f4f
+      - bytes: 93a7cba28b72004dac7588424111fe33
+      - bytes: 5c536ebbbde13a499bcda4c52ec7513e
+      - bytes: 91eda26eef14ab47a9aa9c93bffb8d58
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-    m_lastTimePsrt1: -838140558
+    m_lastTimePsrt1: -828429568
     m_lastTimePart2: -1999250816
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -680790756
-    m_lastTimePart2: -1999250809
+    m_lastTimePsrt1: 606352640
+    m_lastTimePart2: -1999250363
     List:
     - Name: Enemy
       Path: Default Work Unit\Enemy
@@ -233,7 +287,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
-    m_lastTimePsrt1: -849078394
+    m_lastTimePsrt1: -848429568
     m_lastTimePart2: -1999250816
     List:
     - Name: noise_detection
@@ -249,16 +303,13 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{423FF0F4-4C2C-49B0-BB98-500C1D5DAA9E}'
-    m_lastTimePsrt1: -838140558
+    m_lastTimePsrt1: -828429568
     m_lastTimePart2: -1999250816
     List: []
   ExpandedItems:
   - /Idea4Prototype_WwiseProject
-  - /Idea4Prototype_WwiseProject/Events
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit
   - /Idea4Prototype_WwiseProject/SoundBanks
   - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
-  - /Idea4Prototype_WwiseProject/States
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

@@ -12,6 +12,7 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -79,611 +80,6 @@
 								<ActiveSource Name="Click_Positive" ID="{CC643A5D-87A6-4AAC-8AE9-251A293F4D3D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<SwitchContainer Name="Impact" ID="{4069B11D-16A6-47C2-B771-CFF1121BCDAA}" ShortID="282204340">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<RandomSequenceContainer Name="Impact_Can_Heavy" ID="{112DEE70-A036-4433-AA70-7E618BDA1F8B}" ShortID="922487726">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{24CE743F-502B-4A2E-A9A2-36273DF3E1C8}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Impact_Can_Heavy" ID="{43A9841C-F9D3-4D76-BB51-1EC322347583}" ShortID="27194066">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{03CC4BD4-DB44-4005-8E03-3043CAD4A95F}"/>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Heavy" ID="{CB7633D4-FBC3-4518-A3A7-C17F2EDC8915}" ShortID="530105447">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Heavy.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Heavy" ID="{CB7633D4-FBC3-4518-A3A7-C17F2EDC8915}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Heavy_1" ID="{59CDB325-A9AA-42BD-AFA8-E2896D0B1E50}" ShortID="1048997002">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{066E447A-60B5-4AD2-9193-CA6A6C937D18}"/>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>5</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Heavy_1" ID="{71F7AA49-A4A3-4FF7-9982-D44BB07FA171}" ShortID="456681022">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Heavy_1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Heavy_1" ID="{71F7AA49-A4A3-4FF7-9982-D44BB07FA171}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Heavy_4" ID="{6D4051B1-2120-44F4-BB2E-D5E0FECAB333}" ShortID="1053205705">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>-100</Value>
-													</ValueList>
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{17C0A32E-D388-49EF-9FA3-61BD14C57ED8}"/>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="Weight" Type="Real64">
-													<ValueList>
-														<Value>10</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Heavy_4" ID="{061E9F67-2615-4630-AEAD-C9EAEEA2E8AF}" ShortID="371527114">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.008857432775241"/>
-														<Property Name="FadeInShape" Type="int16" Value="2"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.16752765093861"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Heavy_4.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Heavy_4" ID="{061E9F67-2615-4630-AEAD-C9EAEEA2E8AF}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Heavy_5" ID="{E3E810E0-5FAC-4C35-896D-11CA6EA90D50}" ShortID="993490741">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{22B5EADC-BB5D-49EC-A6A3-2723BE59E022}">
-																<PropertyList>
-																	<Property Name="Min" Type="Real64" Value="-200"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Heavy_5" ID="{54E8E5B6-4563-449B-BB9D-5688F736F7EB}" ShortID="365189869">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="8.82800608828004E-03"/>
-														<Property Name="FadeInShape" Type="int16" Value="2"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.1"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Heavy_5.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Heavy_5" ID="{54E8E5B6-4563-449B-BB9D-5688F736F7EB}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Impact_Can_Light" ID="{F2783C68-636B-4B2C-8410-0A49112FE76D}" ShortID="48827410">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{479BBEB6-D738-4603-A80E-E92E688D884C}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="200"/>
-															<Property Name="Min" Type="Real64" Value="-200"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-3</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Impact_Can_Light" ID="{DE72F62D-411A-4B64-A21C-4F54767ECBCE}" ShortID="612789342">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Light" ID="{4288BF15-D033-4090-8ECB-63D9974B5388}" ShortID="199767411">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Light.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Light" ID="{4288BF15-D033-4090-8ECB-63D9974B5388}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Light_1" ID="{72F2F98E-4A36-4300-9E78-0AD207E5E2A1}" ShortID="703498622">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Light_1" ID="{BF0DC292-462D-4D5C-B1F2-37ADBA95ECD8}" ShortID="674416996">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Light_1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Light_1" ID="{BF0DC292-462D-4D5C-B1F2-37ADBA95ECD8}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Light_3" ID="{00DBFC82-A502-4066-A1CD-1C9CA2B63132}" ShortID="1061985462">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Light_3" ID="{F68BBA69-5FFB-4B97-8CDA-CDE7AAD9987B}" ShortID="401969816">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Light_3.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Light_3" ID="{F68BBA69-5FFB-4B97-8CDA-CDE7AAD9987B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Light_4" ID="{16D26AD6-3F88-4D19-B6C4-12F7B4BE8ED6}" ShortID="1012583863">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Light_4" ID="{C04EE55A-8711-44FF-998F-11C42DFD6276}" ShortID="409370185">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Light_4.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Light_4" ID="{C04EE55A-8711-44FF-998F-11C42DFD6276}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Light_5" ID="{18D77109-000A-404A-B5A2-739D5A781F83}" ShortID="974465308">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Light_5" ID="{6E5FD2E1-B84E-4C0B-B84B-AEF33907C115}" ShortID="488606189">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Light_5.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Light_5" ID="{6E5FD2E1-B84E-4C0B-B84B-AEF33907C115}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Impact_Can_Medium" ID="{D97169AF-8F67-4135-B520-D20DFE1B1267}" ShortID="93157032">
-									<PropertyList>
-										<Property Name="OverrideEffect" Type="bool" Value="True"/>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{F3CCB348-5468-4193-A56E-2092EAB83AFC}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>6</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-										</Reference>
-										<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
-											<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Impact_Can_Medium" ID="{41611396-E3F0-4658-9BD6-2BD72F060627}" ShortID="907473716">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Medium" ID="{67DD5B09-CD1C-48A7-87BF-EB310516C130}" ShortID="931441282">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Medium.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Medium" ID="{67DD5B09-CD1C-48A7-87BF-EB310516C130}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Medium_1" ID="{FFBAB118-5B65-40BD-86C7-ECFE7A9918E6}" ShortID="630326446">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-2</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Medium_1" ID="{3C09FC0A-8601-447C-A59E-F78271E93EC3}" ShortID="1042311661">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Medium_1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Medium_1" ID="{3C09FC0A-8601-447C-A59E-F78271E93EC3}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Medium_2" ID="{EFB8D572-BBEA-4129-B101-96FD225FCC28}" ShortID="498140324">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Medium_2" ID="{24CF8080-42DD-4E56-8854-C883B9AAB2DC}" ShortID="864353628">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Medium_2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Medium_2" ID="{24CF8080-42DD-4E56-8854-C883B9AAB2DC}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Medium_3" ID="{D72084DE-126A-425C-B0C0-C6432646FCFC}" ShortID="586873097">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{6E35843A-51B3-4DDC-A043-F7E81D4D873E}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="100"/>
-																	<Property Name="Min" Type="Real64" Value="-100"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>5</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Medium_3" ID="{3CF0A9E3-A2A9-47E7-99FD-15CCB1A98956}" ShortID="76802143">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Medium_3.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Medium_3" ID="{3CF0A9E3-A2A9-47E7-99FD-15CCB1A98956}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Impact_Can_Very_Light" ID="{B8A81C0E-B0B9-4BEF-AA1A-2D6463381F84}" ShortID="463659906">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{90CEFB52-1098-4DE0-9917-AB94B8DC411F}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="200"/>
-															<Property Name="Min" Type="Real64" Value="-200"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-3</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Impact_Can_Very_Light" ID="{A89937AD-1E81-44AB-9C19-056EC9EE1C52}" ShortID="1000917084">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{25DD68B0-294E-4118-8408-08E4C84C4CAB}"/>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Very_Light" ID="{DFABEB7E-7821-4BC7-A323-3239C7BC0BA8}" ShortID="832918321">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Very_Light.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Very_Light" ID="{DFABEB7E-7821-4BC7-A323-3239C7BC0BA8}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Very_Light_1" ID="{C53CC35D-C58A-4867-A396-ACE21B9F3E46}" ShortID="539663058">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{572E0BF1-2F55-479A-9634-A701C837C7C0}"/>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Very_Light_1" ID="{C7ED8B63-3FD3-4E9C-962B-517AADD6AE20}" ShortID="175213724">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Very_Light_1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Very_Light_1" ID="{C7ED8B63-3FD3-4E9C-962B-517AADD6AE20}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Impact_Can_Very_Light_2" ID="{0D3042AB-290B-42F8-BE28-19978395E6C8}" ShortID="482540594">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{28BC658E-BA2C-44B8-981A-6FA36E10182B}"/>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Impact_Can_Very_Light_2" ID="{A04C9617-394F-407A-A454-9EF173A7D980}" ShortID="400306442">
-													<Language>SFX</Language>
-													<AudioFile>Impact_Can_Very_Light_2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Impact_Can_Very_Light_2" ID="{A04C9617-394F-407A-A454-9EF173A7D980}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupRef Name="Impact_Force" ID="{691B94C6-1525-4882-9413-7953860BB854}"/>
-								<DefaultSwitchRef Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="Impact_Can_Very_Light" ID="{B8A81C0E-B0B9-4BEF-AA1A-2D6463381F84}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Impact_Can_Light" ID="{F2783C68-636B-4B2C-8410-0A49112FE76D}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Impact_Can_Heavy" ID="{112DEE70-A036-4433-AA70-7E618BDA1F8B}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Impact_Can_Medium" ID="{D97169AF-8F67-4135-B520-D20DFE1B1267}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="Very_Light" ID="{D901E54C-DBA5-41EC-80A9-150EAA4C3954}"/>
-										<ItemList>
-											<ItemRef Name="Impact_Can_Very_Light" ID="{B8A81C0E-B0B9-4BEF-AA1A-2D6463381F84}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Light" ID="{F78BBE52-E4DB-4079-9BF6-B2042AD91618}"/>
-										<ItemList>
-											<ItemRef Name="Impact_Can_Light" ID="{F2783C68-636B-4B2C-8410-0A49112FE76D}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
-										<ItemList>
-											<ItemRef Name="Impact_Can_Heavy" ID="{112DEE70-A036-4433-AA70-7E618BDA1F8B}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Medium" ID="{A20EFAF6-BE8C-4200-B767-EDE20E308839}"/>
-										<ItemList>
-											<ItemRef Name="Impact_Can_Medium" ID="{D97169AF-8F67-4135-B520-D20DFE1B1267}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
-							</GroupingInfo>
-						</SwitchContainer>
 						<RandomSequenceContainer Name="Floating_bubble" ID="{30EA3355-AF53-4B88-B88C-CBE12A4BC065}" ShortID="617544237">
 							<PropertyList>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -943,6 +339,737 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="bubble gun trigger" ID="{EF25B88C-8CBC-4890-8570-F204912A914A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<SwitchContainer Name="Material" ID="{B50AFE6F-5D8E-4A80-83B9-293CBBD3DA32}" ShortID="213939631">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SwitchContainer Name="Metal" ID="{4069B11D-16A6-47C2-B771-CFF1121BCDAA}" ShortID="282204340">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Impact_Can_Heavy" ID="{112DEE70-A036-4433-AA70-7E618BDA1F8B}" ShortID="922487726">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{24CE743F-502B-4A2E-A9A2-36273DF3E1C8}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Impact_Can_Heavy" ID="{43A9841C-F9D3-4D76-BB51-1EC322347583}" ShortID="27194066">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{03CC4BD4-DB44-4005-8E03-3043CAD4A95F}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Heavy" ID="{CB7633D4-FBC3-4518-A3A7-C17F2EDC8915}" ShortID="530105447">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Heavy.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Heavy" ID="{CB7633D4-FBC3-4518-A3A7-C17F2EDC8915}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Heavy_1" ID="{59CDB325-A9AA-42BD-AFA8-E2896D0B1E50}" ShortID="1048997002">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{066E447A-60B5-4AD2-9193-CA6A6C937D18}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Heavy_1" ID="{71F7AA49-A4A3-4FF7-9982-D44BB07FA171}" ShortID="456681022">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Heavy_1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Heavy_1" ID="{71F7AA49-A4A3-4FF7-9982-D44BB07FA171}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Heavy_4" ID="{6D4051B1-2120-44F4-BB2E-D5E0FECAB333}" ShortID="1053205705">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-100</Value>
+															</ValueList>
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{17C0A32E-D388-49EF-9FA3-61BD14C57ED8}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Weight" Type="Real64">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Heavy_4" ID="{061E9F67-2615-4630-AEAD-C9EAEEA2E8AF}" ShortID="371527114">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.008857432775241"/>
+																<Property Name="FadeInShape" Type="int16" Value="2"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.16752765093861"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Heavy_4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Heavy_4" ID="{061E9F67-2615-4630-AEAD-C9EAEEA2E8AF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Heavy_5" ID="{E3E810E0-5FAC-4C35-896D-11CA6EA90D50}" ShortID="993490741">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{22B5EADC-BB5D-49EC-A6A3-2723BE59E022}">
+																		<PropertyList>
+																			<Property Name="Min" Type="Real64" Value="-200"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Heavy_5" ID="{54E8E5B6-4563-449B-BB9D-5688F736F7EB}" ShortID="365189869">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="8.82800608828004E-03"/>
+																<Property Name="FadeInShape" Type="int16" Value="2"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.1"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Heavy_5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Heavy_5" ID="{54E8E5B6-4563-449B-BB9D-5688F736F7EB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Impact_Can_Medium" ID="{D97169AF-8F67-4135-B520-D20DFE1B1267}" ShortID="93157032">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{F3CCB348-5468-4193-A56E-2092EAB83AFC}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+													<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Impact_Can_Medium" ID="{41611396-E3F0-4658-9BD6-2BD72F060627}" ShortID="907473716">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Medium" ID="{67DD5B09-CD1C-48A7-87BF-EB310516C130}" ShortID="931441282">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Medium.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Medium" ID="{67DD5B09-CD1C-48A7-87BF-EB310516C130}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Medium_1" ID="{FFBAB118-5B65-40BD-86C7-ECFE7A9918E6}" ShortID="630326446">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Medium_1" ID="{3C09FC0A-8601-447C-A59E-F78271E93EC3}" ShortID="1042311661">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Medium_1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Medium_1" ID="{3C09FC0A-8601-447C-A59E-F78271E93EC3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Medium_2" ID="{EFB8D572-BBEA-4129-B101-96FD225FCC28}" ShortID="498140324">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Medium_2" ID="{24CF8080-42DD-4E56-8854-C883B9AAB2DC}" ShortID="864353628">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Medium_2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Medium_2" ID="{24CF8080-42DD-4E56-8854-C883B9AAB2DC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Medium_3" ID="{D72084DE-126A-425C-B0C0-C6432646FCFC}" ShortID="586873097">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{6E35843A-51B3-4DDC-A043-F7E81D4D873E}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Medium_3" ID="{3CF0A9E3-A2A9-47E7-99FD-15CCB1A98956}" ShortID="76802143">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Medium_3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Medium_3" ID="{3CF0A9E3-A2A9-47E7-99FD-15CCB1A98956}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Impact_Can_Light" ID="{F2783C68-636B-4B2C-8410-0A49112FE76D}" ShortID="48827410">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{479BBEB6-D738-4603-A80E-E92E688D884C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Impact_Can_Light" ID="{DE72F62D-411A-4B64-A21C-4F54767ECBCE}" ShortID="612789342">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Light" ID="{4288BF15-D033-4090-8ECB-63D9974B5388}" ShortID="199767411">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Light.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Light" ID="{4288BF15-D033-4090-8ECB-63D9974B5388}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Light_1" ID="{72F2F98E-4A36-4300-9E78-0AD207E5E2A1}" ShortID="703498622">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Light_1" ID="{BF0DC292-462D-4D5C-B1F2-37ADBA95ECD8}" ShortID="674416996">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Light_1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Light_1" ID="{BF0DC292-462D-4D5C-B1F2-37ADBA95ECD8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Light_3" ID="{00DBFC82-A502-4066-A1CD-1C9CA2B63132}" ShortID="1061985462">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Light_3" ID="{F68BBA69-5FFB-4B97-8CDA-CDE7AAD9987B}" ShortID="401969816">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Light_3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Light_3" ID="{F68BBA69-5FFB-4B97-8CDA-CDE7AAD9987B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Light_4" ID="{16D26AD6-3F88-4D19-B6C4-12F7B4BE8ED6}" ShortID="1012583863">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Light_4" ID="{C04EE55A-8711-44FF-998F-11C42DFD6276}" ShortID="409370185">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Light_4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Light_4" ID="{C04EE55A-8711-44FF-998F-11C42DFD6276}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Light_5" ID="{18D77109-000A-404A-B5A2-739D5A781F83}" ShortID="974465308">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Light_5" ID="{6E5FD2E1-B84E-4C0B-B84B-AEF33907C115}" ShortID="488606189">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Light_5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Light_5" ID="{6E5FD2E1-B84E-4C0B-B84B-AEF33907C115}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Impact_Can_Very_Light" ID="{B8A81C0E-B0B9-4BEF-AA1A-2D6463381F84}" ShortID="463659906">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{90CEFB52-1098-4DE0-9917-AB94B8DC411F}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Impact_Can_Very_Light" ID="{A89937AD-1E81-44AB-9C19-056EC9EE1C52}" ShortID="1000917084">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{25DD68B0-294E-4118-8408-08E4C84C4CAB}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Very_Light" ID="{DFABEB7E-7821-4BC7-A323-3239C7BC0BA8}" ShortID="832918321">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Very_Light.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Very_Light" ID="{DFABEB7E-7821-4BC7-A323-3239C7BC0BA8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Very_Light_1" ID="{C53CC35D-C58A-4867-A396-ACE21B9F3E46}" ShortID="539663058">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{572E0BF1-2F55-479A-9634-A701C837C7C0}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Very_Light_1" ID="{C7ED8B63-3FD3-4E9C-962B-517AADD6AE20}" ShortID="175213724">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Very_Light_1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Very_Light_1" ID="{C7ED8B63-3FD3-4E9C-962B-517AADD6AE20}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Impact_Can_Very_Light_2" ID="{0D3042AB-290B-42F8-BE28-19978395E6C8}" ShortID="482540594">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{28BC658E-BA2C-44B8-981A-6FA36E10182B}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Impact_Can_Very_Light_2" ID="{A04C9617-394F-407A-A454-9EF173A7D980}" ShortID="400306442">
+															<Language>SFX</Language>
+															<AudioFile>Impact_Can_Very_Light_2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Impact_Can_Very_Light_2" ID="{A04C9617-394F-407A-A454-9EF173A7D980}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupRef Name="Impact_Force" ID="{691B94C6-1525-4882-9413-7953860BB854}"/>
+										<DefaultSwitchRef Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Impact_Can_Very_Light" ID="{B8A81C0E-B0B9-4BEF-AA1A-2D6463381F84}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Impact_Can_Light" ID="{F2783C68-636B-4B2C-8410-0A49112FE76D}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Impact_Can_Heavy" ID="{112DEE70-A036-4433-AA70-7E618BDA1F8B}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Impact_Can_Medium" ID="{D97169AF-8F67-4135-B520-D20DFE1B1267}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Very_Light" ID="{D901E54C-DBA5-41EC-80A9-150EAA4C3954}"/>
+												<ItemList>
+													<ItemRef Name="Impact_Can_Very_Light" ID="{B8A81C0E-B0B9-4BEF-AA1A-2D6463381F84}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Light" ID="{F78BBE52-E4DB-4079-9BF6-B2042AD91618}"/>
+												<ItemList>
+													<ItemRef Name="Impact_Can_Light" ID="{F2783C68-636B-4B2C-8410-0A49112FE76D}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
+												<ItemList>
+													<ItemRef Name="Impact_Can_Heavy" ID="{112DEE70-A036-4433-AA70-7E618BDA1F8B}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Medium" ID="{A20EFAF6-BE8C-4200-B767-EDE20E308839}"/>
+												<ItemList>
+													<ItemRef Name="Impact_Can_Medium" ID="{D97169AF-8F67-4135-B520-D20DFE1B1267}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="Wood" ID="{CE024AE4-E3E1-4278-A7AF-AADE931A8BBD}" ShortID="64980307">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<GroupingInfo>
+										<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="Plastic" ID="{01F88A3D-B3C5-4017-AE50-20FCC43BF1CB}" ShortID="236358375">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<GroupingInfo>
+										<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="Ice" ID="{B82110BA-E03D-4E72-B872-8550E6B05CDC}" ShortID="694353182">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<GroupingInfo>
+										<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupRef Name="Material" ID="{1B04B01F-A720-4480-B5F3-88C6FD17F99A}"/>
+								<DefaultSwitchRef Name="None" ID="{A2CBA793-728B-4D00-AC75-88424111FE33}"/>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Metal" ID="{4069B11D-16A6-47C2-B771-CFF1121BCDAA}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Plastic" ID="{01F88A3D-B3C5-4017-AE50-20FCC43BF1CB}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Ice" ID="{B82110BA-E03D-4E72-B872-8550E6B05CDC}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wood" ID="{CE024AE4-E3E1-4278-A7AF-AADE931A8BBD}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="plastic_object" ID="{BB6E535C-E1BD-493A-9BCD-A4C52EC7513E}"/>
+										<ItemList>
+											<ItemRef Name="Plastic" ID="{01F88A3D-B3C5-4017-AE50-20FCC43BF1CB}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="metal_object" ID="{DFD31C6E-66D7-47EA-8F95-1AB34A192F4F}"/>
+										<ItemList>
+											<ItemRef Name="Metal" ID="{4069B11D-16A6-47C2-B771-CFF1121BCDAA}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="wood_object" ID="{6EA2ED91-14EF-47AB-A9AA-9C93BFFB8D58}"/>
+										<ItemList>
+											<ItemRef Name="Wood" ID="{CE024AE4-E3E1-4278-A7AF-AADE931A8BBD}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="ice_object" ID="{0872DA99-7A60-4968-8F24-E8BDC3807E88}"/>
+										<ItemList>
+											<ItemRef Name="Ice" ID="{B82110BA-E03D-4E72-B872-8550E6B05CDC}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<Sound Name="FX_Crane_Part_1" ID="{22897937-82A5-4205-A77C-455390790FBD}" ShortID="939456041">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Crane_Part_1" ID="{1F0B5826-8810-4E6B-8C1E-F4224A8D1001}" ShortID="361187219">
+									<Language>English(US)</Language>
+									<AudioFile>FX_Crane_Part_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Crane_Part_1" ID="{1F0B5826-8810-4E6B-8C1E-F4224A8D1001}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

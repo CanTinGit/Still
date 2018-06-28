@@ -73,7 +73,22 @@
 							</PropertyList>
 						</Bus>
 						<Bus Name="Music" ID="{6CC6408D-3CB5-4A61-8AD7-9F87AD07E265}"/>
-						<Bus Name="Voice" ID="{E146FB57-F776-4B95-9F29-555BCD4DD562}"/>
+						<Bus Name="Voice" ID="{E146FB57-F776-4B95-9F29-555BCD4DD562}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<AuxBus Name="Reverb" ID="{8D31C8AD-9E68-4A2A-957C-4972F96D2159}">
+							<ReferenceList>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Room_Medium_High_Absorbtion" ID="{E22DBBB6-7656-4B93-A28D-C003FD416889}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
 					</ChildrenList>
 				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>

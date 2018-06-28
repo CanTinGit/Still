@@ -39,7 +39,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Impact" ID="{4069B11D-16A6-47C2-B771-CFF1121BCDAA}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+									<ObjectRef Name="Metal" ID="{4069B11D-16A6-47C2-B771-CFF1121BCDAA}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -161,6 +161,20 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="crane_pickup" ID="{4CD2CA6A-8BA5-48F5-97AF-A548D0693919}">
+					<ChildrenList>
+						<Action Name="" ID="{8AC42CC0-8C51-4C16-84C0-8E72E0D8A347}" ShortID="733599722">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FX_Crane_Part_1" ID="{22897937-82A5-4205-A77C-455390790FBD}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

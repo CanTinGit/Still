@@ -204,13 +204,15 @@ public class AudioClass:MonoBehaviour
     {       
         foreach (AudioForceStruct element in audioRange)
         {
-            //DEBUG MESSAGE FOR TESTING WHAT IS MIN MAX AND THE FORCE PASSING IN
+            //DEBUG MESSAGE FOR TESTING WHAT IS MINI MAX AND THE FORCE PASSING IN
             //Debug.Log(force.ToString() + " " + element.GetMinRange().ToString() + " " + force.ToString() + " " + element.GetMaxRange().ToString());
 
             //if statement that will be used for all the different states
             if ((force >= element.GetMinRange()) && (force <= element.GetMaxRange()))
             {
-                Debug.Log("WORKED YAY WOOOOOOOOOOO");
+                Debug.Log("the force is " + force);
+                Debug.Log("the psz group is " + pszGroup);
+                Debug.Log("the psz state is " + element.GetPszState());
                 AkSoundEngine.SetState(pszGroup, element.GetPszState());
                 break;
             }

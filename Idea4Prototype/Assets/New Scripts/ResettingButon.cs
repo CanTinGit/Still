@@ -26,10 +26,10 @@ public class ResettingButon : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        int type = 1;
-        float value;
-        AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
-        noise = value;
+        //int type = 1;
+        //float value;
+        //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
+        //noise = value;
     }
 
     void OnTriggerEnter(Collider other)

@@ -42,13 +42,14 @@ GameObject:
   - component: {fileID: 54332899496728488}
   - component: {fileID: 114558820435008448}
   - component: {fileID: 114432284178605964}
+  - component: {fileID: 114599213674896776}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1682858737430824
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1312173915374556}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.75, y: -3.53, z: -6.68}
+  m_LocalPosition: {x: -1.155, y: -3.53, z: -6.68}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 4609200703516726}
@@ -374,12 +375,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170a636d05c61bb4f99c57cd9cdab2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNum: 2
+  PlayerNum: 1
   jumpSpeed: 6
-  moveSpeed: 3
+  moveSpeed: 0.3
   TurnSpeed: 2
   isInBubble: 0
   isMoving: 0
+--- !u!114 &114599213674896776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312173915374556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3918eb97597a2342a4f1ef6caad26e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PausePanel: {fileID: 0}
 --- !u!114 &114891940233040130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -392,7 +405,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   picked: {fileID: 0}
-  throwPower: 6
 --- !u!138 &138210821946879990
 FixedJoint:
   m_ObjectHideFlags: 1
