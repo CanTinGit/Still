@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnObjectButton : MonoBehaviour {
 
     Transform button;               //Get the transform of the button
-    public float setWeight;         //Setting weight to check if the button is pressed 
+    public float setWeight;         //Setting weight to check if the button is pressed
     Vector3 originalPosition;       //Save the original data of the button in order to change it back when realsing
     public bool isSpecificObject;   //When it's set, only the specific object can trigger the button or trapss
     public float noise;             //Noise value
@@ -24,7 +24,7 @@ public class SpawnObjectButton : MonoBehaviour {
     // Noise detection wiise function, set the noise value every frame
     void Update()
     {
-        int type = 1;
+        //int type = 1;
         //float value;
         //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
         //noise = value;
@@ -49,7 +49,7 @@ public class SpawnObjectButton : MonoBehaviour {
         {
             // Button go down
             button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
-            //AkSoundEngine.PostEvent("button_click", gameObject);
+            AkSoundEngine.PostEvent("button_click", gameObject);
             Debug.Log(noise);
 
             // Spawn the object

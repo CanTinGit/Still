@@ -19,7 +19,7 @@ public class PlayerKeys
     bool StatsChanged = false;
     public void IntialiseValues()
     {
-        
+
         //default keys
         defaultKeys[0] = KeyCode.W;
         defaultKeys[1] = KeyCode.S;
@@ -37,9 +37,9 @@ public class PlayerKeys
         keys[1] = KeyCode.S;
         keys[2] = KeyCode.A;
         keys[3] = KeyCode.D;
-        keys[4] = KeyCode.JoystickButton1;
-        keys[5] = KeyCode.JoystickButton0;
-        keys[6] = KeyCode.JoystickButton2;
+        keys[4] = KeyCode.B;//KeyCode.JoystickButton1; // throw
+        keys[5] = KeyCode.Space;//KeyCode.JoystickButton0; // jump
+        keys[6] = KeyCode.V;//KeyCode.JoystickButton2; //pickup
         //tempholder keys
         TempHolder[0] = KeyCode.W;
         TempHolder[1] = KeyCode.S;
@@ -47,7 +47,7 @@ public class PlayerKeys
         TempHolder[3] = KeyCode.D;
         TempHolder[4] = KeyCode.JoystickButton1;
         TempHolder[5] = KeyCode.JoystickButton0;
-        TempHolder[6] = KeyCode.JoystickButton2;      
+        TempHolder[6] = KeyCode.JoystickButton2;
         playerTurnSpeed = 2.0f;
         playerMoveSpeed = 3.0f;
         playerThrowPower = 6.0f;

@@ -3,20 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{500BFCE1-13E5-4744-8483-EE455319E53F}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="bubble_shot" ID="{D2186C32-E50E-452D-970E-BEE7B9AACFAF}">
-					<ChildrenList>
-						<Action Name="" ID="{82EF671D-ACCE-474F-9296-89E480ECC4A1}" ShortID="756726785">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="fx_bubble_gun_shot" ID="{0ED2D5EF-0F3D-4597-9C2A-ABD17E3A96CD}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="button_click" ID="{7A5D9E66-BC01-457E-AF86-C4B6CA633B51}">
 					<ChildrenList>
 						<Action Name="" ID="{30A0D8F0-0EAB-4FAC-B6D8-F1E03AEC176F}" ShortID="411078729">
@@ -25,7 +11,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Click_Positive" ID="{AB672C66-D47A-4DE3-886E-EF7EDE798AEF}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+									<ObjectRef Name="fx_button" ID="{32A597FF-CA58-449A-A214-199AAE3757F9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -39,35 +25,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Impact" ID="{4069B11D-16A6-47C2-B771-CFF1121BCDAA}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="bubble_rise" ID="{10524E28-3810-418F-B1AA-AF494B9056DB}">
-					<ChildrenList>
-						<Action Name="" ID="{D95C531D-52A1-47A6-BCC9-5A48B0D77AFA}" ShortID="26872207">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Floating_bubble" ID="{30EA3355-AF53-4B88-B88C-CBE12A4BC065}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="camera_trigger" ID="{63C7DFA0-CF67-46FF-8BB2-D7269528E08B}">
-					<ChildrenList>
-						<Action Name="" ID="{A7BD50F8-342B-42FD-8046-37A84A55E351}" ShortID="14048903">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="bubble gun trigger" ID="{9DC48342-1BE8-4311-9943-82BCB9EDC1E5}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+									<ObjectRef Name="Metal" ID="{4069B11D-16A6-47C2-B771-CFF1121BCDAA}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -154,6 +112,190 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Lift" ID="{6706D97E-CA8F-4E7F-88D1-BBF7066CD79F}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{30275F0C-5C5D-46E9-9ADF-7B335D0BB1E4}" ShortID="864467326">
+					<ChildrenList>
+						<Event Name="click_positive" ID="{D4B534D7-3B96-43A8-849E-2D4D5518EC88}">
+							<ChildrenList>
+								<Action Name="" ID="{BA9A580F-58D7-4112-9A42-EF648791E55C}" ShortID="680765537">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Click_Positive" ID="{AB672C66-D47A-4DE3-886E-EF7EDE798AEF}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="click_negative" ID="{6EDD8C71-BEA4-453B-969E-43F14ABCE3D1}">
+							<ChildrenList>
+								<Action Name="" ID="{45ABF64F-CBDA-4EFB-88F9-2D9D453F5F37}" ShortID="903084145">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Click_Negative" ID="{D4139AFD-39D8-4EB8-9B50-891C20CC881E}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="bubble_rise" ID="{10524E28-3810-418F-B1AA-AF494B9056DB}">
+							<ChildrenList>
+								<Action Name="" ID="{D95C531D-52A1-47A6-BCC9-5A48B0D77AFA}" ShortID="26872207">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Floating_bubble" ID="{30EA3355-AF53-4B88-B88C-CBE12A4BC065}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="click_select" ID="{E07B4716-9AC7-4BFE-8680-0E575CD98C49}">
+							<ChildrenList>
+								<Action Name="" ID="{79CCD985-4933-456A-AB12-5103005B2074}" ShortID="252513324">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Select" ID="{94DDCB96-1D82-4346-880B-B2A2AC5FF2AA}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="click_back" ID="{48E39CD9-8925-4D49-8C66-657F116628F7}">
+							<ChildrenList>
+								<Action Name="" ID="{6CD6FAB2-9809-4554-93B3-F4E2F95DEFEF}" ShortID="965178423">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Back" ID="{EFD88ED4-6A55-479A-9E19-E1741F081D05}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="hover" ID="{AEF9F950-AE29-4B5A-AE8F-BD632D417C68}">
+							<ChildrenList>
+								<Action Name="" ID="{247F495D-8B14-4923-8E3C-A212C3508C56}" ShortID="427677282">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Hover" ID="{ED74D83B-D213-4816-B010-FB089EEA0F6B}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" ShortID="618037974">
+					<ChildrenList>
+						<Event Name="crane_trigger_pickup" ID="{3DB7BFCD-60E7-4CAD-806A-01D2C8C94CF9}">
+							<ChildrenList>
+								<Action Name="" ID="{BFE262F8-EFA9-4BF6-B5E4-26DBD3AECC0E}" ShortID="963911973">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crane_pickup" ID="{4CD2CA6A-8BA5-48F5-97AF-A548D0693919}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="crane_trigger_release" ID="{CA78AA8A-4A44-46A9-BC8E-839589B392EB}">
+							<ChildrenList>
+								<Action Name="" ID="{6228CBEA-3EB0-4ED9-B2FD-8E35B3AAD204}" ShortID="377880620">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crane_release" ID="{4B522D11-770F-4215-B0FF-E432C0FC841E}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Crane" ID="{2573EACF-8DFC-49FF-8CD7-5FD53023BFC6}" ShortID="253771276">
+					<ChildrenList>
+						<Event Name="crane_pickup" ID="{4CD2CA6A-8BA5-48F5-97AF-A548D0693919}">
+							<ChildrenList>
+								<Action Name="" ID="{8AC42CC0-8C51-4C16-84C0-8E72E0D8A347}" ShortID="733599722">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Crane_Part_1" ID="{54268F16-DFAB-4767-A2AC-A4218141C35B}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="crane_release" ID="{4B522D11-770F-4215-B0FF-E432C0FC841E}">
+							<ChildrenList>
+								<Action Name="" ID="{C0CAFDF8-5F8E-4FB9-9135-2A7B587DCC06}" ShortID="810566534">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Crane_Part_2" ID="{0C15D1FF-F1CF-4661-AE89-ED03B881B07D}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Camera" ID="{4EC7E8DA-277D-4B44-A2EE-180668631258}" ShortID="2808328">
+					<ChildrenList>
+						<Event Name="bubble_shot" ID="{D2186C32-E50E-452D-970E-BEE7B9AACFAF}">
+							<ChildrenList>
+								<Action Name="" ID="{82EF671D-ACCE-474F-9296-89E480ECC4A1}" ShortID="756726785">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fx_bubble_gun_shot" ID="{0ED2D5EF-0F3D-4597-9C2A-ABD17E3A96CD}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="camera_trigger" ID="{63C7DFA0-CF67-46FF-8BB2-D7269528E08B}">
+							<ChildrenList>
+								<Action Name="" ID="{A7BD50F8-342B-42FD-8046-37A84A55E351}" ShortID="14048903">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bubble gun trigger" ID="{9DC48342-1BE8-4311-9943-82BCB9EDC1E5}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

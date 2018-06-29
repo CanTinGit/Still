@@ -6,7 +6,7 @@ public class CameraAI : MonoBehaviour {
 
     Vector3 angle,target;  //The angle of the Camera and the position of target
     float maxAngle, minAngle,middleAngle; //Save the date of the max angle, min angle and the middle angle
-    bool isRotateLeft;  //Check if the mamera is rotating to left side 
+    bool isRotateLeft;  //Check if the mamera is rotating to left side
     bool isDetected, isShooted, isRun, turnOffCamera; //The four state of camaera, if it detect player, if it shooted, if it is running, if it should be turn off
     public float setCameraOffTime;   //How long should we turn the camera off
     public float cameraRotateSpeed;  //Camera rotation speed
@@ -30,7 +30,7 @@ public class CameraAI : MonoBehaviour {
         isShooted = false;
         detectionLight = gameObject.GetComponentInChildren<Light>();                        // Set detectionLight object as Light child component
     }
-	
+
 	// Update is called once per frame
 	void FixedUpdate ()
     {
@@ -84,7 +84,7 @@ public class CameraAI : MonoBehaviour {
     {
         //Get the current angle of the camera
         angle = transform.rotation.eulerAngles;
-        
+
         //If it is rotating to right, angle.y++ means rotate to right
         if (!isRotateLeft)
         {
@@ -154,7 +154,7 @@ public class CameraAI : MonoBehaviour {
                 if (movement != null && movement.isInBubble == false)
                 {
 
-                    // Calculate the distance between player and 
+                    // Calculate the distance between player and
                     float dist = Vector3.Distance(player.transform.position, transform.position);
 
                     // Check if the player is in the range of sight
@@ -180,7 +180,7 @@ public class CameraAI : MonoBehaviour {
                                     //Setting the isDetect to true means finding player and rotate towards it
                                     isDetected = true;
                                     //Make the sound
-                                    //AkSoundEngine.PostEvent("camera_trigger", gameObject);
+                                    AkSoundEngine.PostEvent("camera_trigger", gameObject);
                                     //Target is the player that be found
                                     target = player.transform.position;
                                     //Turn the color to red
@@ -204,7 +204,7 @@ public class CameraAI : MonoBehaviour {
         turnOffCamera = true;
         //set the color to red and set camera light to red
         gameObject.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
-        detectionLight.color = Color.red;                                                           
+        detectionLight.color = Color.red;
     }
 
     //Shoot bullet

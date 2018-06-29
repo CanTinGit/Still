@@ -38,13 +38,13 @@ public class MovementUpdated : MonoBehaviour {
         moveSpeed = playerKeys[PlayerNum-1].GetMoveSpeed();
         TurnSpeed = playerKeys[PlayerNum-1].GetTurnSpeed();
         isInBubble = false;
-        CalculateDirection();    
+        CalculateDirection();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-      
+
         if (MenuScript.Instance.gamePaused==false)
         {
             ControllerMovement();
@@ -62,7 +62,7 @@ public class MovementUpdated : MonoBehaviour {
             //    {
             //        this.transform.position += transform.forward * moveSpeed * Time.deltaTime;
             //        isMoving = true;
-            //        //rigidbody.AddForce(transform.forward * moveSpeed,ForceMode.VelocityChange);           
+            //        //rigidbody.AddForce(transform.forward * moveSpeed,ForceMode.VelocityChange);
             //    }
 
             //    if (Input.GetKey(playerKeys.GetKeys()[2]))
@@ -112,7 +112,7 @@ public class MovementUpdated : MonoBehaviour {
             //        if (movement!= Vector3.zero)
             //        {
             //            transform.rotation =Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.40f);// Quaternion.LookRotation(movement);
-            //        }  
+            //        }
             //        transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
             //    }
 
@@ -130,7 +130,7 @@ public class MovementUpdated : MonoBehaviour {
             //    if (Input.GetAxis("Vertical") > -0.1f && Input.GetAxis("Vertical") < 0.1f && Input.GetAxis("Horizontal") > -0.1f && Input.GetAxis("Horizontal") < 0.1f && !Input.GetKey(playerKeys.GetKeys()[5]))
             //    {
             //        isMoving = false;
-                    
+
             //    }
             //}
 
@@ -140,7 +140,7 @@ public class MovementUpdated : MonoBehaviour {
     {
         //The example of using controller to move
 
-            if (Input.GetAxis("Horizontal"+PlayerNum.ToString()) > 0.5f || Input.GetAxis("Horizontal" + PlayerNum.ToString()) < -0.5f)
+        if (Input.GetAxis("Horizontal"+PlayerNum.ToString()) > 0.5f || Input.GetAxis("Horizontal" + PlayerNum.ToString()) < -0.5f)
             {
                 isMoving = true;
             }
@@ -165,6 +165,7 @@ public class MovementUpdated : MonoBehaviour {
                 //when the player presses k apply a force to make him jump
                 if (Input.GetButtonDown(playerKeys[PlayerNum-1].GetKeys()[5].ToString().Insert(8,PlayerNum.ToString())))
                 {
+                    AkSoundEngine.PostEvent("player_jump", gameObject);
                     isMoving = true;
                     rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
                 }
@@ -175,7 +176,7 @@ public class MovementUpdated : MonoBehaviour {
                 isMoving = false;
 
             }
-        
+
     }
     // Calculate the direction based on Camera
     void CalculateDirection()

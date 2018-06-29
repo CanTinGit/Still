@@ -13,7 +13,7 @@ struct AudioForceStruct
     {
         minRange = min_;
         maxRange = max_;
-        
+
     }
     //set the state
     public void SetPszState(string pszState_)
@@ -142,7 +142,7 @@ struct AudioDatabaseStructure
     //get the number of audio states in group
     public List<AudioForceStruct> GetAudioRangeList(int index_)
     {
-        return audioGroup[index_].GetAudioRangeList();        
+        return audioGroup[index_].GetAudioRangeList();
     }
 }
 //the audio that creates the audio database and allows for playing of the sounds
@@ -158,7 +158,7 @@ public class AudioClass:MonoBehaviour
         audioRange = new List<AudioForceStruct>();
         audioDatabase = new AudioDatabaseStructure();
         audioDatabase.Intialise();
-        AllMaterials();      
+        AllMaterials();
     }
     //sets audio for material
     public void SetAudioForMaterial(string material_)
@@ -175,7 +175,7 @@ public class AudioClass:MonoBehaviour
     }
     /// <summary>
     /// IAIN MESSAGE HERE
-    /// YOU PUT ALL YOUR MATERIAL FUNCTIONS HERE 
+    /// YOU PUT ALL YOUR MATERIAL FUNCTIONS HERE
     /// </summary>
     private void AllMaterials()
     {
@@ -197,11 +197,11 @@ public class AudioClass:MonoBehaviour
     }
     /// <summary>
     /// IAIN MESSAGE HERE
-    /// FUNCTION YOU CALL WHEN YOU WANT TO MAKE A CHECK ON WHETHER FORCE WILL BE USED TO DETERMINE WHAT AUDIO STATE PLAYS 
+    /// FUNCTION YOU CALL WHEN YOU WANT TO MAKE A CHECK ON WHETHER FORCE WILL BE USED TO DETERMINE WHAT AUDIO STATE PLAYS
     /// BASICALLY THE OLD IF STATEMENTS
     /// </summary>
     public void PlayAudio(string material_,float force,string pszGroup)
-    {       
+    {
         foreach (AudioForceStruct element in audioRange)
         {
             //DEBUG MESSAGE FOR TESTING WHAT IS MINI MAX AND THE FORCE PASSING IN
@@ -210,7 +210,10 @@ public class AudioClass:MonoBehaviour
             //if statement that will be used for all the different states
             if ((force >= element.GetMinRange()) && (force <= element.GetMaxRange()))
             {
-                //AkSoundEngine.SetState(pszGroup, element.GetPszState());
+                Debug.Log("the force is " + force);
+                Debug.Log("the psz group is " + pszGroup);
+                Debug.Log("the psz state is " + element.GetPszState());
+                AkSoundEngine.SetState(pszGroup, element.GetPszState());
                 break;
             }
         }

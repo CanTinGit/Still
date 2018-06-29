@@ -17,6 +17,7 @@ public class LeverTurn : MonoBehaviour {
         if (cj == null)
         {
             craneAnimator.SetBool("isCraneRelease", true);
+            AkSoundEngine.PostEvent("crane_release", gameObject);
         }
 
     }
