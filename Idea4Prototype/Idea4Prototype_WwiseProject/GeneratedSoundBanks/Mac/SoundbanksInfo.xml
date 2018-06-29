@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\1502419\Downloads\Still-WwiseWorking\Still-WwiseWorking\Idea4Prototype\Idea4Prototype_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\1502419\Downloads\Still-WwiseWorking\Still-WwiseWorking\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\1502419\Downloads\Still-WwiseWorking\Still-WwiseWorking\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\1502419\Downloads\Still-WwiseWorking\Still-WwiseWorking\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -120,9 +120,12 @@
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise"/>
+				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise" MaxAttenuation="100.000000"/>
+				<Event Id="2579544659" Name="click_back" ObjectPath="\Events\Default Work Unit\UI\click_back"/>
 				<Event Id="2102833423" Name="click_negative" ObjectPath="\Events\Default Work Unit\UI\click_negative"/>
 				<Event Id="1769629947" Name="click_positive" ObjectPath="\Events\Default Work Unit\UI\click_positive"/>
+				<Event Id="3780343222" Name="click_select" ObjectPath="\Events\Default Work Unit\UI\click_select"/>
+				<Event Id="3753593413" Name="hover" ObjectPath="\Events\Default Work Unit\UI\hover"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="151713546" Language="SFX">
@@ -137,9 +140,17 @@
 					<ShortName>Bubble_Pop.wav</ShortName>
 					<Path>SFX\Bubble_Pop_1C9C67B2.wem</Path>
 				</File>
+				<File Id="345745065" Language="SFX">
+					<ShortName>UI_Hover.wav</ShortName>
+					<Path>SFX\UI_Hover_1C9C67B2.wem</Path>
+				</File>
 				<File Id="740204625" Language="SFX">
 					<ShortName>Bubble_Float_1.wav</ShortName>
 					<Path>SFX\Bubble_Float_1_08F606ED.wem</Path>
+				</File>
+				<File Id="870128884" Language="SFX">
+					<ShortName>UI_Select.wav</ShortName>
+					<Path>SFX\UI_Select_1C9C67B2.wem</Path>
 				</File>
 				<File Id="962637296" Language="SFX">
 					<ShortName>Bubble_Float_2.wav</ShortName>
@@ -157,6 +168,10 @@
 					<ShortName>Bubble_Float_3.wav</ShortName>
 					<Path>SFX\Bubble_Float_3_09D4AFC1.wem</Path>
 				</File>
+				<File Id="1063403879" Language="SFX">
+					<ShortName>UI_Back.wav</ShortName>
+					<Path>SFX\UI_Back_1C9C67B2.wem</Path>
+				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2299321487" Language="SFX">
@@ -164,8 +179,8 @@
 			<ShortName>Enemy</ShortName>
 			<Path>Enemy.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1531020610" Name="bubble_shot" ObjectPath="\Events\Default Work Unit\Camera\bubble_shot"/>
-				<Event Id="1860426137" Name="camera_trigger" ObjectPath="\Events\Default Work Unit\Camera\camera_trigger"/>
+				<Event Id="1531020610" Name="bubble_shot" ObjectPath="\Events\Default Work Unit\Camera\bubble_shot" MaxAttenuation="100.000000"/>
+				<Event Id="1860426137" Name="camera_trigger" ObjectPath="\Events\Default Work Unit\Camera\camera_trigger" MaxAttenuation="100.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="475796184" Language="SFX">
@@ -183,8 +198,8 @@
 			<ShortName>Test</ShortName>
 			<Path>English(US)\Test.bnk</Path>
 			<IncludedEvents>
-				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click"/>
-				<Event Id="697519634" Name="can_impact" ObjectPath="\Events\Default Work Unit\can_impact"/>
+				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click" MaxAttenuation="100.000000"/>
+				<Event Id="697519634" Name="can_impact" ObjectPath="\Events\Default Work Unit\can_impact" MaxAttenuation="100.000000"/>
 				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup" MaxAttenuation="100.000000"/>
 				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release" MaxAttenuation="100.000000"/>
 				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup" MaxAttenuation="0.000000"/>
