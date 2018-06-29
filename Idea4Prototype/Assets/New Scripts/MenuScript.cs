@@ -27,7 +27,7 @@ public class MenuScript : MonoBehaviour
     //stores information of what key was pressed
     KeyCode keyPressed;
     //declaration of the player keys class 
-    PlayerKeys playerSetting = new PlayerKeys();
+    PlayerKeys[] playerSetting = new PlayerKeys[4];
     //OLD WAY TO RECORD PLAYER CURRENT LEVEL
     int maxLevel;
     //NEW WAY TO RECORD PLAYER CURRENT LEVEL
@@ -41,6 +41,8 @@ public class MenuScript : MonoBehaviour
     public int pausePlayerNum = 0;
     //if the game is paused
     public bool gamePaused = false;
+    //What each player controller settings is
+    int whichPlayerKey;
     //Global variable to get the only one game manager
     public static MenuScript Instance
     {
@@ -58,15 +60,20 @@ public class MenuScript : MonoBehaviour
         }
     }
     //returns the player settings stored in the singleton
-    public PlayerKeys GetPlayerKeys()
+    public PlayerKeys[] GetPlayerKeys()
     {
         return playerSetting;
     }
     //on awake we intialise the player settings which is the default values and also set up the singleton
     void Awake()
-    {       
+    {
+       
         playerdata = new PlayerData();
-        playerSetting.IntialiseValues();
+        for(int i =0; i < playerSetting.Length;i++)
+        {
+            playerSetting[i] = new PlayerKeys();
+            playerSetting[i].IntialiseValues();
+        }
         GameObject gm = GameObject.Find("GameManager");
         if (gm != null)
         {
@@ -77,6 +84,7 @@ public class MenuScript : MonoBehaviour
         LoadPlayerData();
         //Set the max level by the player data
         maxLevel = playerdata.getCurrentLevel();
+        whichPlayerKey = 0;
     }
 
     //intialising variables and setting up gameobjects and how the home screen should look like
@@ -95,6 +103,8 @@ public class MenuScript : MonoBehaviour
         CloseButton = GameObject.Find("CloseButton");
         ContinueButton = GameObject.Find("ContinueButton");
         eventSystem = GameObject.Find("EventSystem");
+      //  Level1Button = GameObject.Find("Level 1 Button");
+       // Level2Button = GameObject.Find("Level 2 Button");
         //flip the level and options panel off so they can not be seen
         FlipLevelPanel();
         FlipOptionPanel();
@@ -123,7 +133,7 @@ public class MenuScript : MonoBehaviour
         //flip the menu buttons
         FlipMenuButtons();
         //reset the temporary keys to the custom keys ( the keys that are set the player and saved)
-        playerSetting.ResetTempKeysToCustom();
+        playerSetting[whichPlayerKey].ResetTempKeysToCustom();
 
         // Set main menu's play button to controller input focus
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
@@ -146,8 +156,10 @@ public class MenuScript : MonoBehaviour
             // Flip the character panel off and the level panel on
             FlipCharacterPanel();
             FlipLevelPanel();
+
+            //REMOVED MAYBE SINCE NO LEVEL PANEL ANYMORE AND STATIC
             //read the file containing the levels to be run
-            ReadFile();
+            //ReadFile();
 
             eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ReturnToMenuButton"));
         }
@@ -178,6 +190,11 @@ public class MenuScript : MonoBehaviour
         FindButtonAddListener(GameObject.Find("ReturnToMenuButton"));
         FindButtonAddListener(GameObject.Find("ContinueButton"));
         FindButtonAddListener(GameObject.Find("ReturnToSplashScreen"));
+        FindButtonAddListener(GameObject.Find("RightChangeCharButton"));
+        FindButtonAddListener(GameObject.Find("LeftChangeCharButton"));
+        FindButtonAddListener(GameObject.Find("Level 1 Button"));
+        FindButtonAddListener(GameObject.Find("Level 2 Button"));
+        FindButtonAddListener(GameObject.Find("Level 0 Button"));
     }
     //when the return button is pressed in the level select screen
     void ReturnToMenuPressed()
@@ -255,6 +272,21 @@ public class MenuScript : MonoBehaviour
             case "ReturnToSplashScreen":
                 button.onClick.AddListener(() => MenuScript.Instance.ReturntoMainMenu());
                 break;
+            case "RightChangeCharButton":
+                button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(1,button.transform.parent.GetChild(0).GetComponent<Text>()));
+                break;
+            case "LeftChangeCharButton":
+                button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(-1, button.transform.parent.GetChild(0).GetComponent<Text>()));
+                break;
+            case "Level 1 Button":
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Level 1"));
+                break;
+            case "Level 2 Button":
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Level 2"));
+                break;
+            case "Level 0 Button":
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("TutorialLevel"));
+                break;
         }
     }
     // runs this function when the reset to default function is pressed
@@ -264,31 +296,32 @@ public class MenuScript : MonoBehaviour
         GameObject keybindingPanel = GameObject.FindGameObjectWithTag("KeybindingPanel");
         GameObject StatsPanel = GameObject.FindGameObjectWithTag("StatsPanel");
         //goes through each key in the panel and set it to the correct default key to show
-        for (int arraySize = 0; arraySize < playerSetting.GetDefaultKeys().Length; arraySize++)
+        for (int arraySize = 0; arraySize < playerSetting[whichPlayerKey].GetDefaultKeys().Length; arraySize++)
         {
-            keybindingPanel.transform.GetChild(arraySize).GetComponentInChildren<Text>().text = playerSetting.GetDefaultKeys()[arraySize].ToString();
+            keybindingPanel.transform.GetChild(arraySize).GetComponentInChildren<Text>().text = playerSetting[whichPlayerKey].GetDefaultKeys()[arraySize].ToString();
         }
         //set each stat panel information to the default stat option
-        StatsPanel.transform.GetChild(0).GetComponent<InputField>().text = playerSetting.GetDefaultMoveSpeed().ToString();
-        StatsPanel.transform.GetChild(1).GetComponent<InputField>().text = playerSetting.GetDefaultTurnSpeed().ToString();
-        StatsPanel.transform.GetChild(2).GetComponent<InputField>().text = playerSetting.GetDefaultThrowPower().ToString();
-        StatsPanel.transform.GetChild(3).GetComponent<InputField>().text = playerSetting.GetDefaultJumpPower().ToString();
+        StatsPanel.transform.GetChild(0).GetComponent<InputField>().text = playerSetting[whichPlayerKey].GetDefaultMoveSpeed().ToString();
+        StatsPanel.transform.GetChild(1).GetComponent<InputField>().text = playerSetting[whichPlayerKey].GetDefaultTurnSpeed().ToString();
+        StatsPanel.transform.GetChild(2).GetComponent<InputField>().text = playerSetting[whichPlayerKey].GetDefaultThrowPower().ToString();
+        StatsPanel.transform.GetChild(3).GetComponent<InputField>().text = playerSetting[whichPlayerKey].GetDefaultJumpPower().ToString();
         //reset all the temp keys to the default keys
-        playerSetting.ResetTempKeysToDefault();
+        playerSetting[whichPlayerKey].ResetTempKeysToDefault();
     }
     //this shows all the current set key binds and also all the set player stats
     void GetOptions()
     {
         GameObject keybindingPanel = GameObject.FindGameObjectWithTag("KeybindingPanel");
         GameObject StatsPanel = GameObject.FindGameObjectWithTag("StatsPanel");
-        for (int arraySize = 0; arraySize < playerSetting.GetKeys().Length; arraySize++)
+        StatsPanel.transform.parent.GetChild(2).GetChild(0).GetComponent<Text>().text = "Player " + (whichPlayerKey+1) + " keys";
+        for (int arraySize = 0; arraySize < playerSetting[whichPlayerKey].GetKeys().Length; arraySize++)
         {
-            keybindingPanel.transform.GetChild(arraySize).GetComponentInChildren<Text>().text = playerSetting.GetKeys()[arraySize].ToString();
+            keybindingPanel.transform.GetChild(arraySize).GetComponentInChildren<Text>().text = playerSetting[whichPlayerKey].GetKeys()[arraySize].ToString();
         }
-        StatsPanel.transform.GetChild(0).GetComponent<InputField>().text = playerSetting.GetMoveSpeed().ToString();
-        StatsPanel.transform.GetChild(1).GetComponent<InputField>().text = playerSetting.GetTurnSpeed().ToString();
-        StatsPanel.transform.GetChild(2).GetComponent<InputField>().text = playerSetting.GetThrowPower().ToString();
-        StatsPanel.transform.GetChild(3).GetComponent<InputField>().text = playerSetting.GetJumpPower().ToString();
+        StatsPanel.transform.GetChild(0).GetComponent<InputField>().text = playerSetting[whichPlayerKey].GetMoveSpeed().ToString();
+        StatsPanel.transform.GetChild(1).GetComponent<InputField>().text = playerSetting[whichPlayerKey].GetTurnSpeed().ToString();
+        StatsPanel.transform.GetChild(2).GetComponent<InputField>().text = playerSetting[whichPlayerKey].GetThrowPower().ToString();
+        StatsPanel.transform.GetChild(3).GetComponent<InputField>().text = playerSetting[whichPlayerKey].GetJumpPower().ToString();
     }
     //run this function we the option button is pressed
     public void OptionPressed()
@@ -356,7 +389,7 @@ public class MenuScript : MonoBehaviour
         //the panel for showing the stats of the player
         GameObject StatsPanel = GameObject.FindGameObjectWithTag("StatsPanel");
         //transfer all the temp keys to the custom keys (saving the keys in the options menu)
-        playerSetting.TempHolderTransferToCustomKeys();
+        playerSetting[whichPlayerKey].TempHolderTransferToCustomKeys();
         //Checking and applying the stats ( so only numbers are taken)
         string validInput;
         float outputParse = 0.0f;
@@ -390,16 +423,16 @@ public class MenuScript : MonoBehaviour
                 switch (StatsPanel.transform.GetChild(childIndex).name)
                 {
                     case "MovespeedIF":
-                        playerSetting.SetMoveSpeed(float.Parse(StatsPanel.transform.GetChild(childIndex).GetComponent<InputField>().text));
+                        playerSetting[whichPlayerKey].SetMoveSpeed(float.Parse(StatsPanel.transform.GetChild(childIndex).GetComponent<InputField>().text));
                         break;
                     case "TurnspeedIF":
-                        playerSetting.SetTurnSpeed(float.Parse(StatsPanel.transform.GetChild(childIndex).GetComponent<InputField>().text));
+                        playerSetting[whichPlayerKey].SetTurnSpeed(float.Parse(StatsPanel.transform.GetChild(childIndex).GetComponent<InputField>().text));
                         break;
                     case "ThrowpowerIF":
-                        playerSetting.SetThrowPower(float.Parse(StatsPanel.transform.GetChild(childIndex).GetComponent<InputField>().text));
+                        playerSetting[whichPlayerKey].SetThrowPower(float.Parse(StatsPanel.transform.GetChild(childIndex).GetComponent<InputField>().text));
                         break;
                     case "JumppowerIF":
-                        playerSetting.SetJumpPower(float.Parse(StatsPanel.transform.GetChild(childIndex).GetComponent<InputField>().text));
+                        playerSetting[whichPlayerKey].SetJumpPower(float.Parse(StatsPanel.transform.GetChild(childIndex).GetComponent<InputField>().text));
                         break;
                 }
             }
@@ -457,25 +490,25 @@ public class MenuScript : MonoBehaviour
         switch (buttonPressed_.name)
         {
             case "ForwardKeyButton":
-                playerSetting.SetTempKey(0, keyPressed_);
+                playerSetting[whichPlayerKey].SetTempKey(0, keyPressed_);
                 break;
             case "BackwardKeyButton":
-                playerSetting.SetTempKey(1, keyPressed_);
+                playerSetting[whichPlayerKey].SetTempKey(1, keyPressed_);
                 break;
             case "LeftButton":
-                playerSetting.SetTempKey(2, keyPressed_);
+                playerSetting[whichPlayerKey].SetTempKey(2, keyPressed_);
                 break;
             case "RightButton":
-                playerSetting.SetTempKey(3, keyPressed_);
+                playerSetting[whichPlayerKey].SetTempKey(3, keyPressed_);
                 break;
             case "ThrowButton":
-                playerSetting.SetTempKey(4, keyPressed_);
+                playerSetting[whichPlayerKey].SetTempKey(4, keyPressed_);
                 break;
             case "JumpButton":
-                playerSetting.SetTempKey(5, keyPressed_);
+                playerSetting[whichPlayerKey].SetTempKey(5, keyPressed_);
                 break;
             case "PickUpButton":
-                playerSetting.SetTempKey(6, keyPressed_);
+                playerSetting[whichPlayerKey].SetTempKey(6, keyPressed_);
                 break;
         }
     }
@@ -489,6 +522,7 @@ public class MenuScript : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        gamePaused = false;
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
         //Invoke("DelayReturn", 0.05f);
@@ -512,15 +546,13 @@ public class MenuScript : MonoBehaviour
     public void FadeToNextLevel(GameObject pause_)
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(" scene is " + SceneManager.GetSceneByBuildIndex(index).name);
-        Debug.Log(" the pause panel is " + GameObject.Find("PausePanel")) ;
         if (SceneManager.GetActiveScene().buildIndex !=Application.levelCount-1)
         {
             if (pause_.activeSelf == true)
             {
                 pause_.SetActive(false);
             }
-        
+            gamePaused = false;
             CompleteLevelAndRate();
             //Turn the trigger on to play the fade animation
             sceneFade = GameObject.Find("FadeSceneHolder").GetComponent<Animator>();
@@ -628,5 +660,29 @@ public class MenuScript : MonoBehaviour
     public void SetPlayerPaused(bool paused_)
     {
         gamePaused = paused_;
+    }
+    //switch the player keys
+    //will also need to do the switch on display
+    void SwitchPlayer(int change_,Text textComponent)
+    {
+        whichPlayerKey += change_;
+        if(whichPlayerKey<0)
+        {
+            whichPlayerKey = 0;
+        }
+        else if (whichPlayerKey > 3)
+        {
+            whichPlayerKey = 3;
+        }
+        textComponent.text = "Player " + (whichPlayerKey+1) + " keys";
+        GetOptions();
+    }
+    public int GetWhichPlayer()
+    {
+        return whichPlayerKey;
+    }
+    public int GetMaxLevel()
+    {
+        return maxLevel;
     }
 }

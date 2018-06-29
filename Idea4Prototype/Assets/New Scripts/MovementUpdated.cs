@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementUpdated : MonoBehaviour {
 
-    PlayerKeys playerKeys;
+    PlayerKeys[] playerKeys;
     new Rigidbody rigidbody;
     //used to tell us if the player is on the ground
     bool grounded = false;
@@ -34,9 +34,9 @@ public class MovementUpdated : MonoBehaviour {
         rigidbody = GetComponent<Rigidbody>();
         startPos = transform.position;
         playerKeys = MenuScript.Instance.GetPlayerKeys();
-        jumpSpeed = playerKeys.GetJumpPower();
-        moveSpeed = playerKeys.GetMoveSpeed();
-        TurnSpeed = playerKeys.GetTurnSpeed();
+        jumpSpeed = playerKeys[PlayerNum-1].GetJumpPower();
+        moveSpeed = playerKeys[PlayerNum-1].GetMoveSpeed();
+        TurnSpeed = playerKeys[PlayerNum-1].GetTurnSpeed();
         isInBubble = false;
         CalculateDirection();    
     }
@@ -163,14 +163,14 @@ public class MovementUpdated : MonoBehaviour {
             if (grounded)
             {
                 //when the player presses k apply a force to make him jump
-                if (Input.GetButtonDown(playerKeys.GetKeys()[5].ToString().Insert(8,PlayerNum.ToString())))
+                if (Input.GetButtonDown(playerKeys[PlayerNum-1].GetKeys()[5].ToString().Insert(8,PlayerNum.ToString())))
                 {
                     isMoving = true;
                     rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
                 }
             }
 
-            if (Input.GetAxis("Vertical" + PlayerNum.ToString()) > -0.1f && Input.GetAxis("Vertical" + PlayerNum.ToString()) < 0.1f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) > -0.1f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) < 0.1f && !Input.GetKey(playerKeys.GetKeys()[5]))
+            if (Input.GetAxis("Vertical" + PlayerNum.ToString()) > -0.1f && Input.GetAxis("Vertical" + PlayerNum.ToString()) < 0.1f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) > -0.1f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) < 0.1f && !Input.GetKey(playerKeys[PlayerNum-1].GetKeys()[5]))
             {
                 isMoving = false;
 

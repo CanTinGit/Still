@@ -14,6 +14,7 @@ public class ButtonReleased : MonoBehaviour
     public float noise;
     public string noise_detection;
     public GameObject SpecificObject;
+    public string animationBoolean;
     // Use this for initialization
     void Start()
     {
@@ -79,7 +80,7 @@ public class ButtonReleased : MonoBehaviour
         button.position = originalPosition;
         if (isRunOnce == false)
         {
-            CraneheadAnimator.SetBool("isButtonReleased", true);
+            CraneheadAnimator.SetBool(animationBoolean, true);
             
         }
     }

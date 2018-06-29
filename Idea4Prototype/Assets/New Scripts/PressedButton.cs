@@ -55,7 +55,7 @@ public class PressedButton : MonoBehaviour {
             return;
         }
         // Check if the mass of object is more than setting weight, if it is, it can make trap run.
-        if (other.GetComponent<Rigidbody>().mass >= setWeight)
+        if (other.gameObject.GetComponent<Rigidbody>().mass >= setWeight)
         {
             // Button go down
             button.position = new Vector3(originalPosition.x, originalPosition.y-0.2f, originalPosition.z);

@@ -435,7 +435,10 @@ MonoBehaviour:
     KeepMe: 0
   isEnvironmentAware: 0
   isStaticObject: 0
+  m_Collider: {fileID: 0}
   m_listeners:
+    listenerIdList: []
+    changed: 0
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
@@ -4190,7 +4193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Move
+  m_Text: Move(W)
 --- !u!222 &1373757320
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5537,7 +5540,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rotate
+  m_Text: Rotate(E)
 --- !u!222 &1772784053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6468,7 +6471,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scale
+  m_Text: Scale(R)
 --- !u!222 &2136887963
 CanvasRenderer:
   m_ObjectHideFlags: 0
