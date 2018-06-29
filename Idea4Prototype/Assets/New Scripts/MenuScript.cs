@@ -11,7 +11,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class MenuScript : MonoBehaviour
 {
     //keep information on pannels and 3 buttons which is required for when we are switching to different screens ( options , home , level select)
-    GameObject LevelSelectPanel, OptionPanel, CharacterPanel, PlayButton, CloseButton, OptionButton, ContinueButton;
+    GameObject LevelSelectPanel, OptionPanel, CharacterPanel, PlayButton, CloseButton, OptionButton, ContinueButton, Level1Button, Level2Button;
     //the pathway to the text file which stores what levels are in the scene
     string LevelTextPath;
     //the file to be opened that stores what levels are to be shown in level select screen
@@ -26,7 +26,7 @@ public class MenuScript : MonoBehaviour
     GameObject pressedButton = null;
     //stores information of what key was pressed
     KeyCode keyPressed;
-    //declaration of the player keys class 
+    //declaration of the player keys class
     PlayerKeys[] playerSetting = new PlayerKeys[4];
     //OLD WAY TO RECORD PLAYER CURRENT LEVEL
     int maxLevel;
@@ -67,7 +67,7 @@ public class MenuScript : MonoBehaviour
     //on awake we intialise the player settings which is the default values and also set up the singleton
     void Awake()
     {
-       
+
         playerdata = new PlayerData();
         for(int i =0; i < playerSetting.Length;i++)
         {
@@ -109,7 +109,7 @@ public class MenuScript : MonoBehaviour
         FlipLevelPanel();
         FlipOptionPanel();
         FlipCharacterPanel();
-        
+
     }
     //flips the level panel to the opposite state
     void FlipLevelPanel()
@@ -373,7 +373,7 @@ public class MenuScript : MonoBehaviour
     }
     void MakeLevelButton(string levelName)
     {
-        //finds the panel in the scene so we can assign the button as a child of panel 
+        //finds the panel in the scene so we can assign the button as a child of panel
         GameObject contentHolder = GameObject.FindGameObjectWithTag("ContentHolder");
         //find out how many responses there are
         Button button = Resources.Load<Button>("LevelButton");
@@ -438,7 +438,7 @@ public class MenuScript : MonoBehaviour
             }
         }
     }
-    //when the key binding button is pressed 
+    //when the key binding button is pressed
     public void KeyBindingButtonPressed(GameObject buttonPressed)
     {
         //if we are not waiting for a key to be pressed then we instatiate the message box asking for a key press and start a invoke repeating
@@ -455,7 +455,7 @@ public class MenuScript : MonoBehaviour
             InvokeRepeating("WaitingForKeyPress", 0.2f, 0.01666f);
         }
     }
-    //function waits for a key press and then saves it 
+    //function waits for a key press and then saves it
     void WaitingForKeyPress()
     {
         //if any button was pressed then we get that key press from system
@@ -464,7 +464,7 @@ public class MenuScript : MonoBehaviour
             //go through all the keys and compare them with the key press
             foreach (KeyCode keypress in System.Enum.GetValues(typeof(KeyCode)))
             {
-                //if that keypress is same as the system key then we store it and leave this function       
+                //if that keypress is same as the system key then we store it and leave this function
                 if (Input.GetKey(keypress))
                 {
                     //stop the function
@@ -475,7 +475,7 @@ public class MenuScript : MonoBehaviour
                     Destroy(GameObject.FindGameObjectWithTag("KeyPressMessage"));
                     //set the wait for key press off after 0.2 seconds
                     Invoke("SetWaitForKeyOff", 0.2f);
-                    // based on what button was pressed we set that key            
+                    // based on what button was pressed we set that key
                     AddKey(keypress, pressedButton);
                     //set the pressedbutton to false and wait for another button to be pressed
                     pressedButton = null;

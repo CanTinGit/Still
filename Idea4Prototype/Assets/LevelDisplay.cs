@@ -12,7 +12,7 @@ public class LevelDisplay : MonoBehaviour {
         Level_2.SetActive(false);
         Tutorial_Level.SetActive(false);
     }
-	
+
 	void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(MenuScript.Instance.GetMaxLevel());
