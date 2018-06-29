@@ -15,6 +15,8 @@ public class ButtonReleased : MonoBehaviour
     public string noise_detection;
     public GameObject SpecificObject;
     public string animationBoolean;
+    public string soundName;
+    public float delaySound;
     // Use this for initialization
     void Start()
     {
@@ -24,9 +26,6 @@ public class ButtonReleased : MonoBehaviour
 
     //this is it Mo
     //right here
-    //lookit
-    //freakin bats
-    //i love halloween
     void Update()
     {
         int type = 1;
@@ -81,8 +80,13 @@ public class ButtonReleased : MonoBehaviour
         if (isRunOnce == false)
         {
             CraneheadAnimator.SetBool(animationBoolean, true);
+            Invoke("Delay", delaySound);
             
         }
+    }
+    void Delay()
+    {
+        AkSoundEngine.PostEvent(soundName, gameObject);
     }
 
 }

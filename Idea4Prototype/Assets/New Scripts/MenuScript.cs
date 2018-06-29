@@ -142,6 +142,7 @@ public class MenuScript : MonoBehaviour
     {
         //flip the character panel on and flip off the menu button
         FlipCharacterPanel();
+        AkSoundEngine.PostEvent("click_select", gameObject);
         FlipMenuButtons();
         //Set the navigable buttons to the character screen buttons
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ContinueButton"));
@@ -163,6 +164,7 @@ public class MenuScript : MonoBehaviour
     }
     void ReturntoMainMenu()
     {
+        AkSoundEngine.PostEvent("click_back", gameObject);
         FlipCharacterPanel();
         FlipMenuButtons();
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
@@ -201,7 +203,7 @@ public class MenuScript : MonoBehaviour
         FlipLevelPanel();
         //flip the menu buttons off
         FlipMenuButtons();
-
+        AkSoundEngine.PostEvent("click_back", gameObject);
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
     }
     //clear the level list
@@ -328,6 +330,7 @@ public class MenuScript : MonoBehaviour
         Debug.Log(GameObject.Find("ApplyButton"));
         // Set options screen buttons selectible via controller input
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ApplyButton"));
+        AkSoundEngine.PostEvent("click_positive", gameObject);
 
 
 
@@ -514,6 +517,7 @@ public class MenuScript : MonoBehaviour
     // UI button to go back to Menu Scene
     public void BackToMenu()
     {
+        AkSoundEngine.PostEvent("click_back", gameObject);
         SceneManager.LoadScene("MainMenu");
         gamePaused = false;
         //flip the level and options panel off so they can not be seen

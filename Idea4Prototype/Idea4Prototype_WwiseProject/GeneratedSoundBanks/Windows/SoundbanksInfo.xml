@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\1502419\Downloads\Still-WwiseWorking\Still-WwiseWorking\Idea4Prototype\Idea4Prototype_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\1502419\Downloads\Still-WwiseWorking\Still-WwiseWorking\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\1502419\Downloads\Still-WwiseWorking\Still-WwiseWorking\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\1502419\Downloads\Still-WwiseWorking\Still-WwiseWorking\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -115,13 +115,72 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
+		<SoundBank Id="1551306167" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\UI</ObjectPath>
+			<ShortName>UI</ShortName>
+			<Path>UI.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise" MaxAttenuation="100.000000"/>
+				<Event Id="2579544659" Name="click_back" ObjectPath="\Events\Default Work Unit\UI\click_back"/>
+				<Event Id="2102833423" Name="click_negative" ObjectPath="\Events\Default Work Unit\UI\click_negative"/>
+				<Event Id="1769629947" Name="click_positive" ObjectPath="\Events\Default Work Unit\UI\click_positive"/>
+				<Event Id="3780343222" Name="click_select" ObjectPath="\Events\Default Work Unit\UI\click_select"/>
+				<Event Id="3753593413" Name="hover" ObjectPath="\Events\Default Work Unit\UI\hover"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="151713546" Language="SFX">
+					<ShortName>Bubble_Float_5.wav</ShortName>
+					<Path>SFX\Bubble_Float_5_CD7B6D06.wem</Path>
+				</File>
+				<File Id="152103424" Language="SFX">
+					<ShortName>Bubble_Float_4.wav</ShortName>
+					<Path>SFX\Bubble_Float_4_9AE5D73E.wem</Path>
+				</File>
+				<File Id="293947927" Language="SFX">
+					<ShortName>Bubble_Pop.wav</ShortName>
+					<Path>SFX\Bubble_Pop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="345745065" Language="SFX">
+					<ShortName>UI_Hover.wav</ShortName>
+					<Path>SFX\UI_Hover_1C9C67B2.wem</Path>
+				</File>
+				<File Id="740204625" Language="SFX">
+					<ShortName>Bubble_Float_1.wav</ShortName>
+					<Path>SFX\Bubble_Float_1_08F606ED.wem</Path>
+				</File>
+				<File Id="870128884" Language="SFX">
+					<ShortName>UI_Select.wav</ShortName>
+					<Path>SFX\UI_Select_1C9C67B2.wem</Path>
+				</File>
+				<File Id="962637296" Language="SFX">
+					<ShortName>Bubble_Float_2.wav</ShortName>
+					<Path>SFX\Bubble_Float_2_6B3D96C7.wem</Path>
+				</File>
+				<File Id="1007271399" Language="SFX">
+					<ShortName>Click_Positive.wav</ShortName>
+					<Path>SFX\Click_Positive_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1025487443" Language="SFX">
+					<ShortName>Click_Negative.wav</ShortName>
+					<Path>SFX\Click_Negative_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1050165260" Language="SFX">
+					<ShortName>Bubble_Float_3.wav</ShortName>
+					<Path>SFX\Bubble_Float_3_09D4AFC1.wem</Path>
+				</File>
+				<File Id="1063403879" Language="SFX">
+					<ShortName>UI_Back.wav</ShortName>
+					<Path>SFX\UI_Back_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="2299321487" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Enemy</ObjectPath>
 			<ShortName>Enemy</ShortName>
 			<Path>Enemy.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1531020610" Name="bubble_shot" ObjectPath="\Events\Default Work Unit\bubble_shot"/>
-				<Event Id="1860426137" Name="camera_trigger" ObjectPath="\Events\Default Work Unit\camera_trigger"/>
+				<Event Id="1531020610" Name="bubble_shot" ObjectPath="\Events\Default Work Unit\Camera\bubble_shot" MaxAttenuation="100.000000"/>
+				<Event Id="1860426137" Name="camera_trigger" ObjectPath="\Events\Default Work Unit\Camera\camera_trigger" MaxAttenuation="100.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="475796184" Language="SFX">
@@ -139,23 +198,21 @@
 			<ShortName>Test</ShortName>
 			<Path>English(US)\Test.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\bubble_rise"/>
-				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click"/>
-				<Event Id="697519634" Name="can_impact" ObjectPath="\Events\Default Work Unit\can_impact"/>
-				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\crane_pickup"/>
+				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click" MaxAttenuation="100.000000"/>
+				<Event Id="697519634" Name="can_impact" ObjectPath="\Events\Default Work Unit\can_impact" MaxAttenuation="100.000000"/>
+				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup" MaxAttenuation="100.000000"/>
+				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release" MaxAttenuation="100.000000"/>
+				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup" MaxAttenuation="0.000000"/>
+				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="76802143" Language="SFX">
 					<ShortName>Impact_Can_Medium_3.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_3_1C9C67B2.wem</Path>
 				</File>
-				<File Id="151713546" Language="SFX">
-					<ShortName>Bubble_Float_5.wav</ShortName>
-					<Path>SFX\Bubble_Float_5_CD7B6D06.wem</Path>
-				</File>
-				<File Id="152103424" Language="SFX">
-					<ShortName>Bubble_Float_4.wav</ShortName>
-					<Path>SFX\Bubble_Float_4_9AE5D73E.wem</Path>
+				<File Id="87040156" Language="English(US)">
+					<ShortName>Crane_Part_1.wav</ShortName>
+					<Path>Voices\English(US)\Crane_Part_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="175213724" Language="SFX">
 					<ShortName>Impact_Can_Very_Light_1.wav</ShortName>
@@ -164,14 +221,6 @@
 				<File Id="199767411" Language="SFX">
 					<ShortName>Impact_Can_Light.wav</ShortName>
 					<Path>SFX\Impact_Can_Light_1C9C67B2.wem</Path>
-				</File>
-				<File Id="293947927" Language="SFX">
-					<ShortName>Bubble_Pop.wav</ShortName>
-					<Path>SFX\Bubble_Pop_1C9C67B2.wem</Path>
-				</File>
-				<File Id="361187219" Language="English(US)">
-					<ShortName>FX_Crane_Part_1.wav</ShortName>
-					<Path>Voices\English(US)\FX_Crane_Part_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="365189869" Language="SFX">
 					<ShortName>Impact_Can_Heavy_5.wav</ShortName>
@@ -209,10 +258,6 @@
 					<ShortName>Impact_Can_Light_1.wav</ShortName>
 					<Path>SFX\Impact_Can_Light_1_1C9C67B2.wem</Path>
 				</File>
-				<File Id="740204625" Language="SFX">
-					<ShortName>Bubble_Float_1.wav</ShortName>
-					<Path>SFX\Bubble_Float_1_08F606ED.wem</Path>
-				</File>
 				<File Id="832918321" Language="SFX">
 					<ShortName>Impact_Can_Very_Light.wav</ShortName>
 					<Path>SFX\Impact_Can_Very_Light_1C9C67B2.wem</Path>
@@ -225,21 +270,17 @@
 					<ShortName>Impact_Can_Medium.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_1C9C67B2.wem</Path>
 				</File>
-				<File Id="962637296" Language="SFX">
-					<ShortName>Bubble_Float_2.wav</ShortName>
-					<Path>SFX\Bubble_Float_2_6B3D96C7.wem</Path>
+				<File Id="931705023" Language="English(US)">
+					<ShortName>Crane_Part_2.wav</ShortName>
+					<Path>Voices\English(US)\Crane_Part_2_1C9C67B2.wem</Path>
 				</File>
-				<File Id="1007271399" Language="SFX">
-					<ShortName>Click_Positive.wav</ShortName>
-					<Path>SFX\Click_Positive_1C9C67B2.wem</Path>
+				<File Id="1023080845" Language="English(US)">
+					<ShortName>fx_button.wav</ShortName>
+					<Path>Voices\English(US)\fx_button_7EA7B837.wem</Path>
 				</File>
 				<File Id="1042311661" Language="SFX">
 					<ShortName>Impact_Can_Medium_1.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="1050165260" Language="SFX">
-					<ShortName>Bubble_Float_3.wav</ShortName>
-					<Path>SFX\Bubble_Float_3_09D4AFC1.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

@@ -48,7 +48,7 @@ public class AudioTestScript : MonoBehaviour
             //
             // NEED TO RECALCULATE HOW MUCH FORCE
             ///
-            //float force = rigidBody.mass * 
+            float force = rigidBody.mass;
             //float force = rigidBody.mass * rigidBody.velocity.magnitude;
             //float force = rigidBody.mass * Physics.gravity.magnitude *  //rigidBody.mass * rigidBody.velocity.magnitude;
             //Debug.Log("audio test force is " + force);
