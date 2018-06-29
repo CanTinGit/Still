@@ -30,7 +30,7 @@ public class PickUpUpdated : MonoBehaviour
     bool Controller; // if you dont have a controller use the keys instead
     void Awake()
     {
-        Controller = false;
+        Controller = true;
         //get the keys and stats for the player
         playerKeys = MenuScript.Instance.GetPlayerKeys();
         //get the power of the throw from the player geys

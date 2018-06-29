@@ -91,7 +91,7 @@ public class PressedButton : MonoBehaviour {
 
             }
         }
-    }
+    
 
     //When the button is realsed
     void OnTriggerExit(Collider other)

@@ -37,9 +37,9 @@ public class PlayerKeys
         keys[1] = KeyCode.S;
         keys[2] = KeyCode.A;
         keys[3] = KeyCode.D;
-        keys[4] = KeyCode.B;//KeyCode.JoystickButton1; // throw
-        keys[5] = KeyCode.Space;//KeyCode.JoystickButton0; // jump
-        keys[6] = KeyCode.V;//KeyCode.JoystickButton2; //pickup
+        keys[4] = KeyCode.JoystickButton1;//KeyCode.B;//KeyCode.JoystickButton1; // throw
+        keys[5] = KeyCode.JoystickButton0;//KeyCode.Space;//KeyCode.JoystickButton0; // jump
+        keys[6] = KeyCode.JoystickButton2;//KeyCode.V;//KeyCode.JoystickButton2; //pickup
         //tempholder keys
         TempHolder[0] = KeyCode.W;
         TempHolder[1] = KeyCode.S;
