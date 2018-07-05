@@ -313,6 +313,17 @@
 									</PropertyList>
 									<ReferenceList/>
 								</Action>
+								<Action Name="" ID="{6C86C6CD-B3C0-43FB-A06D-E61A3E298856}" ShortID="894547118">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="click_start" ID="{325B24F6-EAD6-45A9-89FA-17B66FBB2F8B}" WorkUnitID="{E016A5A6-0682-456F-BC10-81BBB135CFD0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{2A231A65-9ACE-4A22-97C2-A7854813124B}" ShortID="565471289">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>

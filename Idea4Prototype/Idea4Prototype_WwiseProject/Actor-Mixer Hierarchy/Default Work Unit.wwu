@@ -2118,9 +2118,20 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="MoonisCheese_GameStart" ID="{8E5BEF19-C6DE-42E6-BB15-F5B1DDD22D07}" ShortID="371123247">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Plate_Small" ID="{5681977F-CD7F-4D09-AA58-118BEFA48C8C}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
@@ -2130,7 +2141,10 @@
 								<AudioFileSource Name="MoonisCheese_GameStart" ID="{09BB012D-0AD7-4732-BFEB-93C5A77B0CA7}" ShortID="921084845">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="9.65105135576977E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.45053272450533"/>
+										<Property Name="FadeOutShape" Type="int16" Value="3"/>
 										<Property Name="TrimBegin" Type="Real64" Value="0.167427701674277"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.96803652968037"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>MoonisCheese_GameStart.wav</AudioFile>
