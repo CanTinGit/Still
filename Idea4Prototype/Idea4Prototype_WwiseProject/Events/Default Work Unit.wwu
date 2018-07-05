@@ -376,6 +376,18 @@
 									</PropertyList>
 									<ReferenceList/>
 								</Action>
+								<Action Name="" ID="{DF844734-AF0C-4790-AD68-61E552923025}" ShortID="41726729">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="-48"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="noise_detection" ID="{7B380775-F665-4749-A801-FD310080BD1B}" WorkUnitID="{E016A5A6-0682-456F-BC10-81BBB135CFD0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{B73C5D5F-D589-4130-86B7-0B648C03DD80}" ShortID="720114526">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
