@@ -86,7 +86,10 @@ public class MenuScript : MonoBehaviour
         maxLevel = playerdata.getCurrentLevel();
         whichPlayerKey = 0;
     }
+    void Start()
+    {
 
+    }
     //intialising variables and setting up gameobjects and how the home screen should look like
     public void IntialiseAndSetScene()
     {
@@ -109,6 +112,7 @@ public class MenuScript : MonoBehaviour
         FlipLevelPanel();
         FlipOptionPanel();
         FlipCharacterPanel();
+
 
     }
     //flips the level panel to the opposite state
@@ -168,7 +172,7 @@ public class MenuScript : MonoBehaviour
     }
     void ReturntoMainMenu()
     {
-        AkSoundEngine.PostEvent("click_back", gameObject);
+        AkSoundEngine.PostEvent("click_back", gameObject);  
         FlipCharacterPanel();
         FlipMenuButtons();
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
@@ -209,6 +213,8 @@ public class MenuScript : MonoBehaviour
         //flip the menu buttons off
         FlipMenuButtons();
         AkSoundEngine.PostEvent("click_back", gameObject);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
+        Debug.Log("Return");
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
     }
     //clear the level list
@@ -530,6 +536,7 @@ public class MenuScript : MonoBehaviour
         gamePaused = false;
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
+        AkSoundEngine.PostEvent("play_intro", gameObject);
         //Invoke("DelayReturn", 0.05f);
     }
 
