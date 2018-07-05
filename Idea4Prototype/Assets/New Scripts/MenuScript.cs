@@ -45,7 +45,7 @@ public class MenuScript : MonoBehaviour
     int whichPlayerKey;
     //Global variable to get the only one game manager
     public static MenuScript Instance
-    {
+    {       
         get
         {
             if (_instance == null)
@@ -67,7 +67,7 @@ public class MenuScript : MonoBehaviour
     //on awake we intialise the player settings which is the default values and also set up the singleton
     void Awake()
     {
-
+        
         playerdata = new PlayerData();
         for(int i =0; i < playerSetting.Length;i++)
         {
@@ -143,7 +143,8 @@ public class MenuScript : MonoBehaviour
     {
         //flip the character panel on and flip off the menu button
         FlipCharacterPanel();
-        AkSoundEngine.PostEvent("click_select", gameObject);
+        AkSoundEngine.PostEvent("game_start", gameObject);
+        AkSoundEngine.SetRTPCValue("click_start", 0f, null, 1000);
         FlipMenuButtons();
         //Set the navigable buttons to the character screen buttons
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ContinueButton"));

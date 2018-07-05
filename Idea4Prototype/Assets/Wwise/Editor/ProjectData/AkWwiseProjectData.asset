@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 1683414287
-    m_lastTimePart2: -1999249979
+    m_lastTimePsrt1: -1766938207
+    m_lastTimePart2: -1999248799
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -171,6 +171,18 @@ MonoBehaviour:
       ID: -1144550677
       Guid: 8aaa78ca444aa946bc8e839589b392eb
       maxAttenuation: 0
+    - Name: game_start
+      Path: Default Work Unit\Opening\game_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 4
+      - ElementName: game_start
+        ObjectType: 3
+      ID: 733168346
+      Guid: 531263253405ab4996fb5b59b7a8c543
+      maxAttenuation: 0
     - Name: hover
       Path: Default Work Unit\UI\hover
       PathAndIcons:
@@ -182,6 +194,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -541373883
       Guid: 50f9f9ae29ae5a4bae8fbd632d417c68
+      maxAttenuation: 0
+    - Name: play_intro
+      Path: Default Work Unit\Opening\play_intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 4
+      - ElementName: play_intro
+        ObjectType: 3
+      ID: -1191494768
+      Guid: 0cadb8f96cf7ed4e995cb9b95c05341c
       maxAttenuation: 0
     - Name: player_accident
       Path: Default Work Unit\Player\player_accident
@@ -357,8 +381,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: 1687104287
-    m_lastTimePart2: -1999249979
+    m_lastTimePsrt1: -1766888207
+    m_lastTimePart2: -1999248799
     List:
     - Name: Enemy
       Path: Default Work Unit\Enemy
@@ -369,6 +393,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1995645809
       Guid: 167d28cba1cd3646ab2c5eb86708a848
+    - Name: Opening
+      Path: Default Work Unit\Opening
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 7
+      ID: 1831982039
+      Guid: 1d38ff6d9404fa4ca6ee6795fd193bae
     - Name: Player
       Path: Default Work Unit\Player
       PathAndIcons:
@@ -400,9 +433,18 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
-    m_lastTimePsrt1: 1683424287
-    m_lastTimePart2: -1999249979
+    m_lastTimePsrt1: -1152920810
+    m_lastTimePart2: -1999248798
     List:
+    - Name: click_start
+      Path: Default Work Unit\click_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: click_start
+        ObjectType: 13
+      ID: -1298186826
+      Guid: f6245b32d6eaa94589fa17b66fbb2f8b
     - Name: noise_detection
       Path: Default Work Unit\noise_detection
       PathAndIcons:
@@ -419,7 +461,10 @@ MonoBehaviour:
     m_lastTimePsrt1: 1687144287
     m_lastTimePart2: -1999249979
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Idea4Prototype_WwiseProject
+  - /Idea4Prototype_WwiseProject/SoundBanks
+  - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
