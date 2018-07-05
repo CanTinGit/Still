@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: -324987647
-    m_lastTimePart2: -1999248784
+    m_lastTimePsrt1: 969707249
+    m_lastTimePart2: -1999248759
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -30,7 +30,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -42,7 +42,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: button_click
       Path: Default Work Unit\button_click
       PathAndIcons:
@@ -52,7 +52,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: camera_trigger
       Path: Default Work Unit\Camera\camera_trigger
       PathAndIcons:
@@ -64,7 +64,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: can_impact
       Path: Default Work Unit\can_impact
       PathAndIcons:
@@ -74,7 +74,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 697519634
       Guid: ac62c32a5eb5c843827b7269bfa7b694
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: click_back
       Path: Default Work Unit\UI\click_back
       PathAndIcons:
@@ -134,7 +134,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -146,7 +146,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -194,6 +194,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -541373883
       Guid: 50f9f9ae29ae5a4bae8fbd632d417c68
+      maxAttenuation: 0
+    - Name: night_ambience
+      Path: Default Work Unit\Ambient\night_ambience
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 4
+      - ElementName: night_ambience
+        ObjectType: 3
+      ID: 849527464
+      Guid: 0cefe225d5144446ab17e8d093e262ff
       maxAttenuation: 0
     - Name: play_intro
       Path: Default Work Unit\Opening\play_intro
@@ -279,12 +291,24 @@ MonoBehaviour:
       ID: -532829526
       Guid: 3b902838b8b01c4aba900eb0d9e3debc
       maxAttenuation: 0
+    - Name: player_throw
+      Path: Default Work Unit\Player\player_throw
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_throw
+        ObjectType: 3
+      ID: 65181031
+      Guid: 9ddef41577381d44b9b7b31bb601332e
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: 1684964287
-    m_lastTimePart2: -1999249979
+    m_lastTimePsrt1: 1716999137
+    m_lastTimePart2: -1999248762
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -381,9 +405,18 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -1766888207
-    m_lastTimePart2: -1999248799
+    m_lastTimePsrt1: 1073377249
+    m_lastTimePart2: -1999248759
     List:
+    - Name: Ambient
+      Path: Default Work Unit\Ambient
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 7
+      ID: 77978275
+      Guid: 0df6c143a0b85747a81644149f3a4f85
     - Name: Enemy
       Path: Default Work Unit\Enemy
       PathAndIcons:
@@ -465,6 +498,7 @@ MonoBehaviour:
   - /Idea4Prototype_WwiseProject
   - /Idea4Prototype_WwiseProject/Events
   - /Idea4Prototype_WwiseProject/Events/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Ambient
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

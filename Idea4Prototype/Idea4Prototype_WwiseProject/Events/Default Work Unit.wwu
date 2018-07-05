@@ -117,6 +117,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="player_throw" ID="{15F4DE9D-3877-441D-B9B7-B31BB601332E}">
+							<ChildrenList>
+								<Action Name="" ID="{0D5785BA-B4B9-44E9-A8C5-B1FCC56AF343}" ShortID="420608792">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Throw" ID="{4667C90D-9DB7-4934-8EC1-3EE2E2A806BB}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{30275F0C-5C5D-46E9-9ADF-7B335D0BB1E4}" ShortID="864467326">
@@ -345,6 +359,30 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="MoonisCheese_GameStart" ID="{8E5BEF19-C6DE-42E6-BB15-F5B1DDD22D07}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambient" ID="{9B2E00D1-E3A3-4D12-AB69-3AD798500E57}" ShortID="949596701">
+					<ChildrenList>
+						<Event Name="night_ambience" ID="{25E2EF0C-14D5-4644-AB17-E8D093E262FF}">
+							<ChildrenList>
+								<Action Name="" ID="{0819EA7F-73D4-4C33-97C0-CA6C3FA85786}" ShortID="1065528006">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{B73C5D5F-D589-4130-86B7-0B648C03DD80}" ShortID="720114526">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Night_Ambience" ID="{264440D3-145B-4900-8DCB-164595413AAB}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

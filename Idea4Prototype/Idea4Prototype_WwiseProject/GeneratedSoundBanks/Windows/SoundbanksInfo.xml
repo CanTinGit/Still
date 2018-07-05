@@ -11,6 +11,68 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="77978275" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Ambient</ObjectPath>
+			<ShortName>Ambient</ShortName>
+			<Path>Ambient.bnk</Path>
+			<IncludedEvents>
+				<Event Id="849527464" Name="night_ambience" ObjectPath="\Events\Default Work Unit\Ambient\night_ambience"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="79401043" Language="SFX">
+					<ShortName>Amb_Garbage_2.wav</ShortName>
+					<Path>SFX\Amb_Garbage_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="107482429" Language="SFX">
+					<ShortName>Amb_Fence_3.wav</ShortName>
+					<Path>SFX\Amb_Fence_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="232752893" Language="SFX">
+					<ShortName>Amb_Garbage_1.wav</ShortName>
+					<Path>SFX\Amb_Garbage_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="345990527" Language="SFX">
+					<ShortName>Amb_Cat_2.wav</ShortName>
+					<Path>SFX\Amb_Cat_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="350281889" Language="SFX">
+					<ShortName>Amb_Garbage_3.wav</ShortName>
+					<Path>SFX\Amb_Garbage_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="382368298" Language="SFX">
+					<ShortName>Amb_Fence_2.wav</ShortName>
+					<Path>SFX\Amb_Fence_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="382801657" Language="SFX">
+					<ShortName>Amb_Night_Loop_2.wav</ShortName>
+					<Path>SFX\Amb_Night_Loop_2_F17FB28C.wem</Path>
+				</File>
+				<File Id="413027233" Language="SFX">
+					<ShortName>Amb_Cat_1.wav</ShortName>
+					<Path>SFX\Amb_Cat_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="424897326" Language="SFX">
+					<ShortName>Amb_Fence.wav</ShortName>
+					<Path>SFX\Amb_Fence_1C9C67B2.wem</Path>
+				</File>
+				<File Id="530301872" Language="SFX">
+					<ShortName>Amb_Wolf_2.wav</ShortName>
+					<Path>SFX\Amb_Wolf_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="575672423" Language="SFX">
+					<ShortName>Amb_Garbage_4.wav</ShortName>
+					<Path>SFX\Amb_Garbage_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="597297699" Language="SFX">
+					<ShortName>Amb_Night_Loop_1.wav</ShortName>
+					<Path>SFX\Amb_Night_Loop_1_F17FB28C.wem</Path>
+				</File>
+				<File Id="1034470341" Language="SFX">
+					<ShortName>Amb_Wolf_1.wav</ShortName>
+					<Path>SFX\Amb_Wolf_1_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1069431850" Language="English(US)">
 			<ObjectPath>\SoundBanks\Default Work Unit\Player</ObjectPath>
 			<ShortName>Player</ShortName>
@@ -22,6 +84,7 @@
 				<Event Id="1922690190" Name="player_drop" ObjectPath="\Events\Default Work Unit\Player\player_drop"/>
 				<Event Id="1305133589" Name="player_jump" ObjectPath="\Events\Default Work Unit\Player\player_jump"/>
 				<Event Id="3762137770" Name="player_lift" ObjectPath="\Events\Default Work Unit\Player\player_lift"/>
+				<Event Id="65181031" Name="player_throw" ObjectPath="\Events\Default Work Unit\Player\player_throw"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="26883164" Language="English(US)">
@@ -47,6 +110,10 @@
 				<File Id="325852278" Language="English(US)">
 					<ShortName>Mouse_No_Man_1.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_No_Man_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="372209524" Language="English(US)">
+					<ShortName>Mouse_Jump_Man_3.wav</ShortName>
+					<Path>Voices\English(US)\Mouse_Jump_Man_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="378657200" Language="English(US)">
 					<ShortName>Mouse_Carry_Man.wav</ShortName>
@@ -76,6 +143,10 @@
 					<ShortName>Mouse_Carry_Man_4.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_Carry_Man_4_1C9C67B2.wem</Path>
 				</File>
+				<File Id="741323757" Language="English(US)">
+					<ShortName>Mouse_Yeet_Man.wav</ShortName>
+					<Path>Voices\English(US)\Mouse_Yeet_Man_1C9C67B2.wem</Path>
+				</File>
 				<File Id="783981681" Language="English(US)">
 					<ShortName>Mouse_Release_Man_4.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_Release_Man_4_1C9C67B2.wem</Path>
@@ -103,6 +174,10 @@
 				<File Id="941221864" Language="English(US)">
 					<ShortName>Mouse_Heavy_Lift_Man_1.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_Heavy_Lift_Man_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="966652183" Language="English(US)">
+					<ShortName>Mouse_Jump_Man_1.wav</ShortName>
+					<Path>Voices\English(US)\Mouse_Jump_Man_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="994632943" Language="English(US)">
 					<ShortName>Mouse_OhNo_Man_1.wav</ShortName>
@@ -193,7 +268,7 @@
 				</File>
 				<File Id="921084845" Language="SFX">
 					<ShortName>MoonisCheese_GameStart.wav</ShortName>
-					<Path>SFX\MoonisCheese_GameStart_CE6B0CA6.wem</Path>
+					<Path>SFX\MoonisCheese_GameStart_A9919B5F.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -237,6 +312,10 @@
 					<ShortName>Crane_Part_1.wav</ShortName>
 					<Path>Voices\English(US)\Crane_Part_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="162006207" Language="SFX">
+					<ShortName>Wood_Impact_Light.wav</ShortName>
+					<Path>SFX\Wood_Impact_Light_1C9C67B2.wem</Path>
+				</File>
 				<File Id="175213724" Language="SFX">
 					<ShortName>Impact_Can_Very_Light_1.wav</ShortName>
 					<Path>SFX\Impact_Can_Very_Light_1_1C9C67B2.wem</Path>
@@ -244,6 +323,14 @@
 				<File Id="199767411" Language="SFX">
 					<ShortName>Impact_Can_Light.wav</ShortName>
 					<Path>SFX\Impact_Can_Light_1C9C67B2.wem</Path>
+				</File>
+				<File Id="263401526" Language="SFX">
+					<ShortName>Wood_Impact_Light_1.wav</ShortName>
+					<Path>SFX\Wood_Impact_Light_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="282957980" Language="SFX">
+					<ShortName>Wood_Impact_Medium_3.wav</ShortName>
+					<Path>SFX\Wood_Impact_Medium_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="365189869" Language="SFX">
 					<ShortName>Impact_Can_Heavy_5.wav</ShortName>
@@ -273,13 +360,29 @@
 					<ShortName>Impact_Can_Light_5.wav</ShortName>
 					<Path>SFX\Impact_Can_Light_5_1C9C67B2.wem</Path>
 				</File>
+				<File Id="524659892" Language="SFX">
+					<ShortName>Wood_Impact_Light_2.wav</ShortName>
+					<Path>SFX\Wood_Impact_Light_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="530105447" Language="SFX">
 					<ShortName>Impact_Can_Heavy.wav</ShortName>
 					<Path>SFX\Impact_Can_Heavy_1C9C67B2.wem</Path>
 				</File>
+				<File Id="592493198" Language="SFX">
+					<ShortName>Wood_Impact_Heavy.wav</ShortName>
+					<Path>SFX\Wood_Impact_Heavy_1C9C67B2.wem</Path>
+				</File>
 				<File Id="674416996" Language="SFX">
 					<ShortName>Impact_Can_Light_1.wav</ShortName>
 					<Path>SFX\Impact_Can_Light_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="700689296" Language="SFX">
+					<ShortName>Wood_Impact_Heavy_4.wav</ShortName>
+					<Path>SFX\Wood_Impact_Heavy_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="819532865" Language="SFX">
+					<ShortName>Wood_Impact_Light_5.wav</ShortName>
+					<Path>SFX\Wood_Impact_Light_5_1C9C67B2.wem</Path>
 				</File>
 				<File Id="832918321" Language="SFX">
 					<ShortName>Impact_Can_Very_Light.wav</ShortName>
@@ -289,6 +392,14 @@
 					<ShortName>Impact_Can_Medium_2.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_2_1C9C67B2.wem</Path>
 				</File>
+				<File Id="890476972" Language="SFX">
+					<ShortName>Wood_Impact_Heavy_2.wav</ShortName>
+					<Path>SFX\Wood_Impact_Heavy_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="899333888" Language="SFX">
+					<ShortName>Wood_Impact_Heavy_1.wav</ShortName>
+					<Path>SFX\Wood_Impact_Heavy_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="931441282" Language="SFX">
 					<ShortName>Impact_Can_Medium.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_1C9C67B2.wem</Path>
@@ -297,13 +408,33 @@
 					<ShortName>Crane_Part_2.wav</ShortName>
 					<Path>Voices\English(US)\Crane_Part_2_1C9C67B2.wem</Path>
 				</File>
+				<File Id="935883449" Language="SFX">
+					<ShortName>Wood_Impact_Medium.wav</ShortName>
+					<Path>SFX\Wood_Impact_Medium_1C9C67B2.wem</Path>
+				</File>
+				<File Id="997798373" Language="SFX">
+					<ShortName>Wood_Impact_Light_4.wav</ShortName>
+					<Path>SFX\Wood_Impact_Light_4_1C9C67B2.wem</Path>
+				</File>
 				<File Id="1023080845" Language="English(US)">
 					<ShortName>fx_button.wav</ShortName>
 					<Path>Voices\English(US)\fx_button_7EA7B837.wem</Path>
 				</File>
+				<File Id="1030683540" Language="SFX">
+					<ShortName>Wood_Impact_Medium_4.wav</ShortName>
+					<Path>SFX\Wood_Impact_Medium_4_1C9C67B2.wem</Path>
+				</File>
 				<File Id="1042311661" Language="SFX">
 					<ShortName>Impact_Can_Medium_1.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1063147226" Language="SFX">
+					<ShortName>Wood_Impact_Medium_2.wav</ShortName>
+					<Path>SFX\Wood_Impact_Medium_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1072654148" Language="SFX">
+					<ShortName>Wood_Impact_Light_3.wav</ShortName>
+					<Path>SFX\Wood_Impact_Light_3_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

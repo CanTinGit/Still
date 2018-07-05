@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C5E2190F-7060-466C-BE6C-46835712DF69}" SchemaVersion="80">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{C5E2190F-7060-466C-BE6C-46835712DF69}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C5E2190F-7060-466C-BE6C-46835712DF69}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Trial" ID="{2D7CB6D8-AB64-4305-A8CD-E1F7B6A3E39C}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Night_Ambience" ID="{264440D3-145B-4900-8DCB-164595413AAB}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Material" ID="{B50AFE6F-5D8E-4A80-83B9-293CBBD3DA32}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="click_start" ID="{325B24F6-EAD6-45A9-89FA-17B66FBB2F8B}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="noise_detection" ID="{7B380775-F665-4749-A801-FD310080BD1B}"/>
+							<Value>-48</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="metal_object" ID="{DFD31C6E-66D7-47EA-8F95-1AB34A192F4F}"/>
+						<CurrentStateRef Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
