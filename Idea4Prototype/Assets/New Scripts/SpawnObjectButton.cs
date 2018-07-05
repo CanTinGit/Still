@@ -10,7 +10,7 @@ public class SpawnObjectButton : MonoBehaviour {
     public bool isSpecificObject;   //When it's set, only the specific object can trigger the button or trapss
     public float noise;             //Noise value
     public string noise_detection;  //the name of the noise
-    public GameObject SpecificObject; //Set the the specific object
+    public string SpecificObjectTag; //Set the the specific object
     GameObject spawnerManager;      // Reference to the spawner manager
 
     // Use this for initialization, set the button and original position of button
@@ -21,14 +21,8 @@ public class SpawnObjectButton : MonoBehaviour {
         spawnerManager = GameObject.Find("SpawnerManager");
     }
 
-    // Noise detection wiise function, set the noise value every frame
-    void Update()
-    {
-        //int type = 1;
-        //float value;
-        //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
-        //noise = value;
-    }
+
+
 
     //Check if something enter the trigger
     void OnTriggerEnter(Collider other)
@@ -37,8 +31,11 @@ public class SpawnObjectButton : MonoBehaviour {
         if (isSpecificObject)
         {
             //Check if the object trigger the button is the specific object
-            if (other.gameObject == SpecificObject)
+            if (other.gameObject.tag == SpecificObjectTag)
             {
+                // Button go down
+                button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
+                AkSoundEngine.PostEvent("button_click", gameObject);
                 // Spawn the object
                 spawnerManager.GetComponent<Spawner>().Spawn();
             }
@@ -55,6 +52,7 @@ public class SpawnObjectButton : MonoBehaviour {
             // Spawn the object
             spawnerManager.GetComponent<Spawner>().Spawn();
 
+
         }
     }
 
@@ -62,5 +60,11 @@ public class SpawnObjectButton : MonoBehaviour {
     void OnTriggerExit(Collider other)
     {
         button.position = originalPosition;
+    }
+
+    //When the button is stayed on
+    void OnTriggerStay(Collider other)
+    {
+        button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
     }
 }

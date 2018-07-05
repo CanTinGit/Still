@@ -154,7 +154,7 @@ public class MovementUpdated : MonoBehaviour {
                 movement = Input.GetAxis("Horizontal" + PlayerNum.ToString()) * Camera.main.transform.right + Input.GetAxis("Vertical" + PlayerNum.ToString()) * (-forward);
                 if (movement != Vector3.zero)
                 {
-                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.40f);// Quaternion.LookRotation(movement);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.1f);// Quaternion.LookRotation(movement);
                 }
                 transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
             }

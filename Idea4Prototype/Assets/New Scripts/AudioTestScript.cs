@@ -6,6 +6,7 @@ public class AudioTestScript : MonoBehaviour
 {
     private float noiseMade; //the noise that is made
     Rigidbody rigidBody;
+    float velocity;
     void Awake()
     {
         //set the rigidBody variable to the componenet
@@ -15,6 +16,15 @@ public class AudioTestScript : MonoBehaviour
     {
         //GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().SetAudioForMaterial("MetalObject");
         InvokeRepeating("FindTill", 0.0f, 0.01666f);
+    }
+    public void SetVelocity(float velocity_)
+    {
+        //Debug.Log(velocity_);
+        if(velocity_>=1.0f)
+        {
+            velocity = velocity_;
+        }
+        
     }
     void FindTill()
     {
@@ -48,7 +58,7 @@ public class AudioTestScript : MonoBehaviour
             //
             // NEED TO RECALCULATE HOW MUCH FORCE
             ///
-            float force = rigidBody.mass;
+            float force = rigidBody.mass * velocity;
             //float force = rigidBody.mass * rigidBody.velocity.magnitude;
             //float force = rigidBody.mass * Physics.gravity.magnitude *  //rigidBody.mass * rigidBody.velocity.magnitude;
             //Debug.Log("audio test force is " + force);

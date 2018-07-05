@@ -63,6 +63,7 @@ public class PickUpUpdated : MonoBehaviour
                 PickUpAndThrowCode(4, playerKeys[3].GetKeys()[6].ToString().Insert(8, "4"), playerKeys[3].GetKeys()[4].ToString().Insert(8, "4"), playerKeys[3].GetThrowPower());
             }
         }
+        //probably remove this and controller once we are done
         else
         {
             // PickUpAndThrowCode(1, playerKeys.GetKeys()[6].ToString().Insert(8,"1"), playerKeys.GetKeys()[4].ToString().Insert(8, "1"));
@@ -212,6 +213,7 @@ public class PickUpUpdated : MonoBehaviour
                     if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                     {
                         Debug.Log("pressing");
+                        picked.gameObject.AddComponent<CheckVelocity>();
                         throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
                         throwArc.SetActive(false);
                         SimulateThrow simulate = picked.AddComponent<SimulateThrow>();
@@ -390,8 +392,10 @@ public class PickUpUpdated : MonoBehaviour
     void MovePickedUp()
     {
         //get the distance the object should be in terms of being how far forward infront of the player and how high the object is for the player
-        float yDis = this.GetComponent<BoxCollider>().bounds.size.y * PercentageY;
-        float zDis = picked.GetComponent<BoxCollider>().bounds.size.z * Percentagez;
+       // float yDis = this.GetComponent<BoxCollider>().bounds.size.y * PercentageY;
+        float yDis = this.GetComponent<Collider>().bounds.size.y * PercentageY;             //Possible fix for any collider type on the pickup objects
+       // float zDis = picked.GetComponent<BoxCollider>().bounds.size.z * Percentagez;
+        float zDis = picked.GetComponent<Collider>().bounds.size.z * Percentagez;           //Possible fix for any collider type on the pickup objects
         //set the new position based on the percentage of the mesh's dimensions
         picked.transform.position = this.transform.position + (this.transform.forward*zDis) + new Vector3(0.0f,yDis,0.0f);
         picked.transform.rotation = Quaternion.Euler(new Vector3(picked.transform.rotation.eulerAngles.x, this.transform.parent.rotation.eulerAngles.y , picked.transform.rotation.eulerAngles.z));

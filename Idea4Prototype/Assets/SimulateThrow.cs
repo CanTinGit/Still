@@ -17,7 +17,7 @@ public class SimulateThrow : MonoBehaviour {
     float timer;
     void Awake()
     {
-        gravity = Mathf.Abs(Physics2D.gravity.y);
+        gravity = Mathf.Abs(Physics.gravity.y);
     }
     // Use this for initialization
     void Start ()
@@ -39,7 +39,22 @@ public class SimulateThrow : MonoBehaviour {
         else
         {
             //turn kinematic off so gravity effects the object again
+            float x = (movementArray[i-1].x - movementArray[i-2].x) / 0.01666f;
+            radianAngle = Mathf.Deg2Rad * angle;
+            float y = (movementArray[i - 1].x - movementArray[i - 2].x) / 0.01666f;
+            float z = (movementArray[i-1].z - movementArray[i-2].z) / 0.01666f;
+            //Debug.Log(new Vector3(x, -y, z));
+            Debug.Log("Throw");
+            if (y >= 0)
+            {
+                gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, -y, z);
+            }
+            else
+            {
+                gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, y, z);
+            }
             gameObject.GetComponent<Rigidbody>().useGravity = true;
+            //CancelInvoke();
             Destroy(this);
         }
     }
@@ -77,8 +92,14 @@ public class SimulateThrow : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
+        float x = (movementArray[i - 1].x - movementArray[i - 2].x) / 0.01666f;
+        radianAngle = Mathf.Deg2Rad * angle;
+        float y = (movementArray[i - 1].x - movementArray[i - 2].x) / 0.01666f;
+        float z = (movementArray[i - 1].z - movementArray[i - 2].z) / 0.01666f;
+        //Debug.Log(new Vector3(x, -y, z));
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, -y, z);
         gameObject.GetComponent<Rigidbody>().useGravity = true;
-        Destroy(this);
+        CancelInvoke();
     }
 
 }

@@ -202,7 +202,7 @@ public class MenuScript : MonoBehaviour
     void ReturnToMenuPressed()
     {
         //empty the level list
-        EmptyLevelList();
+        //EmptyLevelList();
         //flip the level panel off
         FlipLevelPanel();
         //flip the menu buttons off
@@ -567,8 +567,6 @@ public class MenuScript : MonoBehaviour
     public void FadeToNextLevel()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(" scene is " + SceneManager.GetSceneByBuildIndex(index).name);
-        Debug.Log(" the pause panel is " + GameObject.Find("PausePanel"));
         if (SceneManager.GetActiveScene().buildIndex != Application.levelCount - 1)
         {
             CompleteLevelAndRate();

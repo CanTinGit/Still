@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     public float spawnTime;            // How long between each spawn.
     public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
     public int max_objects;                    // The max number of shirts allowed to be in the level at a single time.
-
+    public bool canSpawn = true;
     /*
     void Start()
     {
@@ -46,19 +46,32 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
-        // If too many numbers are in the scene.
-        if (num_objects >= max_objects)
+        if(canSpawn)
         {
-            // ... exit the function.
-            return;
+            canSpawn = false;
+            // If too many numbers are in the scene.
+            if (num_objects >= max_objects)
+            {
+                // ... exit the function.
+                return;
+            }
+
+            // Find a random index between zero and one less than the number of spawn points.
+            int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+            // Find a random index between zero and one less than the number of player_shirts.
+            int objectIndex = Random.Range(0, m_object.Length);
+            // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+            Instantiate(m_object[objectIndex], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            num_objects = num_objects + 1;
         }
 
-        // Find a random index between zero and one less than the number of spawn points.
-        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-        // Find a random index between zero and one less than the number of player_shirts.
-        int objectIndex = Random.Range(0, m_object.Length);
-        // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-        Instantiate(m_object[objectIndex], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-        num_objects = num_objects + 1;
+    }
+    public void SpawnTrue()
+    {
+        canSpawn = true;
+    }
+    public void SpawnFalse()
+    {
+        canSpawn = false;
     }
 }

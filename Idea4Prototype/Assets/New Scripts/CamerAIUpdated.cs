@@ -25,6 +25,8 @@ public class CamerAIUpdated : MonoBehaviour
     //the delay of each movement during the coroutine ( the vector3.movetowards movement)
     private float nextMovementDelay = 0.01f;
     //on awake we set up these variables
+
+    public GameObject lightObject;
     void Awake()
     {
         //make sure the height is the starting y position
@@ -44,7 +46,7 @@ public class CamerAIUpdated : MonoBehaviour
         {
             //randomize the index based on the length of the list
             int index = Random.Range(0, targetPoint.Count);
-            //create the end point with the correct y position
+            //create the end point with the correct y position           
             Vector3 endPoint = new Vector3(targetPoint[index].transform.position.x, height, targetPoint[index].transform.position.z);
             //call the coroutine that will do the movement
             StartCoroutine(MoveTo(endPoint, index));
@@ -60,6 +62,7 @@ public class CamerAIUpdated : MonoBehaviour
         {
             //change the position towards the end points
             this.transform.position = Vector3.MoveTowards(this.transform.position, endPoint_, speed * Time.deltaTime);
+            lightObject.transform.LookAt(this.transform);
             //when we reach the end point stop the loop by setting the moving to false and remove the point
             if (this.transform.position == endPoint_)
             {

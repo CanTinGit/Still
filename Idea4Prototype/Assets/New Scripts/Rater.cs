@@ -130,13 +130,16 @@ public class Rater : MonoBehaviour
     //Three setting timing to rate
     public setTime[] setTimings = new setTime[3];
     public Sprite[] stars = new Sprite[3];
+    Image starImage;
+    Timer time;
     //Rate function
     public int Rating()
     {
         //Get the UI of Rating
-        Image starImage = GameObject.Find("FadeSceneHolder").transform.GetChild(1).GetComponent<Image>();
+        starImage = GameObject.Find("FadeSceneHolder").transform.GetChild(1).GetComponent<Image>();
+        time = GameObject.Find("Timer").GetComponent<Timer>();
         //Get current time that players used to pass
-        Timer time = GameObject.Find("Timer").GetComponent<Timer>();
+
         setTime finishedTime = new setTime();
         finishedTime.unitSeconds = time.unitSeconds;
         finishedTime.tenSeconds = time.tenSeconds;
