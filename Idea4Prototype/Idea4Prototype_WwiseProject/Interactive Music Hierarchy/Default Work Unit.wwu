@@ -1,6 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}" SchemaVersion="80">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" ShortID="173339490">
+					<PropertyList>
+						<Property Name="GridOffsetPreset" Type="int16" Value="53"/>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{077B422E-A8DD-4935-A4AC-9F0897EAA72E}" ShortID="706889372">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="click_start" ID="{325B24F6-EAD6-45A9-89FA-17B66FBB2F8B}" WorkUnitID="{E016A5A6-0682-456F-BC10-81BBB135CFD0}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{333627A3-E685-46DC-80CC-F96ADA6DB0A8}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Exp1</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>30</XPos>
+												<YPos>-8.47483</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Log2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music" ID="{6CC6408D-3CB5-4A61-8AD7-9F87AD07E265}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="MoonisCheese_Intro" ID="{3A8B8FC2-FA60-481C-BC9E-A5F470EDA546}" ShortID="598890735">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="20000"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="MoonisCheese_Intro" ID="{06337623-5B07-4756-9513-4E71A2381D5F}" ShortID="620448572">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MoonisCheese_Intro" ID="{9DDCF418-D7AD-4EF2-91FE-90B6D37F7F4A}" ShortID="378082071">
+											<Language>SFX</Language>
+											<AudioFile>MoonisCheese_Intro.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{D14E1B8A-9C54-4322-BB01-72D723D40AAF}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{1D8C4F4C-515D-40D4-BC8D-BF5FBEEB87C1}">
+											<ClipList>
+												<MusicClip Name="MoonisCheese_Intro" ID="{A1D5E3AA-DE3F-428D-8C84-D1493AD54E4A}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="MoonisCheese_Intro" ID="{9DDCF418-D7AD-4EF2-91FE-90B6D37F7F4A}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{F9630298-0504-42B4-9E0F-323D233334AD}"/>
+								<MusicCue Name="Exit Cue" ID="{5540CC47-5C44-4D2B-8EDC-76952112FF81}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="20000"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="MoonisCheese_Loop" ID="{BD3D6611-A510-4AC6-82C7-368B2609FD18}" ShortID="632546371">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="48000"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="MoonisCheese_Loop" ID="{AD0E745C-F2C4-4D71-BBCF-E47489499E85}" ShortID="983216034">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MoonisCheese_Loop" ID="{63574F12-DEED-48BD-A718-412B9CFBEF66}" ShortID="598821860">
+											<Language>SFX</Language>
+											<AudioFile>MoonisCheese_Loop.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{2AACE1DD-A566-4798-BEA6-2529B524EFBD}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{A3FA0C68-ECCB-4C1F-B0B4-1464F37D0220}">
+											<ClipList>
+												<MusicClip Name="MoonisCheese_Loop" ID="{87D54952-156F-4F2A-95B8-59F953796C34}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="48000"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="MoonisCheese_Loop" ID="{63574F12-DEED-48BD-A718-412B9CFBEF66}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{39FA9C3C-27D6-48D7-BC4B-6E68B6EAD8CC}"/>
+								<MusicCue Name="Exit Cue" ID="{F3E034A7-C9BC-451C-A364-25BCA4EA32FE}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="48000"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{6204F32A-52CF-410B-9625-21BCC2F88148}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{B9C6E8D4-94FB-4DB5-9420-3E390CC4473C}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{2A162CD7-0A41-41B1-B479-1176AD0FD071}" ShortID="148923534">
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{BB8BC454-4168-42B1-AB04-827B209E6FD5}" ShortID="78036441">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="MoonisCheese_Intro" ID="{3A8B8FC2-FA60-481C-BC9E-A5F470EDA546}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{BCD9B9B4-C733-467B-8650-1C3A0D95CC21}" ShortID="49615396">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="MoonisCheese_Loop" ID="{BD3D6611-A510-4AC6-82C7-368B2609FD18}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

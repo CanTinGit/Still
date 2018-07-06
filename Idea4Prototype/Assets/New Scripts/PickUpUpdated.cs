@@ -212,6 +212,8 @@ public class PickUpUpdated : MonoBehaviour
                 {
                     if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                     {
+                        Debug.Log("pressing");
+                        AkSoundEngine.PostEvent("player_throw", gameObject);
                         picked.gameObject.AddComponent<CheckVelocity>();
                         throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
                         throwArc.SetActive(false);

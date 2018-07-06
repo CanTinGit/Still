@@ -10,14 +10,17 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 915e4feee9c236c46b967faed71c4350, type: 3}
   m_Name: AkWwiseProjectData
-  m_EditorClassIdentifier: 
-  CurrentPluginConfig: 
+  m_EditorClassIdentifier:
+  CurrentPluginConfig:
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 619542817
-    m_lastTimePart2: -1999248769
+
+    m_lastTimePsrt1: -729076390
+    m_lastTimePart2: -1999248607
+    m_lastTimePsrt1: 82272001
+    m_lastTimePart2: -1999248773
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -64,16 +67,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 0
-    - Name: can_impact
-      Path: Default Work Unit\can_impact
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: can_impact
-        ObjectType: 3
-      ID: 697519634
-      Guid: ac62c32a5eb5c843827b7269bfa7b694
       maxAttenuation: 0
     - Name: click_back
       Path: Default Work Unit\UI\click_back
@@ -171,6 +164,18 @@ MonoBehaviour:
       ID: -1144550677
       Guid: 8aaa78ca444aa946bc8e839589b392eb
       maxAttenuation: 0
+    - Name: game_start
+      Path: Default Work Unit\Opening\game_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 4
+      - ElementName: game_start
+        ObjectType: 3
+      ID: 733168346
+      Guid: 531263253405ab4996fb5b59b7a8c543
+      maxAttenuation: 0
     - Name: hover
       Path: Default Work Unit\UI\hover
       PathAndIcons:
@@ -182,6 +187,40 @@ MonoBehaviour:
         ObjectType: 3
       ID: -541373883
       Guid: 50f9f9ae29ae5a4bae8fbd632d417c68
+      maxAttenuation: 0
+    - Name: night_ambience
+      Path: Default Work Unit\Ambient\night_ambience
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 4
+      - ElementName: night_ambience
+        ObjectType: 3
+      ID: 849527464
+      Guid: 0cefe225d5144446ab17e8d093e262ff
+      maxAttenuation: 0
+    - Name: object_impact
+      Path: Default Work Unit\object_impact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: object_impact
+        ObjectType: 3
+      ID: 538597049
+      Guid: ac62c32a5eb5c843827b7269bfa7b694
+      maxAttenuation: 0
+    - Name: play_intro
+      Path: Default Work Unit\Opening\play_intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 4
+      - ElementName: play_intro
+        ObjectType: 3
+      ID: -1191494768
+      Guid: 0cadb8f96cf7ed4e995cb9b95c05341c
       maxAttenuation: 0
     - Name: player_accident
       Path: Default Work Unit\Player\player_accident
@@ -255,12 +294,24 @@ MonoBehaviour:
       ID: -532829526
       Guid: 3b902838b8b01c4aba900eb0d9e3debc
       maxAttenuation: 0
+    - Name: player_throw
+      Path: Default Work Unit\Player\player_throw
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_throw
+        ObjectType: 3
+      ID: 65181031
+      Guid: 9ddef41577381d44b9b7b31bb601332e
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: 1684964287
-    m_lastTimePart2: -1999249979
+    m_lastTimePsrt1: 1716999137
+    m_lastTimePart2: -1999248762
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -275,10 +326,10 @@ MonoBehaviour:
       Guid: adc8318d689e2a4a957c4972f96d2159
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
-    m_lastTimePsrt1: 1687124287
-    m_lastTimePart2: -1999249979
+    m_lastTimePsrt1: -729046390
+    m_lastTimePart2: -1999248607
     List:
     - Name: Impact_Force
       Path: Default Work Unit\Impact_Force
@@ -294,7 +345,6 @@ MonoBehaviour:
       - Light
       - Medium
       - None
-      - Very_Light
       ValueIcons:
       - ElementName: Heavy
         ObjectType: 8
@@ -304,15 +354,12 @@ MonoBehaviour:
         ObjectType: 8
       - ElementName: None
         ObjectType: 8
-      - ElementName: Very_Light
-        ObjectType: 8
-      valueIDs: 767bdea223f05c73b08bd2a9db3ba32cc8a7218f
+      valueIDs: 767bdea223f05c73b08bd2a9db3ba32c
       ValueGuids:
       - bytes: df9dd67fa028254fb23e7c95e7f638f4
       - bytes: 52be8bf7dbe479409bf6b2042ad91618
       - bytes: f6fa0ea28cbe0042b767ede20e308839
       - bytes: c7ff68a6d6c161438d27bd3d4826048b
-      - bytes: 4ce501d9a5dbec4180a9150eaa4c3954
     - Name: Material
       Path: Default Work Unit\Material
       PathAndIcons:
@@ -323,14 +370,11 @@ MonoBehaviour:
       ID: -429652670
       Guid: 1fb0041b20a78044b5f388c6fd17f99a
       values:
-      - ice_object
       - metal_object
       - None
       - plastic_object
       - wood_object
       ValueIcons:
-      - ElementName: ice_object
-        ObjectType: 8
       - ElementName: metal_object
         ObjectType: 8
       - ElementName: None
@@ -339,27 +383,37 @@ MonoBehaviour:
         ObjectType: 8
       - ElementName: wood_object
         ObjectType: 8
-      valueIDs: 4c12a75694c8e61bdb3ba32c4bb5b8c7b8ed45de
+      valueIDs: 94c8e61bdb3ba32c4bb5b8c7b8ed45de
       ValueGuids:
-      - bytes: 99da7208607a68498f24e8bdc3807e88
       - bytes: 6e1cd3dfd766ea478f951ab34a192f4f
       - bytes: 93a7cba28b72004dac7588424111fe33
       - bytes: 5c536ebbbde13a499bcda4c52ec7513e
       - bytes: 91eda26eef14ab47a9aa9c93bffb8d58
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
     m_lastTimePsrt1: 1687134287
     m_lastTimePart2: -1999249979
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: 619772817
-    m_lastTimePart2: -1999248769
+    m_lastTimePsrt1: -729006390
+    m_lastTimePart2: -1999248607
+    m_lastTimePsrt1: 85092001
+    m_lastTimePart2: -1999248773
     List:
+    - Name: Ambient
+      Path: Default Work Unit\Ambient
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 7
+      ID: 77978275
+      Guid: 0df6c143a0b85747a81644149f3a4f85
     - Name: Enemy
       Path: Default Work Unit\Enemy
       PathAndIcons:
@@ -369,6 +423,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1995645809
       Guid: 167d28cba1cd3646ab2c5eb86708a848
+    - Name: Opening
+      Path: Default Work Unit\Opening
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 7
+      ID: 1831982039
+      Guid: 1d38ff6d9404fa4ca6ee6795fd193bae
     - Name: Player
       Path: Default Work Unit\Player
       PathAndIcons:
@@ -398,11 +461,20 @@ MonoBehaviour:
       Guid: 98b28065969f0d46b5ebcd8a6202e0c3
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
-    m_lastTimePsrt1: 619552817
-    m_lastTimePart2: -1999248769
+    m_lastTimePsrt1: 82282001
+    m_lastTimePart2: -1999248773
     List:
+    - Name: click_start
+      Path: Default Work Unit\click_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: click_start
+        ObjectType: 13
+      ID: -1298186826
+      Guid: f6245b32d6eaa94589fa17b66fbb2f8b
     - Name: noise_detection
       Path: Default Work Unit\noise_detection
       PathAndIcons:
@@ -414,12 +486,17 @@ MonoBehaviour:
       Guid: 7507387b65f64947a801fd310080bd1b
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{423FF0F4-4C2C-49B0-BB98-500C1D5DAA9E}'
     m_lastTimePsrt1: 1687144287
     m_lastTimePart2: -1999249979
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Idea4Prototype_WwiseProject
+  - /Idea4Prototype_WwiseProject/Events
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Ambient
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/UI
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

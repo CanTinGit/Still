@@ -6,7 +6,7 @@
 				<SoundBank Name="Test" ID="{40AE69A2-803D-41F7-A8E5-9CD8270E44ED}">
 					<ObjectInclusionList>
 						<ObjectRef Name="crane_release" ID="{4B522D11-770F-4215-B0FF-E432C0FC841E}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="can_impact" ID="{2AC362AC-B55E-43C8-827B-7269BFA7B694}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="object_impact" ID="{2AC362AC-B55E-43C8-827B-7269BFA7B694}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="button_click" ID="{7A5D9E66-BC01-457E-AF86-C4B6CA633B51}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="crane_trigger_release" ID="{CA78AA8A-4A44-46A9-BC8E-839589B392EB}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="crane_pickup" ID="{4CD2CA6A-8BA5-48F5-97AF-A548D0693919}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
@@ -25,12 +25,7 @@
 				</SoundBank>
 				<SoundBank Name="Player" ID="{B03AABBE-8E01-4BD3-B34F-5D96BBC19519}">
 					<ObjectInclusionList>
-						<ObjectRef Name="player_drop" ID="{B719992C-EB37-41DB-8B54-0D98F5B8A306}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="player_accident" ID="{1B0A4275-A777-46B7-985A-92183B693EF0}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="player_jump" ID="{A3CF6051-EEFE-48DC-8209-17BF4B50B088}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="player_lift" ID="{3828903B-B0B8-4A1C-BA90-0EB0D9E3DEBC}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="player_carry" ID="{98561D9A-A415-4D97-948C-35A050D436DC}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="player_catch" ID="{AD56D193-4A1B-4F28-97FF-FE45BCC5A5E7}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Player" ID="{AFD892B1-8234-4D41-BDC9-CF6E337F98A5}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
@@ -38,6 +33,20 @@
 				<SoundBank Name="UI" ID="{6580B298-9F96-460D-B5EB-CD8A6202E0C3}">
 					<ObjectInclusionList>
 						<ObjectRef Name="UI" ID="{30275F0C-5C5D-46E9-9ADF-7B335D0BB1E4}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Opening" ID="{6DFF381D-0494-4CFA-A6EE-6795FD193BAE}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Opening" ID="{D3876D58-9C7F-4891-B127-A4CBAFD49742}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Ambient" ID="{43C1F60D-B8A0-4757-A816-44149F3A4F85}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Ambient" ID="{9B2E00D1-E3A3-4D12-AB69-3AD798500E57}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

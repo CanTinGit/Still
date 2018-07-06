@@ -68,7 +68,7 @@ public class MenuScript : MonoBehaviour
     //on awake we intialise the player settings which is the default values and also set up the singleton
     void Awake()
     {
-       // GameObject.FindWithTag("Timer").GetComponent<Timer>().SetTimer(0, 5, 0, 0);
+
         playerdata = new PlayerData();
         for(int i =0; i < playerSetting.Length;i++)
         {
@@ -87,7 +87,7 @@ public class MenuScript : MonoBehaviour
         maxLevel = playerdata.getCurrentLevel();
         whichPlayerKey = 0;
         hoveringOver = eventSystem.GetComponent<EventSystem>().currentSelectedGameObject;
-        
+
     }
     void Start()
     {
@@ -128,6 +128,7 @@ public class MenuScript : MonoBehaviour
         FlipOptionPanel();
         FlipCharacterPanel();
 
+
     }
     //flips the level panel to the opposite state
     void FlipLevelPanel()
@@ -161,7 +162,8 @@ public class MenuScript : MonoBehaviour
     {
         //flip the character panel on and flip off the menu button
         FlipCharacterPanel();
-        AkSoundEngine.PostEvent("click_select", gameObject);
+        AkSoundEngine.PostEvent("game_start", gameObject);
+        AkSoundEngine.SetRTPCValue("click_start", 0f, null, 1000);
         FlipMenuButtons();
         //Set the navigable buttons to the character screen buttons
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ContinueButton"));
@@ -189,6 +191,8 @@ public class MenuScript : MonoBehaviour
         FlipCharacterPanel();
         FlipMenuButtons();
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
+        AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
 
     }
     //sets up all the buttons based on what is passed in
@@ -226,7 +230,11 @@ public class MenuScript : MonoBehaviour
         //flip the menu buttons off
         FlipMenuButtons();
         AkSoundEngine.PostEvent("click_back", gameObject);
+        AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
+        Debug.Log("Return");
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
+
     }
     //clear the level list
     void EmptyLevelList()
@@ -550,9 +558,21 @@ public class MenuScript : MonoBehaviour
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
         pausePlayerNum = 0;
+        Invoke("DelayMainMenuMusic", 0.5f);
+        gamePaused = false;
+        //flip the level and options panel off so they can not be seen
+        numPlayers = 0;
+
+        //AkSoundEngine.PostEvent("play_intro", gameObject);
+
+
         //Invoke("DelayReturn", 0.05f);
     }
-
+    void DelayMainMenuMusic()
+    {
+        AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
+    }
     void DelayReturn()
     {
         FlipLevelPanel();
@@ -625,7 +645,7 @@ public class MenuScript : MonoBehaviour
 
     //Load scene according to the name of scene
     public void LoadLevel(string sceneName)
-    {     
+    {
         CancelInvoke("CheckToPlayHoverSound");
         eventSystem = null;
         SceneManager.LoadScene(sceneName);
@@ -696,7 +716,7 @@ public class MenuScript : MonoBehaviour
                 eventSystem = GameObject.Find("EventSystem");
                 hoveringOver = eventSystem.GetComponent<EventSystem>().currentSelectedGameObject;
             }
-            InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);          
+            InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
         }
         else if(gamePaused==false)
         {

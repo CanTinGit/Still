@@ -24,7 +24,7 @@ public class AudioTestScript : MonoBehaviour
         {
             velocity = velocity_;
         }
-        
+
     }
     void FindTill()
     {
@@ -48,7 +48,7 @@ public class AudioTestScript : MonoBehaviour
     {
         //getting material name e.g. the property of the object
         ////string materialName = this.GetComponent<SphereCollider>().material.name;
-        string materialName = "MetalObject";
+        string materialName = "wood_object";
         //gets rid of any extra words added on by unity -.- idk why it adds them
         //materialName = materialName.Remove(materialName.IndexOf(" ("));
         //when the object hits the ground ( test for ground now will include more later)
@@ -65,11 +65,11 @@ public class AudioTestScript : MonoBehaviour
             //plays the sound based on the material and the force and the psz group
             GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().PlayAudio(materialName, force, "Impact_Force");
             //the sound being played ( i think??? )
-            //AkSoundEngine.PostEvent("can_impact", gameObject);
-            if (noiseMade > -20 && GameObject.Find("Camera") != null)
+            AkSoundEngine.PostEvent("object_impact", gameObject);
+            if (noiseMade > -20)
             {
                 //use this if you want to make the camera to move to this object ( replace "this.transform.position" with the object you want the camera to look at)
-                GameObject.Find("Camera").GetComponent<CameraAI>().DetectedNoise(this.transform.position);
+                //GameObject.Find("Camera").GetComponent<CameraAI>().DetectedNoise(this.transform.position);
             }
         }
     }
