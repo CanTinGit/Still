@@ -327,17 +327,6 @@
 									</PropertyList>
 									<ReferenceList/>
 								</Action>
-								<Action Name="" ID="{6C86C6CD-B3C0-43FB-A06D-E61A3E298856}" ShortID="894547118">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="click_start" ID="{325B24F6-EAD6-45A9-89FA-17B66FBB2F8B}" WorkUnitID="{E016A5A6-0682-456F-BC10-81BBB135CFD0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{2A231A65-9ACE-4A22-97C2-A7854813124B}" ShortID="565471289">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
@@ -359,6 +348,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="MoonisCheese_GameStart" ID="{8E5BEF19-C6DE-42E6-BB15-F5B1DDD22D07}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B5B3D01E-D8AD-4D01-A4CF-A320E0D6E11D}" ShortID="51360477">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

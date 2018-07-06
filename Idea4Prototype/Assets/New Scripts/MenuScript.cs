@@ -536,7 +536,7 @@ public class MenuScript : MonoBehaviour
         gamePaused = false;
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
-        AkSoundEngine.PostEvent("play_intro", gameObject);
+        //AkSoundEngine.PostEvent("play_intro", gameObject);
         //Invoke("DelayReturn", 0.05f);
     }
 
