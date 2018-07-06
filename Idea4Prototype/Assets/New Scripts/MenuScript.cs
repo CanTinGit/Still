@@ -88,7 +88,7 @@ public class MenuScript : MonoBehaviour
     }
     void Start()
     {
-
+        AkSoundEngine.PostEvent("play_intro", gameObject);
     }
     //intialising variables and setting up gameobjects and how the home screen should look like
     public void IntialiseAndSetScene()
@@ -176,6 +176,8 @@ public class MenuScript : MonoBehaviour
         FlipCharacterPanel();
         FlipMenuButtons();
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
+        AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
 
     }
     //sets up all the buttons based on what is passed in
@@ -213,9 +215,11 @@ public class MenuScript : MonoBehaviour
         //flip the menu buttons off
         FlipMenuButtons();
         AkSoundEngine.PostEvent("click_back", gameObject);
+        AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
         AkSoundEngine.PostEvent("play_intro", gameObject);
         Debug.Log("Return");
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
+
     }
     //clear the level list
     void EmptyLevelList()
@@ -533,13 +537,22 @@ public class MenuScript : MonoBehaviour
     {
         AkSoundEngine.PostEvent("click_back", gameObject);
         SceneManager.LoadScene("MainMenu");
+        Invoke("delaystuff", 0.5f);
         gamePaused = false;
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
+<<<<<<< HEAD
         //AkSoundEngine.PostEvent("play_intro", gameObject);
+=======
+
+>>>>>>> ToFixIainMenu
         //Invoke("DelayReturn", 0.05f);
     }
-
+    void delaystuff()
+    {
+        AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
+    }
     void DelayReturn()
     {
         FlipLevelPanel();
