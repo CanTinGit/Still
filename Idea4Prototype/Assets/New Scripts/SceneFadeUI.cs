@@ -18,7 +18,8 @@ public class SceneFadeUI : MonoBehaviour
             // Return to the main menu resetting number of players to 0
             MenuScript.Instance.LoadLevel("MainMenu");
             MenuScript.Instance.SetNumberofPlayers(-MenuScript.Instance.GetNumberofPlayers());
+            MenuScript.Instance.GameReturnDelayMusic();
+            MenuScript.Instance.ResetGameValues();
         }
     }
-
 }

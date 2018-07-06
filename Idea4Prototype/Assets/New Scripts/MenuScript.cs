@@ -92,6 +92,7 @@ public class MenuScript : MonoBehaviour
     void Start()
     {
         InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
     }
 
     void CheckToPlayHoverSound()
@@ -557,9 +558,8 @@ public class MenuScript : MonoBehaviour
         gamePaused = false;
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
-        pausePlayerNum = 0;
         Invoke("DelayMainMenuMusic", 0.5f);
-        gamePaused = false;
+        ResetGameValues();
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
 
@@ -573,6 +573,11 @@ public class MenuScript : MonoBehaviour
         AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
         AkSoundEngine.PostEvent("play_intro", gameObject);
     }
+
+    public void GameReturnDelayMusic()
+    {
+        Invoke("DelayMainMenuMusic", 0.5f);
+    }
     void DelayReturn()
     {
         FlipLevelPanel();
@@ -583,10 +588,14 @@ public class MenuScript : MonoBehaviour
     public void ResetLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        ResetGameValues();
+    }
+
+    public void ResetGameValues()
+    {
         gamePaused = false;
         pausePlayerNum = 0;
     }
-
     // A fade effect to go to next level
     public void FadeToNextLevel(GameObject pause_)
     {
