@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 969707249
-    m_lastTimePart2: -1999248759
+    m_lastTimePsrt1: -729076390
+    m_lastTimePart2: -1999248607
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -30,7 +30,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -42,7 +42,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: button_click
       Path: Default Work Unit\button_click
       PathAndIcons:
@@ -52,7 +52,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: camera_trigger
       Path: Default Work Unit\Camera\camera_trigger
       PathAndIcons:
@@ -64,17 +64,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 100
-    - Name: can_impact
-      Path: Default Work Unit\can_impact
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: can_impact
-        ObjectType: 3
-      ID: 697519634
-      Guid: ac62c32a5eb5c843827b7269bfa7b694
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: click_back
       Path: Default Work Unit\UI\click_back
       PathAndIcons:
@@ -134,7 +124,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -146,7 +136,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -206,6 +196,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: 849527464
       Guid: 0cefe225d5144446ab17e8d093e262ff
+      maxAttenuation: 0
+    - Name: object_impact
+      Path: Default Work Unit\object_impact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: object_impact
+        ObjectType: 3
+      ID: 538597049
+      Guid: ac62c32a5eb5c843827b7269bfa7b694
       maxAttenuation: 0
     - Name: play_intro
       Path: Default Work Unit\Opening\play_intro
@@ -325,8 +325,8 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
-    m_lastTimePsrt1: 1687124287
-    m_lastTimePart2: -1999249979
+    m_lastTimePsrt1: -729046390
+    m_lastTimePart2: -1999248607
     List:
     - Name: Impact_Force
       Path: Default Work Unit\Impact_Force
@@ -342,7 +342,6 @@ MonoBehaviour:
       - Light
       - Medium
       - None
-      - Very_Light
       ValueIcons:
       - ElementName: Heavy
         ObjectType: 8
@@ -352,15 +351,12 @@ MonoBehaviour:
         ObjectType: 8
       - ElementName: None
         ObjectType: 8
-      - ElementName: Very_Light
-        ObjectType: 8
-      valueIDs: 767bdea223f05c73b08bd2a9db3ba32cc8a7218f
+      valueIDs: 767bdea223f05c73b08bd2a9db3ba32c
       ValueGuids:
       - bytes: df9dd67fa028254fb23e7c95e7f638f4
       - bytes: 52be8bf7dbe479409bf6b2042ad91618
       - bytes: f6fa0ea28cbe0042b767ede20e308839
       - bytes: c7ff68a6d6c161438d27bd3d4826048b
-      - bytes: 4ce501d9a5dbec4180a9150eaa4c3954
     - Name: Material
       Path: Default Work Unit\Material
       PathAndIcons:
@@ -371,14 +367,11 @@ MonoBehaviour:
       ID: -429652670
       Guid: 1fb0041b20a78044b5f388c6fd17f99a
       values:
-      - ice_object
       - metal_object
       - None
       - plastic_object
       - wood_object
       ValueIcons:
-      - ElementName: ice_object
-        ObjectType: 8
       - ElementName: metal_object
         ObjectType: 8
       - ElementName: None
@@ -387,9 +380,8 @@ MonoBehaviour:
         ObjectType: 8
       - ElementName: wood_object
         ObjectType: 8
-      valueIDs: 4c12a75694c8e61bdb3ba32c4bb5b8c7b8ed45de
+      valueIDs: 94c8e61bdb3ba32c4bb5b8c7b8ed45de
       ValueGuids:
-      - bytes: 99da7208607a68498f24e8bdc3807e88
       - bytes: 6e1cd3dfd766ea478f951ab34a192f4f
       - bytes: 93a7cba28b72004dac7588424111fe33
       - bytes: 5c536ebbbde13a499bcda4c52ec7513e
@@ -405,8 +397,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: 1073377249
-    m_lastTimePart2: -1999248759
+    m_lastTimePsrt1: -729006390
+    m_lastTimePart2: -1999248607
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient

@@ -297,11 +297,11 @@
 			<Path>English(US)\Test.bnk</Path>
 			<IncludedEvents>
 				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click" MaxAttenuation="100.000000"/>
-				<Event Id="697519634" Name="can_impact" ObjectPath="\Events\Default Work Unit\can_impact" MaxAttenuation="100.000000"/>
 				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup" MaxAttenuation="100.000000"/>
 				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release" MaxAttenuation="100.000000"/>
 				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup" MaxAttenuation="0.000000"/>
 				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release" MaxAttenuation="0.000000"/>
+				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact" MaxAttenuation="100.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="76802143" Language="SFX">
@@ -332,33 +332,13 @@
 					<ShortName>Wood_Impact_Medium_3.wav</ShortName>
 					<Path>SFX\Wood_Impact_Medium_3_1C9C67B2.wem</Path>
 				</File>
-				<File Id="365189869" Language="SFX">
-					<ShortName>Impact_Can_Heavy_5.wav</ShortName>
-					<Path>SFX\Impact_Can_Heavy_5_5268F563.wem</Path>
-				</File>
-				<File Id="371527114" Language="SFX">
-					<ShortName>Impact_Can_Heavy_4.wav</ShortName>
-					<Path>SFX\Impact_Can_Heavy_4_A43FBA01.wem</Path>
-				</File>
 				<File Id="400306442" Language="SFX">
 					<ShortName>Impact_Can_Very_Light_2.wav</ShortName>
 					<Path>SFX\Impact_Can_Very_Light_2_1C9C67B2.wem</Path>
 				</File>
-				<File Id="401969816" Language="SFX">
-					<ShortName>Impact_Can_Light_3.wav</ShortName>
-					<Path>SFX\Impact_Can_Light_3_1C9C67B2.wem</Path>
-				</File>
-				<File Id="409370185" Language="SFX">
-					<ShortName>Impact_Can_Light_4.wav</ShortName>
-					<Path>SFX\Impact_Can_Light_4_1C9C67B2.wem</Path>
-				</File>
 				<File Id="456681022" Language="SFX">
 					<ShortName>Impact_Can_Heavy_1.wav</ShortName>
 					<Path>SFX\Impact_Can_Heavy_1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="488606189" Language="SFX">
-					<ShortName>Impact_Can_Light_5.wav</ShortName>
-					<Path>SFX\Impact_Can_Light_5_1C9C67B2.wem</Path>
 				</File>
 				<File Id="524659892" Language="SFX">
 					<ShortName>Wood_Impact_Light_2.wav</ShortName>

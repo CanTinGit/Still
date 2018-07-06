@@ -461,84 +461,6 @@
 														<ActiveSource Name="Impact_Can_Heavy_1" ID="{71F7AA49-A4A3-4FF7-9982-D44BB07FA171}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Impact_Can_Heavy_4" ID="{6D4051B1-2120-44F4-BB2E-D5E0FECAB333}" ShortID="1053205705">
-													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ValueList>
-																<Value>-100</Value>
-															</ValueList>
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{17C0A32E-D388-49EF-9FA3-61BD14C57ED8}"/>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>10</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Impact_Can_Heavy_4" ID="{061E9F67-2615-4630-AEAD-C9EAEEA2E8AF}" ShortID="371527114">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.008857432775241"/>
-																<Property Name="FadeInShape" Type="int16" Value="2"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.16752765093861"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>Impact_Can_Heavy_4.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Impact_Can_Heavy_4" ID="{061E9F67-2615-4630-AEAD-C9EAEEA2E8AF}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Impact_Can_Heavy_5" ID="{E3E810E0-5FAC-4C35-896D-11CA6EA90D50}" ShortID="993490741">
-													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{22B5EADC-BB5D-49EC-A6A3-2723BE59E022}">
-																		<PropertyList>
-																			<Property Name="Min" Type="Real64" Value="-200"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Impact_Can_Heavy_5" ID="{54E8E5B6-4563-449B-BB9D-5688F736F7EB}" ShortID="365189869">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="8.82800608828004E-03"/>
-																<Property Name="FadeInShape" Type="int16" Value="2"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.1"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>Impact_Can_Heavy_5.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Impact_Can_Heavy_5" ID="{54E8E5B6-4563-449B-BB9D-5688F736F7EB}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Impact_Can_Medium" ID="{D97169AF-8F67-4135-B520-D20DFE1B1267}" ShortID="93157032">
@@ -587,32 +509,6 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="Impact_Can_Medium" ID="{67DD5B09-CD1C-48A7-87BF-EB310516C130}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Impact_Can_Medium_1" ID="{FFBAB118-5B65-40BD-86C7-ECFE7A9918E6}" ShortID="630326446">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-2</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Impact_Can_Medium_1" ID="{3C09FC0A-8601-447C-A59E-F78271E93EC3}" ShortID="1042311661">
-															<Language>SFX</Language>
-															<AudioFile>Impact_Can_Medium_1.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Impact_Can_Medium_1" ID="{3C09FC0A-8601-447C-A59E-F78271E93EC3}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="Impact_Can_Medium_2" ID="{EFB8D572-BBEA-4129-B101-96FD225FCC28}" ShortID="498140324">
@@ -751,96 +647,85 @@
 														<ActiveSource Name="Impact_Can_Light_1" ID="{BF0DC292-462D-4D5C-B1F2-37ADBA95ECD8}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Impact_Can_Light_3" ID="{00DBFC82-A502-4066-A1CD-1C9CA2B63132}" ShortID="1061985462">
+												<Sound Name="Impact_Can_Medium_1" ID="{FFBAB118-5B65-40BD-86C7-ECFE7A9918E6}" ShortID="630326446">
+													<PropertyList>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
+														<Reference Name="Attenuation">
+															<Custom>
+																<Attenuation Name="Attenuation (Custom)" ID="{D85861C2-CDE5-4AB9-9E7A-08D9583C4DAB}" ShortID="406100534">
+																	<CurveUsageInfoList>
+																		<VolumeDryUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																				<Curve Name="VolumeDry" ID="{2DF9AAB2-155B-467F-84A9-E82A6A9E2D67}">
+																					<PropertyList>
+																						<Property Name="Flags" Type="int32" Value="3"/>
+																					</PropertyList>
+																					<PointList>
+																						<Point>
+																							<XPos>0</XPos>
+																							<YPos>0</YPos>
+																							<Flags>5</Flags>
+																							<SegmentShape>Log2</SegmentShape>
+																						</Point>
+																						<Point>
+																							<XPos>100</XPos>
+																							<YPos>-200</YPos>
+																							<Flags>37</Flags>
+																						</Point>
+																					</PointList>
+																				</Curve>
+																			</CurveUsageInfo>
+																		</VolumeDryUsage>
+																		<VolumeWetGameUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																		</VolumeWetGameUsage>
+																		<VolumeWetUserUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																		</VolumeWetUserUsage>
+																		<LowPassFilterUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</LowPassFilterUsage>
+																		<HighPassFilterUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</HighPassFilterUsage>
+																		<SpreadUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</SpreadUsage>
+																		<FocusUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</FocusUsage>
+																	</CurveUsageInfoList>
+																</Attenuation>
+															</Custom>
+														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+															<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 														</Reference>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Impact_Can_Light_3" ID="{F68BBA69-5FFB-4B97-8CDA-CDE7AAD9987B}" ShortID="401969816">
+														<AudioFileSource Name="Impact_Can_Medium_1" ID="{3C09FC0A-8601-447C-A59E-F78271E93EC3}" ShortID="1042311661">
 															<Language>SFX</Language>
-															<AudioFile>Impact_Can_Light_3.wav</AudioFile>
+															<AudioFile>Impact_Can_Medium_1.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="Impact_Can_Light_3" ID="{F68BBA69-5FFB-4B97-8CDA-CDE7AAD9987B}" Platform="Linked"/>
+														<ActiveSource Name="Impact_Can_Medium_1" ID="{3C09FC0A-8601-447C-A59E-F78271E93EC3}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Impact_Can_Light_4" ID="{16D26AD6-3F88-4D19-B6C4-12F7B4BE8ED6}" ShortID="1012583863">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Impact_Can_Light_4" ID="{C04EE55A-8711-44FF-998F-11C42DFD6276}" ShortID="409370185">
-															<Language>SFX</Language>
-															<AudioFile>Impact_Can_Light_4.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Impact_Can_Light_4" ID="{C04EE55A-8711-44FF-998F-11C42DFD6276}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Impact_Can_Light_5" ID="{18D77109-000A-404A-B5A2-739D5A781F83}" ShortID="974465308">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Impact_Can_Light_5" ID="{6E5FD2E1-B84E-4C0B-B84B-AEF33907C115}" ShortID="488606189">
-															<Language>SFX</Language>
-															<AudioFile>Impact_Can_Light_5.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Impact_Can_Light_5" ID="{6E5FD2E1-B84E-4C0B-B84B-AEF33907C115}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="Impact_Can_Very_Light" ID="{B8A81C0E-B0B9-4BEF-AA1A-2D6463381F84}" ShortID="463659906">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{90CEFB52-1098-4DE0-9917-AB94B8DC411F}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="200"/>
-																	<Property Name="Min" Type="Real64" Value="-200"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Sfx" ID="{9748EF35-E928-4715-ABBE-B26D1BC71559}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
 												<Sound Name="Impact_Can_Very_Light" ID="{A89937AD-1E81-44AB-9C19-056EC9EE1C52}" ShortID="1000917084">
 													<PropertyList>
 														<Property Name="Pitch" Type="int32">
@@ -850,8 +735,58 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 													</PropertyList>
 													<ReferenceList>
+														<Reference Name="Attenuation">
+															<Custom>
+																<Attenuation Name="Attenuation (Custom)" ID="{4FEE5C16-DDAF-41BE-9A91-0F43201A9192}" ShortID="613068036">
+																	<CurveUsageInfoList>
+																		<VolumeDryUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																				<Curve Name="VolumeDry" ID="{13000CB7-B7D0-4754-9358-2D2D809F3689}">
+																					<PropertyList>
+																						<Property Name="Flags" Type="int32" Value="3"/>
+																					</PropertyList>
+																					<PointList>
+																						<Point>
+																							<XPos>0</XPos>
+																							<YPos>0</YPos>
+																							<Flags>5</Flags>
+																							<SegmentShape>Log2</SegmentShape>
+																						</Point>
+																						<Point>
+																							<XPos>100</XPos>
+																							<YPos>-200</YPos>
+																							<Flags>37</Flags>
+																						</Point>
+																					</PointList>
+																				</Curve>
+																			</CurveUsageInfo>
+																		</VolumeDryUsage>
+																		<VolumeWetGameUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																		</VolumeWetGameUsage>
+																		<VolumeWetUserUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																		</VolumeWetUserUsage>
+																		<LowPassFilterUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</LowPassFilterUsage>
+																		<HighPassFilterUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</HighPassFilterUsage>
+																		<SpreadUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</SpreadUsage>
+																		<FocusUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</FocusUsage>
+																	</CurveUsageInfoList>
+																</Attenuation>
+															</Custom>
+														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
 														</Reference>
@@ -878,8 +813,58 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 													</PropertyList>
 													<ReferenceList>
+														<Reference Name="Attenuation">
+															<Custom>
+																<Attenuation Name="Attenuation (Custom)" ID="{17FD589E-17FE-49A5-A0D0-921C36587011}" ShortID="830439393">
+																	<CurveUsageInfoList>
+																		<VolumeDryUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																				<Curve Name="VolumeDry" ID="{15F6B5C6-3E4A-46E1-998C-08975BD85818}">
+																					<PropertyList>
+																						<Property Name="Flags" Type="int32" Value="3"/>
+																					</PropertyList>
+																					<PointList>
+																						<Point>
+																							<XPos>0</XPos>
+																							<YPos>0</YPos>
+																							<Flags>5</Flags>
+																							<SegmentShape>Log2</SegmentShape>
+																						</Point>
+																						<Point>
+																							<XPos>100</XPos>
+																							<YPos>-200</YPos>
+																							<Flags>37</Flags>
+																						</Point>
+																					</PointList>
+																				</Curve>
+																			</CurveUsageInfo>
+																		</VolumeDryUsage>
+																		<VolumeWetGameUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																		</VolumeWetGameUsage>
+																		<VolumeWetUserUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																		</VolumeWetUserUsage>
+																		<LowPassFilterUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</LowPassFilterUsage>
+																		<HighPassFilterUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</HighPassFilterUsage>
+																		<SpreadUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</SpreadUsage>
+																		<FocusUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</FocusUsage>
+																	</CurveUsageInfoList>
+																</Attenuation>
+															</Custom>
+														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
 														</Reference>
@@ -906,8 +891,63 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>5</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
+														<Reference Name="Attenuation">
+															<Custom>
+																<Attenuation Name="Attenuation (Custom)" ID="{98D7E4C3-E204-4177-B019-D763C8B94A93}" ShortID="571704281">
+																	<CurveUsageInfoList>
+																		<VolumeDryUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																				<Curve Name="VolumeDry" ID="{1F979C66-0E91-47FB-A90E-797B75752DFF}">
+																					<PropertyList>
+																						<Property Name="Flags" Type="int32" Value="3"/>
+																					</PropertyList>
+																					<PointList>
+																						<Point>
+																							<XPos>0</XPos>
+																							<YPos>0</YPos>
+																							<Flags>5</Flags>
+																							<SegmentShape>Log2</SegmentShape>
+																						</Point>
+																						<Point>
+																							<XPos>100</XPos>
+																							<YPos>-200</YPos>
+																							<Flags>37</Flags>
+																						</Point>
+																					</PointList>
+																				</Curve>
+																			</CurveUsageInfo>
+																		</VolumeDryUsage>
+																		<VolumeWetGameUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																		</VolumeWetGameUsage>
+																		<VolumeWetUserUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																		</VolumeWetUserUsage>
+																		<LowPassFilterUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</LowPassFilterUsage>
+																		<HighPassFilterUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</HighPassFilterUsage>
+																		<SpreadUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</SpreadUsage>
+																		<FocusUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</FocusUsage>
+																	</CurveUsageInfoList>
+																</Attenuation>
+															</Custom>
+														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
 														</Reference>
@@ -933,9 +973,6 @@
 										<DefaultSwitchRef Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
 										<GroupingBehaviorList>
 											<GroupingBehavior>
-												<ItemRef Name="Impact_Can_Very_Light" ID="{B8A81C0E-B0B9-4BEF-AA1A-2D6463381F84}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
 												<ItemRef Name="Impact_Can_Light" ID="{F2783C68-636B-4B2C-8410-0A49112FE76D}"/>
 											</GroupingBehavior>
 											<GroupingBehavior>
@@ -946,12 +983,6 @@
 											</GroupingBehavior>
 										</GroupingBehaviorList>
 										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="Very_Light" ID="{D901E54C-DBA5-41EC-80A9-150EAA4C3954}"/>
-												<ItemList>
-													<ItemRef Name="Impact_Can_Very_Light" ID="{B8A81C0E-B0B9-4BEF-AA1A-2D6463381F84}"/>
-												</ItemList>
-											</Grouping>
 											<Grouping>
 												<SwitchRef Name="Light" ID="{F78BBE52-E4DB-4079-9BF6-B2042AD91618}"/>
 												<ItemList>
@@ -987,6 +1018,11 @@
 											<PropertyList>
 												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
@@ -1120,6 +1156,11 @@
 													<PropertyList>
 														<Property Name="PositioningType" Type="int16" Value="1"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>12</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -1191,6 +1232,11 @@
 													<PropertyList>
 														<Property Name="PositioningType" Type="int16" Value="1"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>7</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -1262,6 +1308,11 @@
 													<PropertyList>
 														<Property Name="PositioningType" Type="int16" Value="1"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>6</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -1887,6 +1938,11 @@
 													<PropertyList>
 														<Property Name="PositioningType" Type="int16" Value="1"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -1958,6 +2014,11 @@
 													<PropertyList>
 														<Property Name="PositioningType" Type="int16" Value="1"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>6</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -2029,6 +2090,11 @@
 													<PropertyList>
 														<Property Name="PositioningType" Type="int16" Value="1"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -2269,12 +2335,6 @@
 										<SwitchRef Name="wood_object" ID="{6EA2ED91-14EF-47AB-A9AA-9C93BFFB8D58}"/>
 										<ItemList>
 											<ItemRef Name="Wood" ID="{CE024AE4-E3E1-4278-A7AF-AADE931A8BBD}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="ice_object" ID="{0872DA99-7A60-4968-8F24-E8BDC3807E88}"/>
-										<ItemList>
-											<ItemRef Name="Ice" ID="{B82110BA-E03D-4E72-B872-8550E6B05CDC}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>
@@ -3281,7 +3341,7 @@
 										<PointList>
 											<Point>
 												<XPos>-48</XPos>
-												<YPos>-0</YPos>
+												<YPos>0</YPos>
 												<Flags>5</Flags>
 											</Point>
 											<Point>
