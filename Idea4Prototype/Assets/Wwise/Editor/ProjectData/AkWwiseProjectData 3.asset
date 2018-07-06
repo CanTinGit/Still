@@ -1,0 +1,503 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915e4feee9c236c46b967faed71c4350, type: 3}
+  m_Name: AkWwiseProjectData 3
+  m_EditorClassIdentifier: 
+  CurrentPluginConfig: 
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
+    m_lastTimePsrt1: 627093045
+    m_lastTimePart2: -1999248575
+    List:
+    - Name: bubble_rise
+      Path: Default Work Unit\UI\bubble_rise
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: bubble_rise
+        ObjectType: 3
+      ID: -621016007
+      Guid: 284e521010388f41b1aaaf494b9056db
+      maxAttenuation: 0
+    - Name: bubble_shot
+      Path: Default Work Unit\Camera\bubble_shot
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Camera
+        ObjectType: 4
+      - ElementName: bubble_shot
+        ObjectType: 3
+      ID: 1531020610
+      Guid: 326c18d20ee52d45970ebee7b9aacfaf
+      maxAttenuation: 0
+    - Name: button_click
+      Path: Default Work Unit\button_click
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_click
+        ObjectType: 3
+      ID: 814543256
+      Guid: 669e5d7a01bc7e45af86c4b6ca633b51
+      maxAttenuation: 0
+    - Name: camera_trigger
+      Path: Default Work Unit\Camera\camera_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Camera
+        ObjectType: 4
+      - ElementName: camera_trigger
+        ObjectType: 3
+      ID: 1860426137
+      Guid: a0dfc76367cfff468bb2d7269528e08b
+      maxAttenuation: 0
+    - Name: click_back
+      Path: Default Work Unit\UI\click_back
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: click_back
+        ObjectType: 3
+      ID: -1715422637
+      Guid: d99ce3482589494d8c66657f116628f7
+      maxAttenuation: 0
+    - Name: click_negative
+      Path: Default Work Unit\UI\click_negative
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: click_negative
+        ObjectType: 3
+      ID: 2102833423
+      Guid: 718cdd6ea4be3b45969e43f14abce3d1
+      maxAttenuation: 0
+    - Name: click_positive
+      Path: Default Work Unit\UI\click_positive
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: click_positive
+        ObjectType: 3
+      ID: 1769629947
+      Guid: d734b5d4963ba843849e2d4d5518ec88
+      maxAttenuation: 0
+    - Name: click_select
+      Path: Default Work Unit\UI\click_select
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: click_select
+        ObjectType: 3
+      ID: -514624074
+      Guid: 16477be0c79afe4b86800e575cd98c49
+      maxAttenuation: 0
+    - Name: crane_pickup
+      Path: Default Work Unit\Crane\crane_pickup
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crane
+        ObjectType: 4
+      - ElementName: crane_pickup
+        ObjectType: 3
+      ID: 412826751
+      Guid: 6acad24ca58bf54897afa548d0693919
+      maxAttenuation: 0
+    - Name: crane_release
+      Path: Default Work Unit\Crane\crane_release
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crane
+        ObjectType: 4
+      - ElementName: crane_release
+        ObjectType: 3
+      ID: -744631134
+      Guid: 112d524b0f771542b0ffe432c0fc841e
+      maxAttenuation: 0
+    - Name: crane_trigger_pickup
+      Path: Default Work Unit\Triggers\crane_trigger_pickup
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: crane_trigger_pickup
+        ObjectType: 3
+      ID: -735299024
+      Guid: cdbfb73de760ad4c806a01d2c8c94cf9
+      maxAttenuation: 0
+    - Name: crane_trigger_release
+      Path: Default Work Unit\Triggers\crane_trigger_release
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: crane_trigger_release
+        ObjectType: 3
+      ID: -1144550677
+      Guid: 8aaa78ca444aa946bc8e839589b392eb
+      maxAttenuation: 0
+    - Name: game_start
+      Path: Default Work Unit\Opening\game_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 4
+      - ElementName: game_start
+        ObjectType: 3
+      ID: 733168346
+      Guid: 531263253405ab4996fb5b59b7a8c543
+      maxAttenuation: 0
+    - Name: hover
+      Path: Default Work Unit\UI\hover
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: hover
+        ObjectType: 3
+      ID: -541373883
+      Guid: 50f9f9ae29ae5a4bae8fbd632d417c68
+      maxAttenuation: 0
+    - Name: night_ambience
+      Path: Default Work Unit\Ambient\night_ambience
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 4
+      - ElementName: night_ambience
+        ObjectType: 3
+      ID: 849527464
+      Guid: 0cefe225d5144446ab17e8d093e262ff
+      maxAttenuation: 0
+    - Name: object_impact
+      Path: Default Work Unit\object_impact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: object_impact
+        ObjectType: 3
+      ID: 538597049
+      Guid: ac62c32a5eb5c843827b7269bfa7b694
+      maxAttenuation: 0
+    - Name: play_intro
+      Path: Default Work Unit\Opening\play_intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 4
+      - ElementName: play_intro
+        ObjectType: 3
+      ID: -1191494768
+      Guid: 0cadb8f96cf7ed4e995cb9b95c05341c
+      maxAttenuation: 0
+    - Name: player_accident
+      Path: Default Work Unit\Player\player_accident
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_accident
+        ObjectType: 3
+      ID: -89591574
+      Guid: 75420a1b77a7b746985a92183b693ef0
+      maxAttenuation: 0
+    - Name: player_carry
+      Path: Default Work Unit\Player\player_carry
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_carry
+        ObjectType: 3
+      ID: 662165722
+      Guid: 9a1d569815a4974d948c35a050d436dc
+      maxAttenuation: 0
+    - Name: player_catch
+      Path: Default Work Unit\Player\player_catch
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_catch
+        ObjectType: 3
+      ID: 1049036554
+      Guid: 93d156ad1b4a284f97fffe45bcc5a5e7
+      maxAttenuation: 0
+    - Name: player_drop
+      Path: Default Work Unit\Player\player_drop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_drop
+        ObjectType: 3
+      ID: 1922690190
+      Guid: 2c9919b737ebdb418b540d98f5b8a306
+      maxAttenuation: 0
+    - Name: player_jump
+      Path: Default Work Unit\Player\player_jump
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_jump
+        ObjectType: 3
+      ID: 1305133589
+      Guid: 5160cfa3feeedc48820917bf4b50b088
+      maxAttenuation: 0
+    - Name: player_lift
+      Path: Default Work Unit\Player\player_lift
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_lift
+        ObjectType: 3
+      ID: -532829526
+      Guid: 3b902838b8b01c4aba900eb0d9e3debc
+      maxAttenuation: 0
+    - Name: player_throw
+      Path: Default Work Unit\Player\player_throw
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_throw
+        ObjectType: 3
+      ID: 65181031
+      Guid: 9ddef41577381d44b9b7b31bb601332e
+      maxAttenuation: 0
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
+    m_lastTimePsrt1: 629513045
+    m_lastTimePart2: -1999248575
+    List:
+    - Name: Reverb
+      Path: Default Work Unit\Master Audio Bus\Reverb
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Reverb
+        ObjectType: 1
+      ID: 348963605
+      Guid: adc8318d689e2a4a957c4972f96d2159
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
+    m_lastTimePsrt1: 630273045
+    m_lastTimePart2: -1999248575
+    List:
+    - Name: Impact_Force
+      Path: Default Work Unit\Impact_Force
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Impact_Force
+        ObjectType: 9
+      ID: -1355178441
+      Guid: c6941b692515824894137953860bb854
+      values:
+      - Heavy
+      - Light
+      - Medium
+      - None
+      ValueIcons:
+      - ElementName: Heavy
+        ObjectType: 8
+      - ElementName: Light
+        ObjectType: 8
+      - ElementName: Medium
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      valueIDs: 767bdea223f05c73b08bd2a9db3ba32c
+      ValueGuids:
+      - bytes: df9dd67fa028254fb23e7c95e7f638f4
+      - bytes: 52be8bf7dbe479409bf6b2042ad91618
+      - bytes: f6fa0ea28cbe0042b767ede20e308839
+      - bytes: c7ff68a6d6c161438d27bd3d4826048b
+    - Name: Material
+      Path: Default Work Unit\Material
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Material
+        ObjectType: 9
+      ID: -429652670
+      Guid: 1fb0041b20a78044b5f388c6fd17f99a
+      values:
+      - metal_object
+      - None
+      - plastic_object
+      - wood_object
+      ValueIcons:
+      - ElementName: metal_object
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: plastic_object
+        ObjectType: 8
+      - ElementName: wood_object
+        ObjectType: 8
+      valueIDs: 94c8e61bdb3ba32c4bb5b8c7b8ed45de
+      ValueGuids:
+      - bytes: 6e1cd3dfd766ea478f951ab34a192f4f
+      - bytes: 93a7cba28b72004dac7588424111fe33
+      - bytes: 5c536ebbbde13a499bcda4c52ec7513e
+      - bytes: 91eda26eef14ab47a9aa9c93bffb8d58
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
+    m_lastTimePsrt1: -741124508
+    m_lastTimePart2: -1999249997
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
+    m_lastTimePsrt1: 630263045
+    m_lastTimePart2: -1999248575
+    List:
+    - Name: Ambient
+      Path: Default Work Unit\Ambient
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 7
+      ID: 77978275
+      Guid: 0df6c143a0b85747a81644149f3a4f85
+    - Name: Enemy
+      Path: Default Work Unit\Enemy
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 7
+      ID: -1995645809
+      Guid: 167d28cba1cd3646ab2c5eb86708a848
+    - Name: Opening
+      Path: Default Work Unit\Opening
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 7
+      ID: 1831982039
+      Guid: 1d38ff6d9404fa4ca6ee6795fd193bae
+    - Name: Player
+      Path: Default Work Unit\Player
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 7
+      ID: 1069431850
+      Guid: beab3ab0018ed34bb34f5d96bbc19519
+    - Name: Test
+      Path: Default Work Unit\Test
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Test
+        ObjectType: 7
+      ID: -1137964055
+      Guid: a269ae403d80f741a8e59cd8270e44ed
+    - Name: UI
+      Path: Default Work Unit\UI
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 7
+      ID: 1551306167
+      Guid: 98b28065969f0d46b5ebcd8a6202e0c3
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
+    m_lastTimePsrt1: -2035066955
+    m_lastTimePart2: -1999248576
+    List:
+    - Name: click_start
+      Path: Default Work Unit\click_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: click_start
+        ObjectType: 13
+      ID: -1298186826
+      Guid: f6245b32d6eaa94589fa17b66fbb2f8b
+    - Name: noise_detection
+      Path: Default Work Unit\noise_detection
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: noise_detection
+        ObjectType: 13
+      ID: 866473373
+      Guid: 7507387b65f64947a801fd310080bd1b
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{423FF0F4-4C2C-49B0-BB98-500C1D5DAA9E}'
+    m_lastTimePsrt1: -741114508
+    m_lastTimePart2: -1999249997
+    List: []
+  ExpandedItems:
+  - /Idea4Prototype_WwiseProject
+  - /Idea4Prototype_WwiseProject/SoundBanks
+  - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+  autoPopulateEnabled: 1
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  preparePoolSize: 0
+  memoryCutoffThreshold: 0.95
+  callbackManagerBufferSize: 4

@@ -537,18 +537,17 @@ public class MenuScript : MonoBehaviour
     {
         AkSoundEngine.PostEvent("click_back", gameObject);
         SceneManager.LoadScene("MainMenu");
-        Invoke("delaystuff", 0.5f);
+        Invoke("DelayMainMenuMusic", 0.5f);
         gamePaused = false;
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
-<<<<<<< HEAD
-        //AkSoundEngine.PostEvent("play_intro", gameObject);
-=======
 
->>>>>>> ToFixIainMenu
+        //AkSoundEngine.PostEvent("play_intro", gameObject);
+
+
         //Invoke("DelayReturn", 0.05f);
     }
-    void delaystuff()
+    void DelayMainMenuMusic()
     {
         AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
         AkSoundEngine.PostEvent("play_intro", gameObject);

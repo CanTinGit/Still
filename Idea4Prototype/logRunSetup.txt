@@ -1,5 +1,5 @@
 
-LICENSE SYSTEM [2018629 14:30:22] Next license update check is after 2018-06-30T08:58:21
+LICENSE SYSTEM [201876 14:17:38] Next license update check is after 2018-07-07T08:28:05
 
 Built from '2017.1/release' branch; Version is '2017.1.0f3 (472613c02cf7) revision 4662803'; Using compiler version '160040219'
 OS: 'Windows 7 Service Pack 1 (6.1.7601) 64bit' Language: 'en' Physical Memory: 32647 MB
@@ -17,11 +17,15 @@ C:\Users\1301755\Downloads\Still\Idea4Prototype_WwiseIntegrationTemp
 WwiseSetupWizard.RunModify
 Successfully changed project path to: C:\Users\1301755\Downloads\Still\Idea4Prototype_WwiseIntegrationTemp
 C:/Users/1301755/Downloads/Still/Idea4Prototype_WwiseIntegrationTemp
-Loading GUID <-> Path mappings...0.000051 seconds
-Loading Asset Database...0.006954 seconds
+Loading GUID <-> Path mappings...0.000055 seconds
+Loading Asset Database...0.008389 seconds
+Could not extract GUID in text file projectsettings/projectsettings.asset at line 46.
+ 
+(Filename: C:\buildslave\unity\build\Runtime/Serialize/SerializedFile.cpp Line: 908)
+
 Audio: FMOD Profiler initialized on port 54900
-AssetDatabase consistency checks...0.039358 seconds
-Refreshing native plugins compatible for Editor in 39.62 ms, found 2 plugins.
+AssetDatabase consistency checks...0.040105 seconds
+Refreshing native plugins compatible for Editor in 41.57 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2017.1.0f3 (472613c02cf7)
 Forcing GfxDevice: Null
@@ -33,12 +37,12 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity2017.1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity2017.1/Editor/Data/Mono/lib/mono/2.0'
 Mono config path = 'C:/Program Files/Unity2017.1/Editor/Data/Mono/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,defer=y,address=0.0.0.0:56280
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,defer=y,address=0.0.0.0:56296
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\UnityEngine.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\UnityEditor.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\Unity.Locator.dll (this message is harmless)
-Refreshing native plugins compatible for Editor in 1.00 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 0.80 ms, found 5 plugins.
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\I18N.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\I18N.West.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\Unity.DataContract.dll (this message is harmless)
@@ -102,7 +106,7 @@ Register platform support module: C:\Program Files\Unity2017.1\Editor\Data\Playb
 Register platform support module: C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.005572 seconds.
+Registered in 0.005543 seconds.
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\PackageManager\Unity\PackageManager\2017.1.0\Unity.PackageManager.dll (this message is harmless)
 Loading C:\Program Files\Unity2017.1\Editor\Data\PackageManager\Unity\PackageManager\2017.1.0\Unity.PackageManager.dll into Unity Child Domain
 Non platform assembly: C:\Program Files\Unity2017.1\Editor\Data\UnityExtensions\Unity\Advertisements\Editor\UnityEditor.Advertisements.dll (this message is harmless)
@@ -154,8 +158,8 @@ Loading C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\windowsstandalo
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\MacStandaloneSupport\UnityEditor.OSXStandalone.Extensions.dll (this message is harmless)
 Loading C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\MacStandaloneSupport\UnityEditor.OSXStandalone.Extensions.dll into Unity Child Domain
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\ExCSS.Unity.dll (this message is harmless)
-Refreshing native plugins compatible for Editor in 1.17 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 1.42 ms.
+Refreshing native plugins compatible for Editor in 1.31 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 1.46 ms.
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\Mono.Cecil.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\Unity.SerializationLogic.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\UnityScript.dll (this message is harmless)
@@ -165,14 +169,14 @@ Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\Sy
 Non platform assembly: C:\Program Files\Unity2017.1\Editor\Data\UnityExtensions\Unity\UnityVR\Editor\UnityEditor.iOS.Extensions.Xcode.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll (this message is harmless)
 Mono: successfully reloaded assembly
-- Completed reload, in  0.665 seconds
+- Completed reload, in  0.690 seconds
 Registering platform support modules:
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\Boo.Lang.Compiler.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\Boo.Lang.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\Boo.Lang.Parser.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\UnityScript.Lang.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\Mono.Security.dll (this message is harmless)
-Registered platform support modules in: 0.0789317s.
+Registered platform support modules in: 0.0872862s.
 Native extension for OSXStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for LinuxStandalone target not found
@@ -184,8 +188,8 @@ Native extension for iOS target not found
 Native extension for Android target not found
 Begin MonoManager ReloadAssembly
 System.Threading.ThreadAbortException: Thread was being aborted
-  at (wrapper managed-to-native) System.Threading.Monitor:Enter (object)
-  at System.Diagnostics.Process+ProcessAsyncReader.get_WaitHandle () [0x00000] in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Threading.WaitHandle:WaitOne_internal (intptr,int,bool)
+  at System.Threading.WaitHandle.WaitOne (Int32 millisecondsTimeout, Boolean exitContext) [0x00032] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Threading/WaitHandle.cs:353 
   at System.Diagnostics.Process.WaitForExit (Int32 milliseconds) [0x00000] in <filename unknown>:0 
   at System.Diagnostics.Process.WaitForExit () [0x00000] in <filename unknown>:0 
   at (wrapper remoting-invoke-with-check) System.Diagnostics.Process:WaitForExit ()
@@ -211,7 +215,7 @@ Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\Unity.Locato
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\I18N.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\I18N.West.dll (this message is harmless)
 Registering precompiled user dll's ...
-Registered in 0.023884 seconds.
+Registered in 0.025626 seconds.
 Non platform assembly: C:\Users\1301755\Downloads\Still\Idea4Prototype_WwiseIntegrationTemp\Library\ScriptAssemblies\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\1301755\Downloads\Still\Idea4Prototype_WwiseIntegrationTemp\Library\ScriptAssemblies\Assembly-CSharp.dll into Unity Child Domain
 Non platform assembly: C:\Users\1301755\Downloads\Still\Idea4Prototype_WwiseIntegrationTemp\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll (this message is harmless)
@@ -272,8 +276,8 @@ Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\iOSS
 Loading C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll into Unity Child Domain
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\System.Core.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\ExCSS.Unity.dll (this message is harmless)
-Refreshing native plugins compatible for Editor in 0.79 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.14 ms.
+Refreshing native plugins compatible for Editor in 0.94 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\Mono.Cecil.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\Unity.SerializationLogic.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\Unity.DataContract.dll (this message is harmless)
@@ -284,7 +288,7 @@ Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\Sy
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Managed\Unity.IvyParser.dll (this message is harmless)
 Mono: successfully reloaded assembly
 Unable to find bridge dll in registry for Microsoft Visual Studio Tools for Unity for C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\..\IDE\devenv.exe
-- Completed reload, in  0.640 seconds
+- Completed reload, in  0.683 seconds
 Initializing Unity.PackageManager (PackageManager) v2017.1.0 for Unity v2017.1.0f3
 Setting Android:Android v2017.1.0 for Unity v2017.1.0f3 to C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\AndroidPlayer
 Setting Unknown:MetroPlayer v2017.1.0 for Unity v2017.1.0f3 to C:\Program Files\Unity2017.1\Editor\Data\PlaybackEngines\iOSSupport
@@ -331,20 +335,20 @@ Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\Bo
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\Boo.Lang.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\Boo.Lang.Parser.dll (this message is harmless)
 Platform assembly: C:\Program Files\Unity2017.1\Editor\Data\Mono\lib\mono\2.0\UnityScript.Lang.dll (this message is harmless)
-Registered platform support modules in: 0.0440022s.
+Registered platform support modules in: 0.044572s.
 Native extension for OSXStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for LinuxStandalone target not found
 Native extension for WebGL target not found
 Native extension for iOS target not found
 Native extension for Android target not found
-Validating Project structure ... 0.007630 seconds.
+Validating Project structure ... 0.008405 seconds.
 Refresh: detecting if any assets need to be imported or removed ... 
-Hashing assets ... 0.374 seconds
-  file open: 0.118 seconds (1110 files)
-  file read: 0.055 seconds (119.272 MB)
-  hash: 0.194 seconds
------ Compute hash(es) for 555 asset(s).
+Hashing assets ... 0.420 seconds
+  file open: 0.133 seconds (1188 files)
+  file read: 0.067 seconds (124.359 MB)
+  hash: 0.215 seconds
+----- Compute hash(es) for 594 asset(s).
 ----- Asset named Assets/ArcRenderLine.cs is skipped as no actual change.
 ----- Asset named Assets/ArcRenderMesh.cs is skipped as no actual change.
 ----- Asset named Assets/Art/Animation/Ball_platform_EXP.controller is skipped as no actual change.
@@ -393,6 +397,9 @@ Hashing assets ... 0.374 seconds
 ----- Asset named Assets/Art/Font/ROCKBI.TTF is skipped as no actual change.
 ----- Asset named Assets/Art/Font/ROCKEB.TTF is skipped as no actual change.
 ----- Asset named Assets/Art/Font/ROCKI.TTF is skipped as no actual change.
+----- Asset named Assets/Art/Play.png is skipped as no actual change.
+----- Asset named Assets/Art/Sketch.png is skipped as no actual change.
+----- Asset named Assets/Art/Splash Screen.png is skipped as no actual change.
 ----- Asset named Assets/Art/UI/LevelSelectUI/Level 1.png is skipped as no actual change.
 ----- Asset named Assets/Art/UI/LevelSelectUI/Level 2.png is skipped as no actual change.
 ----- Asset named Assets/Art/UI/LevelSelectUI/Level Select_Background.png is skipped as no actual change.
@@ -431,17 +438,22 @@ Hashing assets ... 0.374 seconds
 ----- Asset named Assets/Art/star01.png is skipped as no actual change.
 ----- Asset named Assets/Art/star02.png is skipped as no actual change.
 ----- Asset named Assets/Art/star03.png is skipped as no actual change.
+----- Asset named Assets/CheckVelocity.cs is skipped as no actual change.
 ----- Asset named Assets/ControllerTester.cs is skipped as no actual change.
+----- Asset named Assets/DestroyCollider.cs is skipped as no actual change.
 ----- Asset named Assets/LevelDisplay.cs is skipped as no actual change.
 ----- Asset named Assets/Materials/Black.mat is skipped as no actual change.
 ----- Asset named Assets/Materials/Bridge.mat is skipped as no actual change.
 ----- Asset named Assets/Materials/Character.mat is skipped as no actual change.
 ----- Asset named Assets/Materials/Cube.mat is skipped as no actual change.
+----- Asset named Assets/Materials/Cube.physicMaterial is skipped as no actual change.
 ----- Asset named Assets/Materials/Door.mat is skipped as no actual change.
+----- Asset named Assets/Materials/Glass_Mat.mat is skipped as no actual change.
 ----- Asset named Assets/Materials/Goal.mat is skipped as no actual change.
 ----- Asset named Assets/Materials/MetalObject.physicMaterial is skipped as no actual change.
 ----- Asset named Assets/Materials/Purple.mat is skipped as no actual change.
 ----- Asset named Assets/Materials/Sticker.mat is skipped as no actual change.
+----- Asset named Assets/Materials/Temp_blackboard.mat is skipped as no actual change.
 ----- Asset named Assets/Materials/ThrowLine.mat is skipped as no actual change.
 ----- Asset named Assets/Materials/Traps.mat is skipped as no actual change.
 ----- Asset named Assets/Materials/Wall.mat is skipped as no actual change.
@@ -450,7 +462,18 @@ Hashing assets ... 0.374 seconds
 ----- Asset named Assets/Models/Assets/Assets/Crane_EXP.fbx is skipped as no actual change.
 ----- Asset named Assets/Models/Assets/Ball_platform_EXP.fbx is skipped as no actual change.
 ----- Asset named Assets/Models/Materials/lambert1.mat is skipped as no actual change.
+----- Asset named Assets/Models/Tutorial_Level/Materials/bb_TEX.mat is skipped as no actual change.
+----- Asset named Assets/Models/Tutorial_Level/bBoard_EXP.fbx is skipped as no actual change.
+----- Asset named Assets/Models/Tutorial_Level/g_dispenser.fbx is skipped as no actual change.
+----- Asset named Assets/Models/Tutorial_Level/g_playSpace.fbx is skipped as no actual change.
+----- Asset named Assets/Models/Tutorial_Level/m_seesaw.fbx is skipped as no actual change.
+----- Asset named Assets/Models/Tutorial_Level/m_weight.fbx is skipped as no actual change.
+----- Asset named Assets/Models/Tutorial_Level/m_woodCube.fbx is skipped as no actual change.
+----- Asset named Assets/Models/Tutorial_Level/skip_EXP.fbx is skipped as no actual change.
+----- Asset named Assets/Models/Tutorial_Level/slate_EXP.fbm/bb_TEX.png is skipped as no actual change.
+----- Asset named Assets/Models/Tutorial_Level/slate_EXP.fbx is skipped as no actual change.
 ----- Asset named Assets/Models/wedge_EXP.fbx is skipped as no actual change.
+----- Asset named Assets/New Prefabs/Ball_Bearing_Pickup.prefab is skipped as no actual change.
 ----- Asset named Assets/New Prefabs/Bullet.prefab is skipped as no actual change.
 ----- Asset named Assets/New Prefabs/Camera.prefab is skipped as no actual change.
 ----- Asset named Assets/New Prefabs/CameraSpotPoint.prefab is skipped as no actual change.
@@ -466,11 +489,13 @@ Hashing assets ... 0.374 seconds
 ----- Asset named Assets/New Prefabs/SpawnerManager.prefab is skipped as no actual change.
 ----- Asset named Assets/New Prefabs/SpawnerObject.prefab is skipped as no actual change.
 ----- Asset named Assets/New Prefabs/UI.prefab is skipped as no actual change.
+----- Asset named Assets/New Prefabs/m_PickupWeight.prefab is skipped as no actual change.
 ----- Asset named Assets/New Scene.unity is skipped as no actual change.
 ----- Asset named Assets/New Scripts/ActiveInScene.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/AudioClass.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/AudioTestScript.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/BallDetection.cs is skipped as no actual change.
+----- Asset named Assets/New Scripts/Breakable.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/Bullet.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/ButtonReleased.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/ButtonScript.cs is skipped as no actual change.
@@ -483,6 +508,7 @@ Hashing assets ... 0.374 seconds
 ----- Asset named Assets/New Scripts/CraneGrab.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/GoalRuleCode.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/InBubble.cs is skipped as no actual change.
+----- Asset named Assets/New Scripts/LevelEditor/ArrowResize.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/LevelEditor/FileManager.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/LevelEditor/LevelBuilder.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/LevelSaveStructure.cs is skipped as no actual change.
@@ -507,15 +533,22 @@ Hashing assets ... 0.374 seconds
 ----- Asset named Assets/New Scripts/StartGame.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/Timer.cs is skipped as no actual change.
 ----- Asset named Assets/New Scripts/weightTrigger.cs is skipped as no actual change.
+----- Asset named Assets/OverloadButtonPressed.cs is skipped as no actual change.
 ----- Asset named Assets/Prefabs/Camera.prefab is skipped as no actual change.
 ----- Asset named Assets/Prefabs/DoorParent.prefab is skipped as no actual change.
 ----- Asset named Assets/Prefabs/EdgeWall.prefab is skipped as no actual change.
 ----- Asset named Assets/Prefabs/HingeDoor.prefab is skipped as no actual change.
 ----- Asset named Assets/Prefabs/Player.prefab is skipped as no actual change.
 ----- Asset named Assets/Prefabs/PressedButton.prefab is skipped as no actual change.
+----- Asset named Assets/RampTrigger.cs is skipped as no actual change.
+----- Asset named Assets/Resources/LevelBuilder/AxisArrows.fbx is skipped as no actual change.
 ----- Asset named Assets/Resources/LevelBuilder/ErrorMessage.prefab is skipped as no actual change.
 ----- Asset named Assets/Resources/LevelBuilder/ItemListImages/Cube.png is skipped as no actual change.
 ----- Asset named Assets/Resources/LevelBuilder/ItemListImages/Plank.png is skipped as no actual change.
+----- Asset named Assets/Resources/LevelBuilder/Materials/Blue.mat is skipped as no actual change.
+----- Asset named Assets/Resources/LevelBuilder/Materials/Green.mat is skipped as no actual change.
+----- Asset named Assets/Resources/LevelBuilder/Materials/Red.mat is skipped as no actual change.
+----- Asset named Assets/Resources/LevelBuilder/Materials/lambert1.mat is skipped as no actual change.
 ----- Asset named Assets/Resources/LevelBuilder/ObjectButton.prefab is skipped as no actual change.
 ----- Asset named Assets/Resources/LevelBuilder/Objects/Cube.prefab is skipped as no actual change.
 ----- Asset named Assets/Resources/LevelBuilder/Objects/Plank.prefab is skipped as no actual change.
@@ -524,6 +557,13 @@ Hashing assets ... 0.374 seconds
 ----- Asset named Assets/Resources/LevelButton.prefab is skipped as no actual change.
 ----- Asset named Assets/Resources/Prefabs/Timer.prefab is skipped as no actual change.
 ----- Asset named Assets/Resources/TrapDisabled.mat is skipped as no actual change.
+----- Asset named Assets/Resources/UI/ControllerButtons/JoystickButton0.png is skipped as no actual change.
+----- Asset named Assets/Resources/UI/ControllerButtons/JoystickButton1.png is skipped as no actual change.
+----- Asset named Assets/Resources/UI/ControllerButtons/JoystickButton2.png is skipped as no actual change.
+----- Asset named Assets/Resources/UI/ControllerButtons/L Alt.png is skipped as no actual change.
+----- Asset named Assets/Resources/UI/ControllerButtons/Y.png is skipped as no actual change.
+----- Asset named Assets/Resources/UI/ControllerButtons/stick_L.png is skipped as no actual change.
+----- Asset named Assets/Resources/UI/ControllerButtons/y_button.png is skipped as no actual change.
 ----- Asset named Assets/Resources/UI/MenuSelectUI/1.png is skipped as no actual change.
 ----- Asset named Assets/Resources/UI/MenuSelectUI/2.png is skipped as no actual change.
 ----- Asset named Assets/Resources/UI/MenuSelectUI/3.png is skipped as no actual change.
@@ -819,6 +859,7 @@ Hashing assets ... 0.374 seconds
 ----- Asset named Assets/Wwise/Documentation/AppleCommon/ja/WwiseUnityIntegrationHelp_ja.zip is skipped as no actual change.
 ----- Asset named Assets/Wwise/Documentation/Windows/en/WwiseUnityIntegrationHelp_en.chm is skipped as no actual change.
 ----- Asset named Assets/Wwise/Documentation/Windows/ja/WwiseUnityIntegrationHelp_ja.chm is skipped as no actual change.
+----- Asset named Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset is skipped as no actual change.
 ----- Asset named Assets/Wwise/Editor/WwiseComponents/AkAmbientInspector.cs is skipped as no actual change.
 ----- Asset named Assets/Wwise/Editor/WwiseComponents/AkAudioListenerInspector.cs is skipped as no actual change.
 ----- Asset named Assets/Wwise/Editor/WwiseComponents/AkBankInspector.cs is skipped as no actual change.
@@ -899,249 +940,308 @@ Hashing assets ... 0.374 seconds
 ----- Asset named Assets/Wwise/Version.txt is skipped as no actual change.
 ----- Asset named Assets/template.cs is skipped as no actual change.
 
-Refresh: elapses 0.835420 seconds
+Refresh: elapses 0.922503 seconds
 Updating ProjectSettings/InputManager.asset - GUID: 00000000000000002000000000000000...
- done. [Time: 46.655893 ms] 
+ done. [Time: 45.352031 ms] 
 Updating ProjectSettings/TagManager.asset - GUID: 00000000000000003000000000000000...
- done. [Time: 4.871769 ms] 
+ done. [Time: 3.654267 ms] 
 Updating ProjectSettings/ProjectSettings.asset - GUID: 00000000000000004000000000000000...
- done. [Time: 5.134978 ms] 
+Could not extract GUID in text file projectsettings/projectsettings.asset at line 46.
+ 
+(Filename: C:\buildslave\unity\build\Runtime/Serialize/SerializedFile.cpp Line: 908)
+
+ done. [Time: 5.883424 ms] 
 Updating ProjectSettings/NavMeshAreas.asset - GUID: 00000000000000004100000000000000...
- done. [Time: 3.658184 ms] 
+ done. [Time: 3.944517 ms] 
 Updating Library/BuildPlayer.prefs - GUID: 00000000000000005000000000000000...
- done. [Time: 4.415661 ms] 
+ done. [Time: 4.678555 ms] 
 Updating ProjectSettings/Physics2DSettings.asset - GUID: 00000000000000005100000000000000...
- done. [Time: 4.420468 ms] 
+ done. [Time: 4.683062 ms] 
 Updating ProjectSettings/AudioManager.asset - GUID: 00000000000000006000000000000000...
 Audio: FMOD Profiler initialized on port 54900
- done. [Time: 51.645747 ms] 
+ done. [Time: 42.944097 ms] 
 Updating ProjectSettings/GraphicsSettings.asset - GUID: 00000000000000006100000000000000...
- done. [Time: 3.437941 ms] 
+ done. [Time: 3.437030 ms] 
 Updating ProjectSettings/TimeManager.asset - GUID: 00000000000000007000000000000000...
- done. [Time: 3.073175 ms] 
+ done. [Time: 3.534982 ms] 
 Updating ProjectSettings/ClusterInputManager.asset - GUID: 00000000000000007100000000000000...
- done. [Time: 3.074977 ms] 
+ done. [Time: 3.970056 ms] 
 Updating ProjectSettings/DynamicsManager.asset - GUID: 00000000000000008000000000000000...
- done. [Time: 3.487218 ms] 
+ done. [Time: 3.655468 ms] 
 Updating ProjectSettings/QualitySettings.asset - GUID: 00000000000000009000000000000000...
- done. [Time: 5.471501 ms] 
+ done. [Time: 4.081830 ms] 
 Updating ProjectSettings/NetworkManager.asset - GUID: 0000000000000000a000000000000000...
- done. [Time: 11.694771 ms] 
+ done. [Time: 11.781270 ms] 
 Updating ProjectSettings/UnityConnectSettings.asset - GUID: 0000000000000000a100000000000000...
- done. [Time: 4.197522 ms] 
+ done. [Time: 3.670191 ms] 
 Updating ProjectSettings/EditorBuildSettings.asset - GUID: 0000000000000000b000000000000000...
- done. [Time: 3.930407 ms] 
+ done. [Time: 3.514249 ms] 
 Updating ProjectSettings/EditorSettings.asset - GUID: 0000000000000000c000000000000000...
- done. [Time: 3.618221 ms] 
+ done. [Time: 4.319799 ms] 
 Updating Assets/Scene - GUID: 0e9a27bd7cf2cc142911853e938034d1...
- done. [Time: 4.406046 ms] 
+ done. [Time: 4.167462 ms] 
 Updating Assets/Models - GUID: 19f09e3df1a1a1347a1c05ac005a4e9b...
- done. [Time: 4.693592 ms] 
+ done. [Time: 4.217640 ms] 
 Updating Assets/Art - GUID: 3e62550e49e8a804e8b973fd6976313c...
- done. [Time: 4.310197 ms] 
+ done. [Time: 4.124796 ms] 
 Updating Assets/Wwise - GUID: 557ffe763f6add64492edb2ada29ea57...
- done. [Time: 4.439397 ms] 
+ done. [Time: 4.921632 ms] 
 Updating Assets/StreamingAssets - GUID: 6cc1a14a2fe74b0419b300313ab6a969...
- done. [Time: 4.962210 ms] 
+ done. [Time: 4.076121 ms] 
 Updating Assets/Materials - GUID: 7b202090f69d96f4cb982f23aab5a869...
- done. [Time: 4.593236 ms] 
+ done. [Time: 3.973061 ms] 
 Updating Assets/Scripts - GUID: a408ccd87f1cf99499a702bb219b9923...
- done. [Time: 4.365483 ms] 
+ done. [Time: 4.785521 ms] 
 Updating Assets/New Prefabs - GUID: b2d6e8ed910301848b4dfd7c3441bede...
- done. [Time: 5.255766 ms] 
+ done. [Time: 4.643100 ms] 
 Updating Assets/New Scripts - GUID: c4e4e1dbfd24e50468128423976f2ae0...
- done. [Time: 4.565594 ms] 
+ done. [Time: 4.447797 ms] 
 Updating Assets/Prefabs - GUID: cabacd94c9fb6da4a930df2634bd95ad...
- done. [Time: 4.298178 ms] 
+ done. [Time: 4.703193 ms] 
 Updating Assets/Resources - GUID: cff9a31d98290504b8a233ef85b2b5a5...
- done. [Time: 4.442703 ms] 
+ done. [Time: 4.757277 ms] 
 Updating Assets/Models/Assets - GUID: 056906a43f2b2a94495188ab39a34b4b...
- done. [Time: 5.154509 ms] 
+ done. [Time: 4.047576 ms] 
 Updating Assets/Wwise/Documentation - GUID: 2319d5d25bdd1de4285ea52b5db56e07...
- done. [Time: 4.469144 ms] 
+ done. [Time: 4.253997 ms] 
 Updating Assets/Wwise/Gizmos - GUID: 2786c36e3cc70be42b092527dbcbfb42...
- done. [Time: 4.584222 ms] 
+ done. [Time: 5.237121 ms] 
 Updating Assets/Resources/UI - GUID: 2bf536f83f0a06646b6d0d692d9b98c9...
- done. [Time: 5.089307 ms] 
+ done. [Time: 4.182486 ms] 
 Updating Assets/Art/Font - GUID: 304c435c44cfc0f478640ffb6de67292...
- done. [Time: 4.567697 ms] 
+ done. [Time: 4.061999 ms] 
+Updating Assets/Models/Tutorial_Level - GUID: 59b45c32f823b9f4296f2ca7fc0989e6...
+ done. [Time: 4.838703 ms] 
 Updating Assets/Models/Materials - GUID: 5d03665181af1b145ba7378e19b2c5ac...
- done. [Time: 4.729949 ms] 
+ done. [Time: 4.482651 ms] 
 Updating Assets/StreamingAssets/LevelBuilder - GUID: 7f2356dcb1ccfd04f8406fcc2bd36aa7...
- done. [Time: 5.332084 ms] 
+ done. [Time: 4.245584 ms] 
 Updating Assets/StreamingAssets/Audio - GUID: 7f858421f8818fd41bf1da088cb026a6...
- done. [Time: 4.725742 ms] 
+ done. [Time: 4.507289 ms] 
 Updating Assets/Wwise/Deployment - GUID: 98f5da5f1e94f97428dbd7d9c20d9193...
- done. [Time: 4.388919 ms] 
+ done. [Time: 5.533982 ms] 
 Updating Assets/New Scripts/LevelEditor - GUID: a19acdf935d0bd9408b6d935412fbbbb...
- done. [Time: 5.541510 ms] 
+ done. [Time: 4.371479 ms] 
 Updating Assets/Wwise/Tools - GUID: a7f59cd195022dd49bee11adb684d8b8...
- done. [Time: 4.490777 ms] 
+ done. [Time: 4.285546 ms] 
 Updating Assets/New Scripts/Shader - GUID: ab8e9e9f7d7689748ab3c7d7d7f84cce...
- done. [Time: 4.716728 ms] 
+ done. [Time: 5.262360 ms] 
 Updating Assets/Resources/LevelBuilder - GUID: abb75f7c3bd17094ea9e191b5bfea4fd...
- done. [Time: 5.017496 ms] 
+ done. [Time: 4.062600 ms] 
 Updating Assets/Resources/Prefabs - GUID: b4016cdd49493fb46a2bcf1b49792176...
- done. [Time: 4.671358 ms] 
+ done. [Time: 4.189697 ms] 
 Updating Assets/Wwise/Editor - GUID: d05209ec448e06048895ca479e725570...
- done. [Time: 4.693292 ms] 
+ done. [Time: 4.411140 ms] 
 Updating Assets/Art/Animation - GUID: d8c412cf18f77604f8f9a89eda0c5b43...
- done. [Time: 5.628645 ms] 
+ done. [Time: 4.583608 ms] 
 Updating Assets/Art/UI - GUID: ef2c6eeb788701d49ab00eabfd263f54...
- done. [Time: 4.662344 ms] 
+ done. [Time: 4.027145 ms] 
 Updating Assets/Wwise/Extensions - GUID: f8d1333c1ead36642bf7b70917a23ae6...
- done. [Time: 4.394628 ms] 
+ done. [Time: 4.155444 ms] 
 Updating Assets/Wwise/Deployment/Plugins - GUID: 027a59266367e4e4d9eb6b9cc8658ebe...
- done. [Time: 4.958304 ms] 
+ done. [Time: 4.928843 ms] 
 Updating Assets/Wwise/Editor/WwiseTypes - GUID: 0a7fd859e5e00ce42b19c8d2d6aef59e...
- done. [Time: 4.769611 ms] 
+ done. [Time: 4.332418 ms] 
 Updating Assets/Wwise/Deployment/Components - GUID: 13d096fc98b506f49be1983fb36f6dcc...
- done. [Time: 4.585124 ms] 
+ done. [Time: 4.314390 ms] 
 Updating Assets/StreamingAssets/LevelBuilder/Saves - GUID: 1e07ed339029eff4295aff4a318f03c8...
- done. [Time: 4.571603 ms] 
+ done. [Time: 4.960993 ms] 
+Updating Assets/Models/Tutorial_Level/Materials - GUID: 22bcb6bc9c3758844873b662a978d9e8...
+ done. [Time: 4.756075 ms] 
+Updating Assets/Models/Tutorial_Level/slate_EXP.fbm - GUID: 2554ffdb2db7f7c4994075c2de90660d...
+ done. [Time: 4.470332 ms] 
 Updating Assets/Resources/LevelBuilder/Objects - GUID: 304a8a6d78b306e428ff4b1c19831e11...
- done. [Time: 5.252761 ms] 
+ done. [Time: 4.407234 ms] 
+Updating Assets/Resources/UI/ControllerButtons - GUID: 3cbdeeb3edc2d224f91b120ead883e77...
+ done. [Time: 5.509944 ms] 
 Updating Assets/Wwise/Editor/WwiseWindows - GUID: 3d73552420221914da15b6ed1c66064f...
- done. [Time: 3.958650 ms] 
+ done. [Time: 4.408436 ms] 
+Updating Assets/Resources/LevelBuilder/Materials - GUID: 3f4b3fd610a61354eb6111cf2d1de1d7...
+ done. [Time: 4.142524 ms] 
 Updating Assets/StreamingAssets/Audio/GeneratedSoundBanks - GUID: 5980735c1d833b640bb45ed54f11c8d1...
- done. [Time: 4.128414 ms] 
+ done. [Time: 5.216690 ms] 
 Updating Assets/Art/UI/MenuSelectUI - GUID: 620c8a7f2cde3084780b9443f219890a...
- done. [Time: 5.773470 ms] 
+ done. [Time: 4.587514 ms] 
 Updating Assets/Wwise/Editor/ProjectData - GUID: 67c40e13107e9094788b4653e35e9665...
- done. [Time: 4.498289 ms] 
+ done. [Time: 4.322803 ms] 
 Updating Assets/Wwise/Documentation/AppleCommon - GUID: 6beea4c8848f6ea47b50b1023fddff68...
- done. [Time: 3.826145 ms] 
+ done. [Time: 5.583258 ms] 
 Updating Assets/Wwise/Editor/WwiseComponents - GUID: 7e9f6ed80bc4b90408ed16fea8a85a4b...
- done. [Time: 4.754587 ms] 
+ done. [Time: 4.354052 ms] 
 Updating Assets/Resources/LevelBuilder/ItemListImages - GUID: 8a6c7fd7c3622b847801f6e58137f78e...
- done. [Time: 4.122405 ms] 
+ done. [Time: 4.269020 ms] 
 Updating Assets/Wwise/Deployment/API - GUID: 8bd9c62c4686c934d84b523631e4121b...
- done. [Time: 3.862501 ms] 
+ done. [Time: 5.238624 ms] 
 Updating Assets/Resources/UI/MenuSelectUI - GUID: 8cf54472dc8fda04eb54922f932cae45...
- done. [Time: 3.876323 ms] 
+ done. [Time: 4.771699 ms] 
 Updating Assets/Wwise/Editor/WwiseMenu - GUID: 980b04b7b1b3c0d4dbc0b369de2243b7...
- done. [Time: 4.753686 ms] 
+ done. [Time: 4.471233 ms] 
 Updating Assets/Models/Assets/Assets - GUID: 9afd3731368b2ae45921d7c9491808e3...
- done. [Time: 4.231775 ms] 
+ done. [Time: 4.409338 ms] 
 Updating Assets/Wwise/Editor/WwiseSetupWizard - GUID: fa39563a46c08ac44873ad2ac7b736d6...
- done. [Time: 3.915684 ms] 
+ done. [Time: 5.116935 ms] 
 Updating Assets/Wwise/Documentation/Windows - GUID: fbdbba22507a8db42aa56e8cbc5ee209...
- done. [Time: 4.465538 ms] 
+ done. [Time: 4.274128 ms] 
 Updating Assets/Art/UI/LevelSelectUI - GUID: fd7f32f9d3302984c91e6308e05d020b...
- done. [Time: 5.495538 ms] 
+ done. [Time: 4.332118 ms] 
 Updating Assets/Wwise/Editor/WwiseMenu/Windows - GUID: 1c4dc11139bad3548b51ae6e5ebe831b...
- done. [Time: 5.188161 ms] 
+ done. [Time: 5.205572 ms] 
 Updating Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows - GUID: 3bf50d5300d78f84eaac18339d583d8e...
- done. [Time: 4.988951 ms] 
+ done. [Time: 4.466126 ms] 
 Updating Assets/Wwise/Documentation/AppleCommon/en - GUID: 46a0654dc7d1cc24a9f89f4c8ba76e5a...
- done. [Time: 5.473905 ms] 
+ done. [Time: 4.080928 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac - GUID: 6a3b83ea58a0d3948afd935ffa2b700a...
- done. [Time: 4.646119 ms] 
+ done. [Time: 4.959491 ms] 
 Updating Assets/Wwise/Deployment/API/Handwritten - GUID: 969915b6ecd2f4d47912612c9fddde6e...
- done. [Time: 4.637405 ms] 
+ done. [Time: 4.724226 ms] 
 Updating Assets/Wwise/Deployment/API/Generated - GUID: 98bbed0597b3d6a439f01c5309c86d25...
- done. [Time: 5.061965 ms] 
+ done. [Time: 4.534331 ms] 
 Updating Assets/Wwise/Documentation/Windows/en - GUID: ab5aba0d8cc379d4ca731e11f835a7a5...
- done. [Time: 4.483566 ms] 
+ done. [Time: 4.890984 ms] 
 Updating Assets/Wwise/Editor/WwiseWindows/TreeViewControl - GUID: b021533b7b3414f4d8d12b7a2bac79ca...
- done. [Time: 4.346553 ms] 
+ done. [Time: 5.248539 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows - GUID: b82fed6e1389ec144a89dbd10a81ea8b...
- done. [Time: 5.156311 ms] 
+ done. [Time: 4.589016 ms] 
 Updating Assets/Wwise/Editor/WwiseMenu/Common - GUID: b93088eec9395524db4c6f4da2fbc7ed...
- done. [Time: 4.487472 ms] 
+ done. [Time: 4.834797 ms] 
 Updating Assets/Wwise/Documentation/AppleCommon/ja - GUID: ba08a2e35ee96a64ab3ed384990c6163...
- done. [Time: 4.400637 ms] 
+ done. [Time: 5.031903 ms] 
 Updating Assets/StreamingAssets/Audio/GeneratedSoundBanks/Mac - GUID: cc6db44f4ea9f4540b0436cd3ac9a260...
- done. [Time: 5.006078 ms] 
+ done. [Time: 4.953782 ms] 
 Updating Assets/Wwise/Editor/WwiseMenu/Mac - GUID: d63d57cd1bf7bf5468a95d944414ab5e...
- done. [Time: 4.640710 ms] 
+ done. [Time: 5.349495 ms] 
 Updating Assets/Wwise/Documentation/Windows/ja - GUID: f55faebac521d644bb5a4d8d348b3172...
- done. [Time: 4.545763 ms] 
+ done. [Time: 7.048330 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86 - GUID: 0a171dfbb28acad4dbca9730b6697bdc...
- done. [Time: 4.536148 ms] 
+ done. [Time: 4.349845 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Debug - GUID: 2e070e96ce96d3342a3820b94b70ed8b...
- done. [Time: 5.851291 ms] 
+ done. [Time: 5.037612 ms] 
 Updating Assets/Wwise/Deployment/API/Generated/Windows - GUID: 31875f449019fd7478b8841c490b59c1...
- done. [Time: 4.569800 ms] 
+ done. [Time: 4.832093 ms] 
 Updating Assets/Wwise/Deployment/API/Generated/Common - GUID: 4d0e5b66eba1bf840a39027b3a77461c...
- done. [Time: 4.754587 ms] 
+ done. [Time: 4.878064 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Profile - GUID: 5baccb1527ee6264d978711e9bba6dec...
- done. [Time: 4.875976 ms] 
+ done. [Time: 5.283093 ms] 
 Updating Assets/Wwise/Deployment/API/Generated/Mac - GUID: 7ac66f00bc3c7cf4f8e55c9f1f7401e4...
- done. [Time: 4.471547 ms] 
+ done. [Time: 4.910214 ms] 
 Updating Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/English(US) - GUID: 7caea2f5e594f4b41ad5c355f893a6ef...
- done. [Time: 4.592035 ms] 
+ done. [Time: 4.310184 ms] 
 Updating Assets/StreamingAssets/Audio/GeneratedSoundBanks/Mac/English(US) - GUID: 7e6641610ebf8ba4089d155d77b55a00...
- done. [Time: 6.025862 ms] 
+ done. [Time: 4.607044 ms] 
+Updating Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/DecodedBanks - GUID: 7fe174e7c2bdfd74fb1690a3a7a97fc0...
+ done. [Time: 5.874710 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64 - GUID: 8411655c9e61aa846bb556a68bec3c82...
- done. [Time: 4.540354 ms] 
+ done. [Time: 4.625673 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP - GUID: cc5894a2704df194cadbbc422adf439a...
- done. [Time: 4.423773 ms] 
+ done. [Time: 5.328162 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Release - GUID: f658707dc7c6b4849844cfd6b3df52b5...
- done. [Time: 5.573059 ms] 
+ done. [Time: 6.164660 ms] 
+Updating Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/DecodedBanks/English(US) - GUID: 082097805776f59468fe365c1fcca0af...
+ done. [Time: 6.236771 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Release/AkSoundEngine.bundle - GUID: 17c12373833bc804e953319fc5253909...
- done. [Time: 6.122312 ms] 
+ done. [Time: 7.390861 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP - GUID: 27fefae36d4b3344c90143ca8764e67e...
- done. [Time: 4.866661 ms] 
+ done. [Time: 4.385000 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/Debug - GUID: 44b36b1667994c44685758ca4d5cde7a...
- done. [Time: 5.337192 ms] 
+ done. [Time: 4.428567 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/Debug - GUID: 4aee73180b6c85c4d9d870b1f9ae2525...
- done. [Time: 4.784934 ms] 
+ done. [Time: 6.204622 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/Release - GUID: 759f3db7432d0884cbc5258b205cd27b...
- done. [Time: 5.224818 ms] 
+ done. [Time: 4.229659 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/Release - GUID: 7952c5c0bd090264082b2a4c5dc3c3ff...
- done. [Time: 4.962510 ms] 
+ done. [Time: 4.218542 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile - GUID: be3feb9fcfd96224ebcfd6737cf0aef9...
- done. [Time: 5.520177 ms] 
+ done. [Time: 5.699238 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Debug/AkSoundEngine.bundle - GUID: c6d2d8a109390a3489b14e6737f15a92...
- done. [Time: 6.165279 ms] 
+ done. [Time: 6.058295 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/Profile - GUID: ca11e951f9a17064ea6882b9cda9bcac...
- done. [Time: 5.768362 ms] 
+ done. [Time: 4.362765 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP - GUID: fa524f76e6709d64b8d790b2ba54ccbe...
- done. [Time: 4.824596 ms] 
+ done. [Time: 5.612704 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Profile/AkSoundEngine.bundle - GUID: fe2b6d9c59412da4c94bfba2d3ff4719...
- done. [Time: 6.889104 ms] 
+ done. [Time: 9.105020 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Profile/AkSoundEngine.bundle/Contents - GUID: 4e25eed737c14ba48bb896939d6d699f...
- done. [Time: 4.492280 ms] 
+ done. [Time: 4.683663 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Release/AkSoundEngine.bundle/Contents - GUID: 619efc9af6d36c24db9ba4518d1ff4e3...
- done. [Time: 4.382609 ms] 
+ done. [Time: 5.259356 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Debug/AkSoundEngine.bundle/Contents - GUID: e156e4ea9dc93d748b72a9eaadc6abbf...
- done. [Time: 8.353579 ms] 
+ done. [Time: 5.021988 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Release/AkSoundEngine.bundle/Contents/MacOS - GUID: 2d6d88e4bdc437b49beb7255d0d62625...
- done. [Time: 5.110941 ms] 
+ done. [Time: 5.045424 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Release/AkSoundEngine.bundle/Contents/Resources - GUID: 3d0e61e1c8e09974f80a9a33bf23ff69...
- done. [Time: 4.843525 ms] 
+ done. [Time: 8.554265 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Debug/AkSoundEngine.bundle/Contents/Resources - GUID: 650f6bc8b5426774e9f6aa99fe3976a4...
- done. [Time: 5.625941 ms] 
+ done. [Time: 5.500630 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Profile/AkSoundEngine.bundle/Contents/Resources - GUID: a50de5e25e6ee40438f2fa5f3ed46c6e...
- done. [Time: 4.643715 ms] 
+ done. [Time: 6.003009 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Debug/AkSoundEngine.bundle/Contents/MacOS - GUID: c70273edb32cf1f4280ccc027821b92e...
- done. [Time: 4.375098 ms] 
+ done. [Time: 5.236220 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Profile/AkSoundEngine.bundle/Contents/MacOS - GUID: f82bbec2756e39a4ca32f6b6b17bb785...
- done. [Time: 5.265681 ms] 
+ done. [Time: 4.373883 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Debug/AkSoundEngine.bundle/Contents/Resources/en.lproj - GUID: 484cbe4e065bf8d44b46fe61c2bc91d0...
- done. [Time: 4.726944 ms] 
+ done. [Time: 6.774606 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Profile/AkSoundEngine.bundle/Contents/Resources/en.lproj - GUID: 5ce85c176cc1c6647891d6daf7bf34e5...
- done. [Time: 4.258817 ms] 
+ done. [Time: 5.690224 ms] 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Release/AkSoundEngine.bundle/Contents/Resources/en.lproj - GUID: c1153a19c65b05c4cbd4eb432cbbaca7...
- done. [Time: 5.651781 ms] 
+ done. [Time: 7.909766 ms] 
 Updating Assets/WwiseSettings.xml - GUID: b7edb7c0735a1ee42b6e12cd1ec8a98d...
- done. [Time: 4.973027 ms] 
-Updating Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset - GUID: ec2accb673612a245ac6756f05dd0552...
- done. [Time: 10.866684 ms] 
-Unloading 375 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 49.0 MB.
-System memory in use after: 49.1 MB.
+ done. [Time: 5.917677 ms] 
+Updating Assets/Wwise/Editor/ProjectData/AkWwiseProjectData 2.asset - GUID: 0740597080da17e4f80b563e4072656d...
+ done. [Time: 12.561880 ms] 
+Updating Assets/Wwise/Editor/ProjectData/AkWwiseProjectData 1.asset - GUID: 4142fb30dc2206d4ca553f989f9f51b3...
+ done. [Time: 5.934503 ms] 
+Updating Assets/Wwise/Editor/ProjectData/AkWwiseProjectData 3.asset - GUID: cbeef97e163d0b444bdc0514887a2870...
+ done. [Time: 8.702095 ms] 
+The file Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset seems to have merge conflicts. Please open it in a text editor and fix the merge.
 
-Unloading 140 unused Assets to reduce memory usage. Loaded Objects now: 2808.
-Total: 3.682221 ms (FindLiveObjects: 0.214833 ms CreateObjectMapping: 0.041163 ms MarkObjects: 3.360421 ms  DeleteObjects: 0.058591 ms)
+UnityEditor.AssetDatabase:LoadAssetAtPath(String, Type)
+AkWwiseProjectInfo:GetData() (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwiseProjectInfo.cs:27)
+AkWwiseTreeView:GetExpansionStatus(String) (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwiseTreeView.cs:597)
+AkWwiseTreeView:SetRootItem(String, WwiseObjectType) (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwiseTreeView.cs:94)
+AkWwisePicker:PopulateTreeview() (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwisePicker.cs:113)
+AkWwiseTreeView:SaveExpansionStatus() (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwiseTreeView.cs:561)
+Postprocessor:OnPostprocessAllAssets(String[], String[], String[], String[]) (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwisePicker.cs:23)
+System.Reflection.MonoMethod:InternalInvoke(Object, Object[], Exception&)
+System.Reflection.MonoMethod:Invoke(Object, BindingFlags, Binder, Object[], CultureInfo) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222)
+System.Reflection.MethodBase:Invoke(Object, Object[]) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MethodBase.cs:115)
+UnityEditor.AssetPostprocessingInternal:PostprocessAllAssets(String[], String[], String[], String[], String[]) (at C:\buildslave\unity\build\Editor\Mono\AssetPostprocessor.cs:27)
 
-Refreshing native plugins compatible for Editor in 66.84 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+[C:\buildslave\unity\build\Runtime/Serialize/SerializedFile.cpp line 862] 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs Line: 222)
 
------ Total AssetImport time: 1.745923s, AssetImport time: 0.852809s, Asset hashing: 0.374652s [119.3 MB, 318.354279 mb/s]
+The file Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset seems to have merge conflicts. Please open it in a text editor and fix the merge.
 
-Warming cache for 706 main assets: 0.001076 seconds elapsed
+UnityEditor.AssetDatabase:LoadAssetAtPath(String, Type)
+AkWwiseProjectInfo:GetData() (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwiseProjectInfo.cs:27)
+AkWwiseTreeView:GetExpansionStatus(String) (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwiseTreeView.cs:597)
+AkWwiseTreeView:SetRootItem(String, WwiseObjectType) (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwiseTreeView.cs:94)
+AkWwisePicker:PopulateTreeview() (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwisePicker.cs:113)
+AkWwiseTreeView:SaveExpansionStatus() (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwiseTreeView.cs:561)
+Postprocessor:OnPostprocessAllAssets(String[], String[], String[], String[]) (at C:\Users\1301755\Downloads\Still\Idea4Prototype\Assets\Wwise\Editor\WwiseWindows\AkWwisePicker.cs:23)
+System.Reflection.MonoMethod:InternalInvoke(Object, Object[], Exception&)
+System.Reflection.MonoMethod:Invoke(Object, BindingFlags, Binder, Object[], CultureInfo) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222)
+System.Reflection.MethodBase:Invoke(Object, Object[]) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MethodBase.cs:115)
+UnityEditor.AssetPostprocessingInternal:PostprocessAllAssets(String[], String[], String[], String[], String[]) (at C:\buildslave\unity\build\Editor\Mono\AssetPostprocessor.cs:27)
+
+[C:\buildslave\unity\build\Runtime/Serialize/SerializedFile.cpp line 862] 
+(Filename: /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs Line: 222)
+
+Updating Assets/Wwise/Editor/ProjectData/AkWwiseProjectData 4.asset - GUID: e459d85f0d285a743aa693bd14164785...
+----- Compute hash for Assets/Wwise/Editor/ProjectData/AkWwiseProjectData 4.asset.
+ done. [Time: 6.642100 ms] 
+Unloading 384 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 49.7 MB.
+System memory in use after: 49.7 MB.
+
+Unloading 143 unused Assets to reduce memory usage. Loaded Objects now: 2815.
+Total: 4.773202 ms (FindLiveObjects: 0.331413 ms CreateObjectMapping: 0.082928 ms MarkObjects: 4.314691 ms  DeleteObjects: 0.042666 ms)
+
+Refreshing native plugins compatible for Editor in 71.19 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+
+----- Total AssetImport time: 1.970709s, AssetImport time: 0.984776s, Asset hashing: 0.419822s [124.4 MB, 296.218445 mb/s]
+
+Warming cache for 753 main assets: 0.001222 seconds elapsed
 Initializing Unity extensions:
  'C:/Program Files/Unity2017.1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll'  GUID: 12fd8a0055b84bb59e84c9835a37e333
  'C:/Program Files/Unity2017.1/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll'  GUID: 852e56802eb941638acbb491814497b0
@@ -1173,12 +1273,12 @@ Initializing Unity extensions:
     Ignoring 'C:/Program Files/Unity2017.1/Editor/Data/UnityExtensions/Unity/Timeline/Runtime/UnityEngine.Timeline.dll' because we're compiling for Editor:Editor
     Ignoring 'C:/Program Files/Unity2017.1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Runtime/UnityEngine.HoloLens.dll' because we're compiling for Editor:Editor
     Ignoring 'C:/Program Files/Unity2017.1/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll' because we're compiling for Editor:Editor
-Unloading 174 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 44.8 MB.
-System memory in use after: 45.0 MB.
+Unloading 178 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.1 MB.
+System memory in use after: 45.3 MB.
 
-Unloading 139 unused Assets to reduce memory usage. Loaded Objects now: 2839.
-Total: 4.293671 ms (FindLiveObjects: 0.241575 ms CreateObjectMapping: 0.036656 ms MarkObjects: 3.976979 ms  DeleteObjects: 0.037257 ms)
+Unloading 144 unused Assets to reduce memory usage. Loaded Objects now: 2845.
+Total: 3.502231 ms (FindLiveObjects: 0.177875 ms CreateObjectMapping: 0.037257 ms MarkObjects: 3.224300 ms  DeleteObjects: 0.061895 ms)
 
 WwiseUnity: Running modify setup...
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
@@ -1191,11 +1291,11 @@ UnityEditor.EditorApplication:Internal_CallDelayFunctions() (at C:\buildslave\un
 (Filename: C:/Users/1301755/Downloads/Still/Idea4Prototype/Assets/Wwise/Editor/WwiseSetupWizard/AkWwiseSetupWizard.cs Line: 38)
 
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 41.8 MB.
-System memory in use after: 42.0 MB.
+System memory in use before: 42.0 MB.
+System memory in use after: 42.2 MB.
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2843.
-Total: 3.593583 ms (FindLiveObjects: 0.178477 ms CreateObjectMapping: 0.030948 ms MarkObjects: 3.372139 ms  DeleteObjects: 0.011417 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2849.
+Total: 6.470834 ms (FindLiveObjects: 0.546848 ms CreateObjectMapping: 0.077520 ms MarkObjects: 5.826335 ms  DeleteObjects: 0.018929 ms)
 
 
 Hashing assets ... 0.001 seconds
@@ -1203,23 +1303,23 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.135 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkConvolutionReverb.bundle - GUID: fd4886504a28d904ba922da9245475b0...
- done. [Time: 7.606318 ms] 
-Refreshing native plugins compatible for Editor in 1.31 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+ done. [Time: 5.238023 ms] 
+Refreshing native plugins compatible for Editor in 1.40 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.055883s, AssetImport time: 0.031708s, Asset hashing: 0.001349s [138.0 KB, 99.925095 mb/s]
+----- Total AssetImport time: 0.053053s, AssetImport time: 0.030394s, Asset hashing: 0.001455s [138.0 KB, 92.622826 mb/s]
 
 
 Hashing assets ... 0.001 seconds
-  file open: 0.000 seconds (2 files)
+  file open: 0.001 seconds (2 files)
   file read: 0.000 seconds (0.225 MB)
-  hash: 0.000 seconds
+  hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkRoomVerb.bundle - GUID: 26692470c11e5fd49a06eed51862bc79...
- done. [Time: 6.307400 ms] 
-Refreshing native plugins compatible for Editor in 1.26 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 5.493419 ms] 
+Refreshing native plugins compatible for Editor in 1.49 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
 
------ Total AssetImport time: 0.060022s, AssetImport time: 0.030779s, Asset hashing: 0.001173s [230.7 KB, 192.032410 mb/s]
+----- Total AssetImport time: 0.056929s, AssetImport time: 0.027513s, Asset hashing: 0.001391s [230.7 KB, 161.963058 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1227,35 +1327,35 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.114 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libSynthOne.bundle - GUID: 18b1c2e00738f74468c82dcdb38732b1...
- done. [Time: 6.366592 ms] 
+ done. [Time: 5.698336 ms] 
 Refreshing native plugins compatible for Editor in 1.26 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+Preloading 1 native plugins for Editor in 0.20 ms.
 
------ Total AssetImport time: 0.052210s, AssetImport time: 0.029924s, Asset hashing: 0.001147s [116.7 KB, 99.346786 mb/s]
+----- Total AssetImport time: 0.048718s, AssetImport time: 0.026859s, Asset hashing: 0.001361s [116.7 KB, 83.750740 mb/s]
 
 
 Hashing assets ... 0.001 seconds
-  file open: 0.000 seconds (2 files)
+  file open: 0.001 seconds (2 files)
   file read: 0.000 seconds (0.108 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkTimeStretch.bundle - GUID: da277701f0e14014c962e43820c782b5...
- done. [Time: 6.402948 ms] 
-Refreshing native plugins compatible for Editor in 1.27 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 5.037011 ms] 
+Refreshing native plugins compatible for Editor in 1.52 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
 
------ Total AssetImport time: 0.052014s, AssetImport time: 0.029481s, Asset hashing: 0.001196s [110.7 KB, 90.322784 mb/s]
+----- Total AssetImport time: 0.050540s, AssetImport time: 0.027585s, Asset hashing: 0.001361s [110.7 KB, 79.379051 mb/s]
 
 
 Hashing assets ... 0.003 seconds
   file open: 0.000 seconds (2 files)
-  file read: 0.000 seconds (1.588 MB)
+  file read: 0.001 seconds (1.588 MB)
   hash: 0.003 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/Release/AkSoundEngine.dll - GUID: f35b235177f24cc4ba2731f22cbb7b9b...
- done. [Time: 6.728955 ms] 
-Refreshing native plugins compatible for Editor in 1.45 ms, found 5 plugins.
+ done. [Time: 6.917026 ms] 
+Refreshing native plugins compatible for Editor in 1.49 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.064090s, AssetImport time: 0.032728s, Asset hashing: 0.003500s [1.6 MB, 453.711395 mb/s]
+----- Total AssetImport time: 0.063218s, AssetImport time: 0.031939s, Asset hashing: 0.003368s [1.6 MB, 471.524536 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1263,30 +1363,30 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.077 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkPitchShifter.bundle - GUID: 49301f7123930ab41966ef1bcfed8dc8...
- done. [Time: 6.587435 ms] 
-Refreshing native plugins compatible for Editor in 1.25 ms, found 5 plugins.
+ done. [Time: 6.045375 ms] 
+Refreshing native plugins compatible for Editor in 1.26 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.050994s, AssetImport time: 0.029619s, Asset hashing: 0.001222s [79.0 KB, 63.087055 mb/s]
+----- Total AssetImport time: 0.049437s, AssetImport time: 0.028361s, Asset hashing: 0.001578s [79.0 KB, 48.864986 mb/s]
 
 
 Hashing assets ... 0.001 seconds
   file open: 0.000 seconds (2 files)
   file read: 0.000 seconds (0.282 MB)
-  hash: 0.000 seconds
+  hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkSoundSeedAir.dll - GUID: 021150a1f7a3c654aa8bc2b8e1ff6b6a...
- done. [Time: 7.201589 ms] 
-Refreshing native plugins compatible for Editor in 1.59 ms, found 5 plugins.
+ done. [Time: 6.241879 ms] 
+Refreshing native plugins compatible for Editor in 1.48 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.052363s, AssetImport time: 0.029765s, Asset hashing: 0.001388s [289.0 KB, 203.372910 mb/s]
+----- Total AssetImport time: 0.050466s, AssetImport time: 0.028484s, Asset hashing: 0.001568s [289.0 KB, 179.992813 mb/s]
 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Debug/AkSoundEngine.bundle - GUID: c6d2d8a109390a3489b14e6737f15a92...
- done. [Time: 6.093468 ms] 
-Refreshing native plugins compatible for Editor in 1.28 ms, found 5 plugins.
+ done. [Time: 5.397570 ms] 
+Refreshing native plugins compatible for Editor in 1.32 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.057324s, AssetImport time: 0.028712s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
+----- Total AssetImport time: 0.058419s, AssetImport time: 0.028542s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1294,47 +1394,47 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.232 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkTremolo.dll - GUID: c33cbfa124e5fed49a595251e431ab22...
- done. [Time: 6.729255 ms] 
-Refreshing native plugins compatible for Editor in 1.46 ms, found 5 plugins.
+ done. [Time: 6.711508 ms] 
+Refreshing native plugins compatible for Editor in 1.43 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.052367s, AssetImport time: 0.030698s, Asset hashing: 0.001153s [238.0 KB, 201.621506 mb/s]
+----- Total AssetImport time: 0.053508s, AssetImport time: 0.030683s, Asset hashing: 0.001265s [238.0 KB, 183.802322 mb/s]
 
 
 Hashing assets ... 0.001 seconds
-  file open: 0.001 seconds (2 files)
+  file open: 0.000 seconds (2 files)
   file read: 0.000 seconds (0.212 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkPitchShifter.dll - GUID: 91fdbe021ccb1e944aa0ce048dbd6267...
- done. [Time: 7.690449 ms] 
-Refreshing native plugins compatible for Editor in 1.50 ms, found 5 plugins.
+ done. [Time: 6.208528 ms] 
+Refreshing native plugins compatible for Editor in 1.60 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.11 ms.
 
------ Total AssetImport time: 0.052996s, AssetImport time: 0.030420s, Asset hashing: 0.001344s [217.0 KB, 157.730042 mb/s]
+----- Total AssetImport time: 0.052997s, AssetImport time: 0.028664s, Asset hashing: 0.001367s [217.0 KB, 155.026489 mb/s]
 
 
-Hashing assets ... 0.002 seconds
+Hashing assets ... 0.003 seconds
   file open: 0.000 seconds (2 files)
-  file read: 0.000 seconds (1.218 MB)
+  file read: 0.001 seconds (1.218 MB)
   hash: 0.002 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/Release/AkSoundEngine.dll - GUID: 99b0695200c2abe4da9e2f2e2ed4fb95...
- done. [Time: 7.035431 ms] 
-Refreshing native plugins compatible for Editor in 1.47 ms, found 5 plugins.
+ done. [Time: 6.531829 ms] 
+Refreshing native plugins compatible for Editor in 1.41 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.064624s, AssetImport time: 0.032703s, Asset hashing: 0.002619s [1.2 MB, 464.956329 mb/s]
+----- Total AssetImport time: 0.064019s, AssetImport time: 0.030534s, Asset hashing: 0.002918s [1.2 MB, 417.365540 mb/s]
 
 
-Hashing assets ... 0.002 seconds
+Hashing assets ... 0.001 seconds
   file open: 0.000 seconds (2 files)
   file read: 0.000 seconds (0.242 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/SynthOne.dll - GUID: 7c3d699236d9fe843a210c44ea34584e...
- done. [Time: 6.228077 ms] 
-Refreshing native plugins compatible for Editor in 1.67 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+ done. [Time: 6.258706 ms] 
+Refreshing native plugins compatible for Editor in 1.62 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
 
------ Total AssetImport time: 0.053643s, AssetImport time: 0.029538s, Asset hashing: 0.001851s [248.0 KB, 130.864182 mb/s]
+----- Total AssetImport time: 0.052184s, AssetImport time: 0.027493s, Asset hashing: 0.001427s [248.0 KB, 169.746445 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1342,11 +1442,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.194 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkRecorder.dll - GUID: 250bf4d23907b1d4983038d03b0eede9...
- done. [Time: 6.073336 ms] 
-Refreshing native plugins compatible for Editor in 1.56 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 5.689623 ms] 
+Refreshing native plugins compatible for Editor in 1.87 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
 
------ Total AssetImport time: 0.052841s, AssetImport time: 0.030441s, Asset hashing: 0.001428s [198.5 KB, 135.725861 mb/s]
+----- Total AssetImport time: 0.053686s, AssetImport time: 0.028928s, Asset hashing: 0.001114s [198.5 KB, 174.013733 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1354,18 +1454,18 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.232 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkGuitarDistortion.dll - GUID: 8f1a7de2ca2208d4cb97285dc4fcbb84...
- done. [Time: 7.761059 ms] 
-Refreshing native plugins compatible for Editor in 1.51 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 7.220497 ms] 
+Refreshing native plugins compatible for Editor in 1.72 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
 
------ Total AssetImport time: 0.058549s, AssetImport time: 0.030507s, Asset hashing: 0.001297s [238.0 KB, 179.203552 mb/s]
+----- Total AssetImport time: 0.058737s, AssetImport time: 0.030180s, Asset hashing: 0.001254s [238.0 KB, 185.388000 mb/s]
 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Release/AkSoundEngine.bundle - GUID: 17c12373833bc804e953319fc5253909...
- done. [Time: 7.112952 ms] 
-Refreshing native plugins compatible for Editor in 1.26 ms, found 5 plugins.
+ done. [Time: 7.327763 ms] 
+Refreshing native plugins compatible for Editor in 1.27 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.050758s, AssetImport time: 0.029096s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
+----- Total AssetImport time: 0.049549s, AssetImport time: 0.028947s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
 
 
 Hashing assets ... 0.002 seconds
@@ -1373,23 +1473,23 @@ Hashing assets ... 0.002 seconds
   file read: 0.000 seconds (0.755 MB)
   hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/iZotope.dll - GUID: b95bef831caa9b44a9964429de9e2756...
- done. [Time: 6.112096 ms] 
-Refreshing native plugins compatible for Editor in 1.86 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+ done. [Time: 6.011722 ms] 
+Refreshing native plugins compatible for Editor in 1.57 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
 
------ Total AssetImport time: 0.054310s, AssetImport time: 0.029804s, Asset hashing: 0.002156s [0.8 MB, 350.167633 mb/s]
+----- Total AssetImport time: 0.059847s, AssetImport time: 0.035821s, Asset hashing: 0.002168s [0.8 MB, 348.130859 mb/s]
 
 
-Hashing assets ... 0.006 seconds
-  file open: 0.001 seconds (2 files)
+Hashing assets ... 0.005 seconds
+  file open: 0.000 seconds (2 files)
   file read: 0.001 seconds (2.863 MB)
-  hash: 0.005 seconds
+  hash: 0.004 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/Debug/AkSoundEngine.dll - GUID: e7436d54624cf564982c693f0c49f842...
- done. [Time: 6.459136 ms] 
-Refreshing native plugins compatible for Editor in 1.48 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 6.898398 ms] 
+Refreshing native plugins compatible for Editor in 2.52 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
 
------ Total AssetImport time: 0.070306s, AssetImport time: 0.035330s, Asset hashing: 0.006374s [2.9 MB, 449.153931 mb/s]
+----- Total AssetImport time: 0.061656s, AssetImport time: 0.033676s, Asset hashing: 0.005067s [2.9 MB, 565.019958 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1397,11 +1497,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.041 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkMotion.bundle - GUID: 49a09a05ceb02df46a2f2d1ce1622e4f...
- done. [Time: 6.511417 ms] 
-Refreshing native plugins compatible for Editor in 1.24 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
+ done. [Time: 5.628929 ms] 
+Refreshing native plugins compatible for Editor in 1.67 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.23 ms.
 
------ Total AssetImport time: 0.052743s, AssetImport time: 0.030527s, Asset hashing: 0.001330s [42.0 KB, 30.813955 mb/s]
+----- Total AssetImport time: 0.051600s, AssetImport time: 0.030008s, Asset hashing: 0.001312s [42.0 KB, 31.230371 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1409,11 +1509,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.205 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkMotion.dll - GUID: 93231e4527586e04c8e837de049b761a...
- done. [Time: 7.005685 ms] 
-Refreshing native plugins compatible for Editor in 1.84 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
+ done. [Time: 6.736146 ms] 
+Refreshing native plugins compatible for Editor in 1.48 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.060455s, AssetImport time: 0.037051s, Asset hashing: 0.001461s [209.5 KB, 140.035446 mb/s]
+----- Total AssetImport time: 0.057509s, AssetImport time: 0.035475s, Asset hashing: 0.001292s [209.5 KB, 158.333954 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1421,35 +1521,35 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.082 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkGuitarDistortion.bundle - GUID: 916cae55b54d45141898ce4b90a7f557...
- done. [Time: 5.964868 ms] 
-Refreshing native plugins compatible for Editor in 1.31 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 5.696834 ms] 
+Refreshing native plugins compatible for Editor in 1.41 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
 
------ Total AssetImport time: 0.052738s, AssetImport time: 0.031333s, Asset hashing: 0.001359s [84.1 KB, 60.470478 mb/s]
+----- Total AssetImport time: 0.052078s, AssetImport time: 0.030024s, Asset hashing: 0.001292s [84.1 KB, 63.607426 mb/s]
 
 
-Hashing assets ... 0.006 seconds
+Hashing assets ... 0.005 seconds
   file open: 0.000 seconds (2 files)
   file read: 0.001 seconds (3.392 MB)
   hash: 0.005 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/Auro.dll - GUID: ac076965cdf4b284b9c9ccdd0cbdacdb...
- done. [Time: 7.616234 ms] 
-Refreshing native plugins compatible for Editor in 1.51 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.15 ms.
+ done. [Time: 5.451954 ms] 
+Refreshing native plugins compatible for Editor in 1.80 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.065042s, AssetImport time: 0.037234s, Asset hashing: 0.006134s [3.4 MB, 552.919800 mb/s]
+----- Total AssetImport time: 0.063009s, AssetImport time: 0.035251s, Asset hashing: 0.005680s [3.4 MB, 597.116638 mb/s]
 
 
-Hashing assets ... 0.004 seconds
+Hashing assets ... 0.001 seconds
   file open: 0.000 seconds (2 files)
   file read: 0.000 seconds (0.428 MB)
   hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/McDSP.dll - GUID: 9d94c975d6951454aa0191efe70e1eb6...
- done. [Time: 7.162829 ms] 
-Refreshing native plugins compatible for Editor in 1.59 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+ done. [Time: 5.700440 ms] 
+Refreshing native plugins compatible for Editor in 1.52 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.067230s, AssetImport time: 0.039059s, Asset hashing: 0.005463s [438.5 KB, 78.389442 mb/s]
+----- Total AssetImport time: 0.061297s, AssetImport time: 0.037840s, Asset hashing: 0.001460s [438.5 KB, 293.267792 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1457,11 +1557,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.181 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libCrankcaseAudioREVModelPlayer.bundle - GUID: 782e74365b557d241a3c06077afda78d...
- done. [Time: 6.658345 ms] 
-Refreshing native plugins compatible for Editor in 1.27 ms, found 5 plugins.
+ done. [Time: 6.249692 ms] 
+Refreshing native plugins compatible for Editor in 1.39 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.055190s, AssetImport time: 0.032019s, Asset hashing: 0.001175s [185.1 KB, 153.756912 mb/s]
+----- Total AssetImport time: 0.052299s, AssetImport time: 0.030092s, Asset hashing: 0.001354s [185.1 KB, 133.458771 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1469,11 +1569,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.212 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkSoundSeedImpact.dll - GUID: 54d76346c3d570e4ab40045d3496428e...
- done. [Time: 6.459737 ms] 
-Refreshing native plugins compatible for Editor in 1.57 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 6.251494 ms] 
+Refreshing native plugins compatible for Editor in 1.44 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
 
------ Total AssetImport time: 0.057151s, AssetImport time: 0.033053s, Asset hashing: 0.001353s [217.5 KB, 157.039948 mb/s]
+----- Total AssetImport time: 0.052959s, AssetImport time: 0.030636s, Asset hashing: 0.001194s [217.5 KB, 177.950089 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1481,11 +1581,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.208 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkTremolo.dll - GUID: 583c7056aadcc6547b5f72984d853ff4...
- done. [Time: 7.560948 ms] 
-Refreshing native plugins compatible for Editor in 1.45 ms, found 5 plugins.
+ done. [Time: 5.404781 ms] 
+Refreshing native plugins compatible for Editor in 1.50 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.058949s, AssetImport time: 0.036978s, Asset hashing: 0.001181s [213.0 KB, 176.085495 mb/s]
+----- Total AssetImport time: 0.060609s, AssetImport time: 0.037007s, Asset hashing: 0.001436s [213.0 KB, 144.907913 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1493,11 +1593,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.236 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkStereoDelay.dll - GUID: 14c6afc6fff1c2743aa7ca8cf2abef98...
- done. [Time: 6.367193 ms] 
-Refreshing native plugins compatible for Editor in 2.04 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
+ done. [Time: 7.188347 ms] 
+Refreshing native plugins compatible for Editor in 1.47 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.053032s, AssetImport time: 0.029023s, Asset hashing: 0.001396s [241.8 KB, 169.176422 mb/s]
+----- Total AssetImport time: 0.052041s, AssetImport time: 0.029979s, Asset hashing: 0.001209s [241.8 KB, 195.278595 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1505,35 +1605,35 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.182 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkSoundSeedAir.bundle - GUID: f99fe3d6a746e6147a471c41fed7e471...
- done. [Time: 5.835366 ms] 
-Refreshing native plugins compatible for Editor in 1.35 ms, found 5 plugins.
+ done. [Time: 6.458515 ms] 
+Refreshing native plugins compatible for Editor in 1.31 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.054012s, AssetImport time: 0.031498s, Asset hashing: 0.001283s [186.4 KB, 141.867355 mb/s]
+----- Total AssetImport time: 0.051880s, AssetImport time: 0.029484s, Asset hashing: 0.001280s [186.4 KB, 142.233994 mb/s]
 
 
-Hashing assets ... 0.001 seconds
-  file open: 0.000 seconds (2 files)
+Hashing assets ... 0.002 seconds
+  file open: 0.001 seconds (2 files)
   file read: 0.000 seconds (0.250 MB)
-  hash: 0.001 seconds
+  hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/CrankcaseAudioREVModelPlayer.dll - GUID: bd1c2cd6e09373c4a89ae27cf70b3273...
- done. [Time: 6.257222 ms] 
-Refreshing native plugins compatible for Editor in 2.30 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.12 ms.
+ done. [Time: 5.745810 ms] 
+Refreshing native plugins compatible for Editor in 1.47 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.061835s, AssetImport time: 0.038299s, Asset hashing: 0.001226s [255.5 KB, 203.603668 mb/s]
+----- Total AssetImport time: 0.061459s, AssetImport time: 0.038529s, Asset hashing: 0.001940s [255.5 KB, 128.620407 mb/s]
 
 
 Hashing assets ... 0.020 seconds
-  file open: 0.001 seconds (2 files)
+  file open: 0.000 seconds (2 files)
   file read: 0.004 seconds (12.424 MB)
-  hash: 0.019 seconds
+  hash: 0.020 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAuro.bundle - GUID: d868f1079e8066b45bedcdd53a0adf52...
- done. [Time: 6.261429 ms] 
-Refreshing native plugins compatible for Editor in 1.55 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.16 ms.
+ done. [Time: 6.197110 ms] 
+Refreshing native plugins compatible for Editor in 1.38 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
 
------ Total AssetImport time: 0.096570s, AssetImport time: 0.052362s, Asset hashing: 0.020198s [12.4 MB, 615.114197 mb/s]
+----- Total AssetImport time: 0.095117s, AssetImport time: 0.054590s, Asset hashing: 0.020563s [12.4 MB, 604.186707 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1541,11 +1641,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.250 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkReflect.dll - GUID: 0477fd6786ede3e418e6c7d312d66612...
- done. [Time: 6.244602 ms] 
-Refreshing native plugins compatible for Editor in 1.59 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.14 ms.
+ done. [Time: 5.436631 ms] 
+Refreshing native plugins compatible for Editor in 1.48 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.052921s, AssetImport time: 0.030791s, Asset hashing: 0.001227s [255.5 KB, 203.304581 mb/s]
+----- Total AssetImport time: 0.053747s, AssetImport time: 0.030616s, Asset hashing: 0.001326s [255.5 KB, 188.237106 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1553,11 +1653,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.233 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkHarmonizer.dll - GUID: 8c6e2aa756c3dc349b65340f931e5d2d...
- done. [Time: 7.484028 ms] 
-Refreshing native plugins compatible for Editor in 1.48 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
+ done. [Time: 5.438734 ms] 
+Refreshing native plugins compatible for Editor in 1.82 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.060390s, AssetImport time: 0.036673s, Asset hashing: 0.001255s [239.0 KB, 185.987961 mb/s]
+----- Total AssetImport time: 0.060219s, AssetImport time: 0.037825s, Asset hashing: 0.001059s [239.0 KB, 220.327484 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1565,11 +1665,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.215 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkStereoDelay.dll - GUID: a9547748792dafa41b466fbecf53e868...
- done. [Time: 6.439305 ms] 
-Refreshing native plugins compatible for Editor in 1.90 ms, found 5 plugins.
+ done. [Time: 5.967254 ms] 
+Refreshing native plugins compatible for Editor in 1.48 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.054944s, AssetImport time: 0.030178s, Asset hashing: 0.001566s [220.3 KB, 137.369308 mb/s]
+----- Total AssetImport time: 0.054596s, AssetImport time: 0.030684s, Asset hashing: 0.001131s [220.3 KB, 190.252014 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1577,71 +1677,71 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.227 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkPitchShifter.dll - GUID: 39b46e5813cdd4b4f8f0e348427ee3f6...
- done. [Time: 6.346461 ms] 
-Refreshing native plugins compatible for Editor in 1.50 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 6.538439 ms] 
+Refreshing native plugins compatible for Editor in 1.43 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.15 ms.
 
------ Total AssetImport time: 0.055203s, AssetImport time: 0.032324s, Asset hashing: 0.001396s [232.5 KB, 162.665878 mb/s]
+----- Total AssetImport time: 0.053574s, AssetImport time: 0.030151s, Asset hashing: 0.001152s [232.5 KB, 197.117447 mb/s]
 
 
-Hashing assets ... 0.006 seconds
+Hashing assets ... 0.007 seconds
   file open: 0.001 seconds (2 files)
-  file read: 0.001 seconds (3.605 MB)
+  file read: 0.002 seconds (3.605 MB)
   hash: 0.006 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/Auro.dll - GUID: bec51ab8d63fcce4fa577c616400b185...
- done. [Time: 6.270142 ms] 
-Refreshing native plugins compatible for Editor in 1.48 ms, found 5 plugins.
+ done. [Time: 7.829842 ms] 
+Refreshing native plugins compatible for Editor in 1.57 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.071086s, AssetImport time: 0.043182s, Asset hashing: 0.006725s [3.6 MB, 536.129089 mb/s]
+----- Total AssetImport time: 0.074642s, AssetImport time: 0.045046s, Asset hashing: 0.007681s [3.6 MB, 469.415863 mb/s]
 
 
-Hashing assets ... 0.004 seconds
+Hashing assets ... 0.003 seconds
   file open: 0.000 seconds (2 files)
   file read: 0.001 seconds (1.842 MB)
   hash: 0.003 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkSoundEngine.dll - GUID: cdb37ac89699e12469f88ec55c287ade...
- done. [Time: 6.814288 ms] 
-Refreshing native plugins compatible for Editor in 1.50 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+ done. [Time: 7.539291 ms] 
+Refreshing native plugins compatible for Editor in 1.52 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.15 ms.
 
------ Total AssetImport time: 0.059270s, AssetImport time: 0.034201s, Asset hashing: 0.004398s [1.8 MB, 418.778412 mb/s]
+----- Total AssetImport time: 0.060255s, AssetImport time: 0.035276s, Asset hashing: 0.003643s [1.8 MB, 505.506042 mb/s]
 
 
 Hashing assets ... 0.001 seconds
-  file open: 0.000 seconds (2 files)
+  file open: 0.001 seconds (2 files)
   file read: 0.000 seconds (0.289 MB)
   hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/CrankcaseAudioREVModelPlayer.dll - GUID: 371d89d823e692b4b85b47018e932ce0...
- done. [Time: 6.621989 ms] 
-Refreshing native plugins compatible for Editor in 1.48 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 6.052586 ms] 
+Refreshing native plugins compatible for Editor in 2.32 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.18 ms.
 
------ Total AssetImport time: 0.053114s, AssetImport time: 0.030500s, Asset hashing: 0.001346s [296.0 KB, 214.761292 mb/s]
+----- Total AssetImport time: 0.052892s, AssetImport time: 0.029863s, Asset hashing: 0.001523s [296.0 KB, 189.769897 mb/s]
 
 
 Hashing assets ... 0.003 seconds
   file open: 0.000 seconds (2 files)
   file read: 0.000 seconds (1.407 MB)
-  hash: 0.003 seconds
+  hash: 0.002 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkSoundEngine.dll - GUID: f36bdb59cab40154c809b0bb62780234...
- done. [Time: 6.362085 ms] 
-Refreshing native plugins compatible for Editor in 1.49 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 6.895994 ms] 
+Refreshing native plugins compatible for Editor in 1.47 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
 
------ Total AssetImport time: 0.065024s, AssetImport time: 0.040554s, Asset hashing: 0.003283s [1.4 MB, 428.642120 mb/s]
+----- Total AssetImport time: 0.062168s, AssetImport time: 0.032600s, Asset hashing: 0.002870s [1.4 MB, 490.256470 mb/s]
 
 
 Hashing assets ... 0.007 seconds
-  file open: 0.001 seconds (2 files)
-  file read: 0.002 seconds (3.846 MB)
-  hash: 0.007 seconds
+  file open: 0.000 seconds (2 files)
+  file read: 0.001 seconds (3.846 MB)
+  hash: 0.006 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/Debug/AkSoundEngine.dll - GUID: 08f69d896b612b24c82370f1e61e82ff...
- done. [Time: 6.208546 ms] 
-Refreshing native plugins compatible for Editor in 1.46 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 6.286048 ms] 
+Refreshing native plugins compatible for Editor in 2.53 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.15 ms.
 
------ Total AssetImport time: 0.067215s, AssetImport time: 0.038809s, Asset hashing: 0.007419s [3.8 MB, 518.395264 mb/s]
+----- Total AssetImport time: 0.069740s, AssetImport time: 0.038741s, Asset hashing: 0.006816s [3.8 MB, 564.214966 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1649,23 +1749,23 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.214 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkSoundSeedImpact.dll - GUID: ca1e678a6bf560f49805a2e2a08c1c60...
- done. [Time: 7.765866 ms] 
-Refreshing native plugins compatible for Editor in 1.92 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.12 ms.
+ done. [Time: 5.477794 ms] 
+Refreshing native plugins compatible for Editor in 1.50 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.055805s, AssetImport time: 0.031875s, Asset hashing: 0.001277s [219.5 KB, 167.880890 mb/s]
+----- Total AssetImport time: 0.054294s, AssetImport time: 0.031073s, Asset hashing: 0.001219s [219.5 KB, 175.824631 mb/s]
 
 
-Hashing assets ... 0.001 seconds
+Hashing assets ... 0.002 seconds
   file open: 0.000 seconds (2 files)
   file read: 0.000 seconds (0.477 MB)
   hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libMcDSP.bundle - GUID: 79d94c5b0cc8c7d48bc161a94c0e2899...
- done. [Time: 6.974737 ms] 
-Refreshing native plugins compatible for Editor in 1.27 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 5.587765 ms] 
+Refreshing native plugins compatible for Editor in 1.52 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
 
------ Total AssetImport time: 0.061050s, AssetImport time: 0.037027s, Asset hashing: 0.001566s [488.6 KB, 304.687653 mb/s]
+----- Total AssetImport time: 0.059411s, AssetImport time: 0.029170s, Asset hashing: 0.002003s [488.6 KB, 238.229309 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1673,23 +1773,23 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.346 MB)
   hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/McDSP.dll - GUID: fac0b00cae8af2445b321a3e866c587b...
- done. [Time: 6.728654 ms] 
-Refreshing native plugins compatible for Editor in 1.55 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.14 ms.
+ done. [Time: 5.718167 ms] 
+Refreshing native plugins compatible for Editor in 1.52 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.15 ms.
 
------ Total AssetImport time: 0.059873s, AssetImport time: 0.033937s, Asset hashing: 0.001486s [354.5 KB, 232.968887 mb/s]
+----- Total AssetImport time: 0.055536s, AssetImport time: 0.031283s, Asset hashing: 0.001406s [354.5 KB, 246.211121 mb/s]
 
 
 Hashing assets ... 0.001 seconds
-  file open: 0.000 seconds (2 files)
+  file open: 0.001 seconds (2 files)
   file read: 0.000 seconds (0.074 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkRecorder.bundle - GUID: 48fb5e2ce6f522048a879478547a312e...
- done. [Time: 6.493990 ms] 
-Refreshing native plugins compatible for Editor in 1.24 ms, found 5 plugins.
+ done. [Time: 5.085085 ms] 
+Refreshing native plugins compatible for Editor in 1.30 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.054804s, AssetImport time: 0.031316s, Asset hashing: 0.001300s [75.8 KB, 56.985573 mb/s]
+----- Total AssetImport time: 0.052049s, AssetImport time: 0.029722s, Asset hashing: 0.001325s [75.8 KB, 55.887615 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1697,11 +1797,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.083 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkFlanger.bundle - GUID: 4a0fd04cd8f951048aef72a8f8bc6360...
- done. [Time: 6.024360 ms] 
-Refreshing native plugins compatible for Editor in 1.32 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 4.957087 ms] 
+Refreshing native plugins compatible for Editor in 1.37 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
 
------ Total AssetImport time: 0.064851s, AssetImport time: 0.040192s, Asset hashing: 0.001157s [85.5 KB, 72.131134 mb/s]
+----- Total AssetImport time: 0.061540s, AssetImport time: 0.031397s, Asset hashing: 0.001336s [85.5 KB, 62.478127 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1709,11 +1809,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.264 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkHarmonizer.dll - GUID: 53cde35c2ac4b2646b15132afa2365e1...
- done. [Time: 8.060925 ms] 
-Refreshing native plugins compatible for Editor in 1.65 ms, found 5 plugins.
+ done. [Time: 5.566432 ms] 
+Refreshing native plugins compatible for Editor in 1.46 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.054648s, AssetImport time: 0.032642s, Asset hashing: 0.001196s [270.0 KB, 220.398376 mb/s]
+----- Total AssetImport time: 0.055717s, AssetImport time: 0.032934s, Asset hashing: 0.001247s [270.0 KB, 211.527878 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1721,11 +1821,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.064 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkTremolo.bundle - GUID: 958da18cb0c2d6048b64ab18f25080f9...
- done. [Time: 5.649678 ms] 
-Refreshing native plugins compatible for Editor in 1.36 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 7.070865 ms] 
+Refreshing native plugins compatible for Editor in 1.26 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.27 ms.
 
------ Total AssetImport time: 0.055010s, AssetImport time: 0.031445s, Asset hashing: 0.001385s [65.5 KB, 46.197926 mb/s]
+----- Total AssetImport time: 0.053573s, AssetImport time: 0.029781s, Asset hashing: 0.001161s [65.5 KB, 55.091053 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1733,30 +1833,30 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.109 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkReflect.bundle - GUID: b8add89cd9bdb2149a6fe34ce2c0f44e...
- done. [Time: 6.960915 ms] 
-Refreshing native plugins compatible for Editor in 1.25 ms, found 5 plugins.
+ done. [Time: 5.748214 ms] 
+Refreshing native plugins compatible for Editor in 1.30 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.058118s, AssetImport time: 0.036215s, Asset hashing: 0.001245s [112.0 KB, 87.864166 mb/s]
+----- Total AssetImport time: 0.061248s, AssetImport time: 0.031480s, Asset hashing: 0.001206s [112.0 KB, 90.687485 mb/s]
 
 Updating Assets/Wwise/Deployment/Plugins/Mac/Profile/AkSoundEngine.bundle - GUID: fe2b6d9c59412da4c94bfba2d3ff4719...
- done. [Time: 5.902371 ms] 
-Refreshing native plugins compatible for Editor in 1.93 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.17 ms.
+ done. [Time: 6.613255 ms] 
+Refreshing native plugins compatible for Editor in 1.39 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
 
------ Total AssetImport time: 0.053351s, AssetImport time: 0.032335s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
+----- Total AssetImport time: 0.051792s, AssetImport time: 0.031144s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
 
 
 Hashing assets ... 0.001 seconds
-  file open: 0.001 seconds (2 files)
+  file open: 0.000 seconds (2 files)
   file read: 0.000 seconds (0.215 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkFlanger.dll - GUID: c6a05e9cc4399d749a00168243547f1f...
- done. [Time: 6.482572 ms] 
-Refreshing native plugins compatible for Editor in 1.57 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 7.016481 ms] 
+Refreshing native plugins compatible for Editor in 2.56 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.16 ms.
 
------ Total AssetImport time: 0.054028s, AssetImport time: 0.032287s, Asset hashing: 0.001269s [220.5 KB, 169.643585 mb/s]
+----- Total AssetImport time: 0.055012s, AssetImport time: 0.031972s, Asset hashing: 0.001232s [220.5 KB, 174.858887 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1764,11 +1864,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.221 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkTimeStretch.dll - GUID: b7aa9eacd8e394048a6df120f94ff105...
- done. [Time: 7.472610 ms] 
-Refreshing native plugins compatible for Editor in 1.61 ms, found 5 plugins.
+ done. [Time: 6.795638 ms] 
+Refreshing native plugins compatible for Editor in 1.52 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.059513s, AssetImport time: 0.037247s, Asset hashing: 0.001125s [226.0 KB, 196.160202 mb/s]
+----- Total AssetImport time: 0.060498s, AssetImport time: 0.030791s, Asset hashing: 0.001267s [226.0 KB, 174.204987 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1776,23 +1876,23 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.175 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkRecorder.dll - GUID: 5dc518cc4f56f4d459c61ba8ac91e61b...
- done. [Time: 6.207645 ms] 
-Refreshing native plugins compatible for Editor in 1.50 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
+ done. [Time: 6.397521 ms] 
+Refreshing native plugins compatible for Editor in 1.89 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
 
------ Total AssetImport time: 0.055586s, AssetImport time: 0.032611s, Asset hashing: 0.001133s [179.5 KB, 154.730301 mb/s]
+----- Total AssetImport time: 0.053631s, AssetImport time: 0.030376s, Asset hashing: 0.001400s [179.5 KB, 125.239288 mb/s]
 
 
 Hashing assets ... 0.001 seconds
   file open: 0.000 seconds (2 files)
   file read: 0.000 seconds (0.244 MB)
-  hash: 0.000 seconds
+  hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkSoundSeedAir.dll - GUID: c787f20d0d672d349b54d6363709d476...
- done. [Time: 6.237091 ms] 
+ done. [Time: 5.494621 ms] 
 Refreshing native plugins compatible for Editor in 1.51 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.054647s, AssetImport time: 0.031945s, Asset hashing: 0.001188s [249.5 KB, 205.056519 mb/s]
+----- Total AssetImport time: 0.061190s, AssetImport time: 0.038886s, Asset hashing: 0.001416s [249.5 KB, 172.113968 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1800,11 +1900,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.280 MB)
   hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkConvolutionReverb.dll - GUID: 20d8940d84395774fb7a4cb056ebe1b3...
- done. [Time: 6.077543 ms] 
-Refreshing native plugins compatible for Editor in 1.50 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 6.036962 ms] 
+Refreshing native plugins compatible for Editor in 2.34 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
 
------ Total AssetImport time: 0.063129s, AssetImport time: 0.032648s, Asset hashing: 0.001288s [287.0 KB, 217.708099 mb/s]
+----- Total AssetImport time: 0.055953s, AssetImport time: 0.032506s, Asset hashing: 0.001365s [287.0 KB, 205.299713 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1812,11 +1912,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.235 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkFlanger.dll - GUID: 2769102d0c2a44d4f964cf21bb7753e3...
- done. [Time: 7.877339 ms] 
-Refreshing native plugins compatible for Editor in 1.38 ms, found 5 plugins.
+ done. [Time: 5.432424 ms] 
+Refreshing native plugins compatible for Editor in 1.56 ms, found 5 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.055083s, AssetImport time: 0.032696s, Asset hashing: 0.001176s [241.0 KB, 200.095139 mb/s]
+----- Total AssetImport time: 0.054503s, AssetImport time: 0.032494s, Asset hashing: 0.001219s [241.0 KB, 193.044571 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1824,11 +1924,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.079 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkStereoDelay.bundle - GUID: 6a403b3d1b087f5468e4713f49c45203...
- done. [Time: 6.225673 ms] 
-Refreshing native plugins compatible for Editor in 1.70 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.21 ms.
+ done. [Time: 5.540592 ms] 
+Refreshing native plugins compatible for Editor in 1.36 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
 
------ Total AssetImport time: 0.053880s, AssetImport time: 0.031778s, Asset hashing: 0.001290s [80.4 KB, 60.865955 mb/s]
+----- Total AssetImport time: 0.057276s, AssetImport time: 0.035936s, Asset hashing: 0.001181s [80.4 KB, 66.471237 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1836,23 +1936,23 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.224 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkReflect.dll - GUID: e3dbb6fd31b905d4684e8c0abe008a67...
- done. [Time: 7.322978 ms] 
-Refreshing native plugins compatible for Editor in 1.46 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+ done. [Time: 5.630131 ms] 
+Refreshing native plugins compatible for Editor in 2.32 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.062271s, AssetImport time: 0.033870s, Asset hashing: 0.001240s [229.0 KB, 180.409668 mb/s]
+----- Total AssetImport time: 0.053461s, AssetImport time: 0.030469s, Asset hashing: 0.001165s [229.0 KB, 191.997086 mb/s]
 
 
 Hashing assets ... 0.001 seconds
-  file open: 0.001 seconds (2 files)
+  file open: 0.000 seconds (2 files)
   file read: 0.000 seconds (0.145 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkHarmonizer.bundle - GUID: a2a29b5e2daf43243a532eacd54f59b4...
- done. [Time: 6.469051 ms] 
-Refreshing native plugins compatible for Editor in 2.21 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.19 ms.
+ done. [Time: 5.245234 ms] 
+Refreshing native plugins compatible for Editor in 1.34 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.15 ms.
 
------ Total AssetImport time: 0.053604s, AssetImport time: 0.030494s, Asset hashing: 0.001642s [148.2 KB, 88.121696 mb/s]
+----- Total AssetImport time: 0.053033s, AssetImport time: 0.031117s, Asset hashing: 0.001283s [148.2 KB, 112.777901 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1860,11 +1960,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.538 MB)
   hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/iZotope.dll - GUID: f819036e12320614cb8dab651b443624...
- done. [Time: 6.401446 ms] 
-Refreshing native plugins compatible for Editor in 1.47 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
+ done. [Time: 5.407485 ms] 
+Refreshing native plugins compatible for Editor in 1.59 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.055045s, AssetImport time: 0.032743s, Asset hashing: 0.001566s [0.5 MB, 343.614532 mb/s]
+----- Total AssetImport time: 0.065032s, AssetImport time: 0.041036s, Asset hashing: 0.001715s [0.5 MB, 313.811859 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1872,11 +1972,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.238 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkTimeStretch.dll - GUID: d7d01f9ea6afaee48b4d50ede88870c8...
- done. [Time: 6.770119 ms] 
-Refreshing native plugins compatible for Editor in 1.77 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 5.585061 ms] 
+Refreshing native plugins compatible for Editor in 1.51 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
 
------ Total AssetImport time: 0.060870s, AssetImport time: 0.031827s, Asset hashing: 0.001297s [243.5 KB, 183.386917 mb/s]
+----- Total AssetImport time: 0.054845s, AssetImport time: 0.032267s, Asset hashing: 0.001255s [243.5 KB, 189.444763 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1884,11 +1984,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.226 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/SynthOne.dll - GUID: 1b2654def712e6b488919e6dd8a6ba1c...
- done. [Time: 6.624693 ms] 
-Refreshing native plugins compatible for Editor in 1.96 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
+ done. [Time: 6.659828 ms] 
+Refreshing native plugins compatible for Editor in 1.49 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.055344s, AssetImport time: 0.032842s, Asset hashing: 0.001168s [231.0 KB, 193.224548 mb/s]
+----- Total AssetImport time: 0.052726s, AssetImport time: 0.030438s, Asset hashing: 0.001165s [231.0 KB, 193.723618 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1896,35 +1996,35 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.056 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Mac/DSP/libAkSoundSeedImpact.bundle - GUID: 111d762f2fe41124792f0375f4f6597a...
- done. [Time: 5.974783 ms] 
-Refreshing native plugins compatible for Editor in 2.09 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.12 ms.
+ done. [Time: 5.000655 ms] 
+Refreshing native plugins compatible for Editor in 1.38 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.058773s, AssetImport time: 0.033226s, Asset hashing: 0.001221s [56.9 KB, 45.522316 mb/s]
+----- Total AssetImport time: 0.060707s, AssetImport time: 0.036734s, Asset hashing: 0.001162s [56.9 KB, 47.817387 mb/s]
 
 
 Hashing assets ... 0.001 seconds
   file open: 0.000 seconds (2 files)
   file read: 0.000 seconds (0.256 MB)
-  hash: 0.000 seconds
+  hash: 0.001 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkConvolutionReverb.dll - GUID: b027b95f2a5594a43b99a7f56013eebb...
- done. [Time: 7.245758 ms] 
-Refreshing native plugins compatible for Editor in 1.47 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+ done. [Time: 6.884877 ms] 
+Refreshing native plugins compatible for Editor in 1.53 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.17 ms.
 
------ Total AssetImport time: 0.062262s, AssetImport time: 0.034463s, Asset hashing: 0.001233s [262.0 KB, 207.612183 mb/s]
+----- Total AssetImport time: 0.056774s, AssetImport time: 0.033439s, Asset hashing: 0.001460s [262.0 KB, 175.268112 mb/s]
 
 
 Hashing assets ... 0.001 seconds
-  file open: 0.000 seconds (2 files)
+  file open: 0.001 seconds (2 files)
   file read: 0.000 seconds (0.208 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkMotion.dll - GUID: 55203f9f52dc5c1489e6efb85e0f42ca...
- done. [Time: 7.404404 ms] 
-Refreshing native plugins compatible for Editor in 1.49 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.12 ms.
+ done. [Time: 5.483804 ms] 
+Refreshing native plugins compatible for Editor in 1.65 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.059823s, AssetImport time: 0.035145s, Asset hashing: 0.001221s [213.0 KB, 170.366119 mb/s]
+----- Total AssetImport time: 0.054391s, AssetImport time: 0.032008s, Asset hashing: 0.001617s [213.0 KB, 128.621567 mb/s]
 
 
 Hashing assets ... 0.001 seconds
@@ -1932,11 +2032,11 @@ Hashing assets ... 0.001 seconds
   file read: 0.000 seconds (0.214 MB)
   hash: 0.000 seconds
 Updating Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkGuitarDistortion.dll - GUID: b92f5dcfdffdb9644a3ca9d8b1639c88...
- done. [Time: 7.680534 ms] 
-Refreshing native plugins compatible for Editor in 1.77 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+ done. [Time: 6.411643 ms] 
+Refreshing native plugins compatible for Editor in 1.52 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 
------ Total AssetImport time: 0.058212s, AssetImport time: 0.034529s, Asset hashing: 0.001084s [219.5 KB, 197.808243 mb/s]
+----- Total AssetImport time: 0.059501s, AssetImport time: 0.037142s, Asset hashing: 0.001184s [219.5 KB, 181.044418 mb/s]
 
 WwiseUnity: Refreshing asset database.
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
@@ -1948,7 +2048,7 @@ UnityEditor.EditorApplication:Internal_CallDelayFunctions() (at C:\buildslave\un
  
 (Filename: C:/Users/1301755/Downloads/Still/Idea4Prototype/Assets/Wwise/Editor/WwiseSetupWizard/AkWwiseSetupWizard.cs Line: 44)
 
-Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.008432 seconds (Nothing changed)
+Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.009822 seconds (Nothing changed)
 WwiseUnity: End of modify setup, exiting Unity.
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -1959,24 +2059,24 @@ UnityEditor.EditorApplication:Internal_CallDelayFunctions() (at C:\buildslave\un
  
 (Filename: C:/Users/1301755/Downloads/Still/Idea4Prototype/Assets/Wwise/Editor/WwiseSetupWizard/AkWwiseSetupWizard.cs Line: 47)
 
-Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.008624 seconds (Nothing changed)
+Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.009373 seconds (Nothing changed)
 
 Hashing assets ... 0.001 seconds
-  file open: 0.000 seconds (2 files)
-  file read: 0.000 seconds (0.013 MB)
+  file open: 0.001 seconds (2 files)
+  file read: 0.000 seconds (0.001 MB)
   hash: 0.000 seconds
-Updating Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset - GUID: ec2accb673612a245ac6756f05dd0552...
- done. [Time: 6.235588 ms] 
+Updating Assets/Wwise/Editor/ProjectData/AkWwiseProjectData 4.asset - GUID: e459d85f0d285a743aa693bd14164785...
+ done. [Time: 5.120540 ms] 
 Refreshing native plugins compatible for Editor in 0.79 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.12 ms.
+Preloading 1 native plugins for Editor in 0.11 ms.
 
------ Total AssetImport time: 0.071696s, AssetImport time: 0.028119s, Asset hashing: 0.001309s [13.1 KB, 9.763000 mb/s]
+----- Total AssetImport time: 0.069294s, AssetImport time: 0.025763s, Asset hashing: 0.001342s [1.0 KB, 0.733443 mb/s]
 
-Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.009939 seconds (Nothing changed)
+Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.009627 seconds (Nothing changed)
 Cleanup mono
 [usbmuxd] Stop listen thread
 [usbmuxd] Listen thread exiting
 Checking for leaked weakptr:
   Found no leaked weakptrs.
-##utp:{"type":"MemoryLeaks","allocatedMemory":289901,"memoryLabels":[{"Default":68},{"Permanent":20960},{"NewDelete":57062},{"Thread":584},{"Manager":2704},{"GfxDevice":6596},{"Physics":8},{"Serialization":15712},{"JobScheduler":136},{"Renderer":224},{"Terrain":224},{"STL":1024},{"String":56712},{"DynamicArray":11292},{"Curl":1296},{"PoolAlloc":-224},{"ScriptManager":4040},{"Sprites":1200},{"VR":8848},{"EditorGui":12},{"EditorUtility":544},{"AssetImporter":32},{"RestService":72},{"License":975},{"UnityConnect":9240},{"Collab":90560}]}
-debugger-agent: Unable to listen on 3456
+##utp:{"type":"MemoryLeaks","allocatedMemory":292711,"memoryLabels":[{"Default":68},{"Permanent":20960},{"NewDelete":59070},{"Thread":584},{"Manager":2704},{"GfxDevice":6596},{"Physics":8},{"Serialization":15712},{"JobScheduler":136},{"Renderer":224},{"Terrain":224},{"STL":1024},{"String":56938},{"DynamicArray":11292},{"Curl":1296},{"PoolAlloc":-224},{"ScriptManager":4040},{"Sprites":1200},{"VR":8848},{"EditorGui":12},{"EditorUtility":544},{"AssetImporter":32},{"RestService":72},{"License":975},{"UnityConnect":9240},{"Collab":91136}]}
+debugger-agent: Unable to listen on 3444
