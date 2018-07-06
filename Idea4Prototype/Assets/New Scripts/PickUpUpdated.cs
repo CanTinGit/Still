@@ -212,7 +212,6 @@ public class PickUpUpdated : MonoBehaviour
                 {
                     if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                     {
-                        Debug.Log("pressing");
                         picked.gameObject.AddComponent<CheckVelocity>();
                         throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
                         throwArc.SetActive(false);
@@ -361,7 +360,6 @@ public class PickUpUpdated : MonoBehaviour
                 {
                     if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                     {
-                        Debug.Log("pressing");
                         throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
                         throwArc.SetActive(false);
                         SimulateThrow simulate = picked.AddComponent<SimulateThrow>();
@@ -397,7 +395,7 @@ public class PickUpUpdated : MonoBehaviour
        // float zDis = picked.GetComponent<BoxCollider>().bounds.size.z * Percentagez;
         float zDis = picked.GetComponent<Collider>().bounds.size.z * Percentagez;           //Possible fix for any collider type on the pickup objects
         //set the new position based on the percentage of the mesh's dimensions
-        picked.transform.position = this.transform.position + (this.transform.forward*zDis) + new Vector3(0.0f,yDis,0.0f);
+        picked.transform.position = this.transform.position + (this.transform.forward*zDis) + (this.transform.up * yDis) + (this.transform.up * 0.15f);
         picked.transform.rotation = Quaternion.Euler(new Vector3(picked.transform.rotation.eulerAngles.x, this.transform.parent.rotation.eulerAngles.y , picked.transform.rotation.eulerAngles.z));
     }
     //the function which controls the drag

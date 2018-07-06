@@ -66,7 +66,7 @@ public class AudioTestScript : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().PlayAudio(materialName, force, "Impact_Force");
             //the sound being played ( i think??? )
             //AkSoundEngine.PostEvent("can_impact", gameObject);
-            if (noiseMade > -20)
+            if (noiseMade > -20 && GameObject.Find("Camera") != null)
             {
                 //use this if you want to make the camera to move to this object ( replace "this.transform.position" with the object you want the camera to look at)
                 GameObject.Find("Camera").GetComponent<CameraAI>().DetectedNoise(this.transform.position);

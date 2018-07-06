@@ -83,6 +83,14 @@ public class Timer : MonoBehaviour {
         }
         //Debug.Log("here 1");
     }
+
+    public void SetTimer(int tMins, int uMins, int tSecs, int uSecs)
+    {
+        tenMins = tMins;
+        unitMins = uMins;
+        tenSeconds = tSecs;
+        unitSeconds = uSecs;
+    }
 }
 
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoalRuleCode : MonoBehaviour
 {
@@ -39,10 +40,9 @@ public class GoalRuleCode : MonoBehaviour
         {
             // Add to the number of players in goal area.
             NumPlayers++;
-            
             if(NumPlayers == MenuScript.Instance.GetNumberofPlayers())
             {
-                // All players are in goal, go to next scene
+                // Fade to next level if possible else go to main menu
                 MenuScript.Instance.FadeToNextLevel();
             }
         }

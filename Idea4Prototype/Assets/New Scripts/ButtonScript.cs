@@ -21,26 +21,30 @@ public class ButtonScript : MonoBehaviour {
         }
         else if (isGoToNextLevelButton)
         {
-            gameObject.GetComponent<Button>().onClick.AddListener(() => MenuScript.Instance.FadeToNextLevel(pausePanel));                   
+            gameObject.GetComponent<Button>().onClick.AddListener(() => SetRatingOnBack());                   
         }
         else if (isHelpButton)
         {
             gameObject.GetComponent<Button>().onClick.AddListener(() => HelpUI());
         }
     }
+    void SetRatingOnBack()
+    {
+        GameObject.FindWithTag("Timer").GetComponent<Timer>().SetTimer(0, 0, 0, 0);
+        MenuScript.Instance.FadeToNextLevel(pausePanel);
+    }
     void HelpUI()
     {
         ControllerStringToImage stringToImage = new ControllerStringToImage();
         if (helpUI.active == false)
         {
-            Debug.Log(MenuScript.Instance.pausePlayerNum - 1);
-            helpUI.SetActive(true);        
+            helpUI.SetActive(true);
             //Interact
-            helpUI.transform.GetChild(2).transform.GetChild(1).GetComponent<Image>().sprite = stringToImage.ConvertStringToImage(MenuScript.Instance.GetPlayerKeys()[MenuScript.Instance.pausePlayerNum - 1].GetKeys()[6].ToString());
+            helpUI.transform.GetChild(2).transform.GetChild(1).GetComponent<Image>().sprite = stringToImage.ConvertStringToImage(MenuScript.Instance.GetPlayerKeys()[MenuScript.Instance.GetNumberofPlayers() - 1].GetKeys()[6].ToString());
             //Jump        
-            helpUI.transform.GetChild(2).transform.GetChild(0).GetComponent<Image>().sprite = stringToImage.ConvertStringToImage(MenuScript.Instance.GetPlayerKeys()[MenuScript.Instance.pausePlayerNum - 1].GetKeys()[5].ToString());
+            helpUI.transform.GetChild(2).transform.GetChild(0).GetComponent<Image>().sprite = stringToImage.ConvertStringToImage(MenuScript.Instance.GetPlayerKeys()[MenuScript.Instance.GetNumberofPlayers() - 1].GetKeys()[5].ToString());
             //Throw
-            helpUI.transform.GetChild(2).transform.GetChild(2).GetComponent<Image>().sprite = stringToImage.ConvertStringToImage(MenuScript.Instance.GetPlayerKeys()[MenuScript.Instance.pausePlayerNum - 1].GetKeys()[4].ToString());
+            helpUI.transform.GetChild(2).transform.GetChild(2).GetComponent<Image>().sprite = stringToImage.ConvertStringToImage(MenuScript.Instance.GetPlayerKeys()[MenuScript.Instance.GetNumberofPlayers() - 1].GetKeys()[4].ToString());
         }
         else
         {

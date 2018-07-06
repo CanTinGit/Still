@@ -44,7 +44,6 @@ public class SimulateThrow : MonoBehaviour {
             float y = (movementArray[i - 1].x - movementArray[i - 2].x) / 0.01666f;
             float z = (movementArray[i-1].z - movementArray[i-2].z) / 0.01666f;
             //Debug.Log(new Vector3(x, -y, z));
-            Debug.Log("Throw");
             if (y >= 0)
             {
                 gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, -y, z);

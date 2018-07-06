@@ -168,6 +168,7 @@ public class MovementUpdated : MonoBehaviour {
                     AkSoundEngine.PostEvent("player_jump", gameObject);
                     isMoving = true;
                     rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
+                    grounded = false;
                 }
             }
 

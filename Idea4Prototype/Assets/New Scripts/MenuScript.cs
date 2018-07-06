@@ -44,6 +44,7 @@ public class MenuScript : MonoBehaviour
     //What each player controller settings is
     int whichPlayerKey;
     //Global variable to get the only one game manager
+    GameObject hoveringOver;
     public static MenuScript Instance
     {
         get
@@ -67,7 +68,7 @@ public class MenuScript : MonoBehaviour
     //on awake we intialise the player settings which is the default values and also set up the singleton
     void Awake()
     {
-
+       // GameObject.FindWithTag("Timer").GetComponent<Timer>().SetTimer(0, 5, 0, 0);
         playerdata = new PlayerData();
         for(int i =0; i < playerSetting.Length;i++)
         {
@@ -85,8 +86,25 @@ public class MenuScript : MonoBehaviour
         //Set the max level by the player data
         maxLevel = playerdata.getCurrentLevel();
         whichPlayerKey = 0;
+        hoveringOver = eventSystem.GetComponent<EventSystem>().currentSelectedGameObject;
+        
+    }
+    void Start()
+    {
+        InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
     }
 
+    void CheckToPlayHoverSound()
+    {
+        if(eventSystem!=null)
+        {
+            if (hoveringOver != eventSystem.GetComponent<EventSystem>().currentSelectedGameObject)
+            {
+                AkSoundEngine.PostEvent("hover", gameObject);
+                hoveringOver = eventSystem.GetComponent<EventSystem>().currentSelectedGameObject;
+            }
+        }
+    }
     //intialising variables and setting up gameobjects and how the home screen should look like
     public void IntialiseAndSetScene()
     {
@@ -526,9 +544,12 @@ public class MenuScript : MonoBehaviour
     {
         AkSoundEngine.PostEvent("click_back", gameObject);
         SceneManager.LoadScene("MainMenu");
+        eventSystem = GameObject.Find("EventSystem");
+        InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
         gamePaused = false;
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
+        pausePlayerNum = 0;
         //Invoke("DelayReturn", 0.05f);
     }
 
@@ -549,8 +570,8 @@ public class MenuScript : MonoBehaviour
     // A fade effect to go to next level
     public void FadeToNextLevel(GameObject pause_)
     {
-        int index = SceneManager.GetActiveScene().buildIndex;
-        if (SceneManager.GetActiveScene().buildIndex !=Application.levelCount-1)
+        //int index = SceneManager.GetActiveScene().buildIndex;
+        //if (SceneManager.GetActiveScene().buildIndex !=Application.levelCount-1)
         {
             if (pause_.activeSelf == true)
             {
@@ -567,13 +588,13 @@ public class MenuScript : MonoBehaviour
     public void FadeToNextLevel()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        if (SceneManager.GetActiveScene().buildIndex != Application.levelCount - 1)
-        {
+        //if (SceneManager.GetActiveScene().buildIndex != Application.levelCount - 1)
+        //{
             CompleteLevelAndRate();
             //Turn the trigger on to play the fade animation
             sceneFade = GameObject.Find("FadeSceneHolder").GetComponent<Animator>();
             sceneFade.SetTrigger("FadeOut");
-        }
+        //}
 
     }
 
@@ -591,16 +612,22 @@ public class MenuScript : MonoBehaviour
         // Check if the index of the active scene is less than max level, if it is, load to next level and make the access_level add 1 to let player access to the scene
         if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
         {
+            CancelInvoke("CheckToPlayHoverSound");
+            eventSystem = null;
+            pausePlayerNum = 0;
             maxLevel = SceneManager.GetActiveScene().buildIndex + 1;
             //Record the level in player data
             playerdata.setCurrentLevel(maxLevel);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 
     //Load scene according to the name of scene
-    void LoadLevel(string sceneName)
-    {
+    public void LoadLevel(string sceneName)
+    {     
+        CancelInvoke("CheckToPlayHoverSound");
+        eventSystem = null;
         SceneManager.LoadScene(sceneName);
     }
     //flip the menu buttons to the opposite state
@@ -662,6 +689,20 @@ public class MenuScript : MonoBehaviour
     public void SetPlayerPaused(bool paused_)
     {
         gamePaused = paused_;
+        if(gamePaused==true)
+        {
+            if(eventSystem==null)
+            {
+                eventSystem = GameObject.Find("EventSystem");
+                hoveringOver = eventSystem.GetComponent<EventSystem>().currentSelectedGameObject;
+            }
+            InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);          
+        }
+        else if(gamePaused==false)
+        {
+            //eventSystem = null;
+            CancelInvoke("CheckToPlayHoverSound");
+        }
     }
     //switch the player keys
     //will also need to do the switch on display
