@@ -50,37 +50,37 @@ public class PickUpUpdated : MonoBehaviour
         {
             // PickUpAndThrowCode(1, playerKeys.GetKeys()[6].ToString().Insert(8,"1"), playerKeys.GetKeys()[4].ToString().Insert(8, "1"));
             PickUpAndThrowCode(1, playerKeys[0].GetKeys()[6].ToString().Insert(8, "1"), playerKeys[0].GetKeys()[4].ToString().Insert(8, "1"), playerKeys[0].GetThrowPower());
-            //if (maxPlayer>1)
+            if (maxPlayer>1)
             {
                 PickUpAndThrowCode(2, playerKeys[1].GetKeys()[6].ToString().Insert(8, "2"), playerKeys[1].GetKeys()[4].ToString().Insert(8, "2"), playerKeys[1].GetThrowPower());
             }
-            //if (maxPlayer > 2)
+            if (maxPlayer > 2)
             {
                 PickUpAndThrowCode(3, playerKeys[2].GetKeys()[6].ToString().Insert(8, "3"), playerKeys[2].GetKeys()[4].ToString().Insert(8, "3"), playerKeys[2].GetThrowPower());
             }
-            //if (maxPlayer > 3)
+            if (maxPlayer > 3)
             {
                 PickUpAndThrowCode(4, playerKeys[3].GetKeys()[6].ToString().Insert(8, "4"), playerKeys[3].GetKeys()[4].ToString().Insert(8, "4"), playerKeys[3].GetThrowPower());
             }
         }
-        //probably remove this and controller once we are done
-        else
-        {
-            // PickUpAndThrowCode(1, playerKeys.GetKeys()[6].ToString().Insert(8,"1"), playerKeys.GetKeys()[4].ToString().Insert(8, "1"));
-            PickUpAndThrowCodeNoController(1, playerKeys[0].GetKeys()[6], playerKeys[0].GetKeys()[4], playerKeys[0].GetThrowPower());
-            //if (maxPlayer>1)
-            {
-                PickUpAndThrowCodeNoController(2, playerKeys[1].GetKeys()[6], playerKeys[1].GetKeys()[4], playerKeys[1].GetThrowPower());
-            }
-            //if (maxPlayer > 2)
-            {
-                PickUpAndThrowCodeNoController(3, playerKeys[2].GetKeys()[6], playerKeys[2].GetKeys()[4], playerKeys[2].GetThrowPower());
-            }
-            //if (maxPlayer > 3)
-            {
-                PickUpAndThrowCodeNoController(4, playerKeys[3].GetKeys()[6], playerKeys[3].GetKeys()[4], playerKeys[3].GetThrowPower());
-            }
-        }
+        ////probably remove this and controller once we are done
+        //else
+        //{
+        //    // PickUpAndThrowCode(1, playerKeys.GetKeys()[6].ToString().Insert(8,"1"), playerKeys.GetKeys()[4].ToString().Insert(8, "1"));
+        //    PickUpAndThrowCodeNoController(1, playerKeys[0].GetKeys()[6], playerKeys[0].GetKeys()[4], playerKeys[0].GetThrowPower());
+        //    //if (maxPlayer>1)
+        //    {
+        //        PickUpAndThrowCodeNoController(2, playerKeys[1].GetKeys()[6], playerKeys[1].GetKeys()[4], playerKeys[1].GetThrowPower());
+        //    }
+        //    //if (maxPlayer > 2)
+        //    {
+        //        PickUpAndThrowCodeNoController(3, playerKeys[2].GetKeys()[6], playerKeys[2].GetKeys()[4], playerKeys[2].GetThrowPower());
+        //    }
+        //    //if (maxPlayer > 3)
+        //    {
+        //        PickUpAndThrowCodeNoController(4, playerKeys[3].GetKeys()[6], playerKeys[3].GetKeys()[4], playerKeys[3].GetThrowPower());
+        //    }
+        //}
 
 
     }
@@ -127,9 +127,11 @@ public class PickUpUpdated : MonoBehaviour
                         //if the object is the lever then run this
                         if (picked.name == "LeverFloor")
                         {
+                            Debug.Log("the lever has been detected and used as a picked item");
                             //check if the lever has been pulled first and if not then
                             if (picked.GetComponent<ActiveInScene>().GetActive() != true)
                             {
+                                Debug.Log("the lever has the active in scene script and now going towards the connect");
                                 //rotate the object based on the distance between player and the lever
                                 InvokeRepeating("LeverConnect", 0.0f, 0.01666f);
                                 //get the starting distance between the player and the player
@@ -414,6 +416,7 @@ public class PickUpUpdated : MonoBehaviour
     //function for when the object interacted with is a lever
     void LeverConnect()
     {
+        Debug.Log("the lever is now being run in code to be rotated");
         //get the distance between the object and the player
         float Distance = Vector2.Distance(picked.transform.position, this.transform.position);
         //get the percentage of the start and the new distance
@@ -433,7 +436,8 @@ public class PickUpUpdated : MonoBehaviour
         //change the rotation based on percentage being between 0% - 100%
         if ((percentage > 0.0f) & (percentage < 1.01f))
         {
-            picked.transform.GetChild(0).transform.eulerAngles = startAngle - new Vector3(0.0f, 0.0f, Pulled);
+            Debug.Log("the thing getting rotated is" + picked.name);
+            picked.transform.GetChild(0).transform.eulerAngles = startAngle - new Vector3(Pulled, 0.0f, 0.0f);
         }
         //if we have reached max pull then turn off the lever function and set the lever to being active
         else if(percentage>1.0f)
@@ -444,6 +448,7 @@ public class PickUpUpdated : MonoBehaviour
             picked = null;
             //since we are no longer holding a object then turn it false
             holdingPickUp = false;
+            Debug.Log("finished the full pull");
         }
     }
 

@@ -178,9 +178,42 @@ public class LevelBuilder : MonoBehaviour
             CancelInvoke("InteractWithObject");
             FlipItemConfigPanel();
             StartUpDetails();
+            InvokeRepeating("PutOnAxisArrows", 0.0f, 0.01667f) ;
             InvokeRepeating("InteractingControls",0.0f,0.01666f);
             FixAndUnfixObject();
         }
+    }
+    void PutOnAxisArrows()
+    {
+        GameObject arrow;
+        if (GameObject.FindGameObjectWithTag("LevelBuilderAxis")==null)
+        {
+            for(int i = 0; i<3;i++)
+            {
+                arrow = Instantiate(Resources.Load<GameObject>("LevelBuilder/AxisArrows"));
+                ArrowResize classScript = arrow.AddComponent<ArrowResize>();
+                if(i==0)
+                {
+                    classScript.SetAxis("X");
+                }
+                else if(i == 1)
+                {
+                    classScript.SetAxis("Y");
+                }
+                else if(i == 2)
+                {
+                    classScript.SetAxis("Z");
+                }
+                classScript.SetObject(interactedObject);
+                Debug.Log("fsfs");
+            }
+
+        }
+        else
+        {
+            //gm = GameObject.FindGameObjectWithTag("LevelBuilderAxis");
+        }
+        //gm.transform.position =  new Vector3(0.0f,(interactedObject.transform.position.y + gm.GetComponent<MeshCollider>().bounds.extents.y),0.0f);
     }
     public void ConfigPressed(GameObject button_)
     {
@@ -235,8 +268,18 @@ public class LevelBuilder : MonoBehaviour
                 editorState = EditorState.None;
                 ResetConfigButtonColor();
                 CancelInvoke("InteractingControls");
+                CancelInvoke("PutOnAxisArrows");
+                RemoveArrowAxis();
                 InvokeRepeating("InteractWithObject", 0.0f, 0.01667f);
             }
+        }
+    }
+    void RemoveArrowAxis()
+    {
+        GameObject[] arrows = GameObject.FindGameObjectsWithTag("LevelBuilderAxis");
+        foreach(GameObject arrow in arrows)
+        {
+            Destroy(arrow);
         }
     }
     void InteractKeyControls()
@@ -297,9 +340,6 @@ public class LevelBuilder : MonoBehaviour
             }
         }
     }
-
-
-
     void StateRotate()
     {
         //get the intial click location

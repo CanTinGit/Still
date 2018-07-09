@@ -68,9 +68,9 @@ public class MenuScript : MonoBehaviour
     //on awake we intialise the player settings which is the default values and also set up the singleton
     void Awake()
     {
-
         playerdata = new PlayerData();
-        for(int i =0; i < playerSetting.Length;i++)
+        Debug.Log(playerdata.firstTime);
+        for (int i =0; i < playerSetting.Length;i++)
         {
             playerSetting[i] = new PlayerKeys();
             playerSetting[i].IntialiseValues();
@@ -83,16 +83,19 @@ public class MenuScript : MonoBehaviour
         }
         IntialiseAndSetScene();
         LoadPlayerData();
+        Debug.Log(playerdata.firstTime);
         //Set the max level by the player data
         maxLevel = playerdata.getCurrentLevel();
         whichPlayerKey = 0;
         hoveringOver = eventSystem.GetComponent<EventSystem>().currentSelectedGameObject;
+        Debug.Log(playerdata.firstTime);
 
     }
     void Start()
     {
         InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
         AkSoundEngine.PostEvent("play_intro", gameObject);
+
     }
 
     void CheckToPlayHoverSound()
@@ -694,8 +697,10 @@ public class MenuScript : MonoBehaviour
         //If there is no any data, initialize the player data
         if (!File.Exists(Application.persistentDataPath + "/PlayerData.dat"))
         {
+            Debug.Log(playerdata.firstTime);
             return;
         }
+        Debug.Log(Application.persistentDataPath);
         //If there is player data, load it
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/PlayerData.dat", FileMode.Open);
@@ -756,5 +761,13 @@ public class MenuScript : MonoBehaviour
     public int GetMaxLevel()
     {
         return maxLevel;
+    }
+    public bool GetPlayerFirstTime()
+    {
+        return playerdata.firstTime;
+    }
+    public void SetPlayerFirstTime(bool first)
+    {
+        playerdata.firstTime = first;
     }
 }
