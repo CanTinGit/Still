@@ -2544,6 +2544,94 @@
 								<ActiveSource Name="fx_button" ID="{138F4628-9F6E-4F1C-B40B-51EC0BE63857}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="electricity" ID="{785360B3-C16A-499D-A27F-518E9B87E5E9}" ShortID="134719227">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{32C4800F-1D3A-4ADA-A2F0-398EB234B92C}" ShortID="365708957">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<Custom>
+														<ModulatorEnvelope Name="Modulator Envelope (Custom)" ID="{4C2A017C-4751-4603-9CA9-6CE31EF47EA7}" ShortID="279731683">
+															<PropertyList>
+																<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.1">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{4E681109-2F47-41D7-B053-9971BCD0EA01}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="0.2"/>
+																					<Property Name="Min" Type="Real64" Value="-0.1"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="EnvelopeAutoRelease" Type="bool" Value="True"/>
+																<Property Name="EnvelopeReleaseTime" Type="Real64" Value="0.2">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{88B448EF-996B-48DD-AED9-B98F1BCBBE70}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="0.5"/>
+																					<Property Name="Min" Type="Real64" Value="-0.2"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+															</PropertyList>
+														</ModulatorEnvelope>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{10BE1463-5568-4336-96C1-989BDDF6DD67}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>21</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0</YPos>
+														<Flags>53</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="electricity" ID="{116A10B1-AEC8-4687-A1DA-553274C22087}" ShortID="725526311">
+									<Language>SFX</Language>
+									<AudioFile>electricity.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="electricity" ID="{116A10B1-AEC8-4687-A1DA-553274C22087}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Voice" ID="{C85A6BD0-2130-4756-9A48-C60BB731FBA9}" ShortID="456055418">

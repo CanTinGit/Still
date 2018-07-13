@@ -15,6 +15,41 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{B4566772-D5DA-4865-BCD1-ED17C1064C9C}" ShortID="79912181">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+								<Property Name="SeekPercent" Type="Real64" Value="50">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6DD26647-9D36-45B4-8FBB-96A11296836C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="45"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="electricity" ID="{785360B3-C16A-499D-A27F-518E9B87E5E9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{50252757-222B-41D3-87D1-DB89049F2060}" ShortID="368741657">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="electricity" ID="{785360B3-C16A-499D-A27F-518E9B87E5E9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="object_impact" ID="{2AC362AC-B55E-43C8-827B-7269BFA7B694}">
