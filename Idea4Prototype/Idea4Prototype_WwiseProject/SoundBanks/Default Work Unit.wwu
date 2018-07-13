@@ -51,6 +51,13 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Tut_Voiceover" ID="{567CD22D-DB00-4BD5-9774-74BDFD2ED9C0}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Tutorial" ID="{E255AF30-D0F1-4073-BEFB-C8EF75213CC7}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
