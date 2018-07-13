@@ -31,6 +31,7 @@ public class ControllerSelect : MonoBehaviour {
         deselectedPlayerSprite = Resources.Load<Sprite>("UI/MenuSelectUI/deselectedPlayer");
 
         playerNum = int.Parse(this.transform.parent.name.Remove(0, this.transform.parent.name.Length - 1));
+        Debug.Log(playerNum);
     }
 
     void DelayInputBack()
@@ -45,8 +46,9 @@ public class ControllerSelect : MonoBehaviour {
         if (isInGame == false)                                               // If the player has not "entered" the game
         {
             //Debug.Log(Input.GetAxis("XboxLeftStickXaxis"));
-            if (Input.GetAxis("Horizontal" + playerNum) == 1 || Input.GetAxis("Horizontal" + playerNum) == -1 || (Input.GetKeyDown(playerKeys[playerNum-1].GetKeys()[3]) || Input.GetKeyDown(playerKeys[playerNum-1].GetKeys()[2])))                 // If the player uses the left or right key bindings
+            if (Input.GetAxis("Horizontal" + playerNum) > 0.8 || Input.GetAxis("Horizontal" + playerNum) < -0.8 || (Input.GetKeyDown(playerKeys[playerNum-1].GetKeys()[3]) || Input.GetKeyDown(playerKeys[playerNum-1].GetKeys()[2])))                 // If the player uses the left or right key bindings
             {
+                Debug.Log(playerNum + " pressed left or right");
                 //pressed123 = true;
                 SelectChange();
                 //if (isSelected == false)                                    // If the selected sprite isnt showing
@@ -72,11 +74,13 @@ public class ControllerSelect : MonoBehaviour {
         }
         if ((Input.GetButtonDown("Start" + playerNum) || Input.GetKeyDown(KeyCode.Return)) && isSelected == true)     // If the character is selected and the start/join button is pressed
         {
+            Debug.Log(playerNum + " pressed start");
             isInGame = !isInGame;                                            // Player is in game
             if (isInGame == true)
             {// Add 1 to the number of in game players for use by later scenes
                 MenuScript.Instance.SetNumberofPlayers(1);
                 this.GetComponentInChildren<Text>().enabled = true;
+                MenuScript.Instance.SetPlayersInGame(playerNum);
 
             }
             else

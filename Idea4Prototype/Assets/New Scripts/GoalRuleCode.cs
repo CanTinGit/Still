@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GoalRuleCode : MonoBehaviour
 {
+
     int NumPlayers = 0;
     //Hit the goal and go to next level
    void OnCollisionEnter(Collision col)

@@ -61,6 +61,7 @@ public class PressedButton : MonoBehaviour {
             // Check if the mass of object is more than setting weight, if it is, it can make trap run.
             if ((other.gameObject.GetComponent<Rigidbody>().mass >= setWeight))
             {
+                Debug.Log("BUTTON PRESSED");
                 // Button go down
                 button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
                 //AkSoundEngine.PostEvent("button_click", gameObject);
@@ -74,7 +75,10 @@ public class PressedButton : MonoBehaviour {
                 }
                 else
                 {
-                    animator.SetBool(animatorVariable, runAnimOnPressed);
+                    if (animator != null)
+                    {
+                        animator.SetBool(animatorVariable, runAnimOnPressed);
+                    }
                 }
 
                 // Button go down
@@ -89,14 +93,15 @@ public class PressedButton : MonoBehaviour {
                 }
                 else
                 {
-                    animator.SetBool(animatorVariable, runAnimOnPressed);
+                    if (animator != null)
+                    {
+                        animator.SetBool(animatorVariable, runAnimOnPressed);
+                    }
                 }
 
             }
         }
-   }
-    
-
+   }   
     //When the button is realsed
     void OnTriggerExit(Collider other)
     {
@@ -109,7 +114,10 @@ public class PressedButton : MonoBehaviour {
                 {
                     Invoke("Delay", delaySound);
                 }
-                animator.SetBool(animatorVariable, runAnimOnReleased);
+                if (animator != null)
+                {
+                    animator.SetBool(animatorVariable, runAnimOnReleased);
+                }
             }
         }
     }

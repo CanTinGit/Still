@@ -15,43 +15,37 @@ public class VideoPlay : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Application.runInBackground = true;
-        Debug.Log(MenuScript.Instance.GetPlayerFirstTime());
-        if (MenuScript.Instance.GetPlayerFirstTime() == true)
-        {
-            Debug.Log(MenuScript.Instance.GetPlayerFirstTime());
-            StartCoroutine(PlayVideo());
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
+        StartCoroutine(PlayVideo());
+        MenuScript.Instance.gamePaused = true;
+        MenuScript.Instance.pausePlayerNum = 5;
     }
 
-    void PlayIntroVideo()
+    void Update()
     {
-        StartCoroutine(PlayVideo());
+        if(Input.GetButtonDown("Start1")|| Input.GetButtonDown("Start2")|| Input.GetButtonDown("Start3") || Input.GetButtonDown("Start4"))
+        {
+            fade.SetTrigger("FadeOut");
+            Invoke("Delay", 2f);
+
+        }
     }
 
     //Play video
     IEnumerator PlayVideo()
     {
+        Application.runInBackground = true;
         videoplayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
         videoplayer.EnableAudioTrack(0, true);
         videoplayer.SetTargetAudioSource(0, audioSource);
 
-        bool isplayed = false;
         videoplayer.Prepare();
 
         WaitForSeconds waitTime = new WaitForSeconds(1);
         while (!videoplayer.isPrepared)
         {
-            Debug.Log("Preparing");
             yield return waitTime;
             break;
         }
-
-        Debug.Log("DONE Preparing");
 
         //using image UI to play video
         image.texture = videoplayer.texture;
@@ -59,22 +53,19 @@ public class VideoPlay : MonoBehaviour
         videoplayer.Play();
         audioSource.Play();
 
-        Debug.Log("Play Video");
         while (videoplayer.isPlaying)
         {
-            isplayed = true;
-            Debug.Log("Video Time: " + Mathf.FloorToInt((float)videoplayer.time));
             yield return null;
         }
         fade.SetTrigger("FadeOut");
         Invoke("Delay", 2f);
-        MenuScript.Instance.SetPlayerFirstTime(false);
-        Debug.Log("DONE Playing video");
     }
 
 
     public void Delay()
     {
         gameObject.SetActive(false);
+        MenuScript.Instance.gamePaused = false;
+        MenuScript.Instance.pausePlayerNum = 0;
     }
 }

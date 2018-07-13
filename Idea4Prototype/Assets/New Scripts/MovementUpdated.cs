@@ -240,4 +240,9 @@ public class MovementUpdated : MonoBehaviour {
             grounded = false;
         }
     }
+
+    public bool GetGrounded()
+    {
+        return grounded;
+    }
 }

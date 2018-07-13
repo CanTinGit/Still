@@ -45,6 +45,8 @@ public class MenuScript : MonoBehaviour
     int whichPlayerKey;
     //Global variable to get the only one game manager
     GameObject hoveringOver;
+    // Booleans to control what players should be visible in game
+    public bool p1InGame, p2InGame, p3InGame, p4InGame;
     public static MenuScript Instance
     {
         get
@@ -69,7 +71,6 @@ public class MenuScript : MonoBehaviour
     void Awake()
     {
         playerdata = new PlayerData();
-        Debug.Log(playerdata.firstTime);
         for (int i =0; i < playerSetting.Length;i++)
         {
             playerSetting[i] = new PlayerKeys();
@@ -83,12 +84,10 @@ public class MenuScript : MonoBehaviour
         }
         IntialiseAndSetScene();
         LoadPlayerData();
-        Debug.Log(playerdata.firstTime);
         //Set the max level by the player data
         maxLevel = playerdata.getCurrentLevel();
         whichPlayerKey = 0;
         hoveringOver = eventSystem.GetComponent<EventSystem>().currentSelectedGameObject;
-        Debug.Log(playerdata.firstTime);
 
     }
     void Start()
@@ -311,13 +310,13 @@ public class MenuScript : MonoBehaviour
                 button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(-1, button.transform.parent.GetChild(0).GetComponent<Text>()));
                 break;
             case "Level 1 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Level 1"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_1_redone_2"));
                 break;
             case "Level 2 Button":
                 button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Level 2"));
                 break;
             case "Level 0 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("TutorialLevel"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Tutorial_Level_1"));
                 break;
         }
     }
@@ -697,7 +696,6 @@ public class MenuScript : MonoBehaviour
         //If there is no any data, initialize the player data
         if (!File.Exists(Application.persistentDataPath + "/PlayerData.dat"))
         {
-            Debug.Log(playerdata.firstTime);
             return;
         }
         Debug.Log(Application.persistentDataPath);
@@ -719,6 +717,31 @@ public class MenuScript : MonoBehaviour
     {
         return numPlayers;
     }
+
+    public void SetPlayersInGame(int playerNum)
+    {
+        if(playerNum == 1)
+        {
+            //Set player 1 in game
+            p1InGame = true;
+        }
+        else if (playerNum == 2)
+        {
+            //Set player 2 in game
+            p2InGame = true;
+        }
+        else if (playerNum == 3)
+        {
+            //Set player 3 in game
+            p3InGame = true;
+        }
+        else
+        {
+            //Set player 4 in game
+            p4InGame = true;
+        }
+    }
+
     //turn the screen active or not
     public void SetPlayerPaused(bool paused_)
     {
@@ -761,13 +784,5 @@ public class MenuScript : MonoBehaviour
     public int GetMaxLevel()
     {
         return maxLevel;
-    }
-    public bool GetPlayerFirstTime()
-    {
-        return playerdata.firstTime;
-    }
-    public void SetPlayerFirstTime(bool first)
-    {
-        playerdata.firstTime = first;
     }
 }

@@ -22,7 +22,7 @@ public class PauseScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		if(Input.GetButtonDown("Start" + this.transform.name.Remove(0,6)) )                    // If the start button has been pressed
+        if (Input.GetButtonDown("Start" + this.transform.name.Remove(0, 6)))                    // If the start button has been pressed
         {
             if (MenuScript.Instance.pausePlayerNum == 0)
             {
@@ -49,11 +49,13 @@ public class PauseScript : MonoBehaviour
             //    PausePanelOff();
             //}
             //FlipPausePanel();                               // Turn on or off the pause screen panel
-            if(PausePanel.gameObject.activeSelf == true)    // If the pause screen panel is visible, i.e. the player has paused the game
+            if (PausePanel.gameObject.activeSelf == true)    // If the pause screen panel is visible, i.e. the player has paused the game
             {
                 eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ResetButton"));  // Focus the event system on the pause screen buttons so the user can navigate it via controller
             }
+
         }
+		
         //else if(Input.GetButtonDown("Start" + this.transform.name.Remove(0, 6)) && flipped == true)
         //{
         //    if (PausePanel.activeSelf == true)
@@ -64,7 +66,6 @@ public class PauseScript : MonoBehaviour
         //}
 
     }
-
     void FlipPausePanel()
     {
         PausePanel.gameObject.SetActive(!PausePanel.activeSelf);        // Turn on or off the pause screen panel

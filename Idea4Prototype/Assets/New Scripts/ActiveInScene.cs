@@ -16,13 +16,6 @@ public class ActiveInScene : MonoBehaviour {
         active = false;
         isDoorOpen = false;
     }
-    void Update()
-    {
-        if(Input.GetKey(KeyCode.F1))
-        {
-            setActive(false);
-        }
-    }
     public bool GetActive()
     {
         return active;

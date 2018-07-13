@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour {
     //timer settings
     void Timing()           // Timer function
     {
-        if (GameObject.FindObjectOfType<PauseScript>().GetActive() == false)
+        if (MenuScript.Instance.gamePaused == false)
         {
             if (tenMins != 0 || unitMins != 0 || tenSeconds != 0 || unitSeconds != 0)       // If any of the timer variables do NOT equal 0, run the following code
             {

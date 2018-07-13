@@ -21,6 +21,8 @@ public class PickUpUpdated : MonoBehaviour
     //the starting angle of the picked up object
     Vector3 startAngle;
     int maxPlayer;
+    // Boolean to control if player can throw, defaulted to true
+    public bool canThrow = true;
 
     //Setting of throw
     public float maxVelocity,minVelocity, currentVelocity,offsetVelocity;
@@ -28,6 +30,7 @@ public class PickUpUpdated : MonoBehaviour
     public int resolution;          //Decide how accuracy of the line
     float offsetRotation;
     bool Controller; // if you dont have a controller use the keys instead
+    int playerNum;
     void Awake()
     {
         Controller = true;
@@ -43,24 +46,25 @@ public class PickUpUpdated : MonoBehaviour
         throwArc = gameObject.transform.parent.transform.GetChild(iconChildIndex - 1).transform.gameObject;
         currentVelocity = minVelocity;
         maxPlayer = MenuScript.Instance.GetNumberofPlayers();
+        playerNum = this.transform.parent.GetComponent<MovementUpdated>().PlayerNum;
     }
     void FixedUpdate()
     {
         if (Controller)
         {
             // PickUpAndThrowCode(1, playerKeys.GetKeys()[6].ToString().Insert(8,"1"), playerKeys.GetKeys()[4].ToString().Insert(8, "1"));
-            PickUpAndThrowCode(1, playerKeys[0].GetKeys()[6].ToString().Insert(8, "1"), playerKeys[0].GetKeys()[4].ToString().Insert(8, "1"), playerKeys[0].GetThrowPower());
-            if (maxPlayer>1)
+            PickUpAndThrowCode(playerNum, playerKeys[0].GetKeys()[6].ToString().Insert(8, playerNum.ToString()), playerKeys[0].GetKeys()[4].ToString().Insert(8, playerNum.ToString()), playerKeys[0].GetThrowPower());
+            //if (maxPlayer>1)
             {
-                PickUpAndThrowCode(2, playerKeys[1].GetKeys()[6].ToString().Insert(8, "2"), playerKeys[1].GetKeys()[4].ToString().Insert(8, "2"), playerKeys[1].GetThrowPower());
+              //  PickUpAndThrowCode(2, playerKeys[1].GetKeys()[6].ToString().Insert(8, "2"), playerKeys[1].GetKeys()[4].ToString().Insert(8, "2"), playerKeys[1].GetThrowPower());
             }
-            if (maxPlayer > 2)
+            //if (maxPlayer > 2)
             {
-                PickUpAndThrowCode(3, playerKeys[2].GetKeys()[6].ToString().Insert(8, "3"), playerKeys[2].GetKeys()[4].ToString().Insert(8, "3"), playerKeys[2].GetThrowPower());
+               // PickUpAndThrowCode(3, playerKeys[2].GetKeys()[6].ToString().Insert(8, "3"), playerKeys[2].GetKeys()[4].ToString().Insert(8, "3"), playerKeys[2].GetThrowPower());
             }
-            if (maxPlayer > 3)
+            //if (maxPlayer > 3)
             {
-                PickUpAndThrowCode(4, playerKeys[3].GetKeys()[6].ToString().Insert(8, "4"), playerKeys[3].GetKeys()[4].ToString().Insert(8, "4"), playerKeys[3].GetThrowPower());
+               // PickUpAndThrowCode(4, playerKeys[3].GetKeys()[6].ToString().Insert(8, "4"), playerKeys[3].GetKeys()[4].ToString().Insert(8, "4"), playerKeys[3].GetThrowPower());
             }
         }
         ////probably remove this and controller once we are done
@@ -109,6 +113,7 @@ public class PickUpUpdated : MonoBehaviour
                         //if the picked up item is a one of these two then run the script that makes the player carry the object
                         if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
                         {
+                            picked.GetComponent<PickupInfo>().SetHolder(this.gameObject);
                             //make it kinematic so gravity doesnt effect it
                             picked.GetComponent<Rigidbody>().isKinematic = true;
                             picked.GetComponent<Rigidbody>().useGravity = false;
@@ -124,8 +129,16 @@ public class PickUpUpdated : MonoBehaviour
                             //run the script the picks up the drag item and also attachs the character joint
                             Invoke("DragPickedUp", 0.0f);
                         }
+                        else if (picked.name == "LeverWall")
+                        {
+                            //run the script the picks up the new Lever and also attachs the character joint
+                            picked.GetComponent<LeverWallScript>().Init();
+                            //we pulled the lever interactable
+                            holdingPickUp = false;
+                            picked = null;
+                        }
                         //if the object is the lever then run this
-                        if (picked.name == "LeverFloor")
+                        else if (picked.name == "LeverFloor")
                         {
                             Debug.Log("the lever has been detected and used as a picked item");
                             //check if the lever has been pulled first and if not then
@@ -156,8 +169,9 @@ public class PickUpUpdated : MonoBehaviour
                             picked.GetComponent<Rigidbody>().useGravity = true;
                             //stop the loop of position the pick up item
                             CancelInvoke("MovePickedUp");
-                            picked.transform.parent = null;
+                            //picked.transform.parent = null; //MIGHT BE NOT NEEDED
                             // set the pick up item to null
+                            picked.GetComponent<PickupInfo>().SetHolder(null);
                             picked = null;
                         }
                         //destroy the joint if the item is a drag
@@ -179,217 +193,72 @@ public class PickUpUpdated : MonoBehaviour
                         }
                     }
                 }
-                //if the key pressed is the throw button
-                if (Input.GetButtonDown((throwKey.ToString())))
+                if(canThrow == true)
                 {
-                    //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
-                    if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
+                    //if the key pressed is the throw button
+                    if (Input.GetButtonDown((throwKey.ToString())))
                     {
-                        //add force forwards and upwards to the picked up object
-                        //picked.GetComponent<Rigidbody>().AddForce((this.transform.forward + this.transform.up) * (throwPower_), ForceMode.VelocityChange);
-                        //Trun throw arc on
-                        throwArc.SetActive(true);
-                    }
-                }
-                //if the throw key is pressed and not realsed
-                if (Input.GetButton((throwKey.ToString())))
-                {
-                    if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
-                    {
-
-                        if (currentVelocity < maxVelocity)
+                        //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
+                        if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                         {
-
-                            currentVelocity = currentVelocity + offsetVelocity;
-                        }
-                        else
-                        {
-                            currentVelocity = maxVelocity;
-                        }
-                        throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, 10);
-                    }
-                }
-                //If the throw key is realsed
-                if (Input.GetButtonUp((throwKey.ToString())))
-                {
-                    if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
-                    {
-                        Debug.Log("pressing");
-                        AkSoundEngine.PostEvent("player_throw", gameObject);
-                        picked.gameObject.AddComponent<CheckVelocity>();
-                        throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
-                        throwArc.SetActive(false);
-                        SimulateThrow simulate = picked.AddComponent<SimulateThrow>();
-                        simulate.SetValue(currentVelocity, angle, resolution, picked.transform.position.y);
-                        currentVelocity = minVelocity;
-                        //set it so we no longer are holding the object
-                        holdingPickUp = false;
-                        //turn off the movePickedUp script since we are no longer holding the object
-                        CancelInvoke("MovePickedUp");
-                        picked.transform.parent = null;
-                        //turn kinematic off so gravity effects the object again
-                        //picked.GetComponent<Rigidbody>().isKinematic = false;
-                        //set the picked to null since we are no longer holding the object
-                        picked = null;
-                        //if the character joint is present then destroy it since we were holding the object
-                        if (characterJoint != null)
-                        {
-                            Destroy(characterJoint);
+                            //add force forwards and upwards to the picked up object
+                            //picked.GetComponent<Rigidbody>().AddForce((this.transform.forward + this.transform.up) * (throwPower_), ForceMode.VelocityChange);
+                            //Trun throw arc on
+                            throwArc.SetActive(true);
                         }
                     }
-                }
-            }
-        }
-    }
-
-
-    void PickUpAndThrowCodeNoController(int playerNumber_, KeyCode pickUpKey, KeyCode throwKey, float throwPower_)
-    {
-        if (MenuScript.Instance.gamePaused == false)
-        {
-            //this ensures only one player will be moved
-            if (transform.parent.GetComponent<MovementUpdated>().PlayerNum == playerNumber_)
-            {
-                //the pick ups key is pressed
-                if (Input.GetKeyDown(pickUpKey))
-                {
-                    //if there is a objects that can be picked up and you are not holding something then pick it up
-                    if ((picked != null) & (holdingPickUp == false))
+                    //if the throw key is pressed and not realsed
+                    if (Input.GetButton((throwKey.ToString())))
                     {
-                        //set it so the player now is holding something
-                        holdingPickUp = true;
-                        //turn off the visually icon since we are holding something
-                        icon.GetComponent<MeshRenderer>().enabled = false;
-                        //if the picked up item is a one of these two then run the script that makes the player carry the object
-                        if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
+                        if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                         {
-                            //make it kinematic so gravity doesnt effect it
-                            picked.GetComponent<Rigidbody>().isKinematic = true;
-                            picked.GetComponent<Rigidbody>().useGravity = false;
-                            offsetRotation = picked.transform.rotation.eulerAngles.y - this.gameObject.transform.parent.rotation.eulerAngles.y;
-                            //start invoke repeating to keep the object in front of the object
-                            InvokeRepeating("MovePickedUp", 0.0f, 0.01666f);
-                            //picked.transform.parent = gameObject.transform;
 
-                        }
-                        // if the item picked up is a draggable
-                        else if (picked.name == "Drag")
-                        {
-                            //run the script the picks up the drag item and also attachs the character joint
-                            Invoke("DragPickedUp", 0.0f);
-                        }
-                        //if the object is the lever then run this
-                        if (picked.name == "LeverFloor")
-                        {
-                            //check if the lever has been pulled first and if not then
-                            if (picked.GetComponent<ActiveInScene>().GetActive() != true)
+                            if (currentVelocity < maxVelocity)
                             {
-                                //rotate the object based on the distance between player and the lever
-                                InvokeRepeating("LeverConnect", 0.0f, 0.01666f);
-                                //get the starting distance between the player and the player
-                                startDistance = Vector2.Distance(picked.transform.position, this.transform.position);
-                                //the starting angle of the object
-                                startAngle = picked.transform.eulerAngles;
+
+                                currentVelocity = currentVelocity + offsetVelocity;
+                            }
+                            else
+                            {
+                                currentVelocity = maxVelocity;
+                            }
+                            throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, 10);
+                        }
+                    }
+                    //If the throw key is realsed
+                    if (Input.GetButtonUp((throwKey.ToString())))
+                    {
+                        if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
+                        {
+                            Debug.Log("pressing");
+                            AkSoundEngine.PostEvent("player_throw", gameObject);
+                            picked.gameObject.AddComponent<CheckVelocity>();
+                            throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
+                            throwArc.SetActive(false);
+                            SimulateThrow simulate = picked.AddComponent<SimulateThrow>();
+                            simulate.SetValue(currentVelocity, angle, resolution, picked.transform.position.y);
+                            currentVelocity = minVelocity;
+                            //set it so we no longer are holding the object
+                            holdingPickUp = false;
+                            //turn off the movePickedUp script since we are no longer holding the object
+                            CancelInvoke("MovePickedUp");
+                            picked.transform.parent = null;
+                            //turn kinematic off so gravity effects the object again
+                            //picked.GetComponent<Rigidbody>().isKinematic = false;
+                            //set the picked to null since we are no longer holding the object
+                            picked.GetComponent<PickupInfo>().SetHolder(null);
+                            picked = null;
+                            //if the character joint is present then destroy it since we were holding the object
+                            if (characterJoint != null)
+                            {
+                                Destroy(characterJoint);
                             }
                         }
                     }
-                    //this runs when the player is got a object already that he is holding
-                    else if ((picked != null) & (holdingPickUp == true))
-                    {
-                        //since we are holding something we now drop it
-                        holdingPickUp = false;
-                        //if the object is a pickup item or a bucket then do this
-                        if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
-                        {
-                            //set the kinematic back to false so the object is affected by gravity
-                            picked.GetComponent<Rigidbody>().isKinematic = false;
-                            picked.GetComponent<Rigidbody>().useGravity = true;
-                            //stop the loop of position the pick up item
-                            CancelInvoke("MovePickedUp");
-                            picked.transform.parent = null;
-                            // set the pick up item to null
-                            picked = null;
-                        }
-                        //destroy the joint if the item is a drag
-                        else if ((picked.name == "Drag"))
-                        {
-                            Destroy(characterJoint);
-                        }
-                        //if the object is a lever
-                        else if (picked.name == "LeverFloor")
-                        {
-                            //stop moving the lever
-                            CancelInvoke("LeverConnect");
-                            //change the distance to the values since we stopped
-                            startDistance = Vector2.Distance(picked.transform.position, this.transform.position);
-                            //change the start angle since we stopped so we can remember it ( broken right now)
-                            startAngle = picked.transform.eulerAngles;
-                            //set picked to null since we dropped the object
-                            picked = null;
-                        }
-                    }
                 }
-                //if the key pressed is the throw button
-                if (Input.GetKeyDown((throwKey)))
-                {
-                    //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
-                    if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
-                    {
-                        //add force forwards and upwards to the picked up object
-                        //picked.GetComponent<Rigidbody>().AddForce((this.transform.forward + this.transform.up) * (throwPower_), ForceMode.VelocityChange);
-                        //Trun throw arc on
-                        throwArc.SetActive(true);
-                    }
-                }
-                //if the throw key is pressed and not realsed
-                if (Input.GetKey((throwKey)))
-                {
-                    if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
-                    {
-
-                        if (currentVelocity < maxVelocity)
-                        {
-
-                            currentVelocity = currentVelocity + offsetVelocity;
-                        }
-                        else
-                        {
-                            currentVelocity = maxVelocity;
-                        }
-                        throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, 10);
-                    }
-                }
-                //If the throw key is realsed
-                if (Input.GetKeyUp((throwKey)))
-                {
-                    if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
-                    {
-                        throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
-                        throwArc.SetActive(false);
-                        SimulateThrow simulate = picked.AddComponent<SimulateThrow>();
-                        simulate.SetValue(currentVelocity, angle, resolution, picked.transform.position.y);
-                        currentVelocity = minVelocity;
-                        //set it so we no longer are holding the object
-                        holdingPickUp = false;
-                        //turn off the movePickedUp script since we are no longer holding the object
-                        CancelInvoke("MovePickedUp");
-                        picked.transform.parent = null;
-                        //turn kinematic off so gravity effects the object again
-                        //picked.GetComponent<Rigidbody>().isKinematic = false;
-                        //set the picked to null since we are no longer holding the object
-                        picked = null;
-                        //if the character joint is present then destroy it since we were holding the object
-                        if (characterJoint != null)
-                        {
-                            Destroy(characterJoint);
-                        }
-                    }
-                }
-
             }
         }
     }
-
     //the code which sets the position of the object that is being moved around
     void MovePickedUp()
     {
@@ -412,6 +281,14 @@ public class PickUpUpdated : MonoBehaviour
         characterJoint.autoConfigureConnectedAnchor = false;
         characterJoint.anchor = new Vector3(0, 0, -0.5f);
         characterJoint.connectedAnchor = new Vector3(0, 0.5f, 1.0f);
+    }
+    public void LetGoOffItem()
+    {
+        CancelInvoke("MovePickedUp");
+        //since we are holding something we now drop it
+        holdingPickUp = false;
+        //make it null since we are not picking up an item
+        picked = null;
     }
     //function for when the object interacted with is a lever
     void LeverConnect()
@@ -437,7 +314,7 @@ public class PickUpUpdated : MonoBehaviour
         if ((percentage > 0.0f) & (percentage < 1.01f))
         {
             Debug.Log("the thing getting rotated is" + picked.name);
-            picked.transform.GetChild(0).transform.eulerAngles = startAngle - new Vector3(Pulled, 0.0f, 0.0f);
+            picked.transform.GetChild(0).transform.eulerAngles = startAngle - new Vector3(0.0f, 0.0f, Pulled);
         }
         //if we have reached max pull then turn off the lever function and set the lever to being active
         else if(percentage>1.0f)

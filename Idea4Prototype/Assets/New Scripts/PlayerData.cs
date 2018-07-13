@@ -7,12 +7,10 @@ public class PlayerData
 {
     public int currentLevel;                    //Record max level that player can access
     public List<int> passedLevelScore;          //Record scores of every level that player passed
-    public bool firstTime;
 
     //Initialize when create player data instance
     public PlayerData()
     {
-        firstTime = true;
         currentLevel = 1;
         passedLevelScore = new List<int>();
     }
