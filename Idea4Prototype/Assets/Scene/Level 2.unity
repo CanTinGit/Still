@@ -287,6 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwArc: {fileID: 0}
   picked: {fileID: 0}
+  canThrow: 1
   maxVelocity: 0
   minVelocity: 0
   currentVelocity: 0
@@ -1572,7 +1573,7 @@ Prefab:
     - target: {fileID: 224257838372591364, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -68.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224669984851094660, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
@@ -1592,7 +1593,7 @@ Prefab:
     - target: {fileID: 224669984851094660, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -136.609
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224633623735438072, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
@@ -1612,12 +1613,12 @@ Prefab:
     - target: {fileID: 224633623735438072, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -205.01799
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224887008448759126, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 273.427
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 223226550071843176, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
@@ -8050,6 +8051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwArc: {fileID: 0}
   picked: {fileID: 0}
+  canThrow: 1
   maxVelocity: 0
   minVelocity: 0
   currentVelocity: 0
@@ -8667,6 +8669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwArc: {fileID: 0}
   picked: {fileID: 0}
+  canThrow: 1
   maxVelocity: 0
   minVelocity: 0
   currentVelocity: 0

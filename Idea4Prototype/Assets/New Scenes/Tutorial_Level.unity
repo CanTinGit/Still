@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorTrigger: 
+  soundName: 
 --- !u!65 &7938962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -147,8 +148,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.8891106, y: 2.9349003, z: 15.769333}
-  m_Center: {x: 0.4047947, y: 0.96745014, z: -0.21144295}
+  m_Size: {x: 4.8891106, y: 2.9349003, z: 22.927816}
+  m_Center: {x: 0.4047947, y: 0.96745014, z: -0.17898464}
 --- !u!4 &7938963
 Transform:
   m_ObjectHideFlags: 0
@@ -160,7 +161,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &45682286
 GameObject:
@@ -527,6 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorTrigger: MoveCameraStep4
+  soundName: 
 --- !u!65 &282008080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -537,8 +539,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.8891106, y: 2.9349003, z: 15.769333}
-  m_Center: {x: 0.4047947, y: 0.96745014, z: -0.21144295}
+  m_Size: {x: 4.8891106, y: 2.9349003, z: 22.60168}
+  m_Center: {x: 0.4047947, y: 0.96745014, z: -0.1927352}
 --- !u!4 &282008081
 Transform:
   m_ObjectHideFlags: 0
@@ -550,7 +552,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &366301813
 Prefab:
@@ -1055,7 +1057,7 @@ Prefab:
     - target: {fileID: 224257838372591364, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -68.2
       objectReference: {fileID: 0}
     - target: {fileID: 224669984851094660, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
@@ -1075,7 +1077,7 @@ Prefab:
     - target: {fileID: 224669984851094660, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -136.609
       objectReference: {fileID: 0}
     - target: {fileID: 224633623735438072, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
@@ -1095,12 +1097,12 @@ Prefab:
     - target: {fileID: 224633623735438072, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -205.01799
       objectReference: {fileID: 0}
     - target: {fileID: 224887008448759126, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 273.427
       objectReference: {fileID: 0}
     - target: {fileID: 1883268690364154, guid: fb1a791c81182054fa93c57c8991fbbc, type: 2}
       propertyPath: m_IsActive
@@ -1830,7 +1832,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1011414694
 Prefab:
@@ -3307,6 +3309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorTrigger: MoveCameraStep3
+  soundName: 
 --- !u!65 &1524202436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3317,8 +3320,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.8891106, y: 2.9349003, z: 15.769333}
-  m_Center: {x: 0.4047947, y: 0.96745014, z: -0.21144295}
+  m_Size: {x: 4.8891106, y: 2.9349003, z: 22.47496}
+  m_Center: {x: 0.4047947, y: 0.96745014, z: -0.17538834}
 --- !u!4 &1524202437
 Transform:
   m_ObjectHideFlags: 0
@@ -3330,7 +3333,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533860405
 GameObject:
@@ -3443,6 +3446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorTrigger: MoveCameraStep1
+  soundName: 
 --- !u!65 &1591993059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3453,8 +3457,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.8891106, y: 2.9349003, z: 15.769333}
-  m_Center: {x: 0.4047947, y: 0.96745014, z: -0.21144295}
+  m_Size: {x: 4.8891106, y: 2.9349003, z: 22.879585}
+  m_Center: {x: 0.4047947, y: 0.96745014, z: -0.18301582}
 --- !u!4 &1591993060
 Transform:
   m_ObjectHideFlags: 0
@@ -3466,7 +3470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1619020508
 GameObject:
@@ -3661,6 +3665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorTrigger: MoveCameraStep2
+  soundName: 
 --- !u!65 &1766917351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3671,8 +3676,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.8891106, y: 2.9349003, z: 15.769333}
-  m_Center: {x: 0.4047947, y: 0.96745014, z: -0.21144295}
+  m_Size: {x: 4.8891106, y: 2.9349003, z: 22.67477}
+  m_Center: {x: 0.4047947, y: 0.96745014, z: -0.18170929}
 --- !u!4 &1766917352
 Transform:
   m_ObjectHideFlags: 0
@@ -3684,7 +3689,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1798641539
 GameObject:

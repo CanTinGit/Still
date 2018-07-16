@@ -23,6 +23,7 @@ public class PickUpUpdated : MonoBehaviour
     int maxPlayer;
     // Boolean to control if player can throw, defaulted to true
     public bool canThrow = true;
+    GameObject colliderStopWall;
 
     //Setting of throw
     public float maxVelocity,minVelocity, currentVelocity,offsetVelocity;
@@ -32,7 +33,7 @@ public class PickUpUpdated : MonoBehaviour
     bool Controller; // if you dont have a controller use the keys instead
     int playerNum;
     void Awake()
-    {
+    {       
         Controller = true;
         //get the keys and stats for the player
         playerKeys = MenuScript.Instance.GetPlayerKeys();
@@ -43,7 +44,9 @@ public class PickUpUpdated : MonoBehaviour
         //set the gameobject icon to the correct child object
         icon = this.gameObject.transform.parent.transform.GetChild(iconChildIndex).transform.gameObject;
         //Get the throw arc
-        throwArc = gameObject.transform.parent.transform.GetChild(iconChildIndex - 1).transform.gameObject;
+        throwArc = gameObject.transform.parent.transform.GetChild(iconChildIndex - 2).transform.gameObject;
+        colliderStopWall = gameObject.transform.parent.transform.GetChild(iconChildIndex - 1).transform.gameObject;
+        colliderStopWall.SetActive(false);
         currentVelocity = minVelocity;
         maxPlayer = MenuScript.Instance.GetNumberofPlayers();
         playerNum = this.transform.parent.GetComponent<MovementUpdated>().PlayerNum;
@@ -113,6 +116,7 @@ public class PickUpUpdated : MonoBehaviour
                         //if the picked up item is a one of these two then run the script that makes the player carry the object
                         if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
                         {
+                            colliderStopWall.SetActive(true);
                             picked.GetComponent<PickupInfo>().SetHolder(this.gameObject);
                             //make it kinematic so gravity doesnt effect it
                             picked.GetComponent<Rigidbody>().isKinematic = true;
@@ -164,6 +168,7 @@ public class PickUpUpdated : MonoBehaviour
                         //if the object is a pickup item or a bucket then do this
                         if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
                         {
+                            colliderStopWall.SetActive(false);
                             //set the kinematic back to false so the object is affected by gravity
                             picked.GetComponent<Rigidbody>().isKinematic = false;
                             picked.GetComponent<Rigidbody>().useGravity = true;
@@ -198,6 +203,7 @@ public class PickUpUpdated : MonoBehaviour
                     //if the key pressed is the throw button
                     if (Input.GetButtonDown((throwKey.ToString())))
                     {
+                        colliderStopWall.SetActive(false);
                         //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
                         if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                         {

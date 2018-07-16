@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114806462990261434}
   - component: {fileID: 54472400683004470}
   - component: {fileID: 114771785266246130}
+  - component: {fileID: 114026654794898012}
   m_Layer: 0
   m_Name: Ball_Bearing_Pickup
   m_TagString: Pickup
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1922322511395934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.584241, y: -0.8100004, z: -2.0989397}
+  m_LocalPosition: {x: -2.67, y: 1.05, z: 3.74}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,6 +100,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114026654794898012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1922322511395934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494a5c6dd5cd9704abafb353b6de4560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114771785266246130
 MonoBehaviour:
   m_ObjectHideFlags: 1

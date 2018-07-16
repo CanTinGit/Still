@@ -31,7 +31,7 @@ public class PlayerKeys
         defaultPlayerTurnSpeed = 2.0f;
         defaultPlayerMoveSpeed = 3.5f;
         defaultPlayerThrowPower = 6.0f;
-        defaultPlayerJumpPower = 8.0f;
+        defaultPlayerJumpPower = 6.25f;
         //custom keys also set up to be same for start
         keys[0] = KeyCode.W;
         keys[1] = KeyCode.S;
@@ -51,7 +51,7 @@ public class PlayerKeys
         playerTurnSpeed = 2.0f;
         playerMoveSpeed = 3.5f;
         playerThrowPower = 6.0f;
-        playerJumpPower = 8.0f;
+        playerJumpPower = 6.25f;
     }
     //the custom keys will be set with the option menus temporary keys
     public void TempHolderTransferToCustomKeys()

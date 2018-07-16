@@ -6,6 +6,7 @@ public class CameraTriggerCode : MonoBehaviour {
 
     Animator cameraAnimator;
     public string animatorTrigger;
+    public string soundName;
     int NumPlayers = 0;
     // Use this for initialization
     void Start ()
@@ -42,6 +43,7 @@ public class CameraTriggerCode : MonoBehaviour {
                     cameraAnimator.SetTrigger(animatorTrigger);
                 }
                 // Insert audio code here
+                AkSoundEngine.PostEvent(soundName, gameObject);
             }
         }
     }

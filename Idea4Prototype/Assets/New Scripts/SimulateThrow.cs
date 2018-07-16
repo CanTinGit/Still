@@ -99,6 +99,7 @@ public class SimulateThrow : MonoBehaviour {
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, -y, z);
         gameObject.GetComponent<Rigidbody>().useGravity = true;
         CancelInvoke();
+        Destroy(this);
     }
 
 }

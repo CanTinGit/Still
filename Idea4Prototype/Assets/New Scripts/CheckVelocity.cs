@@ -9,6 +9,7 @@ public class CheckVelocity : MonoBehaviour {
     void Start()
     {
         InvokeRepeating("UpdateVelocity", 0.0f, 0.01f);
+        
     }
 	// Update is called once per frame
 	void UpdateVelocity ()
