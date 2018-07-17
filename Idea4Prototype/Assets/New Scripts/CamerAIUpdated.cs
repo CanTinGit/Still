@@ -20,13 +20,17 @@ public class CamerAIUpdated : MonoBehaviour
     public int speed;
     //boolean to control if the camera is still running (incase we need to stop it midpoint)
     bool running = true;
+    bool hasShot = false;
     //the state the camera will start on
     CameraState state = CameraState.StillLooking;
     //the delay of each movement during the coroutine ( the vector3.movetowards movement)
     private float nextMovementDelay = 0.01f;
-    //on awake we set up these variables
 
-    public GameObject lightObject;
+    bool isDetected = false;
+    public float sightRange;         //Camera sight range
+    public float sightAngle;         //Camera Rotation Angle
+    GameObject lightObject;
+    //on awake we set up these variables
     void Awake()
     {
         //make sure the height is the starting y position
@@ -35,8 +39,11 @@ public class CamerAIUpdated : MonoBehaviour
         targetPoint = new List<GameObject>();
         //add all the camera travel points to the list
         targetPoint.AddRange(GameObject.FindGameObjectsWithTag("CameraSpotPoints"));
+        lightObject = GameObject.FindGameObjectWithTag("CameraObject");
         //start the whole movement process
         NewTravelPoint();
+        //Visual detecting be called every frame if the camera is running to detect player
+        InvokeRepeating("VisualDetect", 0.0f, 0.01667f);
     }
     //sets up the end point and calls the movement code
     void NewTravelPoint()
@@ -47,7 +54,7 @@ public class CamerAIUpdated : MonoBehaviour
             //randomize the index based on the length of the list
             int index = Random.Range(0, targetPoint.Count);
             //create the end point with the correct y position           
-            Vector3 endPoint = new Vector3(targetPoint[index].transform.position.x, height, targetPoint[index].transform.position.z);
+            Vector3 endPoint = new Vector3(targetPoint[index].transform.position.x, targetPoint[index].transform.position.y + height, targetPoint[index].transform.position.z);
             //call the coroutine that will do the movement
             StartCoroutine(MoveTo(endPoint, index));
         }
@@ -99,6 +106,7 @@ public class CamerAIUpdated : MonoBehaviour
                 break;
             //the camera has finished the serch
             case CameraState.FinishedSearch:
+                CameraFinishedSearch();
                 Debug.Log("camera is done searching");
                 break;
         }
@@ -130,4 +138,80 @@ public class CamerAIUpdated : MonoBehaviour
     {
         running = true;
     }
+    //reset the shotting
+    void ResetShotting()
+    {
+        hasShot = false;
+        GameObject.FindGameObjectWithTag("CameraObject").GetComponent<Renderer>().material.color = Color.white;
+    }
+
+    public void VisualDetect()
+    {
+        // Multiple player
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        //GameObject player = GameObject.FindGameObjectWithTag("Player");
+        for (int i = 0; i < players.Length; i++)
+        {
+            GameObject player = players[i];
+            if (player != null && state == CameraState.StillLooking)
+            {
+                // Check the condition of player
+                MovementUpdated movement = player.GetComponent<MovementUpdated>();
+
+                // If the player is not in bubble
+                if (movement != null && movement.isInBubble == false)
+                {
+
+                    // Calculate the distance between player and
+                    float dist = Vector3.Distance(player.transform.position, transform.GetChild(0).position);
+                    // Check if the player is in the range of sight
+                    if (dist < sightRange)
+                    {
+                        //Get the angle between player and camera
+                        Vector3 direction = player.transform.position - transform.GetChild(0).position;
+                        float degree = Vector3.Angle(direction, transform.GetChild(0).forward);
+                        // If the angle between player and camera is in the sight angle, which means camera can see the player
+                        if (degree < sightAngle / 2 && degree > -sightAngle / 2)
+                        {
+                            Ray ray = new Ray();
+                            ray.origin = transform.GetChild(0).position;
+                            ray.direction = direction;
+                            RaycastHit hitInfo;
+                            //Check if there is anything which may block the eyesight
+                            if (Physics.Raycast(ray, out hitInfo, sightRange))
+                            {
+                                // If the ray can hit the player, which means nothing block the sight of camera, and the camera acctually finds the player
+                                if (hitInfo.transform.tag == "Player" && player.GetComponent<MovementUpdated>().isMoving == true)
+                                {
+                                    //Setting the isDetect to true means finding player and rotate towards it
+                                    //state = CameraState.Found;
+                                    //running = false;
+                                    if(hasShot==false)
+                                    {
+                                        hasShot = true;
+                                        Shoot(hitInfo.transform);
+                                        AkSoundEngine.PostEvent("camera_trigger", gameObject);
+                                    }
+                                    //Make the sound
+                                    //Turn the color to red
+                                    GameObject.FindGameObjectWithTag("CameraObject").GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void Shoot(Transform target_)
+    {
+        //Initilize the bullet
+        GameObject colonBullet = Instantiate(Resources.Load("Prefabs/Bullet"), GameObject.FindGameObjectWithTag("CameraObject").transform.position, GameObject.FindGameObjectWithTag("CameraObject").transform.rotation) as GameObject;
+        colonBullet.GetComponent<Bullet>().SetTarget(target_);
+        //Play sound
+        AkSoundEngine.PostEvent("bubble_shot", gameObject);
+        Invoke("ResetShotting", 0.5f);
+    }
+    
 }

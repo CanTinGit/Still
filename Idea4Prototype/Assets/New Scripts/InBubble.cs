@@ -7,13 +7,14 @@ public class InBubble : MonoBehaviour {
     Rigidbody[] rbs;
     Vector3 peek, bottom;
     float startTime, journeyTime;
-    Color lerpedColor,transparentColor;
+    Color lerpedColor,transparentColor,originalColor;
     bool isImmune;
     // Use this for initialization
     void Start ()
     {
         isImmune = false;
         lerpedColor = gameObject.GetComponent<Renderer>().material.color;
+        originalColor = gameObject.GetComponent<Renderer>().material.color;
         transparentColor = new Color(0, 0, 0, 0);
         //Disable the gravity and add a force to heavy the player
         gameObject.GetComponent<Rigidbody>().useGravity = false;
@@ -36,7 +37,7 @@ public class InBubble : MonoBehaviour {
     {
         if (isImmune == true)
         {
-            lerpedColor = Color.Lerp(Color.white, transparentColor, Mathf.PingPong(Time.time, 1));
+            lerpedColor = Color.Lerp(originalColor, transparentColor, Mathf.PingPong(Time.time, 1));
             gameObject.GetComponent<Renderer>().material.color = lerpedColor;
         }
     }
@@ -56,7 +57,7 @@ public class InBubble : MonoBehaviour {
     void ChangePlayerBack()
     {
         gameObject.GetComponent<MovementUpdated>().isInBubble = false;
-        gameObject.GetComponent<Renderer>().material.color = Color.white;
+        gameObject.GetComponent<Renderer>().material.color = originalColor;
         Destroy(this);
     }
 }

@@ -7,6 +7,7 @@ public class AudioTestScript : MonoBehaviour
     private float noiseMade; //the noise that is made
     Rigidbody rigidBody;
     float velocity;
+    bool delayBeginAudio = false;
     void Awake()
     {
         //set the rigidBody variable to the componenet
@@ -15,6 +16,7 @@ public class AudioTestScript : MonoBehaviour
     void Start()
     {
         //GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().SetAudioForMaterial("MetalObject");
+        Invoke("AudioStart", 1.0f);
         InvokeRepeating("FindTill", 0.0f, 0.01666f);
     }
     public void SetVelocity(float velocity_)
@@ -25,6 +27,10 @@ public class AudioTestScript : MonoBehaviour
             velocity = velocity_;
         }
 
+    }
+    void AudioStart()
+    {
+        delayBeginAudio = true;
     }
     void FindTill()
     {
@@ -58,18 +64,28 @@ public class AudioTestScript : MonoBehaviour
             //
             // NEED TO RECALCULATE HOW MUCH FORCE
             ///
-            float force = rigidBody.mass * velocity;
-            //float force = rigidBody.mass * rigidBody.velocity.magnitude;
-            //float force = rigidBody.mass * Physics.gravity.magnitude *  //rigidBody.mass * rigidBody.velocity.magnitude;
-            //Debug.Log("audio test force is " + force);
-            //plays the sound based on the material and the force and the psz group
-            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().PlayAudio(materialName, force, "Impact_Force");
-            //the sound being played ( i think??? )
-            AkSoundEngine.PostEvent("object_impact", gameObject);
-            if (noiseMade > -20)
+            if(delayBeginAudio == true)
             {
-                //use this if you want to make the camera to move to this object ( replace "this.transform.position" with the object you want the camera to look at)
-                //GameObject.Find("Camera").GetComponent<CameraAI>().DetectedNoise(this.transform.position);
+                float force = rigidBody.mass * velocity;
+                //float force = rigidBody.mass * rigidBody.velocity.magnitude;
+                //float force = rigidBody.mass * Physics.gravity.magnitude *  //rigidBody.mass * rigidBody.velocity.magnitude;
+                //Debug.Log("audio test force is " + force);
+                //plays the sound based on the material and the force and the psz group
+                GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().PlayAudio(materialName, force, "Impact_Force");
+                //the sound being played ( i think??? )
+                AkSoundEngine.PostEvent("object_impact", gameObject);
+                if (noiseMade > -20)
+                {
+                    if (GameObject.FindGameObjectWithTag("CameraObject") != null)
+                    {
+                        //use this if you want to make the camera to move to this object ( replace "this.transform.position" with the object you want the camera to look at)
+                        if (GameObject.FindGameObjectWithTag("AlertSpotlight") == null)
+                        {
+                            Instantiate(Resources.Load("Prefabs/NewCameraAI"));
+                        }
+                    }
+                    //GameObject.Find("Camera").GetComponent<CameraAI>().DetectedNoise(this.transform.position);
+                }
             }
         }
     }

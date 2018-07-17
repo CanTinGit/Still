@@ -203,7 +203,7 @@ public class PickUpUpdated : MonoBehaviour
                     //if the key pressed is the throw button
                     if (Input.GetButtonDown((throwKey.ToString())))
                     {
-                        colliderStopWall.SetActive(false);
+                       
                         //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
                         if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                         {
@@ -259,6 +259,7 @@ public class PickUpUpdated : MonoBehaviour
                             {
                                 Destroy(characterJoint);
                             }
+                            colliderStopWall.SetActive(false);
                         }
                     }
                 }

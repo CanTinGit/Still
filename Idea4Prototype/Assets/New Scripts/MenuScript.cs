@@ -313,7 +313,7 @@ public class MenuScript : MonoBehaviour
                 button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_1"));
                 break;
             case "Level 2 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Level 2"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_2"));
                 break;
             case "Level 0 Button":
                 button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Tutorial_Level"));
