@@ -623,6 +623,122 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Tut Triggers" ID="{BD9CDF51-05A3-4C30-93AC-4FA97EA59C70}" ShortID="377387568">
+					<ChildrenList>
+						<Event Name="tut_box_trigger" ID="{DF5A8087-BE49-40BD-B5E9-B315C22A652C}">
+							<ChildrenList>
+								<Action Name="" ID="{DAB2EFB6-49A6-4CF3-8030-1DD69D06DBC8}" ShortID="1003329680">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_box" ID="{C404AE30-8B29-4471-8631-409C5F150E6A}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_button_trigger" ID="{412B6692-FF7B-489F-80B3-0EDF0C29D0BF}">
+							<ChildrenList>
+								<Action Name="" ID="{F9006396-FC66-483F-AD8D-FD8080854C46}" ShortID="750297687">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_button" ID="{2A125968-CD48-47FB-91A2-D1DD3ED654A7}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_excellent_trigger" ID="{B1708763-6E5F-47EB-8F9C-5FA048459B0A}">
+							<ChildrenList>
+								<Action Name="" ID="{F91FD52D-3B1F-4273-AE5D-C30531752252}" ShortID="1006933186">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_excellent" ID="{BD3DFA2A-DC48-4F29-8F67-6C85A44944E1}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_fantastic_trigger" ID="{1BEAAFF7-5CBD-4ED4-9AB9-CFF3CA4D4233}">
+							<ChildrenList>
+								<Action Name="" ID="{73A97DC5-D264-4366-9498-14CB9C94B893}" ShortID="826795666">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_fantastic" ID="{040D33D6-F1D5-4A50-8855-BF9806929462}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_jumping_trigger" ID="{B33CA923-2E61-47EB-A6C5-B714DB91424C}">
+							<ChildrenList>
+								<Action Name="" ID="{72FDE42A-675D-4AD2-BB62-AF498F3D608E}" ShortID="458184225">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_jumping" ID="{19B47F6A-499D-4563-ACB5-3DA7292EA098}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_verygood_trigger" ID="{B7F17B3D-030C-4A98-BD68-25EBB45A2535}">
+							<ChildrenList>
+								<Action Name="" ID="{44466D38-7539-4353-9907-0E21CE7FDEEB}" ShortID="551786501">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_verygood" ID="{4673F9A7-7A64-415E-A1E1-29757A122002}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_welcome_trigger" ID="{EB8C4004-6351-4482-BAE9-138BC57A6F60}">
+							<ChildrenList>
+								<Action Name="" ID="{7E95FAF9-4E72-44ED-9C10-F75D11481972}" ShortID="280511858">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_welcome" ID="{7E21896E-E087-4FC6-9FF0-0C9DC2B247A9}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_wunderbar_trigger" ID="{BC60977F-DBF7-41BA-B260-A9F4CD5A3290}">
+							<ChildrenList>
+								<Action Name="" ID="{58C50DC9-6D48-4DB4-8BD6-2CE5063EA190}" ShortID="1020354880">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_wunderbar" ID="{230F2CAC-3082-4492-A0FD-826B732CA437}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
