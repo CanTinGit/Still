@@ -15,6 +15,41 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{B4566772-D5DA-4865-BCD1-ED17C1064C9C}" ShortID="79912181">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+								<Property Name="SeekPercent" Type="Real64" Value="50">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6DD26647-9D36-45B4-8FBB-96A11296836C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="45"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="electricity" ID="{785360B3-C16A-499D-A27F-518E9B87E5E9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{50252757-222B-41D3-87D1-DB89049F2060}" ShortID="368741657">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="electricity" ID="{785360B3-C16A-499D-A27F-518E9B87E5E9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="object_impact" ID="{2AC362AC-B55E-43C8-827B-7269BFA7B694}">
@@ -395,6 +430,308 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Night_Ambience" ID="{264440D3-145B-4900-8DCB-164595413AAB}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Tutorial" ID="{E255AF30-D0F1-4073-BEFB-C8EF75213CC7}" ShortID="814008174">
+					<ChildrenList>
+						<Event Name="tut_welcome" ID="{7E21896E-E087-4FC6-9FF0-0C9DC2B247A9}">
+							<ChildrenList>
+								<Action Name="" ID="{91CC5637-8447-49AC-8259-9A858DC22C55}" ShortID="792149327">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vox_movement" ID="{6082E50C-A28A-4E2F-84FC-41D6389ADDFB}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_excellent" ID="{BD3DFA2A-DC48-4F29-8F67-6C85A44944E1}">
+							<ChildrenList>
+								<Action Name="" ID="{40869973-A446-4739-8E49-81877CFA07A2}" ShortID="595373348">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vox_movement" ID="{6082E50C-A28A-4E2F-84FC-41D6389ADDFB}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E99D6AF5-6F19-4834-A109-6233B271C036}" ShortID="920390640">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vox_atleastwevemanagethisfar" ID="{014C8065-3683-449A-AA5F-DA9386AAA4EC}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_wunderbar" ID="{230F2CAC-3082-4492-A0FD-826B732CA437}">
+							<ChildrenList>
+								<Action Name="" ID="{C9BEB2DB-9F44-40DE-8898-F86ED2F19400}" ShortID="1014125826">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jumping" ID="{3428D600-BBCA-464B-B88D-DFA6B5C60A32}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F8280BB1-85C1-4661-A7AF-842D6D7A3C2F}" ShortID="507059146">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vox_wunderbar" ID="{BEF40C57-5E3D-46DE-B233-4F06465ED97C}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_jumping" ID="{19B47F6A-499D-4563-ACB5-3DA7292EA098}">
+							<ChildrenList>
+								<Action Name="" ID="{02E5326F-05D9-4E96-BA2F-88083868336C}" ShortID="794719855">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vox_atleastwevemanagethisfar" ID="{014C8065-3683-449A-AA5F-DA9386AAA4EC}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{39362798-DFB6-495D-A942-03475CBD1F78}" ShortID="209176606">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jumping" ID="{3428D600-BBCA-464B-B88D-DFA6B5C60A32}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_fantastic" ID="{040D33D6-F1D5-4A50-8855-BF9806929462}">
+							<ChildrenList>
+								<Action Name="" ID="{6B1EC165-D886-42EA-B45D-8371651239D7}" ShortID="402626657">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Box" ID="{4041A646-6EF2-466F-8329-6D3395BE39DC}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{69A04AB5-36DB-444A-A26C-03C0F7E41FF0}" ShortID="638377370">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vox_fantastic" ID="{A0B12DA7-F063-4C7C-93C9-8D10FF6A6CFE}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_box" ID="{C404AE30-8B29-4471-8631-409C5F150E6A}">
+							<ChildrenList>
+								<Action Name="" ID="{00E8C98F-A7E0-412B-B216-088FC0260036}" ShortID="642681893">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vox_wunderbar" ID="{BEF40C57-5E3D-46DE-B233-4F06465ED97C}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B06BEE08-9A4F-4028-8AEB-C3369D9D777B}" ShortID="940655855">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Box" ID="{4041A646-6EF2-466F-8329-6D3395BE39DC}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_button" ID="{2A125968-CD48-47FB-91A2-D1DD3ED654A7}">
+							<ChildrenList>
+								<Action Name="" ID="{DAC30D12-DDD0-4DD9-82FF-E40CEE9CA223}" ShortID="778650023">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vox_fantastic" ID="{A0B12DA7-F063-4C7C-93C9-8D10FF6A6CFE}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C2A0C158-76E4-441B-B04E-C69AB690D11F}" ShortID="960879487">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Button" ID="{DBA69797-7893-4903-9B63-5F25BA7BD6E8}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_verygood" ID="{4673F9A7-7A64-415E-A1E1-29757A122002}">
+							<ChildrenList>
+								<Action Name="" ID="{E9A7A5A8-D880-49A7-83E9-7C4D4EA495EC}" ShortID="360522712">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Button" ID="{DBA69797-7893-4903-9B63-5F25BA7BD6E8}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B38F8FD1-8CC7-4BD2-B3EF-7FBFAE6DB58F}" ShortID="856623803">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vox_verygood" ID="{10C8402C-1E5A-401C-A324-4278F8BCE4B1}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Tut Triggers" ID="{BD9CDF51-05A3-4C30-93AC-4FA97EA59C70}" ShortID="377387568">
+					<ChildrenList>
+						<Event Name="tut_box_trigger" ID="{DF5A8087-BE49-40BD-B5E9-B315C22A652C}">
+							<ChildrenList>
+								<Action Name="" ID="{DAB2EFB6-49A6-4CF3-8030-1DD69D06DBC8}" ShortID="1003329680">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_box" ID="{C404AE30-8B29-4471-8631-409C5F150E6A}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_button_trigger" ID="{412B6692-FF7B-489F-80B3-0EDF0C29D0BF}">
+							<ChildrenList>
+								<Action Name="" ID="{F9006396-FC66-483F-AD8D-FD8080854C46}" ShortID="750297687">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_button" ID="{2A125968-CD48-47FB-91A2-D1DD3ED654A7}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_excellent_trigger" ID="{B1708763-6E5F-47EB-8F9C-5FA048459B0A}">
+							<ChildrenList>
+								<Action Name="" ID="{F91FD52D-3B1F-4273-AE5D-C30531752252}" ShortID="1006933186">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_excellent" ID="{BD3DFA2A-DC48-4F29-8F67-6C85A44944E1}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_fantastic_trigger" ID="{1BEAAFF7-5CBD-4ED4-9AB9-CFF3CA4D4233}">
+							<ChildrenList>
+								<Action Name="" ID="{73A97DC5-D264-4366-9498-14CB9C94B893}" ShortID="826795666">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_fantastic" ID="{040D33D6-F1D5-4A50-8855-BF9806929462}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_jumping_trigger" ID="{B33CA923-2E61-47EB-A6C5-B714DB91424C}">
+							<ChildrenList>
+								<Action Name="" ID="{72FDE42A-675D-4AD2-BB62-AF498F3D608E}" ShortID="458184225">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_jumping" ID="{19B47F6A-499D-4563-ACB5-3DA7292EA098}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_verygood_trigger" ID="{B7F17B3D-030C-4A98-BD68-25EBB45A2535}">
+							<ChildrenList>
+								<Action Name="" ID="{44466D38-7539-4353-9907-0E21CE7FDEEB}" ShortID="551786501">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_verygood" ID="{4673F9A7-7A64-415E-A1E1-29757A122002}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_welcome_trigger" ID="{EB8C4004-6351-4482-BAE9-138BC57A6F60}">
+							<ChildrenList>
+								<Action Name="" ID="{7E95FAF9-4E72-44ED-9C10-F75D11481972}" ShortID="280511858">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_welcome" ID="{7E21896E-E087-4FC6-9FF0-0C9DC2B247A9}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tut_wunderbar_trigger" ID="{BC60977F-DBF7-41BA-B260-A9F4CD5A3290}">
+							<ChildrenList>
+								<Action Name="" ID="{58C50DC9-6D48-4DB4-8BD6-2CE5063EA190}" ShortID="1020354880">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tut_wunderbar" ID="{230F2CAC-3082-4492-A0FD-826B732CA437}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
