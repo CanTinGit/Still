@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: -1168395653
-    m_lastTimePart2: -1999248573
+    m_lastTimePsrt1: 741320941
+    m_lastTimePart2: -1999247184
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -30,7 +30,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -42,7 +42,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: button_click
       Path: Default Work Unit\button_click
       PathAndIcons:
@@ -52,7 +52,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: camera_trigger
       Path: Default Work Unit\Camera\camera_trigger
       PathAndIcons:
@@ -64,7 +64,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: click_back
       Path: Default Work Unit\UI\click_back
       PathAndIcons:
@@ -124,7 +124,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -136,7 +136,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -206,7 +206,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 538597049
       Guid: ac62c32a5eb5c843827b7269bfa7b694
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: play_intro
       Path: Default Work Unit\Opening\play_intro
       PathAndIcons:
@@ -303,12 +303,108 @@ MonoBehaviour:
       ID: 65181031
       Guid: 9ddef41577381d44b9b7b31bb601332e
       maxAttenuation: 0
+    - Name: tut_box
+      Path: Default Work Unit\Tutorial\tut_box
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_box
+        ObjectType: 3
+      ID: 820591094
+      Guid: 30ae04c4298b71448631409c5f150e6a
+      maxAttenuation: 0
+    - Name: tut_button
+      Path: Default Work Unit\Tutorial\tut_button
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_button
+        ObjectType: 3
+      ID: -895372421
+      Guid: 6859122a48cdfb4791a2d1dd3ed654a7
+      maxAttenuation: 0
+    - Name: tut_excellent
+      Path: Default Work Unit\Tutorial\tut_excellent
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_excellent
+        ObjectType: 3
+      ID: -1754458029
+      Guid: 2afa3dbd48dc294f8f676c85a44944e1
+      maxAttenuation: 0
+    - Name: tut_fantastic
+      Path: Default Work Unit\Tutorial\tut_fantastic
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_fantastic
+        ObjectType: 3
+      ID: -1322538090
+      Guid: d6330d04d5f1504a8855bf9806929462
+      maxAttenuation: 0
+    - Name: tut_jumping
+      Path: Default Work Unit\Tutorial\tut_jumping
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_jumping
+        ObjectType: 3
+      ID: -1512776943
+      Guid: 6a7fb4199d496345acb53da7292ea098
+      maxAttenuation: 0
+    - Name: tut_verygood
+      Path: Default Work Unit\Tutorial\tut_verygood
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_verygood
+        ObjectType: 3
+      ID: -1597129908
+      Guid: a7f97346647a5e41a1e129757a122002
+      maxAttenuation: 0
+    - Name: tut_welcome
+      Path: Default Work Unit\Tutorial\tut_welcome
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_welcome
+        ObjectType: 3
+      ID: 460999313
+      Guid: 6e89217e87e0c64f9ff00c9dc2b247a9
+      maxAttenuation: 0
+    - Name: tut_wunderbar
+      Path: Default Work Unit\Tutorial\tut_wunderbar
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_wunderbar
+        ObjectType: 3
+      ID: 2011545223
+      Guid: ac2c0f2382309244a0fd826b732ca437
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: -1166025890
-    m_lastTimePart2: -1999248573
+    m_lastTimePsrt1: -1510897987
+    m_lastTimePart2: -1999247192
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -397,8 +493,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -1163896103
-    m_lastTimePart2: -1999248573
+    m_lastTimePsrt1: -1510597987
+    m_lastTimePart2: -1999247192
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -445,6 +541,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1137964055
       Guid: a269ae403d80f741a8e59cd8270e44ed
+    - Name: Tut_Voiceover
+      Path: Default Work Unit\Tut_Voiceover
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut_Voiceover
+        ObjectType: 7
+      ID: -1027324711
+      Guid: 2dd27c5600dbd54b977474bdfd2ed9c0
     - Name: UI
       Path: Default Work Unit\UI
       PathAndIcons:
