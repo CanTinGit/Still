@@ -7,6 +7,7 @@ public class CameraTriggerCode : MonoBehaviour {
     Animator cameraAnimator;
     public string animatorTrigger;
     public string soundName;
+    public string congratulateSoundName;
     public GameObject infoSubtitle;
     int NumPlayers = 0;
     // Use this for initialization
@@ -28,6 +29,10 @@ public class CameraTriggerCode : MonoBehaviour {
             {
                 infoSubtitle.SetActive(false);                  // When the players leave, get rid of the subtitle
             }
+            if(NumPlayers == 0)
+            {
+                this.gameObject.SetActive(false);               // Ensures double audio cannot occur by disabling trigger zone
+            }
         }
     }
 
@@ -37,24 +42,40 @@ public class CameraTriggerCode : MonoBehaviour {
         {
             // Add to the number of players in trigger area
             NumPlayers++;
-            if (NumPlayers == MenuScript.Instance.GetNumberofPlayers())         // If the number of players in the area equals the total number of players in the scene
+            if (NumPlayers == MenuScript.Instance.GetNumberofPlayers())      //MenuScript.Instance.GetNumberofPlayers()   // If the number of players in the area equals the total number of players in the scene
             {
                 if (animatorTrigger != "")
                 {
                     cameraAnimator.SetTrigger(animatorTrigger);     // If the animator trigger string isn't null set it so the animation plays
                 }
-                if (infoSubtitle != null)
+                if(congratulateSoundName!="")
                 {
+                    CongratulatePlayer();
+                }
+                else
+                {                  
                     Invoke("showSubtitle", 1.5f);   // Show the subtitile after a delay to match the camera animation
                 }
             }
         }
     }
-
+    void CongratulatePlayer()
+    {
+        AkSoundEngine.PostEvent(congratulateSoundName, gameObject);     // Post sound event defined by the string soundName
+        Invoke("showSubtitle", 1.5f);   // Show the subtitile after a delay to match the camera animation
+    }
     void showSubtitle()
     {
+        if(infoSubtitle != null)
+        {
             infoSubtitle.SetActive(true);
-            // Insert audio code here
-            AkSoundEngine.PostEvent(soundName, gameObject);     // Post sound event defined by the string soundName
+        }
+        // Insert audio code here
+        AkSoundEngine.PostEvent(soundName, gameObject);     // Post sound event defined by the string soundName
+    }
+    //incase you want to play audio with no delay or subtitles with it
+    void PlayNormalAudio()
+    {
+        AkSoundEngine.PostEvent(soundName, gameObject);     // Post sound event defined by the string soundName
     }
 }

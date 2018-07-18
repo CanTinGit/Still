@@ -10,14 +10,14 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 915e4feee9c236c46b967faed71c4350, type: 3}
   m_Name: AkWwiseProjectData
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   CurrentPluginConfig: Release
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
-    ParentPhysicalPath:
+    ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 741320941
-    m_lastTimePart2: -1999247184
+    m_lastTimePsrt1: 458429233
+    m_lastTimePart2: -1999246391
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -30,7 +30,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -42,7 +42,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: button_click
       Path: Default Work Unit\button_click
       PathAndIcons:
@@ -52,7 +52,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: camera_trigger
       Path: Default Work Unit\Camera\camera_trigger
       PathAndIcons:
@@ -64,7 +64,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: click_back
       Path: Default Work Unit\UI\click_back
       PathAndIcons:
@@ -124,7 +124,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -136,7 +136,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -206,7 +206,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 538597049
       Guid: ac62c32a5eb5c843827b7269bfa7b694
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: play_intro
       Path: Default Work Unit\Opening\play_intro
       PathAndIcons:
@@ -315,6 +315,18 @@ MonoBehaviour:
       ID: 820591094
       Guid: 30ae04c4298b71448631409c5f150e6a
       maxAttenuation: 0
+    - Name: tut_box_trigger
+      Path: Default Work Unit\Tut Triggers\tut_box_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_box_trigger
+        ObjectType: 3
+      ID: 1107840467
+      Guid: 87805adf49bebd40b5e9b315c22a652c
+      maxAttenuation: 0
     - Name: tut_button
       Path: Default Work Unit\Tutorial\tut_button
       PathAndIcons:
@@ -326,6 +338,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -895372421
       Guid: 6859122a48cdfb4791a2d1dd3ed654a7
+      maxAttenuation: 0
+    - Name: tut_button_trigger
+      Path: Default Work Unit\Tut Triggers\tut_button_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_button_trigger
+        ObjectType: 3
+      ID: 1097533726
+      Guid: 92662b417bff9f4880b30edf0c29d0bf
       maxAttenuation: 0
     - Name: tut_excellent
       Path: Default Work Unit\Tutorial\tut_excellent
@@ -339,6 +363,18 @@ MonoBehaviour:
       ID: -1754458029
       Guid: 2afa3dbd48dc294f8f676c85a44944e1
       maxAttenuation: 0
+    - Name: tut_excellent_trigger
+      Path: Default Work Unit\Tut Triggers\tut_excellent_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_excellent_trigger
+        ObjectType: 3
+      ID: -1987995082
+      Guid: 638770b15f6eeb478f9c5fa048459b0a
+      maxAttenuation: 0
     - Name: tut_fantastic
       Path: Default Work Unit\Tutorial\tut_fantastic
       PathAndIcons:
@@ -350,6 +386,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1322538090
       Guid: d6330d04d5f1504a8855bf9806929462
+      maxAttenuation: 0
+    - Name: tut_fantastic_trigger
+      Path: Default Work Unit\Tut Triggers\tut_fantastic_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_fantastic_trigger
+        ObjectType: 3
+      ID: 1830393523
+      Guid: f7afea1bbd5cd44e9ab9cff3ca4d4233
       maxAttenuation: 0
     - Name: tut_jumping
       Path: Default Work Unit\Tutorial\tut_jumping
@@ -363,6 +411,18 @@ MonoBehaviour:
       ID: -1512776943
       Guid: 6a7fb4199d496345acb53da7292ea098
       maxAttenuation: 0
+    - Name: tut_jumping_trigger
+      Path: Default Work Unit\Tut Triggers\tut_jumping_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_jumping_trigger
+        ObjectType: 3
+      ID: 1032786088
+      Guid: 23a93cb3612eeb47a6c5b714db91424c
+      maxAttenuation: 0
     - Name: tut_verygood
       Path: Default Work Unit\Tutorial\tut_verygood
       PathAndIcons:
@@ -374,6 +434,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1597129908
       Guid: a7f97346647a5e41a1e129757a122002
+      maxAttenuation: 0
+    - Name: tut_verygood_trigger
+      Path: Default Work Unit\Tut Triggers\tut_verygood_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_verygood_trigger
+        ObjectType: 3
+      ID: -266498691
+      Guid: 3d7bf1b70c03984abd6825ebb45a2535
       maxAttenuation: 0
     - Name: tut_welcome
       Path: Default Work Unit\Tutorial\tut_welcome
@@ -387,6 +459,18 @@ MonoBehaviour:
       ID: 460999313
       Guid: 6e89217e87e0c64f9ff00c9dc2b247a9
       maxAttenuation: 0
+    - Name: tut_welcome_trigger
+      Path: Default Work Unit\Tut Triggers\tut_welcome_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_welcome_trigger
+        ObjectType: 3
+      ID: -1950158808
+      Guid: 04408ceb51638244bae9138bc57a6f60
+      maxAttenuation: 0
     - Name: tut_wunderbar
       Path: Default Work Unit\Tutorial\tut_wunderbar
       PathAndIcons:
@@ -399,12 +483,24 @@ MonoBehaviour:
       ID: 2011545223
       Guid: ac2c0f2382309244a0fd826b732ca437
       maxAttenuation: 0
+    - Name: tut_wunderbar_trigger
+      Path: Default Work Unit\Tut Triggers\tut_wunderbar_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_wunderbar_trigger
+        ObjectType: 3
+      ID: -1287577198
+      Guid: 7f9760bcf7dbba41b260a9f4cd5a3290
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
-    ParentPhysicalPath:
+    ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: -1510897987
-    m_lastTimePart2: -1999247192
+    m_lastTimePsrt1: 462299233
+    m_lastTimePart2: -1999246391
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -419,7 +515,7 @@ MonoBehaviour:
       Guid: adc8318d689e2a4a957c4972f96d2159
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
-    ParentPhysicalPath:
+    ParentPhysicalPath: 
     Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
     m_lastTimePsrt1: -769315805
     m_lastTimePart2: -1999247995
@@ -484,17 +580,17 @@ MonoBehaviour:
       - bytes: 91eda26eef14ab47a9aa9c93bffb8d58
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
-    ParentPhysicalPath:
+    ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
     m_lastTimePsrt1: 1687134287
     m_lastTimePart2: -1999249979
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
-    ParentPhysicalPath:
+    ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -1510597987
-    m_lastTimePart2: -1999247192
+    m_lastTimePsrt1: 464509233
+    m_lastTimePart2: -1999246391
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -561,7 +657,7 @@ MonoBehaviour:
       Guid: 98b28065969f0d46b5ebcd8a6202e0c3
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
-    ParentPhysicalPath:
+    ParentPhysicalPath: 
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
     m_lastTimePsrt1: -776715805
     m_lastTimePart2: -1999247995
@@ -586,13 +682,18 @@ MonoBehaviour:
       Guid: 7507387b65f64947a801fd310080bd1b
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
-    ParentPhysicalPath:
+    ParentPhysicalPath: 
     Guid: '{423FF0F4-4C2C-49B0-BB98-500C1D5DAA9E}'
     m_lastTimePsrt1: 1687144287
     m_lastTimePart2: -1999249979
     List: []
   ExpandedItems:
   - /Idea4Prototype_WwiseProject
+  - /Idea4Prototype_WwiseProject/Events
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Ambient
+  - /Idea4Prototype_WwiseProject/SoundBanks
+  - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

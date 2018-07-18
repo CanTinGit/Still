@@ -5,13 +5,15 @@ using UnityEngine;
 public class BounckBack : MonoBehaviour {
 
     public List<Vector3> position = new List<Vector3>();
-    int cur;
-    bool isStartRecord;
+    public int cur;
+    public bool isStartRecord;
+    GameObject distanceTowards;
+    float speed = 5;
 	// Use this for initialization
 	void Start ()
     {
         isStartRecord = false;
-	}
+    }
 
     void RecordPosition()
     {
@@ -23,16 +25,25 @@ public class BounckBack : MonoBehaviour {
 
     void Rewind()
     {
-        Debug.Log(cur + " the max is " + position.Count);
-        transform.position = position[cur];
-        cur--;
+        if (cur > position.Count - 1)
+        {
+            CancelInvoke();
+            cur = 0;
+            Invoke("DelayTurnOff", 0.0f);
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
+            return;
+        }
         if (cur <= 0)
         {
-            Debug.Log("Finish" );
+            Debug.Log("Finish");
             CancelInvoke("Rewind");
-            Invoke("DelayTurnOff", 0.2f);
+            cur = 0;
+            gameObject.GetComponent<Rigidbody>().velocity = (distanceTowards.transform.position - gameObject.transform.position).normalized * speed;
+            Invoke("DelayTurnOff", 0.3f);
             gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
+        transform.position = position[cur];
+        cur--;
     }
 
     void OnTriggerEnter(Collider col)
@@ -45,6 +56,10 @@ public class BounckBack : MonoBehaviour {
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             cur = position.Count - 1;
             InvokeRepeating("Rewind", 0.0f, 0.02f);
+        }
+        else
+        {
+            distanceTowards = col.gameObject;
         }
 
     }
@@ -87,7 +102,11 @@ public class BounckBack : MonoBehaviour {
         //    CancelInvoke();
         //    position.Clear();
         //}
+        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         gameObject.GetComponent<MovementUpdated>().enabled = true;
+        gameObject.GetComponent<MovementUpdated>().SetGround(false);
+        isStartRecord = false;
+        position.Clear();
     }
     /*
      

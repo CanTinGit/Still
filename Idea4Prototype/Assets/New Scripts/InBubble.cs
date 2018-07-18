@@ -18,6 +18,7 @@ public class InBubble : MonoBehaviour {
         transparentColor = new Color(0, 0, 0, 0);
         //Disable the gravity and add a force to heavy the player
         gameObject.GetComponent<Rigidbody>().useGravity = false;
+        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         gameObject.GetComponent<Rigidbody>().AddForce(transform.up*30.0f, ForceMode.Acceleration);
         gameObject.GetComponent<MovementUpdated>().enabled = false;
         AkSoundEngine.PostEvent("bubble_rise", gameObject);

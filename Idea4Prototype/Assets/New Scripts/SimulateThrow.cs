@@ -25,7 +25,7 @@ public class SimulateThrow : MonoBehaviour {
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
         movementArray = CalculateArcArray();
         i = 0;
-        InvokeRepeating("SimulateMove", 0.0f, 0.01666f);
+        InvokeRepeating("SimulateMove", 0.0f, 0.016f);
     }
 	
 
@@ -101,5 +101,4 @@ public class SimulateThrow : MonoBehaviour {
         CancelInvoke();
         Destroy(this);
     }
-
 }

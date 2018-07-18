@@ -245,4 +245,9 @@ public class MovementUpdated : MonoBehaviour {
     {
         return grounded;
     }
+
+    public void SetGround(bool ground_)
+    {
+        grounded = ground_;
+    }
 }

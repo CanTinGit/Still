@@ -174,11 +174,11 @@ public class CamerAIUpdated : MonoBehaviour
                         if (degree < sightAngle / 2 && degree > -sightAngle / 2)
                         {
                             Ray ray = new Ray();
-                            ray.origin = transform.GetChild(0).position;
-                            ray.direction = direction;
+                            ray.origin = GameObject.FindGameObjectWithTag("CameraObject").transform.position;
+                            ray.direction = player.transform.position - GameObject.FindGameObjectWithTag("CameraObject").transform.position;
                             RaycastHit hitInfo;
                             //Check if there is anything which may block the eyesight
-                            if (Physics.Raycast(ray, out hitInfo, sightRange))
+                            if (Physics.Raycast(ray, out hitInfo, (player.transform.position - GameObject.FindGameObjectWithTag("CameraObject").transform.position).magnitude))
                             {
                                 // If the ray can hit the player, which means nothing block the sight of camera, and the camera acctually finds the player
                                 if (hitInfo.transform.tag == "Player" && player.GetComponent<MovementUpdated>().isMoving == true)

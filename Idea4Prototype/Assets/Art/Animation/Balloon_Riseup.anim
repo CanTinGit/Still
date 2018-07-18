@@ -24,8 +24,20 @@ AnimationClip:
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.8333333
-        value: {x: 13.19, y: 18.76, z: -5.99}
+        time: 1.5
+        value: {x: 13.19, y: 22.42, z: -5.99}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.5833334
+        value: {x: 11.98, y: 22.42, z: -5.99}
+        inSlope: {x: -2.42, y: 0, z: 0}
+        outSlope: {x: -2.42, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 3.5
+        value: {x: -16.09, y: 22.42, z: -5.99}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -56,7 +68,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8333333
+    m_StopTime: 3.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -82,8 +94,20 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.8333333
+        time: 1.5
         value: 13.19
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.5833334
+        value: 11.98
+        inSlope: -2.42
+        outSlope: -2.42
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.5
+        value: -16.09
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -104,8 +128,20 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.8333333
-        value: 18.76
+        time: 1.5
+        value: 22.42
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.5833334
+        value: 22.42
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.5
+        value: 22.42
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -126,7 +162,19 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.8333333
+        time: 1.5
+        value: -5.99
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.5833334
+        value: -5.99
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3.5
         value: -5.99
         inSlope: 0
         outSlope: 0
@@ -142,4 +190,18 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 1.5833334
+    functionName: CatchCan
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 3.5
+    functionName: TurnGravityOn
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
