@@ -132,6 +132,9 @@
 								<Reference Name="Effect1" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
 									<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
+								<Reference Name="Effect2" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="High_Pass_60Hz" ID="{F9627628-0B10-4272-BC30-D4C20423CB38}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
 							</ReferenceList>
 						</Bus>
 						<AuxBus Name="Reverb" ID="{8D31C8AD-9E68-4A2A-957C-4972F96D2159}">
