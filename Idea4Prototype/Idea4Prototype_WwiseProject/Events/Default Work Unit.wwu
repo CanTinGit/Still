@@ -90,7 +90,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Accident" ID="{3A7B0D86-F053-4521-8B1A-51CB78AEC9E6}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+											<ObjectRef Name="Accident" ID="{DE5772D2-335F-41F9-8B72-593266DBE1DF}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -118,7 +118,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Release" ID="{F1FFE0E1-6C66-46CA-9075-7B1612532563}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+											<ObjectRef Name="Release" ID="{43E83A65-F0F6-4D58-AC3D-0AA186B56AA9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -132,7 +132,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Jump" ID="{96A1BCC8-CBF9-475E-AEA1-F233978DCEA1}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+											<ObjectRef Name="Jump" ID="{3D075EC7-BDFE-406F-90E4-8DFD7476ADAF}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -146,7 +146,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Lift" ID="{6706D97E-CA8F-4E7F-88D1-BBF7066CD79F}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+											<ObjectRef Name="Lift" ID="{A69FC662-8B9C-4CA9-8641-19E90B35523E}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -161,6 +161,20 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Throw" ID="{4667C90D-9DB7-4934-8EC1-3EE2E2A806BB}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="player_shock" ID="{A0632D7A-B753-45E7-AB90-F8D2D03022B1}">
+							<ChildrenList>
+								<Action Name="" ID="{45F9A071-8173-434C-8781-E56CA453E881}" ShortID="349222472">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shock" ID="{2138CA6B-DD7C-4A42-BE14-FD7879DEA456}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
