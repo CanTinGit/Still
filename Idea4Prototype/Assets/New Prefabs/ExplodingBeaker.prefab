@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4534861966159740}
   - component: {fileID: 33432561063111736}
   - component: {fileID: 23556899316934274}
-  - component: {fileID: 95882666217474630}
   - component: {fileID: 64270444062243820}
   - component: {fileID: 114559967582124946}
   - component: {fileID: 54154698930086902}
@@ -38,9 +37,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1211267152839966}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.26, y: 0.47, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.5955796, y: 0.4322834, z: 6.3809385}
+  m_LocalScale: {x: 0.4934973, y: 0.87611866, z: 0.4934973}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -113,23 +112,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 67d0b55b06a9e8d4abb43d7e52826fd4, type: 3}
---- !u!95 &95882666217474630
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211267152839966}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 67d0b55b06a9e8d4abb43d7e52826fd4, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114559967582124946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,3 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58764415faf0e2842b276a6c6b4e8b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakableMagnitude: 1

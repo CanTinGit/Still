@@ -10,8 +10,8 @@ public class PickUpUpdated : MonoBehaviour
     public GameObject picked; //the picked up object
     bool holdingPickUp = false; //indicates if we are holding on a item
     //percentage of how far infront and upwards a object should move based on its size
-    float PercentageY = 0.50f;
-    float Percentagez = 0.65f;
+    float PercentageY = 0.30f;
+    float Percentagez = 0.5f;
     //the power of the throw
     //public float throwPower = 0.0f;
     //the joint that will be added to the player when the player drags a object
@@ -24,6 +24,7 @@ public class PickUpUpdated : MonoBehaviour
     // Boolean to control if player can throw, defaulted to true
     public bool canThrow = true;
     GameObject colliderStopWall;
+    Color playerColor;
 
     //Setting of throw
     public float maxVelocity,minVelocity, currentVelocity,offsetVelocity;
@@ -33,7 +34,8 @@ public class PickUpUpdated : MonoBehaviour
     bool Controller; // if you dont have a controller use the keys instead
     int playerNum;
     void Awake()
-    {       
+    {
+        playerColor = this.transform.parent.GetComponent<MeshRenderer>().material.color;
         Controller = true;
         //get the keys and stats for the player
         playerKeys = MenuScript.Instance.GetPlayerKeys();
@@ -116,6 +118,8 @@ public class PickUpUpdated : MonoBehaviour
                         //if the picked up item is a one of these two then run the script that makes the player carry the object
                         if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
                         {
+                            //return the color of the picked object back to its original color when picked up
+                            picked.GetComponent<MeshRenderer>().material.color = picked.GetComponent<PickupInfo>().ReturnOriginalColor();
                             colliderStopWall.SetActive(true);
                             picked.GetComponent<PickupInfo>().SetHolder(this.gameObject);
                             //make it kinematic so gravity doesnt effect it
@@ -270,7 +274,8 @@ public class PickUpUpdated : MonoBehaviour
     void MovePickedUp()
     {
         //get the distance the object should be in terms of being how far forward infront of the player and how high the object is for the player
-       // float yDis = this.GetComponent<BoxCollider>().bounds.size.y * PercentageY;
+        // float yDis = this.GetComponent<BoxCollider>().bounds.size.y * PercentageY;
+        picked.transform.rotation = Quaternion.identity;
         float yDis = this.GetComponent<Collider>().bounds.size.y * PercentageY;             //Possible fix for any collider type on the pickup objects
        // float zDis = picked.GetComponent<BoxCollider>().bounds.size.z * Percentagez;
         float zDis = picked.GetComponent<Collider>().bounds.size.z * Percentagez;           //Possible fix for any collider type on the pickup objects
@@ -349,7 +354,11 @@ public class PickUpUpdated : MonoBehaviour
             }
             //if we are not holding something set the picked gameobject so we can pick it up when the key is pressed
             if (holdingPickUp == false)
+            {
                 picked = col.gameObject;
+                //change color to the players color when over the object
+                picked.GetComponent<MeshRenderer>().material.color = playerColor;
+            }              
 
         }
         //same process but we also only allow interactions if the lever is not being fully pulled
@@ -366,7 +375,7 @@ public class PickUpUpdated : MonoBehaviour
             }
         }
     }
-    //when we leave the object pick up zone then we do this
+        //when we leave the object pick up zone then we do this
     void OnTriggerExit(Collider col)
     {
         //if we leave any object then we turn indicator off and set the object to null if we are not holding something
@@ -374,7 +383,11 @@ public class PickUpUpdated : MonoBehaviour
         {
             icon.GetComponent<MeshRenderer>().enabled = false;
             if(holdingPickUp==false)
-            picked = null;
+            {
+                //return the color back to the original color of the object
+                col.GetComponent<MeshRenderer>().material.color = col.GetComponent<PickupInfo>().ReturnOriginalColor();
+                picked = null;
+            }
         }
         //same process but with lever
         else if (col.gameObject.tag == "Lever")

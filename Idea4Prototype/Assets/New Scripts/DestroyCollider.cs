@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class DestroyCollider : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public float breakableMagnitude;
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.GetComponent<Breakable>() != null)          //If the object the ball is collidiing with has the "Breakable" script attached
+       
+        if (other.gameObject.GetComponent<Rigidbody>() != null)
         {
-            StartCoroutine(other.gameObject.GetComponent<Breakable>().SplitMesh(true));     // Split/ Smash the colliding object
+           // Debug.Log(other.gameObject.GetComponent<Rigidbody>().velocity.magnitude);
+            if (other.gameObject.GetComponent<Breakable>() != null && other.gameObject.GetComponent<Rigidbody>().velocity.magnitude > breakableMagnitude)          //If the object the ball is collidiing with has the "Breakable" script attached
+            {
+                StartCoroutine(other.gameObject.GetComponent<Breakable>().SplitMesh(true));     // Split/ Smash the colliding object
+            }
+        }
+        else
+        {
+            if(other.gameObject.GetComponent<Breakable>() != null)
+            {
+                StartCoroutine(other.gameObject.GetComponent<Breakable>().SplitMesh(true));
+            }
         }
     }
 }

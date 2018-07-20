@@ -11,37 +11,16 @@ public class Spawner : MonoBehaviour
     public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
     public int max_objects;                    // The max number of objects allowed to be in the level at a single time.
     public bool canSpawn = true;
-    
+    public bool setToNumPlayers;
     void Start()
     {
-        max_objects = MenuScript.Instance.GetNumberofPlayers();
+        if (setToNumPlayers == true)
+        {
+            max_objects = MenuScript.Instance.GetNumberofPlayers();
+        }
         // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
        // InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
-    /*
-    void Update()
-    {
-        // Ramp up speed as play time increases
-        if (mainCamera.GetComponent<Minigame_Timer>().time >= 30 && mainCamera.GetComponent<Minigame_Timer>().time <= 30.1)
-        {
-            CancelInvoke("Spawn");
-            spawnTime = 1.5f;
-            InvokeRepeating("Spawn", spawnTime, spawnTime);
-        }
-        if (mainCamera.GetComponent<Minigame_Timer>().time >= 60 && mainCamera.GetComponent<Minigame_Timer>().time <= 60.1)
-        {
-            CancelInvoke("Spawn");
-            spawnTime = 1.25f;
-            InvokeRepeating("Spawn", spawnTime, spawnTime);
-        }
-        if (mainCamera.GetComponent<Minigame_Timer>().time >= 90 && mainCamera.GetComponent<Minigame_Timer>().time <= 90.1)
-        {
-            CancelInvoke("Spawn");
-            spawnTime = 1f;
-            InvokeRepeating("Spawn", spawnTime, spawnTime);
-        }
-    }
-    */
 
     void Update()
     {/*

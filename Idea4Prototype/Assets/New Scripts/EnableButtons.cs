@@ -11,6 +11,7 @@ public class EnableButtons : MonoBehaviour
         {
             button1.GetComponent<PressedButton>().enabled = true;
             button2.GetComponent<PressedButton>().enabled = true;
+            AkSoundEngine.PostEvent("button_click", gameObject);
         }
     }
 

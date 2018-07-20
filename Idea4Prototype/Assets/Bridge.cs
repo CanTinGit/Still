@@ -10,4 +10,5 @@ public class Bridge : MonoBehaviour {
     {
         bridge.GetComponent<Rigidbody>().isKinematic = false;
     }
+
 }

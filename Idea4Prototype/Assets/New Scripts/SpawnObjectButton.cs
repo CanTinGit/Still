@@ -12,6 +12,7 @@ public class SpawnObjectButton : MonoBehaviour {
     public string noise_detection;  //the name of the noise
     public string SpecificObjectTag; //Set the the specific object
     GameObject spawnerManager;      // Reference to the spawner manager
+    public bool isForMetalSphere;
 
     // Use this for initialization, set the button and original position of button
     void Start()
@@ -37,7 +38,18 @@ public class SpawnObjectButton : MonoBehaviour {
                 button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
                 AkSoundEngine.PostEvent("button_click", gameObject);
                 // Spawn the object
-                spawnerManager.GetComponent<Spawner>().Spawn();
+                // Not sure what this code is supposed to do, so commented it out for just now
+                //if (isForMetalSphere)
+                //{
+                //    Debug.Log("Metal");
+                //    spawnerManager.GetComponent<Spawner>().SpawnMetalSphere();
+                //}
+                //else
+                //{
+                //    Debug.Log("Origianl");
+                    spawnerManager.GetComponent<Spawner>().Spawn();
+                //}
+
             }
             return;
         }

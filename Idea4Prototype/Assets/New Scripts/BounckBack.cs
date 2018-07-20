@@ -42,7 +42,20 @@ public class BounckBack : MonoBehaviour {
             Invoke("DelayTurnOff", 0.3f);
             gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
-        transform.position = position[cur];
+        transform.position = position[cur] + Vector3.up * 0.1f;
+        //if (cur > 10)
+        //{
+        //    transform.position = Vector3.Slerp(transform.position, position[cur], 0.5f);
+        //}
+        //else if (cur > 3)
+        //{
+        //    transform.position = Vector3.Slerp(transform.position, position[cur], 0.5f);
+        //}
+        //else
+        //{
+        //    transform.position = position[cur];
+        //}
+
         cur--;
     }
 
@@ -55,7 +68,7 @@ public class BounckBack : MonoBehaviour {
             gameObject.GetComponent<MovementUpdated>().enabled = false;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             cur = position.Count - 1;
-            InvokeRepeating("Rewind", 0.0f, 0.02f);
+            InvokeRepeating("Rewind", 0.0f, 0.01666f);
         }
         else
         {
@@ -78,10 +91,10 @@ public class BounckBack : MonoBehaviour {
     {
         if (gameObject.GetComponent<MovementUpdated>().GetGrounded() == false && isStartRecord == false)
         {
-            InvokeRepeating("RecordPosition", 0.0f, 0.01667f);
+            InvokeRepeating("RecordPosition", 0.0f, 0.05f);
             isStartRecord = true;
         }
-        else if (gameObject.GetComponent<MovementUpdated>().GetGrounded() == true )
+        else if (gameObject.GetComponent<MovementUpdated>().GetGrounded() == true || gameObject.GetComponent<MovementUpdated>().isInBubble == true)
         {
             if (position.Count != 0)
             {
