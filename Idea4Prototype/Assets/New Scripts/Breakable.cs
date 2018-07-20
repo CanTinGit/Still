@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class Breakable : MonoBehaviour
 {
+    public float breakingVelocity;
     // Mesh destroyer script
     public IEnumerator SplitMesh(bool destroy)
     {
@@ -88,5 +89,16 @@ public class Breakable : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.transform.tag == "Ground" || col.transform.tag == "Wall")
+        {
+            if (gameObject.GetComponent<Rigidbody>().velocity.magnitude > 3.0f)
+            {
+                StartCoroutine(SplitMesh(true));
+            }
+        }
     }
 }

@@ -15,9 +15,11 @@ public class ControllerSelect : MonoBehaviour {
     public GameObject playerSprite;                     // Reference to player sprite
     public float DelayReturnInput,FramePerSeconds;
     int playerNum;
+    string[] controllers; 
     // Use this for initialization
     void Start ()
     {
+        controllers = Input.GetJoystickNames();
         isInGame = false;
         isSelected = false;
         FramePerSeconds = 0.0166f;
@@ -39,9 +41,18 @@ public class ControllerSelect : MonoBehaviour {
         //InvokeRepeating("JoystickInputCharacterSelect", 0.0f, FramePerSeconds);
         pressed123 = false;
     }
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+    void Update()
     {
+        //Debug.Log(controllers[playerNum - 1].ToString());
+        //if (controllers[playerNum - 1] != "")
+        //{
+        //    this.GetComponent<Image>().sprite = selectedControlSprite;
+        //}
+        //else
+        //{
+        //    this.GetComponent<Image>().sprite = deselectedControlSprite;
+        //}
         //Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow);
         if (isInGame == false)                                               // If the player has not "entered" the game
         {

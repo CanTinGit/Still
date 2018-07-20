@@ -165,6 +165,7 @@ public class MovementUpdated : MonoBehaviour {
                 //when the player presses k apply a force to make him jump
                 if (Input.GetButtonDown(playerKeys[PlayerNum-1].GetKeys()[5].ToString().Insert(8,PlayerNum.ToString())))
                 {
+                    AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(PlayerNum));
                     AkSoundEngine.PostEvent("player_jump", gameObject);
                     isMoving = true;
                     rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);

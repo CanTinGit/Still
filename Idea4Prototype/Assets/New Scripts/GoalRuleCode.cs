@@ -39,9 +39,11 @@ public class GoalRuleCode : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+            
             // Add to the number of players in goal area.
             NumPlayers++;
-            if(NumPlayers == MenuScript.Instance.GetNumberofPlayers())
+            Debug.Log("ENter" + NumPlayers.ToString());
+            if (NumPlayers == 1)
             {
                 // Fade to next level if possible else go to main menu
                 MenuScript.Instance.FadeToNextLevel();

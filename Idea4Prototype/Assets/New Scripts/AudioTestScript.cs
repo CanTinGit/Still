@@ -36,7 +36,7 @@ public class AudioTestScript : MonoBehaviour
     {
         if  (GameObject.FindGameObjectWithTag("Player")!=null)
          {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().SetAudioForMaterial("MetalObject");
+            MenuScript.Instance.GetAudioClass().SetAudioForMaterial("MetalObject");
             CancelInvoke("FindTill");
         }
     }
@@ -71,7 +71,7 @@ public class AudioTestScript : MonoBehaviour
                 //float force = rigidBody.mass * Physics.gravity.magnitude *  //rigidBody.mass * rigidBody.velocity.magnitude;
                 //Debug.Log("audio test force is " + force);
                 //plays the sound based on the material and the force and the psz group
-                GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().PlayAudio(materialName, force, "Impact_Force");
+                MenuScript.Instance.GetAudioClass().PlayAudio(materialName, force, "Impact_Force");
                 //the sound being played ( i think??? )
                 AkSoundEngine.PostEvent("object_impact", gameObject);
                 if (noiseMade > -20)

@@ -26,11 +26,11 @@ public class PickupInfo :MonoBehaviour
         return originalColor;
     }
 
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.transform.name == "Main water (1)")
-        {
-            gameObject.GetComponent<Rigidbody>().isKinematic = true;
-        }
-    }
+    //void OnCollisionEnter(Collision col)
+    //{
+    //    if (col.transform.name == "Main water (1)")
+    //    {
+    //        gameObject.GetComponent<Rigidbody>().isKinematic = true;
+    //    }
+    //}
 }

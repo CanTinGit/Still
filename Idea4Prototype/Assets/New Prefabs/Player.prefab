@@ -57,7 +57,6 @@ GameObject:
   - component: {fileID: 23333501714023826}
   - component: {fileID: 54332899496728488}
   - component: {fileID: 114558820435008448}
-  - component: {fileID: 114432284178605964}
   - component: {fileID: 114617070661532018}
   m_Layer: 13
   m_Name: Player
@@ -65,7 +64,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1682858737430824
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +180,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1312173915374556}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.7100003, y: 0.171, z: 3.6}
+  m_LocalPosition: {x: -1.3, y: 1.06, z: -1.08}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 4609200703516726}
@@ -250,7 +249,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1453a84acad66234ba2cce6409f826cf, type: 2}
+  - {fileID: 2100000, guid: 73237ccf81e6afc409a926ec32cfd000, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -466,17 +465,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.9798442}
   m_Center: {x: -3.2193208e-17, y: 0, z: -0.010077894}
---- !u!114 &114432284178605964
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1312173915374556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dc210cc16a6e764ab3a2f71b657dce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114558820435008448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -488,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170a636d05c61bb4f99c57cd9cdab2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNum: 1
+  PlayerNum: 4
   jumpSpeed: 6
   moveSpeed: 3.5
   TurnSpeed: 2

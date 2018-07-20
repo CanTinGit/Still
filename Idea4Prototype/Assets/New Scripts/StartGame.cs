@@ -12,6 +12,7 @@ public class StartGame : MonoBehaviour {
         {
             GameObject gm = new GameObject("GameManager");
             gm.AddComponent<MenuScript>();
+            gm.tag = "GameManager";
         }
         else
         {

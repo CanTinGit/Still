@@ -112,12 +112,14 @@ public class PickUpUpdated : MonoBehaviour
                         //set it so the player now is holding something
                         holdingPickUp = true;
                         //plays lift sound
+                        AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(this.gameObject.transform.parent.GetComponent<MovementUpdated>().PlayerNum));
                         AkSoundEngine.PostEvent("player_lift", gameObject);
                         //turn off the visually icon since we are holding something
                         icon.GetComponent<MeshRenderer>().enabled = false;
                         //if the picked up item is a one of these two then run the script that makes the player carry the object
                         if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
                         {
+                            Debug.Log("Pick up");
                             //return the color of the picked object back to its original color when picked up
                             picked.GetComponent<MeshRenderer>().material.color = picked.GetComponent<PickupInfo>().ReturnOriginalColor();
                             colliderStopWall.SetActive(true);
@@ -168,6 +170,7 @@ public class PickUpUpdated : MonoBehaviour
                         //since we are holding something we now drop it
                         holdingPickUp = false;
                         //plays release sound
+                        AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(this.gameObject.transform.parent.GetComponent<MovementUpdated>().PlayerNum));
                         AkSoundEngine.PostEvent("player_drop", gameObject);
                         //if the object is a pickup item or a bucket then do this
                         if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
@@ -241,6 +244,7 @@ public class PickUpUpdated : MonoBehaviour
                         if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                         {
                             Debug.Log("pressing");
+                            AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(this.gameObject.transform.parent.GetComponent<MovementUpdated>().PlayerNum));
                             AkSoundEngine.PostEvent("player_throw", gameObject);
                             picked.gameObject.AddComponent<CheckVelocity>();
                             throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);

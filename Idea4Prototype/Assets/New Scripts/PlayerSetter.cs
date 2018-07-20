@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerSetter : MonoBehaviour {
 
     public GameObject Player1, Player2, Player3, Player4;
-	// Use this for initialization
-	void Start ()
+    string player1Nationality, player2Nationality, player3Nationality, player4Nationality;
+    // Use this for initialization
+    void Start ()
     {
         // Sets the  number of visible/ active players in the scene based on the numPlayer value passed from the main menu
 		if(MenuScript.Instance.p1InGame == true)
@@ -21,9 +22,10 @@ public class PlayerSetter : MonoBehaviour {
         {
             Player3.gameObject.SetActive(true);
         }
-        if(MenuScript.Instance.p4InGame == true)
+        if (MenuScript.Instance.p4InGame == true)
         {
             Player4.gameObject.SetActive(true);
         }
+
 	}
 }

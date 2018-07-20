@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 458429233
-    m_lastTimePart2: -1999246391
+    m_lastTimePsrt1: 2058304494
+    m_lastTimePart2: -1999245787
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -30,7 +30,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -42,7 +42,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: button_click
       Path: Default Work Unit\button_click
       PathAndIcons:
@@ -52,7 +52,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: camera_trigger
       Path: Default Work Unit\Camera\camera_trigger
       PathAndIcons:
@@ -64,7 +64,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: click_back
       Path: Default Work Unit\UI\click_back
       PathAndIcons:
@@ -124,7 +124,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -136,7 +136,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -206,7 +206,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 538597049
       Guid: ac62c32a5eb5c843827b7269bfa7b694
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: play_intro
       Path: Default Work Unit\Opening\play_intro
       PathAndIcons:
@@ -290,6 +290,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -532829526
       Guid: 3b902838b8b01c4aba900eb0d9e3debc
+      maxAttenuation: 0
+    - Name: player_shock
+      Path: Default Work Unit\Player\player_shock
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_shock
+        ObjectType: 3
+      ID: -357374743
+      Guid: 7a2d63a053b7e745ab90f8d2d03022b1
       maxAttenuation: 0
     - Name: player_throw
       Path: Default Work Unit\Player\player_throw
@@ -499,8 +511,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: 462299233
-    m_lastTimePart2: -1999246391
+    m_lastTimePsrt1: 2061718680
+    m_lastTimePart2: -1999245787
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -517,8 +529,8 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
-    m_lastTimePsrt1: -769315805
-    m_lastTimePart2: -1999247995
+    m_lastTimePsrt1: 2065572118
+    m_lastTimePart2: -1999245787
     List:
     - Name: Impact_Force
       Path: Default Work Unit\Impact_Force
@@ -578,6 +590,39 @@ MonoBehaviour:
       - bytes: 93a7cba28b72004dac7588424111fe33
       - bytes: 5c536ebbbde13a499bcda4c52ec7513e
       - bytes: 91eda26eef14ab47a9aa9c93bffb8d58
+    - Name: Nationality
+      Path: Default Work Unit\Nationality
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Nationality
+        ObjectType: 9
+      ID: 302646617
+      Guid: 6540963b4f52ba4e83ab2bedfb668b9c
+      values:
+      - American
+      - Chinese
+      - Generic
+      - Indian
+      - None
+      ValueIcons:
+      - ElementName: American
+        ObjectType: 8
+      - ElementName: Chinese
+        ObjectType: 8
+      - ElementName: Generic
+        ObjectType: 8
+      - ElementName: Indian
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      valueIDs: eff44191be62973c602bf7ff90df3afadb3ba32c
+      ValueGuids:
+      - bytes: 3861da50069d74498314c7312fe96d70
+      - bytes: 47ab21a39d48b24096518a3b9723f01c
+      - bytes: e9f72740565dbe4d9e2f92ef12153f8e
+      - bytes: 54d41c74035e034c8b15b4ac62d04122
+      - bytes: 6f8d8c338f2d6a41904da3df5a7e1088
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -589,8 +634,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: 464509233
-    m_lastTimePart2: -1999246391
+    m_lastTimePsrt1: 2065552152
+    m_lastTimePart2: -1999245787
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient

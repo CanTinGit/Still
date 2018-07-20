@@ -170,13 +170,37 @@ public class AudioClass:MonoBehaviour
     AudioDatabaseStructure audioDatabase;
     //used for holding the list of the different ranges of audio states e.g. very light to very heavy
     List<AudioForceStruct> audioRange;
+    //hold the nationality of eachPlayer
+    string[] playerNationality;
+
+
+    ////creates the lists and intialises them
+    //void Awake()
+    //{
+    //    Debug.Log("Awake");
+    //    playerNationality = new string[4];
+    //    audioRange = new List<AudioForceStruct>();
+    //    audioDatabase = new AudioDatabaseStructure();
+    //    audioDatabase.Intialise();
+    //    AllMaterials();
+    //}
+
     //creates the lists and intialises them
-    void Awake()
+    public void InitialiseAudioClass()
     {
+        playerNationality = new string[4];
         audioRange = new List<AudioForceStruct>();
         audioDatabase = new AudioDatabaseStructure();
         audioDatabase.Intialise();
+        SetDefaultAudio();
         AllMaterials();
+    }
+    public void SetDefaultAudio()
+    {
+        playerNationality[0] = "Generic";
+        playerNationality[1] = "American";
+        playerNationality[2] = "Indian";
+        playerNationality[3] = "Chinese";
     }
     //sets audio for material
     public void SetAudioForMaterial(string material_)
@@ -213,11 +237,6 @@ public class AudioClass:MonoBehaviour
         singleAudioGroup.AddPszState(5, 10, "Medium");
         singleAudioGroup.AddPszState(10, 100, "Heavy");//not required to always between the ranges you can just use the max value in the if statement
         audioDatabase.AddToDatabase(singleAudioGroup);
-
-        //AkSoundEngine.SetState("Material", "metal_object");
-        //AkSoundEngine.SetState("Impact_Force", "Heavy");
-        //AkSoundEngine.PostEvent("object_impact", gameObject);
-
     }
 
     private void WoodMaterial()
@@ -279,5 +298,15 @@ public class AudioClass:MonoBehaviour
             }
         }
         return -0.5f;
+    }
+
+
+    public void SetNationality(int playerNum_, string nationality_)
+    {
+        playerNationality[playerNum_-1] = nationality_;
+    }
+    public string GetNationality(int playerNum_)
+    {
+        return playerNationality[playerNum_-1];
     }
 }

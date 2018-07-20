@@ -47,6 +47,8 @@ public class MenuScript : MonoBehaviour
     GameObject hoveringOver;
     // Booleans to control what players should be visible in game
     public bool p1InGame, p2InGame, p3InGame, p4InGame;
+    //hold the AudioClass which stores all the information to control audio
+    AudioClass audioClass;
     public static MenuScript Instance
     {
         get
@@ -57,6 +59,7 @@ public class MenuScript : MonoBehaviour
                 {
                     GameObject gm = new GameObject("GameManager");
                     gm.AddComponent<MenuScript>();
+                    gm.tag = "GameManager";
                 }
             }
             return _instance;
@@ -70,6 +73,8 @@ public class MenuScript : MonoBehaviour
     //on awake we intialise the player settings which is the default values and also set up the singleton
     void Awake()
     {
+        audioClass = new AudioClass();
+        audioClass.InitialiseAudioClass();
         playerdata = new PlayerData();
         for (int i =0; i < playerSetting.Length;i++)
         {
@@ -95,6 +100,11 @@ public class MenuScript : MonoBehaviour
         InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
         AkSoundEngine.PostEvent("play_intro", gameObject);
 
+    }
+
+    public AudioClass GetAudioClass()
+    {
+        return audioClass;
     }
 
     void CheckToPlayHoverSound()
