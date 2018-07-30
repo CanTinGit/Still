@@ -48,7 +48,7 @@ public class MenuScript : MonoBehaviour
     // Booleans to control what players should be visible in game
     public bool p1InGame, p2InGame, p3InGame, p4InGame;
     //hold the AudioClass which stores all the information to control audio
-    AudioClass audioClass;
+    //AudioClass audioClass;
     public static MenuScript Instance
     {
         get
@@ -73,8 +73,9 @@ public class MenuScript : MonoBehaviour
     //on awake we intialise the player settings which is the default values and also set up the singleton
     void Awake()
     {
-        audioClass = new AudioClass();
-        audioClass.InitialiseAudioClass();
+        //audioClass = new AudioClass();
+        //audioClass.InitialiseAudioClass();
+        gameObject.AddComponent<AudioClass>();
         playerdata = new PlayerData();
         for (int i =0; i < playerSetting.Length;i++)
         {
@@ -104,7 +105,7 @@ public class MenuScript : MonoBehaviour
 
     public AudioClass GetAudioClass()
     {
-        return audioClass;
+        return GetComponent<AudioClass>();
     }
 
     void CheckToPlayHoverSound()
@@ -320,7 +321,7 @@ public class MenuScript : MonoBehaviour
                 button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(-1, button.transform.parent.GetChild(0).GetComponent<Text>()));
                 break;
             case "Level 1 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_1"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("V2_-_Level_1"));
                 break;
             case "Level 2 Button":
                 button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_2"));
@@ -728,27 +729,27 @@ public class MenuScript : MonoBehaviour
         return numPlayers;
     }
 
-    public void SetPlayersInGame(int playerNum)
+    public void SetPlayersInGame(int playerNum,bool setTo_)
     {
         if(playerNum == 1)
         {
             //Set player 1 in game
-            p1InGame = true;
+            p1InGame = setTo_;
         }
         else if (playerNum == 2)
         {
             //Set player 2 in game
-            p2InGame = true;
+            p2InGame = setTo_;
         }
         else if (playerNum == 3)
         {
             //Set player 3 in game
-            p3InGame = true;
+            p3InGame = setTo_;
         }
         else
         {
             //Set player 4 in game
-            p4InGame = true;
+            p4InGame = setTo_;
         }
     }
 

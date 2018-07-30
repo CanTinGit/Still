@@ -1,8 +1,14 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	302646617	Nationality			\Default Work Unit\Nationality	
 	2939788855	Impact_Force			\Default Work Unit\Impact_Force	
 	3865314626	Material			\Default Work Unit\Material	
 
 State	ID	Name	State Group			Notes
+	748895195	None	Nationality			
+	1016554174	Chinese	Nationality			
+	2437018863	American	Nationality			
+	4198162320	Indian	Nationality			
+	4294388576	Generic	Nationality			
 	748895195	None	Impact_Force			
 	1935470627	Light	Impact_Force			
 	2732489590	Heavy	Impact_Force			
@@ -30,6 +36,8 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 Effect plug-ins	ID	Name	Type				Notes
 	731635156	Wwise Meter (Custom)	Wwise Meter			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	2171939413	Dialog_Leveler_Hard	Wwise Compressor			
 	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
 	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
+	3604890626	High_Pass_60Hz	Wwise Parametric EQ			
 

@@ -14,18 +14,34 @@ public class PlayerSetter : MonoBehaviour {
         {
             Player1.gameObject.SetActive(true);
         }
+        if(MenuScript.Instance.p1InGame == false)
+        {
+            Player1.gameObject.SetActive(false);
+        }
         if(MenuScript.Instance.p2InGame == true)
         {
             Player2.gameObject.SetActive(true);
         }
-        if(MenuScript.Instance.p3InGame == true)
+        if (MenuScript.Instance.p2InGame == false)
+        {
+            Player2.gameObject.SetActive(false);
+        }
+        if (MenuScript.Instance.p3InGame == true)
         {
             Player3.gameObject.SetActive(true);
+        }
+        if (MenuScript.Instance.p3InGame == false)
+        {
+            Player3.gameObject.SetActive(false);
         }
         if (MenuScript.Instance.p4InGame == true)
         {
             Player4.gameObject.SetActive(true);
         }
+        if (MenuScript.Instance.p4InGame == false)
+        {
+            Player4.gameObject.SetActive(false);
+        }
 
-	}
+    }
 }

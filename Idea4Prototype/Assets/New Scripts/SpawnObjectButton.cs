@@ -13,7 +13,7 @@ public class SpawnObjectButton : MonoBehaviour {
     public string SpecificObjectTag; //Set the the specific object
     GameObject spawnerManager;      // Reference to the spawner manager
     public bool isForMetalSphere;
-
+    public bool canDispense;
     // Use this for initialization, set the button and original position of button
     void Start()
     {
@@ -59,12 +59,12 @@ public class SpawnObjectButton : MonoBehaviour {
             // Button go down
             button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
             AkSoundEngine.PostEvent("button_click", gameObject);
-            Debug.Log(noise);
-
             // Spawn the object
-            spawnerManager.GetComponent<Spawner>().Spawn();
-
-
+            if(canDispense)
+            {
+                Debug.Log("trigger can dispense entering if statement");
+                spawnerManager.GetComponent<Spawner>().Spawn();
+            }
         }
     }
 
@@ -78,5 +78,15 @@ public class SpawnObjectButton : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
         button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
+    }
+
+    public void SetCanDispense(bool canDispense_)
+    {
+        canDispense = canDispense_;
+    }
+
+    public bool GetDispense()
+    {
+        return canDispense;
     }
 }

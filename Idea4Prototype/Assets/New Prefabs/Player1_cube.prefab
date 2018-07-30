@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 114885848167803288}
   - component: {fileID: 114906650530136476}
   m_Layer: 0
-  m_Name: Player1
+  m_Name: Player1_cube
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1528,7 +1528,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbed7ab184f5d4249903ff9ac52d757b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwArc: {fileID: 0}
   picked: {fileID: 0}
+  holdingPickUp: 0
+  PercentageY: 0.3
+  Percentagez: 0.5
+  canThrow: 1
+  maxVelocity: 0
+  minVelocity: 0
+  currentVelocity: 0
+  offsetVelocity: 0
+  angle: 0
+  resolution: 0
 --- !u!114 &114885848167803288
 MonoBehaviour:
   m_ObjectHideFlags: 1

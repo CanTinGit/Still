@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114361841775450778}
   m_Layer: 0
   m_Name: LeftRightTrigger
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 114420092618984008}
   - component: {fileID: 114751221097024258}
   - component: {fileID: 114571638992075424}
+  - component: {fileID: 114523431249412990}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Pickup
@@ -79,7 +80,7 @@ GameObject:
   - component: {fileID: 114002637197282074}
   m_Layer: 0
   m_Name: UpDownTrigger
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,8 +117,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1508719017105294}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.769582, y: -0.42, z: 4.21386}
+  m_LocalRotation: {x: 0.000043665495, y: 0.8364817, z: -0.000024825653, w: 0.547995}
+  m_LocalPosition: {x: -3.6557038, y: 0.49999058, z: 6.7060227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4902537329669768}
@@ -152,7 +153,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e4d1edf4818fe7c4ab2ae9b28d536837, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -185,7 +186,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1508719017105294}
   serializedVersion: 2
-  m_Mass: 8
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -274,6 +275,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e5cb05b44b938408a4e23d1e6a54d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114523431249412990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1508719017105294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c199803b5ca6a4f8b70c3bfc32c655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attractedTo: {fileID: 0}
+  strengthOfAttraction: 5
+  rb: {fileID: 54049672522141352}
+  canBeAttracted: 1
+  holding: 0
 --- !u!114 &114571638992075424
 MonoBehaviour:
   m_ObjectHideFlags: 1

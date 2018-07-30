@@ -18,6 +18,7 @@ public class PressedButton : MonoBehaviour {
     public bool runAnimOnReleased;
     public string soundName;
     public float delaySound;
+    public List<GameObject> top = new List<GameObject>();
 
     // Use this for initialization, set the button and original position of button
     void Start ()
@@ -44,6 +45,7 @@ public class PressedButton : MonoBehaviour {
             //Check if the object trigger the button is the specific object
             if (other.gameObject.tag == SpecificObjectTag)
             {
+                top.Add(other.gameObject);
                 //Check if the trap just run once, if it is, use settrigger to run it, if not, use setbool to run it so that it can run multiply times
                 if (isRunOnce == true)
                 {
@@ -61,12 +63,10 @@ public class PressedButton : MonoBehaviour {
             // Check if the mass of object is more than setting weight, if it is, it can make trap run.
             if ((other.gameObject.GetComponent<Rigidbody>().mass >= setWeight))
             {
-                Debug.Log("BUTTON PRESSED");
+                top.Add(other.gameObject);
                 // Button go down
                 button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
                 //AkSoundEngine.PostEvent("button_click", gameObject);
-                Debug.Log(noise);
-
                 //Check if the trap just run once, if it is, use settrigger to run it, if not, use setbool to run it so that it can run multiply times
                 if (isRunOnce == true)
                 {
@@ -101,10 +101,16 @@ public class PressedButton : MonoBehaviour {
 
             }
         }
-   }   
+   }
+
     //When the button is realsed
     void OnTriggerExit(Collider other)
     {
+        top.Remove(other.gameObject);
+        if (top.Count > 0)
+        {
+            return;
+        }
         button.position = originalPosition;
         if (isRunOnce == false)
         {

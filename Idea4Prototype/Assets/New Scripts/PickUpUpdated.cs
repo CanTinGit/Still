@@ -8,10 +8,10 @@ public class PickUpUpdated : MonoBehaviour
     GameObject icon; //the icon to indicate if the player can pick something uo
     public GameObject throwArc;     //Throw arc
     public GameObject picked; //the picked up object
-    bool holdingPickUp = false; //indicates if we are holding on a item
+    public bool holdingPickUp = false; //indicates if we are holding on a item
     //percentage of how far infront and upwards a object should move based on its size
-    float PercentageY = 0.30f;
-    float Percentagez = 0.5f;
+    public float PercentageY = 0.30f;
+    public float Percentagez = 0.5f;
     //the power of the throw
     //public float throwPower = 0.0f;
     //the joint that will be added to the player when the player drags a object
@@ -33,9 +33,10 @@ public class PickUpUpdated : MonoBehaviour
     float offsetRotation;
     bool Controller; // if you dont have a controller use the keys instead
     int playerNum;
+    int highlightedObject;
     void Awake()
     {
-        playerColor = this.transform.parent.GetComponent<MeshRenderer>().material.color;
+        //playerColor = this.transform.parent.GetComponent<MeshRenderer>().material.color;
         Controller = true;
         //get the keys and stats for the player
         playerKeys = MenuScript.Instance.GetPlayerKeys();
@@ -43,8 +44,9 @@ public class PickUpUpdated : MonoBehaviour
         //throwPower = playerKeys.GetThrowPower();
         //Setting up icon for knowing if you can pick up item
         int iconChildIndex = this.gameObject.transform.parent.childCount - 1;
+        int iconChildChildIndex = this.gameObject.transform.parent.transform.GetChild(iconChildIndex).transform.childCount- 1;
         //set the gameobject icon to the correct child object
-        icon = this.gameObject.transform.parent.transform.GetChild(iconChildIndex).transform.gameObject;
+        icon = this.gameObject.transform.parent.transform.GetChild(iconChildIndex).GetChild(iconChildChildIndex).transform.gameObject;
         //Get the throw arc
         throwArc = gameObject.transform.parent.transform.GetChild(iconChildIndex - 2).transform.gameObject;
         colliderStopWall = gameObject.transform.parent.transform.GetChild(iconChildIndex - 1).transform.gameObject;
@@ -53,7 +55,7 @@ public class PickUpUpdated : MonoBehaviour
         maxPlayer = MenuScript.Instance.GetNumberofPlayers();
         playerNum = this.transform.parent.GetComponent<MovementUpdated>().PlayerNum;
     }
-    void FixedUpdate()
+    void Update()
     {
         if (Controller)
         {
@@ -105,10 +107,15 @@ public class PickUpUpdated : MonoBehaviour
                 //the pick ups key is pressed
                 if (Input.GetButtonDown(pickUpKey.ToString()))
                 {
+                    
                     //if there is a objects that can be picked up and you are not holding something then pick it up
 
                     if ((picked != null) & (holdingPickUp == false))
                     {
+                        if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
+                        {
+                            gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("PickUp", true);
+                        }
                         //set it so the player now is holding something
                         holdingPickUp = true;
                         //plays lift sound
@@ -119,8 +126,11 @@ public class PickUpUpdated : MonoBehaviour
                         //if the picked up item is a one of these two then run the script that makes the player carry the object
                         if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
                         {
-                            Debug.Log("Pick up");
                             //return the color of the picked object back to its original color when picked up
+                            if (picked.GetComponent<gravityBody>())
+                            {
+                                picked.GetComponent<gravityBody>().SetPicked(true);
+                            }
                             picked.GetComponent<MeshRenderer>().material.color = picked.GetComponent<PickupInfo>().ReturnOriginalColor();
                             colliderStopWall.SetActive(true);
                             picked.GetComponent<PickupInfo>().SetHolder(this.gameObject);
@@ -131,21 +141,30 @@ public class PickUpUpdated : MonoBehaviour
                             //start invoke repeating to keep the object in front of the object
                             InvokeRepeating("MovePickedUp", 0.0f, 0.01666f);
                             //picked.transform.parent = gameObject.transform;
-
+                            return;
                         }
                         // if the item picked up is a draggable
                         else if (picked.name == "Drag")
                         {
                             //run the script the picks up the drag item and also attachs the character joint
                             Invoke("DragPickedUp", 0.0f);
+                            return;
                         }
                         else if (picked.name == "LeverWall")
                         {
                             //run the script the picks up the new Lever and also attachs the character joint
-                            picked.GetComponent<LeverWallScript>().Init();
+                            if (picked.GetComponent<LeverWallScript>())
+                            {
+                                picked.GetComponent<LeverWallScript>().Init();
+                            }
+                            if (picked.GetComponent<Lever>())
+                            {
+                                picked.GetComponent<Lever>().Init();
+                            }
                             //we pulled the lever interactable
                             holdingPickUp = false;
                             picked = null;
+                            return;
                         }
                         //if the object is the lever then run this
                         else if (picked.name == "LeverFloor")
@@ -162,6 +181,7 @@ public class PickUpUpdated : MonoBehaviour
                                 //the starting angle of the object
                                 startAngle = picked.transform.eulerAngles;
                             }
+                            return;
                         }
                     }
                     //this runs when the player is got a object already that he is holding
@@ -175,6 +195,11 @@ public class PickUpUpdated : MonoBehaviour
                         //if the object is a pickup item or a bucket then do this
                         if ((picked.name.Contains("Pickup")) || (picked.name.Contains("Bucket")))
                         {
+                            if (picked.GetComponent<gravityBody>())
+                            {
+                                picked.GetComponent<gravityBody>().SetPicked(false);
+                            }
+                            picked.GetComponent<PickupInfo>().SetCanAutoSnapTrue();
                             colliderStopWall.SetActive(false);
                             //set the kinematic back to false so the object is affected by gravity
                             picked.GetComponent<Rigidbody>().isKinematic = false;
@@ -203,6 +228,11 @@ public class PickUpUpdated : MonoBehaviour
                             //set picked to null since we dropped the object
                             picked = null;
                         }
+                        if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
+                        {
+                            gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("PickUp", false);
+                        }
+                        return;
                     }
                 }
                 if(canThrow == true)
@@ -210,19 +240,19 @@ public class PickUpUpdated : MonoBehaviour
                     //if the key pressed is the throw button
                     if (Input.GetButtonDown((throwKey.ToString())))
                     {
-                       
+                        Debug.Log("ButtonDown!");
                         //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
-                        if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
+                        if (picked != null&&holdingPickUp == true && picked.tag == "Pickup")
                         {
-                            //add force forwards and upwards to the picked up object
-                            //picked.GetComponent<Rigidbody>().AddForce((this.transform.forward + this.transform.up) * (throwPower_), ForceMode.VelocityChange);
-                            //Trun throw arc on
+                            //Turn throw arc on
+                            Debug.Log("Active!");
                             throwArc.SetActive(true);
                         }
                     }
                     //if the throw key is pressed and not realsed
                     if (Input.GetButton((throwKey.ToString())))
                     {
+
                         if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                         {
 
@@ -241,14 +271,15 @@ public class PickUpUpdated : MonoBehaviour
                     //If the throw key is realsed
                     if (Input.GetButtonUp((throwKey.ToString())))
                     {
-                        if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
+                        Debug.Log("ButtonUp");
+                        Debug.Log(holdingPickUp.ToString() + picked.tag);
+                        if (picked != null&&holdingPickUp == true && picked.tag == "Pickup")
                         {
-                            Debug.Log("pressing");
+                            picked.GetComponent<gravityBody>().SetPicked(false);
                             AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(this.gameObject.transform.parent.GetComponent<MovementUpdated>().PlayerNum));
                             AkSoundEngine.PostEvent("player_throw", gameObject);
                             picked.gameObject.AddComponent<CheckVelocity>();
                             throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
-                            throwArc.SetActive(false);
                             SimulateThrow simulate = picked.AddComponent<SimulateThrow>();
                             simulate.SetValue(currentVelocity, angle, resolution, picked.transform.position.y);
                             currentVelocity = minVelocity;
@@ -262,6 +293,8 @@ public class PickUpUpdated : MonoBehaviour
                             //set the picked to null since we are no longer holding the object
                             picked.GetComponent<PickupInfo>().SetHolder(null);
                             picked = null;
+                            Debug.Log("Deactive!");
+                            throwArc.SetActive(false);
                             //if the character joint is present then destroy it since we were holding the object
                             if (characterJoint != null)
                             {
@@ -270,6 +303,7 @@ public class PickUpUpdated : MonoBehaviour
                             colliderStopWall.SetActive(false);
                         }
                     }
+
                 }
             }
         }
@@ -301,10 +335,15 @@ public class PickUpUpdated : MonoBehaviour
     public void LetGoOffItem()
     {
         CancelInvoke("MovePickedUp");
+        colliderStopWall.SetActive(false);
         //since we are holding something we now drop it
         holdingPickUp = false;
         //make it null since we are not picking up an item
         picked = null;
+        if(this.gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
+        {
+            this.gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("PickUp", false);
+        }
     }
     //function for when the object interacted with is a lever
     void LeverConnect()
@@ -361,7 +400,11 @@ public class PickUpUpdated : MonoBehaviour
             {
                 picked = col.gameObject;
                 //change color to the players color when over the object
-                picked.GetComponent<MeshRenderer>().material.color = playerColor;
+                if (highlightedObject < 1)
+                {
+                    picked.GetComponent<MeshRenderer>().material.color = playerColor;
+                    highlightedObject++;
+                }
             }              
 
         }
@@ -382,15 +425,25 @@ public class PickUpUpdated : MonoBehaviour
         //when we leave the object pick up zone then we do this
     void OnTriggerExit(Collider col)
     {
+
         //if we leave any object then we turn indicator off and set the object to null if we are not holding something
         if (col.tag == "Pickup")
         {
+            Debug.Log("Exit" + highlightedObject.ToString());
             icon.GetComponent<MeshRenderer>().enabled = false;
             if(holdingPickUp==false)
             {
                 //return the color back to the original color of the object
-                col.GetComponent<MeshRenderer>().material.color = col.GetComponent<PickupInfo>().ReturnOriginalColor();
                 picked = null;
+            }
+            if (highlightedObject > 0)
+            {
+                if (col.name == "LeverWall")
+                {
+                    return;
+                }
+                col.GetComponent<MeshRenderer>().material.color = col.GetComponent<PickupInfo>().ReturnOriginalColor();
+                highlightedObject--;
             }
         }
         //same process but with lever

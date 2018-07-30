@@ -12,6 +12,7 @@ public class CameraTriggerCode : MonoBehaviour {
     public GameObject RetreatBlocker;       // Bounding volume game object which stops the player from going back
     GameObject blockingVolume;
     int NumPlayers = 0;
+    public bool isFirst;
     // Use this for initialization
     void Start ()
     {
@@ -19,6 +20,10 @@ public class CameraTriggerCode : MonoBehaviour {
         if (this.gameObject.transform.childCount != 0)
         {
             blockingVolume = this.gameObject.transform.GetChild(0).gameObject;
+        }
+        if (isFirst)
+        {
+            Invoke("showSubtitle", 0f);   // Show the subtitile after a delay to match the camera animation
         }
     }
 
@@ -44,6 +49,10 @@ public class CameraTriggerCode : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
+        if (isFirst)
+        {
+            return;
+        }
         if (col.gameObject.tag == "Player")
         {
             // Add to the number of players in trigger area
@@ -83,11 +92,13 @@ public class CameraTriggerCode : MonoBehaviour {
             infoSubtitle.SetActive(true);
         }
         // Insert audio code here
+        //AkSoundEngine.PostEvent(soundName, gameObject);
         AkSoundEngine.PostEvent(soundName, gameObject, (uint)AkCallbackType.AK_EndOfEvent, MyCallbackFunction, gameObject);    // Post sound event defined by the string soundName
     }
     //incase you want to play audio with no delay or subtitles with it
     void PlayNormalAudio()
     {
+        //AkSoundEngine.PostEvent(soundName, gameObject);
         AkSoundEngine.PostEvent(soundName, gameObject, (uint)AkCallbackType.AK_EndOfEvent, MyCallbackFunction, gameObject);     // Post sound event defined by the string soundName
     }
 
@@ -99,9 +110,12 @@ public class CameraTriggerCode : MonoBehaviour {
 
         {
 
-            AkEventCallbackInfo info = (AkEventCallbackInfo)in_info; 
+            AkEventCallbackInfo info = (AkEventCallbackInfo)in_info;
             //Then do stuff.
-            blockingVolume.SetActive(false);
+            if (blockingVolume != null)
+            {
+                blockingVolume.SetActive(false);
+            }
 
         }
 

@@ -25,8 +25,7 @@ public class CamerAIUpdated : MonoBehaviour
     CameraState state = CameraState.StillLooking;
     //the delay of each movement during the coroutine ( the vector3.movetowards movement)
     private float nextMovementDelay = 0.01f;
-
-    bool isDetected = false;
+    bool isDetected = false; 
     public float sightRange;         //Camera sight range
     public float sightAngle;         //Camera Rotation Angle
     GameObject lightObject;
@@ -174,11 +173,11 @@ public class CamerAIUpdated : MonoBehaviour
                         if (degree < sightAngle / 2 && degree > -sightAngle / 2)
                         {
                             Ray ray = new Ray();
-                            ray.origin = GameObject.FindGameObjectWithTag("CameraObject").transform.position;
-                            ray.direction = player.transform.position - GameObject.FindGameObjectWithTag("CameraObject").transform.position;
+                            ray.origin = transform.GetChild(0).position;
+                            ray.direction = player.transform.position - transform.GetChild(0).position;
                             RaycastHit hitInfo;
                             //Check if there is anything which may block the eyesight
-                            if (Physics.Raycast(ray, out hitInfo, (player.transform.position - GameObject.FindGameObjectWithTag("CameraObject").transform.position).magnitude))
+                            if (Physics.Raycast(ray, out hitInfo, sightRange))
                             {
                                 // If the ray can hit the player, which means nothing block the sight of camera, and the camera acctually finds the player
                                 if (hitInfo.transform.tag == "Player" && player.GetComponent<MovementUpdated>().isMoving == true)
@@ -194,7 +193,7 @@ public class CamerAIUpdated : MonoBehaviour
                                     }
                                     //Make the sound
                                     //Turn the color to red
-                                    GameObject.FindGameObjectWithTag("CameraObject").GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+                                    //GameObject.FindGameObjectWithTag("CameraObject").GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
                                 }
                             }
                         }

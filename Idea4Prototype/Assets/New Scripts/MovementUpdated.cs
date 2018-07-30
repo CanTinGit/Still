@@ -168,9 +168,15 @@ public class MovementUpdated : MonoBehaviour {
                     AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(PlayerNum));
                     AkSoundEngine.PostEvent("player_jump", gameObject);
                     isMoving = true;
-                    rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
+                    
                     grounded = false;
-                }
+                    if (gameObject.GetComponent<Animator>() != null && grounded == false)
+                    {
+                    gameObject.GetComponent<Animator>().SetBool("isMoving", false);
+                        gameObject.GetComponent<Animator>().SetBool("Jump", true);
+                    }
+                    rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
+            }
             }
 
             if (Input.GetAxis("Vertical" + PlayerNum.ToString()) > -0.1f && Input.GetAxis("Vertical" + PlayerNum.ToString()) < 0.1f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) > -0.1f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) < 0.1f && !Input.GetKey(playerKeys[PlayerNum-1].GetKeys()[5]))
@@ -179,6 +185,24 @@ public class MovementUpdated : MonoBehaviour {
 
             }
 
+            if(gameObject.GetComponent<Animator>() != null && isMoving == true)
+            {
+                gameObject.GetComponent<Animator>().SetBool("isMoving", true);
+            }
+            else if(gameObject.GetComponent<Animator>() != null && isMoving == false)
+            {
+                gameObject.GetComponent<Animator>().SetBool("isMoving", false);
+            }
+
+            if (gameObject.GetComponent<Animator>() != null && grounded == true)
+            {
+                gameObject.GetComponent<Animator>().SetBool("JumpEnd", true);
+                gameObject.GetComponent<Animator>().SetBool("Jump", false);
+            }
+            if (gameObject.GetComponent<Animator>() != null && grounded == false)
+            {
+                gameObject.GetComponent<Animator>().SetBool("JumpEnd", false);
+            }
     }
     // Calculate the direction based on Camera
     void CalculateDirection()
@@ -194,7 +218,31 @@ public class MovementUpdated : MonoBehaviour {
         {
             grounded = true;
         }
-
+        if(grounded==false)
+        {
+            if (col.gameObject.GetComponent<PickupInfo>())
+            {
+                if (col.gameObject.GetComponent<PickupInfo>().GetGrounded() == true)
+                {
+                    Debug.Log("123456");
+                    Vector3 direction = transform.position - col.transform.position;
+                    //Debug.Log("direction is " + direction);
+                    float degree = Vector3.Angle(direction, Vector3.up);
+                    //Debug.Log(transform.position.y);
+                    if (degree < 60)
+                    {
+                        grounded = true;
+                    }
+                }
+            }
+        }
+       //THIS HAS MORE CALCULATION BUT SHOULD WORK FOR ANY SIDE THE ABOVE WORKS WITH OUR UNITY CUBES
+        //float degree = Vector3.Angle(direction, Vector3.up);
+        //Debug.Log("degree is " + degree);
+        //if (degree < 40)
+        //{
+        //    grounded = true;
+        //}
     }
 
     //When player collider with others
@@ -212,8 +260,21 @@ public class MovementUpdated : MonoBehaviour {
             if (col.gameObject.GetComponent<Traps>().GetDisabled() == false)
                 transform.position = startPos;
         }
+        //if (col.gameObject.GetComponent<PickupInfo>())
+        //{
+        //    if (col.gameObject.GetComponent<PickupInfo>().GetGrounded() == true)
+        //    {
+        //        Vector3 direction = transform.position - col.transform.position;
+        //        //Debug.Log("direction is " + direction);
+        //        float degree = Vector3.Angle(direction, Vector3.up);
+        //        //Debug.Log("degree is " + degree);
+        //        if (degree < 40)
+        //        {
+        //            grounded = true;
+        //        }
+        //    }
+        //}
     }
-
     //Lastest landing code
     void OnTriggerStay(Collider col)
     {
@@ -239,6 +300,13 @@ public class MovementUpdated : MonoBehaviour {
         if (col.gameObject.tag == "Ground")
         {
             grounded = false;
+        }
+        if (col.gameObject.GetComponent<PickupInfo>())
+        {
+            if (col.gameObject.GetComponent<PickupInfo>().GetGrounded() == true)
+            {
+                grounded = false;
+            }
         }
     }
 

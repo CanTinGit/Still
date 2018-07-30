@@ -11,16 +11,25 @@ public class OverloadButtonPressed : MonoBehaviour
     }
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag == "Pickup")
+        if(col.gameObject.name.Contains("PickupWeight"))
         {
             buttonReference.SpawnFalse();
         }
+        //if(col.gameObject.tag == "Pickup")
+        //{
+        //    buttonReference.SpawnFalse();
+        //}
     }
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "Pickup")
+        if (col.gameObject.name.Contains("PickupWeight"))
         {
             buttonReference.SpawnTrue();
         }
+
+        //if (col.gameObject.tag == "Pickup")
+        //{
+        //    buttonReference.SpawnTrue();
+        //}
     }
 }

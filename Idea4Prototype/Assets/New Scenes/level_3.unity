@@ -7018,6 +7018,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 937238146}
+--- !u!1 &950499306 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1312173915374556, guid: da23d1d4b9c8d734aa6c524b2551697c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1049166308}
 --- !u!1 &957012722 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1928915084404924, guid: da23d1d4b9c8d734aa6c524b2551697c,
@@ -8039,7 +8044,7 @@ Prefab:
       objectReference: {fileID: 1815876959}
     - target: {fileID: 1312173915374556, guid: da23d1d4b9c8d734aa6c524b2551697c, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 23333501714023826, guid: da23d1d4b9c8d734aa6c524b2551697c,
         type: 2}
@@ -9691,7 +9696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb170aafb56e6884d9ada4b59f63c1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1: {fileID: 0}
+  Player1: {fileID: 950499306}
   Player2: {fileID: 969867460}
   Player3: {fileID: 959898306}
   Player4: {fileID: 867867095}

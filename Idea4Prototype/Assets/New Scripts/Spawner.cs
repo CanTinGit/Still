@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
     public int max_objects;                    // The max number of objects allowed to be in the level at a single time.
     public bool canSpawn = true;
     public bool setToNumPlayers;
+    public bool unlimited;
     void Start()
     {
         if (setToNumPlayers == true)
@@ -36,6 +37,7 @@ public class Spawner : MonoBehaviour
     {
         if(canSpawn)
         {
+            Debug.Log("entered the can dispense");
             canSpawn = false;
             // If too many numbers are in the scene.
             if (num_objects >= max_objects)
@@ -49,10 +51,14 @@ public class Spawner : MonoBehaviour
             // Find a random index between zero and one less than the number of player_shirts.
             int objectIndex = Random.Range(0, m_object.Length);
             // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-            Instantiate(m_object[objectIndex], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-           // m_object[objectIndex].GetComponent<Rigidbody>().mass = m_object[objectIndex].GetComponent<Rigidbody>().mass / MenuScript.Instance.GetNumberofPlayers();
+            GameObject weight = Instantiate(m_object[objectIndex], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            //weight.GetComponent<Rigidbody>().mass = m_object[objectIndex].GetComponent<Rigidbody>().mass / MenuScript.Instance.GetNumberofPlayers();
             Debug.Log(m_object[objectIndex].GetComponent<Rigidbody>().mass);
             num_objects = num_objects + 1;
+            if(unlimited)
+            {
+                max_objects++;
+            }
         }
 
     }
