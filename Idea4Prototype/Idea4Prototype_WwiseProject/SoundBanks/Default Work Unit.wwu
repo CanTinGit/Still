@@ -5,13 +5,14 @@
 			<ChildrenList>
 				<SoundBank Name="Test" ID="{40AE69A2-803D-41F7-A8E5-9CD8270E44ED}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="crane_release" ID="{4B522D11-770F-4215-B0FF-E432C0FC841E}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="object_impact" ID="{2AC362AC-B55E-43C8-827B-7269BFA7B694}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="push_object" ID="{96B7A540-B3E2-43EA-89EC-B78BD86CCC83}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="button_click" ID="{7A5D9E66-BC01-457E-AF86-C4B6CA633B51}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="crane_trigger_release" ID="{CA78AA8A-4A44-46A9-BC8E-839589B392EB}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="crane_pickup" ID="{4CD2CA6A-8BA5-48F5-97AF-A548D0693919}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="electricity" ID="{785360B3-C16A-499D-A27F-518E9B87E5E9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="crane_trigger_pickup" ID="{3DB7BFCD-60E7-4CAD-806A-01D2C8C94CF9}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="object_slide" ID="{1A6BFE98-F95E-4D83-BCDF-3847EF604DB5}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

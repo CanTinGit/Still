@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: -2087623642
-    m_lastTimePart2: -1999242939
+    m_lastTimePsrt1: -1033735530
+    m_lastTimePart2: -1999242936
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -30,7 +30,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -42,7 +42,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: button_click
       Path: Default Work Unit\button_click
       PathAndIcons:
@@ -52,6 +52,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
+      maxAttenuation: 100
+    - Name: button_trigger
+      Path: Default Work Unit\Triggers\button_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: button_trigger
+        ObjectType: 3
+      ID: -840585052
+      Guid: 74b7539d5cb5a446b29a0d564cc569bb
       maxAttenuation: 0
     - Name: camera_trigger
       Path: Default Work Unit\Camera\camera_trigger
@@ -64,7 +76,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: click_back
       Path: Default Work Unit\UI\click_back
       PathAndIcons:
@@ -124,7 +136,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -136,7 +148,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -216,6 +228,28 @@ MonoBehaviour:
         ObjectType: 3
       ID: 538597049
       Guid: ac62c32a5eb5c843827b7269bfa7b694
+      maxAttenuation: 100
+    - Name: object_slide
+      Path: Default Work Unit\object_slide
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: object_slide
+        ObjectType: 3
+      ID: -1314072818
+      Guid: 98fe6b1a5ef9834dbcdf3847ef604db5
+      maxAttenuation: 100
+    - Name: object_slide_trigger
+      Path: Default Work Unit\Triggers\object_slide_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: object_slide_trigger
+        ObjectType: 3
+      ID: 212497099
+      Guid: a20935b96c6649478efe3343402cc572
       maxAttenuation: 0
     - Name: play_intro
       Path: Default Work Unit\Opening\play_intro
@@ -311,6 +345,18 @@ MonoBehaviour:
       ID: -532829526
       Guid: 3b902838b8b01c4aba900eb0d9e3debc
       maxAttenuation: 0
+    - Name: player_push
+      Path: Default Work Unit\Triggers\player_push
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: player_push
+        ObjectType: 3
+      ID: -57221059
+      Guid: 1360a18c14c59d48b0e7c0201d72043f
+      maxAttenuation: 0
     - Name: player_shock
       Path: Default Work Unit\Player\player_shock
       PathAndIcons:
@@ -335,6 +381,16 @@ MonoBehaviour:
       ID: 65181031
       Guid: 9ddef41577381d44b9b7b31bb601332e
       maxAttenuation: 0
+    - Name: push_object
+      Path: Default Work Unit\push_object
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: push_object
+        ObjectType: 3
+      ID: -92345639
+      Guid: 40a5b796e2b3ea4389ecb78bd86ccc83
+      maxAttenuation: 100
     - Name: stop_level_music
       Path: Default Work Unit\stop_level_music
       PathAndIcons:
@@ -710,8 +766,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: 1796252622
-    m_lastTimePart2: -1999242940
+    m_lastTimePsrt1: 1807321766
+    m_lastTimePart2: -1999242936
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -821,7 +877,6 @@ MonoBehaviour:
   - /Idea4Prototype_WwiseProject
   - /Idea4Prototype_WwiseProject/Events
   - /Idea4Prototype_WwiseProject/Events/Default Work Unit
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Ambient
   - /Idea4Prototype_WwiseProject/SoundBanks
   - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
   - /Idea4Prototype_WwiseProject/Switches

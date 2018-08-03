@@ -15,16 +15,6 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{E3DDDE01-990D-41CC-800A-09668A0D8D49}" ShortID="491325998">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="41"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="electricity" ID="{9A8A1FC2-BF2A-42F1-9D8F-DB5FEA24D996}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="object_impact" ID="{2AC362AC-B55E-43C8-827B-7269BFA7B694}">
@@ -270,6 +260,58 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="crane_release" ID="{4B522D11-770F-4215-B0FF-E432C0FC841E}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="player_push" ID="{8CA16013-C514-489D-B0E7-C0201D72043F}">
+							<ChildrenList>
+								<Action Name="" ID="{7652B01E-AFD9-4FD3-A5F2-25632EE4ED13}" ShortID="86961826">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="push_object" ID="{96B7A540-B3E2-43EA-89EC-B78BD86CCC83}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="object_slide_trigger" ID="{B93509A2-666C-4749-8EFE-3343402CC572}">
+							<ChildrenList>
+								<Action Name="" ID="{109A6C7C-E394-4F9D-985B-E194176E2BAB}" ShortID="928231779">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="object_slide" ID="{1A6BFE98-F95E-4D83-BCDF-3847EF604DB5}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="button_trigger" ID="{9D53B774-B55C-46A4-B29A-0D564CC569BB}">
+							<ChildrenList>
+								<Action Name="" ID="{459C82E6-6C87-4FBC-B074-312054457482}" ShortID="911311228">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="button_click" ID="{7A5D9E66-BC01-457E-AF86-C4B6CA633B51}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E3DDDE01-990D-41CC-800A-09668A0D8D49}" ShortID="491325998">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="electricity" ID="{9A8A1FC2-BF2A-42F1-9D8F-DB5FEA24D996}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -800,6 +842,80 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="electricity" ID="{785360B3-C16A-499D-A27F-518E9B87E5E9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="push_object" ID="{96B7A540-B3E2-43EA-89EC-B78BD86CCC83}">
+					<ChildrenList>
+						<Action Name="" ID="{1FDB3C8E-CA68-40AC-BD49-55C60E082739}" ShortID="126947226">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fx_push_loop" ID="{D157A8B3-D7D0-4548-91A2-C862E6441C50}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{07947CF6-B205-420C-B1BE-E5223AB0799C}" ShortID="550184467">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64" Value="50">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{3E7928C1-C748-4150-8A1F-E736B2913DDB}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="40"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fx_push_loop" ID="{D157A8B3-D7D0-4548-91A2-C862E6441C50}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="object_slide" ID="{1A6BFE98-F95E-4D83-BCDF-3847EF604DB5}">
+					<ChildrenList>
+						<Action Name="" ID="{7EE96B44-A51B-43E5-92A8-EDA2ADBDD6AA}" ShortID="954337020">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fx_slip_loop" ID="{443165E1-AF4D-48F5-A51D-7F5FCBBE578A}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{156BF04F-141B-4EB2-B23E-8A2C4C0ADA00}" ShortID="13127819">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64" Value="50">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4F2BE483-A769-4A55-94FA-2A8DBA06987B}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="40"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fx_slip_loop" ID="{443165E1-AF4D-48F5-A51D-7F5FCBBE578A}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
