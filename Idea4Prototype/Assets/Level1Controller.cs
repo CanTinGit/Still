@@ -10,8 +10,10 @@ public class Level1Controller : MonoBehaviour {
     public GameObject Lever;
     public GameObject leverPlatform;
     public float force;
-	// Use this for initialization
-	void Start ()
+    public GameObject wire_singlePlayer;
+    public GameObject wire_multiple;
+    // Use this for initialization
+    void Start ()
     {
         if (MenuScript.Instance.GetNumberofPlayers() > 1)
         {
@@ -20,6 +22,8 @@ public class Level1Controller : MonoBehaviour {
             moveBack = true;
             Lever.SetActive(true);
             leverPlatform.SetActive(true);
+            wire_singlePlayer.SetActive(false);
+            wire_multiple.SetActive(true);
         }
 	}
 	
