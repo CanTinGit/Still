@@ -1085,7 +1085,7 @@ Prefab:
     - target: {fileID: 224257838372591364, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -68.2
       objectReference: {fileID: 0}
     - target: {fileID: 224669984851094660, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
@@ -1105,7 +1105,7 @@ Prefab:
     - target: {fileID: 224669984851094660, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -136.609
       objectReference: {fileID: 0}
     - target: {fileID: 224633623735438072, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
@@ -1125,12 +1125,12 @@ Prefab:
     - target: {fileID: 224633623735438072, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -205.01799
       objectReference: {fileID: 0}
     - target: {fileID: 224887008448759126, guid: fb1a791c81182054fa93c57c8991fbbc,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 273.427
       objectReference: {fileID: 0}
     - target: {fileID: 1883268690364154, guid: fb1a791c81182054fa93c57c8991fbbc, type: 2}
       propertyPath: m_IsActive
@@ -1558,6 +1558,7 @@ MonoBehaviour:
   noise_detection: 
   SpecificObjectTag: Player
   isForMetalSphere: 0
+  canDispense: 0
 --- !u!65 &762846367
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1863,6 +1864,7 @@ GameObject:
   - component: {fileID: 1046588027}
   - component: {fileID: 1046588039}
   - component: {fileID: 1046588038}
+  - component: {fileID: 1046588040}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2096,6 +2098,25 @@ MonoBehaviour:
   useOtherObject: 0
   valueGuid: 0df6c143a0b85747a81644149f3a4f85
   bankName: Ambient
+  loadAsynchronous: 0
+  decodeBank: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+--- !u!114 &1046588040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046588026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e612b9c987214194d8c3eb643a6e0ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: d5370119cb175c41a58aaccd1945f261
+  bankName: Level_Music
   loadAsynchronous: 0
   decodeBank: 0
   saveDecodedBank: 0

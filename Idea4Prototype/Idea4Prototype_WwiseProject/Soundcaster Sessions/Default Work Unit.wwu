@@ -10,6 +10,10 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Material" ID="{B50AFE6F-5D8E-4A80-83B9-293CBBD3DA32}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -61,7 +65,9 @@
 						<CurrentStateRef Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
 						<CurrentStateRef Name="American" ID="{50DA6138-9D06-4974-8314-C7312FE96D70}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Section3" ID="{2E472B8C-03EA-4053-BAA8-37930875CA73}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

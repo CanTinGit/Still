@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -490,6 +490,33 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="1244594577" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Level_Music</ObjectPath>
+			<ShortName>Level_Music</ShortName>
+			<Path>Level_Music.bnk</Path>
+			<IncludedMemoryFiles>
+				<File Id="13560483" Language="SFX">
+					<ShortName>Spy_Music_Section_1.wav</ShortName>
+					<Path>Voices\English(US)\Spy_Music_Section_1_F17FB28C.wem</Path>
+				</File>
+				<File Id="443226918" Language="SFX">
+					<ShortName>Spy_Music_Section_2.wav</ShortName>
+					<Path>Voices\English(US)\Spy_Music_Section_2_F17FB28C.wem</Path>
+				</File>
+				<File Id="502303677" Language="SFX">
+					<ShortName>Transition_1.wav</ShortName>
+					<Path>Voices\English(US)\Transition_1_F17FB28C.wem</Path>
+				</File>
+				<File Id="661066798" Language="SFX">
+					<ShortName>Spy_Music_Section_3.wav</ShortName>
+					<Path>Voices\English(US)\Spy_Music_Section_3_F17FB28C.wem</Path>
+				</File>
+				<File Id="841196964" Language="SFX">
+					<ShortName>Transition 2.wav</ShortName>
+					<Path>Voices\English(US)\Transition 2_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -500,7 +527,7 @@
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise"/>
+				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise" MaxAttenuation="100.000000"/>
 				<Event Id="2579544659" Name="click_back" ObjectPath="\Events\Default Work Unit\UI\click_back"/>
 				<Event Id="2102833423" Name="click_negative" ObjectPath="\Events\Default Work Unit\UI\click_negative"/>
 				<Event Id="1769629947" Name="click_positive" ObjectPath="\Events\Default Work Unit\UI\click_positive"/>
@@ -582,8 +609,8 @@
 			<ShortName>Enemy</ShortName>
 			<Path>Enemy.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1531020610" Name="bubble_shot" ObjectPath="\Events\Default Work Unit\Camera\bubble_shot"/>
-				<Event Id="1860426137" Name="camera_trigger" ObjectPath="\Events\Default Work Unit\Camera\camera_trigger"/>
+				<Event Id="1531020610" Name="bubble_shot" ObjectPath="\Events\Default Work Unit\Camera\bubble_shot" MaxAttenuation="100.000000"/>
+				<Event Id="1860426137" Name="camera_trigger" ObjectPath="\Events\Default Work Unit\Camera\camera_trigger" MaxAttenuation="100.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="475796184" Language="SFX">
@@ -601,12 +628,12 @@
 			<ShortName>Test</ShortName>
 			<Path>English(US)\Test.bnk</Path>
 			<IncludedEvents>
-				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click"/>
-				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup"/>
-				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release"/>
-				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup"/>
-				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release"/>
-				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact"/>
+				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click" MaxAttenuation="100.000000"/>
+				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup" MaxAttenuation="100.000000"/>
+				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release" MaxAttenuation="100.000000"/>
+				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup" MaxAttenuation="0.000000"/>
+				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release" MaxAttenuation="0.000000"/>
+				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact" MaxAttenuation="100.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="76802143" Language="SFX">
@@ -733,21 +760,21 @@
 			<Path>English(US)\Tut_Voiceover.bnk</Path>
 			<IncludedEvents>
 				<Event Id="820591094" Name="tut_box" ObjectPath="\Events\Default Work Unit\Tutorial\tut_box"/>
-				<Event Id="1107840467" Name="tut_box_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_box_trigger"/>
+				<Event Id="1107840467" Name="tut_box_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_box_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="3399594875" Name="tut_button" ObjectPath="\Events\Default Work Unit\Tutorial\tut_button"/>
-				<Event Id="1097533726" Name="tut_button_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_button_trigger"/>
+				<Event Id="1097533726" Name="tut_button_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_button_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="2540509267" Name="tut_excellent" ObjectPath="\Events\Default Work Unit\Tutorial\tut_excellent"/>
-				<Event Id="2306972214" Name="tut_excellent_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_excellent_trigger"/>
+				<Event Id="2306972214" Name="tut_excellent_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_excellent_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="2972429206" Name="tut_fantastic" ObjectPath="\Events\Default Work Unit\Tutorial\tut_fantastic"/>
-				<Event Id="1830393523" Name="tut_fantastic_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_fantastic_trigger"/>
+				<Event Id="1830393523" Name="tut_fantastic_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_fantastic_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="2782190353" Name="tut_jumping" ObjectPath="\Events\Default Work Unit\Tutorial\tut_jumping"/>
-				<Event Id="1032786088" Name="tut_jumping_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_jumping_trigger"/>
+				<Event Id="1032786088" Name="tut_jumping_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_jumping_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="2697837388" Name="tut_verygood" ObjectPath="\Events\Default Work Unit\Tutorial\tut_verygood"/>
-				<Event Id="4028468605" Name="tut_verygood_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_verygood_trigger"/>
+				<Event Id="4028468605" Name="tut_verygood_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_verygood_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="460999313" Name="tut_welcome" ObjectPath="\Events\Default Work Unit\Tutorial\tut_welcome"/>
-				<Event Id="2344808488" Name="tut_welcome_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_welcome_trigger"/>
+				<Event Id="2344808488" Name="tut_welcome_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_welcome_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="2011545223" Name="tut_wunderbar" ObjectPath="\Events\Default Work Unit\Tutorial\tut_wunderbar"/>
-				<Event Id="3007390098" Name="tut_wunderbar_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_wunderbar_trigger"/>
+				<Event Id="3007390098" Name="tut_wunderbar_trigger" ObjectPath="\Events\Default Work Unit\Tut Triggers\tut_wunderbar_trigger" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="178026190" Language="English(US)">

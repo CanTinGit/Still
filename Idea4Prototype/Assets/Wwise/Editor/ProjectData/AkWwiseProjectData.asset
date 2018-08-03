@@ -30,7 +30,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -42,7 +42,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: button_click
       Path: Default Work Unit\button_click
       PathAndIcons:
@@ -52,7 +52,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: camera_trigger
       Path: Default Work Unit\Camera\camera_trigger
       PathAndIcons:
@@ -64,7 +64,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: click_back
       Path: Default Work Unit\UI\click_back
       PathAndIcons:
@@ -124,7 +124,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -136,7 +136,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -206,7 +206,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 538597049
       Guid: ac62c32a5eb5c843827b7269bfa7b694
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: play_intro
       Path: Default Work Unit\Opening\play_intro
       PathAndIcons:
@@ -511,8 +511,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: 2061718680
-    m_lastTimePart2: -1999245787
+    m_lastTimePsrt1: 525469830
+    m_lastTimePart2: -1999242970
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -627,15 +627,40 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-    m_lastTimePsrt1: 1687134287
-    m_lastTimePart2: -1999249979
-    List: []
+    m_lastTimePsrt1: 1265342534
+    m_lastTimePart2: -1999242969
+    List:
+    - Name: Music_Transition
+      Path: Default Work Unit\Music_Transition
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Transition
+        ObjectType: 11
+      ID: -1578915816
+      Guid: 6f521fb80b72334591e843a90f7aa1c2
+      values:
+      - Section1
+      - Section2
+      - Section3
+      ValueIcons:
+      - ElementName: Section1
+        ObjectType: 10
+      - ElementName: Section2
+        ObjectType: 10
+      - ElementName: Section3
+        ObjectType: 10
+      valueIDs: 8b5316d2885316d2895316d2
+      ValueGuids:
+      - bytes: 77a19497278cdc46b513dea522163c71
+      - bytes: 671b7c36fe96d04f98775279ab7bf0a6
+      - bytes: 8c2b472eea035340baa837930875ca73
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: 2065552152
-    m_lastTimePart2: -1999245787
+    m_lastTimePsrt1: -1578884762
+    m_lastTimePart2: -1999242969
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -655,6 +680,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1995645809
       Guid: 167d28cba1cd3646ab2c5eb86708a848
+    - Name: Level_Music
+      Path: Default Work Unit\Level_Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Level_Music
+        ObjectType: 7
+      ID: 1244594577
+      Guid: d5370119cb175c41a58aaccd1945f261
     - Name: Opening
       Path: Default Work Unit\Opening
       PathAndIcons:
@@ -735,8 +769,6 @@ MonoBehaviour:
   ExpandedItems:
   - /Idea4Prototype_WwiseProject
   - /Idea4Prototype_WwiseProject/Events
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Ambient
   - /Idea4Prototype_WwiseProject/SoundBanks
   - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
