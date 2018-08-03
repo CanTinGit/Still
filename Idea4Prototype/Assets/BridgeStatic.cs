@@ -21,5 +21,9 @@ public class BridgeStatic : MonoBehaviour {
         {
             this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         }
+        if(col.transform.name == "PickupThrow" && this.gameObject.GetComponent<Rigidbody>().isKinematic == false)
+        {
+            Destroy(col.gameObject);
+        }
     }
 }

@@ -9,6 +9,7 @@ public class InBubble : MonoBehaviour {
     float startTime, journeyTime;
     Color lerpedColor,transparentColor,originalColor;
     bool isImmune;
+    float bubbleStrength = 50.0f;
     // Use this for initialization
     void Start ()
     {
@@ -20,11 +21,10 @@ public class InBubble : MonoBehaviour {
         gameObject.GetComponent<Animator>().SetBool("isCaught", true);
         Invoke("Bubble", 0.25f);
         gameObject.GetComponent<Rigidbody>().useGravity = false;
-        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        gameObject.GetComponent<Rigidbody>().AddForce(transform.up*30.0f, ForceMode.Acceleration);
         gameObject.GetComponent<MovementUpdated>().enabled = false;
+        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * bubbleStrength, ForceMode.Acceleration);
         AkSoundEngine.PostEvent("bubble_rise", gameObject);
-
         //Cancel gravity of player's hand
         rbs = gameObject.transform.GetChild(1).gameObject.GetComponentsInChildren<Rigidbody>();
         for (int i = 0; i < rbs.Length; i++)

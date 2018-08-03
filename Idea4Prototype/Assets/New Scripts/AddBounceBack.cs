@@ -8,9 +8,9 @@ public class AddBounceBack : MonoBehaviour {
     {
         if (col.tag == "Player")
         {
-            if (col.gameObject.GetComponent<BounckBack>() == null)
+            if (col.gameObject.GetComponent<Respawn>() == null)
             {
-                col.gameObject.AddComponent<BounckBack>();
+                col.gameObject.AddComponent<Respawn>();
             }
         }
     }

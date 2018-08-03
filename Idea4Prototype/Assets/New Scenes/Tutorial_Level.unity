@@ -3413,6 +3413,7 @@ GameObject:
   - component: {fileID: 874400086}
   - component: {fileID: 874400087}
   - component: {fileID: 874400088}
+  - component: {fileID: 874400089}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3668,6 +3669,25 @@ MonoBehaviour:
   decodeBank: 0
   saveDecodedBank: 0
   unloadTriggerList: 
+--- !u!114 &874400089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 874400074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238a5ef6216ec174d9e2680858ea8ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScoreMultiplier: 73
+  extraPlayerScore: 112
+  CollectableScore: 37
+  maxCameraTrigger: 3
+  triggerCameraScore: 213
+  highScoreBonus: 117
+  cameraInLevel: 0
+  star: 0
 --- !u!1 &875115774 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100014, guid: cd01ff50ff3510342ba1e97a308fa84a, type: 3}

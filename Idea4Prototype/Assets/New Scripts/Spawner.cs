@@ -13,14 +13,16 @@ public class Spawner : MonoBehaviour
     public bool canSpawn = true;
     public bool setToNumPlayers;
     public bool unlimited;
+    public int spawnPointIndex;
     void Start()
     {
         if (setToNumPlayers == true)
         {
             max_objects = MenuScript.Instance.GetNumberofPlayers();
         }
+        spawnPointIndex = 0;
         // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
-       // InvokeRepeating("Spawn", spawnTime, spawnTime);
+        // InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
     void Update()
@@ -37,7 +39,6 @@ public class Spawner : MonoBehaviour
     {
         if(canSpawn)
         {
-            Debug.Log("entered the can dispense");
             canSpawn = false;
             // If too many numbers are in the scene.
             if (num_objects >= max_objects)
@@ -47,13 +48,16 @@ public class Spawner : MonoBehaviour
             }
 
             // Find a random index between zero and one less than the number of spawn points.
-            int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+            //int spawnPointIndex = Random.Range(0, spawnPoints.Length);
             // Find a random index between zero and one less than the number of player_shirts.
             int objectIndex = Random.Range(0, m_object.Length);
             // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
             GameObject weight = Instantiate(m_object[objectIndex], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            if (spawnPointIndex == 1)
+            {
+                weight.layer = 0;
+            }
             //weight.GetComponent<Rigidbody>().mass = m_object[objectIndex].GetComponent<Rigidbody>().mass / MenuScript.Instance.GetNumberofPlayers();
-            Debug.Log(m_object[objectIndex].GetComponent<Rigidbody>().mass);
             num_objects = num_objects + 1;
             if(unlimited)
             {

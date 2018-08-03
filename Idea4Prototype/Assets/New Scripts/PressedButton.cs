@@ -28,13 +28,13 @@ public class PressedButton : MonoBehaviour {
     }
 
    // Noise detection wiise function, set the noise value every frame
-    void Update()
-    {
-        //int type = 1;
-        //float value;
-        //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
-        //noise = value;
-    }
+    //void Update()
+    //{
+    //    //int type = 1;
+    //    //float value;
+    //    //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
+    //    //noise = value;
+    //}
 
     //Check if something enter the trigger
     void OnTriggerEnter(Collider other)
@@ -58,7 +58,7 @@ public class PressedButton : MonoBehaviour {
             }
             return;
         }
-        if(other.gameObject.GetComponent<Rigidbody>() != null)
+        if((other.gameObject.GetComponent<Rigidbody>() != null) && this.GetComponent<PressedButton>().enabled==true)
         {
             // Check if the mass of object is more than setting weight, if it is, it can make trap run.
             if ((other.gameObject.GetComponent<Rigidbody>().mass >= setWeight))
@@ -106,23 +106,26 @@ public class PressedButton : MonoBehaviour {
     //When the button is realsed
     void OnTriggerExit(Collider other)
     {
-        top.Remove(other.gameObject);
-        if (top.Count > 0)
+        if(this.GetComponent<PressedButton>().enabled == true)
         {
-            return;
-        }
-        button.position = originalPosition;
-        if (isRunOnce == false)
-        {
-            //if(animator.GetBool(animatorVariable)==false)
+            top.Remove(other.gameObject);
+            if (top.Count > 0)
             {
-                if (soundName != "")
+                return;
+            }
+            button.position = originalPosition;
+            if (isRunOnce == false)
+            {
+                //if(animator.GetBool(animatorVariable)==false)
                 {
-                    Invoke("Delay", delaySound);
-                }
-                if (animator != null)
-                {
-                    animator.SetBool(animatorVariable, runAnimOnReleased);
+                    if (soundName != "")
+                    {
+                        Invoke("Delay", delaySound);
+                    }
+                    if (animator != null)
+                    {
+                        animator.SetBool(animatorVariable, runAnimOnReleased);
+                    }
                 }
             }
         }

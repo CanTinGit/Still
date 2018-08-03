@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour {
 
-    public bool isBackButton, isResetButton,isGoToNextLevelButton,isHelpButton;
+    public bool isBackButton, isResetButton, isGoToNextLevelButton, isHelpButton, isNextButton;
     public GameObject pausePanel;
     public GameObject helpUI;
 	// Use this for initialization
@@ -27,6 +27,10 @@ public class ButtonScript : MonoBehaviour {
         {
             gameObject.GetComponent<Button>().onClick.AddListener(() => HelpUI());
         }
+        else if (isNextButton)
+        {
+            gameObject.GetComponent<Button>().onClick.AddListener(() => MenuScript.Instance.FadeToNextLevel());
+        }
     }
     void SetRatingOnBack()
     {
@@ -36,7 +40,7 @@ public class ButtonScript : MonoBehaviour {
     void HelpUI()
     {
         ControllerStringToImage stringToImage = new ControllerStringToImage();
-        if (helpUI.active == false)
+        if (helpUI.activeSelf == false)
         {
             helpUI.SetActive(true);
             //Interact

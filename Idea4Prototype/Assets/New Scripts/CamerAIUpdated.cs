@@ -39,6 +39,7 @@ public class CamerAIUpdated : MonoBehaviour
         //add all the camera travel points to the list
         targetPoint.AddRange(GameObject.FindGameObjectsWithTag("CameraSpotPoints"));
         lightObject = GameObject.FindGameObjectWithTag("CameraObject");
+        transform.position = targetPoint[0].transform.position;
         //start the whole movement process
         NewTravelPoint();
         //Visual detecting be called every frame if the camera is running to detect player
@@ -141,7 +142,8 @@ public class CamerAIUpdated : MonoBehaviour
     void ResetShotting()
     {
         hasShot = false;
-        GameObject.FindGameObjectWithTag("CameraObject").GetComponent<Renderer>().material.color = Color.white;
+        //change color when the object shoots change 
+        //GameObject.FindGameObjectWithTag("CameraObject").GetComponent<Renderer>().material.color = Color.white;
     }
 
     public void VisualDetect()

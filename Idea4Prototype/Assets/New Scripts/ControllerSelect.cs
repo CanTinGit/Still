@@ -30,46 +30,45 @@ struct Flags
 
 public class ControllerSelect : MonoBehaviour {
 
-    Sprite selectedControlSprite;                // Sprite for when a player has joined 
-    Sprite deselectedControlSprite;              // Sprite for when no player is selected
-    public Material selectedPlayerMat;                 // Material for selected player
-    public Material deselectedPlayerMat;               // Material for de-selected player
-    bool isSelected;                                    // Boolean to check if sprite should change
-    public bool isInGame,controllerPressed;                               // Boolean to check if the player has pressed play on select screen, i.e they are going to be playing
+    Sprite selectedControlSprite;                         // Sprite for when a player has joined 
+    Sprite deselectedControlSprite;                       // Sprite for when no player is selected
+    Sprite Select, UnSelect;
+    public Material selectedPlayerMat;                    // Material for selected player
+    public Material deselectedPlayerMat;                  // Material for de-selected player
+    public bool isSelected;                               // Boolean to check if sprite should change
+    public bool isInGame,controllerPressed;               // Boolean to check if the player has pressed play on select screen, i.e they are going to be playing
     PlayerKeys[] playerKeys;                              // Input key bindings
     public GameObject playerMesh;
-    public GameObject playerMesh1, playerMesh2, playerMesh3, playerMesh4, playerMesh5, playerMesh6, playerMesh7, playerMesh8, playerMesh9, playerMesh10, playerMesh11;   // Reference to player meshs'
-    public GameObject playerMesh12, playerMesh13, playerMesh14, playerMesh15, playerMesh16, playerMesh17, playerMesh18, playerMesh19, playerMesh20, playerMesh21, playerMesh22;
+    public GameObject playerMesh1, playerMesh2, playerMesh3, playerMesh4, playerMesh5, playerMesh6, playerMesh7, playerMesh8, playerMesh9, playerMesh10, playerMesh11,   // Reference to player meshs'
+                      playerMesh12, playerMesh13, playerMesh14, playerMesh15, playerMesh16, playerMesh17, playerMesh18, playerMesh19, playerMesh20, playerMesh21, playerMesh22;
     public float DelayReturnInput,FramePerSeconds;
-    int playerNum;
-    Flags[] flags;
-    int Choice = 0;
+    int playerNum;                                        // The number of the player this script is responsible for
+    Flags[] flags;                                        // Array of the different flag choices
+    int Choice = 0;                                       // Integer to score the current flag choice
     GameObject[] materialMeshs;
+    public GameObject playerHalo, playButton;             // The selected player sprite and the play button sprite
 
     // Use this for initialization
-    void Start ()
+    void Start ()                                                                                           // Initialise values for the player
     {
-       // InvokeRepeating("CheckControllersConnected", 0.0f, 1.0f);
+        playerNum = int.Parse(this.name.Remove(0, this.name.Length - 1));
         InitFlags();
-        isInGame = false;
-        isSelected = false;
+        isInGame = false;                                                                                   // The player is not in the game to start, so set to false
+        isSelected = false;                                                                                 // The player cannot have selected a character yet, so set to false
+        Choice = 0;                                                                                         // Deselected is the default to start, which equals choice 0
         FramePerSeconds = 0.0166f;
-        playerKeys = MenuScript.Instance.GetPlayerKeys();
-        //InvokeRepeating("JoystickInputCharacterSelect", 0.0f, FramePerSeconds);
+        playerKeys = MenuScript.Instance.GetPlayerKeys();                                                   // Get the players personally defined Inputs
         DelayReturnInput = 0.5f;
-        controllerPressed = false;
-        selectedControlSprite = Resources.Load<Sprite>("UI/MenuSelectUI/PS_controller");
-        deselectedControlSprite = Resources.Load<Sprite>("UI/MenuSelectUI/PS_controllerUnknown");
-       // selectedPlayerMat = Resources.Load<Material>("Assets/Models/Player/Materials/Player " + this.transform.parent.name.Remove(0,this.transform.parent.name.Length-1) );
-       // deselectedPlayerMat = Resources.Load<Material>("Assets/Materials/Glass_Mat");
-
-        playerNum = int.Parse(this.transform.parent.name.Remove(0, this.transform.parent.name.Length - 1));
-        //Debug.Log(playerNum);
+        controllerPressed = false;                                                                          // Used for ensuring the controller doesn't cycle options too quickly
+        selectedControlSprite = Resources.Load<Sprite>("UI/MenuSelectUI/Player" + playerNum + "_console");  // Set the selected control sprite to the appropriate controller Selector this script is attached to, i.e. player 1's selected sprite
+        deselectedControlSprite = Resources.Load<Sprite>("UI/MenuSelectUI/Console_grey");                   // Set the deselected sprite to the generic deselected sprite   
+        Select = Resources.Load<Sprite>("UI/MenuSelectUI/Select");                                          // The sprite for the image notifying the player they can select
+        UnSelect = Resources.Load<Sprite>("UI/MenuSelectUI/Unselect");
     }
 
     void InitFlags()
     {
-        flags = new Flags[5];
+        flags = new Flags[5];                       // Set the names for the different flag options for the different nationalities
         flags[0].SetName("Null");
         flags[1].SetName("Generic");
         flags[2].SetName("Indian");
@@ -85,48 +84,34 @@ public class ControllerSelect : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //CheckControllersConnected();
-
-        //Debug.Log(controllers[playerNum - 1].ToString());
-        //if (controllers[playerNum - 1] != "")
-        //{
-        //    this.GetComponent<Image>().sprite = selectedControlSprite;
-        //}
-        //else
-        //{
-        //    this.GetComponent<Image>().sprite = deselectedControlSprite;
-        //}
-        //Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow);
         if (isInGame == false)                                               // If the player has not "entered" the game
         {
-            //Debug.Log(Input.GetAxis("Horizontal" + playerNum));
             if (Input.GetAxis("Horizontal" + playerNum) > 0.8 || Input.GetAxis("Horizontal" + playerNum) < -0.8 || (Input.GetKeyDown(playerKeys[playerNum - 1].GetKeys()[3]) || Input.GetKeyDown(playerKeys[playerNum - 1].GetKeys()[2])))                 // If the player uses the left or right key bindings
             {
-                Debug.Log(playerNum + " pressed left or right");
                 if (controllerPressed == false)
                 {
                     controllerPressed = true;
 
-                    if (Input.GetAxis("Horizontal" + playerNum) > 0.8)
+                    if (Input.GetAxis("Horizontal" + playerNum) > 0.8)          // If the player moves the joystick right, add to choice number
                     {
                         Choice++;
-                        if (Choice > 4)
+                        if (Choice > 4)                                         // If choice reaches the upper limit
                         {
-                            Choice = 0;
+                            Choice = 0;                                         // Set choice to lower limit
                         }
                     }
-                    else if (Input.GetAxis("Horizontal" + playerNum) < -0.8)
+                    else if (Input.GetAxis("Horizontal" + playerNum) < -0.8)    // If the player moves the joystick left, take away from the choice number
                     {
                         Choice--;
-                        if (Choice < 0)
+                        if (Choice < 0)                                         // If choice reaches the lower limit
                         {
-                            Choice = 4;
+                            Choice = 4;                                         // set choice to the upper limit
                         }
                     }
-                    if(Choice!=0)
+                    if (Choice != 0)
                     {
                         isSelected = true;
-                        playerMesh1.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
+                        playerMesh1.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;               // Change the player mesh's materials to the selected material
                         playerMesh2.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
                         playerMesh3.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
                         playerMesh4.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
@@ -148,12 +133,14 @@ public class ControllerSelect : MonoBehaviour {
                         playerMesh20.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
                         playerMesh21.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
                         playerMesh22.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        //playerMesh.GetComponent<Image>().sprite = selectedPlayerMat; // Set selected chr material on player mesh
+
+                        this.GetComponent<Image>().sprite = selectedControlSprite;
+                        this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = true;       // Enable select UI message, as the player CAN select this character
                     }
                     else
                     {
                         isSelected = false;
-                        playerMesh1.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+                        playerMesh1.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;             // Set the material for each mesh for this player to the deslected, see-through material, signifying nothing has been selected
                         playerMesh2.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
                         playerMesh3.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
                         playerMesh4.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
@@ -175,78 +162,60 @@ public class ControllerSelect : MonoBehaviour {
                         playerMesh20.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
                         playerMesh21.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
                         playerMesh22.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        //playerMesh.GetComponent<Image>().sprite = deselectedPlayerMat; // Set deselected player material on player mesh
+
+                        this.GetComponent<Image>().sprite = deselectedControlSprite;                                // Changed controller sprite image to de-selected
+                        this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = false;
                     }
                     playerMesh.gameObject.transform.Find("CountryFlag").GetComponent<Image>().sprite = flags[Choice].GetSprite();
                     Invoke("DelayInputBack", DelayReturnInput);
                 }
-
-
-
-                //if (controllerPressed == false)
-                //{
-                //    controllerPressed = true;
-
-                //    if (isSelected == false)                                    // If the selected sprite isnt showing
-                //    {
-                //        isSelected = true;                                      // Set selected boolean to true
-                //                                                                //  this.GetComponent<Image>().sprite = selectedControlSprite;          // Set selected controller sprite
-                //        playerSprite.GetComponent<Image>().sprite = selectedPlayerSprite;   // Set selected chr
-
-
-                //    }
-                //    else
-                //    {
-                //        isSelected = false;                                                 // Else, i.e isSelected is true
-                //                                                                            // this.GetComponent<Image>().sprite = deselectedControlSprite;        // Set deselected controller sprite
-                //        playerSprite.GetComponent<Image>().sprite = deselectedPlayerSprite; // Set deselected player sprite
-
-                //    }
-                //    Invoke("DelayInputBack", DelayReturnInput);
-
-                //}
-                    //pressed123 = true;
-                    //SelectChange();
-                    //if (isSelected == false)                                    // If the selected sprite isnt showing
-                    //{
-                    //    isSelected = true;                                      // Set selected boolean to true
-                    //    this.GetComponent<Image>().sprite = selectedControlSprite;          // Set selected controller sprite
-                    //    playerSprite.GetComponent<Image>().sprite = selectedPlayerSprite;   // Set selected chr
-
-                    //}
-                    //else
-                    //{
-                    //    isSelected = false;                                                 // Else, i.e isSelected is true
-                    //    this.GetComponent<Image>().sprite = deselectedControlSprite;        // Set deselected controller sprite
-                    //    playerSprite.GetComponent<Image>().sprite = deselectedPlayerSprite; // Set deselected player sprite
-                    //}
-                }
-                //if (Input.GetButtonDown("Start") && isSelected == true)     // If the character is selected and the start/join button is pressed
-                //{
-                //    isInGame = true;                                            // Player is in game
-                //    // Add 1 to the number of in game players for use by later scenes
-                //    MenuScript.Instance.SetNumberofPlayers(1);
-                //}
             }
-            if ((Input.GetButtonDown("Start" + playerNum) || Input.GetKeyDown(KeyCode.Return)) && isSelected == true)     // If the character is selected and the start/join button is pressed
+            if ((Input.GetButtonDown("Joystick" + playerNum + "Button0") || Input.GetKeyDown(KeyCode.Return)) && isSelected == true)     // If the character is selected and the start/join button is pressed
             {
-                isInGame = !isInGame;                                            // Player is in game
+                isInGame = true;                                            // Player is in game
                 if (isInGame == true)
                 {// Add 1 to the number of in game players for use by later scenes
-                    this.GetComponent<Image>().sprite = selectedControlSprite;
-                    MenuScript.Instance.SetNumberofPlayers(1);
-                    this.GetComponentInChildren<Text>().enabled = true;
-                    MenuScript.Instance.SetPlayersInGame(playerNum, true);
-                    MenuScript.Instance.GetAudioClass().SetNationality(playerNum, flags[Choice].GetName());
-                    playerMesh.GetComponent<Animator>().SetBool("Ready", true);
+
+                    playerMesh.GetComponent<Animator>().SetBool("Ready", true);                                     // Play ready animation
+                    MenuScript.Instance.SetNumberofPlayers(1);                                                      // Add 1 to the number of players in game
+                    MenuScript.Instance.SetPlayersInGame(playerNum, true);                                          // Set that player to true in later scenes
+                    MenuScript.Instance.GetAudioClass().SetNationality(playerNum, flags[Choice].GetName());         // Set the player character voice to the nationality selected in this menu
+                    playerHalo.gameObject.SetActive(true);                                                          // Show the selected halo, highlighting the player has selected a character & voice
+                    this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = false;          // Set the select message to invisible as the player can now no longer select a player (unless they press back)
+                    playerMesh.transform.Find("SelectArrows" + playerNum).GetComponent<Image>().enabled = false;    // Set the selected arrows to invisible for the same reason as above
                 }
-                else
+
+
+            }
+        }
+
+            if(Input.GetButtonDown("Joystick" + playerNum + "Button1"))                 //The back button is pressed
+            {
+                if(isInGame == true)                                                         //If the player has selected a character, de-select them
                 {
-                    MenuScript.Instance.SetNumberofPlayers(-1);
+                    MenuScript.Instance.SetNumberofPlayers(-1);                         // Take 1 off the players in game
                     MenuScript.Instance.SetPlayersInGame(playerNum, false);
-                    this.GetComponentInChildren<Text>().enabled = false;
-                    this.GetComponent<Image>().sprite = deselectedControlSprite;
-                    playerMesh.GetComponent<Animator>().SetBool("Ready", false);
+                    playerHalo.gameObject.SetActive(false);                             // Turn the selected halo off
+                    this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = true;       // Show the select UI
+                    isInGame = false;
+                    playerMesh.GetComponent<Animator>().SetBool("Ready", false);                                // make the animation return to idle
+                    this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().sprite = Select;
+            }
+                else
+                {                                                                           // Else they are not in the game and wish to return to the previous screen
+                    ResetPlayer();                                                          // Reset the player to initial un selected values
+                    MenuScript.Instance.ReturntoMainMenu();
+                }
+                
+            }
+            if(isInGame == true)
+            {
+                if(Input.GetButtonDown("Joystick" + playerNum + "Button0"))                 // If A button is pressed
+                {
+                    if (playButton.activeSelf == true)               // Move to the next screen if the play button is visible
+                    {
+                        MenuScript.Instance.ContinuePressed();
+                    }
                 }
             }
         }
@@ -260,17 +229,10 @@ public class ControllerSelect : MonoBehaviour {
             if (isSelected == false)                                    // If the selected sprite isnt showing
             {
                 isSelected = true;                                      // Set selected boolean to true
-              //  this.GetComponent<Image>().sprite = selectedControlSprite;          // Set selected controller sprite
-               // playerSprite.GetComponent<Image>().sprite = selectedPlayerSprite;   // Set selected chr
-                
-
             }
             else
             {
                 isSelected = false;                                                 // Else, i.e isSelected is true
-               // this.GetComponent<Image>().sprite = deselectedControlSprite;        // Set deselected controller sprite
-               // playerSprite.GetComponent<Image>().sprite = deselectedPlayerSprite; // Set deselected player sprite
-                
             }
             Invoke("DelayInputBack", DelayReturnInput);
         }
@@ -278,48 +240,47 @@ public class ControllerSelect : MonoBehaviour {
 
     }
     
+    public void ResetPlayer()                                           // Reset all appropriate values to their initial state, i.e. return to if the game was just started
+    {
+        isSelected = false;
+        isInGame = false;
+        Choice = 0;
+        playerHalo.SetActive(false);
+        this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().sprite = Select;
+        this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = false;
+        MenuScript.Instance.SetTotalNumberofPlayers(0);
+        MenuScript.Instance.SetPlayersInGame(playerNum, false);
+        playerMesh.gameObject.transform.Find("CountryFlag").GetComponent<Image>().sprite = flags[Choice].GetSprite();
+        playerMesh.transform.Find("SelectArrows" + playerNum).GetComponent<Image>().enabled = true;
+
+
+        playerMesh1.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh2.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh3.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh4.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh5.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh6.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh7.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh8.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh9.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh10.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh11.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh12.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh13.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh14.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh15.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh16.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh17.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh18.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh19.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh20.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh21.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+        playerMesh22.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
+
+        this.GetComponent<Image>().sprite = deselectedControlSprite;
+    }
     void CheckControllersConnected()
     {
-        //List<string> controllers = new List<string>();
-        //// Debug.Log("controller string" + controllers.Length);
-        ////Debug.Log("joystick string" + Input.GetJoystickNames().Length);
-        //foreach(string item in Input.GetJoystickNames())
-        //{
-        //    if(item !="")
-        //    {
-        //        controllers.Add(item);
-        //    }
-        //}
-        ////Check whether array contains anything
-        //if (controllers.Count > 0)
-        //{
-        //    for(int i =0; i< 4;i++)
-        //    {
-        //        if(i < controllers.Count)
-        //        {
-        //            //if (controller[i]!=null)
-        //            {
-        //                this.GetComponent<Image>().sprite = selectedControlSprite;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            //        //If it is empty, controller i is disconnected
-        //            //        //where i indicates the controller number
-        //            //        //Debug.Log("Controller: " + i + " is disconnected.");
-        //            //        if(i == (playerNum - 1))
-        //            //        {
-        //            this.GetComponent<Image>().sprite = deselectedControlSprite;
-        //            playerSprite.GetComponent<Image>().sprite = deselectedPlayerSprite; // Set deselected player sprite
-        //            Choice = 0;
-        //            playerSprite.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = flags[Choice].GetSprite();
-        //            isInGame = false;
-        //            isSelected = false;
-        //            this.GetComponentInChildren<Text>().enabled = false;
-        //            //        }
-        //        }
-
-        //    }
         string[] controllers = Input.GetJoystickNames();
         //Iterate over every element
         for (int i = 0; i < controllers.Length; ++i)

@@ -162,6 +162,10 @@ public class PickUpUpdated : MonoBehaviour
                                 picked.GetComponent<Lever>().Init();
                             }
                             //we pulled the lever interactable
+                            if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
+                            {
+                                gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("PickUp", false);
+                            }
                             holdingPickUp = false;
                             picked = null;
                             return;
@@ -180,6 +184,10 @@ public class PickUpUpdated : MonoBehaviour
                                 startDistance = Vector2.Distance(picked.transform.position, this.transform.position);
                                 //the starting angle of the object
                                 startAngle = picked.transform.eulerAngles;
+                                if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
+                                {
+                                    gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("PickUp", false);
+                                }
                             }
                             return;
                         }
@@ -237,73 +245,81 @@ public class PickUpUpdated : MonoBehaviour
                 }
                 if(canThrow == true)
                 {
-                    //if the key pressed is the throw button
-                    if (Input.GetButtonDown((throwKey.ToString())))
+                    if(picked!= null && picked.name == "PickupThrow")
                     {
-                        Debug.Log("ButtonDown!");
-                        //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
-                        if (picked != null&&holdingPickUp == true && picked.tag == "Pickup")
+                        //if the key pressed is the throw button
+                        if (Input.GetButtonDown((throwKey.ToString())))
                         {
-                            //Turn throw arc on
-                            Debug.Log("Active!");
-                            throwArc.SetActive(true);
+                            Debug.Log("ButtonDown!");
+                            //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
+                            if (picked != null&&holdingPickUp == true && picked.tag == "Pickup")
+                            {
+                                //Turn throw arc on
+                                Debug.Log("Active!");
+                                throwArc.SetActive(true);
+                            }
                         }
-                    }
-                    //if the throw key is pressed and not realsed
-                    if (Input.GetButton((throwKey.ToString())))
-                    {
-
-                        if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
+                        //if the throw key is pressed and not realsed
+                        if (Input.GetButton((throwKey.ToString())))
                         {
 
-                            if (currentVelocity < maxVelocity)
+                            if ((picked != null) && (holdingPickUp == true) && (picked.tag != "Lever"))
                             {
 
-                                currentVelocity = currentVelocity + offsetVelocity;
-                            }
-                            else
-                            {
-                                currentVelocity = maxVelocity;
-                            }
-                            throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, 10);
-                        }
-                    }
-                    //If the throw key is realsed
-                    if (Input.GetButtonUp((throwKey.ToString())))
-                    {
-                        Debug.Log("ButtonUp");
-                        Debug.Log(holdingPickUp.ToString() + picked.tag);
-                        if (picked != null&&holdingPickUp == true && picked.tag == "Pickup")
-                        {
-                            picked.GetComponent<gravityBody>().SetPicked(false);
-                            AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(this.gameObject.transform.parent.GetComponent<MovementUpdated>().PlayerNum));
-                            AkSoundEngine.PostEvent("player_throw", gameObject);
-                            picked.gameObject.AddComponent<CheckVelocity>();
-                            throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
-                            SimulateThrow simulate = picked.AddComponent<SimulateThrow>();
-                            simulate.SetValue(currentVelocity, angle, resolution, picked.transform.position.y);
-                            currentVelocity = minVelocity;
-                            //set it so we no longer are holding the object
-                            holdingPickUp = false;
-                            //turn off the movePickedUp script since we are no longer holding the object
-                            CancelInvoke("MovePickedUp");
-                            picked.transform.parent = null;
-                            //turn kinematic off so gravity effects the object again
-                            //picked.GetComponent<Rigidbody>().isKinematic = false;
-                            //set the picked to null since we are no longer holding the object
-                            picked.GetComponent<PickupInfo>().SetHolder(null);
-                            picked = null;
-                            Debug.Log("Deactive!");
-                            throwArc.SetActive(false);
-                            //if the character joint is present then destroy it since we were holding the object
-                            if (characterJoint != null)
-                            {
-                                Destroy(characterJoint);
-                            }
-                            colliderStopWall.SetActive(false);
-                        }
-                    }
+                                if (currentVelocity < maxVelocity)
+                                {
 
+                                    currentVelocity = currentVelocity + offsetVelocity;
+                                }
+                                else
+                                {
+                                    currentVelocity = maxVelocity;
+                                }
+                                throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, 10);
+                            }
+                        }
+                        //If the throw key is realsed
+                        if (Input.GetButtonUp((throwKey.ToString())))
+                        {
+                            Debug.Log("ButtonUp");
+                            Debug.Log(holdingPickUp.ToString() + picked.tag);
+
+                            if (picked != null && holdingPickUp == true && picked.tag == "Pickup")
+                            {
+                                if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
+                                {
+                                    gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("PickUp", false);
+                                }
+                                //picked.GetComponent<gravityBody>().SetPicked(false);
+                                AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(this.gameObject.transform.parent.GetComponent<MovementUpdated>().PlayerNum));
+                                AkSoundEngine.PostEvent("player_throw", gameObject);
+                                picked.gameObject.AddComponent<CheckVelocity>();
+                                throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, resolution);
+                                SimulateThrow simulate = picked.AddComponent<SimulateThrow>();
+                                simulate.SetValue(currentVelocity, angle, resolution, picked.transform.position.y);
+                                currentVelocity = minVelocity;
+                                //set it so we no longer are holding the object
+                                holdingPickUp = false;
+                                //turn off the movePickedUp script since we are no longer holding the object
+                                CancelInvoke("MovePickedUp");
+                                picked.transform.parent = null;
+                                //turn kinematic off so gravity effects the object again
+                                //picked.GetComponent<Rigidbody>().isKinematic = false;
+                                //set the picked to null since we are no longer holding the object
+                                picked.GetComponent<PickupInfo>().SetDestroyActive(5.0f);
+                                picked.GetComponent<PickupInfo>().SetHolder(null);                        
+                                Debug.Log("Deactive!");
+                                throwArc.SetActive(false);
+                                //if the character joint is present then destroy it since we were holding the object
+                                if (characterJoint != null)
+                                {
+                                    Destroy(characterJoint);
+                                }
+                                colliderStopWall.SetActive(false);
+                                picked = null;
+                            }
+                        }
+                    }                   
                 }
             }
         }
@@ -380,6 +396,10 @@ public class PickUpUpdated : MonoBehaviour
             picked = null;
             //since we are no longer holding a object then turn it false
             holdingPickUp = false;
+            if (this.gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
+            {
+                this.gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("PickUp", false);
+            }
             Debug.Log("finished the full pull");
         }
     }
@@ -421,6 +441,8 @@ public class PickUpUpdated : MonoBehaviour
                     picked = col.gameObject;
             }
         }
+
+
     }
         //when we leave the object pick up zone then we do this
     void OnTriggerExit(Collider col)
@@ -429,7 +451,6 @@ public class PickUpUpdated : MonoBehaviour
         //if we leave any object then we turn indicator off and set the object to null if we are not holding something
         if (col.tag == "Pickup")
         {
-            Debug.Log("Exit" + highlightedObject.ToString());
             icon.GetComponent<MeshRenderer>().enabled = false;
             if(holdingPickUp==false)
             {
@@ -457,5 +478,6 @@ public class PickUpUpdated : MonoBehaviour
                     picked = null;
             }
         }
+
     }
 }

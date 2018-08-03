@@ -8,7 +8,8 @@ public class Bridge : MonoBehaviour {
 
     void OnDestroy()
     {
-        bridge.GetComponent<Rigidbody>().isKinematic = false;
+          bridge.GetComponent<Rigidbody>().isKinematic = false;
+
     }
 
 }

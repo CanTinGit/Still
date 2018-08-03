@@ -140,33 +140,35 @@ public class Rater : MonoBehaviour
         time = GameObject.Find("Timer").GetComponent<Timer>();
         //Get current time that players used to pass
 
-        setTime finishedTime = new setTime();
-        finishedTime.unitSeconds = time.unitSeconds;
-        finishedTime.tenSeconds = time.tenSeconds;
-        finishedTime.unitMins = time.unitMins;
-        finishedTime.tenMins = time.tenMins;
+        //setTime finishedTime = new setTime();
+        //finishedTime.unitSeconds = time.unitSeconds;
+        //finishedTime.tenSeconds = time.tenSeconds;
+        //finishedTime.unitMins = time.unitMins;
+        //finishedTime.tenMins = time.tenMins;
+        starImage.sprite = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>().ReturnStars();
 
         //If it's more than setting timing 1, get three star
-        if (finishedTime > setTimings[0])
-        {
-            starImage.sprite = stars[2];
-            starImage.SetNativeSize();
-            return 3;
-        }
+        //if (finishedTime > setTimings[0])
+        //{
+        //    starImage.sprite = stars[2];
+        //    starImage.SetNativeSize();
+        //    return 3;
+        //}
 
-        //If it's less than setting timing 1, but more than setting timing 2, get two star
-        else if (finishedTime < setTimings[0] && finishedTime > setTimings[1])
-        {
-            starImage.sprite = stars[1];
-            starImage.SetNativeSize();
-            return 2;
-        }
-        //Else getting one star
-        else
-        {
-            starImage.sprite = stars[0];
-            starImage.SetNativeSize();
-            return 1;
-        }
+        ////If it's less than setting timing 1, but more than setting timing 2, get two star
+        //else if (finishedTime < setTimings[0] && finishedTime > setTimings[1])
+        //{
+        //    starImage.sprite = stars[1];
+        //    starImage.SetNativeSize();
+        //    return 2;
+        //}
+        ////Else getting one star
+        //else
+        //{
+        //    starImage.sprite = stars[0];
+        //    starImage.SetNativeSize();
+        //    return 1;
+        //}
+        return (int)GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>().ReturnScore();
     }
 }

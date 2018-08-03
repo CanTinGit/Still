@@ -25,9 +25,9 @@ GameObject:
   - component: {fileID: 114769372353061718}
   - component: {fileID: 64311314553295014}
   - component: {fileID: 114688435241612978}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: PickupWeight
-  m_TagString: Untagged
+  m_TagString: Weight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTopOff: {fileID: 0}
   canAutoSnap: 0
+  grounded: 0
 --- !u!114 &114769372353061718
 MonoBehaviour:
   m_ObjectHideFlags: 1

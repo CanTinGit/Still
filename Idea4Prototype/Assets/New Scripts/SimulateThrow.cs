@@ -31,30 +31,33 @@ public class SimulateThrow : MonoBehaviour {
 
     void SimulateMove()
     {
-        if (i < resolution + 1)
+        if(this.gameObject!=null)
         {
-            this.transform.position = movementArray[i];
-            i++;
-        }
-        else
-        {
-            //turn kinematic off so gravity effects the object again
-            float x = (movementArray[i-1].x - movementArray[i-2].x) / 0.01666f;
-            radianAngle = Mathf.Deg2Rad * angle;
-            float y = (movementArray[i - 1].x - movementArray[i - 2].x) / 0.01666f;
-            float z = (movementArray[i-1].z - movementArray[i-2].z) / 0.01666f;
-            //Debug.Log(new Vector3(x, -y, z));
-            if (y >= 0)
+            if (i < resolution + 1)
             {
-                gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, -y, z);
+                this.transform.position = movementArray[i];
+                i++;
             }
             else
             {
-                gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, y, z);
+                //turn kinematic off so gravity effects the object again
+                float x = (movementArray[i - 1].x - movementArray[i - 2].x) / 0.01666f;
+                radianAngle = Mathf.Deg2Rad * angle;
+                float y = (movementArray[i - 1].x - movementArray[i - 2].x) / 0.01666f;
+                float z = (movementArray[i - 1].z - movementArray[i - 2].z) / 0.01666f;
+                //Debug.Log(new Vector3(x, -y, z));
+                if (y >= 0)
+                {
+                    gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, -y, z);
+                }
+                else
+                {
+                    gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, y, z);
+                }
+                gameObject.GetComponent<Rigidbody>().useGravity = true;
+                //CancelInvoke();
+                Destroy(this);
             }
-            gameObject.GetComponent<Rigidbody>().useGravity = true;
-            //CancelInvoke();
-            Destroy(this);
         }
     }
 

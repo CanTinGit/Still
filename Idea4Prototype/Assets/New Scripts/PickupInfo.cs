@@ -22,7 +22,7 @@ public class PickupInfo : MonoBehaviour
         }
         holder = holder_;
     }
-
+    
     public Color ReturnOriginalColor()
     {
         return originalColor;
@@ -36,7 +36,7 @@ public class PickupInfo : MonoBehaviour
             {
                 if (col.gameObject.GetComponent<PickupInfo>().onTopOff == null)
                 {
-                    if (col.transform.name.Contains("Pickup") && col.transform.tag == "Pickup")
+                    if (col.transform.name.Contains("Pickup") && col.transform.tag == "Pickup" && !col.transform.GetComponent<DestroyCollider>())
                     {
                         Vector3 direction = transform.position - col.transform.position;
                         float degree = Vector3.Angle(direction, Vector3.up);
@@ -59,6 +59,14 @@ public class PickupInfo : MonoBehaviour
             //Debug.Log(angle);
             grounded = true;
         }
+        if(this.name== "PickupThrow")
+        {
+            if(col.gameObject.GetComponent<Bridge>())
+            {
+                CancelInvoke();
+                Invoke("DestroyObject", 0.2f);
+            }
+        }
         //else if(col.transform.name.Contains("Pickup") && col.transform.tag == "Pickup" && col.transform.GetComponent<PickupInfo>().GetGrounded()==true)
         //{
         //    Debug.Log("herekfafas");
@@ -79,7 +87,6 @@ public class PickupInfo : MonoBehaviour
         if (col.transform.tag == "Ground")
         {
             grounded = false;
-            Debug.Log("cube off the ground");
         }
     }
 
@@ -106,5 +113,18 @@ public class PickupInfo : MonoBehaviour
     public bool GetGrounded()
     {
         return grounded;
+    }
+    public GameObject GetHolder()
+    {
+        return holder;
+    }
+    public void SetDestroyActive(float timeToDestroyIn_)
+    {
+        Invoke("DestroyObject", timeToDestroyIn_);
+    }
+
+    void DestroyObject()
+    {
+        Destroy(this.gameObject);
     }
 }

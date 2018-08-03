@@ -12,12 +12,12 @@ public class Timer : MonoBehaviour {
 
     void Start ()
     {
-        unitSeconds = 0;                                                        // Number of single unit seconds
-        tenSeconds = 0;                                                         // Number of tens units seconds
-        unitMins = 5;                                                           // Number of single unit minutes
-        tenMins = 0;                                                            // Number of tens unit minutes
+       // unitSeconds = 0;                                                        // Number of single unit seconds
+        //tenSeconds = 0;                                                         // Number of tens units seconds
+        //unitMins = 5;                                                           // Number of single unit minutes
+        //tenMins = 0;                                                            // Number of tens unit minutes
         numPlayers = MenuScript.Instance.GetNumberofPlayers();//GameObject.FindGameObjectsWithTag("Player").Length;        // numPlayers = the length of the number of game objects with tag "Players" i.e. the number of visible players in the scene
-        TimerPlayerNum();                                                       // Time adjustment based on number of players
+        //TimerPlayerNum();                                                       // Time adjustment based on number of players
         timer = GameObject.FindGameObjectWithTag("Timer").GetComponentInChildren<Text>().gameObject;
         InvokeRepeating("Timing", 0.0f, 1.0f);
 	}
@@ -47,6 +47,8 @@ public class Timer : MonoBehaviour {
                     unitSeconds = 9;                                                        // Set the unit seconds variable to 9, as it is the next tens unit down
                 }
             }
+            //GetComponent<Image>().sprite = TimeToStars();
+            GetComponent<Image>().sprite = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>().ChangeTimeToStars();
             timer.GetComponent<Text>().text = tenMins.ToString() + unitMins.ToString() + ":" + tenSeconds.ToString() + unitSeconds.ToString();         // Convert the timer integer variable to string format for in-game
         }
     }
@@ -90,6 +92,30 @@ public class Timer : MonoBehaviour {
         unitMins = uMins;
         tenSeconds = tSecs;
         unitSeconds = uSecs;
+    }
+
+    public float GetTimeInSeconds()
+    {
+        float checkpointTime = (tenMins * 600) + (unitMins * 60) + (tenSeconds * 10) + (unitSeconds);
+        return checkpointTime;
+    }
+    //changes the time to a sprite of cheese
+    Sprite TimeToStars()
+    {
+        //returns a checkpointnumber
+        int checkpointStar = 3;
+        if (GetTimeInSeconds() > 0 && GetTimeInSeconds() <= 30)
+        {
+            checkpointStar = 2;
+        }
+        else if (GetTimeInSeconds() == 0)
+        {
+            checkpointStar = 1;
+        }
+        //if it returns 0 it is a fail return
+        //return checkpointStar;
+        Sprite sprite = Resources.Load<Sprite>("UI/ScoreSystem/Cheese" + checkpointStar);
+        return sprite;
     }
 }
 

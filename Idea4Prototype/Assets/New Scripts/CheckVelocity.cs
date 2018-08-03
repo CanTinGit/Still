@@ -18,7 +18,11 @@ public class CheckVelocity : MonoBehaviour {
             if (gameObject.GetComponent<Rigidbody>().velocity.magnitude > 1.0f)
             {
                 lastvelocity = gameObject.GetComponent<Rigidbody>().velocity.magnitude;
-            this.gameObject.GetComponent<AudioTestScript>().SetVelocity(lastvelocity);
+                if(this.gameObject.GetComponent<AudioTestScript>())
+                {
+                    this.gameObject.GetComponent<AudioTestScript>().SetVelocity(lastvelocity);
+                }
+                
             //Debug.Log("the check " + gameObject.GetComponent<Rigidbody>().velocity);
             }
         

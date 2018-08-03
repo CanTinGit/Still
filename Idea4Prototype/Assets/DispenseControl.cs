@@ -9,15 +9,16 @@ public class DispenseControl : MonoBehaviour
     {
         if(col.transform.name == "EnableDispense")
         {
-            button.GetComponent<SpawnObjectButton>().SetCanDispense(true);
-            Debug.Log("trigger block in dispense");
+            //button.GetComponent<SpawnObjectButton>().SetCanDispense(true);
+            GameObject.Find("SpawnerManager").GetComponent<Spawner>().spawnPointIndex = 1;
         }
     }
     void OnCollisionExit(Collision col)
     {
         if (col.transform.name == "EnableDispense")
         {
-            button.GetComponent<SpawnObjectButton>().SetCanDispense(false);
+            //button.GetComponent<SpawnObjectButton>().SetCanDispense(false);
+            GameObject.Find("SpawnerManager").GetComponent<Spawner>().spawnPointIndex = 1;
         }
     }
 
@@ -28,7 +29,6 @@ public class DispenseControl : MonoBehaviour
         {
             if (button.GetComponent<SpawnObjectButton>().GetDispense()==false)
             button.GetComponent<SpawnObjectButton>().SetCanDispense(true);
-            Debug.Log("trigger block in dispense");
         }
     }
 }
