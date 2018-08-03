@@ -494,6 +494,9 @@
 			<ObjectPath>\SoundBanks\Default Work Unit\Level_Music</ObjectPath>
 			<ShortName>Level_Music</ShortName>
 			<Path>Level_Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="557932600" Name="play_level_music" ObjectPath="\Events\Default Work Unit\play_level_music"/>
+			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="13560483" Language="SFX">
 					<ShortName>Spy_Music_Section_1.wav</ShortName>
