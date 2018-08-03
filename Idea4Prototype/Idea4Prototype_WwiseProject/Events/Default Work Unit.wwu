@@ -777,6 +777,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="stop_level_music" ID="{B49CFEAE-B36C-44DB-8960-57BDF4E93982}">
+					<ChildrenList>
+						<Action Name="" ID="{17D3E552-91CC-41F9-9B4C-91DCC902C516}" ShortID="319665327">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

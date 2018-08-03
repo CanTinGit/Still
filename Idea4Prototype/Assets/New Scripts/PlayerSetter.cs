@@ -9,8 +9,11 @@ public class PlayerSetter : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        // AkSoundEngine.PostEvent("stop_level_music", gameObject);
+        AkSoundEngine.StopAll();
+        AkSoundEngine.SetSwitch("Music_Transition", "Section1", gameObject);
         // Sets the  number of visible/ active players in the scene based on the numPlayer value passed from the main menu
-		if(MenuScript.Instance.p1InGame == true)
+        if (MenuScript.Instance.p1InGame == true)
         {
             Player1.gameObject.SetActive(true);
         }
@@ -42,6 +45,12 @@ public class PlayerSetter : MonoBehaviour {
         {
             Player4.gameObject.SetActive(false);
         }
+        AkSoundEngine.PostEvent("play_level_music", gameObject);
+    }
 
+    public void ChangeTransition(string section)
+    {
+        AkSoundEngine.PostEvent("stop_level_music", gameObject);
+        AkSoundEngine.SetSwitch("Music_Transition", section, gameObject);
     }
 }

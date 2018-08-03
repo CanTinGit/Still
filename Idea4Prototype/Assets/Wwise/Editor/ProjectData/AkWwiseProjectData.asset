@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 2058304494
-    m_lastTimePart2: -1999245787
+    m_lastTimePsrt1: 523291023
+    m_lastTimePart2: -1999242945
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -219,6 +219,16 @@ MonoBehaviour:
       ID: -1191494768
       Guid: 0cadb8f96cf7ed4e995cb9b95c05341c
       maxAttenuation: 0
+    - Name: play_level_music
+      Path: Default Work Unit\play_level_music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_level_music
+        ObjectType: 3
+      ID: 557932600
+      Guid: c8d2d059ff3d13479c742e34c4ba95df
+      maxAttenuation: 0
     - Name: player_accident
       Path: Default Work Unit\Player\player_accident
       PathAndIcons:
@@ -314,6 +324,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: 65181031
       Guid: 9ddef41577381d44b9b7b31bb601332e
+      maxAttenuation: 0
+    - Name: stop_level_music
+      Path: Default Work Unit\stop_level_music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_level_music
+        ObjectType: 3
+      ID: -239613958
+      Guid: aefe9cb46cb3db44896057bdf4e93982
       maxAttenuation: 0
     - Name: tut_box
       Path: Default Work Unit\Tutorial\tut_box
@@ -511,8 +531,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: 525469830
-    m_lastTimePart2: -1999242970
+    m_lastTimePsrt1: -792894945
+    m_lastTimePart2: -1999242963
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -627,8 +647,8 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-    m_lastTimePsrt1: 1265342534
-    m_lastTimePart2: -1999242969
+    m_lastTimePsrt1: -789464945
+    m_lastTimePart2: -1999242963
     List:
     - Name: Music_Transition
       Path: Default Work Unit\Music_Transition
@@ -659,8 +679,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -1578884762
-    m_lastTimePart2: -1999242969
+    m_lastTimePsrt1: 672811023
+    m_lastTimePart2: -1999242945
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -769,8 +789,13 @@ MonoBehaviour:
   ExpandedItems:
   - /Idea4Prototype_WwiseProject
   - /Idea4Prototype_WwiseProject/Events
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Ambient
   - /Idea4Prototype_WwiseProject/SoundBanks
   - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Switches
+  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit/Music_Transition
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

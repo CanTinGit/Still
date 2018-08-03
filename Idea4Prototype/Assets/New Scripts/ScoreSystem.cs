@@ -97,6 +97,7 @@ public class ScoreSystem : MonoBehaviour {
         float time = 0;
         if(checkpointTime.Count!=0)
         {
+            Debug.Log("checkpoint list");
             foreach (float checkpoint in checkpointTime)
             {
                 //if (checkpoint > 30 && checkpoint <= 60)
@@ -114,15 +115,17 @@ public class ScoreSystem : MonoBehaviour {
                 time += checkpoint;
             }
 
-            if (time > 30 && time <= 60)
+            time = time / 3;
+            Debug.Log("time is " + time);
+            if (time > 30.0f && time <= 60.0f)
             {
                 star += 3;
             }
-            else if (time > 0 && time <= 30)
+            else if (time > 0.0f && time <= 30.0f)
             {
                 star += 2;
             }
-            else
+            else if(time==0.0f)
             {
                 star += 1;
             }
@@ -150,13 +153,13 @@ public class ScoreSystem : MonoBehaviour {
             if(count!=Checkpoint)
             {
                 timeFromCheckpoint += checkpointTime[count];
-                Debug.Log("total time (fake time ) " + timeFromCheckpoint + " checkpoint" + count + " time is " + checkpointTime[count]);
+              //  Debug.Log("total time (fake time ) " + timeFromCheckpoint + " checkpoint" + count + " time is " + checkpointTime[count]);
             }
         }
         timeFromCheckpoint += timeScript.GetTimeInSeconds();
-        Debug.Log("total time (fake time ) " + timeFromCheckpoint + " and the time is " + timeScript.GetTimeInSeconds());
+        //Debug.Log("total time (fake time ) " + timeFromCheckpoint + " and the time is " + timeScript.GetTimeInSeconds());
         timeFromCheckpoint = timeFromCheckpoint / 3;
-        Debug.Log("averaged time is " + timeFromCheckpoint);
+       // Debug.Log("averaged time is " + timeFromCheckpoint);
         if (timeFromCheckpoint > 30 && timeFromCheckpoint <= 60)
         {
             stars = 3;

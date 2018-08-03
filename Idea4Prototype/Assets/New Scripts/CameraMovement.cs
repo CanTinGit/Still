@@ -9,6 +9,7 @@ public class CameraMovement : MonoBehaviour {
     int numbersofPlayer;
     public string CameraMove;
     public Animator camera;
+    public string musicSection;
     void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")
@@ -20,6 +21,7 @@ public class CameraMovement : MonoBehaviour {
                 boxColliderBack.SetActive(true);
                 gameObject.SetActive(false);
                 camera.SetTrigger(CameraMove);
+                AkSoundEngine.SetSwitch("Music_Transition", musicSection, GameObject.FindGameObjectWithTag("MainCamera"));
             }
         }
     }
