@@ -123,7 +123,15 @@
 								</Property>
 							</PropertyList>
 						</Bus>
-						<Bus Name="Music" ID="{6CC6408D-3CB5-4A61-8AD7-9F87AD07E265}"/>
+						<Bus Name="Music" ID="{6CC6408D-3CB5-4A61-8AD7-9F87AD07E265}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
 						<Bus Name="Voice" ID="{E146FB57-F776-4B95-9F29-555BCD4DD562}">
 							<ReferenceList>
 								<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
