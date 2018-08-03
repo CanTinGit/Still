@@ -972,7 +972,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153313220}
-  m_LocalRotation: {x: 0.2799207, y: -0.6493415, z: 0.64934146, w: 0.27992076}
+  m_LocalRotation: {x: 0.27992073, y: -0.6493416, z: 0.6493415, w: 0.2799208}
   m_LocalPosition: {x: 11.21, y: 18.56, z: 6.77}
   m_LocalScale: {x: 0.39515585, y: 0.39515585, z: 0.39515585}
   m_Children: []
@@ -2915,6 +2915,7 @@ MonoBehaviour:
   boxColliderBack: {fileID: 1064652371}
   CameraMove: CameraMove
   camera: {fileID: 2106034320}
+  musicSection: 
 --- !u!1 &554766315
 GameObject:
   m_ObjectHideFlags: 0
@@ -10423,6 +10424,54 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7770c141bd65744ba603560377d7040, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1903431910 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: f7770c141bd65744ba603560377d7040, type: 3}
+  m_PrefabInternal: {fileID: 1903431909}
+--- !u!114 &1903431911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1903431910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e936c3ed0c82c49a7cd4c190f64dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  valueGuid: c21f8a9a2abff1429d8fdb5fea24d996
+  eventID: -1377845400
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  multiPositionTypeLabel: 0
+  multiPositionArray: []
+--- !u!114 &1903431912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1903431910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f269e08723d3ef4f9755fa31cb98e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_positionOffsetData:
+    positionOffset: {x: 0, y: 0, z: 0}
+    KeepMe: 0
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_listeners:
+    initialListenerList: []
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1906447732
 GameObject:
   m_ObjectHideFlags: 0
