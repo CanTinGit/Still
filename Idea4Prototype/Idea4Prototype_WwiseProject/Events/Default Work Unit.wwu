@@ -383,55 +383,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Opening" ID="{D3876D58-9C7F-4891-B127-A4CBAFD49742}" ShortID="377245420">
-					<ChildrenList>
-						<Event Name="play_intro" ID="{F9B8AD0C-F76C-4EED-995C-B9B95C05341C}">
-							<ChildrenList>
-								<Action Name="" ID="{4DB35334-0CE4-4057-AF7F-838A09B9F532}" ShortID="569186607">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="3"/>
-									</PropertyList>
-									<ReferenceList/>
-								</Action>
-								<Action Name="" ID="{2A231A65-9ACE-4A22-97C2-A7854813124B}" ShortID="565471289">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="game_start" ID="{25631253-0534-49AB-96FB-5B59B7A8C543}">
-							<ChildrenList>
-								<Action Name="" ID="{A16DCE8E-1E1E-4B21-A6EB-E3CBF486C549}" ShortID="93461623">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="MoonisCheese_GameStart" ID="{8E5BEF19-C6DE-42E6-BB15-F5B1DDD22D07}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{B5B3D01E-D8AD-4D01-A4CF-A320E0D6E11D}" ShortID="51360477">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
 				<Folder Name="Ambient" ID="{9B2E00D1-E3A3-4D12-AB69-3AD798500E57}" ShortID="949596701">
 					<ChildrenList>
 						<Event Name="night_ambience" ID="{25E2EF0C-14D5-4644-AB17-E8D093E262FF}">
@@ -770,44 +721,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="play_level_music" ID="{59D0D2C8-3DFF-4713-9C74-2E34C4BA95DF}">
-					<ChildrenList>
-						<Action Name="" ID="{AC1E80AC-11D8-42D8-8F15-5A617C62408C}" ShortID="849510565">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{0937783D-846E-4334-BC81-F922DE306E99}" ShortID="983764653">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="stop_level_music" ID="{B49CFEAE-B36C-44DB-8960-57BDF4E93982}">
-					<ChildrenList>
-						<Action Name="" ID="{17D3E552-91CC-41F9-9B4C-91DCC902C516}" ShortID="319665327">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="electricity" ID="{9A8A1FC2-BF2A-42F1-9D8F-DB5FEA24D996}">
 					<ChildrenList>
 						<Action Name="" ID="{50252757-222B-41D3-87D1-DB89049F2060}" ShortID="368741657">
@@ -921,6 +834,115 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="button_buzz" ID="{AD8048F6-D578-4E9C-BAE0-EFDD00D873D2}">
+					<ChildrenList>
+						<Action Name="" ID="{5D0C8D11-8854-4F3E-8687-4203646BFFB0}" ShortID="149428577">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Buzz" ID="{2D652D58-B463-4F3A-BD99-641B9DAEF6C2}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="MusicEvents" ID="{0F66D9F1-4B20-4AB2-B217-52E975A7DA39}" ShortID="253812515">
+					<ChildrenList>
+						<Folder Name="Opening" ID="{D3876D58-9C7F-4891-B127-A4CBAFD49742}" ShortID="377245420">
+							<ChildrenList>
+								<Event Name="play_intro" ID="{F9B8AD0C-F76C-4EED-995C-B9B95C05341C}">
+									<ChildrenList>
+										<Action Name="" ID="{4DB35334-0CE4-4057-AF7F-838A09B9F532}" ShortID="569186607">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="3"/>
+											</PropertyList>
+											<ReferenceList/>
+										</Action>
+										<Action Name="" ID="{2A231A65-9ACE-4A22-97C2-A7854813124B}" ShortID="565471289">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="game_start" ID="{25631253-0534-49AB-96FB-5B59B7A8C543}">
+									<ChildrenList>
+										<Action Name="" ID="{A16DCE8E-1E1E-4B21-A6EB-E3CBF486C549}" ShortID="93461623">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MoonisCheese_GameStart" ID="{8E5BEF19-C6DE-42E6-BB15-F5B1DDD22D07}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{B5B3D01E-D8AD-4D01-A4CF-A320E0D6E11D}" ShortID="51360477">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Delay" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Level" ID="{4195AA35-AD12-443B-BCD6-E95E67BB8712}" ShortID="448382601">
+							<ChildrenList>
+								<Event Name="play_level_music" ID="{59D0D2C8-3DFF-4713-9C74-2E34C4BA95DF}">
+									<ChildrenList>
+										<Action Name="" ID="{AC1E80AC-11D8-42D8-8F15-5A617C62408C}" ShortID="849510565">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{0937783D-846E-4334-BC81-F922DE306E99}" ShortID="983764653">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="stop_level_music" ID="{B49CFEAE-B36C-44DB-8960-57BDF4E93982}">
+									<ChildrenList>
+										<Action Name="" ID="{17D3E552-91CC-41F9-9B4C-91DCC902C516}" ShortID="319665327">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

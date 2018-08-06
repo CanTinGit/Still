@@ -495,8 +495,8 @@
 			<ShortName>Level_Music</ShortName>
 			<Path>Level_Music.bnk</Path>
 			<IncludedEvents>
-				<Event Id="557932600" Name="play_level_music" ObjectPath="\Events\Default Work Unit\play_level_music"/>
-				<Event Id="4055353338" Name="stop_level_music" ObjectPath="\Events\Default Work Unit\stop_level_music" MaxAttenuation="0.000000"/>
+				<Event Id="557932600" Name="play_level_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Level\play_level_music"/>
+				<Event Id="4055353338" Name="stop_level_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Level\stop_level_music" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="13560483" Language="SFX">
@@ -590,8 +590,8 @@
 			<ShortName>Opening</ShortName>
 			<Path>Opening.bnk</Path>
 			<IncludedEvents>
-				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\Opening\game_start"/>
-				<Event Id="3103472528" Name="play_intro" ObjectPath="\Events\Default Work Unit\Opening\play_intro"/>
+				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\MusicEvents\Opening\game_start"/>
+				<Event Id="3103472528" Name="play_intro" ObjectPath="\Events\Default Work Unit\MusicEvents\Opening\play_intro"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="378082071" Language="SFX">
