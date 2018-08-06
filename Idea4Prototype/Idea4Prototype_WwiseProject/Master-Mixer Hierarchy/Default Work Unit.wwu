@@ -127,8 +127,42 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-9</Value>
 									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{3BAB5103-43C1-404D-8E15-442ED88546A6}" ShortID="881737509">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="noise_detection" ID="{7B380775-F665-4749-A801-FD310080BD1B}" WorkUnitID="{E016A5A6-0682-456F-BC10-81BBB135CFD0}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{DC95B4BE-A9DE-4BFF-A1C9-2006D0567884}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>-0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>-20</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 							</PropertyList>
 						</Bus>

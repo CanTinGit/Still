@@ -14,12 +14,24 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Buzz" ID="{2D652D58-B463-4F3A-BD99-641B9DAEF6C2}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Material" ID="{B50AFE6F-5D8E-4A80-83B9-293CBBD3DA32}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="stop_level_music" ID="{B49CFEAE-B36C-44DB-8960-57BDF4E93982}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Jump" ID="{3D075EC7-BDFE-406F-90E4-8DFD7476ADAF}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lift" ID="{A69FC662-8B9C-4CA9-8641-19E90B35523E}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="tut_jumping" ID="{19B47F6A-499D-4563-ACB5-3DA7292EA098}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
@@ -67,7 +79,7 @@
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="metal_object" ID="{DFD31C6E-66D7-47EA-8F95-1AB34A192F4F}"/>
 						<CurrentStateRef Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
-						<CurrentStateRef Name="American" ID="{50DA6138-9D06-4974-8314-C7312FE96D70}"/>
+						<CurrentStateRef Name="Chinese" ID="{A321AB47-489D-40B2-9651-8A3B9723F01C}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Section1" ID="{9794A177-8C27-46DC-B513-DEA522163C71}"/>
