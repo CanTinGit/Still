@@ -13,11 +13,13 @@ public class LevelBuilder : MonoBehaviour
     GameObject ObjectListPanel,interactedObject,LevelListPanel,ItemsConfigPanel;
     bool objectListOpen,interactingWithObject;
     public LayerMask clickLayer, placeObjectLayer;
-    float UpDownPlacement;
+    float UpDownPlacement,UpDownScaleValue;
     FileManager filemanager;
     Vector3 intialMouseClick;
-	// Use this for initialization
-	void Awake ()
+    bool firstClick = false;
+    Vector3 startingValues; //used to store the starting values of rotation/scale
+    // Use this for initialization
+    void Awake ()
     {
         filemanager = new FileManager();
         filemanager.Intialise();
@@ -32,6 +34,7 @@ public class LevelBuilder : MonoBehaviour
         interactingWithObject = false;
         InvokeRepeating("InteractWithObject", 0.0f, 0.01f);
         UpDownPlacement = 0.0f;
+        UpDownScaleValue = 0.0f;
     }
     public EditorState GetState()
     {
@@ -175,9 +178,42 @@ public class LevelBuilder : MonoBehaviour
             CancelInvoke("InteractWithObject");
             FlipItemConfigPanel();
             StartUpDetails();
+            InvokeRepeating("PutOnAxisArrows", 0.0f, 0.01667f) ;
             InvokeRepeating("InteractingControls",0.0f,0.01666f);
             FixAndUnfixObject();
         }
+    }
+    void PutOnAxisArrows()
+    {
+        GameObject arrow;
+        if (GameObject.FindGameObjectWithTag("LevelBuilderAxis")==null)
+        {
+            for(int i = 0; i<3;i++)
+            {
+                arrow = Instantiate(Resources.Load<GameObject>("LevelBuilder/AxisArrows"));
+                ArrowResize classScript = arrow.AddComponent<ArrowResize>();
+                if(i==0)
+                {
+                    classScript.SetAxis("X");
+                }
+                else if(i == 1)
+                {
+                    classScript.SetAxis("Y");
+                }
+                else if(i == 2)
+                {
+                    classScript.SetAxis("Z");
+                }
+                classScript.SetObject(interactedObject);
+                Debug.Log("fsfs");
+            }
+
+        }
+        else
+        {
+            //gm = GameObject.FindGameObjectWithTag("LevelBuilderAxis");
+        }
+        //gm.transform.position =  new Vector3(0.0f,(interactedObject.transform.position.y + gm.GetComponent<MeshCollider>().bounds.extents.y),0.0f);
     }
     public void ConfigPressed(GameObject button_)
     {
@@ -219,25 +255,31 @@ public class LevelBuilder : MonoBehaviour
     void InteractingControls()
     {
         InteractKeyControls();
-        if (editorState == EditorState.Move)
-        {
-            RaycastToMove();
-        }
-        if (editorState == EditorState.Rotate)
-        {
-        }
         MoveMouseControls();
-        //right click to uninteract with object
-        if (Input.GetMouseButtonDown(1))
+        //when the player is not changing the attributes of the object then right click to uninteract with objects
+        if(editorState == EditorState.None)
         {
-            FlipItemConfigPanel();
-            FixAndUnfixObject();
-            interactedObject = null;
-            interactingWithObject = false;
-            editorState = EditorState.None;
-            ResetConfigButtonColor();
-            CancelInvoke("InteractingControls");
-            InvokeRepeating("InteractWithObject", 0.0f, 0.01f);
+            if (Input.GetMouseButtonDown(1))
+            {
+                FlipItemConfigPanel();
+                FixAndUnfixObject();
+                interactedObject = null;
+                interactingWithObject = false;
+                editorState = EditorState.None;
+                ResetConfigButtonColor();
+                CancelInvoke("InteractingControls");
+                CancelInvoke("PutOnAxisArrows");
+                RemoveArrowAxis();
+                InvokeRepeating("InteractWithObject", 0.0f, 0.01667f);
+            }
+        }
+    }
+    void RemoveArrowAxis()
+    {
+        GameObject[] arrows = GameObject.FindGameObjectsWithTag("LevelBuilderAxis");
+        foreach(GameObject arrow in arrows)
+        {
+            Destroy(arrow);
         }
     }
     void InteractKeyControls()
@@ -259,7 +301,9 @@ public class LevelBuilder : MonoBehaviour
     {
         if (editorState == EditorState.Move)
         {
-            StateMove();
+            StateMouseWheel(ref UpDownPlacement);
+            StateMove();  
+                   
         }
         //rotation of x and y axis ( up and down and left and right)
         else if (editorState == EditorState.Rotate)
@@ -268,26 +312,32 @@ public class LevelBuilder : MonoBehaviour
         }
         else if (editorState == EditorState.Scale)
         {
+            //StateMouseWheel(ref UpDownScaleValue);
             StateScale();
         }
         else if (editorState == EditorState.None)
         {
-            //StateNone();
+            StateNone();
         }
     }
     void StateNone()
     {
         Vector3 intialMouseClick= Vector3.zero;
+        startingValues = Vector3.zero;
     }
-    void StateMove()
+    void StateMouseWheel(ref float  mouseWheelvalue_)
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0.0f)
         {
-            UpDownPlacement += 1.0f;
+            mouseWheelvalue_ += 1.0f;
         }
         else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
         {
-            UpDownPlacement -= 1.0f;
+
+            if(mouseWheelvalue_>1 )
+            {
+                mouseWheelvalue_ -= 1.0f;
+            }
         }
     }
     void StateRotate()
@@ -296,48 +346,58 @@ public class LevelBuilder : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             intialMouseClick = Input.mousePosition;
+            startingValues = interactedObject.transform.eulerAngles;
         }
+
+
         //we now get the updated click location
         if ((Input.GetKey(KeyCode.Mouse0)))
         {
             //the sensitivity of the movement for x and y axis
-            float sensitivityX = 0.005f;
-            float sensitivityY = 0.005f;
+            float sensitivityX = 0.5f;
+            float sensitivityY = 0.5f;
             //the rotation value ( how much to rotate the object)
             float rotateX = 0;
             float rotateY = 0;
             Vector3 Held = Input.mousePosition;
-            float DistanceX = Mathf.Abs(Held.x - intialMouseClick.x);
+            float DistanceX = Mathf.Abs(Held.x - intialMouseClick.x); //absolute values  for both
             float DistanceY = Mathf.Abs(Held.y - intialMouseClick.y);
-            float ThresholdXDistance = 70;
+            //may not need threshold after testing with artist they disliked old control scheme of accelaration
+            float ThresholdXDistance = 70; 
             float ThresholdYDistance = 30;
-            if (DistanceX > ThresholdXDistance)
+            //if (DistanceX > ThresholdXDistance) //old threshold might be removed  limits for x
             {
                 rotateY = (Held.x - intialMouseClick.x) * sensitivityY; // the rotation of the y axis by moving left and right on ouse
 
             }
-            if (DistanceY > ThresholdYDistance)
+            //if (DistanceY > ThresholdYDistance) //old threshold might be removed limits for y
             {
                 rotateX = (Held.y - intialMouseClick.y) * sensitivityX;
             }
-            Vector3 newAngle = new Vector3(interactedObject.transform.eulerAngles.x + rotateX, interactedObject.transform.eulerAngles.y + -rotateY, interactedObject.transform.eulerAngles.z);
+            Vector3 newAngle = new Vector3(startingValues.x + rotateX, startingValues.y + -rotateY, startingValues.z);
             interactedObject.transform.eulerAngles = newAngle;
             SetStartValues(GameObject.Find("Rotate"));
+        }
+        else if ((Input.GetKeyUp(KeyCode.Mouse0)))
+        {
+            startingValues = Vector3.zero;
         }
     }
     void StateScale()
     {
+        bool change = false;
         //get the intial click location
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             intialMouseClick = Input.mousePosition;
+            startingValues = interactedObject.transform.localScale;
         }
         //we now get the updated click location
         if ((Input.GetKey(KeyCode.Mouse0)))
         {          
             //the sensitivity of the movement for x and y axis
-            float sensitivityX = 0.001f;
-            float sensitivityY = 0.001f;
+            float sensitivityX = 0.1f;
+            float sensitivityY = 0.1f;
             float sensitivityZ = 0.005f;
             //the rotation value ( how much to rotate the object)
             float scaleX = 0;
@@ -348,17 +408,16 @@ public class LevelBuilder : MonoBehaviour
             float DistanceY = Mathf.Abs(Held.y - intialMouseClick.y);
             float ThresholdXDistance = 70;
             float ThresholdYDistance = 70;
-            if (DistanceX > ThresholdXDistance)
+            //if (DistanceX > ThresholdXDistance)
             {
                 scaleX = (Held.x - intialMouseClick.x) * sensitivityY; // the rotation of the y axis by moving left and right on ouse
 
             }
-            if (DistanceY > ThresholdYDistance)
+            //if (DistanceY > ThresholdYDistance)
             {
                 scaleZ = (Held.y - intialMouseClick.y) * sensitivityX;
             }
-
-            Vector3 newScale = new Vector3(interactedObject.transform.localScale.x + scaleX, interactedObject.transform.localScale.y , interactedObject.transform.localScale.z+ scaleZ);
+            Vector3 newScale = new Vector3(startingValues.x + scaleX, startingValues.y +UpDownScaleValue, startingValues.z+ scaleZ);
             if(newScale.x<0)
             {
                 newScale.x = 0.0f;
@@ -379,12 +438,13 @@ public class LevelBuilder : MonoBehaviour
     void FixAndUnfixObject()
     {
         UpDownPlacement = 0.0f;
+        UpDownScaleValue = 0.0f;
         Rigidbody rgbody = interactedObject.GetComponent<Rigidbody>();
         rgbody.freezeRotation = !rgbody.freezeRotation;
         rgbody.isKinematic = !rgbody.isKinematic;
         //rgbody.rotation = Quaternion.identity;
     }
-    void RaycastToMove()
+    void StateMove()
     {
         //Debug.Log("enter raycast controls");
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -392,8 +452,9 @@ public class LevelBuilder : MonoBehaviour
         //change to not use layers so we can place ontop of objects
         if (Physics.Raycast(ray, out hit, 1000.0f,placeObjectLayer))
         {
-            interactedObject.transform.position =  hit.point;
-            interactedObject.transform.Translate(0.0f, interactedObject.GetComponent<MeshRenderer>().bounds.extents.y + UpDownPlacement, 0.0f);
+            interactedObject.transform.position =  hit.point + (transform.up * UpDownPlacement);
+            //interactedObject.transform.position += transform.up * UpDownPlacement;
+            //interactedObject.transform.Translate(0.0f, interactedObject.GetComponent<MeshRenderer>().bounds.extents.y + (transform.up.magnitude*UpDownPlacement), 0.0f);
             SetStartValues(GameObject.Find("Position"));
         }
     }

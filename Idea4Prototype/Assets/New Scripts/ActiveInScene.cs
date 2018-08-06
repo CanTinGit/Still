@@ -16,13 +16,6 @@ public class ActiveInScene : MonoBehaviour {
         active = false;
         isDoorOpen = false;
     }
-    void Update()
-    {
-        if(Input.GetKey(KeyCode.F1))
-        {
-            setActive(false);
-        }
-    }
     public bool GetActive()
     {
         return active;
@@ -30,10 +23,14 @@ public class ActiveInScene : MonoBehaviour {
     //triggers the normal animator and the reverse version if needed be
     public void setActive(bool newActive_)
     {
+        
         active = newActive_;
         if(active == true)
         {
-            TriggerAnimator();
+            if(whichAnimator!=null)
+            {
+                TriggerAnimator();
+            }
         }
         else if (active == false)
         {

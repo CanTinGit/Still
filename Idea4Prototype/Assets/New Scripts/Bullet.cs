@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 
     public float moveSpeed;
     float deSpawnTime = 5.0f;
+    Transform target;
     // If the bullet doesn't hit anything, then destroyed after deSpawnTime seconds
     void Start ()
     {
@@ -15,8 +16,8 @@ public class Bullet : MonoBehaviour {
 	// Bullet updates its position to simulate fly
 	void FixedUpdate ()
     {
-        transform.position += transform.forward * moveSpeed * Time.deltaTime;
-        
+        //transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, moveSpeed * Time.deltaTime);
     }
 
     //Hit player and add a InBubble script to it to make player in bubble state
@@ -38,5 +39,15 @@ public class Bullet : MonoBehaviour {
     void DestroyBullet()
     {
         Destroy(gameObject);
+    }
+
+    public void SetTarget(Transform _target)
+    {
+        target = _target;
+    }
+
+    void ResetCamera()
+    {
+
     }
 }

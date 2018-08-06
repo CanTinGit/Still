@@ -11,13 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915e4feee9c236c46b967faed71c4350, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  CurrentPluginConfig: 
+  CurrentPluginConfig: Release
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 380896123
-    m_lastTimePart2: -1999250012
+    m_lastTimePsrt1: 523291023
+    m_lastTimePart2: -1999242945
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -64,16 +64,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 100
-    - Name: can_impact
-      Path: Default Work Unit\can_impact
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: can_impact
-        ObjectType: 3
-      ID: 697519634
-      Guid: ac62c32a5eb5c843827b7269bfa7b694
       maxAttenuation: 100
     - Name: click_back
       Path: Default Work Unit\UI\click_back
@@ -171,6 +161,18 @@ MonoBehaviour:
       ID: -1144550677
       Guid: 8aaa78ca444aa946bc8e839589b392eb
       maxAttenuation: 0
+    - Name: game_start
+      Path: Default Work Unit\Opening\game_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 4
+      - ElementName: game_start
+        ObjectType: 3
+      ID: 733168346
+      Guid: 531263253405ab4996fb5b59b7a8c543
+      maxAttenuation: 0
     - Name: hover
       Path: Default Work Unit\UI\hover
       PathAndIcons:
@@ -182,6 +184,50 @@ MonoBehaviour:
         ObjectType: 3
       ID: -541373883
       Guid: 50f9f9ae29ae5a4bae8fbd632d417c68
+      maxAttenuation: 0
+    - Name: night_ambience
+      Path: Default Work Unit\Ambient\night_ambience
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 4
+      - ElementName: night_ambience
+        ObjectType: 3
+      ID: 849527464
+      Guid: 0cefe225d5144446ab17e8d093e262ff
+      maxAttenuation: 0
+    - Name: object_impact
+      Path: Default Work Unit\object_impact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: object_impact
+        ObjectType: 3
+      ID: 538597049
+      Guid: ac62c32a5eb5c843827b7269bfa7b694
+      maxAttenuation: 100
+    - Name: play_intro
+      Path: Default Work Unit\Opening\play_intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 4
+      - ElementName: play_intro
+        ObjectType: 3
+      ID: -1191494768
+      Guid: 0cadb8f96cf7ed4e995cb9b95c05341c
+      maxAttenuation: 0
+    - Name: play_level_music
+      Path: Default Work Unit\play_level_music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_level_music
+        ObjectType: 3
+      ID: 557932600
+      Guid: c8d2d059ff3d13479c742e34c4ba95df
       maxAttenuation: 0
     - Name: player_accident
       Path: Default Work Unit\Player\player_accident
@@ -255,12 +301,238 @@ MonoBehaviour:
       ID: -532829526
       Guid: 3b902838b8b01c4aba900eb0d9e3debc
       maxAttenuation: 0
+    - Name: player_shock
+      Path: Default Work Unit\Player\player_shock
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_shock
+        ObjectType: 3
+      ID: -357374743
+      Guid: 7a2d63a053b7e745ab90f8d2d03022b1
+      maxAttenuation: 0
+    - Name: player_throw
+      Path: Default Work Unit\Player\player_throw
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_throw
+        ObjectType: 3
+      ID: 65181031
+      Guid: 9ddef41577381d44b9b7b31bb601332e
+      maxAttenuation: 0
+    - Name: stop_level_music
+      Path: Default Work Unit\stop_level_music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_level_music
+        ObjectType: 3
+      ID: -239613958
+      Guid: aefe9cb46cb3db44896057bdf4e93982
+      maxAttenuation: 0
+    - Name: tut_box
+      Path: Default Work Unit\Tutorial\tut_box
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_box
+        ObjectType: 3
+      ID: 820591094
+      Guid: 30ae04c4298b71448631409c5f150e6a
+      maxAttenuation: 0
+    - Name: tut_box_trigger
+      Path: Default Work Unit\Tut Triggers\tut_box_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_box_trigger
+        ObjectType: 3
+      ID: 1107840467
+      Guid: 87805adf49bebd40b5e9b315c22a652c
+      maxAttenuation: 0
+    - Name: tut_button
+      Path: Default Work Unit\Tutorial\tut_button
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_button
+        ObjectType: 3
+      ID: -895372421
+      Guid: 6859122a48cdfb4791a2d1dd3ed654a7
+      maxAttenuation: 0
+    - Name: tut_button_trigger
+      Path: Default Work Unit\Tut Triggers\tut_button_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_button_trigger
+        ObjectType: 3
+      ID: 1097533726
+      Guid: 92662b417bff9f4880b30edf0c29d0bf
+      maxAttenuation: 0
+    - Name: tut_excellent
+      Path: Default Work Unit\Tutorial\tut_excellent
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_excellent
+        ObjectType: 3
+      ID: -1754458029
+      Guid: 2afa3dbd48dc294f8f676c85a44944e1
+      maxAttenuation: 0
+    - Name: tut_excellent_trigger
+      Path: Default Work Unit\Tut Triggers\tut_excellent_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_excellent_trigger
+        ObjectType: 3
+      ID: -1987995082
+      Guid: 638770b15f6eeb478f9c5fa048459b0a
+      maxAttenuation: 0
+    - Name: tut_fantastic
+      Path: Default Work Unit\Tutorial\tut_fantastic
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_fantastic
+        ObjectType: 3
+      ID: -1322538090
+      Guid: d6330d04d5f1504a8855bf9806929462
+      maxAttenuation: 0
+    - Name: tut_fantastic_trigger
+      Path: Default Work Unit\Tut Triggers\tut_fantastic_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_fantastic_trigger
+        ObjectType: 3
+      ID: 1830393523
+      Guid: f7afea1bbd5cd44e9ab9cff3ca4d4233
+      maxAttenuation: 0
+    - Name: tut_jumping
+      Path: Default Work Unit\Tutorial\tut_jumping
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_jumping
+        ObjectType: 3
+      ID: -1512776943
+      Guid: 6a7fb4199d496345acb53da7292ea098
+      maxAttenuation: 0
+    - Name: tut_jumping_trigger
+      Path: Default Work Unit\Tut Triggers\tut_jumping_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_jumping_trigger
+        ObjectType: 3
+      ID: 1032786088
+      Guid: 23a93cb3612eeb47a6c5b714db91424c
+      maxAttenuation: 0
+    - Name: tut_verygood
+      Path: Default Work Unit\Tutorial\tut_verygood
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_verygood
+        ObjectType: 3
+      ID: -1597129908
+      Guid: a7f97346647a5e41a1e129757a122002
+      maxAttenuation: 0
+    - Name: tut_verygood_trigger
+      Path: Default Work Unit\Tut Triggers\tut_verygood_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_verygood_trigger
+        ObjectType: 3
+      ID: -266498691
+      Guid: 3d7bf1b70c03984abd6825ebb45a2535
+      maxAttenuation: 0
+    - Name: tut_welcome
+      Path: Default Work Unit\Tutorial\tut_welcome
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_welcome
+        ObjectType: 3
+      ID: 460999313
+      Guid: 6e89217e87e0c64f9ff00c9dc2b247a9
+      maxAttenuation: 0
+    - Name: tut_welcome_trigger
+      Path: Default Work Unit\Tut Triggers\tut_welcome_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_welcome_trigger
+        ObjectType: 3
+      ID: -1950158808
+      Guid: 04408ceb51638244bae9138bc57a6f60
+      maxAttenuation: 0
+    - Name: tut_wunderbar
+      Path: Default Work Unit\Tutorial\tut_wunderbar
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tutorial
+        ObjectType: 4
+      - ElementName: tut_wunderbar
+        ObjectType: 3
+      ID: 2011545223
+      Guid: ac2c0f2382309244a0fd826b732ca437
+      maxAttenuation: 0
+    - Name: tut_wunderbar_trigger
+      Path: Default Work Unit\Tut Triggers\tut_wunderbar_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut Triggers
+        ObjectType: 4
+      - ElementName: tut_wunderbar_trigger
+        ObjectType: 3
+      ID: -1287577198
+      Guid: 7f9760bcf7dbba41b260a9f4cd5a3290
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: -678136581
-    m_lastTimePart2: -1999250014
+    m_lastTimePsrt1: -792894945
+    m_lastTimePart2: -1999242963
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -277,8 +549,8 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
-    m_lastTimePsrt1: 1545614625
-    m_lastTimePart2: -1999250190
+    m_lastTimePsrt1: 2065572118
+    m_lastTimePart2: -1999245787
     List:
     - Name: Impact_Force
       Path: Default Work Unit\Impact_Force
@@ -294,7 +566,6 @@ MonoBehaviour:
       - Light
       - Medium
       - None
-      - Very_Light
       ValueIcons:
       - ElementName: Heavy
         ObjectType: 8
@@ -304,15 +575,12 @@ MonoBehaviour:
         ObjectType: 8
       - ElementName: None
         ObjectType: 8
-      - ElementName: Very_Light
-        ObjectType: 8
-      valueIDs: 767bdea223f05c73b08bd2a9db3ba32cc8a7218f
+      valueIDs: 767bdea223f05c73b08bd2a9db3ba32c
       ValueGuids:
       - bytes: df9dd67fa028254fb23e7c95e7f638f4
       - bytes: 52be8bf7dbe479409bf6b2042ad91618
       - bytes: f6fa0ea28cbe0042b767ede20e308839
       - bytes: c7ff68a6d6c161438d27bd3d4826048b
-      - bytes: 4ce501d9a5dbec4180a9150eaa4c3954
     - Name: Material
       Path: Default Work Unit\Material
       PathAndIcons:
@@ -323,14 +591,11 @@ MonoBehaviour:
       ID: -429652670
       Guid: 1fb0041b20a78044b5f388c6fd17f99a
       values:
-      - ice_object
       - metal_object
       - None
       - plastic_object
       - wood_object
       ValueIcons:
-      - ElementName: ice_object
-        ObjectType: 8
       - ElementName: metal_object
         ObjectType: 8
       - ElementName: None
@@ -339,27 +604,93 @@ MonoBehaviour:
         ObjectType: 8
       - ElementName: wood_object
         ObjectType: 8
-      valueIDs: 4c12a75694c8e61bdb3ba32c4bb5b8c7b8ed45de
+      valueIDs: 94c8e61bdb3ba32c4bb5b8c7b8ed45de
       ValueGuids:
-      - bytes: 99da7208607a68498f24e8bdc3807e88
       - bytes: 6e1cd3dfd766ea478f951ab34a192f4f
       - bytes: 93a7cba28b72004dac7588424111fe33
       - bytes: 5c536ebbbde13a499bcda4c52ec7513e
       - bytes: 91eda26eef14ab47a9aa9c93bffb8d58
+    - Name: Nationality
+      Path: Default Work Unit\Nationality
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Nationality
+        ObjectType: 9
+      ID: 302646617
+      Guid: 6540963b4f52ba4e83ab2bedfb668b9c
+      values:
+      - American
+      - Chinese
+      - Generic
+      - Indian
+      - None
+      ValueIcons:
+      - ElementName: American
+        ObjectType: 8
+      - ElementName: Chinese
+        ObjectType: 8
+      - ElementName: Generic
+        ObjectType: 8
+      - ElementName: Indian
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      valueIDs: eff44191be62973c602bf7ff90df3afadb3ba32c
+      ValueGuids:
+      - bytes: 3861da50069d74498314c7312fe96d70
+      - bytes: 47ab21a39d48b24096518a3b9723f01c
+      - bytes: e9f72740565dbe4d9e2f92ef12153f8e
+      - bytes: 54d41c74035e034c8b15b4ac62d04122
+      - bytes: 6f8d8c338f2d6a41904da3df5a7e1088
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-    m_lastTimePsrt1: 1545744625
-    m_lastTimePart2: -1999250190
-    List: []
+    m_lastTimePsrt1: -789464945
+    m_lastTimePart2: -1999242963
+    List:
+    - Name: Music_Transition
+      Path: Default Work Unit\Music_Transition
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Transition
+        ObjectType: 11
+      ID: -1578915816
+      Guid: 6f521fb80b72334591e843a90f7aa1c2
+      values:
+      - Section1
+      - Section2
+      - Section3
+      ValueIcons:
+      - ElementName: Section1
+        ObjectType: 10
+      - ElementName: Section2
+        ObjectType: 10
+      - ElementName: Section3
+        ObjectType: 10
+      valueIDs: 8b5316d2885316d2895316d2
+      ValueGuids:
+      - bytes: 77a19497278cdc46b513dea522163c71
+      - bytes: 671b7c36fe96d04f98775279ab7bf0a6
+      - bytes: 8c2b472eea035340baa837930875ca73
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -53017775
-    m_lastTimePart2: -1999250166
+    m_lastTimePsrt1: 672811023
+    m_lastTimePart2: -1999242945
     List:
+    - Name: Ambient
+      Path: Default Work Unit\Ambient
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 7
+      ID: 77978275
+      Guid: 0df6c143a0b85747a81644149f3a4f85
     - Name: Enemy
       Path: Default Work Unit\Enemy
       PathAndIcons:
@@ -369,6 +700,24 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1995645809
       Guid: 167d28cba1cd3646ab2c5eb86708a848
+    - Name: Level_Music
+      Path: Default Work Unit\Level_Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Level_Music
+        ObjectType: 7
+      ID: 1244594577
+      Guid: d5370119cb175c41a58aaccd1945f261
+    - Name: Opening
+      Path: Default Work Unit\Opening
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Opening
+        ObjectType: 7
+      ID: 1831982039
+      Guid: 1d38ff6d9404fa4ca6ee6795fd193bae
     - Name: Player
       Path: Default Work Unit\Player
       PathAndIcons:
@@ -387,6 +736,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1137964055
       Guid: a269ae403d80f741a8e59cd8270e44ed
+    - Name: Tut_Voiceover
+      Path: Default Work Unit\Tut_Voiceover
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tut_Voiceover
+        ObjectType: 7
+      ID: -1027324711
+      Guid: 2dd27c5600dbd54b977474bdfd2ed9c0
     - Name: UI
       Path: Default Work Unit\UI
       PathAndIcons:
@@ -400,9 +758,18 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
-    m_lastTimePsrt1: 1525034625
-    m_lastTimePart2: -1999250190
+    m_lastTimePsrt1: -776715805
+    m_lastTimePart2: -1999247995
     List:
+    - Name: click_start
+      Path: Default Work Unit\click_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: click_start
+        ObjectType: 13
+      ID: -1298186826
+      Guid: f6245b32d6eaa94589fa17b66fbb2f8b
     - Name: noise_detection
       Path: Default Work Unit\noise_detection
       PathAndIcons:
@@ -416,19 +783,19 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{423FF0F4-4C2C-49B0-BB98-500C1D5DAA9E}'
-    m_lastTimePsrt1: 1545874625
-    m_lastTimePart2: -1999250190
+    m_lastTimePsrt1: 1687144287
+    m_lastTimePart2: -1999249979
     List: []
   ExpandedItems:
   - /Idea4Prototype_WwiseProject
   - /Idea4Prototype_WwiseProject/Events
   - /Idea4Prototype_WwiseProject/Events/Default Work Unit
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Camera
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Crane
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Triggers
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/UI
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Ambient
   - /Idea4Prototype_WwiseProject/SoundBanks
   - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Switches
+  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit/Music_Transition
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

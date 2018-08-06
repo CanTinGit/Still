@@ -18,15 +18,7 @@ namespace AK
         static const AkUniqueID BUTTON_CLICK = 814543256U;
         static const AkUniqueID CAMERA_TRIGGER = 1860426137U;
         static const AkUniqueID CAN_IMPACT = 697519634U;
-        static const AkUniqueID CLICK_BACK = 2579544659U;
-        static const AkUniqueID CLICK_NEGATIVE = 2102833423U;
-        static const AkUniqueID CLICK_POSITIVE = 1769629947U;
-        static const AkUniqueID CLICK_SELECT = 3780343222U;
         static const AkUniqueID CRANE_PICKUP = 412826751U;
-        static const AkUniqueID CRANE_RELEASE = 3550336162U;
-        static const AkUniqueID CRANE_TRIGGER_PICKUP = 3559668272U;
-        static const AkUniqueID CRANE_TRIGGER_RELEASE = 3150416619U;
-        static const AkUniqueID HOVER = 3753593413U;
         static const AkUniqueID PLAYER_ACCIDENT = 4205375722U;
         static const AkUniqueID PLAYER_CARRY = 662165722U;
         static const AkUniqueID PLAYER_CATCH = 1049036554U;
@@ -76,7 +68,6 @@ namespace AK
         static const AkUniqueID ENEMY = 2299321487U;
         static const AkUniqueID PLAYER = 1069431850U;
         static const AkUniqueID TEST = 3157003241U;
-        static const AkUniqueID UI = 1551306167U;
     } // namespace BANKS
 
     namespace BUSSES
@@ -86,7 +77,6 @@ namespace AK
         static const AkUniqueID MASTER_SECONDARY_BUS = 805203703U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
-        static const AkUniqueID UI = 1551306167U;
         static const AkUniqueID VOICE = 3170124113U;
     } // namespace BUSSES
 

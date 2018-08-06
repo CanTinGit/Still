@@ -12,7 +12,6 @@
 						<State Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
 						<State Name="Medium" ID="{A20EFAF6-BE8C-4200-B767-EDE20E308839}"/>
 						<State Name="Light" ID="{F78BBE52-E4DB-4079-9BF6-B2042AD91618}"/>
-						<State Name="Very_Light" ID="{D901E54C-DBA5-41EC-80A9-150EAA4C3954}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Material" ID="{1B04B01F-A720-4480-B5F3-88C6FD17F99A}">
@@ -21,7 +20,15 @@
 						<State Name="metal_object" ID="{DFD31C6E-66D7-47EA-8F95-1AB34A192F4F}"/>
 						<State Name="wood_object" ID="{6EA2ED91-14EF-47AB-A9AA-9C93BFFB8D58}"/>
 						<State Name="plastic_object" ID="{BB6E535C-E1BD-493A-9BCD-A4C52EC7513E}"/>
-						<State Name="ice_object" ID="{0872DA99-7A60-4968-8F24-E8BDC3807E88}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Nationality" ID="{3B964065-524F-4EBA-83AB-2BEDFB668B9C}">
+					<ChildrenList>
+						<State Name="None" ID="{338C8D6F-2D8F-416A-904D-A3DF5A7E1088}"/>
+						<State Name="Generic" ID="{4027F7E9-5D56-4DBE-9E2F-92EF12153F8E}"/>
+						<State Name="American" ID="{50DA6138-9D06-4974-8314-C7312FE96D70}"/>
+						<State Name="Indian" ID="{741CD454-5E03-4C03-8B15-B4AC62D04122}"/>
+						<State Name="Chinese" ID="{A321AB47-489D-40B2-9651-8A3B9723F01C}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

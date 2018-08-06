@@ -130,40 +130,45 @@ public class Rater : MonoBehaviour
     //Three setting timing to rate
     public setTime[] setTimings = new setTime[3];
     public Sprite[] stars = new Sprite[3];
+    Image starImage;
+    Timer time;
     //Rate function
     public int Rating()
     {
         //Get the UI of Rating
-        Image starImage = GameObject.Find("FadeSceneHolder").transform.GetChild(1).GetComponent<Image>();
+        starImage = GameObject.Find("FadeSceneHolder").transform.GetChild(1).GetComponent<Image>();
+        time = GameObject.Find("Timer").GetComponent<Timer>();
         //Get current time that players used to pass
-        Timer time = GameObject.Find("Timer").GetComponent<Timer>();
-        setTime finishedTime = new setTime();
-        finishedTime.unitSeconds = time.unitSeconds;
-        finishedTime.tenSeconds = time.tenSeconds;
-        finishedTime.unitMins = time.unitMins;
-        finishedTime.tenMins = time.tenMins;
+
+        //setTime finishedTime = new setTime();
+        //finishedTime.unitSeconds = time.unitSeconds;
+        //finishedTime.tenSeconds = time.tenSeconds;
+        //finishedTime.unitMins = time.unitMins;
+        //finishedTime.tenMins = time.tenMins;
+        starImage.sprite = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>().ReturnStars();
 
         //If it's more than setting timing 1, get three star
-        if (finishedTime > setTimings[0])
-        {
-            starImage.sprite = stars[2];
-            starImage.SetNativeSize();
-            return 3;
-        }
+        //if (finishedTime > setTimings[0])
+        //{
+        //    starImage.sprite = stars[2];
+        //    starImage.SetNativeSize();
+        //    return 3;
+        //}
 
-        //If it's less than setting timing 1, but more than setting timing 2, get two star
-        else if (finishedTime < setTimings[0] && finishedTime > setTimings[1])
-        {
-            starImage.sprite = stars[1];
-            starImage.SetNativeSize();
-            return 2;
-        }
-        //Else getting one star
-        else
-        {
-            starImage.sprite = stars[0];
-            starImage.SetNativeSize();
-            return 1;
-        }
+        ////If it's less than setting timing 1, but more than setting timing 2, get two star
+        //else if (finishedTime < setTimings[0] && finishedTime > setTimings[1])
+        //{
+        //    starImage.sprite = stars[1];
+        //    starImage.SetNativeSize();
+        //    return 2;
+        //}
+        ////Else getting one star
+        //else
+        //{
+        //    starImage.sprite = stars[0];
+        //    starImage.SetNativeSize();
+        //    return 1;
+        //}
+        return (int)GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>().ReturnScore();
     }
 }

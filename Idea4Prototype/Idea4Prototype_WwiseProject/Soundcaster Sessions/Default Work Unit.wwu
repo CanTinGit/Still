@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C5E2190F-7060-466C-BE6C-46835712DF69}" SchemaVersion="80">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{C5E2190F-7060-466C-BE6C-46835712DF69}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C5E2190F-7060-466C-BE6C-46835712DF69}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Trial" ID="{2D7CB6D8-AB64-4305-A8CD-E1F7B6A3E39C}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Night_Ambience" ID="{264440D3-145B-4900-8DCB-164595413AAB}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Material" ID="{B50AFE6F-5D8E-4A80-83B9-293CBBD3DA32}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="stop_level_music" ID="{B49CFEAE-B36C-44DB-8960-57BDF4E93982}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="tut_jumping" ID="{19B47F6A-499D-4563-ACB5-3DA7292EA098}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="tut_excellent" ID="{BD3DFA2A-DC48-4F29-8F67-6C85A44944E1}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="tut_welcome" ID="{7E21896E-E087-4FC6-9FF0-0C9DC2B247A9}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="tut_verygood" ID="{4673F9A7-7A64-415E-A1E1-29757A122002}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="tut_box" ID="{C404AE30-8B29-4471-8631-409C5F150E6A}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="tut_fantastic" ID="{040D33D6-F1D5-4A50-8855-BF9806929462}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="tut_wunderbar" ID="{230F2CAC-3082-4492-A0FD-826B732CA437}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="tut_button" ID="{2A125968-CD48-47FB-91A2-D1DD3ED654A7}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="click_start" ID="{325B24F6-EAD6-45A9-89FA-17B66FBB2F8B}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="noise_detection" ID="{7B380775-F665-4749-A801-FD310080BD1B}"/>
+							<Value>-48</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="metal_object" ID="{DFD31C6E-66D7-47EA-8F95-1AB34A192F4F}"/>
+						<CurrentStateRef Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
+						<CurrentStateRef Name="American" ID="{50DA6138-9D06-4974-8314-C7312FE96D70}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Section3" ID="{2E472B8C-03EA-4053-BAA8-37930875CA73}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

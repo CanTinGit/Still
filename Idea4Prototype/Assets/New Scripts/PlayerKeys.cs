@@ -29,9 +29,9 @@ public class PlayerKeys
         defaultKeys[5] = KeyCode.JoystickButton0;
         defaultKeys[6] = KeyCode.JoystickButton2;
         defaultPlayerTurnSpeed = 2.0f;
-        defaultPlayerMoveSpeed = 3.0f;
+        defaultPlayerMoveSpeed = 4.0f;
         defaultPlayerThrowPower = 6.0f;
-        defaultPlayerJumpPower = 6.0f;
+        defaultPlayerJumpPower = 6.25f;
         //custom keys also set up to be same for start
         keys[0] = KeyCode.W;
         keys[1] = KeyCode.S;
@@ -49,9 +49,9 @@ public class PlayerKeys
         TempHolder[5] = KeyCode.JoystickButton0;
         TempHolder[6] = KeyCode.JoystickButton2;
         playerTurnSpeed = 2.0f;
-        playerMoveSpeed = 3.0f;
+        playerMoveSpeed = 4.0f;
         playerThrowPower = 6.0f;
-        playerJumpPower = 6.0f;
+        playerJumpPower = 6.25f;
     }
     //the custom keys will be set with the option menus temporary keys
     public void TempHolderTransferToCustomKeys()

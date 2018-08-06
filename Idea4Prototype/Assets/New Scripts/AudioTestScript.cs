@@ -6,6 +6,8 @@ public class AudioTestScript : MonoBehaviour
 {
     private float noiseMade; //the noise that is made
     Rigidbody rigidBody;
+    float velocity;
+    bool delayBeginAudio = false;
     void Awake()
     {
         //set the rigidBody variable to the componenet
@@ -14,13 +16,27 @@ public class AudioTestScript : MonoBehaviour
     void Start()
     {
         //GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().SetAudioForMaterial("MetalObject");
+        Invoke("AudioStart", 1.0f);
         InvokeRepeating("FindTill", 0.0f, 0.01666f);
+    }
+    public void SetVelocity(float velocity_)
+    {
+        //Debug.Log(velocity_);
+        if(velocity_>=1.0f)
+        {
+            velocity = velocity_;
+        }
+
+    }
+    void AudioStart()
+    {
+        delayBeginAudio = true;
     }
     void FindTill()
     {
         if  (GameObject.FindGameObjectWithTag("Player")!=null)
          {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().SetAudioForMaterial("MetalObject");
+            MenuScript.Instance.GetAudioClass().SetAudioForMaterial("MetalObject");
             CancelInvoke("FindTill");
         }
     }
@@ -38,7 +54,7 @@ public class AudioTestScript : MonoBehaviour
     {
         //getting material name e.g. the property of the object
         ////string materialName = this.GetComponent<SphereCollider>().material.name;
-        string materialName = "MetalObject";
+        string materialName = "wood_object";
         //gets rid of any extra words added on by unity -.- idk why it adds them
         //materialName = materialName.Remove(materialName.IndexOf(" ("));
         //when the object hits the ground ( test for ground now will include more later)
@@ -48,18 +64,28 @@ public class AudioTestScript : MonoBehaviour
             //
             // NEED TO RECALCULATE HOW MUCH FORCE
             ///
-            float force = rigidBody.mass;
-            //float force = rigidBody.mass * rigidBody.velocity.magnitude;
-            //float force = rigidBody.mass * Physics.gravity.magnitude *  //rigidBody.mass * rigidBody.velocity.magnitude;
-            //Debug.Log("audio test force is " + force);
-            //plays the sound based on the material and the force and the psz group
-            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioClass>().PlayAudio(materialName, force, "Impact_Force");
-            //the sound being played ( i think??? )
-            //AkSoundEngine.PostEvent("can_impact", gameObject);
-            if (noiseMade > -20)
+            if(delayBeginAudio == true)
             {
-                //use this if you want to make the camera to move to this object ( replace "this.transform.position" with the object you want the camera to look at)
-                GameObject.Find("Camera").GetComponent<CameraAI>().DetectedNoise(this.transform.position);
+                float force = rigidBody.mass * velocity;
+                //float force = rigidBody.mass * rigidBody.velocity.magnitude;
+                //float force = rigidBody.mass * Physics.gravity.magnitude *  //rigidBody.mass * rigidBody.velocity.magnitude;
+                //Debug.Log("audio test force is " + force);
+                //plays the sound based on the material and the force and the psz group
+                MenuScript.Instance.GetAudioClass().PlayAudio(materialName, force, "Impact_Force");
+                //the sound being played ( i think??? )
+                AkSoundEngine.PostEvent("object_impact", gameObject);
+                if (noiseMade > -20)
+                {
+                    if (GameObject.FindGameObjectWithTag("CameraObject") != null)
+                    {
+                        //use this if you want to make the camera to move to this object ( replace "this.transform.position" with the object you want the camera to look at)
+                        if (GameObject.FindGameObjectWithTag("AlertSpotlight") == null)
+                        {
+                            Instantiate(Resources.Load("Prefabs/NewCameraAI"));
+                        }
+                    }
+                    //GameObject.Find("Camera").GetComponent<CameraAI>().DetectedNoise(this.transform.position);
+                }
             }
         }
     }

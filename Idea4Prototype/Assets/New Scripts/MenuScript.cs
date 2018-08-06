@@ -12,6 +12,8 @@ public class MenuScript : MonoBehaviour
 {
     //keep information on pannels and 3 buttons which is required for when we are switching to different screens ( options , home , level select)
     GameObject LevelSelectPanel, OptionPanel, CharacterPanel, PlayButton, CloseButton, OptionButton, ContinueButton, Level1Button, Level2Button;
+    // References to the controller select for each player so they can be reset in the other panels
+    GameObject controllerSelect1, controllerSelect2, controllerSelect3, controllerSelect4;
     //the pathway to the text file which stores what levels are in the scene
     string LevelTextPath;
     //the file to be opened that stores what levels are to be shown in level select screen
@@ -32,7 +34,7 @@ public class MenuScript : MonoBehaviour
     int maxLevel;
     //NEW WAY TO RECORD PLAYER CURRENT LEVEL
     public PlayerData playerdata;
-    int numPlayers;
+    public int numPlayers;
     //the animator for the screen fade to level effect
     Animator sceneFade;
     // Reference to event system for menu navigation
@@ -44,6 +46,11 @@ public class MenuScript : MonoBehaviour
     //What each player controller settings is
     int whichPlayerKey;
     //Global variable to get the only one game manager
+    GameObject hoveringOver;
+    // Booleans to control what players should be visible in game
+    public bool p1InGame, p2InGame, p3InGame, p4InGame;
+    //hold the AudioClass which stores all the information to control audio
+    //AudioClass audioClass;
     public static MenuScript Instance
     {
         get
@@ -54,6 +61,7 @@ public class MenuScript : MonoBehaviour
                 {
                     GameObject gm = new GameObject("GameManager");
                     gm.AddComponent<MenuScript>();
+                    gm.tag = "GameManager";
                 }
             }
             return _instance;
@@ -67,9 +75,11 @@ public class MenuScript : MonoBehaviour
     //on awake we intialise the player settings which is the default values and also set up the singleton
     void Awake()
     {
-
+        //audioClass = new AudioClass();
+        //audioClass.InitialiseAudioClass();
+        gameObject.AddComponent<AudioClass>();
         playerdata = new PlayerData();
-        for(int i =0; i < playerSetting.Length;i++)
+        for (int i =0; i < playerSetting.Length;i++)
         {
             playerSetting[i] = new PlayerKeys();
             playerSetting[i].IntialiseValues();
@@ -85,8 +95,32 @@ public class MenuScript : MonoBehaviour
         //Set the max level by the player data
         maxLevel = playerdata.getCurrentLevel();
         whichPlayerKey = 0;
+        hoveringOver = eventSystem.GetComponent<EventSystem>().currentSelectedGameObject;
+
+    }
+    void Start()
+    {
+        InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
+
     }
 
+    public AudioClass GetAudioClass()
+    {
+        return GetComponent<AudioClass>();
+    }
+
+    void CheckToPlayHoverSound()
+    {
+        if(eventSystem!=null)
+        {
+            if (hoveringOver != eventSystem.GetComponent<EventSystem>().currentSelectedGameObject)
+            {
+                AkSoundEngine.PostEvent("hover", gameObject);
+                hoveringOver = eventSystem.GetComponent<EventSystem>().currentSelectedGameObject;
+            }
+        }
+    }
     //intialising variables and setting up gameobjects and how the home screen should look like
     public void IntialiseAndSetScene()
     {
@@ -103,12 +137,17 @@ public class MenuScript : MonoBehaviour
         CloseButton = GameObject.Find("CloseButton");
         ContinueButton = GameObject.Find("ContinueButton");
         eventSystem = GameObject.Find("EventSystem");
-      //  Level1Button = GameObject.Find("Level 1 Button");
-       // Level2Button = GameObject.Find("Level 2 Button");
+        controllerSelect1 = GameObject.Find("controllerSelected1");
+        controllerSelect2 = GameObject.Find("controllerSelected2");
+        controllerSelect3 = GameObject.Find("controllerSelected3");
+        controllerSelect4 = GameObject.Find("controllerSelected4");
+        //  Level1Button = GameObject.Find("Level 1 Button");
+        // Level2Button = GameObject.Find("Level 2 Button");
         //flip the level and options panel off so they can not be seen
         FlipLevelPanel();
         FlipOptionPanel();
         FlipCharacterPanel();
+
 
     }
     //flips the level panel to the opposite state
@@ -143,10 +182,11 @@ public class MenuScript : MonoBehaviour
     {
         //flip the character panel on and flip off the menu button
         FlipCharacterPanel();
-        AkSoundEngine.PostEvent("click_select", gameObject);
+        AkSoundEngine.PostEvent("game_start", gameObject);
+        AkSoundEngine.SetRTPCValue("click_start", 0f, null, 1000);
         FlipMenuButtons();
         //Set the navigable buttons to the character screen buttons
-        eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ContinueButton"));
+        //eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ContinueButton"));
 
     }
     // Run the function when the continue button is pressed on the character screen
@@ -162,15 +202,17 @@ public class MenuScript : MonoBehaviour
             //read the file containing the levels to be run
             //ReadFile();
 
-            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ReturnToMenuButton"));
+            //eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ReturnToMenuButton"));
         }
     }
-    void ReturntoMainMenu()
+    public void ReturntoMainMenu()
     {
         AkSoundEngine.PostEvent("click_back", gameObject);
         FlipCharacterPanel();
         FlipMenuButtons();
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
+        AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
 
     }
     //sets up all the buttons based on what is passed in
@@ -190,8 +232,8 @@ public class MenuScript : MonoBehaviour
         FindButtonAddListener(GameObject.Find("ThrowButton"));
         FindButtonAddListener(GameObject.Find("JumpButton"));
         FindButtonAddListener(GameObject.Find("ReturnToMenuButton"));
-        FindButtonAddListener(GameObject.Find("ContinueButton"));
-        FindButtonAddListener(GameObject.Find("ReturnToSplashScreen"));
+        //FindButtonAddListener(GameObject.Find("ContinueButton"));
+        //FindButtonAddListener(GameObject.Find("ReturnToSplashScreen"));
         FindButtonAddListener(GameObject.Find("RightChangeCharButton"));
         FindButtonAddListener(GameObject.Find("LeftChangeCharButton"));
         FindButtonAddListener(GameObject.Find("Level 1 Button"));
@@ -202,13 +244,24 @@ public class MenuScript : MonoBehaviour
     void ReturnToMenuPressed()
     {
         //empty the level list
-        EmptyLevelList();
+        //EmptyLevelList();
         //flip the level panel off
         FlipLevelPanel();
         //flip the menu buttons off
         FlipMenuButtons();
+        numPlayers = 0;
         AkSoundEngine.PostEvent("click_back", gameObject);
+        AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
+        if(controllerSelect1)
+        {
+            controllerSelect1.GetComponent<ControllerSelect>().ResetPlayer();
+            controllerSelect2.GetComponent<ControllerSelect>().ResetPlayer();
+            controllerSelect3.GetComponent<ControllerSelect>().ResetPlayer();
+            controllerSelect4.GetComponent<ControllerSelect>().ResetPlayer();
+        }
+
     }
     //clear the level list
     void EmptyLevelList()
@@ -268,12 +321,12 @@ public class MenuScript : MonoBehaviour
             case "ReturnToMenuButton":
                 button.onClick.AddListener(() => MenuScript.Instance.ReturnToMenuPressed());
                 break;
-            case "ContinueButton":
-                button.onClick.AddListener(() => MenuScript.Instance.ContinuePressed());
-                break;
-            case "ReturnToSplashScreen":
-                button.onClick.AddListener(() => MenuScript.Instance.ReturntoMainMenu());
-                break;
+            //case "ContinueButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.ContinuePressed());
+            //    break;
+            //case "ReturnToSplashScreen":
+            //    button.onClick.AddListener(() => MenuScript.Instance.ReturntoMainMenu());
+            //    break;
             case "RightChangeCharButton":
                 button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(1,button.transform.parent.GetChild(0).GetComponent<Text>()));
                 break;
@@ -281,13 +334,13 @@ public class MenuScript : MonoBehaviour
                 button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(-1, button.transform.parent.GetChild(0).GetComponent<Text>()));
                 break;
             case "Level 1 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Level 1"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level 1 designer v3"));
                 break;
             case "Level 2 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Level 2"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_2"));
                 break;
             case "Level 0 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("TutorialLevel"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Tutorial_Level"));
                 break;
         }
     }
@@ -526,12 +579,31 @@ public class MenuScript : MonoBehaviour
     {
         AkSoundEngine.PostEvent("click_back", gameObject);
         SceneManager.LoadScene("MainMenu");
+        eventSystem = GameObject.Find("EventSystem");
+        InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
         gamePaused = false;
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
+        Invoke("DelayMainMenuMusic", 0.5f);
+        ResetGameValues();
+        //flip the level and options panel off so they can not be seen
+        numPlayers = 0;
+
+        //AkSoundEngine.PostEvent("play_intro", gameObject);
+
+
         //Invoke("DelayReturn", 0.05f);
     }
+    void DelayMainMenuMusic()
+    {
+        AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
+        AkSoundEngine.PostEvent("play_intro", gameObject);
+    }
 
+    public void GameReturnDelayMusic()
+    {
+        Invoke("DelayMainMenuMusic", 0.5f);
+    }
     void DelayReturn()
     {
         FlipLevelPanel();
@@ -542,15 +614,19 @@ public class MenuScript : MonoBehaviour
     public void ResetLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        ResetGameValues();
+    }
+
+    public void ResetGameValues()
+    {
         gamePaused = false;
         pausePlayerNum = 0;
     }
-
     // A fade effect to go to next level
     public void FadeToNextLevel(GameObject pause_)
     {
-        int index = SceneManager.GetActiveScene().buildIndex;
-        if (SceneManager.GetActiveScene().buildIndex !=Application.levelCount-1)
+        //int index = SceneManager.GetActiveScene().buildIndex;
+        //if (SceneManager.GetActiveScene().buildIndex !=Application.levelCount-1)
         {
             if (pause_.activeSelf == true)
             {
@@ -567,15 +643,13 @@ public class MenuScript : MonoBehaviour
     public void FadeToNextLevel()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(" scene is " + SceneManager.GetSceneByBuildIndex(index).name);
-        Debug.Log(" the pause panel is " + GameObject.Find("PausePanel"));
-        if (SceneManager.GetActiveScene().buildIndex != Application.levelCount - 1)
-        {
+        //if (SceneManager.GetActiveScene().buildIndex != Application.levelCount - 1)
+        //{
             CompleteLevelAndRate();
             //Turn the trigger on to play the fade animation
             sceneFade = GameObject.Find("FadeSceneHolder").GetComponent<Animator>();
             sceneFade.SetTrigger("FadeOut");
-        }
+        //}
 
     }
 
@@ -593,16 +667,22 @@ public class MenuScript : MonoBehaviour
         // Check if the index of the active scene is less than max level, if it is, load to next level and make the access_level add 1 to let player access to the scene
         if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
         {
+            CancelInvoke("CheckToPlayHoverSound");
+            eventSystem = null;
+            pausePlayerNum = 0;
             maxLevel = SceneManager.GetActiveScene().buildIndex + 1;
             //Record the level in player data
             playerdata.setCurrentLevel(maxLevel);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 
     //Load scene according to the name of scene
-    void LoadLevel(string sceneName)
+    public void LoadLevel(string sceneName)
     {
+        CancelInvoke("CheckToPlayHoverSound");
+        eventSystem = null;
         SceneManager.LoadScene(sceneName);
     }
     //flip the menu buttons to the opposite state
@@ -642,6 +722,7 @@ public class MenuScript : MonoBehaviour
         {
             return;
         }
+        Debug.Log(Application.persistentDataPath);
         //If there is player data, load it
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/PlayerData.dat", FileMode.Open);
@@ -660,10 +741,54 @@ public class MenuScript : MonoBehaviour
     {
         return numPlayers;
     }
+
+    public void SetTotalNumberofPlayers(int player)
+    {
+        numPlayers = player;
+    }
+
+    public void SetPlayersInGame(int playerNum,bool setTo_)
+    {
+        if(playerNum == 1)
+        {
+            //Set player 1 in game
+            p1InGame = setTo_;
+        }
+        else if (playerNum == 2)
+        {
+            //Set player 2 in game
+            p2InGame = setTo_;
+        }
+        else if (playerNum == 3)
+        {
+            //Set player 3 in game
+            p3InGame = setTo_;
+        }
+        else
+        {
+            //Set player 4 in game
+            p4InGame = setTo_;
+        }
+    }
+
     //turn the screen active or not
     public void SetPlayerPaused(bool paused_)
     {
         gamePaused = paused_;
+        if(gamePaused==true)
+        {
+            if(eventSystem==null)
+            {
+                eventSystem = GameObject.Find("EventSystem");
+                hoveringOver = eventSystem.GetComponent<EventSystem>().currentSelectedGameObject;
+            }
+            InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
+        }
+        else if(gamePaused==false)
+        {
+            //eventSystem = null;
+            CancelInvoke("CheckToPlayHoverSound");
+        }
     }
     //switch the player keys
     //will also need to do the switch on display

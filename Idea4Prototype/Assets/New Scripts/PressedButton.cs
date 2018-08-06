@@ -12,12 +12,13 @@ public class PressedButton : MonoBehaviour {
     public bool isSpecificObject;   //When it's set, only the specific object can trigger the button or trapss
     public float noise;             //Noise value
     public string noise_detection;  //the name of the noise
-    public GameObject SpecificObject; //Set the the specific object
+    public string SpecificObjectTag; //Set the the specific object
     public string animatorVariable; //String of the animationVraiable boolean
     public bool runAnimOnPressed;
     public bool runAnimOnReleased;
     public string soundName;
     public float delaySound;
+    public List<GameObject> top = new List<GameObject>();
 
     // Use this for initialization, set the button and original position of button
     void Start ()
@@ -27,13 +28,13 @@ public class PressedButton : MonoBehaviour {
     }
 
    // Noise detection wiise function, set the noise value every frame
-    void Update()
-    {
-        //int type = 1;
-        //float value;
-        //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
-        //noise = value;
-    }
+    //void Update()
+    //{
+    //    //int type = 1;
+    //    //float value;
+    //    //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
+    //    //noise = value;
+    //}
 
     //Check if something enter the trigger
     void OnTriggerEnter(Collider other)
@@ -42,8 +43,9 @@ public class PressedButton : MonoBehaviour {
         if (isSpecificObject)
         {
             //Check if the object trigger the button is the specific object
-            if (other.gameObject == SpecificObject)
+            if (other.gameObject.tag == SpecificObjectTag)
             {
+                top.Add(other.gameObject);
                 //Check if the trap just run once, if it is, use settrigger to run it, if not, use setbool to run it so that it can run multiply times
                 if (isRunOnce == true)
                 {
@@ -56,28 +58,33 @@ public class PressedButton : MonoBehaviour {
             }
             return;
         }
-        // Check if the mass of object is more than setting weight, if it is, it can make trap run.
-        if (other.gameObject.GetComponent<Rigidbody>().mass >= setWeight)
+        if((other.gameObject.GetComponent<Rigidbody>() != null) && this.GetComponent<PressedButton>().enabled==true)
         {
-            // Button go down
-            button.position = new Vector3(originalPosition.x, originalPosition.y-0.2f, originalPosition.z);
-            //AkSoundEngine.PostEvent("button_click", gameObject);
-            Debug.Log(noise);
+            // Check if the mass of object is more than setting weight, if it is, it can make trap run.
+            if ((other.gameObject.GetComponent<Rigidbody>().mass >= setWeight))
+            {
+                top.Add(other.gameObject);
+                // Button go down
+                button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
+                //AkSoundEngine.PostEvent("button_click", gameObject);
+                //Check if the trap just run once, if it is, use settrigger to run it, if not, use setbool to run it so that it can run multiply times
+                if (isRunOnce == true)
+                {
 
-            //Check if the trap just run once, if it is, use settrigger to run it, if not, use setbool to run it so that it can run multiply times
-            if (isRunOnce == true)
-            {
-                animator.SetTrigger(animatorVariable);
-            }
-            else
-            {
-                animator.SetBool(animatorVariable, runAnimOnPressed);
-            }
+                    animator.SetTrigger(animatorVariable);
+                }
+                else
+                {
+                    if (animator != null)
+                    {
+                        animator.SetBool(animatorVariable, runAnimOnPressed);
+                    }
+                }
 
                 // Button go down
                 button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
                 AkSoundEngine.PostEvent("button_click", gameObject);
-                Debug.Log(noise);
+                //Debug.Log(noise);
 
                 //Check if the trap just run once, if it is, use settrigger to run it, if not, use setbool to run it so that it can run multiply times
                 if (isRunOnce == true)
@@ -86,26 +93,40 @@ public class PressedButton : MonoBehaviour {
                 }
                 else
                 {
-                    animator.SetBool(animatorVariable, runAnimOnPressed);
+                    if (animator != null)
+                    {
+                        animator.SetBool(animatorVariable, runAnimOnPressed);
+                    }
                 }
 
             }
         }
-    
+   }
 
     //When the button is realsed
     void OnTriggerExit(Collider other)
     {
-        button.position = originalPosition;
-        if (isRunOnce == false)
+        if(this.GetComponent<PressedButton>().enabled == true)
         {
-            //if(animator.GetBool(animatorVariable)==false)
+            top.Remove(other.gameObject);
+            if (top.Count > 0)
             {
-                if (soundName != "")
+                return;
+            }
+            button.position = originalPosition;
+            if (isRunOnce == false)
+            {
+                //if(animator.GetBool(animatorVariable)==false)
                 {
-                    Invoke("Delay", delaySound);
+                    if (soundName != "")
+                    {
+                        Invoke("Delay", delaySound);
+                    }
+                    if (animator != null)
+                    {
+                        animator.SetBool(animatorVariable, runAnimOnReleased);
+                    }
                 }
-                animator.SetBool(animatorVariable, runAnimOnReleased);
             }
         }
     }

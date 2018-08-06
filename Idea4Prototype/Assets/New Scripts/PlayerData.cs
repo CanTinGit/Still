@@ -50,7 +50,10 @@ public class PlayerData
             }
         }
     }
-
+    public int GetPassedLevelScore(int buildIndex_)
+    {
+        return passedLevelScore[buildIndex_];
+    }
     //Clean the list
     public void Clean()
     {

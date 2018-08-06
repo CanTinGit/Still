@@ -10,25 +10,20 @@ public class SpawnObjectButton : MonoBehaviour {
     public bool isSpecificObject;   //When it's set, only the specific object can trigger the button or trapss
     public float noise;             //Noise value
     public string noise_detection;  //the name of the noise
-    public GameObject SpecificObject; //Set the the specific object
+    public string SpecificObjectTag; //Set the the specific object
     GameObject spawnerManager;      // Reference to the spawner manager
-
+    public bool isForMetalSphere;
+    public bool canDispense;
     // Use this for initialization, set the button and original position of button
     void Start()
     {
-        button = gameObject.transform.parent;
+        button = gameObject.transform;
         originalPosition = button.gameObject.transform.position;
         spawnerManager = GameObject.Find("SpawnerManager");
     }
 
-    // Noise detection wiise function, set the noise value every frame
-    void Update()
-    {
-        //int type = 1;
-        //float value;
-        //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
-        //noise = value;
-    }
+
+
 
     //Check if something enter the trigger
     void OnTriggerEnter(Collider other)
@@ -37,24 +32,38 @@ public class SpawnObjectButton : MonoBehaviour {
         if (isSpecificObject)
         {
             //Check if the object trigger the button is the specific object
-            if (other.gameObject == SpecificObject)
+            if (other.gameObject.tag == SpecificObjectTag)
             {
+                // Button go down
+                button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
+                AkSoundEngine.PostEvent("button_click", gameObject);
                 // Spawn the object
-                spawnerManager.GetComponent<Spawner>().Spawn();
+                // Not sure what this code is supposed to do, so commented it out for just now
+                //if (isForMetalSphere)
+                //{
+                //    Debug.Log("Metal");
+                //    spawnerManager.GetComponent<Spawner>().SpawnMetalSphere();
+                //}
+                //else
+                //{
+                //    Debug.Log("Origianl");
+                    spawnerManager.GetComponent<Spawner>().Spawn();
+                //}
+
             }
             return;
         }
-        // Check if the mass of object is more than setting weight, if it is, it can make trap run.
-        if (other.GetComponent<Rigidbody>().mass >= setWeight)
+        if (other.GetComponent<Rigidbody>() != null)
         {
-            // Button go down
-            button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
-            AkSoundEngine.PostEvent("button_click", gameObject);
-            Debug.Log(noise);
-
-            // Spawn the object
-            spawnerManager.GetComponent<Spawner>().Spawn();
-
+            // Check if the mass of object is more than setting weight, if it is, it can make trap run.
+            if (other.GetComponent<Rigidbody>().mass >= setWeight && other.gameObject.tag != "Hand")
+            {
+                // Button go down
+                button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
+                AkSoundEngine.PostEvent("button_click", gameObject);
+                // Spawn the object
+                spawnerManager.GetComponent<Spawner>().Spawn();
+            }
         }
     }
 
@@ -62,5 +71,21 @@ public class SpawnObjectButton : MonoBehaviour {
     void OnTriggerExit(Collider other)
     {
         button.position = originalPosition;
+    }
+
+    //When the button is stayed on
+    void OnTriggerStay(Collider other)
+    {
+        button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
+    }
+
+    public void SetCanDispense(bool canDispense_)
+    {
+        canDispense = canDispense_;
+    }
+
+    public bool GetDispense()
+    {
+        return canDispense;
     }
 }

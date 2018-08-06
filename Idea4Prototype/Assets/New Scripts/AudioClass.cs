@@ -6,6 +6,7 @@ struct AudioForceStruct
 {
     //the min and max range of that sound (e.g. force of 0 to 3 is very light sound)
     float minRange, maxRange;
+    string material;
     //sound state e.g. very light
     string pszState;
     //sets the min and max range values
@@ -14,6 +15,10 @@ struct AudioForceStruct
         minRange = min_;
         maxRange = max_;
 
+    }
+    public void SetMaterial(string material_)
+    {
+        material = material_;
     }
     //set the state
     public void SetPszState(string pszState_)
@@ -112,6 +117,19 @@ struct AudioDatabaseStructure
     {
         audioGroup = new List<AudioSingleStructure>();
     }
+    public AudioSingleStructure GetAudioList(string material_)
+    {
+        AudioSingleStructure audioList = new AudioSingleStructure();
+        foreach (AudioSingleStructure element in audioGroup)
+        {
+            if(element.GetMaterialName() == material_)
+            {
+                audioList = element;
+                break;
+            }
+        }
+        return audioList;
+    }
     //getter for min,max, state group and material name
     public float GetMax(string pszState_,int index_)
     {
@@ -152,13 +170,38 @@ public class AudioClass:MonoBehaviour
     AudioDatabaseStructure audioDatabase;
     //used for holding the list of the different ranges of audio states e.g. very light to very heavy
     List<AudioForceStruct> audioRange;
-    //creates the lists and intialises them
+    //hold the nationality of eachPlayer
+    string[] playerNationality;
+
+
+    ////creates the lists and intialises them
     void Awake()
     {
+        Debug.Log("Awake");
+        playerNationality = new string[4];
         audioRange = new List<AudioForceStruct>();
         audioDatabase = new AudioDatabaseStructure();
         audioDatabase.Intialise();
+        SetDefaultAudio();
         AllMaterials();
+    }
+
+    //creates the lists and intialises them
+    public void InitialiseAudioClass()
+    {
+        playerNationality = new string[4];
+        audioRange = new List<AudioForceStruct>();
+        audioDatabase = new AudioDatabaseStructure();
+        audioDatabase.Intialise();
+        SetDefaultAudio();
+        AllMaterials();
+    }
+    public void SetDefaultAudio()
+    {
+        playerNationality[0] = "Generic";
+        playerNationality[1] = "American";
+        playerNationality[2] = "Indian";
+        playerNationality[3] = "Chinese";
     }
     //sets audio for material
     public void SetAudioForMaterial(string material_)
@@ -180,6 +223,8 @@ public class AudioClass:MonoBehaviour
     private void AllMaterials()
     {
         MetalMaterial();
+        WoodMaterial();
+
     }
     /// <summary>
     /// IAIN MESSAGE HERE
@@ -188,9 +233,18 @@ public class AudioClass:MonoBehaviour
     private void MetalMaterial()
     {
         AudioSingleStructure singleAudioGroup = new AudioSingleStructure();
-        singleAudioGroup.Intialise("MetalObject","Impact_Force");
-        singleAudioGroup.AddPszState(0, 2,"Very_Light");
-        singleAudioGroup.AddPszState(2, 5, "Light");
+        singleAudioGroup.Intialise("metal_object","Impact_Force");
+        singleAudioGroup.AddPszState(0, 5, "Light");
+        singleAudioGroup.AddPszState(5, 10, "Medium");
+        singleAudioGroup.AddPszState(10, 100, "Heavy");//not required to always between the ranges you can just use the max value in the if statement
+        audioDatabase.AddToDatabase(singleAudioGroup);
+    }
+
+    private void WoodMaterial()
+    {
+        AudioSingleStructure singleAudioGroup = new AudioSingleStructure();
+        singleAudioGroup.Intialise("wood_object", "Impact_Force");
+        singleAudioGroup.AddPszState(0, 5, "Light");
         singleAudioGroup.AddPszState(5, 10, "Medium");
         singleAudioGroup.AddPszState(10, 100, "Heavy");//not required to always between the ranges you can just use the max value in the if statement
         audioDatabase.AddToDatabase(singleAudioGroup);
@@ -202,7 +256,9 @@ public class AudioClass:MonoBehaviour
     /// </summary>
     public void PlayAudio(string material_,float force,string pszGroup)
     {
-        foreach (AudioForceStruct element in audioRange)
+        //audioDatabase
+        List<AudioForceStruct> List = audioDatabase.GetAudioList(material_).GetAudioRangeList();
+        foreach (AudioForceStruct element in List)
         {
             //DEBUG MESSAGE FOR TESTING WHAT IS MINI MAX AND THE FORCE PASSING IN
             //Debug.Log(force.ToString() + " " + element.GetMinRange().ToString() + " " + force.ToString() + " " + element.GetMaxRange().ToString());
@@ -210,9 +266,11 @@ public class AudioClass:MonoBehaviour
             //if statement that will be used for all the different states
             if ((force >= element.GetMinRange()) && (force <= element.GetMaxRange()))
             {
-                Debug.Log("the force is " + force);
-                Debug.Log("the psz group is " + pszGroup);
-                Debug.Log("the psz state is " + element.GetPszState());
+                //Debug.Log("the material is " + material_);
+                //Debug.Log("the force is " + force);
+                //Debug.Log("the psz group is " + pszGroup);
+                //Debug.Log("the psz state is " + element.GetPszState());
+                AkSoundEngine.SetState("Material",material_);
                 AkSoundEngine.SetState(pszGroup, element.GetPszState());
                 break;
             }
@@ -241,5 +299,15 @@ public class AudioClass:MonoBehaviour
             }
         }
         return -0.5f;
+    }
+
+
+    public void SetNationality(int playerNum_, string nationality_)
+    {
+        playerNationality[playerNum_-1] = nationality_;
+    }
+    public string GetNationality(int playerNum_)
+    {
+        return playerNationality[playerNum_-1];
     }
 }
