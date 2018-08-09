@@ -15,7 +15,7 @@ public class MovementUpdated : MonoBehaviour {
     Vector3 movement;
     //the values for player movements
     public float jumpSpeed = 8.0f;
-    public float moveSpeed = 1.0f;
+    public float moveSpeed;
     public float TurnSpeed = 10.0f;
     float moveHorizontal = 0.0f;
     float moveVertical = 0.0f;
@@ -24,6 +24,7 @@ public class MovementUpdated : MonoBehaviour {
     GameObject pausePanel;
     public PhysicMaterial jumpingMaterial;
     public PhysicMaterial originalMaterial;
+    public float runSpeed;
 
     Vector3 forward;
     // Use this for initialization
@@ -37,7 +38,7 @@ public class MovementUpdated : MonoBehaviour {
         startPos = transform.position;
         playerKeys = MenuScript.Instance.GetPlayerKeys();
         jumpSpeed = playerKeys[PlayerNum-1].GetJumpPower();
-        moveSpeed = playerKeys[PlayerNum-1].GetMoveSpeed();
+        //moveSpeed = playerKeys[PlayerNum-1].GetMoveSpeed();
         TurnSpeed = playerKeys[PlayerNum-1].GetTurnSpeed();
         isInBubble = false;
         CalculateDirection();
@@ -142,35 +143,49 @@ public class MovementUpdated : MonoBehaviour {
     }
     void ControllerMovement()
     {
+        if (Input.GetAxis("Horizontal" + PlayerNum.ToString()) > 0.5f || Input.GetAxis("Horizontal" + PlayerNum.ToString()) < -0.5f)
+        {
+            isMoving = true;
+        }
+        if (Input.GetAxis("Vertical" + PlayerNum.ToString()) > 0.5f || Input.GetAxis("Vertical" + PlayerNum.ToString()) < -0.5f)
+        {
+            isMoving = true;
+        }
 
-        if (Input.GetAxis("Horizontal"+PlayerNum.ToString()) > 0.5f || Input.GetAxis("Horizontal" + PlayerNum.ToString()) < -0.5f)
+        if (isMoving == true)
+        {
+            movement = Input.GetAxis("Horizontal" + PlayerNum.ToString()) * Camera.main.transform.right + Input.GetAxis("Vertical" + PlayerNum.ToString()) * (-forward);
+            if (movement != Vector3.zero)
             {
-                isMoving = true;
-            }
-            if (Input.GetAxis("Vertical" + PlayerNum.ToString()) > 0.5f || Input.GetAxis("Vertical" + PlayerNum.ToString()) < -0.5f)
-            {
-                isMoving = true;
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.1f);// Quaternion.LookRotation(movement);
             }
 
-            if (isMoving == true)
+            if (Input.GetAxis("XboxRightTrigger" + PlayerNum.ToString()) < -0.5f)
             {
-                movement = Input.GetAxis("Horizontal" + PlayerNum.ToString()) * Camera.main.transform.right + Input.GetAxis("Vertical" + PlayerNum.ToString()) * (-forward);
-                if (movement != Vector3.zero)
-                {
-                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.1f);// Quaternion.LookRotation(movement);
-                }
+                //movement = movement.normalized * runSpeed;
+                //rigidbody.velocity = new Vector3(movement.x, rigidbody.velocity.y, movement.z);
+                transform.Translate(movement * runSpeed * Time.deltaTime, Space.World);
+                gameObject.GetComponent<Animator>().SetFloat("Speed", runSpeed);
+
+            }
+            else
+            {
+                //movement = movement.normalized * moveSpeed;
+                //rigidbody.velocity = new Vector3(movement.x,rigidbody.velocity.y,movement.z);
                 transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
+                gameObject.GetComponent<Animator>().SetFloat("Speed", 0.0f);
             }
+        }
 
-            //if the player is grounded then he can jump
-            if (grounded)
+        //if the player is grounded then he can jump
+        if (grounded)
             {
                 //when the player presses the jump key apply a force to make him jump
                 if (Input.GetButtonDown(playerKeys[PlayerNum-1].GetKeys()[5].ToString().Insert(8,PlayerNum.ToString())))
                 {
                     AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(PlayerNum));
                     AkSoundEngine.PostEvent("player_jump", gameObject);
-                    isMoving = true;
+                    //isMoving = true;
                     
                     grounded = false;
                     if (gameObject.GetComponent<Animator>() != null && grounded == false)
@@ -178,24 +193,23 @@ public class MovementUpdated : MonoBehaviour {
                         gameObject.GetComponent<Animator>().SetBool("isMoving", false);
                         gameObject.GetComponent<Animator>().SetBool("Jump", true);
                     }
-                    rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
+                    rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
                     Debug.Log("Strat");
                     gameObject.GetComponent<CapsuleCollider>().material = jumpingMaterial;
                     Debug.Log("End");
                 }
             }
 
-            if (Input.GetAxis("Vertical" + PlayerNum.ToString()) > -0.1f && Input.GetAxis("Vertical" + PlayerNum.ToString()) < 0.1f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) > -0.1f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) < 0.1f && !Input.GetKey(playerKeys[PlayerNum-1].GetKeys()[5]))
+            if (Input.GetAxis("Vertical" + PlayerNum.ToString()) > -0.19f && Input.GetAxis("Vertical" + PlayerNum.ToString()) < 0.19f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) > -0.19f && Input.GetAxis("Horizontal" + PlayerNum.ToString()) < 0.19f && !Input.GetKey(playerKeys[PlayerNum-1].GetKeys()[5]))
             {
                 isMoving = false;
-
             }
 
             if(gameObject.GetComponent<Animator>() != null && isMoving == true && grounded == true)
             {
                 gameObject.GetComponent<Animator>().SetBool("isMoving", true);
             }
-            else if(gameObject.GetComponent<Animator>() != null && isMoving == false)
+            else if(gameObject.GetComponent<Animator>() != null /*&& isMoving == false*/)
             {
                 gameObject.GetComponent<Animator>().SetBool("isMoving", false);
             }
@@ -262,7 +276,13 @@ public class MovementUpdated : MonoBehaviour {
         {
             rigidbody.velocity = Vector3.zero;
             gameObject.GetComponent<CapsuleCollider>().material = originalMaterial;
+            
         }
+        if (col.transform.name == "m_seesaw")
+        {
+            runSpeed = runSpeed / 2;
+        }
+
         //collider with goal, go to next level
         if (col.gameObject.name == "Goal")
         {
@@ -279,9 +299,14 @@ public class MovementUpdated : MonoBehaviour {
         {
             if (col.gameObject.GetComponent<PickupInfo>().GetGrounded() == true)
             {
+                
                 Vector3 direction = transform.position - col.transform.position;
+                Debug.Log(transform.position);
+                Debug.Log(col.transform.position);
+                Debug.Log(direction);
                 //Debug.Log("direction is " + direction);
                 float degree = Vector3.Angle(direction, Vector3.up);
+                Debug.Log(degree);
                 //Debug.Log(transform.position.y);
                 if (degree < 60)
                 {
@@ -346,6 +371,10 @@ public class MovementUpdated : MonoBehaviour {
             {
                 grounded = false;
             }
+        }
+        if (col.transform.name == "m_seesaw")
+        {
+            runSpeed = 6 ;
         }
     }
 

@@ -25,15 +25,7 @@ public class Lever : MonoBehaviour {
             {
                 return;
             }
-            ParticleSystem air = GameObject.Find("AIRCON").GetComponent<ParticleSystem>();
-            ParticleSystem jumpair = GameObject.Find("JumpCon").GetComponent<ParticleSystem>();
-            HingeJoint hammer = GameObject.Find("Hammer").GetComponent<HingeJoint>();
             lever.SetTrigger("LeverOn");
-            air.Play();
-            jumpair.Play();
-            jumpair.transform.GetChild(0).gameObject.SetActive(true);
-            this.gameObject.tag = "Untagged";
-            Invoke("Delay", 0.5f);
         }
     }
 
@@ -41,5 +33,17 @@ public class Lever : MonoBehaviour {
     {
         HingeJoint hammer = GameObject.Find("Hammer").GetComponent<HingeJoint>();
         hammer.useLimits = false;
+    }
+
+    public void VCon()
+    {
+        ParticleSystem air = GameObject.Find("AIRFan").GetComponent<ParticleSystem>();
+        ParticleSystem jumpair = GameObject.Find("JumpFan").GetComponent<ParticleSystem>();
+        HingeJoint hammer = GameObject.Find("Hammer").GetComponent<HingeJoint>();
+        air.Play();
+        jumpair.Play();
+        jumpair.transform.Find("AirJumpZone").gameObject.SetActive(true);
+        this.gameObject.tag = "Untagged";
+        Invoke("Delay", 0.5f);
     }
 }

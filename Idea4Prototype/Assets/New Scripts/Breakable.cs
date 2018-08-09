@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class Breakable : MonoBehaviour
 {
     public float breakingVelocity;
+    public LayerMask stopCollisionLayer;
     // Mesh destroyer script
     public IEnumerator SplitMesh(bool destroy)
     {
@@ -78,6 +79,7 @@ public class Breakable : MonoBehaviour
                 Vector3 explosionPos = new Vector3(transform.position.x + Random.Range(-0.5f, 0.5f), transform.position.y + Random.Range(0f, 0.5f), transform.position.z + Random.Range(-0.5f, 0.5f));
                 GO.AddComponent<Rigidbody>().AddExplosionForce(Random.Range(100, 150), explosionPos, 5);
                 Destroy(GO, 5 + Random.Range(0.0f, 0.75f));
+                GO.layer = stopCollisionLayer;
             }
         }
 

@@ -59,14 +59,6 @@ public class PickupInfo : MonoBehaviour
             //Debug.Log(angle);
             grounded = true;
         }
-        if(this.name== "PickupThrow")
-        {
-            if(col.gameObject.GetComponent<Bridge>())
-            {
-                CancelInvoke();
-                Invoke("DestroyObject", 0.2f);
-            }
-        }
         //else if(col.transform.name.Contains("Pickup") && col.transform.tag == "Pickup" && col.transform.GetComponent<PickupInfo>().GetGrounded()==true)
         //{
         //    Debug.Log("herekfafas");

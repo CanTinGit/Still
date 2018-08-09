@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour {
     GameObject timer;                                       // Timer gameObject reference
     public int unitSeconds, tenSeconds, unitMins, tenMins;
     int numPlayers;
-
+    float timeTaken;
     void Start ()
     {
        // unitSeconds = 0;                                                        // Number of single unit seconds
@@ -27,6 +27,7 @@ public class Timer : MonoBehaviour {
     {
         if (MenuScript.Instance.gamePaused == false)
         {
+            timeTaken++;
             if (tenMins != 0 || unitMins != 0 || tenSeconds != 0 || unitSeconds != 0)       // If any of the timer variables do NOT equal 0, run the following code
             {
 
@@ -116,6 +117,16 @@ public class Timer : MonoBehaviour {
         //return checkpointStar;
         Sprite sprite = Resources.Load<Sprite>("UI/ScoreSystem/Cheese" + checkpointStar);
         return sprite;
+    }
+
+    public float GetOverallTime()
+    {
+        return timeTaken;
+    }
+
+    public void ResetTimeTaken()
+    {
+        timeTaken = 0.0f;
     }
 }
 

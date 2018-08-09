@@ -26,17 +26,13 @@ public class PauseScript : MonoBehaviour
         {
             if (MenuScript.Instance.pausePlayerNum == 0)
             {
-                FlipPausePanel();
-                MenuScript.Instance.SetPlayerPaused(true);
-                MenuScript.Instance.pausePlayerNum = int.Parse(this.transform.name.Remove(0, 6));
+                Pause();
             }
             else
             {
                 if (int.Parse(this.transform.name.Remove(0, 6)) == MenuScript.Instance.pausePlayerNum)
                 {
-                    FlipPausePanel();
-                    MenuScript.Instance.SetPlayerPaused(false);
-                    MenuScript.Instance.pausePlayerNum = 0;
+                    UnPause();
                 }
             }
             //if(PausePanel.activeSelf==false)
@@ -85,5 +81,17 @@ public class PauseScript : MonoBehaviour
     public bool GetPanelActive()
     {
         return PausePanel.activeSelf;
+    }
+    public void Pause()
+    {
+        FlipPausePanel();
+        MenuScript.Instance.SetPlayerPaused(true);
+        MenuScript.Instance.pausePlayerNum = int.Parse(this.transform.name.Remove(0, 6));
+    }
+    public void UnPause()
+    {
+        FlipPausePanel();
+        MenuScript.Instance.SetPlayerPaused(false);
+        MenuScript.Instance.pausePlayerNum = 0;
     }
 }

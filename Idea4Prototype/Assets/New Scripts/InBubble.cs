@@ -9,7 +9,7 @@ public class InBubble : MonoBehaviour {
     float startTime, journeyTime;
     Color lerpedColor,transparentColor,originalColor;
     bool isImmune;
-    float bubbleStrength = 50.0f;
+    float bubbleStrength = 100.0f;
     // Use this for initialization
     void Start ()
     {
@@ -32,7 +32,7 @@ public class InBubble : MonoBehaviour {
             rbs[i].useGravity = false;
         }
         // After 5 seconds, let gravity work
-        Invoke("CancelBubble", 5.0f);
+        Invoke("CancelBubble", 3.0f);
 	}
 	
 	// Update is called once per frame

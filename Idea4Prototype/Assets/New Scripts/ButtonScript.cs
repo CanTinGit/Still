@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour {
 
-    public bool isBackButton, isResetButton, isGoToNextLevelButton, isHelpButton, isNextButton;
+    public bool isBackButton, isResetButton, isGoToNextLevelButton, isHelpButton, isNextButton, isResumeButton;
     public GameObject pausePanel;
     public GameObject helpUI;
-	// Use this for initialization
-	void Start ()
+    PauseScript pause;
+    // Use this for initialization
+    void Start ()
     {
         if (isBackButton)
         {
@@ -29,7 +30,19 @@ public class ButtonScript : MonoBehaviour {
         }
         else if (isNextButton)
         {
-            gameObject.GetComponent<Button>().onClick.AddListener(() => MenuScript.Instance.FadeToNextLevel());
+            gameObject.GetComponent<Button>().onClick.AddListener(() => MenuScript.Instance.LoadNextLevel());
+        }
+        else if (isResumeButton)
+        {
+            gameObject.GetComponent<Button>().onClick.AddListener(() => pause.UnPause());
+        }
+    }
+
+    void Update()
+    {
+        if (GameObject.Find("Player1") != null || GameObject.Find("Player2") != null || GameObject.Find("Player3") != null || GameObject.Find("Player4") != null)
+        {
+            pause = GameObject.Find("Player" + MenuScript.Instance.pausePlayerNum).GetComponent<PauseScript>();
         }
     }
     void SetRatingOnBack()

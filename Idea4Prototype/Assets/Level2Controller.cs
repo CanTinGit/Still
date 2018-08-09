@@ -23,17 +23,19 @@ public class Level2Controller : MonoBehaviour {
         if(pointsToDisable==1)
         {
             Point1.gameObject.SetActive(!Point1.gameObject.activeSelf);
-            Camera1.gameObject.SetActive(!Camera1.gameObject.activeSelf);
+            ChangeTag(Camera1);
         }
         else if(pointsToDisable==2)
         {
             Point2.gameObject.SetActive(!Point2.gameObject.activeSelf);
-            Camera2.gameObject.SetActive(!Camera2.gameObject.activeSelf);
+            //Camera2.gameObject.SetActive(!Camera2.gameObject.activeSelf);
+            ChangeTag(Camera2);
         }
         else if (pointsToDisable == 3)
         {
             Point3.gameObject.SetActive(!Point3.gameObject.activeSelf);
-            Camera3.gameObject.SetActive(!Camera3.gameObject.activeSelf);
+            //Camera3.gameObject.SetActive(!Camera3.gameObject.activeSelf);
+            ChangeTag(Camera3);
         }
     }
 
@@ -46,5 +48,17 @@ public class Level2Controller : MonoBehaviour {
     {
         DisableAndEnablePoints(2);
         DisableAndEnablePoints(3);
+    }
+
+    void ChangeTag(Transform camera_)
+    {
+        if (camera_.tag == "Untagged")
+        {
+            camera_.tag = "CameraObject";
+        }
+        else if (camera_.tag == "CameraObject")
+        {
+            camera_.tag = "Untagged";
+        }
     }
 }

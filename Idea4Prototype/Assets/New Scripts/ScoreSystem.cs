@@ -80,14 +80,14 @@ public class ScoreSystem : MonoBehaviour {
     }
     public void AddCheckpointTime()
     {
-        Debug.Log("time added " + timeScript.GetTimeInSeconds() + " seconds" );
+        //Debug.Log("time added " + timeScript.GetTimeInSeconds() + " seconds" );
         checkpointTime.RemoveAt(Checkpoint);
         checkpointTime.Insert(Checkpoint, timeScript.GetTimeInSeconds());
         //checkpointTime.Add(timeScript.GetTimeInSeconds());
         Checkpoint++;
         if (Checkpoint!=3)
         {
-            Debug.Log("time done" + Checkpoint);
+            //Debug.Log("time done" + Checkpoint);
             timeScript.SetTimer(0, 0, 6, 0);
         }
     }
@@ -95,41 +95,32 @@ public class ScoreSystem : MonoBehaviour {
     public Sprite ReturnStars()
     {
         float time = 0;
-        if(checkpointTime.Count!=0)
+        Debug.Log("Return Score");
+        star = 0;
+        if (checkpointTime.Count!=0)
         {
-            Debug.Log("checkpoint list");
+            Debug.Log("checkpoint list " + checkpointTime.Count);
             foreach (float checkpoint in checkpointTime)
             {
-                //if (checkpoint > 30 && checkpoint <= 60)
-                //{
-                //    star += 3;
-                //}
-                //else if (checkpoint > 0 && checkpoint <= 30)
-                //{
-                //    star += 2;
-                //}
-                //else
-                //{
-                //    star += 1;
-                //}
-                time += checkpoint;
-            }
+                time = checkpoint;
+                if (time > 30.0f && time <= 60.0f)
+                {
+                    star += 3;
+                }
+                else if (time > 0.0f && time <= 30.0f)
+                {
+                    star += 2;
+                }
+                else if (time == 0.0f)
+                {
+                    star += 1;
+                }
 
-            time = time / 3;
+            }
+            Debug.Log("stars before " + star);
+            star = Mathf.RoundToInt((float)star / 3);
+            Debug.Log(star);
             Debug.Log("time is " + time);
-            if (time > 30.0f && time <= 60.0f)
-            {
-                star += 3;
-            }
-            else if (time > 0.0f && time <= 30.0f)
-            {
-                star += 2;
-            }
-            else if(time==0.0f)
-            {
-                star += 1;
-            }
-            //star = star / 3;
         }
         else
         {
@@ -142,52 +133,46 @@ public class ScoreSystem : MonoBehaviour {
     {
         return finalScore;
     }
-    //return the star of checkpoint ( pass in 1 if u want checkpoint 1 ) 
+    //returns the average star score of the whole levels checkpoint
     public Sprite ChangeTimeToStars()
     {
-
         float timeFromCheckpoint = 0;
-        int stars=3;
-        for(int count = 0; count < checkpointTime.Count;count++)
+        int stars = 0;
+        Sprite sprite;
+        for (int count = 0; count < checkpointTime.Count; count++)
         {
-            if(count!=Checkpoint)
+            //get the time and then add the star score based on it
+            if (count != Checkpoint)
             {
-                timeFromCheckpoint += checkpointTime[count];
-              //  Debug.Log("total time (fake time ) " + timeFromCheckpoint + " checkpoint" + count + " time is " + checkpointTime[count]);
+                timeFromCheckpoint = checkpointTime[count];
+            }
+            else if(count == Checkpoint)
+            {
+                timeFromCheckpoint = timeScript.GetTimeInSeconds();
+            }
+
+            if (timeFromCheckpoint > 30 && timeFromCheckpoint <= 60)
+            {
+                stars += 3;
+            }
+            else if (timeFromCheckpoint > 0 && timeFromCheckpoint <= 30)
+            {
+                stars += 2;
+            }
+            else if (timeFromCheckpoint == 0)
+            {
+                stars += 1;
             }
         }
-        timeFromCheckpoint += timeScript.GetTimeInSeconds();
-        //Debug.Log("total time (fake time ) " + timeFromCheckpoint + " and the time is " + timeScript.GetTimeInSeconds());
-        timeFromCheckpoint = timeFromCheckpoint / 3;
-       // Debug.Log("averaged time is " + timeFromCheckpoint);
-        if (timeFromCheckpoint > 30 && timeFromCheckpoint <= 60)
+        //stars = Mathf.RoundToInt((float)stars / 3);
+        if(stars>3)
         {
-            stars = 3;
+             sprite = Resources.Load<Sprite>("UI/ScoreSystem/Cheese" + stars);
         }
-        else if (timeFromCheckpoint > 0 && timeFromCheckpoint <= 30)
+        else
         {
-            stars = 2;
+             sprite = Resources.Load<Sprite>("UI/ScoreSystem/Cheese3");
         }
-        else if (timeFromCheckpoint == 0)
-        {
-            stars = 1;
-        }
-        Sprite sprite = Resources.Load<Sprite>("UI/ScoreSystem/Cheese" + stars);
         return sprite;
-        ////returns a checkpointnumber
-        //int checkpointStar = 3;
-        //float timeToStar = timeScript.GetTimeInSeconds();
-        //if (timeToStar > 0 && timeToStar <= 30)
-        //{
-        //    checkpointStar = 2;
-        //}
-        //else if(timeToStar == 0)
-        //{
-        //    checkpointStar = 1;
-        //}
-        ////if it returns 0 it is a fail return
-        ////return checkpointStar;
-        //Sprite sprite = Resources.Load<Sprite>("UI/ScoreSystem/Star" + checkpointStar);
-        //return sprite;
     }
 }
