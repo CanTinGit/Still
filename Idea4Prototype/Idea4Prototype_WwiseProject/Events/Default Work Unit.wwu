@@ -261,6 +261,21 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="stop_score" ID="{1D43917D-708D-44D7-83DC-FF6F49D93102}">
+							<ChildrenList>
+								<Action Name="" ID="{D5B294A3-2467-4946-BE63-B49649219FB3}" ShortID="1049250496">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Score" ID="{FC2986F7-1BED-49EB-85D4-E592F0D3A30C}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" ShortID="618037974">
