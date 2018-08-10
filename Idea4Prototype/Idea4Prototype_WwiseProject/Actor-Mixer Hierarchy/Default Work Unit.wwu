@@ -3159,6 +3159,25 @@
 								<ActiveSource Name="WeightDrop" ID="{374E53CF-2EB1-4293-A904-16F9DCE19194}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Weight hit's plank" ID="{47CDD3CB-D113-48AD-A9B1-DBFF26370792}" ShortID="537836444">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Weight hit's plank" ID="{18387D86-D352-49CE-8CFD-6349D8775258}" ShortID="821463885">
+									<Language>SFX</Language>
+									<AudioFile>Weight hit's plank.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Weight hit's plank" ID="{18387D86-D352-49CE-8CFD-6349D8775258}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Voice" ID="{C85A6BD0-2130-4756-9A48-C60BB731FBA9}" ShortID="456055418">
@@ -7081,6 +7100,388 @@
 								<ActiveSource Name="Click_Positive" ID="{CC643A5D-87A6-4AAC-8AE9-251A293F4D3D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="cheese_bites" ID="{96B9C278-5534-4509-9ABB-DD8E864FB320}" ShortID="6071460">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B8B56A75-E231-499A-82F5-D30B6CB4CF91}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{64F0A78E-CF93-4F9D-B549-9AA5257946BD}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-6"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="cheese_bite_1" ID="{91547352-7174-4DAE-A84F-8194483359F6}" ShortID="708422740">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_1" ID="{0AE636A2-6543-427A-B6EC-0071988E8E6B}" ShortID="727977580">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.52945205479452E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.299299086757991"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_1" ID="{0AE636A2-6543-427A-B6EC-0071988E8E6B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_2" ID="{E2AAECD8-5092-41D4-833E-7E06DBA5F018}" ShortID="463430291">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_2" ID="{868A861B-E301-4737-B038-197E3710F2BC}" ShortID="423334410">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.47645865043125E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.349351598173516"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_2" ID="{868A861B-E301-4737-B038-197E3710F2BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_3" ID="{46CCFF54-2BA6-48C7-B663-77E09661EDCD}" ShortID="795534182">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_3" ID="{9A394E6A-15EC-4D22-A2A4-1101245B8B18}" ShortID="739280317">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.73758561643836E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.300556506849315"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_3" ID="{9A394E6A-15EC-4D22-A2A4-1101245B8B18}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_4" ID="{42EFAB42-366D-4A0E-ADE5-1E1A69A5DCF5}" ShortID="643541779">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_4" ID="{57A8B9E6-C86C-494E-896A-12BAAE7DEE08}" ShortID="234015627">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.59760273972603E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.351716609589041"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_4" ID="{57A8B9E6-C86C-494E-896A-12BAAE7DEE08}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_5" ID="{08C45273-C4D7-45FF-B0A0-1E8A1E2D2596}" ShortID="524777543">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_5" ID="{CB066EE4-99CC-4EDB-B123-9E8E22759D45}" ShortID="167211880">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.59580479452054E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.299519691780822"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_5" ID="{CB066EE4-99CC-4EDB-B123-9E8E22759D45}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_6" ID="{9C2679DE-8C65-4FD3-86A7-694A2E873AE3}" ShortID="147628834">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_6" ID="{6C3B033A-B3A6-410F-B615-87832CBB92CD}" ShortID="944621794">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.77739726027397E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.300445205479452"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_6" ID="{6C3B033A-B3A6-410F-B615-87832CBB92CD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_7" ID="{9173BE20-8754-425F-AAE4-BC0EA153CDC7}" ShortID="237562655">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_7" ID="{CA8E59BD-7B26-44A8-BB90-4CEE01B4A27C}" ShortID="321799262">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.037478595890411"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_7.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_7" ID="{CA8E59BD-7B26-44A8-BB90-4CEE01B4A27C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_8" ID="{686571E1-DE47-4FF9-920C-EED1AD3AA589}" ShortID="207952814">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_8" ID="{CEFE160B-4E95-4B4F-BE7D-C5A9363AB6AE}" ShortID="42039383">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.60295376712329E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.299315068493151"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_8.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_8" ID="{CEFE160B-4E95-4B4F-BE7D-C5A9363AB6AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_9" ID="{D10348B8-FD5F-4D7E-815F-83458959BB98}" ShortID="499098443">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_9" ID="{5C489C8A-2116-47CF-9724-092E6EEE6626}" ShortID="238234776">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="9.31335616438356E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.450082191780822"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_9.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_9" ID="{5C489C8A-2116-47CF-9724-092E6EEE6626}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_10" ID="{10AC7291-F167-4DE9-908C-5A905632CAA5}" ShortID="1055656270">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_10" ID="{03EB9533-78F3-4195-9FF0-644B48CD56A3}" ShortID="763357575">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.046027397260274"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.299897260273973"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_10.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_10" ID="{03EB9533-78F3-4195-9FF0-644B48CD56A3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_11" ID="{CA87E48B-00B7-492C-A4F2-77DE65161098}" ShortID="771866064">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_11" ID="{BA21D3D4-9535-45B4-9A3C-0CB330AC369C}" ShortID="89126927">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.047177654109589"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.300356164383562"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_11.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_11" ID="{BA21D3D4-9535-45B4-9A3C-0CB330AC369C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cheese_bite_12" ID="{355E59A0-68B5-41B3-9C7F-7499EF1EE91B}" ShortID="432180856">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cheese_bite_12" ID="{13A8BB74-2006-45F8-8E4F-B39C6F5807A3}" ShortID="792717471">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.57448630136986E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.349597602739726"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>cheese_bite_12.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cheese_bite_12" ID="{13A8BB74-2006-45F8-8E4F-B39C6F5807A3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Score" ID="{FC2986F7-1BED-49EB-85D4-E592F0D3A30C}" ShortID="266031991">
+							<PropertyList>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="chime_loop" ID="{CABF530A-932D-465F-87E2-F1E576436DAD}" ShortID="827756583">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="chime_loop" ID="{A93BCBB7-E263-4071-84CA-C4144A06363C}" ShortID="586344811">
+											<Language>SFX</Language>
+											<AudioFile>chime_loop.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="chime_loop" ID="{A93BCBB7-E263-4071-84CA-C4144A06363C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Score_Screen" ID="{31E61854-6401-4FE1-A7A7-50B5D8364E66}" ShortID="359619233">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Score_Screen" ID="{CB938E18-83B6-4700-A18E-0F9BED54EFC1}" ShortID="169018464">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.913302955352613"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.98178576864536"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Score_Screen.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Score_Screen" ID="{CB938E18-83B6-4700-A18E-0F9BED54EFC1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="Score_Screen" ID="{31E61854-6401-4FE1-A7A7-50B5D8364E66}"/>
+								<ItemRef Name="chime_loop" ID="{CABF530A-932D-465F-87E2-F1E576436DAD}"/>
+							</Playlist>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Ambient" ID="{6B9423AD-2866-4255-B103-3BE51B93F51E}" ShortID="864442174">

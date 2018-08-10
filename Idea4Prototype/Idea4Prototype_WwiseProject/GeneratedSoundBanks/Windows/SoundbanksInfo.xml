@@ -572,13 +572,23 @@
 			<Path>UI.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise" MaxAttenuation="100.000000"/>
+				<Event Id="4114166951" Name="cheese_bite" ObjectPath="\Events\Default Work Unit\UI\cheese_bite"/>
 				<Event Id="2579544659" Name="click_back" ObjectPath="\Events\Default Work Unit\UI\click_back"/>
 				<Event Id="2102833423" Name="click_negative" ObjectPath="\Events\Default Work Unit\UI\click_negative"/>
 				<Event Id="1769629947" Name="click_positive" ObjectPath="\Events\Default Work Unit\UI\click_positive"/>
 				<Event Id="3780343222" Name="click_select" ObjectPath="\Events\Default Work Unit\UI\click_select"/>
 				<Event Id="3753593413" Name="hover" ObjectPath="\Events\Default Work Unit\UI\hover"/>
+				<Event Id="2398231425" Name="score" ObjectPath="\Events\Default Work Unit\UI\score"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="42039383" Language="SFX">
+					<ShortName>cheese_bite_8.wav</ShortName>
+					<Path>SFX\cheese_bite_8_F22F9815.wem</Path>
+				</File>
+				<File Id="89126927" Language="SFX">
+					<ShortName>cheese_bite_11.wav</ShortName>
+					<Path>SFX\cheese_bite_11_88178784.wem</Path>
+				</File>
 				<File Id="151713546" Language="SFX">
 					<ShortName>Bubble_Float_5.wav</ShortName>
 					<Path>SFX\Bubble_Float_5_CD7B6D06.wem</Path>
@@ -587,21 +597,69 @@
 					<ShortName>Bubble_Float_4.wav</ShortName>
 					<Path>SFX\Bubble_Float_4_9AE5D73E.wem</Path>
 				</File>
+				<File Id="167211880" Language="SFX">
+					<ShortName>cheese_bite_5.wav</ShortName>
+					<Path>SFX\cheese_bite_5_978B7DEE.wem</Path>
+				</File>
+				<File Id="169018464" Language="SFX">
+					<ShortName>Score_Screen.wav</ShortName>
+					<Path>SFX\Score_Screen_B875E3D9.wem</Path>
+				</File>
+				<File Id="234015627" Language="SFX">
+					<ShortName>cheese_bite_4.wav</ShortName>
+					<Path>SFX\cheese_bite_4_E4768F90.wem</Path>
+				</File>
+				<File Id="238234776" Language="SFX">
+					<ShortName>cheese_bite_9.wav</ShortName>
+					<Path>SFX\cheese_bite_9_7C86B823.wem</Path>
+				</File>
 				<File Id="293947927" Language="SFX">
 					<ShortName>Bubble_Pop.wav</ShortName>
 					<Path>SFX\Bubble_Pop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="321799262" Language="SFX">
+					<ShortName>cheese_bite_7.wav</ShortName>
+					<Path>SFX\cheese_bite_7_901B7F0C.wem</Path>
 				</File>
 				<File Id="345745065" Language="SFX">
 					<ShortName>UI_Hover.wav</ShortName>
 					<Path>SFX\UI_Hover_1C9C67B2.wem</Path>
 				</File>
+				<File Id="423334410" Language="SFX">
+					<ShortName>cheese_bite_2.wav</ShortName>
+					<Path>SFX\cheese_bite_2_13A7F666.wem</Path>
+				</File>
+				<File Id="586344811" Language="SFX">
+					<ShortName>chime_loop.wav</ShortName>
+					<Path>SFX\chime_loop_F17FB28C.wem</Path>
+				</File>
+				<File Id="727977580" Language="SFX">
+					<ShortName>cheese_bite_1.wav</ShortName>
+					<Path>SFX\cheese_bite_1_98726924.wem</Path>
+				</File>
+				<File Id="739280317" Language="SFX">
+					<ShortName>cheese_bite_3.wav</ShortName>
+					<Path>SFX\cheese_bite_3_21CDDAC4.wem</Path>
+				</File>
 				<File Id="740204625" Language="SFX">
 					<ShortName>Bubble_Float_1.wav</ShortName>
 					<Path>SFX\Bubble_Float_1_08F606ED.wem</Path>
 				</File>
+				<File Id="763357575" Language="SFX">
+					<ShortName>cheese_bite_10.wav</ShortName>
+					<Path>SFX\cheese_bite_10_D04953C1.wem</Path>
+				</File>
+				<File Id="792717471" Language="SFX">
+					<ShortName>cheese_bite_12.wav</ShortName>
+					<Path>SFX\cheese_bite_12_6B889D6C.wem</Path>
+				</File>
 				<File Id="870128884" Language="SFX">
 					<ShortName>UI_Select.wav</ShortName>
 					<Path>SFX\UI_Select_1C9C67B2.wem</Path>
+				</File>
+				<File Id="944621794" Language="SFX">
+					<ShortName>cheese_bite_6.wav</ShortName>
+					<Path>SFX\cheese_bite_6_1EE72E73.wem</Path>
 				</File>
 				<File Id="962637296" Language="SFX">
 					<ShortName>Bubble_Float_2.wav</ShortName>
@@ -687,6 +745,7 @@
 				<Event Id="4202621657" Name="push_object" ObjectPath="\Events\Default Work Unit\push_object" MaxAttenuation="100.000000"/>
 				<Event Id="1928594291" Name="weight_drop" ObjectPath="\Events\Default Work Unit\weight_drop" MaxAttenuation="100.000000"/>
 				<Event Id="1503347734" Name="weight_drop_trigger" ObjectPath="\Events\Default Work Unit\Triggers\weight_drop_trigger" MaxAttenuation="0.000000"/>
+				<Event Id="2522016532" Name="weight_plank" ObjectPath="\Events\Default Work Unit\weight_plank" MaxAttenuation="100.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="76802143" Language="SFX">
@@ -764,6 +823,10 @@
 				<File Id="819532865" Language="SFX">
 					<ShortName>Wood_Impact_Light_5.wav</ShortName>
 					<Path>SFX\Wood_Impact_Light_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="821463885" Language="SFX">
+					<ShortName>Weight hit's plank.wav</ShortName>
+					<Path>SFX\Weight hit's plank_1C9C67B2.wem</Path>
 				</File>
 				<File Id="832918321" Language="SFX">
 					<ShortName>Impact_Can_Very_Light.wav</ShortName>

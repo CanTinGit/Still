@@ -233,6 +233,34 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="cheese_bite" ID="{0B3F7A83-1686-4093-BAA2-9A0B7E2BC61A}">
+							<ChildrenList>
+								<Action Name="" ID="{8DC8055E-D713-42AE-8268-C3E90E633EBD}" ShortID="211774128">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cheese_bites" ID="{96B9C278-5534-4509-9ABB-DD8E864FB320}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="score" ID="{A8E36647-CC9F-4992-BFA9-0BB8FFD581C4}">
+							<ChildrenList>
+								<Action Name="" ID="{7C9FDD37-C444-4685-A7AE-6CDB506DD711}" ShortID="503258168">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Score" ID="{FC2986F7-1BED-49EB-85D4-E592F0D3A30C}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" ShortID="618037974">
@@ -970,6 +998,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="WeightDrop" ID="{0F66497B-6152-4E95-8A67-F2B3025D4BD6}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="weight_plank" ID="{3347F62E-43A0-4C29-B6D3-10959D30E570}">
+					<ChildrenList>
+						<Action Name="" ID="{46E7349A-0856-4BD3-B6EE-3DA85CD187E8}" ShortID="708168148">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Weight hit's plank" ID="{47CDD3CB-D113-48AD-A9B1-DBFF26370792}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
