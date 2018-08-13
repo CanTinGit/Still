@@ -252,7 +252,7 @@ public class PickUpUpdated : MonoBehaviour
                         {
                             Debug.Log("ButtonDown!");
                             //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
-                            if (picked != null&&holdingPickUp == true && picked.tag == "Pickup")
+                            if (picked != null && holdingPickUp == true && picked.tag == "Pickup")
                             {
                                 //Turn throw arc on
                                 Debug.Log("Active!");
@@ -276,6 +276,11 @@ public class PickUpUpdated : MonoBehaviour
                                     currentVelocity = maxVelocity;
                                 }
                                 throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, 10);
+
+                                if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
+                                {
+                                    gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("ThrowStart", true);
+                                }
                             }
                         }
                         //If the throw key is realsed
@@ -289,6 +294,8 @@ public class PickUpUpdated : MonoBehaviour
                                 if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
                                 {
                                     gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("PickUp", false);
+                                    gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("ThrowStart", false);
+                                    gameObject.transform.parent.gameObject.GetComponent<Animator>().SetTrigger("ThrowRelease");
                                 }
                                 //picked.GetComponent<gravityBody>().SetPicked(false);
                                 AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(this.gameObject.transform.parent.GetComponent<MovementUpdated>().PlayerNum));
@@ -422,7 +429,7 @@ public class PickUpUpdated : MonoBehaviour
                 //change color to the players color when over the object
                 if (highlightedObject < 1)
                 {
-                    picked.GetComponent<MeshRenderer>().material.color = playerColor;
+                    //picked.GetComponent<MeshRenderer>().material.color = playerColor;
                     highlightedObject++;
                 }
             }              
@@ -463,7 +470,7 @@ public class PickUpUpdated : MonoBehaviour
                 {
                     return;
                 }
-                col.GetComponent<MeshRenderer>().material.color = col.GetComponent<PickupInfo>().ReturnOriginalColor();
+               // col.GetComponent<MeshRenderer>().material.color = col.GetComponent<PickupInfo>().ReturnOriginalColor();
                 highlightedObject--;
             }
         }

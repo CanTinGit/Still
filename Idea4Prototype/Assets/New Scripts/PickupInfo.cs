@@ -5,12 +5,18 @@ using UnityEngine;
 public class PickupInfo : MonoBehaviour
 {
     GameObject holder;
+    GameObject spawnerManager;
     Color originalColor;
     public GameObject onTopOff;
     public bool canAutoSnap = false;
     public bool grounded = false;
+    public bool isOnPlatform;
     void Start()
     {
+        if (GameObject.Find("SpawnerManager").gameObject.GetComponent<Spawner2>() != null)
+        {
+            spawnerManager = GameObject.Find("SpawnerManager");
+        }
         holder = null;
         originalColor = this.GetComponent<MeshRenderer>().material.color;
     }
@@ -54,6 +60,10 @@ public class PickupInfo : MonoBehaviour
         }
         if (col.transform.tag == "Ground")
         {
+            if (isOnPlatform)
+            {
+                gameObject.GetComponent<Rigidbody>().mass = 10;
+            }
             //Vector3 directionTowardsGrounds = -transform.up;
             //float angle = Vector3.Angle(directionTowardsGrounds, Vector3.down);
             //Debug.Log(angle);
@@ -118,5 +128,13 @@ public class PickupInfo : MonoBehaviour
     void DestroyObject()
     {
         Destroy(this.gameObject);
+    }
+
+    void OnDestroy()
+    {
+        if (spawnerManager != null)
+        {
+            spawnerManager.GetComponent<Spawner2>().num_objects--;
+        }
     }
 }

@@ -9,6 +9,7 @@ public class PauseScript : MonoBehaviour
 {
     bool active,flipped;
     public GameObject PausePanel;                   // Pause panel to be displayed/hidden
+    public GameObject GameWonPanel;
     GameObject eventSystem;                      // Reference to the evennt system to allow for controller focus
 	// Use this for initialization
 	void Start ()
@@ -24,32 +25,35 @@ public class PauseScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Start" + this.transform.name.Remove(0, 6)))                    // If the start button has been pressed
         {
-            if (MenuScript.Instance.pausePlayerNum == 0)
+            if (GameWonPanel.activeSelf == false)
             {
-                Pause();
-            }
-            else
-            {
-                if (int.Parse(this.transform.name.Remove(0, 6)) == MenuScript.Instance.pausePlayerNum)
+                if (MenuScript.Instance.pausePlayerNum == 0)
                 {
-                    UnPause();
+                    Pause();
+                }
+                else
+                {
+                    if (int.Parse(this.transform.name.Remove(0, 6)) == MenuScript.Instance.pausePlayerNum)
+                    {
+                        UnPause();
+                    }
+                }
+
+                //if(PausePanel.activeSelf==false)
+                //{
+                //    PausePanelOn();
+                //    flipped = true;
+                //}
+                //else if(PausePanel.activeSelf==true)
+                //{
+                //    PausePanelOff();
+                //}
+                //FlipPausePanel();                               // Turn on or off the pause screen panel
+                if (PausePanel.gameObject.activeSelf == true)    // If the pause screen panel is visible, i.e. the player has paused the game
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ResetButton"));  // Focus the event system on the pause screen buttons so the user can navigate it via controller
                 }
             }
-            //if(PausePanel.activeSelf==false)
-            //{
-            //    PausePanelOn();
-            //    flipped = true;
-            //}
-            //else if(PausePanel.activeSelf==true)
-            //{
-            //    PausePanelOff();
-            //}
-            //FlipPausePanel();                               // Turn on or off the pause screen panel
-            if (PausePanel.gameObject.activeSelf == true)    // If the pause screen panel is visible, i.e. the player has paused the game
-            {
-                eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ResetButton"));  // Focus the event system on the pause screen buttons so the user can navigate it via controller
-            }
-
         }
 		
         //else if(Input.GetButtonDown("Start" + this.transform.name.Remove(0, 6)) && flipped == true)
@@ -93,5 +97,9 @@ public class PauseScript : MonoBehaviour
         FlipPausePanel();
         MenuScript.Instance.SetPlayerPaused(false);
         MenuScript.Instance.pausePlayerNum = 0;
+    }
+    public GameObject GetPausePanel()
+    {
+        return PausePanel;
     }
 }

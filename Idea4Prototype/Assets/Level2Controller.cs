@@ -8,6 +8,7 @@ public class Level2Controller : MonoBehaviour {
     Transform Point1,Point2,Point3,Camera1,Camera2,Camera3;
 	void Start ()
     {
+        //to stop the music of level 1
         Point1 = GameObject.Find("Point1").transform;
         Point2 = GameObject.Find("Point2").transform;
         Point3 = GameObject.Find("Point3").transform;

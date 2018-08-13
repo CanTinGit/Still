@@ -349,7 +349,7 @@ public class MenuScript : MonoBehaviour
             //    button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(-1, button.transform.parent.GetChild(0).GetComponent<Text>()));
             //    break;
             case "Level 1 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level 1 designer v3"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level 1 Final Ian Light Pass needed")); //level 1 designer v3
                 break;
             case "Level 2 Button":
                 button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_2"));

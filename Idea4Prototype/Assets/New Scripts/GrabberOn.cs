@@ -10,7 +10,7 @@ public class GrabberOn : MonoBehaviour {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < players.Length; i++)
         {
-            players[i].GetComponent<Animator>().SetBool("is Moving", false);
+            players[i].GetComponent<Animator>().SetBool("isMoving", false);
             players[i].GetComponent<MovementUpdated>().isMoving = false;
             players[i].GetComponent<MovementUpdated>().enabled = false;
             //if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)

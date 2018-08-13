@@ -175,4 +175,18 @@ public class ScoreSystem : MonoBehaviour {
         }
         return sprite;
     }
+
+    public void LevelSkippedScore()
+    {
+        
+        if(checkpointTime.Count > 0)
+        {
+                for (int index = 0; index < checkpointTime.Count; index++)
+                {
+                    Debug.Log(checkpointTime[index]);
+                    checkpointTime.RemoveAt(index);
+                    checkpointTime.Insert(index, 0.0f);
+                }
+        }
+    }
 }

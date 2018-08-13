@@ -18,7 +18,7 @@ public class ButtonScript : MonoBehaviour {
         }
         else if (isResetButton)
         {
-            gameObject.GetComponent<Button>().onClick.AddListener(() => MenuScript.Instance.ResetLevel());
+            gameObject.GetComponent<Button>().onClick.AddListener(() => ResetLevel());//MenuScript.Instance.ResetLevel());
         }
         else if (isGoToNextLevelButton)
         {
@@ -34,21 +34,54 @@ public class ButtonScript : MonoBehaviour {
         }
         else if (isResumeButton)
         {
-            gameObject.GetComponent<Button>().onClick.AddListener(() => pause.UnPause());
+            gameObject.GetComponent<Button>().onClick.AddListener(() => Unpause());//pause.UnPause());
         }
     }
 
     void Update()
     {
-        if (GameObject.Find("Player1") != null || GameObject.Find("Player2") != null || GameObject.Find("Player3") != null || GameObject.Find("Player4") != null)
+        //if(GameObject.Find("PausePanel"))
+        //{
+        //    if(updatePause == true)
+        //    {
+        //        if (GameObject.Find("Player1") != null || GameObject.Find("Player2") != null || GameObject.Find("Player3") != null || GameObject.Find("Player4") != null)
+        //        {
+        //            Debug.Log(pause);
+        //            pause = GameObject.Find("Player" + MenuScript.Instance.pausePlayerNum).GetComponent<PauseScript>();
+        //        }
+        //    }
+        //}
+    }
+
+    void Unpause()
+    {
+        GetPause();
+        pause.UnPause();
+    }
+
+    PauseScript GetPause()
+    {
+        if (GameObject.Find("PausePanel"))
         {
-            pause = GameObject.Find("Player" + MenuScript.Instance.pausePlayerNum).GetComponent<PauseScript>();
+            if (GameObject.Find("Player1") != null || GameObject.Find("Player2") != null || GameObject.Find("Player3") != null || GameObject.Find("Player4") != null)
+            {
+                Debug.Log(pause);
+                pause = GameObject.Find("Player" + MenuScript.Instance.pausePlayerNum).GetComponent<PauseScript>();
+                return pause;
+            }            
         }
+        //failed if returns null
+        return null;
+    }
+    void ResetLevel()
+    {
+        MenuScript.Instance.ResetLevel();
     }
     void SetRatingOnBack()
     {
-        GameObject.FindWithTag("Timer").GetComponent<Timer>().SetTimer(0, 0, 0, 0);
-        MenuScript.Instance.FadeToNextLevel(pausePanel);
+        //GameObject.FindWithTag("Timer").GetComponent<Timer>().SetTimer(0, 0, 0, 0);
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>().LevelSkippedScore();
+        MenuScript.Instance.FadeToNextLevel(GetPause().GetPausePanel());
     }
     void HelpUI()
     {

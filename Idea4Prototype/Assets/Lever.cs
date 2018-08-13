@@ -15,7 +15,7 @@ public class Lever : MonoBehaviour {
     {
         if (!isLevel2)
         {
-            lever.SetTrigger("LeverOn");
+            lever.SetTrigger("Level1Lever");
             animator.SetTrigger(animatorVariable);
             this.tag = "Untagged";
         }

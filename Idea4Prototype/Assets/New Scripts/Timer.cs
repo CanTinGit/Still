@@ -94,7 +94,13 @@ public class Timer : MonoBehaviour {
         tenSeconds = tSecs;
         unitSeconds = uSecs;
     }
-
+    public void AddTimer(int tMins, int uMins, int tSecs, int uSecs)
+    {
+        tenMins += tMins;
+        unitMins += uMins;
+        tenSeconds += tSecs;
+        unitSeconds += uSecs;
+    }
     public float GetTimeInSeconds()
     {
         float checkpointTime = (tenMins * 600) + (unitMins * 60) + (tenSeconds * 10) + (unitSeconds);

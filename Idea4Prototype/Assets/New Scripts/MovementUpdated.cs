@@ -14,45 +14,55 @@ public class MovementUpdated : MonoBehaviour {
     Vector3 startPos;
     Vector3 movement;
     //the values for player movements
-    public float jumpSpeed = 8.0f;
+    public float jumpSpeed = 70.0f;
     public float moveSpeed;
     public float TurnSpeed = 10.0f;
     float moveHorizontal = 0.0f;
     float moveVertical = 0.0f;
     public bool isInBubble;
     public bool isMoving;
+    public bool isRunning;
     GameObject pausePanel;
     public PhysicMaterial jumpingMaterial;
     public PhysicMaterial originalMaterial;
     public float runSpeed;
 
     Vector3 forward;
+    public float fallMultiplier;
+    public float lowJumpMultiplier;
     // Use this for initialization
-    void Awake()
-    {
-        //pausePanel = GameObject.Find("PausePanel");
-    }
+    //void Awake()
+    //{
+    //    //pausePanel = GameObject.Find("PausePanel");
+    //}
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         startPos = transform.position;
         playerKeys = MenuScript.Instance.GetPlayerKeys();
-        jumpSpeed = playerKeys[PlayerNum-1].GetJumpPower();
+        //jumpSpeed = playerKeys[PlayerNum-1].GetJumpPower();
         //moveSpeed = playerKeys[PlayerNum-1].GetMoveSpeed();
         TurnSpeed = playerKeys[PlayerNum-1].GetTurnSpeed();
         isInBubble = false;
+        isRunning = false;
         CalculateDirection();
         originalMaterial = gameObject.GetComponent<CapsuleCollider>().material;
-        Debug.Log(gameObject.GetComponent<CapsuleCollider>().material.name);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
         if (MenuScript.Instance.gamePaused==false)
         {
             ControllerMovement();
+            if (rigidbody.velocity.y < 0)
+            {
+                rigidbody.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime; //2.5
+            }
+            else if (rigidbody.velocity.y > 0)
+            {
+                rigidbody.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime; //2
+            }
             ////movement controls for player - (S and W keys move forwards and back) & ( A and D keys rotate the player left and right)
             //if (PlayerNum == 1)
             //{
@@ -166,6 +176,7 @@ public class MovementUpdated : MonoBehaviour {
                 //rigidbody.velocity = new Vector3(movement.x, rigidbody.velocity.y, movement.z);
                 transform.Translate(movement * runSpeed * Time.deltaTime, Space.World);
                 gameObject.GetComponent<Animator>().SetFloat("Speed", runSpeed);
+                isRunning = true;
 
             }
             else
@@ -174,6 +185,7 @@ public class MovementUpdated : MonoBehaviour {
                 //rigidbody.velocity = new Vector3(movement.x,rigidbody.velocity.y,movement.z);
                 transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
                 gameObject.GetComponent<Animator>().SetFloat("Speed", 0.0f);
+                isRunning = false;
             }
         }
 
@@ -274,6 +286,11 @@ public class MovementUpdated : MonoBehaviour {
     {
         if (col.gameObject.tag == "Ground")
         {
+            if(GameObject.FindGameObjectWithTag("CameraObject"))
+            {
+                //if()
+            }
+            Debug.Log("velocity is " + rigidbody.velocity);
             rigidbody.velocity = Vector3.zero;
             gameObject.GetComponent<CapsuleCollider>().material = originalMaterial;
             
@@ -386,5 +403,10 @@ public class MovementUpdated : MonoBehaviour {
     public void SetGround(bool ground_)
     {
         grounded = ground_;
+    }
+
+    public bool GetRunning()
+    {
+        return isRunning;
     }
 }

@@ -33,14 +33,12 @@ public class ControllerSelect : MonoBehaviour {
     Sprite selectedControlSprite;                         // Sprite for when a player has joined 
     Sprite deselectedControlSprite;                       // Sprite for when no player is selected
     Sprite Select, UnSelect;
-    public Material selectedPlayerMat;                    // Material for selected player
+    Material selectedPlayerMat;                    // Material for selected player
     public Material deselectedPlayerMat;                  // Material for de-selected player
     public bool isSelected;                               // Boolean to check if sprite should change
     public bool isInGame,controllerPressed;               // Boolean to check if the player has pressed play on select screen, i.e they are going to be playing
     PlayerKeys[] playerKeys;                              // Input key bindings
     public GameObject playerMesh;
-    public GameObject playerMesh1, playerMesh2, playerMesh3, playerMesh4, playerMesh5, playerMesh6, playerMesh7, playerMesh8, playerMesh9, playerMesh10, playerMesh11,   // Reference to player meshs'
-                      playerMesh12, playerMesh13, playerMesh14, playerMesh15, playerMesh16, playerMesh17, playerMesh18, playerMesh19, playerMesh20, playerMesh21, playerMesh22;
     public float DelayReturnInput,FramePerSeconds;
     int playerNum;                                        // The number of the player this script is responsible for
     Flags[] flags;                                        // Array of the different flag choices
@@ -108,64 +106,47 @@ public class ControllerSelect : MonoBehaviour {
                             Choice = 4;                                         // set choice to the upper limit
                         }
                     }
-                    if (Choice != 0)
+                    if (Choice == 1)
                     {
                         isSelected = true;
-                        playerMesh1.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;               // Change the player mesh's materials to the selected material
-                        playerMesh2.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh3.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh4.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh5.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh6.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh7.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh8.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh9.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh10.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh11.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh12.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh13.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh14.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh15.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh16.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh17.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh18.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh19.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh20.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh21.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
-                        playerMesh22.GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
 
+                        selectedPlayerMat = Resources.Load<Material>("PlayerMaterials/PlayerUK");
                         this.GetComponent<Image>().sprite = selectedControlSprite;
                         this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = true;       // Enable select UI message, as the player CAN select this character
                     }
-                    else
+                    else if(Choice == 2)
+                    {
+                        isSelected = true;
+
+                        selectedPlayerMat = Resources.Load<Material>("PlayerMaterials/PlayerIndia");
+                        this.GetComponent<Image>().sprite = selectedControlSprite;
+                        this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = true;       // Enable select UI message, as the player CAN select this character
+                    }
+                    else if (Choice == 3)
+                    {
+                        isSelected = true;
+
+                        selectedPlayerMat = Resources.Load<Material>("PlayerMaterials/PlayerUSA");
+                        this.GetComponent<Image>().sprite = selectedControlSprite;
+                        this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = true;       // Enable select UI message, as the player CAN select this character
+                    }
+                    else if (Choice == 4)
+                    {
+                        isSelected = true;
+
+                        selectedPlayerMat = Resources.Load<Material>("PlayerMaterials/PlayerChina");
+                        this.GetComponent<Image>().sprite = selectedControlSprite;
+                        this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = true;       // Enable select UI message, as the player CAN select this character
+                    }
+                    else if(Choice == 0)
                     {
                         isSelected = false;
-                        playerMesh1.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;             // Set the material for each mesh for this player to the deslected, see-through material, signifying nothing has been selected
-                        playerMesh2.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh3.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh4.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh5.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh6.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh7.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh8.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh9.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh10.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh11.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh12.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh13.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh14.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh15.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh16.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh17.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh18.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh19.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh20.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh21.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-                        playerMesh22.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
 
+                        selectedPlayerMat = deselectedPlayerMat;
                         this.GetComponent<Image>().sprite = deselectedControlSprite;                                // Changed controller sprite image to de-selected
                         this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = false;
                     }
+                    playerMesh.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
                     playerMesh.gameObject.transform.Find("CountryFlag").GetComponent<Image>().sprite = flags[Choice].GetSprite();
                     Invoke("DelayInputBack", DelayReturnInput);
                 }
@@ -254,29 +235,8 @@ public class ControllerSelect : MonoBehaviour {
         playerMesh.transform.Find("SelectArrows" + playerNum).GetComponent<Image>().enabled = true;
 
 
-        playerMesh1.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh2.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh3.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh4.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh5.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh6.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh7.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh8.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh9.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh10.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh11.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh12.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh13.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh14.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh15.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh16.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh17.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh18.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh19.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh20.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh21.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-        playerMesh22.GetComponent<SkinnedMeshRenderer>().material = deselectedPlayerMat;
-
+        selectedPlayerMat = deselectedPlayerMat;
+        playerMesh.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
         this.GetComponent<Image>().sprite = deselectedControlSprite;
     }
     void CheckControllersConnected()

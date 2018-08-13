@@ -14,6 +14,13 @@ public class SpawnObjectButton : MonoBehaviour {
     GameObject spawnerManager;      // Reference to the spawner manager
     public bool isForMetalSphere;
     public bool canDispense;
+
+    public bool blinkingLights;
+    public GameObject blinkButton;
+    public float lowEmissiveStrength, highEmissiveStrength;
+    bool blinkHigh = true;
+    float blinkEmissiveStrength = 0;
+    public float blinkRateIncease;
     // Use this for initialization, set the button and original position of button
     void Start()
     {
@@ -23,7 +30,34 @@ public class SpawnObjectButton : MonoBehaviour {
     }
 
 
-
+    void LateUpdate()
+    {
+        if (blinkingLights)
+        {
+            blinkButton.GetComponent<MeshRenderer>().material.SetFloat("_Emissive_Strength", blinkEmissiveStrength);
+            if (blinkHigh)
+            {
+                Debug.Log("increase blink");
+                blinkEmissiveStrength += blinkRateIncease;
+            }
+            else
+            {
+                Debug.Log("decrease blink");
+                blinkEmissiveStrength -= blinkRateIncease;
+            }
+            if (blinkEmissiveStrength >= highEmissiveStrength || blinkEmissiveStrength <= lowEmissiveStrength)
+            {
+                Debug.Log("switched before " + blinkingLights);
+                blinkHigh = !blinkHigh;
+                Debug.Log("switched after " + blinkingLights);
+            }
+            Debug.Log("the blinkEmissiveStrength " + blinkEmissiveStrength);
+        }
+        //    //int type = 1;
+        //    //float value;
+        //    //AkSoundEngine.GetRTPCValue("noise_detection", gameObject, 0, out value, ref type);
+        //    //noise = value;
+    }
 
     //Check if something enter the trigger
     void OnTriggerEnter(Collider other)
