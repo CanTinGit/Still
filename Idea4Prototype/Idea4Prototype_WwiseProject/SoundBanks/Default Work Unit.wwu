@@ -72,6 +72,13 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="CharacterSelectMusic" ID="{A8EC0D49-894D-434A-A223-DD8E70E3CF8C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="CharacterSelect" ID="{BAF89FE9-3FFE-43B6-8BFA-30351AE42C37}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

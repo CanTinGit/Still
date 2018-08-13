@@ -1002,6 +1002,44 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="CharacterSelect" ID="{BAF89FE9-3FFE-43B6-8BFA-30351AE42C37}" ShortID="659063649">
+							<ChildrenList>
+								<Event Name="play_character_select_music" ID="{94CAD47E-6A52-4ABF-8284-C23D560E2F7D}">
+									<ChildrenList>
+										<Action Name="" ID="{7D13625D-7B6F-4F57-A91E-50E7B54611D0}" ShortID="574816382">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="3"/>
+											</PropertyList>
+											<ReferenceList/>
+										</Action>
+										<Action Name="" ID="{4DE46489-FB5E-4257-BDD0-FA73D71D6747}" ShortID="3060669">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="CharacterSelect" ID="{9F152655-4DAA-4BDB-8EEA-8B960CDB5E0B}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="stop_character_select_music" ID="{0AC685DC-DDE8-4478-9575-9A94EE62A863}">
+									<ChildrenList>
+										<Action Name="" ID="{3704BC2D-F3E6-48BB-96DA-6F4C82BD2A9A}" ShortID="695332041">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="CharacterSelect" ID="{9F152655-4DAA-4BDB-8EEA-8B960CDB5E0B}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Event Name="weight_drop" ID="{4765EB92-AAE9-493A-A8A4-A64BE1355DD3}">

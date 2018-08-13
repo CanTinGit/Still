@@ -73,6 +73,21 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="464352935" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\CharacterSelectMusic</ObjectPath>
+			<ShortName>CharacterSelectMusic</ShortName>
+			<Path>CharacterSelectMusic.bnk</Path>
+			<IncludedEvents>
+				<Event Id="259450622" Name="play_character_select_music" ObjectPath="\Events\Default Work Unit\MusicEvents\CharacterSelect\play_character_select_music"/>
+				<Event Id="2646576964" Name="stop_character_select_music" ObjectPath="\Events\Default Work Unit\MusicEvents\CharacterSelect\stop_character_select_music" MaxAttenuation="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="911699215" Language="SFX">
+					<ShortName>character_selection_loop_1.wav</ShortName>
+					<Path>SFX\character_selection_loop_1_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1069431850" Language="English(US)">
 			<ObjectPath>\SoundBanks\Default Work Unit\Player</ObjectPath>
 			<ShortName>Player</ShortName>
@@ -584,11 +599,11 @@
 			<IncludedMemoryFiles>
 				<File Id="42039383" Language="SFX">
 					<ShortName>cheese_bite_8.wav</ShortName>
-					<Path>SFX\cheese_bite_8_F22F9815.wem</Path>
+					<Path>SFX\cheese_bite_8_892941E4.wem</Path>
 				</File>
 				<File Id="89126927" Language="SFX">
 					<ShortName>cheese_bite_11.wav</ShortName>
-					<Path>SFX\cheese_bite_11_88178784.wem</Path>
+					<Path>SFX\cheese_bite_11_C7DD09C2.wem</Path>
 				</File>
 				<File Id="151713546" Language="SFX">
 					<ShortName>Bubble_Float_5.wav</ShortName>
@@ -600,19 +615,19 @@
 				</File>
 				<File Id="167211880" Language="SFX">
 					<ShortName>cheese_bite_5.wav</ShortName>
-					<Path>SFX\cheese_bite_5_978B7DEE.wem</Path>
+					<Path>SFX\cheese_bite_5_34964047.wem</Path>
 				</File>
 				<File Id="169018464" Language="SFX">
 					<ShortName>Score_Screen.wav</ShortName>
-					<Path>SFX\Score_Screen_B875E3D9.wem</Path>
+					<Path>SFX\Score_Screen_E45E9AAF.wem</Path>
 				</File>
 				<File Id="234015627" Language="SFX">
 					<ShortName>cheese_bite_4.wav</ShortName>
-					<Path>SFX\cheese_bite_4_E4768F90.wem</Path>
+					<Path>SFX\cheese_bite_4_CC17F2FC.wem</Path>
 				</File>
 				<File Id="238234776" Language="SFX">
 					<ShortName>cheese_bite_9.wav</ShortName>
-					<Path>SFX\cheese_bite_9_7C86B823.wem</Path>
+					<Path>SFX\cheese_bite_9_FAE1B1AC.wem</Path>
 				</File>
 				<File Id="293947927" Language="SFX">
 					<ShortName>Bubble_Pop.wav</ShortName>
@@ -620,7 +635,7 @@
 				</File>
 				<File Id="321799262" Language="SFX">
 					<ShortName>cheese_bite_7.wav</ShortName>
-					<Path>SFX\cheese_bite_7_901B7F0C.wem</Path>
+					<Path>SFX\cheese_bite_7_7387AEA0.wem</Path>
 				</File>
 				<File Id="345745065" Language="SFX">
 					<ShortName>UI_Hover.wav</ShortName>
@@ -628,7 +643,7 @@
 				</File>
 				<File Id="423334410" Language="SFX">
 					<ShortName>cheese_bite_2.wav</ShortName>
-					<Path>SFX\cheese_bite_2_13A7F666.wem</Path>
+					<Path>SFX\cheese_bite_2_024E9C6E.wem</Path>
 				</File>
 				<File Id="586344811" Language="SFX">
 					<ShortName>chime_loop.wav</ShortName>
@@ -636,11 +651,11 @@
 				</File>
 				<File Id="727977580" Language="SFX">
 					<ShortName>cheese_bite_1.wav</ShortName>
-					<Path>SFX\cheese_bite_1_98726924.wem</Path>
+					<Path>SFX\cheese_bite_1_2A453821.wem</Path>
 				</File>
 				<File Id="739280317" Language="SFX">
 					<ShortName>cheese_bite_3.wav</ShortName>
-					<Path>SFX\cheese_bite_3_21CDDAC4.wem</Path>
+					<Path>SFX\cheese_bite_3_5AC5653C.wem</Path>
 				</File>
 				<File Id="740204625" Language="SFX">
 					<ShortName>Bubble_Float_1.wav</ShortName>
@@ -648,11 +663,11 @@
 				</File>
 				<File Id="763357575" Language="SFX">
 					<ShortName>cheese_bite_10.wav</ShortName>
-					<Path>SFX\cheese_bite_10_D04953C1.wem</Path>
+					<Path>SFX\cheese_bite_10_7902A759.wem</Path>
 				</File>
 				<File Id="792717471" Language="SFX">
 					<ShortName>cheese_bite_12.wav</ShortName>
-					<Path>SFX\cheese_bite_12_6B889D6C.wem</Path>
+					<Path>SFX\cheese_bite_12_8728F8CB.wem</Path>
 				</File>
 				<File Id="870128884" Language="SFX">
 					<ShortName>UI_Select.wav</ShortName>
@@ -660,7 +675,7 @@
 				</File>
 				<File Id="944621794" Language="SFX">
 					<ShortName>cheese_bite_6.wav</ShortName>
-					<Path>SFX\cheese_bite_6_1EE72E73.wem</Path>
+					<Path>SFX\cheese_bite_6_8085C301.wem</Path>
 				</File>
 				<File Id="962637296" Language="SFX">
 					<ShortName>Bubble_Float_2.wav</ShortName>
