@@ -746,6 +746,7 @@
 			<ShortName>Test</ShortName>
 			<Path>English(US)\Test.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3850141293" Name="box_click" ObjectPath="\Events\Default Work Unit\box_click"/>
 				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click" MaxAttenuation="100.000000"/>
 				<Event Id="3454382244" Name="button_trigger" ObjectPath="\Events\Default Work Unit\Triggers\button_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup" MaxAttenuation="100.000000"/>
@@ -783,6 +784,10 @@
 				<File Id="199767411" Language="SFX">
 					<ShortName>Impact_Can_Light.wav</ShortName>
 					<Path>SFX\Impact_Can_Light_1C9C67B2.wem</Path>
+				</File>
+				<File Id="209955788" Language="SFX">
+					<ShortName>box_click.wav</ShortName>
+					<Path>SFX\box_click_1C9C67B2.wem</Path>
 				</File>
 				<File Id="217250399" Language="SFX">
 					<ShortName>fx_slip_loop.wav</ShortName>

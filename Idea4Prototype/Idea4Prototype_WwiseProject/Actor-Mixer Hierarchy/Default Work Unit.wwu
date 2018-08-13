@@ -7482,6 +7482,25 @@
 								<ItemRef Name="chime_loop" ID="{CABF530A-932D-465F-87E2-F1E576436DAD}"/>
 							</Playlist>
 						</RandomSequenceContainer>
+						<Sound Name="box_click" ID="{343BABFB-5FD3-4A01-BFCF-5E7124F2DD92}" ShortID="381643268">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="box_click" ID="{9F708B7F-DA41-40B6-A63D-75E0DEA87A1F}" ShortID="209955788">
+									<Language>SFX</Language>
+									<AudioFile>box_click.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="box_click" ID="{9F708B7F-DA41-40B6-A63D-75E0DEA87A1F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Ambient" ID="{6B9423AD-2866-4255-B103-3BE51B93F51E}" ShortID="864442174">

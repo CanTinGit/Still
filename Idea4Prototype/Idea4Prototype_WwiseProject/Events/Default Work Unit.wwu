@@ -1070,6 +1070,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="box_click" ID="{8001031D-1BC7-4F46-8886-AC7F1A44B28B}">
+					<ChildrenList>
+						<Action Name="" ID="{0EAF9E7B-BD88-49FE-9009-C03600FEA8DA}" ShortID="517678257">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="box_click" ID="{343BABFB-5FD3-4A01-BFCF-5E7124F2DD92}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
