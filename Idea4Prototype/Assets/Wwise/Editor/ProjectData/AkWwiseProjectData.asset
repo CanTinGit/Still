@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 523291023
-    m_lastTimePart2: -1999242945
+    m_lastTimePsrt1: -929370067
+    m_lastTimePart2: -1999240929
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -30,7 +30,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -42,7 +42,17 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 100
+      maxAttenuation: 0
+    - Name: button_buzz
+      Path: Default Work Unit\button_buzz
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_buzz
+        ObjectType: 3
+      ID: 255911779
+      Guid: f64880ad78d59c4ebae0efdd00d873d2
+      maxAttenuation: 0
     - Name: button_click
       Path: Default Work Unit\button_click
       PathAndIcons:
@@ -52,7 +62,19 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
-      maxAttenuation: 100
+      maxAttenuation: 0
+    - Name: button_trigger
+      Path: Default Work Unit\Triggers\button_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: button_trigger
+        ObjectType: 3
+      ID: -840585052
+      Guid: 74b7539d5cb5a446b29a0d564cc569bb
+      maxAttenuation: 0
     - Name: camera_trigger
       Path: Default Work Unit\Camera\camera_trigger
       PathAndIcons:
@@ -64,7 +86,19 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 100
+      maxAttenuation: 0
+    - Name: cheese_bite
+      Path: Default Work Unit\UI\cheese_bite
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: cheese_bite
+        ObjectType: 3
+      ID: -180800345
+      Guid: 837a3f0b86169340baa29a0b7e2bc61a
+      maxAttenuation: 0
     - Name: click_back
       Path: Default Work Unit\UI\click_back
       PathAndIcons:
@@ -124,7 +158,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -136,7 +170,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -161,11 +195,35 @@ MonoBehaviour:
       ID: -1144550677
       Guid: 8aaa78ca444aa946bc8e839589b392eb
       maxAttenuation: 0
-    - Name: game_start
-      Path: Default Work Unit\Opening\game_start
+    - Name: electricity
+      Path: Default Work Unit\electricity
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: electricity
+        ObjectType: 3
+      ID: -1377845400
+      Guid: c21f8a9a2abff1429d8fdb5fea24d996
+      maxAttenuation: 0
+    - Name: electricity_trigger
+      Path: Default Work Unit\Triggers\electricity_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: electricity_trigger
+        ObjectType: 3
+      ID: 1568560881
+      Guid: 838636d025c4e148ac9fa7d3d7bc5387
+      maxAttenuation: 0
+    - Name: game_start
+      Path: Default Work Unit\MusicEvents\Opening\game_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
       - ElementName: Opening
         ObjectType: 4
       - ElementName: game_start
@@ -206,12 +264,50 @@ MonoBehaviour:
         ObjectType: 3
       ID: 538597049
       Guid: ac62c32a5eb5c843827b7269bfa7b694
-      maxAttenuation: 100
-    - Name: play_intro
-      Path: Default Work Unit\Opening\play_intro
+      maxAttenuation: 0
+    - Name: object_slide
+      Path: Default Work Unit\object_slide
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: object_slide
+        ObjectType: 3
+      ID: -1314072818
+      Guid: 98fe6b1a5ef9834dbcdf3847ef604db5
+      maxAttenuation: 0
+    - Name: object_slide_trigger
+      Path: Default Work Unit\Triggers\object_slide_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: object_slide_trigger
+        ObjectType: 3
+      ID: 212497099
+      Guid: a20935b96c6649478efe3343402cc572
+      maxAttenuation: 0
+    - Name: play_character_select_music
+      Path: Default Work Unit\MusicEvents\CharacterSelect\play_character_select_music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: CharacterSelect
+        ObjectType: 4
+      - ElementName: play_character_select_music
+        ObjectType: 3
+      ID: 259450622
+      Guid: 7ed4ca94526abf4a8284c23d560e2f7d
+      maxAttenuation: 0
+    - Name: play_intro
+      Path: Default Work Unit\MusicEvents\Opening\play_intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
       - ElementName: Opening
         ObjectType: 4
       - ElementName: play_intro
@@ -220,10 +316,14 @@ MonoBehaviour:
       Guid: 0cadb8f96cf7ed4e995cb9b95c05341c
       maxAttenuation: 0
     - Name: play_level_music
-      Path: Default Work Unit\play_level_music
+      Path: Default Work Unit\MusicEvents\Level\play_level_music
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: Level
+        ObjectType: 4
       - ElementName: play_level_music
         ObjectType: 3
       ID: 557932600
@@ -301,6 +401,18 @@ MonoBehaviour:
       ID: -532829526
       Guid: 3b902838b8b01c4aba900eb0d9e3debc
       maxAttenuation: 0
+    - Name: player_push
+      Path: Default Work Unit\Triggers\player_push
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: player_push
+        ObjectType: 3
+      ID: -57221059
+      Guid: 1360a18c14c59d48b0e7c0201d72043f
+      maxAttenuation: 0
     - Name: player_shock
       Path: Default Work Unit\Player\player_shock
       PathAndIcons:
@@ -325,15 +437,67 @@ MonoBehaviour:
       ID: 65181031
       Guid: 9ddef41577381d44b9b7b31bb601332e
       maxAttenuation: 0
-    - Name: stop_level_music
-      Path: Default Work Unit\stop_level_music
+    - Name: push_object
+      Path: Default Work Unit\push_object
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: push_object
+        ObjectType: 3
+      ID: -92345639
+      Guid: 40a5b796e2b3ea4389ecb78bd86ccc83
+      maxAttenuation: 0
+    - Name: score
+      Path: Default Work Unit\UI\score
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: score
+        ObjectType: 3
+      ID: -1896735871
+      Guid: 4766e3a89fcc9249bfa90bb8ffd581c4
+      maxAttenuation: 0
+    - Name: stop_character_select_music
+      Path: Default Work Unit\MusicEvents\CharacterSelect\stop_character_select_music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: CharacterSelect
+        ObjectType: 4
+      - ElementName: stop_character_select_music
+        ObjectType: 3
+      ID: -1648390332
+      Guid: dc85c60ae8dd784495759a94ee62a863
+      maxAttenuation: 0
+    - Name: stop_level_music
+      Path: Default Work Unit\MusicEvents\Level\stop_level_music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: Level
+        ObjectType: 4
       - ElementName: stop_level_music
         ObjectType: 3
       ID: -239613958
       Guid: aefe9cb46cb3db44896057bdf4e93982
+      maxAttenuation: 0
+    - Name: stop_score
+      Path: Default Work Unit\UI\stop_score
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: stop_score
+        ObjectType: 3
+      ID: -2116744866
+      Guid: 7d91431d8d70d74483dcff6f49d93102
       maxAttenuation: 0
     - Name: tut_box
       Path: Default Work Unit\Tutorial\tut_box
@@ -527,12 +691,44 @@ MonoBehaviour:
       ID: -1287577198
       Guid: 7f9760bcf7dbba41b260a9f4cd5a3290
       maxAttenuation: 0
+    - Name: weight_drop
+      Path: Default Work Unit\weight_drop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: weight_drop
+        ObjectType: 3
+      ID: 1928594291
+      Guid: 92eb6547e9aa3a49a8a4a64be1355dd3
+      maxAttenuation: 0
+    - Name: weight_drop_trigger
+      Path: Default Work Unit\Triggers\weight_drop_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: weight_drop_trigger
+        ObjectType: 3
+      ID: 1503347734
+      Guid: 889eff085b03454e846f1fffb0d35ae8
+      maxAttenuation: 0
+    - Name: weight_plank
+      Path: Default Work Unit\weight_plank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: weight_plank
+        ObjectType: 3
+      ID: -1772950764
+      Guid: 2ef64733a043294cb6d310959d30e570
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: -792894945
-    m_lastTimePart2: -1999242963
+    m_lastTimePsrt1: 400562477
+    m_lastTimePart2: -1999242369
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -647,9 +843,30 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-    m_lastTimePsrt1: -789464945
-    m_lastTimePart2: -1999242963
+    m_lastTimePsrt1: -486523642
+    m_lastTimePart2: -1999242939
     List:
+    - Name: Buzz
+      Path: Default Work Unit\Buzz
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Buzz
+        ObjectType: 11
+      ID: 1545069278
+      Guid: 89a518f90e25194890d797b80c528022
+      values:
+      - Correct
+      - Incorrect
+      ValueIcons:
+      - ElementName: Correct
+        ObjectType: 10
+      - ElementName: Incorrect
+        ObjectType: 10
+      valueIDs: 0999f1f566cc0cdc
+      ValueGuids:
+      - bytes: cf66c6ebecd8e34fa6d02f421742c332
+      - bytes: adc0eb1ecee79048a3d071287999fabe
     - Name: Music_Transition
       Path: Default Work Unit\Music_Transition
       PathAndIcons:
@@ -679,8 +896,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: 672811023
-    m_lastTimePart2: -1999242945
+    m_lastTimePsrt1: -535799428
+    m_lastTimePart2: -1999240929
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -691,6 +908,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: 77978275
       Guid: 0df6c143a0b85747a81644149f3a4f85
+    - Name: CharacterSelectMusic
+      Path: Default Work Unit\CharacterSelectMusic
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CharacterSelectMusic
+        ObjectType: 7
+      ID: 464352935
+      Guid: 490deca84d894a43a223dd8e70e3cf8c
     - Name: Enemy
       Path: Default Work Unit\Enemy
       PathAndIcons:
@@ -788,14 +1014,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Idea4Prototype_WwiseProject
-  - /Idea4Prototype_WwiseProject/Events
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Ambient
   - /Idea4Prototype_WwiseProject/SoundBanks
   - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
-  - /Idea4Prototype_WwiseProject/Switches
-  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit
-  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit/Music_Transition
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
