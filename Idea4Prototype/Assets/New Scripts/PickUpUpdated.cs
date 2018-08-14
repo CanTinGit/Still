@@ -245,7 +245,7 @@ public class PickUpUpdated : MonoBehaviour
                 }
                 if(canThrow == true)
                 {
-                    if(picked!= null && picked.name == "PickupThrow")
+                    if(picked!= null && picked.name.Contains ("PickupThrow"))
                     {
                         //if the key pressed is the throw button
                         if (Input.GetButtonDown((throwKey.ToString())))

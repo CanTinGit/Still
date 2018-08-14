@@ -75,6 +75,7 @@ public class ButtonScript : MonoBehaviour {
     }
     void ResetLevel()
     {
+        AkSoundEngine.StopAll();
         MenuScript.Instance.ResetLevel();
     }
     void SetRatingOnBack()
