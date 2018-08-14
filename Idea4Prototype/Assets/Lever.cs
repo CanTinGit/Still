@@ -38,11 +38,10 @@ public class Lever : MonoBehaviour {
     public void VCon()
     {
         ParticleSystem air = GameObject.Find("AIRFan").GetComponent<ParticleSystem>();
-        ParticleSystem jumpair = GameObject.Find("JumpFan").GetComponent<ParticleSystem>();
+        
         HingeJoint hammer = GameObject.Find("Hammer").GetComponent<HingeJoint>();
         air.Play();
-        jumpair.Play();
-        jumpair.transform.Find("AirJumpZone").gameObject.SetActive(true);
+
         this.gameObject.tag = "Untagged";
         Invoke("Delay", 0.5f);
     }

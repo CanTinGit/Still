@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: -929370067
-    m_lastTimePart2: -1999240929
+    m_lastTimePsrt1: 922092759
+    m_lastTimePart2: -1999240919
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -328,6 +328,20 @@ MonoBehaviour:
         ObjectType: 3
       ID: 557932600
       Guid: c8d2d059ff3d13479c742e34c4ba95df
+      maxAttenuation: 0
+    - Name: play_music
+      Path: Default Work Unit\MusicEvents\intro\play_music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: intro
+        ObjectType: 4
+      - ElementName: play_music
+        ObjectType: 3
+      ID: -1362926625
+      Guid: 4bd32c46b8985c428e85c97b8d64059b
       maxAttenuation: 0
     - Name: player_accident
       Path: Default Work Unit\Player\player_accident
@@ -727,8 +741,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: 400562477
-    m_lastTimePart2: -1999242369
+    m_lastTimePsrt1: -2101908873
+    m_lastTimePart2: -1999240928
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -843,8 +857,8 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-    m_lastTimePsrt1: -486523642
-    m_lastTimePart2: -1999242939
+    m_lastTimePsrt1: 922122759
+    m_lastTimePart2: -1999240919
     List:
     - Name: Buzz
       Path: Default Work Unit\Buzz
@@ -867,6 +881,27 @@ MonoBehaviour:
       ValueGuids:
       - bytes: cf66c6ebecd8e34fa6d02f421742c332
       - bytes: adc0eb1ecee79048a3d071287999fabe
+    - Name: intro
+      Path: Default Work Unit\intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: intro
+        ObjectType: 11
+      ID: 1125500713
+      Guid: da91f7f5ff3cc44682aadc03d0101c1a
+      values:
+      - character_select
+      - splash
+      ValueIcons:
+      - ElementName: character_select
+        ObjectType: 10
+      - ElementName: splash
+        ObjectType: 10
+      valueIDs: 199c60c518fd8909
+      ValueGuids:
+      - bytes: c9fc7e36a25693408d342c711fa744f5
+      - bytes: fb3b27f9c82b074c9cababe680384ef2
     - Name: Music_Transition
       Path: Default Work Unit\Music_Transition
       PathAndIcons:
@@ -896,8 +931,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -535799428
-    m_lastTimePart2: -1999240929
+    m_lastTimePsrt1: 1171132759
+    m_lastTimePart2: -1999240919
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -1014,8 +1049,11 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Idea4Prototype_WwiseProject
-  - /Idea4Prototype_WwiseProject/SoundBanks
-  - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Events
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Crane
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/MusicEvents
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/MusicEvents/Level
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

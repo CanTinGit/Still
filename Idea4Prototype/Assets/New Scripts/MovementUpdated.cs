@@ -26,10 +26,14 @@ public class MovementUpdated : MonoBehaviour {
     public PhysicMaterial jumpingMaterial;
     public PhysicMaterial originalMaterial;
     public float runSpeed;
+    public float cameraTrigger;
+    public GameObject runSmoke;
 
     Vector3 forward;
     public float fallMultiplier;
     public float lowJumpMultiplier;
+
+    float velocity;
     // Use this for initialization
     //void Awake()
     //{
@@ -53,7 +57,7 @@ public class MovementUpdated : MonoBehaviour {
     void FixedUpdate()
     {
         if (MenuScript.Instance.gamePaused==false)
-        {
+        {           
             ControllerMovement();
             if (rigidbody.velocity.y < 0)
             {
@@ -62,6 +66,13 @@ public class MovementUpdated : MonoBehaviour {
             else if (rigidbody.velocity.y > 0)
             {
                 rigidbody.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime; //2
+            }
+
+            if(rigidbody.velocity.y < velocity)
+            {
+                Debug.Log("old velo == " + velocity);
+                velocity = rigidbody.velocity.y;
+                Debug.Log("new velo == " + velocity);
             }
             ////movement controls for player - (S and W keys move forwards and back) & ( A and D keys rotate the player left and right)
             //if (PlayerNum == 1)
@@ -151,6 +162,11 @@ public class MovementUpdated : MonoBehaviour {
 
         }
     }
+    public void ChangeVelocity(float velocity_)
+    {
+        velocity = velocity_;
+    }
+
     void ControllerMovement()
     {
         if (Input.GetAxis("Horizontal" + PlayerNum.ToString()) > 0.5f || Input.GetAxis("Horizontal" + PlayerNum.ToString()) < -0.5f)
@@ -177,6 +193,7 @@ public class MovementUpdated : MonoBehaviour {
                 transform.Translate(movement * runSpeed * Time.deltaTime, Space.World);
                 gameObject.GetComponent<Animator>().SetFloat("Speed", runSpeed);
                 isRunning = true;
+                runSmoke.SetActive(true);
 
             }
             else
@@ -186,6 +203,7 @@ public class MovementUpdated : MonoBehaviour {
                 transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
                 gameObject.GetComponent<Animator>().SetFloat("Speed", 0.0f);
                 isRunning = false;
+                runSmoke.SetActive(false);
             }
         }
 
@@ -288,9 +306,16 @@ public class MovementUpdated : MonoBehaviour {
         {
             if(GameObject.FindGameObjectWithTag("CameraObject"))
             {
-                //if()
+                if(velocity < cameraTrigger)
+                {
+                    Debug.Log("triggered");
+                    if (GameObject.FindGameObjectWithTag("AlertSpotlight") == null)
+                    {
+                        Instantiate(Resources.Load("Prefabs/NewCameraAI"));
+                    }
+                    velocity = 0;
+                }
             }
-            Debug.Log("velocity is " + rigidbody.velocity);
             rigidbody.velocity = Vector3.zero;
             gameObject.GetComponent<CapsuleCollider>().material = originalMaterial;
             
@@ -353,7 +378,19 @@ public class MovementUpdated : MonoBehaviour {
         if (col.gameObject.tag == "Ground")
         {
            gameObject.GetComponent<CapsuleCollider>().material = originalMaterial;
-            
+            if (GameObject.FindGameObjectWithTag("CameraObject"))
+            {
+                if (velocity < cameraTrigger)
+                {
+                    Debug.Log("triggered");
+                    if (GameObject.FindGameObjectWithTag("AlertSpotlight") == null)
+                    {
+                        Instantiate(Resources.Load("Prefabs/NewCameraAI"));
+                    }
+                    velocity = 0;
+                }
+            }
+
         }
     }
 

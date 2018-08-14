@@ -14,13 +14,13 @@ public class SpawnObjectButton : MonoBehaviour {
     GameObject spawnerManager;      // Reference to the spawner manager
     public bool isForMetalSphere;
     public bool canDispense;
-
-    public bool blinkingLights;
-    public GameObject blinkButton;
-    public float lowEmissiveStrength, highEmissiveStrength;
-    bool blinkHigh = true;
-    float blinkEmissiveStrength = 0;
-    public float blinkRateIncease;
+    //controls the blinking lights
+    public bool blinkingLights; //controls whether the lights will blink for the button or not
+    public GameObject blinkButton; //the button gameobject
+    public float lowEmissiveStrength, highEmissiveStrength; // the values ranges it will go between for emissive strength
+    bool blinkHigh = true; //a boolean to indicate if it will go to the upper limit or the lower limit ranges
+    float blinkEmissiveStrength = 0; //the value the emissive strength will be set to
+    public float blinkRateIncrease; //the rate it will change in emissive strength
     // Use this for initialization, set the button and original position of button
     void Start()
     {
@@ -29,29 +29,28 @@ public class SpawnObjectButton : MonoBehaviour {
         spawnerManager = GameObject.Find("SpawnerManager");
     }
 
-
+    //late update because it is only color change so do it on last frame of update
     void LateUpdate()
     {
+        //if the lights shoul blink then
         if (blinkingLights)
         {
+            //set the emissive strength to the new value
             blinkButton.GetComponent<MeshRenderer>().material.SetFloat("_Emissive_Strength", blinkEmissiveStrength);
+            //based on if we are going to the upper or lower limit add on the blinkRateIncrease
             if (blinkHigh)
             {
-                Debug.Log("increase blink");
-                blinkEmissiveStrength += blinkRateIncease;
+                blinkEmissiveStrength += blinkRateIncrease;
             }
             else
             {
-                Debug.Log("decrease blink");
-                blinkEmissiveStrength -= blinkRateIncease;
+                blinkEmissiveStrength -= blinkRateIncrease;
             }
+            //when we hit the upper limit or lower limit then change the boolean so we go to the other limit
             if (blinkEmissiveStrength >= highEmissiveStrength || blinkEmissiveStrength <= lowEmissiveStrength)
             {
-                Debug.Log("switched before " + blinkingLights);
                 blinkHigh = !blinkHigh;
-                Debug.Log("switched after " + blinkingLights);
             }
-            Debug.Log("the blinkEmissiveStrength " + blinkEmissiveStrength);
         }
         //    //int type = 1;
         //    //float value;
@@ -70,6 +69,7 @@ public class SpawnObjectButton : MonoBehaviour {
             {
                 // Button go down
                 button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
+                //play the button click sound
                 AkSoundEngine.PostEvent("button_click", gameObject);
                 // Spawn the object
                 // Not sure what this code is supposed to do, so commented it out for just now
@@ -94,6 +94,7 @@ public class SpawnObjectButton : MonoBehaviour {
             {
                 // Button go down
                 button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
+                //play the button click sound
                 AkSoundEngine.PostEvent("button_click", gameObject);
                 // Spawn the object
                 spawnerManager.GetComponent<Spawner>().Spawn();
@@ -101,23 +102,23 @@ public class SpawnObjectButton : MonoBehaviour {
         }
     }
 
-    //When the button is realsed
+    //When the button is released change the button to the original position
     void OnTriggerExit(Collider other)
     {
         button.position = originalPosition;
     }
-
-    //When the button is stayed on
+    
+    //When the button is stayed on then lower the button position
     void OnTriggerStay(Collider other)
     {
         button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
     }
-
+    //setter for canDispense
     public void SetCanDispense(bool canDispense_)
     {
         canDispense = canDispense_;
     }
-
+    //getter for canDispense
     public bool GetDispense()
     {
         return canDispense;

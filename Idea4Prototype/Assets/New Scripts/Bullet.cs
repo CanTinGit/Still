@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour {
     // If the bullet doesn't hit anything, then destroyed after deSpawnTime seconds
     void Start ()
     {
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>().SetTimesCameraTriggered(1);
         Invoke("DestroyBullet", deSpawnTime);
 	}
 	

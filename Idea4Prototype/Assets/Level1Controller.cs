@@ -17,7 +17,6 @@ public class Level1Controller : MonoBehaviour {
     {
         if (MenuScript.Instance.GetNumberofPlayers() > 1)
         {
-            Debug.Log("more than 1 player");
             cube.SetActive(false);
             moveBack = true;
             Lever.SetActive(true);

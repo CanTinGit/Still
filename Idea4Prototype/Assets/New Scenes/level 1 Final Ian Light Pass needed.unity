@@ -1114,7 +1114,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4486763685868544, guid: ce4e059ee39a32f468d88e34a10c6ba3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -31.62
+      value: -31.84
       objectReference: {fileID: 0}
     - target: {fileID: 4486763685868544, guid: ce4e059ee39a32f468d88e34a10c6ba3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1122,7 +1122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4486763685868544, guid: ce4e059ee39a32f468d88e34a10c6ba3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.09
+      value: 3.38
       objectReference: {fileID: 0}
     - target: {fileID: 4486763685868544, guid: ce4e059ee39a32f468d88e34a10c6ba3, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1149,39 +1149,23 @@ Prefab:
       propertyPath: PausePanel
       value: 
       objectReference: {fileID: 1003264665}
-    - target: {fileID: 137284286870681486, guid: ce4e059ee39a32f468d88e34a10c6ba3,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2c284e2a087321d4fb905e2afb8014cf, type: 2}
-    - target: {fileID: 1862473777311940, guid: ce4e059ee39a32f468d88e34a10c6ba3, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114085482485109766, guid: ce4e059ee39a32f468d88e34a10c6ba3,
-        type: 2}
-      propertyPath: fallMultiplier
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114085482485109766, guid: ce4e059ee39a32f468d88e34a10c6ba3,
-        type: 2}
-      propertyPath: lowJumpMultiplier
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114085482485109766, guid: ce4e059ee39a32f468d88e34a10c6ba3,
-        type: 2}
-      propertyPath: jumpSpeed
-      value: 70
-      objectReference: {fileID: 0}
     - target: {fileID: 114660588242275488, guid: ce4e059ee39a32f468d88e34a10c6ba3,
         type: 2}
       propertyPath: GameWonPanel
       value: 
       objectReference: {fileID: 735686143}
-    - target: {fileID: 114085482485109766, guid: ce4e059ee39a32f468d88e34a10c6ba3,
+    - target: {fileID: 1862473777311940, guid: ce4e059ee39a32f468d88e34a10c6ba3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126960559102816, guid: ce4e059ee39a32f468d88e34a10c6ba3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198885899014204666, guid: ce4e059ee39a32f468d88e34a10c6ba3,
         type: 2}
-      propertyPath: runSpeed
-      value: 7
+      propertyPath: randomSeed
+      value: 502080714
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce4e059ee39a32f468d88e34a10c6ba3, type: 2}
@@ -1654,7 +1638,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4271661533324524, guid: 67ed6eda25a9fe8469ff1821c6791833, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -32.47
+      value: -31.7
       objectReference: {fileID: 0}
     - target: {fileID: 4271661533324524, guid: 67ed6eda25a9fe8469ff1821c6791833, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1662,7 +1646,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4271661533324524, guid: 67ed6eda25a9fe8469ff1821c6791833, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -7.99
+      value: -3.5199995
       objectReference: {fileID: 0}
     - target: {fileID: 4271661533324524, guid: 67ed6eda25a9fe8469ff1821c6791833, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1689,40 +1673,11 @@ Prefab:
       propertyPath: PausePanel
       value: 
       objectReference: {fileID: 1003264665}
-    - target: {fileID: 137999525638148070, guid: 67ed6eda25a9fe8469ff1821c6791833,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 73356b6c29fa7914ea6b2bb913f00d90, type: 2}
-    - target: {fileID: 1207422267311356, guid: 67ed6eda25a9fe8469ff1821c6791833, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114114881806443846, guid: 67ed6eda25a9fe8469ff1821c6791833,
-        type: 2}
-      propertyPath: fallMultiplier
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114114881806443846, guid: 67ed6eda25a9fe8469ff1821c6791833,
-        type: 2}
-      propertyPath: lowJumpMultiplier
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114114881806443846, guid: 67ed6eda25a9fe8469ff1821c6791833,
-        type: 2}
-      propertyPath: jumpSpeed
-      value: 70
-      objectReference: {fileID: 0}
     - target: {fileID: 114025060787294506, guid: 67ed6eda25a9fe8469ff1821c6791833,
         type: 2}
       propertyPath: GameWonPanel
       value: 
       objectReference: {fileID: 735686143}
-    - target: {fileID: 114114881806443846, guid: 67ed6eda25a9fe8469ff1821c6791833,
-        type: 2}
-      propertyPath: runSpeed
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67ed6eda25a9fe8469ff1821c6791833, type: 2}
   m_IsPrefabParent: 0
@@ -2186,7 +2141,7 @@ MonoBehaviour:
   blinkButton: {fileID: 1692109852}
   lowEmissiveStrength: 0
   highEmissiveStrength: 1
-  blinkRateIncease: 0.05
+  blinkRateIncrease: 0
 --- !u!65 &357859470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2360,7 +2315,7 @@ MonoBehaviour:
   blinkButton: {fileID: 0}
   lowEmissiveStrength: 0
   highEmissiveStrength: 0
-  blinkRateIncease: 0
+  blinkRateIncrease: 0
 --- !u!65 &373738017
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2823,6 +2778,10 @@ Prefab:
     - target: {fileID: 100000, guid: 544952f1f910e7b47aee0dafcc2d2dda, type: 3}
       propertyPath: m_Name
       value: sm_curb (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 544952f1f910e7b47aee0dafcc2d2dda, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 544952f1f910e7b47aee0dafcc2d2dda, type: 3}
@@ -4854,7 +4813,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4523052512882474, guid: f3fca7aa8e31ce74495d6431f418b2bd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -32.64
+      value: -31.869999
       objectReference: {fileID: 0}
     - target: {fileID: 4523052512882474, guid: f3fca7aa8e31ce74495d6431f418b2bd, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4862,7 +4821,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4523052512882474, guid: f3fca7aa8e31ce74495d6431f418b2bd, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -3.5
+      value: 0.97000027
       objectReference: {fileID: 0}
     - target: {fileID: 4523052512882474, guid: f3fca7aa8e31ce74495d6431f418b2bd, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4889,40 +4848,11 @@ Prefab:
       propertyPath: PausePanel
       value: 
       objectReference: {fileID: 1003264665}
-    - target: {fileID: 137983939288950986, guid: f3fca7aa8e31ce74495d6431f418b2bd,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 68f6e3ae0e6c5ea4eaa246d6ce94d70f, type: 2}
-    - target: {fileID: 1648449860424682, guid: f3fca7aa8e31ce74495d6431f418b2bd, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114885699680485858, guid: f3fca7aa8e31ce74495d6431f418b2bd,
-        type: 2}
-      propertyPath: fallMultiplier
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114885699680485858, guid: f3fca7aa8e31ce74495d6431f418b2bd,
-        type: 2}
-      propertyPath: lowJumpMultiplier
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114885699680485858, guid: f3fca7aa8e31ce74495d6431f418b2bd,
-        type: 2}
-      propertyPath: jumpSpeed
-      value: 70
-      objectReference: {fileID: 0}
     - target: {fileID: 114138401857066504, guid: f3fca7aa8e31ce74495d6431f418b2bd,
         type: 2}
       propertyPath: GameWonPanel
       value: 
       objectReference: {fileID: 735686143}
-    - target: {fileID: 114885699680485858, guid: f3fca7aa8e31ce74495d6431f418b2bd,
-        type: 2}
-      propertyPath: runSpeed
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3fca7aa8e31ce74495d6431f418b2bd, type: 2}
   m_IsPrefabParent: 0
@@ -7022,8 +6952,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.950384, y: 1.9475267, z: 4.511485}
-  m_Center: {x: 0.06880561, y: 0.4737628, z: 1.7557425}
+  m_Size: {x: 2.013657, y: 1.9475267, z: 4.8207293}
+  m_Center: {x: 0.037168946, y: 0.4737628, z: 1.6011205}
 --- !u!1001 &1022073522
 Prefab:
   m_ObjectHideFlags: 0
@@ -7203,6 +7133,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76b54d1e98689234cb4e3595ff180ba6, type: 2}
+    - target: {fileID: 100000, guid: 544952f1f910e7b47aee0dafcc2d2dda, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 544952f1f910e7b47aee0dafcc2d2dda, type: 3}
   m_IsPrefabParent: 0
@@ -8809,7 +8743,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4066426427638036, guid: 7bb473b7e9c040940ace96406d4a2079, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -32.65
+      value: -31.880001
       objectReference: {fileID: 0}
     - target: {fileID: 4066426427638036, guid: 7bb473b7e9c040940ace96406d4a2079, type: 2}
       propertyPath: m_LocalPosition.y
@@ -8817,7 +8751,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4066426427638036, guid: 7bb473b7e9c040940ace96406d4a2079, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -5.87
+      value: -1.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 4066426427638036, guid: 7bb473b7e9c040940ace96406d4a2079, type: 2}
       propertyPath: m_LocalRotation.x
@@ -8844,40 +8778,11 @@ Prefab:
       propertyPath: PausePanel
       value: 
       objectReference: {fileID: 1003264665}
-    - target: {fileID: 137904026713403136, guid: 7bb473b7e9c040940ace96406d4a2079,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 756013c68ff176740a7642af5cb634c3, type: 2}
-    - target: {fileID: 1720292363369648, guid: 7bb473b7e9c040940ace96406d4a2079, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114135845558031692, guid: 7bb473b7e9c040940ace96406d4a2079,
-        type: 2}
-      propertyPath: fallMultiplier
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114135845558031692, guid: 7bb473b7e9c040940ace96406d4a2079,
-        type: 2}
-      propertyPath: lowJumpMultiplier
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114135845558031692, guid: 7bb473b7e9c040940ace96406d4a2079,
-        type: 2}
-      propertyPath: jumpSpeed
-      value: 70
-      objectReference: {fileID: 0}
     - target: {fileID: 114948296711850622, guid: 7bb473b7e9c040940ace96406d4a2079,
         type: 2}
       propertyPath: GameWonPanel
       value: 
       objectReference: {fileID: 735686143}
-    - target: {fileID: 114135845558031692, guid: 7bb473b7e9c040940ace96406d4a2079,
-        type: 2}
-      propertyPath: runSpeed
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7bb473b7e9c040940ace96406d4a2079, type: 2}
   m_IsPrefabParent: 0
@@ -12341,6 +12246,10 @@ Prefab:
       propertyPath: m_Name
       value: sm_curb (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 544952f1f910e7b47aee0dafcc2d2dda, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 544952f1f910e7b47aee0dafcc2d2dda, type: 3}
   m_IsPrefabParent: 0
@@ -13798,7 +13707,7 @@ MonoBehaviour:
   blinkButton: {fileID: 2053961001}
   lowEmissiveStrength: 0
   highEmissiveStrength: 1
-  blinkRateIncease: 0.05
+  blinkRateIncrease: 0
 --- !u!64 &2053961007
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14242,7 +14151,7 @@ MonoBehaviour:
   triggerCameraScore: 213
   highScoreBonus: 117
   cameraInLevel: 0
-  star: 0
+  cheese: 0
 --- !u!114 &2106034322
 MonoBehaviour:
   m_ObjectHideFlags: 0
