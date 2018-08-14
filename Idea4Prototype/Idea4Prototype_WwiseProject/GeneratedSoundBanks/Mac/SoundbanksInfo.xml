@@ -550,8 +550,8 @@
 			<ShortName>Level_Music</ShortName>
 			<Path>Level_Music.bnk</Path>
 			<IncludedEvents>
-				<Event Id="557932600" Name="play_level_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Level\play_level_music"/>
-				<Event Id="4055353338" Name="stop_level_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Level\stop_level_music" MaxAttenuation="0.000000"/>
+				<Event Id="557932600" Name="play_level_music" ObjectPath="\Events\Default Work Unit\play_level_music"/>
+				<Event Id="4055353338" Name="stop_level_music" ObjectPath="\Events\Default Work Unit\stop_level_music" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="13560483" Language="SFX">
@@ -704,8 +704,8 @@
 			<ShortName>Opening</ShortName>
 			<Path>Opening.bnk</Path>
 			<IncludedEvents>
-				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\MusicEvents\Opening\game_start"/>
-				<Event Id="3103472528" Name="play_intro" ObjectPath="\Events\Default Work Unit\MusicEvents\Opening\play_intro"/>
+				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\Opening\game_start"/>
+				<Event Id="3103472528" Name="play_intro" ObjectPath="\Events\Default Work Unit\Opening\play_intro"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="378082071" Language="SFX">
@@ -747,11 +747,11 @@
 			<Path>English(US)\Test.bnk</Path>
 			<IncludedEvents>
 				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click" MaxAttenuation="100.000000"/>
-				<Event Id="3454382244" Name="button_trigger" ObjectPath="\Events\Default Work Unit\Triggers\button_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup" MaxAttenuation="100.000000"/>
 				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release" MaxAttenuation="100.000000"/>
 				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup" MaxAttenuation="0.000000"/>
 				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release" MaxAttenuation="0.000000"/>
+<<<<<<< HEAD
 				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\electricity"/>
 				<Event Id="1568560881" Name="electricity_trigger" ObjectPath="\Events\Default Work Unit\Triggers\electricity_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact" MaxAttenuation="100.000000"/>
@@ -762,6 +762,9 @@
 				<Event Id="1928594291" Name="weight_drop" ObjectPath="\Events\Default Work Unit\weight_drop" MaxAttenuation="100.000000"/>
 				<Event Id="1503347734" Name="weight_drop_trigger" ObjectPath="\Events\Default Work Unit\Triggers\weight_drop_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="2522016532" Name="weight_plank" ObjectPath="\Events\Default Work Unit\weight_plank" MaxAttenuation="100.000000"/>
+=======
+				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact" MaxAttenuation="100.000000"/>
+>>>>>>> 14c3cd5a989e85bc16d302d0bab8250cb8e80e85
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="76802143" Language="SFX">
@@ -784,6 +787,7 @@
 					<ShortName>Impact_Can_Light.wav</ShortName>
 					<Path>SFX\Impact_Can_Light_1C9C67B2.wem</Path>
 				</File>
+<<<<<<< HEAD
 				<File Id="217250399" Language="SFX">
 					<ShortName>fx_slip_loop.wav</ShortName>
 					<Path>SFX\fx_slip_loop_1C9C67B2.wem</Path>
@@ -792,6 +796,8 @@
 					<ShortName>WeightDrop.wav</ShortName>
 					<Path>SFX\WeightDrop_1C9C67B2.wem</Path>
 				</File>
+=======
+>>>>>>> 14c3cd5a989e85bc16d302d0bab8250cb8e80e85
 				<File Id="263401526" Language="SFX">
 					<ShortName>Wood_Impact_Light_1.wav</ShortName>
 					<Path>SFX\Wood_Impact_Light_1_1C9C67B2.wem</Path>
@@ -799,10 +805,6 @@
 				<File Id="282957980" Language="SFX">
 					<ShortName>Wood_Impact_Medium_3.wav</ShortName>
 					<Path>SFX\Wood_Impact_Medium_3_1C9C67B2.wem</Path>
-				</File>
-				<File Id="290648010" Language="SFX">
-					<ShortName>fx_push_loop.wav</ShortName>
-					<Path>SFX\fx_push_loop_1C9C67B2.wem</Path>
 				</File>
 				<File Id="400306442" Language="SFX">
 					<ShortName>Impact_Can_Very_Light_2.wav</ShortName>

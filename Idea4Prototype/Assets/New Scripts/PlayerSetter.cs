@@ -114,7 +114,7 @@ public class PlayerSetter : MonoBehaviour {
         }
 
 
-        
+
     }
 
     void DelayMusicStart()

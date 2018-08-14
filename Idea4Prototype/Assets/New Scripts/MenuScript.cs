@@ -599,6 +599,7 @@ public class MenuScript : MonoBehaviour
     public void BackToMenu()
     {
         AkSoundEngine.PostEvent("click_back", gameObject);
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene("MainMenu");
         eventSystem = GameObject.Find("EventSystem");
         InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
@@ -635,6 +636,7 @@ public class MenuScript : MonoBehaviour
     // UI button to let player reset the level where they are
     public void ResetLevel()
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         ResetGameValues();
     }
@@ -695,6 +697,7 @@ public class MenuScript : MonoBehaviour
             maxLevel = SceneManager.GetActiveScene().buildIndex + 1;
             //Record the level in player data
             playerdata.setCurrentLevel(maxLevel);
+            AkSoundEngine.StopAll();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else
@@ -709,6 +712,7 @@ public class MenuScript : MonoBehaviour
         CancelInvoke("CheckToPlayHoverSound");
         AkSoundEngine.StopAll();
         eventSystem = null;
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(sceneName);
     }
     //flip the menu buttons to the opposite state

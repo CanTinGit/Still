@@ -69,6 +69,13 @@ public class PickupInfo : MonoBehaviour
             //Debug.Log(angle);
             grounded = true;
         }
+        if (gameObject.name.Contains("PickupThrow"))
+        {
+            if (col.transform.name.Contains("Main water"))
+            {
+                Destroy(this.gameObject, 3.0f);
+            }
+        }
         //else if(col.transform.name.Contains("Pickup") && col.transform.tag == "Pickup" && col.transform.GetComponent<PickupInfo>().GetGrounded()==true)
         //{
         //    Debug.Log("herekfafas");
