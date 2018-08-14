@@ -73,21 +73,6 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
-		<SoundBank Id="464352935" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\CharacterSelectMusic</ObjectPath>
-			<ShortName>CharacterSelectMusic</ShortName>
-			<Path>CharacterSelectMusic.bnk</Path>
-			<IncludedEvents>
-				<Event Id="259450622" Name="play_character_select_music" ObjectPath="\Events\Default Work Unit\MusicEvents\CharacterSelect\play_character_select_music"/>
-				<Event Id="2646576964" Name="stop_character_select_music" ObjectPath="\Events\Default Work Unit\MusicEvents\CharacterSelect\stop_character_select_music" MaxAttenuation="0.000000"/>
-			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="911699215" Language="SFX">
-					<ShortName>character_selection_loop_1.wav</ShortName>
-					<Path>SFX\character_selection_loop_1_F17FB28C.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
-		</SoundBank>
 		<SoundBank Id="1069431850" Language="English(US)">
 			<ObjectPath>\SoundBanks\Default Work Unit\Player</ObjectPath>
 			<ShortName>Player</ShortName>
@@ -715,6 +700,10 @@
 				<File Id="598821860" Language="SFX">
 					<ShortName>MoonisCheese_Loop.wav</ShortName>
 					<Path>SFX\MoonisCheese_Loop_F17FB28C.wem</Path>
+				</File>
+				<File Id="911699215" Language="SFX">
+					<ShortName>character_selection_loop_1.wav</ShortName>
+					<Path>SFX\character_selection_loop_1_F17FB28C.wem</Path>
 				</File>
 				<File Id="921084845" Language="SFX">
 					<ShortName>MoonisCheese_GameStart.wav</ShortName>
