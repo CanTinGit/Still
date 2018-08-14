@@ -16,9 +16,19 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: -929370067
-    m_lastTimePart2: -1999240929
+    m_lastTimePsrt1: 9258978
+    m_lastTimePart2: -1999240909
     List:
+    - Name: box_click
+      Path: Default Work Unit\box_click
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: box_click
+        ObjectType: 3
+      ID: -444826003
+      Guid: 1d030180c71b464f8886ac7f1a44b28b
+      maxAttenuation: 0
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
       PathAndIcons:
@@ -30,7 +40,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -42,7 +52,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: button_buzz
       Path: Default Work Unit\button_buzz
       PathAndIcons:
@@ -62,7 +72,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: button_trigger
       Path: Default Work Unit\Triggers\button_trigger
       PathAndIcons:
@@ -86,7 +96,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: cheese_bite
       Path: Default Work Unit\UI\cheese_bite
       PathAndIcons:
@@ -158,7 +168,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -170,7 +180,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -264,7 +274,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 538597049
       Guid: ac62c32a5eb5c843827b7269bfa7b694
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: object_slide
       Path: Default Work Unit\object_slide
       PathAndIcons:
@@ -274,7 +284,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1314072818
       Guid: 98fe6b1a5ef9834dbcdf3847ef604db5
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: object_slide_trigger
       Path: Default Work Unit\Triggers\object_slide_trigger
       PathAndIcons:
@@ -446,7 +456,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -92345639
       Guid: 40a5b796e2b3ea4389ecb78bd86ccc83
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: score
       Path: Default Work Unit\UI\score
       PathAndIcons:
@@ -700,7 +710,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1928594291
       Guid: 92eb6547e9aa3a49a8a4a64be1355dd3
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: weight_drop_trigger
       Path: Default Work Unit\Triggers\weight_drop_trigger
       PathAndIcons:
@@ -722,7 +732,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1772950764
       Guid: 2ef64733a043294cb6d310959d30e570
-      maxAttenuation: 0
+      maxAttenuation: 100
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -896,8 +906,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -535799428
-    m_lastTimePart2: -1999240929
+    m_lastTimePsrt1: 155394363
+    m_lastTimePart2: -1999240909
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
