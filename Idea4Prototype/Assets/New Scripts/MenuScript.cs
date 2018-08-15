@@ -297,6 +297,7 @@ public class MenuScript : MonoBehaviour
     //takes the button that is passed in and adds a listener to the correct function
     void FindButtonAddListener(GameObject button_)
     {
+        Debug.Log(button_.name);
         Button button = button_.GetComponent<Button>();
         switch (button.name)
         {

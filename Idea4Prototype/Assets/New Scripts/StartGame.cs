@@ -12,16 +12,16 @@ public class StartGame : MonoBehaviour {
         AkSoundEngine.StopAll();
         AkSoundEngine.SetSwitch("intro", "splash", gameObject);
         AkSoundEngine.PostEvent("play_music", gameObject);
-        if (GameObject.Find("GameManager") == null)
-        {
-            GameObject gm = new GameObject("GameManager");
-            gm.AddComponent<MenuScript>();
-            gm.tag = "GameManager";
-        }
-        else
-        {
-            GameObject.Find("GameManager").GetComponent<MenuScript>().IntialiseAndSetScene();
-        }
+        //if (GameObject.Find("GameManager") == null)
+        //{
+        //    GameObject gm = new GameObject("GameManager");
+        //    gm.AddComponent<MenuScript>();
+        //    gm.tag = "GameManager";
+        //}
+        //else
+        //{
+        //    GameObject.Find("GameManager").GetComponent<MenuScript>().IntialiseAndSetScene();
+        //}
         //Destroy(this.gameObject);
     }
 
