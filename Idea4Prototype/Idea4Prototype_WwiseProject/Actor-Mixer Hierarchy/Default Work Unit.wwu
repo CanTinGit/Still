@@ -3178,6 +3178,66 @@
 								<ActiveSource Name="Weight hit's plank" ID="{18387D86-D352-49CE-8CFD-6349D8775258}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="weight_woosh" ID="{CC1C130E-EABC-4F81-8D78-BAD9238EC016}" ShortID="183437779">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="weight_woosh" ID="{A5C5601C-E4F9-4FB6-A0DB-779B8F61E821}" ShortID="995945603">
+									<Language>SFX</Language>
+									<AudioFile>weight_woosh.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="weight_woosh" ID="{A5C5601C-E4F9-4FB6-A0DB-779B8F61E821}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="gate_1" ID="{01A9A4E7-D437-4896-AD92-0E33CE8B1025}" ShortID="736129445">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="gate_1" ID="{9095A0DB-3074-45C1-956D-CE9B3A30FD55}" ShortID="318844511">
+									<Language>SFX</Language>
+									<AudioFile>gate_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="gate_1" ID="{9095A0DB-3074-45C1-956D-CE9B3A30FD55}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="box_click" ID="{069ABDA1-B194-4135-8F63-23167DB42D22}" ShortID="809527884">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="box_click" ID="{401FC1B6-7FA6-485C-AC7C-A103131B7357}" ShortID="512432066">
+									<Language>SFX</Language>
+									<AudioFile>box_click.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="209955788"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="box_click" ID="{401FC1B6-7FA6-485C-AC7C-A103131B7357}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Voice" ID="{C85A6BD0-2130-4756-9A48-C60BB731FBA9}" ShortID="456055418">
@@ -8472,6 +8532,97 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="MoonisCheese_GameStart" ID="{09BB012D-0AD7-4732-BFEB-93C5A77B0CA7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="accept_4" ID="{580FFE4D-4CAF-4339-8AEA-5AB6C11C32D2}" ShortID="275042582">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="accept_4" ID="{6FFF3F35-F0E2-4B91-A05D-14DDCE04094A}" ShortID="56297018">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.682496702181634"/>
+										<Property Name="FadeOutShape" Type="int16" Value="6"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>accept_4.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="accept_4" ID="{6FFF3F35-F0E2-4B91-A05D-14DDCE04094A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="accept_3" ID="{885A9824-63BE-4DD1-A9A7-5193904D2E5F}" ShortID="806212950">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="accept_3" ID="{4A12865E-5AAE-4A2B-8642-9DBE4BD1B56C}" ShortID="1070330635">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.681355403348554"/>
+										<Property Name="FadeOutShape" Type="int16" Value="6"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>accept_3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="accept_3" ID="{4A12865E-5AAE-4A2B-8642-9DBE4BD1B56C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="accept_2" ID="{B051CA64-0364-404F-B270-34F29C6BA351}" ShortID="78157976">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="accept_2" ID="{523F6984-6F31-4B13-976A-6C858E3007A3}" ShortID="653655984">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.681355403348554"/>
+										<Property Name="FadeOutShape" Type="int16" Value="6"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>accept_2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="accept_2" ID="{523F6984-6F31-4B13-976A-6C858E3007A3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="accept_1" ID="{E8A3072B-E45E-4C35-BCA7-296BDC0AF9C1}" ShortID="90547754">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{C4707A74-7B07-4D8C-A739-F4660FD11D1F}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="accept_1" ID="{802F876F-BFA0-445B-BB4B-261F4A7F84E3}" ShortID="933883681">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.684779299847793"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>accept_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="accept_1" ID="{802F876F-BFA0-445B-BB4B-261F4A7F84E3}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

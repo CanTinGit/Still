@@ -571,6 +571,10 @@
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3716983416" Name="acceptance_1" ObjectPath="\Events\Default Work Unit\UI\acceptance_1"/>
+				<Event Id="3716983419" Name="acceptance_2" ObjectPath="\Events\Default Work Unit\UI\acceptance_2"/>
+				<Event Id="3716983418" Name="acceptance_3" ObjectPath="\Events\Default Work Unit\UI\acceptance_3"/>
+				<Event Id="3716983421" Name="acceptance_4" ObjectPath="\Events\Default Work Unit\UI\acceptance_4"/>
 				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise" MaxAttenuation="100.000000"/>
 				<Event Id="4114166951" Name="cheese_bite" ObjectPath="\Events\Default Work Unit\UI\cheese_bite"/>
 				<Event Id="2579544659" Name="click_back" ObjectPath="\Events\Default Work Unit\UI\click_back"/>
@@ -585,6 +589,10 @@
 				<File Id="42039383" Language="SFX">
 					<ShortName>cheese_bite_8.wav</ShortName>
 					<Path>SFX\cheese_bite_8_892941E4.wem</Path>
+				</File>
+				<File Id="56297018" Language="SFX">
+					<ShortName>accept_4.wav</ShortName>
+					<Path>SFX\accept_4_E0A55B02.wem</Path>
 				</File>
 				<File Id="89126927" Language="SFX">
 					<ShortName>cheese_bite_11.wav</ShortName>
@@ -634,6 +642,10 @@
 					<ShortName>chime_loop.wav</ShortName>
 					<Path>SFX\chime_loop_F17FB28C.wem</Path>
 				</File>
+				<File Id="653655984" Language="SFX">
+					<ShortName>accept_2.wav</ShortName>
+					<Path>SFX\accept_2_CEC97D6B.wem</Path>
+				</File>
 				<File Id="727977580" Language="SFX">
 					<ShortName>cheese_bite_1.wav</ShortName>
 					<Path>SFX\cheese_bite_1_2A453821.wem</Path>
@@ -658,6 +670,10 @@
 					<ShortName>UI_Select.wav</ShortName>
 					<Path>SFX\UI_Select_1C9C67B2.wem</Path>
 				</File>
+				<File Id="933883681" Language="SFX">
+					<ShortName>accept_1.wav</ShortName>
+					<Path>SFX\accept_1_2441F64A.wem</Path>
+				</File>
 				<File Id="944621794" Language="SFX">
 					<ShortName>cheese_bite_6.wav</ShortName>
 					<Path>SFX\cheese_bite_6_8085C301.wem</Path>
@@ -681,6 +697,10 @@
 				<File Id="1063403879" Language="SFX">
 					<ShortName>UI_Back.wav</ShortName>
 					<Path>SFX\UI_Back_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1070330635" Language="SFX">
+					<ShortName>accept_3.wav</ShortName>
+					<Path>SFX\accept_3_98CD96BA.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -743,7 +763,6 @@
 				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup" MaxAttenuation="0.000000"/>
 				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release" MaxAttenuation="0.000000"/>
 				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\electricity"/>
-				<Event Id="1568560881" Name="electricity_trigger" ObjectPath="\Events\Default Work Unit\Triggers\electricity_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact" MaxAttenuation="100.000000"/>
 				<Event Id="2980894478" Name="object_slide" ObjectPath="\Events\Default Work Unit\object_slide" MaxAttenuation="100.000000"/>
 				<Event Id="212497099" Name="object_slide_trigger" ObjectPath="\Events\Default Work Unit\Triggers\object_slide_trigger" MaxAttenuation="0.000000"/>

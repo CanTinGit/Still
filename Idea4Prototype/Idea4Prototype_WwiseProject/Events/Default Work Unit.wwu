@@ -276,6 +276,62 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="acceptance_1" ID="{E9D1EA5E-7A1D-41D1-B661-0E6EEBED1AAB}">
+							<ChildrenList>
+								<Action Name="" ID="{24515032-CEC7-4F3A-8146-C5CB36F3CEF0}" ShortID="659507838">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="accept_1" ID="{E8A3072B-E45E-4C35-BCA7-296BDC0AF9C1}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="acceptance_2" ID="{8C013CBC-58AD-477E-B5B5-FE5DEE80963C}">
+							<ChildrenList>
+								<Action Name="" ID="{60925900-973A-47C2-8DE9-2F5271DD4BC9}" ShortID="738524775">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="accept_2" ID="{B051CA64-0364-404F-B270-34F29C6BA351}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="acceptance_3" ID="{43F5CF9C-5B91-4096-9547-B26A021F48FC}">
+							<ChildrenList>
+								<Action Name="" ID="{78DE742C-9AF6-4492-98DD-095F5A23CAFA}" ShortID="641617191">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="accept_3" ID="{885A9824-63BE-4DD1-A9A7-5193904D2E5F}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="acceptance_4" ID="{7339E81E-41B7-48AA-90A2-9507C693E8B2}">
+							<ChildrenList>
+								<Action Name="" ID="{9DDD8961-BCF3-418B-A3B8-DB511520C78F}" ShortID="578045387">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="accept_4" ID="{580FFE4D-4CAF-4339-8AEA-5AB6C11C32D2}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" ShortID="618037974">
@@ -359,20 +415,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="weight_drop" ID="{4765EB92-AAE9-493A-A8A4-A64BE1355DD3}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="electricity_trigger" ID="{D0368683-C425-48E1-AC9F-A7D3D7BC5387}">
-							<ChildrenList>
-								<Action Name="" ID="{6FF7C9A4-878B-4B4F-A47C-37070590E98B}" ShortID="519441813">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="41"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="electricity" ID="{9A8A1FC2-BF2A-42F1-9D8F-DB5FEA24D996}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
