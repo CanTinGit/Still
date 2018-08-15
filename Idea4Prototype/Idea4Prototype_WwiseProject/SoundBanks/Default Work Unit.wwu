@@ -10,7 +10,10 @@
 						<ObjectRef Name="button_click" ID="{7A5D9E66-BC01-457E-AF86-C4B6CA633B51}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="crane_trigger_release" ID="{CA78AA8A-4A44-46A9-BC8E-839589B392EB}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="crane_pickup" ID="{4CD2CA6A-8BA5-48F5-97AF-A548D0693919}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="crane_trigger_pickup" ID="{3DB7BFCD-60E7-4CAD-806A-01D2C8C94CF9}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="weight_drop" ID="{4765EB92-AAE9-493A-A8A4-A64BE1355DD3}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="electricity" ID="{785360B3-C16A-499D-A27F-518E9B87E5E9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="object_slide" ID="{1A6BFE98-F95E-4D83-BCDF-3847EF604DB5}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="box_click" ID="{8001031D-1BC7-4F46-8886-AC7F1A44B28B}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
@@ -55,13 +58,6 @@
 				<SoundBank Name="Level_Music" ID="{190137D5-17CB-415C-A58A-ACCD1945F261}">
 					<ObjectInclusionList>
 						<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}" Filter="7" Origin="Manual"/>
-					</ObjectInclusionList>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
-				<SoundBank Name="Intro" ID="{086298FC-ECE3-4853-8DDC-E17CB004370C}">
-					<ObjectInclusionList>
-						<ObjectRef Name="intro" ID="{0F08F3BB-9C81-4C22-B445-80A0E901326E}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

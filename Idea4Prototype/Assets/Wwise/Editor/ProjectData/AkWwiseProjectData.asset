@@ -10,15 +10,25 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 915e4feee9c236c46b967faed71c4350, type: 3}
   m_Name: AkWwiseProjectData
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   CurrentPluginConfig: Release
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: -1819907642
-    m_lastTimePart2: -1999240559
+    m_lastTimePsrt1: 9258978
+    m_lastTimePart2: -1999240909
     List:
+    - Name: box_click
+      Path: Default Work Unit\box_click
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: box_click
+        ObjectType: 3
+      ID: -444826003
+      Guid: 1d030180c71b464f8886ac7f1a44b28b
+      maxAttenuation: 0
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
       PathAndIcons:
@@ -30,7 +40,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -42,7 +52,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: button_buzz
       Path: Default Work Unit\button_buzz
       PathAndIcons:
@@ -62,6 +72,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
+      maxAttenuation: 100
+    - Name: button_trigger
+      Path: Default Work Unit\Triggers\button_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: button_trigger
+        ObjectType: 3
+      ID: -840585052
+      Guid: 74b7539d5cb5a446b29a0d564cc569bb
       maxAttenuation: 0
     - Name: camera_trigger
       Path: Default Work Unit\Camera\camera_trigger
@@ -74,6 +96,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
+      maxAttenuation: 100
+    - Name: cheese_bite
+      Path: Default Work Unit\UI\cheese_bite
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: cheese_bite
+        ObjectType: 3
+      ID: -180800345
+      Guid: 837a3f0b86169340baa29a0b7e2bc61a
       maxAttenuation: 0
     - Name: click_back
       Path: Default Work Unit\UI\click_back
@@ -134,7 +168,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -146,7 +180,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -204,9 +238,31 @@ MonoBehaviour:
         ObjectType: 3
       ID: 538597049
       Guid: ac62c32a5eb5c843827b7269bfa7b694
+      maxAttenuation: 100
+    - Name: object_slide
+      Path: Default Work Unit\object_slide
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: object_slide
+        ObjectType: 3
+      ID: -1314072818
+      Guid: 98fe6b1a5ef9834dbcdf3847ef604db5
+      maxAttenuation: 100
+    - Name: object_slide_trigger
+      Path: Default Work Unit\Triggers\object_slide_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: object_slide_trigger
+        ObjectType: 3
+      ID: 212497099
+      Guid: a20935b96c6649478efe3343402cc572
       maxAttenuation: 0
-    - Name: play_level_music
-      Path: Default Work Unit\play_level_music
+    - Name: play_character_select_music
+      Path: Default Work Unit\MusicEvents\CharacterSelect\play_character_select_music
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -338,6 +394,42 @@ MonoBehaviour:
         ObjectType: 3
       ID: 65181031
       Guid: 9ddef41577381d44b9b7b31bb601332e
+      maxAttenuation: 0
+    - Name: push_object
+      Path: Default Work Unit\push_object
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: push_object
+        ObjectType: 3
+      ID: -92345639
+      Guid: 40a5b796e2b3ea4389ecb78bd86ccc83
+      maxAttenuation: 100
+    - Name: score
+      Path: Default Work Unit\UI\score
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: score
+        ObjectType: 3
+      ID: -1896735871
+      Guid: 4766e3a89fcc9249bfa90bb8ffd581c4
+      maxAttenuation: 0
+    - Name: stop_character_select_music
+      Path: Default Work Unit\MusicEvents\CharacterSelect\stop_character_select_music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: CharacterSelect
+        ObjectType: 4
+      - ElementName: stop_character_select_music
+        ObjectType: 3
+      ID: -1648390332
+      Guid: dc85c60ae8dd784495759a94ee62a863
       maxAttenuation: 0
     - Name: stop_level_music
       Path: Default Work Unit\stop_level_music
@@ -564,6 +656,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1928594291
       Guid: 92eb6547e9aa3a49a8a4a64be1355dd3
+      maxAttenuation: 100
+    - Name: weight_drop_trigger
+      Path: Default Work Unit\Triggers\weight_drop_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: weight_drop_trigger
+        ObjectType: 3
+      ID: 1503347734
+      Guid: 889eff085b03454e846f1fffb0d35ae8
       maxAttenuation: 0
     - Name: weight_plank
       Path: Default Work Unit\weight_plank
@@ -574,10 +678,10 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1772950764
       Guid: 2ef64733a043294cb6d310959d30e570
-      maxAttenuation: 0
+      maxAttenuation: 100
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
     m_lastTimePsrt1: 1395016854
     m_lastTimePart2: -1999240750
@@ -595,7 +699,7 @@ MonoBehaviour:
       Guid: adc8318d689e2a4a957c4972f96d2159
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
     m_lastTimePsrt1: -872730249
     m_lastTimePart2: -1999240909
@@ -693,7 +797,7 @@ MonoBehaviour:
       - bytes: 6f8d8c338f2d6a41904da3df5a7e1088
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
     m_lastTimePsrt1: -162702282
     m_lastTimePart2: -1999240710
@@ -767,10 +871,10 @@ MonoBehaviour:
       - bytes: 8c2b472eea035340baa837930875ca73
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -100227642
-    m_lastTimePart2: -1999240559
+    m_lastTimePsrt1: 155394363
+    m_lastTimePart2: -1999240909
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -846,7 +950,7 @@ MonoBehaviour:
       Guid: 98b28065969f0d46b5ebcd8a6202e0c3
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
     m_lastTimePsrt1: -893620249
     m_lastTimePart2: -1999240909
@@ -871,7 +975,7 @@ MonoBehaviour:
       Guid: 7507387b65f64947a801fd310080bd1b
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath:
     Guid: '{423FF0F4-4C2C-49B0-BB98-500C1D5DAA9E}'
     m_lastTimePsrt1: -872720249
     m_lastTimePart2: -1999240909

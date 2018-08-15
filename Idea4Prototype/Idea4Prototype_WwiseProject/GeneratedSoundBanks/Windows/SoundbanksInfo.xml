@@ -555,7 +555,12 @@
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise"/>
+				<Event Id="3716983416" Name="acceptance_1" ObjectPath="\Events\Default Work Unit\UI\acceptance_1"/>
+				<Event Id="3716983419" Name="acceptance_2" ObjectPath="\Events\Default Work Unit\UI\acceptance_2"/>
+				<Event Id="3716983418" Name="acceptance_3" ObjectPath="\Events\Default Work Unit\UI\acceptance_3"/>
+				<Event Id="3716983421" Name="acceptance_4" ObjectPath="\Events\Default Work Unit\UI\acceptance_4"/>
+				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise" MaxAttenuation="100.000000"/>
+				<Event Id="4114166951" Name="cheese_bite" ObjectPath="\Events\Default Work Unit\UI\cheese_bite"/>
 				<Event Id="2579544659" Name="click_back" ObjectPath="\Events\Default Work Unit\UI\click_back"/>
 				<Event Id="2102833423" Name="click_negative" ObjectPath="\Events\Default Work Unit\UI\click_negative"/>
 				<Event Id="1769629947" Name="click_positive" ObjectPath="\Events\Default Work Unit\UI\click_positive"/>
@@ -563,6 +568,18 @@
 				<Event Id="3753593413" Name="hover" ObjectPath="\Events\Default Work Unit\UI\hover"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="42039383" Language="SFX">
+					<ShortName>cheese_bite_8.wav</ShortName>
+					<Path>SFX\cheese_bite_8_892941E4.wem</Path>
+				</File>
+				<File Id="56297018" Language="SFX">
+					<ShortName>accept_4.wav</ShortName>
+					<Path>SFX\accept_4_E0A55B02.wem</Path>
+				</File>
+				<File Id="89126927" Language="SFX">
+					<ShortName>cheese_bite_11.wav</ShortName>
+					<Path>SFX\cheese_bite_11_C7DD09C2.wem</Path>
+				</File>
 				<File Id="151713546" Language="SFX">
 					<ShortName>Bubble_Float_5.wav</ShortName>
 					<Path>SFX\Bubble_Float_5_CD7B6D06.wem</Path>
@@ -579,6 +596,26 @@
 					<ShortName>UI_Hover.wav</ShortName>
 					<Path>SFX\UI_Hover_1C9C67B2.wem</Path>
 				</File>
+				<File Id="423334410" Language="SFX">
+					<ShortName>cheese_bite_2.wav</ShortName>
+					<Path>SFX\cheese_bite_2_024E9C6E.wem</Path>
+				</File>
+				<File Id="586344811" Language="SFX">
+					<ShortName>chime_loop.wav</ShortName>
+					<Path>SFX\chime_loop_F17FB28C.wem</Path>
+				</File>
+				<File Id="653655984" Language="SFX">
+					<ShortName>accept_2.wav</ShortName>
+					<Path>SFX\accept_2_CEC97D6B.wem</Path>
+				</File>
+				<File Id="727977580" Language="SFX">
+					<ShortName>cheese_bite_1.wav</ShortName>
+					<Path>SFX\cheese_bite_1_2A453821.wem</Path>
+				</File>
+				<File Id="739280317" Language="SFX">
+					<ShortName>cheese_bite_3.wav</ShortName>
+					<Path>SFX\cheese_bite_3_5AC5653C.wem</Path>
+				</File>
 				<File Id="740204625" Language="SFX">
 					<ShortName>Bubble_Float_1.wav</ShortName>
 					<Path>SFX\Bubble_Float_1_08F606ED.wem</Path>
@@ -586,6 +623,14 @@
 				<File Id="870128884" Language="SFX">
 					<ShortName>UI_Select.wav</ShortName>
 					<Path>SFX\UI_Select_1C9C67B2.wem</Path>
+				</File>
+				<File Id="933883681" Language="SFX">
+					<ShortName>accept_1.wav</ShortName>
+					<Path>SFX\accept_1_2441F64A.wem</Path>
+				</File>
+				<File Id="944621794" Language="SFX">
+					<ShortName>cheese_bite_6.wav</ShortName>
+					<Path>SFX\cheese_bite_6_8085C301.wem</Path>
 				</File>
 				<File Id="962637296" Language="SFX">
 					<ShortName>Bubble_Float_2.wav</ShortName>
@@ -606,6 +651,37 @@
 				<File Id="1063403879" Language="SFX">
 					<ShortName>UI_Back.wav</ShortName>
 					<Path>SFX\UI_Back_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1070330635" Language="SFX">
+					<ShortName>accept_3.wav</ShortName>
+					<Path>SFX\accept_3_98CD96BA.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1831982039" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Opening</ObjectPath>
+			<ShortName>Opening</ShortName>
+			<Path>Opening.bnk</Path>
+			<IncludedEvents>
+				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\MusicEvents\Opening\game_start"/>
+				<Event Id="3103472528" Name="play_intro" ObjectPath="\Events\Default Work Unit\MusicEvents\Opening\play_intro"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="378082071" Language="SFX">
+					<ShortName>MoonisCheese_Intro.wav</ShortName>
+					<Path>SFX\MoonisCheese_Intro_F17FB28C.wem</Path>
+				</File>
+				<File Id="598821860" Language="SFX">
+					<ShortName>MoonisCheese_Loop.wav</ShortName>
+					<Path>SFX\MoonisCheese_Loop_F17FB28C.wem</Path>
+				</File>
+				<File Id="911699215" Language="SFX">
+					<ShortName>character_selection_loop_1.wav</ShortName>
+					<Path>SFX\character_selection_loop_1_F17FB28C.wem</Path>
+				</File>
+				<File Id="921084845" Language="SFX">
+					<ShortName>MoonisCheese_GameStart.wav</ShortName>
+					<Path>SFX\MoonisCheese_GameStart_A9919B5F.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -633,12 +709,22 @@
 			<ShortName>Test</ShortName>
 			<Path>English(US)\Test.bnk</Path>
 			<IncludedEvents>
-				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click"/>
-				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup"/>
-				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release"/>
-				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup"/>
-				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release"/>
-				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact"/>
+				<Event Id="3850141293" Name="box_click" ObjectPath="\Events\Default Work Unit\box_click"/>
+				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click" MaxAttenuation="100.000000"/>
+				<Event Id="3454382244" Name="button_trigger" ObjectPath="\Events\Default Work Unit\Triggers\button_trigger" MaxAttenuation="0.000000"/>
+				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup" MaxAttenuation="100.000000"/>
+				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release" MaxAttenuation="100.000000"/>
+				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup" MaxAttenuation="0.000000"/>
+				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release" MaxAttenuation="0.000000"/>
+				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\electricity"/>
+				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact" MaxAttenuation="100.000000"/>
+				<Event Id="2980894478" Name="object_slide" ObjectPath="\Events\Default Work Unit\object_slide" MaxAttenuation="100.000000"/>
+				<Event Id="212497099" Name="object_slide_trigger" ObjectPath="\Events\Default Work Unit\Triggers\object_slide_trigger" MaxAttenuation="0.000000"/>
+				<Event Id="4237746237" Name="player_push" ObjectPath="\Events\Default Work Unit\Triggers\player_push" MaxAttenuation="0.000000"/>
+				<Event Id="4202621657" Name="push_object" ObjectPath="\Events\Default Work Unit\push_object" MaxAttenuation="100.000000"/>
+				<Event Id="1928594291" Name="weight_drop" ObjectPath="\Events\Default Work Unit\weight_drop" MaxAttenuation="100.000000"/>
+				<Event Id="1503347734" Name="weight_drop_trigger" ObjectPath="\Events\Default Work Unit\Triggers\weight_drop_trigger" MaxAttenuation="0.000000"/>
+				<Event Id="2522016532" Name="weight_plank" ObjectPath="\Events\Default Work Unit\weight_plank" MaxAttenuation="100.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="76802143" Language="SFX">
@@ -660,6 +746,18 @@
 				<File Id="199767411" Language="SFX">
 					<ShortName>Impact_Can_Light.wav</ShortName>
 					<Path>SFX\Impact_Can_Light_1C9C67B2.wem</Path>
+				</File>
+				<File Id="209955788" Language="SFX">
+					<ShortName>box_click.wav</ShortName>
+					<Path>SFX\box_click_1C9C67B2.wem</Path>
+				</File>
+				<File Id="217250399" Language="SFX">
+					<ShortName>fx_slip_loop.wav</ShortName>
+					<Path>SFX\fx_slip_loop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="241725416" Language="SFX">
+					<ShortName>WeightDrop.wav</ShortName>
+					<Path>SFX\WeightDrop_1C9C67B2.wem</Path>
 				</File>
 				<File Id="263401526" Language="SFX">
 					<ShortName>Wood_Impact_Light_1.wav</ShortName>

@@ -268,6 +268,105 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="cheese_bite" ID="{0B3F7A83-1686-4093-BAA2-9A0B7E2BC61A}">
+							<ChildrenList>
+								<Action Name="" ID="{8DC8055E-D713-42AE-8268-C3E90E633EBD}" ShortID="211774128">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cheese_bites" ID="{96B9C278-5534-4509-9ABB-DD8E864FB320}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="score" ID="{A8E36647-CC9F-4992-BFA9-0BB8FFD581C4}">
+							<ChildrenList>
+								<Action Name="" ID="{7C9FDD37-C444-4685-A7AE-6CDB506DD711}" ShortID="503258168">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Score" ID="{FC2986F7-1BED-49EB-85D4-E592F0D3A30C}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stop_score" ID="{1D43917D-708D-44D7-83DC-FF6F49D93102}">
+							<ChildrenList>
+								<Action Name="" ID="{D5B294A3-2467-4946-BE63-B49649219FB3}" ShortID="1049250496">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Score" ID="{FC2986F7-1BED-49EB-85D4-E592F0D3A30C}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="acceptance_1" ID="{E9D1EA5E-7A1D-41D1-B661-0E6EEBED1AAB}">
+							<ChildrenList>
+								<Action Name="" ID="{24515032-CEC7-4F3A-8146-C5CB36F3CEF0}" ShortID="659507838">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="accept_1" ID="{E8A3072B-E45E-4C35-BCA7-296BDC0AF9C1}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="acceptance_2" ID="{8C013CBC-58AD-477E-B5B5-FE5DEE80963C}">
+							<ChildrenList>
+								<Action Name="" ID="{60925900-973A-47C2-8DE9-2F5271DD4BC9}" ShortID="738524775">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="accept_2" ID="{B051CA64-0364-404F-B270-34F29C6BA351}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="acceptance_3" ID="{43F5CF9C-5B91-4096-9547-B26A021F48FC}">
+							<ChildrenList>
+								<Action Name="" ID="{78DE742C-9AF6-4492-98DD-095F5A23CAFA}" ShortID="641617191">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="accept_3" ID="{885A9824-63BE-4DD1-A9A7-5193904D2E5F}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="acceptance_4" ID="{7339E81E-41B7-48AA-90A2-9507C693E8B2}">
+							<ChildrenList>
+								<Action Name="" ID="{9DDD8961-BCF3-418B-A3B8-DB511520C78F}" ShortID="578045387">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="accept_4" ID="{580FFE4D-4CAF-4339-8AEA-5AB6C11C32D2}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" ShortID="618037974">
@@ -295,6 +394,62 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="crane_release" ID="{4B522D11-770F-4215-B0FF-E432C0FC841E}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="player_push" ID="{8CA16013-C514-489D-B0E7-C0201D72043F}">
+							<ChildrenList>
+								<Action Name="" ID="{7652B01E-AFD9-4FD3-A5F2-25632EE4ED13}" ShortID="86961826">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="push_object" ID="{96B7A540-B3E2-43EA-89EC-B78BD86CCC83}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="object_slide_trigger" ID="{B93509A2-666C-4749-8EFE-3343402CC572}">
+							<ChildrenList>
+								<Action Name="" ID="{109A6C7C-E394-4F9D-985B-E194176E2BAB}" ShortID="928231779">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="object_slide" ID="{1A6BFE98-F95E-4D83-BCDF-3847EF604DB5}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="button_trigger" ID="{9D53B774-B55C-46A4-B29A-0D564CC569BB}">
+							<ChildrenList>
+								<Action Name="" ID="{459C82E6-6C87-4FBC-B074-312054457482}" ShortID="911311228">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="button_click" ID="{7A5D9E66-BC01-457E-AF86-C4B6CA633B51}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="weight_drop_trigger" ID="{08FF9E88-035B-4E45-846F-1FFFB0D35AE8}">
+							<ChildrenList>
+								<Action Name="" ID="{55FC2C8F-68B7-4F7F-BC67-9322C509B3DD}" ShortID="725302182">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="weight_drop" ID="{4765EB92-AAE9-493A-A8A4-A64BE1355DD3}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -781,6 +936,44 @@
 				</Event>
 				<Folder Name="MusicEvents" ID="{0F66D9F1-4B20-4AB2-B217-52E975A7DA39}" ShortID="253812515">
 					<ChildrenList>
+						<Folder Name="Opening" ID="{D3876D58-9C7F-4891-B127-A4CBAFD49742}" ShortID="377245420">
+							<ChildrenList>
+								<Event Name="play_intro" ID="{F9B8AD0C-F76C-4EED-995C-B9B95C05341C}">
+									<ChildrenList>
+										<Action Name="" ID="{4DB35334-0CE4-4057-AF7F-838A09B9F532}" ShortID="569186607">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="3"/>
+											</PropertyList>
+											<ReferenceList/>
+										</Action>
+										<Action Name="" ID="{2A231A65-9ACE-4A22-97C2-A7854813124B}" ShortID="565471289">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="intro_music" ID="{1E7A9980-ADE0-4C01-82F9-D00D60CB9DA7}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="game_start" ID="{25631253-0534-49AB-96FB-5B59B7A8C543}">
+									<ChildrenList>
+										<Action Name="" ID="{A16DCE8E-1E1E-4B21-A6EB-E3CBF486C549}" ShortID="93461623">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MoonisCheese_GameStart" ID="{8E5BEF19-C6DE-42E6-BB15-F5B1DDD22D07}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 						<Folder Name="Level" ID="{4195AA35-AD12-443B-BCD6-E95E67BB8712}" ShortID="448382601">
 							<ChildrenList>
 								<Event Name="play_level_music_01" ID="{969B6876-5BE0-4321-9849-1B090A7818B8}">
@@ -823,24 +1016,6 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="intro" ID="{0F08F3BB-9C81-4C22-B445-80A0E901326E}" ShortID="554212761">
-							<ChildrenList>
-								<Event Name="play_music" ID="{462CD34B-98B8-425C-8E85-C97B8D64059B}">
-									<ChildrenList>
-										<Action Name="" ID="{F81EAE4E-8435-4DA3-AE6D-AACB9E904DB2}" ShortID="395702324">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Introduction" ID="{6E4DA411-EB9E-41DB-A48F-EF34F6395C02}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Event Name="weight_drop" ID="{4765EB92-AAE9-493A-A8A4-A64BE1355DD3}">
@@ -866,6 +1041,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="box_click" ID="{8001031D-1BC7-4F46-8886-AC7F1A44B28B}">
+					<ChildrenList>
+						<Action Name="" ID="{0EAF9E7B-BD88-49FE-9009-C03600FEA8DA}" ShortID="517678257">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="box_click" ID="{343BABFB-5FD3-4A01-BFCF-5E7124F2DD92}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
