@@ -366,55 +366,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Opening" ID="{D3876D58-9C7F-4891-B127-A4CBAFD49742}" ShortID="377245420">
-					<ChildrenList>
-						<Event Name="play_intro" ID="{F9B8AD0C-F76C-4EED-995C-B9B95C05341C}">
-							<ChildrenList>
-								<Action Name="" ID="{4DB35334-0CE4-4057-AF7F-838A09B9F532}" ShortID="569186607">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="3"/>
-									</PropertyList>
-									<ReferenceList/>
-								</Action>
-								<Action Name="" ID="{2A231A65-9ACE-4A22-97C2-A7854813124B}" ShortID="565471289">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="game_start" ID="{25631253-0534-49AB-96FB-5B59B7A8C543}">
-							<ChildrenList>
-								<Action Name="" ID="{A16DCE8E-1E1E-4B21-A6EB-E3CBF486C549}" ShortID="93461623">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="MoonisCheese_GameStart" ID="{8E5BEF19-C6DE-42E6-BB15-F5B1DDD22D07}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{B5B3D01E-D8AD-4D01-A4CF-A320E0D6E11D}" ShortID="51360477">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
 				<Folder Name="Ambient" ID="{9B2E00D1-E3A3-4D12-AB69-3AD798500E57}" ShortID="949596701">
 					<ChildrenList>
 						<Event Name="night_ambience" ID="{25E2EF0C-14D5-4644-AB17-E8D093E262FF}">
@@ -781,7 +732,6 @@
 					<ChildrenList>
 						<Action Name="" ID="{17D3E552-91CC-41F9-9B4C-91DCC902C516}" ShortID="319665327">
 							<PropertyList>
-<<<<<<< HEAD
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
@@ -831,43 +781,11 @@
 				</Event>
 				<Folder Name="MusicEvents" ID="{0F66D9F1-4B20-4AB2-B217-52E975A7DA39}" ShortID="253812515">
 					<ChildrenList>
-						<Folder Name="Opening" ID="{D3876D58-9C7F-4891-B127-A4CBAFD49742}" ShortID="377245420">
-							<ChildrenList>
-								<Event Name="play_intro" ID="{F9B8AD0C-F76C-4EED-995C-B9B95C05341C}">
-									<ChildrenList>
-										<Action Name="" ID="{2A231A65-9ACE-4A22-97C2-A7854813124B}" ShortID="565471289">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="game_start" ID="{25631253-0534-49AB-96FB-5B59B7A8C543}">
-									<ChildrenList>
-										<Action Name="" ID="{A16DCE8E-1E1E-4B21-A6EB-E3CBF486C549}" ShortID="93461623">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="MoonisCheese_GameStart" ID="{8E5BEF19-C6DE-42E6-BB15-F5B1DDD22D07}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
 						<Folder Name="Level" ID="{4195AA35-AD12-443B-BCD6-E95E67BB8712}" ShortID="448382601">
 							<ChildrenList>
-								<Event Name="play_level_music" ID="{59D0D2C8-3DFF-4713-9C74-2E34C4BA95DF}">
+								<Event Name="play_level_music_01" ID="{969B6876-5BE0-4321-9849-1B090A7818B8}">
 									<ChildrenList>
-										<Action Name="" ID="{AC1E80AC-11D8-42D8-8F15-5A617C62408C}" ShortID="849510565">
+										<Action Name="" ID="{FAD40210-E352-4988-94EF-E1E757EDD4BC}" ShortID="849510566">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
 											</PropertyList>
@@ -877,7 +795,7 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{0937783D-846E-4334-BC81-F922DE306E99}" ShortID="983764653">
+										<Action Name="" ID="{2D3DBE75-A350-4F25-9528-280DC955A7CD}" ShortID="983764654">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
 											</PropertyList>
@@ -889,58 +807,15 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="stop_level_music" ID="{B49CFEAE-B36C-44DB-8960-57BDF4E93982}">
+								<Event Name="stop_level_music_01" ID="{3AD110A8-BE20-4FFA-A763-C83117BE57A8}">
 									<ChildrenList>
-										<Action Name="" ID="{17D3E552-91CC-41F9-9B4C-91DCC902C516}" ShortID="319665327">
+										<Action Name="" ID="{083B5FDE-A01D-4F6B-BC03-4122479480F1}" ShortID="319665328">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="CharacterSelect" ID="{BAF89FE9-3FFE-43B6-8BFA-30351AE42C37}" ShortID="659063649">
-							<ChildrenList>
-								<Event Name="play_character_select_music" ID="{94CAD47E-6A52-4ABF-8284-C23D560E2F7D}">
-									<ChildrenList>
-										<Action Name="" ID="{C86B43AB-840F-4FEB-AB69-2F934E64ACF7}" ShortID="936278250">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="2"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="CharacterSelect" ID="{9F152655-4DAA-4BDB-8EEA-8B960CDB5E0B}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-										<Action Name="" ID="{4DE46489-FB5E-4257-BDD0-FA73D71D6747}" ShortID="3060669">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="1"/>
-												<Property Name="FadeTime" Type="Real64" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="CharacterSelect" ID="{9F152655-4DAA-4BDB-8EEA-8B960CDB5E0B}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="stop_character_select_music" ID="{0AC685DC-DDE8-4478-9575-9A94EE62A863}">
-									<ChildrenList>
-										<Action Name="" ID="{3704BC2D-F3E6-48BB-96DA-6F4C82BD2A9A}" ShortID="695332041">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="2"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="CharacterSelect" ID="{9F152655-4DAA-4BDB-8EEA-8B960CDB5E0B}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -987,9 +862,6 @@
 						<Action Name="" ID="{46E7349A-0856-4BD3-B6EE-3DA85CD187E8}" ShortID="708168148">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
-=======
-								<Property Name="ActionType" Type="int16" Value="2"/>
->>>>>>> 14c3cd5a989e85bc16d302d0bab8250cb8e80e85
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">

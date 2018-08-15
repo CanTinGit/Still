@@ -37,13 +37,6 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
-				<SoundBank Name="Opening" ID="{6DFF381D-0494-4CFA-A6EE-6795FD193BAE}">
-					<ObjectInclusionList>
-						<ObjectRef Name="intro" ID="{0F08F3BB-9C81-4C22-B445-80A0E901326E}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-					</ObjectInclusionList>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
 				<SoundBank Name="Ambient" ID="{43C1F60D-B8A0-4757-A816-44149F3A4F85}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Ambient" ID="{9B2E00D1-E3A3-4D12-AB69-3AD798500E57}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
@@ -61,9 +54,14 @@
 				</SoundBank>
 				<SoundBank Name="Level_Music" ID="{190137D5-17CB-415C-A58A-ACCD1945F261}">
 					<ObjectInclusionList>
-						<ObjectRef Name="stop_level_music" ID="{B49CFEAE-B36C-44DB-8960-57BDF4E93982}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="play_level_music" ID="{59D0D2C8-3DFF-4713-9C74-2E34C4BA95DF}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Intro" ID="{086298FC-ECE3-4853-8DDC-E17CB004370C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="intro" ID="{0F08F3BB-9C81-4C22-B445-80A0E901326E}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

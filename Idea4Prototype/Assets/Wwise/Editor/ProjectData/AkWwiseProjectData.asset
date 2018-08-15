@@ -16,18 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-<<<<<<< HEAD
-    m_lastTimePsrt1: 922092759
-    m_lastTimePart2: -1999240919
-=======
-<<<<<<< HEAD
-    m_lastTimePsrt1: 1150389751
-    m_lastTimePart2: -1999240908
-=======
-    m_lastTimePsrt1: 523291023
-    m_lastTimePart2: -1999242945
->>>>>>> parent of 84b2357... Merge branch 'Audio_Branch_New_Newest' into Cameron_Branch
->>>>>>> 14c3cd5a989e85bc16d302d0bab8250cb8e80e85
+    m_lastTimePsrt1: -1819907642
+    m_lastTimePart2: -1999240559
     List:
     - Name: bubble_rise
       Path: Default Work Unit\UI\bubble_rise
@@ -40,7 +30,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -52,11 +42,17 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-<<<<<<< HEAD
       maxAttenuation: 0
-=======
-      maxAttenuation: 100
->>>>>>> parent of 84b2357... Merge branch 'Audio_Branch_New_Newest' into Cameron_Branch
+    - Name: button_buzz
+      Path: Default Work Unit\button_buzz
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: button_buzz
+        ObjectType: 3
+      ID: 255911779
+      Guid: f64880ad78d59c4ebae0efdd00d873d2
+      maxAttenuation: 0
     - Name: button_click
       Path: Default Work Unit\button_click
       PathAndIcons:
@@ -66,11 +62,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
-<<<<<<< HEAD
       maxAttenuation: 0
-=======
-      maxAttenuation: 100
->>>>>>> parent of 84b2357... Merge branch 'Audio_Branch_New_Newest' into Cameron_Branch
     - Name: camera_trigger
       Path: Default Work Unit\Camera\camera_trigger
       PathAndIcons:
@@ -82,11 +74,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-<<<<<<< HEAD
       maxAttenuation: 0
-=======
-      maxAttenuation: 100
->>>>>>> parent of 84b2357... Merge branch 'Audio_Branch_New_Newest' into Cameron_Branch
     - Name: click_back
       Path: Default Work Unit\UI\click_back
       PathAndIcons:
@@ -146,7 +134,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -158,7 +146,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -182,18 +170,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1144550677
       Guid: 8aaa78ca444aa946bc8e839589b392eb
-      maxAttenuation: 0
-    - Name: game_start
-      Path: Default Work Unit\Opening\game_start
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Opening
-        ObjectType: 4
-      - ElementName: game_start
-        ObjectType: 3
-      ID: 733168346
-      Guid: 531263253405ab4996fb5b59b7a8c543
       maxAttenuation: 0
     - Name: hover
       Path: Default Work Unit\UI\hover
@@ -228,22 +204,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: 538597049
       Guid: ac62c32a5eb5c843827b7269bfa7b694
-<<<<<<< HEAD
-      maxAttenuation: 0
-=======
-      maxAttenuation: 100
->>>>>>> parent of 84b2357... Merge branch 'Audio_Branch_New_Newest' into Cameron_Branch
-    - Name: play_intro
-      Path: Default Work Unit\Opening\play_intro
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Opening
-        ObjectType: 4
-      - ElementName: play_intro
-        ObjectType: 3
-      ID: -1191494768
-      Guid: 0cadb8f96cf7ed4e995cb9b95c05341c
       maxAttenuation: 0
     - Name: play_level_music
       Path: Default Work Unit\play_level_music
@@ -254,6 +214,20 @@ MonoBehaviour:
         ObjectType: 3
       ID: 557932600
       Guid: c8d2d059ff3d13479c742e34c4ba95df
+      maxAttenuation: 0
+    - Name: play_level_music_01
+      Path: Default Work Unit\MusicEvents\Level\play_level_music_01
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: Level
+        ObjectType: 4
+      - ElementName: play_level_music_01
+        ObjectType: 3
+      ID: 1099053006
+      Guid: 76689b96e05b214398491b090a7818b8
       maxAttenuation: 0
     - Name: play_music
       Path: Default Work Unit\MusicEvents\intro\play_music
@@ -374,6 +348,20 @@ MonoBehaviour:
         ObjectType: 3
       ID: -239613958
       Guid: aefe9cb46cb3db44896057bdf4e93982
+      maxAttenuation: 0
+    - Name: stop_level_music_01
+      Path: Default Work Unit\MusicEvents\Level\stop_level_music_01
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicEvents
+        ObjectType: 4
+      - ElementName: Level
+        ObjectType: 4
+      - ElementName: stop_level_music_01
+        ObjectType: 3
+      ID: -1427261064
+      Guid: a810d13a20befa4fa763c83117be57a8
       maxAttenuation: 0
     - Name: tut_box
       Path: Default Work Unit\Tutorial\tut_box
@@ -567,22 +555,32 @@ MonoBehaviour:
       ID: -1287577198
       Guid: 7f9760bcf7dbba41b260a9f4cd5a3290
       maxAttenuation: 0
+    - Name: weight_drop
+      Path: Default Work Unit\weight_drop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: weight_drop
+        ObjectType: 3
+      ID: 1928594291
+      Guid: 92eb6547e9aa3a49a8a4a64be1355dd3
+      maxAttenuation: 0
+    - Name: weight_plank
+      Path: Default Work Unit\weight_plank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: weight_plank
+        ObjectType: 3
+      ID: -1772950764
+      Guid: 2ef64733a043294cb6d310959d30e570
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-<<<<<<< HEAD
-    m_lastTimePsrt1: -2101908873
-    m_lastTimePart2: -1999240928
-=======
-<<<<<<< HEAD
-    m_lastTimePsrt1: 1158379751
-    m_lastTimePart2: -1999240908
-=======
-    m_lastTimePsrt1: -792894945
-    m_lastTimePart2: -1999242963
->>>>>>> parent of 84b2357... Merge branch 'Audio_Branch_New_Newest' into Cameron_Branch
->>>>>>> 14c3cd5a989e85bc16d302d0bab8250cb8e80e85
+    m_lastTimePsrt1: 1395016854
+    m_lastTimePart2: -1999240750
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -697,9 +695,8 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-<<<<<<< HEAD
-    m_lastTimePsrt1: 922122759
-    m_lastTimePart2: -1999240919
+    m_lastTimePsrt1: -162702282
+    m_lastTimePart2: -1999240710
     List:
     - Name: Buzz
       Path: Default Work Unit\Buzz
@@ -743,16 +740,6 @@ MonoBehaviour:
       ValueGuids:
       - bytes: c9fc7e36a25693408d342c711fa744f5
       - bytes: fb3b27f9c82b074c9cababe680384ef2
-=======
-<<<<<<< HEAD
-    m_lastTimePsrt1: 1158399751
-    m_lastTimePart2: -1999240908
-=======
-    m_lastTimePsrt1: -789464945
-    m_lastTimePart2: -1999242963
->>>>>>> parent of 84b2357... Merge branch 'Audio_Branch_New_Newest' into Cameron_Branch
-    List:
->>>>>>> 14c3cd5a989e85bc16d302d0bab8250cb8e80e85
     - Name: Music_Transition
       Path: Default Work Unit\Music_Transition
       PathAndIcons:
@@ -782,18 +769,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-<<<<<<< HEAD
-    m_lastTimePsrt1: 1171132759
-    m_lastTimePart2: -1999240919
-=======
-<<<<<<< HEAD
-    m_lastTimePsrt1: 1158379751
-    m_lastTimePart2: -1999240908
-=======
-    m_lastTimePsrt1: 672811023
-    m_lastTimePart2: -1999242945
->>>>>>> parent of 84b2357... Merge branch 'Audio_Branch_New_Newest' into Cameron_Branch
->>>>>>> 14c3cd5a989e85bc16d302d0bab8250cb8e80e85
+    m_lastTimePsrt1: -100227642
+    m_lastTimePart2: -1999240559
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -813,6 +790,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1995645809
       Guid: 167d28cba1cd3646ab2c5eb86708a848
+    - Name: Intro
+      Path: Default Work Unit\Intro
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Intro
+        ObjectType: 7
+      ID: 1125500713
+      Guid: fc986208e3ec53488ddce17cb004370c
     - Name: Level_Music
       Path: Default Work Unit\Level_Music
       PathAndIcons:
@@ -822,15 +808,6 @@ MonoBehaviour:
         ObjectType: 7
       ID: 1244594577
       Guid: d5370119cb175c41a58aaccd1945f261
-    - Name: Opening
-      Path: Default Work Unit\Opening
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Opening
-        ObjectType: 7
-      ID: 1831982039
-      Guid: 1d38ff6d9404fa4ca6ee6795fd193bae
     - Name: Player
       Path: Default Work Unit\Player
       PathAndIcons:
@@ -903,18 +880,12 @@ MonoBehaviour:
   - /Idea4Prototype_WwiseProject
   - /Idea4Prototype_WwiseProject/Events
   - /Idea4Prototype_WwiseProject/Events/Default Work Unit
-<<<<<<< HEAD
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Crane
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/MusicEvents
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/MusicEvents/Level
-=======
   - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Ambient
   - /Idea4Prototype_WwiseProject/SoundBanks
   - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
   - /Idea4Prototype_WwiseProject/Switches
   - /Idea4Prototype_WwiseProject/Switches/Default Work Unit
   - /Idea4Prototype_WwiseProject/Switches/Default Work Unit/Music_Transition
->>>>>>> 14c3cd5a989e85bc16d302d0bab8250cb8e80e85
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

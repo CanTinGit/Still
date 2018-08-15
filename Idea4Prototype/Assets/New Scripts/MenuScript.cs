@@ -187,7 +187,7 @@ public class MenuScript : MonoBehaviour
     {
         //flip the character panel on and flip off the menu panel
         FlipCharacterPanel();
-        AkSoundEngine.PostEvent("game_start", gameObject);
+        //AkSoundEngine.PostEvent("game_start", gameObject);
         //AkSoundEngine.SetRTPCValue("click_start", 0f, null, 1000);
         //AkSoundEngine.SetSwitch("intro", "character_select", GameObject.Find);
         GameObject.Find("StartSetUp").GetComponent<StartGame>().Play("character_select");

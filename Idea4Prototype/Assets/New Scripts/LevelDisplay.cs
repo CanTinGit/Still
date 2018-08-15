@@ -24,14 +24,15 @@ public class LevelDisplay : MonoBehaviour {
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(Level_1);
         if (MenuScript.Instance.GetMaxLevel() > 1)
         {
+            Level_2.SetActive(true);
+            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(Level_2);
             //Level_1.SetActive(true);
             //Tutorial_Level.SetActive(false);
             //eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(Level_1);
         }
         if (MenuScript.Instance.GetMaxLevel() > 2)
         {
-            Level_2.SetActive(true);
-            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(Level_2);
+            
         }
     }
     void OnTriggerExit2D(Collider2D other)

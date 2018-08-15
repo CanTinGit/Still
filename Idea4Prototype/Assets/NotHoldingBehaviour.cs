@@ -5,11 +5,13 @@ using UnityEngine;
 public class NotHoldingBehaviour : StateMachineBehaviour
 {
     CapsuleCollider _collider;
+    BoxCollider _boxCollider;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _collider = animator.gameObject.GetComponent<CapsuleCollider>();
+        _boxCollider = animator.gameObject.GetComponent<BoxCollider>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -17,6 +19,8 @@ public class NotHoldingBehaviour : StateMachineBehaviour
     {
         _collider.center = new Vector3(-1.870609e-17f, 1.127852f, -0.0379948f);
         _collider.height = 2.268883f;
+
+        _boxCollider.enabled = false;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

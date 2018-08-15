@@ -574,7 +574,6 @@
 						</Entry>
 					</EntryList>
 				</MusicSwitchContainer>
-<<<<<<< HEAD
 				<MusicSwitchContainer Name="Introduction" ID="{6E4DA411-EB9E-41DB-A48F-EF34F6395C02}" ShortID="1015015926">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -785,7 +784,7 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
-						<MusicPlaylistContainer Name="CharacterSelect" ID="{9F152655-4DAA-4BDB-8EEA-8B960CDB5E0B}" ShortID="263317053">
+						<MusicPlaylistContainer Name="Character_Select" ID="{A782229C-CBFF-4B00-8BFC-7E58E9269351}" ShortID="585915179">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
@@ -795,7 +794,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicSegment Name="character_selection_loop_1" ID="{3823DFCB-8C3E-4128-8B1E-F8758F72290C}" ShortID="197796957">
+								<MusicSegment Name="character_select_loop" ID="{8512840F-F04C-4140-A49C-AAF8AC82ED77}" ShortID="214663244">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="16000"/>
 									</PropertyList>
@@ -808,20 +807,20 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="character_selection_loop_1" ID="{396DF24A-E9B4-456D-8776-AF38345DD149}" ShortID="852057684">
+										<MusicTrack Name="character_select_loop" ID="{2F36DA33-000C-48C4-AD86-FEB5494BC873}" ShortID="823699728">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="character_selection_loop_1" ID="{3064F17E-9341-4AF3-B022-389DD3B90274}" ShortID="911699215">
+												<AudioFileSource Name="character_select_loop" ID="{55FE82E7-6246-4991-8188-8EA97BB89ADD}" ShortID="809732019">
 													<Language>SFX</Language>
-													<AudioFile>character_selection_loop_1.wav</AudioFile>
+													<AudioFile>character_select_loop.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
-												<MusicTransition Name="Root" ID="{125F40B8-B826-485E-A343-6521B181BD9E}">
+												<MusicTransition Name="Root" ID="{1B146DE3-CFDD-49E9-AAFC-680173656909}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -829,15 +828,15 @@
 												</MusicTransition>
 											</TransitionList>
 											<SequenceList>
-												<MusicTrackSequence Name="" ID="{CCE5994C-F894-4EAB-8E52-1A662D7A18FD}">
+												<MusicTrackSequence Name="" ID="{9709FF77-B266-4869-9DE1-52F76D48B0AD}">
 													<ClipList>
-														<MusicClip Name="character_selection_loop_1" ID="{224825D2-3A11-4466-A15B-53EAAB3481EE}">
+														<MusicClip Name="character_select_loop" ID="{55365AF3-0514-4E74-B8A7-F29FE05E409B}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
-															<AudioSourceRef Name="character_selection_loop_1" ID="{3064F17E-9341-4AF3-B022-389DD3B90274}"/>
+															<AudioSourceRef Name="character_select_loop" ID="{55FE82E7-6246-4991-8188-8EA97BB89ADD}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
@@ -845,8 +844,8 @@
 										</MusicTrack>
 									</ChildrenList>
 									<CueList>
-										<MusicCue Name="Entry Cue" ID="{699DE14D-D157-4022-995B-76EF8234FEDE}"/>
-										<MusicCue Name="Exit Cue" ID="{55FDDB39-84C0-40CD-B048-B4B44B408E31}">
+										<MusicCue Name="Entry Cue" ID="{02346E96-DB7E-4EA8-9BE5-30A981914455}"/>
+										<MusicCue Name="Exit Cue" ID="{C2B35AC6-8EC8-4541-8258-40F19B95CD58}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
 												<Property Name="TimeMs" Type="Real64" Value="16000"/>
@@ -856,12 +855,12 @@
 								</MusicSegment>
 							</ChildrenList>
 							<TransitionList>
-								<MusicTransition Name="Root" ID="{55C89832-4D0C-4790-817E-858C57F1B937}">
+								<MusicTransition Name="Root" ID="{BE682D05-9407-486D-BE0D-7792867E9771}">
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{1FBB7646-EE1A-4EB8-9B78-A0567F311058}">
+										<MusicTransition Name="Transition" ID="{078902F1-9DE7-47D7-8A24-67457FF6D4A7}">
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
@@ -869,14 +868,14 @@
 								</MusicTransition>
 							</TransitionList>
 							<Playlist>
-								<MusicPlaylistItem Name="" ID="{866EEFDF-D0C9-469F-A827-30880E5B2880}" ShortID="879310760">
+								<MusicPlaylistItem Name="" ID="{924C76B1-97CD-4F47-AAC7-7D8E504E6B57}" ShortID="940347977">
 									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{265A26B6-4F13-4999-AB02-8A00F5E1FC17}" ShortID="922865591">
+										<MusicPlaylistItem Name="" ID="{C5740022-D4C6-4A1A-8136-FF37212D7037}" ShortID="499032162">
 											<PropertyList>
 												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
-											<SegmentRef Name="character_selection_loop_1" ID="{3823DFCB-8C3E-4128-8B1E-F8758F72290C}"/>
+											<SegmentRef Name="character_select_loop" ID="{8512840F-F04C-4140-A49C-AAF8AC82ED77}"/>
 										</MusicPlaylistItem>
 									</ChildrenList>
 								</MusicPlaylistItem>
@@ -902,7 +901,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DestinationContextObject">
-											<ObjectRef Name="CharacterSelect" ID="{9F152655-4DAA-4BDB-8EEA-8B960CDB5E0B}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+											<ObjectRef Name="Character_Select" ID="{A782229C-CBFF-4B00-8BFC-7E58E9269351}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
 										</Reference>
 										<Reference Name="SourceContextObject">
 											<ObjectRef Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
@@ -941,7 +940,7 @@
 											<ObjectRef Name="Intro" ID="{7E30D0C3-CD9C-45DB-B31F-78CE99442D25}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
 										</Reference>
 										<Reference Name="SourceContextObject">
-											<ObjectRef Name="CharacterSelect" ID="{9F152655-4DAA-4BDB-8EEA-8B960CDB5E0B}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+											<ObjectRef Name="Character_Select" ID="{A782229C-CBFF-4B00-8BFC-7E58E9269351}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
 										</Reference>
 									</ReferenceList>
 									<TransitionInfo>
@@ -985,13 +984,11 @@
 								<PathElementRef Name="character_select" ID="{367EFCC9-56A2-4093-8D34-2C711FA744F5}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="CharacterSelect" ID="{9F152655-4DAA-4BDB-8EEA-8B960CDB5E0B}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}" Platform="Linked"/>
+								<AudioNodeRef Name="Character_Select" ID="{A782229C-CBFF-4B00-8BFC-7E58E9269351}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>
 				</MusicSwitchContainer>
-=======
->>>>>>> 14c3cd5a989e85bc16d302d0bab8250cb8e80e85
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

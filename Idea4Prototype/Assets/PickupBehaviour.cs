@@ -5,11 +5,13 @@ using UnityEngine;
 public class PickupBehaviour : StateMachineBehaviour
 {
     CapsuleCollider _collider;
+    BoxCollider _boxCollider;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _collider = animator.gameObject.GetComponent<CapsuleCollider>();
+        _boxCollider = animator.gameObject.GetComponent<BoxCollider>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -17,6 +19,8 @@ public class PickupBehaviour : StateMachineBehaviour
     {
         _collider.center = new Vector3(-1.870609e-17f, 0.47f, -0.0379948f);
         _collider.height = 0.95f;
+
+        _boxCollider.enabled = true;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
