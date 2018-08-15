@@ -8625,6 +8625,25 @@
 								<ActiveSource Name="accept_1" ID="{802F876F-BFA0-445B-BB4B-261F4A7F84E3}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Paper_unravel" ID="{D1A6F8B3-B029-4B5F-8E0B-D72AF0305A1D}" ShortID="208669232">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Paper_unravel" ID="{3780E22F-BB55-4702-A515-15B7BC0C2ED5}" ShortID="441248849">
+									<Language>SFX</Language>
+									<AudioFile>Paper_unravel.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Paper_unravel" ID="{3780E22F-BB55-4702-A515-15B7BC0C2ED5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

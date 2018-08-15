@@ -332,6 +332,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="paper_unravel" ID="{FF756CC9-2A9A-4B2A-BFBF-4E8360F27ED1}">
+							<ChildrenList>
+								<Action Name="" ID="{82801173-7E3B-47B6-AC1B-6294E654FA82}" ShortID="199997212">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Paper_unravel" ID="{D1A6F8B3-B029-4B5F-8E0B-D72AF0305A1D}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" ShortID="618037974">
