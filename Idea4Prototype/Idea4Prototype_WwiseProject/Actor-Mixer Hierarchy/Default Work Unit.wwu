@@ -6839,7 +6839,7 @@
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>1</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Weight" Type="Real64">
@@ -7718,6 +7718,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Paper_unravel" ID="{D1A6F8B3-B029-4B5F-8E0B-D72AF0305A1D}" ShortID="208669232">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
@@ -8947,6 +8954,154 @@
 								<ItemRef Name="Bubble_Float_4" ID="{5514328C-C792-4DA1-9ADD-54A9CDE5C8FA}"/>
 								<ItemRef Name="Bubble_Float_5" ID="{54459777-EBE2-4EB7-8785-05B8814BD19D}"/>
 								<ItemRef Name="Bubble_Pop" ID="{3BC195C3-1FDD-4DC3-9E41-BD3EEFD88E0D}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="treadmill" ID="{4F11A042-E47B-4A8F-822B-9176506DF757}" ShortID="902485930">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="10">
+									<RTPCList>
+										<RTPC Name="" ID="{F1724F8A-2AB2-4324-8EBA-CC728B8DEA4D}" ShortID="662600079">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="run_time" ID="{095CE668-1941-4884-8D38-4CF84B13C942}" WorkUnitID="{E016A5A6-0682-456F-BC10-81BBB135CFD0}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{8314DC9C-8BF2-4E67-89A2-839363D21733}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="1"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>500</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0.1</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{C091A181-159B-456A-8E40-0738835DC290}" ShortID="551867031">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="run_time" ID="{095CE668-1941-4884-8D38-4CF84B13C942}" WorkUnitID="{E016A5A6-0682-456F-BC10-81BBB135CFD0}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{37ABB0A7-D414-4CA3-89F9-E5F2E5C17F93}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0.05</XPos>
+														<YPos>-0</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="treadmill_loop" ID="{BD99BB5B-8447-48A1-900F-A5849B1B9E28}" ShortID="12441630">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<RTPCList>
+												<RTPC Name="" ID="{73E7835C-9907-44AA-BF13-8EA0E8D2AD04}" ShortID="304971982">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="run_time" ID="{095CE668-1941-4884-8D38-4CF84B13C942}" WorkUnitID="{E016A5A6-0682-456F-BC10-81BBB135CFD0}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{283D3901-B803-4385-852C-EA9D66AE534A}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-3000</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>0.1</XPos>
+																<YPos>-2000</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>InvertedSCurve</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>0.8</XPos>
+																<YPos>-1500</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log3</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>-1000</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="treadmill_loop" ID="{1293032D-E9CD-44A4-9E2C-C608003A8C88}" ShortID="441082519">
+											<Language>SFX</Language>
+											<AudioFile>treadmill_loop.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="treadmill_loop" ID="{1293032D-E9CD-44A4-9E2C-C608003A8C88}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="treadmill_loop" ID="{BD99BB5B-8447-48A1-900F-A5849B1B9E28}"/>
+								<ItemRef Name="treadmill_loop" ID="{BD99BB5B-8447-48A1-900F-A5849B1B9E28}"/>
 							</Playlist>
 						</RandomSequenceContainer>
 					</ChildrenList>

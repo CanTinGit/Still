@@ -448,6 +448,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="treadmill_trigger" ID="{1513FF24-F2E1-4D10-9946-99DD71F40565}">
+							<ChildrenList>
+								<Action Name="" ID="{CEDB9A61-B8C2-4471-B7E2-1875D1F3E1D7}" ShortID="271670679">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="treadmill" ID="{4103F2CA-031F-42F1-AB2D-80FB23E28580}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Crane" ID="{2573EACF-8DFC-49FF-8CD7-5FD53023BFC6}" ShortID="253771276">
@@ -1108,6 +1122,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="fx_lever_1" ID="{04A3A1C9-E216-455E-AC8D-643C34F6682B}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="treadmill" ID="{4103F2CA-031F-42F1-AB2D-80FB23E28580}">
+					<ChildrenList>
+						<Action Name="" ID="{02C09D18-E2E5-4244-9FD7-0A11C4F02DBC}" ShortID="178480283">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="treadmill" ID="{4F11A042-E47B-4A8F-822B-9176506DF757}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

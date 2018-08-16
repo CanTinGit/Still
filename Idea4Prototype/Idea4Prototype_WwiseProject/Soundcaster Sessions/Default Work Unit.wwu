@@ -26,6 +26,10 @@
 							<Position X="0" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="paper_unravel" ID="{FF756CC9-2A9A-4B2A-BFBF-4E8360F27ED1}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Material" ID="{B50AFE6F-5D8E-4A80-83B9-293CBBD3DA32}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -44,6 +48,10 @@
 						<Module>
 							<ObjectRef Name="stop_score" ID="{1D43917D-708D-44D7-83DC-FF6F49D93102}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="button_buzz" ID="{AD8048F6-D578-4E9C-BAE0-EFDD00D873D2}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="1" Y="5"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="tut_jumping" ID="{19B47F6A-499D-4563-ACB5-3DA7292EA098}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
@@ -66,10 +74,6 @@
 							<Position X="2" Y="4"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Release" ID="{43E83A65-F0F6-4D58-AC3D-0AA186B56AA9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
-							<Position X="2" Y="5"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="tut_box" ID="{C404AE30-8B29-4471-8631-409C5F150E6A}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 							<Position X="3" Y="0"/>
 						</Module>
@@ -89,10 +93,6 @@
 							<ObjectRef Name="game_start" ID="{25631253-0534-49AB-96FB-5B59B7A8C543}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 							<Position X="3" Y="4"/>
 						</Module>
-						<Module>
-							<ObjectRef Name="Shock" ID="{2138CA6B-DD7C-4A42-BE14-FD7879DEA456}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
-							<Position X="3" Y="5"/>
-						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -103,6 +103,10 @@
 							<GameParameterRef Name="noise_detection" ID="{7B380775-F665-4749-A801-FD310080BD1B}"/>
 							<Value>-48</Value>
 						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="run_time" ID="{095CE668-1941-4884-8D38-4CF84B13C942}"/>
+							<Value>0</Value>
+						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="metal_object" ID="{DFD31C6E-66D7-47EA-8F95-1AB34A192F4F}"/>
@@ -110,8 +114,8 @@
 						<CurrentStateRef Name="American" ID="{50DA6138-9D06-4974-8314-C7312FE96D70}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="splash" ID="{EC178B74-CB19-43AF-9C87-93679D6585E5}"/>
-						<CurrentSwitchRef Name="Section1" ID="{9794A177-8C27-46DC-B513-DEA522163C71}"/>
+						<CurrentSwitchRef Name="character_select" ID="{9C3B3C6C-220A-41F2-9ADD-4CCD37DF4F32}"/>
+						<CurrentSwitchRef Name="Section3" ID="{2E472B8C-03EA-4053-BAA8-37930875CA73}"/>
 						<CurrentSwitchRef Name="Correct" ID="{EBC666CF-D8EC-4FE3-A6D0-2F421742C332}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

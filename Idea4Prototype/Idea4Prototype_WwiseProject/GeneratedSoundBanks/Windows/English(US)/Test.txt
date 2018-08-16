@@ -5,11 +5,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	538597049	object_impact			\Default Work Unit\object_impact	
 	766957497	pull_lever			\Default Work Unit\pull_lever	
 	814543256	button_click			\Default Work Unit\button_click	
+	931771276	treadmill_trigger			\Default Work Unit\Triggers\treadmill_trigger	
 	1503347734	weight_drop_trigger			\Default Work Unit\Triggers\weight_drop_trigger	
 	1928594291	weight_drop			\Default Work Unit\weight_drop	
 	2522016532	weight_plank			\Default Work Unit\weight_plank	
 	2917121896	electricity			\Default Work Unit\electricity	
 	2980894478	object_slide			\Default Work Unit\object_slide	
+	3046263293	treadmill			\Default Work Unit\treadmill	
 	3150416619	crane_trigger_release			\Default Work Unit\Triggers\crane_trigger_release	
 	3454382244	button_trigger			\Default Work Unit\Triggers\button_trigger	
 	3550336162	crane_release			\Default Work Unit\Crane\crane_release	
@@ -31,6 +33,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	Material			
 	3350771019	plastic_object	Material			
 	3729124792	wood_object	Material			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3498626028	run_time			\Default Work Unit\run_time	
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	279731683	Modulator Envelope (Custom)				
@@ -55,6 +60,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	282957980	Wood_Impact_Medium_3	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Medium_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Medium\Wood_Impact_Medium_3		10950
 	290648010	fx_push_loop	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_push_loop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fx_push_loop		745022
 	400306442	Impact_Can_Very_Light_2	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Very_Light_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light_2		38464
+	441082519	treadmill_loop	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\treadmill_loop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\treadmill\treadmill_loop		384064
 	456681022	Impact_Can_Heavy_1	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Heavy_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Heavy\Impact_Can_Heavy_1		38464
 	524659892	Wood_Impact_Light_2	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_2		14528
 	530105447	Impact_Can_Heavy	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Heavy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Heavy\Impact_Can_Heavy		38464
