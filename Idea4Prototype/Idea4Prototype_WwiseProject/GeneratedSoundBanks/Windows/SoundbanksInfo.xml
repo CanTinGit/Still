@@ -575,7 +575,7 @@
 				<Event Id="3716983419" Name="acceptance_2" ObjectPath="\Events\Default Work Unit\UI\acceptance_2"/>
 				<Event Id="3716983418" Name="acceptance_3" ObjectPath="\Events\Default Work Unit\UI\acceptance_3"/>
 				<Event Id="3716983421" Name="acceptance_4" ObjectPath="\Events\Default Work Unit\UI\acceptance_4"/>
-				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise" MaxAttenuation="100.000000"/>
+				<Event Id="3673951289" Name="bubble_rise" ObjectPath="\Events\Default Work Unit\UI\bubble_rise"/>
 				<Event Id="4114166951" Name="cheese_bite" ObjectPath="\Events\Default Work Unit\UI\cheese_bite"/>
 				<Event Id="2579544659" Name="click_back" ObjectPath="\Events\Default Work Unit\UI\click_back"/>
 				<Event Id="2102833423" Name="click_negative" ObjectPath="\Events\Default Work Unit\UI\click_negative"/>
@@ -741,7 +741,7 @@
 			<ShortName>Enemy</ShortName>
 			<Path>Enemy.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1531020610" Name="bubble_shot" ObjectPath="\Events\Default Work Unit\Camera\bubble_shot" MaxAttenuation="100.000000"/>
+				<Event Id="1531020610" Name="bubble_shot" ObjectPath="\Events\Default Work Unit\Camera\bubble_shot"/>
 				<Event Id="1860426137" Name="camera_trigger" ObjectPath="\Events\Default Work Unit\Camera\camera_trigger" MaxAttenuation="100.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -763,18 +763,19 @@
 				<Event Id="3850141293" Name="box_click" ObjectPath="\Events\Default Work Unit\box_click"/>
 				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click" MaxAttenuation="100.000000"/>
 				<Event Id="3454382244" Name="button_trigger" ObjectPath="\Events\Default Work Unit\Triggers\button_trigger" MaxAttenuation="0.000000"/>
-				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup" MaxAttenuation="100.000000"/>
-				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release" MaxAttenuation="100.000000"/>
+				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup"/>
+				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release"/>
 				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup" MaxAttenuation="0.000000"/>
 				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release" MaxAttenuation="0.000000"/>
 				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\electricity"/>
+				<Event Id="3997114622" Name="lever_trigger" ObjectPath="\Events\Default Work Unit\Triggers\lever_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact" MaxAttenuation="100.000000"/>
 				<Event Id="2980894478" Name="object_slide" ObjectPath="\Events\Default Work Unit\object_slide" MaxAttenuation="100.000000"/>
 				<Event Id="212497099" Name="object_slide_trigger" ObjectPath="\Events\Default Work Unit\Triggers\object_slide_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="200872652" Name="player_push_trigger" ObjectPath="\Events\Default Work Unit\Triggers\player_push_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="766957497" Name="pull_lever" ObjectPath="\Events\Default Work Unit\pull_lever" MaxAttenuation="100.000000"/>
 				<Event Id="4202621657" Name="push_object" ObjectPath="\Events\Default Work Unit\push_object" MaxAttenuation="100.000000"/>
-				<Event Id="1928594291" Name="weight_drop" ObjectPath="\Events\Default Work Unit\weight_drop" MaxAttenuation="100.000000"/>
+				<Event Id="1928594291" Name="weight_drop" ObjectPath="\Events\Default Work Unit\weight_drop"/>
 				<Event Id="1503347734" Name="weight_drop_trigger" ObjectPath="\Events\Default Work Unit\Triggers\weight_drop_trigger" MaxAttenuation="0.000000"/>
 				<Event Id="2522016532" Name="weight_plank" ObjectPath="\Events\Default Work Unit\weight_plank" MaxAttenuation="100.000000"/>
 			</IncludedEvents>

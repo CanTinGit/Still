@@ -434,6 +434,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="lever_trigger" ID="{1926C30E-45AE-4201-9022-09EEE9A35F3B}">
+							<ChildrenList>
+								<Action Name="" ID="{0E1AD016-23EF-4944-A894-80F588A8D8E6}" ShortID="870420301">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="pull_lever" ID="{7FC4CCC3-C3EB-412A-843F-4EE5AF1029BC}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Crane" ID="{2573EACF-8DFC-49FF-8CD7-5FD53023BFC6}" ShortID="253771276">
