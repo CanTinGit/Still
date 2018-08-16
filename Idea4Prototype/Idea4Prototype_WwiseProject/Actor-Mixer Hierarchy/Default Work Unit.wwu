@@ -7726,9 +7726,11 @@
 						</Sound>
 						<Sound Name="Paper_unravel" ID="{D1A6F8B3-B029-4B5F-8E0B-D72AF0305A1D}" ShortID="208669232">
 							<PropertyList>
+								<Property Name="EnablePanner" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -7746,6 +7748,14 @@
 									<AudioFile>Paper_unravel.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{4D99A8BA-556A-497D-8D21-E50A05B3D58B}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="18.3299389002037"/>
+										<Property Name="PanY" Type="Real64" Value="94.6004319654428"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="Paper_unravel" ID="{3780E22F-BB55-4702-A515-15B7BC0C2ED5}" Platform="Linked"/>
 							</ActiveSourceList>
