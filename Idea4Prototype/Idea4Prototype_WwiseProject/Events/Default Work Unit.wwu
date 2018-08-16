@@ -332,16 +332,15 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="paper_unravel" ID="{D311E98A-EF7F-4110-8CCA-2A382EDD5896}">
+						<Event Name="paper_unravel" ID="{FF756CC9-2A9A-4B2A-BFBF-4E8360F27ED1}">
 							<ChildrenList>
-								<Action Name="" ID="{396F4222-9F59-40DC-B22C-851E6F94B6B9}" ShortID="851194363">
+								<Action Name="" ID="{82801173-7E3B-47B6-AC1B-6294E654FA82}" ShortID="199997212">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="Delay" Type="Real64" Value="0.2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Paper_unravel" ID="{F90553AD-FD12-48F6-A70C-0CA73ED73112}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+											<ObjectRef Name="Paper_unravel" ID="{D1A6F8B3-B029-4B5F-8E0B-D72AF0305A1D}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -379,7 +378,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="player_push" ID="{8CA16013-C514-489D-B0E7-C0201D72043F}">
+						<Event Name="player_push_trigger" ID="{8CA16013-C514-489D-B0E7-C0201D72043F}">
 							<ChildrenList>
 								<Action Name="" ID="{7652B01E-AFD9-4FD3-A5F2-25632EE4ED13}" ShortID="86961826">
 									<PropertyList>
@@ -435,30 +434,29 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="gate_trigger" ID="{908A705D-223B-4DDA-BF4B-A262BD450DDB}">
+						<Event Name="lever_trigger" ID="{1926C30E-45AE-4201-9022-09EEE9A35F3B}">
 							<ChildrenList>
-								<Action Name="" ID="{397FC6DE-8195-4FC4-9D6D-9060FB699A22}" ShortID="630466456">
+								<Action Name="" ID="{0E1AD016-23EF-4944-A894-80F588A8D8E6}" ShortID="870420301">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="41"/>
-										<Property Name="Delay" Type="Real64" Value="0.3"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="gate" ID="{DC54C505-FC05-4708-85C6-676B37525EDF}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+											<ObjectRef Name="pull_lever" ID="{7FC4CCC3-C3EB-412A-843F-4EE5AF1029BC}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="electricity_trigger" ID="{DD557866-76BE-4378-8205-2D2D9290C653}">
+						<Event Name="treadmill_trigger" ID="{1513FF24-F2E1-4D10-9946-99DD71F40565}">
 							<ChildrenList>
-								<Action Name="" ID="{5F73D018-67F6-43C3-9367-E09C130D66C2}" ShortID="486476302">
+								<Action Name="" ID="{CEDB9A61-B8C2-4471-B7E2-1875D1F3E1D7}" ShortID="271670679">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="41"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="electricity" ID="{9A8A1FC2-BF2A-42F1-9D8F-DB5FEA24D996}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+											<ObjectRef Name="treadmill" ID="{4103F2CA-031F-42F1-AB2D-80FB23E28580}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -986,6 +984,7 @@
 						<Action Name="" ID="{5D0C8D11-8854-4F3E-8687-4203646BFFB0}" ShortID="149428577">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -1116,15 +1115,29 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="gate" ID="{DC54C505-FC05-4708-85C6-676B37525EDF}">
+				<Event Name="pull_lever" ID="{7FC4CCC3-C3EB-412A-843F-4EE5AF1029BC}">
 					<ChildrenList>
-						<Action Name="" ID="{AE212A13-DFEB-47C7-BDD5-61F23FFCD4D1}" ShortID="758677239">
+						<Action Name="" ID="{DEFD5297-2084-48B2-9139-2DBB7F7623D2}" ShortID="515382044">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="gate_1" ID="{01A9A4E7-D437-4896-AD92-0E33CE8B1025}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+									<ObjectRef Name="fx_lever_1" ID="{04A3A1C9-E216-455E-AC8D-643C34F6682B}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="treadmill" ID="{4103F2CA-031F-42F1-AB2D-80FB23E28580}">
+					<ChildrenList>
+						<Action Name="" ID="{02C09D18-E2E5-4244-9FD7-0A11C4F02DBC}" ShortID="178480283">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="treadmill" ID="{4F11A042-E47B-4A8F-822B-9176506DF757}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

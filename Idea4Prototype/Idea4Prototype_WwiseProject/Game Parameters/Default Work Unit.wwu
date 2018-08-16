@@ -11,6 +11,15 @@
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="click_start" ID="{325B24F6-EAD6-45A9-89FA-17B66FBB2F8B}"/>
+				<GameParameter Name="run_time" ID="{095CE668-1941-4884-8D38-4CF84B13C942}">
+					<PropertyList>
+						<Property Name="FilterTimeDown" Type="Real64" Value="0.5"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="0.5"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

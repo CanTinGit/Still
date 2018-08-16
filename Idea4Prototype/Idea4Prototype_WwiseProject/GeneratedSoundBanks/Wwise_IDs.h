@@ -34,11 +34,9 @@ namespace AK
         static const AkUniqueID CRANE_TRIGGER_PICKUP = 3559668272U;
         static const AkUniqueID CRANE_TRIGGER_RELEASE = 3150416619U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
-        static const AkUniqueID ELECTRICITY_TRIGGER = 1568560881U;
         static const AkUniqueID GAME_START = 733168346U;
-        static const AkUniqueID GATE = 1121922920U;
-        static const AkUniqueID GATE_TRIGGER = 3439052529U;
         static const AkUniqueID HOVER = 3753593413U;
+        static const AkUniqueID LEVER_TRIGGER = 3997114622U;
         static const AkUniqueID NIGHT_AMBIENCE = 849527464U;
         static const AkUniqueID OBJECT_IMPACT = 538597049U;
         static const AkUniqueID OBJECT_SLIDE = 2980894478U;
@@ -52,13 +50,16 @@ namespace AK
         static const AkUniqueID PLAYER_DROP = 1922690190U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
         static const AkUniqueID PLAYER_LIFT = 3762137770U;
-        static const AkUniqueID PLAYER_PUSH = 4237746237U;
+        static const AkUniqueID PLAYER_PUSH_TRIGGER = 200872652U;
         static const AkUniqueID PLAYER_SHOCK = 3937592553U;
         static const AkUniqueID PLAYER_THROW = 65181031U;
+        static const AkUniqueID PULL_LEVER = 766957497U;
         static const AkUniqueID PUSH_OBJECT = 4202621657U;
         static const AkUniqueID SCORE = 2398231425U;
         static const AkUniqueID STOP_LEVEL_MUSIC = 4055353338U;
         static const AkUniqueID STOP_SCORE = 2178222430U;
+        static const AkUniqueID TREADMILL = 3046263293U;
+        static const AkUniqueID TREADMILL_TRIGGER = 931771276U;
         static const AkUniqueID TUT_BOX = 820591094U;
         static const AkUniqueID TUT_BOX_TRIGGER = 1107840467U;
         static const AkUniqueID TUT_BUTTON = 3399594875U;
@@ -163,6 +164,7 @@ namespace AK
     {
         static const AkUniqueID CLICK_START = 2996780470U;
         static const AkUniqueID NOISE_DETECTION = 866473373U;
+        static const AkUniqueID RUN_TIME = 3498626028U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -181,6 +183,7 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID DIEGETICNONCRITICAL = 13756499U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MASTER_SECONDARY_BUS = 805203703U;
         static const AkUniqueID MUSIC = 3991942870U;

@@ -100,7 +100,7 @@ public class DispenseControl : MonoBehaviour
     {
         if(push_)
         {
-            AkSoundEngine.PostEvent("player_push", gameObject, (uint)AkCallbackType.AK_EndOfEvent, MyCallbackFunction, gameObject);
+            AkSoundEngine.PostEvent("player_push_trigger", gameObject, (uint)AkCallbackType.AK_EndOfEvent, MyCallbackFunction, gameObject);
         }
         else
         {

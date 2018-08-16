@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: -145045680
-    m_lastTimePart2: -1999240319
+    m_lastTimePsrt1: 1670368656
+    m_lastTimePart2: -1999240309
     List:
     - Name: acceptance_1
       Path: Default Work Unit\UI\acceptance_1
@@ -263,18 +263,6 @@ MonoBehaviour:
       ID: -1377845400
       Guid: c21f8a9a2abff1429d8fdb5fea24d996
       maxAttenuation: 0
-    - Name: electricity_trigger
-      Path: Default Work Unit\Triggers\electricity_trigger
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Triggers
-        ObjectType: 4
-      - ElementName: electricity_trigger
-        ObjectType: 3
-      ID: 1568560881
-      Guid: 667855ddbe76784382052d2d9290c653
-      maxAttenuation: 0
     - Name: game_start
       Path: Default Work Unit\MusicEvents\Opening\game_start
       PathAndIcons:
@@ -289,28 +277,6 @@ MonoBehaviour:
       ID: 733168346
       Guid: 531263253405ab4996fb5b59b7a8c543
       maxAttenuation: 0
-    - Name: gate
-      Path: Default Work Unit\gate
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: gate
-        ObjectType: 3
-      ID: 1121922920
-      Guid: 05c554dc05fc084785c6676b37525edf
-      maxAttenuation: 0
-    - Name: gate_trigger
-      Path: Default Work Unit\Triggers\gate_trigger
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Triggers
-        ObjectType: 4
-      - ElementName: gate_trigger
-        ObjectType: 3
-      ID: -855914767
-      Guid: 5d708a903b22da4dbf4ba262bd450ddb
-      maxAttenuation: 0
     - Name: hover
       Path: Default Work Unit\UI\hover
       PathAndIcons:
@@ -322,6 +288,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -541373883
       Guid: 50f9f9ae29ae5a4bae8fbd632d417c68
+      maxAttenuation: 0
+    - Name: lever_trigger
+      Path: Default Work Unit\Triggers\lever_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: lever_trigger
+        ObjectType: 3
+      ID: -297852674
+      Guid: 0ec32619ae450142902209eee9a35f3b
       maxAttenuation: 0
     - Name: night_ambience
       Path: Default Work Unit\Ambient\night_ambience
@@ -377,7 +355,7 @@ MonoBehaviour:
       - ElementName: paper_unravel
         ObjectType: 3
       ID: 1339907015
-      Guid: 8ae911d37fef10418cca2a382edd5896
+      Guid: c96c75ff9a2a2a4bbfbf4e8360f27ed1
       maxAttenuation: 0
     - Name: play_level_music
       Path: Default Work Unit\MusicEvents\Level\play_level_music
@@ -479,16 +457,16 @@ MonoBehaviour:
       ID: -532829526
       Guid: 3b902838b8b01c4aba900eb0d9e3debc
       maxAttenuation: 0
-    - Name: player_push
-      Path: Default Work Unit\Triggers\player_push
+    - Name: player_push_trigger
+      Path: Default Work Unit\Triggers\player_push_trigger
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Triggers
         ObjectType: 4
-      - ElementName: player_push
+      - ElementName: player_push_trigger
         ObjectType: 3
-      ID: -57221059
+      ID: 200872652
       Guid: 1360a18c14c59d48b0e7c0201d72043f
       maxAttenuation: 0
     - Name: player_shock
@@ -514,6 +492,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: 65181031
       Guid: 9ddef41577381d44b9b7b31bb601332e
+      maxAttenuation: 0
+    - Name: pull_lever
+      Path: Default Work Unit\pull_lever
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pull_lever
+        ObjectType: 3
+      ID: 766957497
+      Guid: c3ccc47febc32a41843f4ee5af1029bc
       maxAttenuation: 0
     - Name: push_object
       Path: Default Work Unit\push_object
@@ -562,6 +550,28 @@ MonoBehaviour:
         ObjectType: 3
       ID: -2116744866
       Guid: 7d91431d8d70d74483dcff6f49d93102
+      maxAttenuation: 0
+    - Name: treadmill
+      Path: Default Work Unit\treadmill
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: treadmill
+        ObjectType: 3
+      ID: -1248704003
+      Guid: caf203411f03f142ab2d80fb23e28580
+      maxAttenuation: 0
+    - Name: treadmill_trigger
+      Path: Default Work Unit\Triggers\treadmill_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: treadmill_trigger
+        ObjectType: 3
+      ID: 931771276
+      Guid: 24ff1315e1f2104d994699dd71f40565
       maxAttenuation: 0
     - Name: tut_box
       Path: Default Work Unit\Tutorial\tut_box
@@ -791,8 +801,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: -1475836496
-    m_lastTimePart2: -1999240323
+    m_lastTimePsrt1: -1547831344
+    m_lastTimePart2: -1999240310
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -981,8 +991,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -1048770016
-    m_lastTimePart2: -1999240328
+    m_lastTimePsrt1: -235759456
+    m_lastTimePart2: -1999240313
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -1060,8 +1070,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
-    m_lastTimePsrt1: 1064419579
-    m_lastTimePart2: -1999240534
+    m_lastTimePsrt1: -237149456
+    m_lastTimePart2: -1999240313
     List:
     - Name: click_start
       Path: Default Work Unit\click_start
@@ -1081,6 +1091,15 @@ MonoBehaviour:
         ObjectType: 13
       ID: 866473373
       Guid: 7507387b65f64947a801fd310080bd1b
+    - Name: run_time
+      Path: Default Work Unit\run_time
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: run_time
+        ObjectType: 13
+      ID: -796341268
+      Guid: 68e65c09411984488d384cf84b13c942
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 

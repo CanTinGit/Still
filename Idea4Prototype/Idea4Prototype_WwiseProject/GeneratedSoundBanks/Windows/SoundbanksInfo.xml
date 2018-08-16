@@ -639,6 +639,10 @@
 					<ShortName>cheese_bite_2.wav</ShortName>
 					<Path>SFX\cheese_bite_2_024E9C6E.wem</Path>
 				</File>
+				<File Id="441248849" Language="SFX">
+					<ShortName>Paper_unravel.wav</ShortName>
+					<Path>SFX\Paper_unravel_1C9C67B2.wem</Path>
+				</File>
 				<File Id="586344811" Language="SFX">
 					<ShortName>chime_loop.wav</ShortName>
 					<Path>SFX\chime_loop_F17FB28C.wem</Path>
@@ -690,10 +694,6 @@
 				<File Id="1025487443" Language="SFX">
 					<ShortName>Click_Negative.wav</ShortName>
 					<Path>SFX\Click_Negative_1C9C67B2.wem</Path>
-				</File>
-				<File Id="1030795443" Language="SFX">
-					<ShortName>Paper_unravel.wav</ShortName>
-					<Path>SFX\Paper_unravel_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1050165260" Language="SFX">
 					<ShortName>Bubble_Float_3.wav</ShortName>
@@ -769,19 +769,24 @@
 				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup"/>
 				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release"/>
 				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\electricity"/>
-				<Event Id="1568560881" Name="electricity_trigger" ObjectPath="\Events\Default Work Unit\Triggers\electricity_trigger"/>
-				<Event Id="1121922920" Name="gate" ObjectPath="\Events\Default Work Unit\gate"/>
-				<Event Id="3439052529" Name="gate_trigger" ObjectPath="\Events\Default Work Unit\Triggers\gate_trigger"/>
+				<Event Id="3997114622" Name="lever_trigger" ObjectPath="\Events\Default Work Unit\Triggers\lever_trigger"/>
 				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact"/>
 				<Event Id="2980894478" Name="object_slide" ObjectPath="\Events\Default Work Unit\object_slide"/>
 				<Event Id="212497099" Name="object_slide_trigger" ObjectPath="\Events\Default Work Unit\Triggers\object_slide_trigger"/>
-				<Event Id="4237746237" Name="player_push" ObjectPath="\Events\Default Work Unit\Triggers\player_push"/>
+				<Event Id="200872652" Name="player_push_trigger" ObjectPath="\Events\Default Work Unit\Triggers\player_push_trigger"/>
+				<Event Id="766957497" Name="pull_lever" ObjectPath="\Events\Default Work Unit\pull_lever"/>
 				<Event Id="4202621657" Name="push_object" ObjectPath="\Events\Default Work Unit\push_object"/>
+				<Event Id="3046263293" Name="treadmill" ObjectPath="\Events\Default Work Unit\treadmill"/>
+				<Event Id="931771276" Name="treadmill_trigger" ObjectPath="\Events\Default Work Unit\Triggers\treadmill_trigger"/>
 				<Event Id="1928594291" Name="weight_drop" ObjectPath="\Events\Default Work Unit\weight_drop"/>
 				<Event Id="1503347734" Name="weight_drop_trigger" ObjectPath="\Events\Default Work Unit\Triggers\weight_drop_trigger"/>
 				<Event Id="2522016532" Name="weight_plank" ObjectPath="\Events\Default Work Unit\weight_plank"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="10004527" Language="SFX">
+					<ShortName>fx_lever_1.wav</ShortName>
+					<Path>SFX\fx_lever_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="76802143" Language="SFX">
 					<ShortName>Impact_Can_Medium_3.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_3_1C9C67B2.wem</Path>
@@ -830,10 +835,6 @@
 					<ShortName>fx_push_loop.wav</ShortName>
 					<Path>SFX\fx_push_loop_1C9C67B2.wem</Path>
 				</File>
-				<File Id="318844511" Language="SFX">
-					<ShortName>gate_1.wav</ShortName>
-					<Path>SFX\gate_1_1C9C67B2.wem</Path>
-				</File>
 				<File Id="359920825" Language="SFX">
 					<ShortName>UI_Incorrect_Buzz.wav</ShortName>
 					<Path>SFX\UI_Incorrect_Buzz_3B068DBB.wem</Path>
@@ -841,6 +842,10 @@
 				<File Id="400306442" Language="SFX">
 					<ShortName>Impact_Can_Very_Light_2.wav</ShortName>
 					<Path>SFX\Impact_Can_Very_Light_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="441082519" Language="SFX">
+					<ShortName>treadmill_loop.wav</ShortName>
+					<Path>SFX\treadmill_loop_1C9C67B2.wem</Path>
 				</File>
 				<File Id="456681022" Language="SFX">
 					<ShortName>Impact_Can_Heavy_1.wav</ShortName>

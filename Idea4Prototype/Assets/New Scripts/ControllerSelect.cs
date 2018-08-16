@@ -92,7 +92,7 @@ public class ControllerSelect : MonoBehaviour {
                 if (controllerPressed == false)
                 {
                     controllerPressed = true;
-
+                    AkSoundEngine.PostEvent("hover", gameObject);
                     if (Input.GetAxis("Horizontal" + playerNum) > 0.8)          // If the player moves the joystick right, add to choice number
                     {
                         Choice++;
