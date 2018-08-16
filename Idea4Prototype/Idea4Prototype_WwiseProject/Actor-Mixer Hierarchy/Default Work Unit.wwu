@@ -3238,6 +3238,25 @@
 								<ActiveSource Name="box_click" ID="{401FC1B6-7FA6-485C-AC7C-A103131B7357}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="fx_lever_1" ID="{04A3A1C9-E216-455E-AC8D-643C34F6682B}" ShortID="481859917">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0D5E936-8523-4AB9-9707-63C61DF7B05C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E06E9023-E71B-4D11-AC67-507EEC9795F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="fx_lever_1" ID="{21B96BCE-BA08-41CF-936C-323654EA029D}" ShortID="10004527">
+									<Language>SFX</Language>
+									<AudioFile>fx_lever_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="fx_lever_1" ID="{21B96BCE-BA08-41CF-936C-323654EA029D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Voice" ID="{C85A6BD0-2130-4756-9A48-C60BB731FBA9}" ShortID="456055418">

@@ -1085,6 +1085,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="pull_lever" ID="{7FC4CCC3-C3EB-412A-843F-4EE5AF1029BC}">
+					<ChildrenList>
+						<Action Name="" ID="{DEFD5297-2084-48B2-9139-2DBB7F7623D2}" ShortID="515382044">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fx_lever_1" ID="{04A3A1C9-E216-455E-AC8D-643C34F6682B}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

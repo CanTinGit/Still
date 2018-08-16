@@ -62,6 +62,14 @@
 							<Position X="2" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="play_music" ID="{F9B8AD0C-F76C-4EED-995C-B9B95C05341C}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Release" ID="{43E83A65-F0F6-4D58-AC3D-0AA186B56AA9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="tut_box" ID="{C404AE30-8B29-4471-8631-409C5F150E6A}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 							<Position X="3" Y="0"/>
 						</Module>
@@ -76,6 +84,14 @@
 						<Module>
 							<ObjectRef Name="tut_button" ID="{2A125968-CD48-47FB-91A2-D1DD3ED654A7}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="game_start" ID="{25631253-0534-49AB-96FB-5B59B7A8C543}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Shock" ID="{2138CA6B-DD7C-4A42-BE14-FD7879DEA456}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<Position X="3" Y="5"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -94,7 +110,7 @@
 						<CurrentStateRef Name="American" ID="{50DA6138-9D06-4974-8314-C7312FE96D70}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="character_select" ID="{9C3B3C6C-220A-41F2-9ADD-4CCD37DF4F32}"/>
+						<CurrentSwitchRef Name="splash" ID="{EC178B74-CB19-43AF-9C87-93679D6585E5}"/>
 						<CurrentSwitchRef Name="Section1" ID="{9794A177-8C27-46DC-B513-DEA522163C71}"/>
 						<CurrentSwitchRef Name="Correct" ID="{EBC666CF-D8EC-4FE3-A6D0-2F421742C332}"/>
 					</CurrentSwitchList>
