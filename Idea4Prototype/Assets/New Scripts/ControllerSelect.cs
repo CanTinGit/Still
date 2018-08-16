@@ -45,6 +45,7 @@ public class ControllerSelect : MonoBehaviour {
     int Choice = 0;                                       // Integer to score the current flag choice
     GameObject[] materialMeshs;
     public GameObject playerHalo, playButton;             // The selected player sprite and the play button sprite
+    public Animator RightAnimator, LeftAnimator;          // The right and left animators for the selection arrows
 
     // Use this for initialization
     void Start ()                                                                                           // Initialise values for the player
@@ -84,6 +85,8 @@ public class ControllerSelect : MonoBehaviour {
     {
         if (isInGame == false)                                               // If the player has not "entered" the game
         {
+            RightAnimator.SetFloat("ClickRight", (Input.GetAxis("Horizontal" + playerNum)));
+            LeftAnimator.SetFloat("ClickLeft", (Input.GetAxis("Horizontal" + playerNum)));
             if (Input.GetAxis("Horizontal" + playerNum) > 0.8 || Input.GetAxis("Horizontal" + playerNum) < -0.8 || (Input.GetKeyDown(playerKeys[playerNum - 1].GetKeys()[3]) || Input.GetKeyDown(playerKeys[playerNum - 1].GetKeys()[2])))                 // If the player uses the left or right key bindings
             {
                 if (controllerPressed == false)
@@ -163,7 +166,8 @@ public class ControllerSelect : MonoBehaviour {
                     MenuScript.Instance.GetAudioClass().SetNationality(playerNum, flags[Choice].GetName());         // Set the player character voice to the nationality selected in this menu
                     playerHalo.gameObject.SetActive(true);                                                          // Show the selected halo, highlighting the player has selected a character & voice
                     this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = false;          // Set the select message to invisible as the player can now no longer select a player (unless they press back)
-                    playerMesh.transform.Find("SelectArrows" + playerNum).GetComponent<Image>().enabled = false;    // Set the selected arrows to invisible for the same reason as above
+                    playerMesh.transform.parent.gameObject.transform.Find("SelectArrow_" + playerNum + "_Left").GetComponent<Image>().enabled = false;    // Set the selected arrows to invisible for the same reason as above
+                    playerMesh.transform.parent.gameObject.transform.Find("SelectArrow_" + playerNum + "_Right").GetComponent<Image>().enabled = false;    // Set the selected arrows to invisible for the same reason as above
                 }
 
 
@@ -181,10 +185,17 @@ public class ControllerSelect : MonoBehaviour {
                     isInGame = false;
                     playerMesh.GetComponent<Animator>().SetBool("Ready", false);                                // make the animation return to idle
                     this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().sprite = Select;
+                playerMesh.transform.parent.gameObject.transform.Find("SelectArrow_" + playerNum + "_Left").GetComponent<Image>().enabled = true;    // Set the selected arrows to visible for the same reason as above
+                playerMesh.transform.parent.gameObject.transform.Find("SelectArrow_" + playerNum + "_Right").GetComponent<Image>().enabled = true;    // Set the selected arrows to visible for the same reason as above
             }
                 else
                 {                                                                           // Else they are not in the game and wish to return to the previous screen
-                    ResetPlayer();                                                          // Reset the player to initial un selected values
+                                                                           
+                    ControllerSelect[] i = GameObject.FindObjectsOfType<ControllerSelect>();        // Reset all the players to their initial un selected values
+                    for (int a = 0; a < i.Length; a++)
+                    {
+                        i[a].ResetPlayer();
+                    }
                     MenuScript.Instance.ReturntoMainMenu();
                 }
                 
@@ -223,6 +234,7 @@ public class ControllerSelect : MonoBehaviour {
     
     public void ResetPlayer()                                           // Reset all appropriate values to their initial state, i.e. return to if the game was just started
     {
+        
         isSelected = false;
         isInGame = false;
         Choice = 0;
@@ -232,7 +244,8 @@ public class ControllerSelect : MonoBehaviour {
         MenuScript.Instance.SetTotalNumberofPlayers(0);
         MenuScript.Instance.SetPlayersInGame(playerNum, false);
         playerMesh.gameObject.transform.Find("CountryFlag").GetComponent<Image>().sprite = flags[Choice].GetSprite();
-        playerMesh.transform.Find("SelectArrows" + playerNum).GetComponent<Image>().enabled = true;
+        playerMesh.transform.parent.gameObject.transform.Find("SelectArrow_" + playerNum + "_Left").GetComponent<Image>().enabled = true;    // Set the selected arrows to visible for the same reason as above
+        playerMesh.transform.parent.gameObject.transform.Find("SelectArrow_" + playerNum + "_Right").GetComponent<Image>().enabled = true;    // Set the selected arrows to visible for the same reason as above
 
 
         selectedPlayerMat = deselectedPlayerMat;

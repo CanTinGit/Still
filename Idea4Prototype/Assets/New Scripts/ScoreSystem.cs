@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ScoreSystem : MonoBehaviour {
 
     // Use this for initialization
-    float finalScore; //the final score of the level
+    public float finalScore; //the final score of the level
     List<float> checkpointTime; // the amount of checkpoints that are in the level
     int collectablesObtained; //the collectables obtained overall
     int timesCameraTriggered; // the number of times the camera has been triggered
@@ -21,13 +21,14 @@ public class ScoreSystem : MonoBehaviour {
     public float triggerCameraScore; //The points awarded for not triggering over the max camera amount
     public float highScoreBonus; //the points awarded if you beat your high score
     public bool cameraInLevel; //the boolean to tell us if there is a camera ai in this level
-    public int cheese;  //the cheese timer score
+    //public int cheese;  //the cheese timer score
+    int lastCheese =9;
     void Start ()
     {
         timeScript = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
         checkpointTime = new List<float>();
         Checkpoint = 0;
-        cheese = 0;
+        //cheese = 0;
         finalScore = 0;
         timesCameraTriggered = 0;
         collectablesObtained = 0;
@@ -99,7 +100,7 @@ public class ScoreSystem : MonoBehaviour {
     {
         float time = 0;
         Debug.Log("Return Score");
-        cheese = 0;
+        int star = 0;
         if (checkpointTime.Count!=0)
         {
             Debug.Log("checkpoint list " + checkpointTime.Count);
@@ -108,28 +109,28 @@ public class ScoreSystem : MonoBehaviour {
                 time = checkpoint;
                 if (time > 30.0f && time <= 60.0f)
                 {
-                    cheese += 3;
+                    star += 3;
                 }
                 else if (time > 0.0f && time <= 30.0f)
                 {
-                    cheese += 2;
+                    star += 2;
                 }
                 else if (time == 0.0f)
                 {
-                    cheese += 1;
+                    star += 1;
                 }
 
             }
-            Debug.Log("stars before " + cheese);
-            cheese = Mathf.RoundToInt((float)cheese / 3);
-            Debug.Log(cheese);
+            Debug.Log("stars before " + star);
+            star = Mathf.RoundToInt((float)star / 3);
+            Debug.Log(star);
             Debug.Log("time is " + time);
         }
         else
         {
-            cheese = 1;
-        }
-        Sprite sprite = Resources.Load<Sprite>("UI/ScoreSystem/Star" + cheese);
+            star = 1;
+        }    
+        Sprite sprite = Resources.Load<Sprite>("UI/ScoreSystem/Star" + star);
         return sprite;
     }
     public float ReturnScore()
@@ -140,7 +141,7 @@ public class ScoreSystem : MonoBehaviour {
     public Sprite ChangeTimeToStars()
     {
         float timeFromCheckpoint = 0;
-        int stars = 0;
+        int timestars = 0;
         Sprite sprite;
         for (int count = 0; count < checkpointTime.Count; count++)
         {
@@ -156,21 +157,27 @@ public class ScoreSystem : MonoBehaviour {
 
             if (timeFromCheckpoint > 30 && timeFromCheckpoint <= 60)
             {
-                stars += 3;
+                timestars += 3;
             }
             else if (timeFromCheckpoint > 0 && timeFromCheckpoint <= 30)
             {
-                stars += 2;
+                timestars += 2;
             }
             else if (timeFromCheckpoint == 0)
             {
-                stars += 1;
+                timestars += 1;
             }
         }
         //stars = Mathf.RoundToInt((float)stars / 3);
-        if(stars>3)
+        //doing cheese bit here remember
+        if (lastCheese != timestars)
         {
-             sprite = Resources.Load<Sprite>("UI/ScoreSystem/Cheese" + stars);
+            lastCheese = timestars;
+            AkSoundEngine.PostEvent("cheese_bite", gameObject);
+        }
+        if (timestars > 3)
+        {
+             sprite = Resources.Load<Sprite>("UI/ScoreSystem/Cheese" + timestars);
         }
         else
         {

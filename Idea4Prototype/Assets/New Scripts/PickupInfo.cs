@@ -18,7 +18,7 @@ public class PickupInfo : MonoBehaviour
             spawnerManager = GameObject.Find("SpawnerManager");
         }
         holder = null;
-        originalColor = this.GetComponent<MeshRenderer>().material.color;
+        //originalColor = this.GetComponent<MeshRenderer>().material.color;
     }
     public void SetHolder(GameObject holder_)
     {
@@ -53,6 +53,7 @@ public class PickupInfo : MonoBehaviour
                             transform.eulerAngles = new Vector3(transform.eulerAngles.x, col.transform.eulerAngles.y, transform.eulerAngles.z);
                             col.gameObject.GetComponent<PickupInfo>().SetTopOff(gameObject);
                             gameObject.GetComponent<PickupInfo>().SetGrounded(true);
+                            AkSoundEngine.PostEvent("box_click", gameObject);
                         }
                     }
                 }
@@ -68,6 +69,10 @@ public class PickupInfo : MonoBehaviour
             //float angle = Vector3.Angle(directionTowardsGrounds, Vector3.down);
             //Debug.Log(angle);
             grounded = true;
+        }
+        if(this.gameObject.name.Contains("PickupWeight") && col.transform.name.Contains("m_seesaw"))
+        {
+            AkSoundEngine.PostEvent("weight_plank", gameObject);
         }
         if (gameObject.name.Contains("PickupThrow"))
         {
@@ -85,6 +90,30 @@ public class PickupInfo : MonoBehaviour
         //    {
         //        gameObject.GetComponent<Rigidbody>().isKinematic = true;
         //    }
+    }
+
+    void OnCollisionStay(Collision col)
+    {
+        Debug.Log(col.transform.name + "0");
+        if (col.gameObject.tag == "Player")
+        {
+            Debug.Log(col.transform.name + "1");
+            if (gameObject.GetComponent<PickupInfo>().onTopOff == null)
+            {
+                Debug.Log(col.transform.name + "3");
+                Vector3 direction = transform.position + Vector3.up - col.transform.position;
+                float degree = Vector3.Angle(direction, Vector3.up);
+                Debug.Log(degree);
+                if (degree < 75)
+                {
+                    onTopOff = col.gameObject;
+                }
+                else if (degree > 75)
+                {
+                    onTopOff = null;
+                }
+            }
+        }
     }
     
     void OnCollisionExit(Collision col)

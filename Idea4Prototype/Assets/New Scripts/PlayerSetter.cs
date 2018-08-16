@@ -13,8 +13,8 @@ public class PlayerSetter : MonoBehaviour {
         //AkSoundEngine.PostEvent("stop_level_music", gameObject);
         //AkSoundEngine.StopAll();
         //Invoke("DelayMusicStart", 0.5f);
-        AkSoundEngine.PostEvent("play_level_music", gameObject);
         AkSoundEngine.SetSwitch("Music_Transition", "Section1", gameObject);
+        AkSoundEngine.PostEvent("play_level_music", gameObject);
         // Sets the  number of visible/ active players in the scene based on the numPlayer value passed from the main menu
         if (MenuScript.Instance.p1InGame == true)
         {

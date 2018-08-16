@@ -332,6 +332,21 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="paper_unravel" ID="{D311E98A-EF7F-4110-8CCA-2A382EDD5896}">
+							<ChildrenList>
+								<Action Name="" ID="{396F4222-9F59-40DC-B22C-851E6F94B6B9}" ShortID="851194363">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Paper_unravel" ID="{F90553AD-FD12-48F6-A70C-0CA73ED73112}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" ShortID="618037974">
@@ -415,6 +430,35 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="weight_drop" ID="{4765EB92-AAE9-493A-A8A4-A64BE1355DD3}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gate_trigger" ID="{908A705D-223B-4DDA-BF4B-A262BD450DDB}">
+							<ChildrenList>
+								<Action Name="" ID="{397FC6DE-8195-4FC4-9D6D-9060FB699A22}" ShortID="630466456">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gate" ID="{DC54C505-FC05-4708-85C6-676B37525EDF}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="electricity_trigger" ID="{DD557866-76BE-4378-8205-2D2D9290C653}">
+							<ChildrenList>
+								<Action Name="" ID="{5F73D018-67F6-43C3-9367-E09C130D66C2}" ShortID="486476302">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="electricity" ID="{9A8A1FC2-BF2A-42F1-9D8F-DB5FEA24D996}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1016,6 +1060,7 @@
 										<Action Name="" ID="{17D3E552-91CC-41F9-9B4C-91DCC902C516}" ShortID="319665327">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
@@ -1066,6 +1111,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="box_click" ID="{343BABFB-5FD3-4A01-BFCF-5E7124F2DD92}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gate" ID="{DC54C505-FC05-4708-85C6-676B37525EDF}">
+					<ChildrenList>
+						<Action Name="" ID="{AE212A13-DFEB-47C7-BDD5-61F23FFCD4D1}" ShortID="758677239">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gate_1" ID="{01A9A4E7-D437-4896-AD92-0E33CE8B1025}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

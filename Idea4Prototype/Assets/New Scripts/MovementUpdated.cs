@@ -70,9 +70,9 @@ public class MovementUpdated : MonoBehaviour {
 
             if(rigidbody.velocity.y < velocity)
             {
-                Debug.Log("old velo == " + velocity);
+                //Debug.Log("old velo == " + velocity);
                 velocity = rigidbody.velocity.y;
-                Debug.Log("new velo == " + velocity);
+                //Debug.Log("new velo == " + velocity);
             }
             ////movement controls for player - (S and W keys move forwards and back) & ( A and D keys rotate the player left and right)
             //if (PlayerNum == 1)
@@ -224,9 +224,9 @@ public class MovementUpdated : MonoBehaviour {
                         gameObject.GetComponent<Animator>().SetBool("Jump", true);
                     }
                     rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
-                    Debug.Log("Strat");
+                    //Debug.Log("Strat");
                     gameObject.GetComponent<CapsuleCollider>().material = jumpingMaterial;
-                    Debug.Log("End");
+                   // Debug.Log("End");
                 }
             }
 
@@ -343,12 +343,12 @@ public class MovementUpdated : MonoBehaviour {
             {
                 
                 Vector3 direction = transform.position - col.transform.position;
-                Debug.Log(transform.position);
-                Debug.Log(col.transform.position);
-                Debug.Log(direction);
+               // Debug.Log(transform.position);
+               // Debug.Log(col.transform.position);
+               // Debug.Log(direction);
                 //Debug.Log("direction is " + direction);
                 float degree = Vector3.Angle(direction, Vector3.up);
-                Debug.Log(degree);
+                //Debug.Log(degree);
                 //Debug.Log(transform.position.y);
                 if (degree < 60)
                 {

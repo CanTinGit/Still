@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -582,6 +582,7 @@
 				<Event Id="1769629947" Name="click_positive" ObjectPath="\Events\Default Work Unit\UI\click_positive"/>
 				<Event Id="3780343222" Name="click_select" ObjectPath="\Events\Default Work Unit\UI\click_select"/>
 				<Event Id="3753593413" Name="hover" ObjectPath="\Events\Default Work Unit\UI\hover"/>
+				<Event Id="1339907015" Name="paper_unravel" ObjectPath="\Events\Default Work Unit\UI\paper_unravel"/>
 				<Event Id="2398231425" Name="score" ObjectPath="\Events\Default Work Unit\UI\score"/>
 				<Event Id="2178222430" Name="stop_score" ObjectPath="\Events\Default Work Unit\UI\stop_score"/>
 			</IncludedEvents>
@@ -690,6 +691,10 @@
 					<ShortName>Click_Negative.wav</ShortName>
 					<Path>SFX\Click_Negative_1C9C67B2.wem</Path>
 				</File>
+				<File Id="1030795443" Language="SFX">
+					<ShortName>Paper_unravel.wav</ShortName>
+					<Path>SFX\Paper_unravel_1C9C67B2.wem</Path>
+				</File>
 				<File Id="1050165260" Language="SFX">
 					<ShortName>Bubble_Float_3.wav</ShortName>
 					<Path>SFX\Bubble_Float_3_09D4AFC1.wem</Path>
@@ -756,6 +761,7 @@
 			<Path>English(US)\Test.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3850141293" Name="box_click" ObjectPath="\Events\Default Work Unit\box_click"/>
+				<Event Id="255911779" Name="button_buzz" ObjectPath="\Events\Default Work Unit\button_buzz"/>
 				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click"/>
 				<Event Id="3454382244" Name="button_trigger" ObjectPath="\Events\Default Work Unit\Triggers\button_trigger"/>
 				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup"/>
@@ -763,6 +769,9 @@
 				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup"/>
 				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release"/>
 				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\electricity"/>
+				<Event Id="1568560881" Name="electricity_trigger" ObjectPath="\Events\Default Work Unit\Triggers\electricity_trigger"/>
+				<Event Id="1121922920" Name="gate" ObjectPath="\Events\Default Work Unit\gate"/>
+				<Event Id="3439052529" Name="gate_trigger" ObjectPath="\Events\Default Work Unit\Triggers\gate_trigger"/>
 				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact"/>
 				<Event Id="2980894478" Name="object_slide" ObjectPath="\Events\Default Work Unit\object_slide"/>
 				<Event Id="212497099" Name="object_slide_trigger" ObjectPath="\Events\Default Work Unit\Triggers\object_slide_trigger"/>
@@ -780,6 +789,10 @@
 				<File Id="87040156" Language="English(US)">
 					<ShortName>Crane_Part_1.wav</ShortName>
 					<Path>Voices\English(US)\Crane_Part_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="148856712" Language="SFX">
+					<ShortName>UI_Correct_Buzz.wav</ShortName>
+					<Path>SFX\UI_Correct_Buzz_84060241.wem</Path>
 				</File>
 				<File Id="162006207" Language="SFX">
 					<ShortName>Wood_Impact_Light.wav</ShortName>
@@ -816,6 +829,14 @@
 				<File Id="290648010" Language="SFX">
 					<ShortName>fx_push_loop.wav</ShortName>
 					<Path>SFX\fx_push_loop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="318844511" Language="SFX">
+					<ShortName>gate_1.wav</ShortName>
+					<Path>SFX\gate_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="359920825" Language="SFX">
+					<ShortName>UI_Incorrect_Buzz.wav</ShortName>
+					<Path>SFX\UI_Incorrect_Buzz_3B068DBB.wem</Path>
 				</File>
 				<File Id="400306442" Language="SFX">
 					<ShortName>Impact_Can_Very_Light_2.wav</ShortName>

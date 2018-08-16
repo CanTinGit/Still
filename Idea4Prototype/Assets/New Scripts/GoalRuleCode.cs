@@ -54,6 +54,7 @@ public class GoalRuleCode : MonoBehaviour
             NumPlayers++;
             if (NumPlayers == MenuScript.Instance.GetNumberofPlayers())
             {
+                col.gameObject.GetComponent<MovementUpdated>().enabled = false;
                 //// Fade to next level if possible else go to main menu
                 ScoreSystem scoreSystem = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>();
                 scoreSystem.AddCheckpointTime();
@@ -68,9 +69,16 @@ public class GoalRuleCode : MonoBehaviour
                 //    player.GetComponent<MovementUpdated>().enabled = false;
                 //    player.GetComponent<Rigidbody>().isKinematic = true;
                 //}
+                AkSoundEngine.PostEvent("stop_level_music", gameObject);
+                Invoke("DelayStop", 3.0f);
                 MenuScript.Instance.FadeToNextLevel();
             }
         }
+    }
+
+    void DelayStop()
+    {
+        AkSoundEngine.StopAll();
     }
 
 }

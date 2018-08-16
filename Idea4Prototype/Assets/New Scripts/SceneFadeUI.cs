@@ -25,8 +25,9 @@ public class SceneFadeUI : MonoBehaviour
         //scoreSystem.AddCheckpointTime();
         //scoreSystem.CalculateFinalScore();
         gameWonPanel.gameObject.SetActive(true);
+        gameWonPanel.GetComponent<Animator>().SetTrigger("FadeIn");
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("NextLevel"));
-        gameWonPanel.gameObject.transform.GetChild(0).transform.Find("CheesesImage").gameObject.GetComponent<Image>().sprite = m_camera.GetComponent<ScoreSystem>().ReturnStars();
+        gameWonPanel.gameObject.transform.Find("CheesesImage").gameObject.GetComponent<Image>().sprite = m_camera.GetComponent<ScoreSystem>().ReturnStars();
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)
         {

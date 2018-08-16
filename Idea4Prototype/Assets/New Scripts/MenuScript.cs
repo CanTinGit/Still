@@ -49,6 +49,7 @@ public class MenuScript : MonoBehaviour
     GameObject hoveringOver;
     // Booleans to control what players should be visible in game
     public bool p1InGame, p2InGame, p3InGame, p4InGame;
+    public bool backToMenu;
     //hold the AudioClass which stores all the information to control audio
     //AudioClass audioClass;
     public static MenuScript Instance
@@ -90,6 +91,7 @@ public class MenuScript : MonoBehaviour
             DontDestroyOnLoad(gm.gameObject);
             _instance = gm.GetComponent<MenuScript>();
         }
+        backToMenu = false;
         IntialiseAndSetScene();
         LoadPlayerData();
         //Set the max level by the player data
@@ -297,7 +299,6 @@ public class MenuScript : MonoBehaviour
     //takes the button that is passed in and adds a listener to the correct function
     void FindButtonAddListener(GameObject button_)
     {
-        Debug.Log(button_.name);
         Button button = button_.GetComponent<Button>();
         switch (button.name)
         {
@@ -359,7 +360,7 @@ public class MenuScript : MonoBehaviour
                 button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level 1 Final Ian Light Pass needed")); //level 1 designer v3
                 break;
             case "Level 2 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_2"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_2_V2"));
                 break;
             case "Level 0 Button":
                 button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Tutorial_Level"));
@@ -611,9 +612,8 @@ public class MenuScript : MonoBehaviour
         ResetGameValues();
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
-
         //AkSoundEngine.PostEvent("play_intro", gameObject);
-
+        backToMenu = true;
 
         //Invoke("DelayReturn", 0.05f);
     }
@@ -673,6 +673,7 @@ public class MenuScript : MonoBehaviour
         CompleteLevelAndRate();
         //Turn the trigger on to play the fade animation
         sceneFade = GameObject.Find("FadeSceneHolder").GetComponent<Animator>();
+        
         sceneFade.SetTrigger("FadeOut");
         //}
 
@@ -713,7 +714,6 @@ public class MenuScript : MonoBehaviour
         CancelInvoke("CheckToPlayHoverSound");
         AkSoundEngine.StopAll();
         eventSystem = null;
-        AkSoundEngine.StopAll();
         SceneManager.LoadScene(sceneName);
     }
     //flip the menu buttons to the opposite state
@@ -767,6 +767,10 @@ public class MenuScript : MonoBehaviour
     public void SetNumberofPlayers(int player)
     {
         numPlayers +=  player;
+        if(numPlayers!=0 && player>0)
+        {
+            AkSoundEngine.PostEvent("acceptance_" + numPlayers.ToString(), gameObject);
+        }
     }
     // Returns the number of players to be in the scene
     public int GetNumberofPlayers()

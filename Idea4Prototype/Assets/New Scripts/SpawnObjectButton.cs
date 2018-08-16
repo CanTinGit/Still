@@ -14,6 +14,7 @@ public class SpawnObjectButton : MonoBehaviour {
     GameObject spawnerManager;      // Reference to the spawner manager
     public bool isForMetalSphere;
     public bool canDispense;
+
     //controls the blinking lights
     public bool blinkingLights; //controls whether the lights will blink for the button or not
     public GameObject blinkButton; //the button gameobject
@@ -81,7 +82,7 @@ public class SpawnObjectButton : MonoBehaviour {
                 //else
                 //{
                 //    Debug.Log("Origianl");
-                    spawnerManager.GetComponent<Spawner>().Spawn();
+                spawnerManager.GetComponent<Spawner>().Spawn();
                 //}
 
             }
@@ -96,6 +97,17 @@ public class SpawnObjectButton : MonoBehaviour {
                 button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
                 //play the button click sound
                 AkSoundEngine.PostEvent("button_click", gameObject);
+                if (GameObject.Find("SpawnerManager").GetComponent<Spawner>().spawnPointIndex == 1)
+                {
+                    Debug.Log("correct");
+                    AkSoundEngine.SetSwitch("Buzz", "Correct", gameObject);
+                }
+                else
+                {
+                    Debug.Log("incorrect");
+                    AkSoundEngine.SetSwitch("Buzz", "Incorrect", gameObject);
+                }
+                AkSoundEngine.PostEvent("button_buzz", gameObject);
                 // Spawn the object
                 spawnerManager.GetComponent<Spawner>().Spawn();
             }

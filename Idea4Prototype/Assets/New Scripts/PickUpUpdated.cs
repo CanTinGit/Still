@@ -150,7 +150,7 @@ public class PickUpUpdated : MonoBehaviour
                             Invoke("DragPickedUp", 0.0f);
                             return;
                         }
-                        else if (picked.name == "LeverWall")
+                        else if (picked.name == "LeverWall" || picked.name == "Switch")
                         {
                             //run the script the picks up the new Lever and also attachs the character joint
                             if (picked.GetComponent<LeverWallScript>())
@@ -160,6 +160,10 @@ public class PickUpUpdated : MonoBehaviour
                             if (picked.GetComponent<Lever>())
                             {
                                 picked.GetComponent<Lever>().Init();
+                            }
+                            if (picked.GetComponent<Switch>())
+                            {
+                                picked.GetComponent<Switch>().Init();
                             }
                             //we pulled the lever interactable
                             if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)

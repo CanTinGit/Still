@@ -8,10 +8,13 @@ public class StartGame : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        Debug.Log("Test");
         AkSoundEngine.StopAll();
         AkSoundEngine.SetSwitch("intro", "splash", gameObject);
         AkSoundEngine.PostEvent("play_music", gameObject);
+        if (MenuScript.Instance.backToMenu)
+        {
+            MenuScript.Instance.IntialiseAndSetScene();
+        }      
         //if (GameObject.Find("GameManager") == null)
         //{
         //    GameObject gm = new GameObject("GameManager");
@@ -24,8 +27,6 @@ public class StartGame : MonoBehaviour {
         //}
         //Destroy(this.gameObject);
     }
-
-
     public void Play(string transition)
     {
         AkSoundEngine.SetSwitch("intro",transition, gameObject);

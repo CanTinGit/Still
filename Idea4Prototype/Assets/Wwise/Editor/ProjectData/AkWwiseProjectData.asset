@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: -1512760602
-    m_lastTimePart2: -1999240549
+    m_lastTimePsrt1: -145045680
+    m_lastTimePart2: -1999240319
     List:
     - Name: acceptance_1
       Path: Default Work Unit\UI\acceptance_1
@@ -88,7 +88,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -621016007
       Guid: 284e521010388f41b1aaaf494b9056db
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: bubble_shot
       Path: Default Work Unit\Camera\bubble_shot
       PathAndIcons:
@@ -100,7 +100,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1531020610
       Guid: 326c18d20ee52d45970ebee7b9aacfaf
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: button_buzz
       Path: Default Work Unit\button_buzz
       PathAndIcons:
@@ -120,7 +120,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 814543256
       Guid: 669e5d7a01bc7e45af86c4b6ca633b51
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: button_trigger
       Path: Default Work Unit\Triggers\button_trigger
       PathAndIcons:
@@ -144,7 +144,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1860426137
       Guid: a0dfc76367cfff468bb2d7269528e08b
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: cheese_bite
       Path: Default Work Unit\UI\cheese_bite
       PathAndIcons:
@@ -216,7 +216,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 412826751
       Guid: 6acad24ca58bf54897afa548d0693919
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_release
       Path: Default Work Unit\Crane\crane_release
       PathAndIcons:
@@ -228,7 +228,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -744631134
       Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: crane_trigger_pickup
       Path: Default Work Unit\Triggers\crane_trigger_pickup
       PathAndIcons:
@@ -263,6 +263,18 @@ MonoBehaviour:
       ID: -1377845400
       Guid: c21f8a9a2abff1429d8fdb5fea24d996
       maxAttenuation: 0
+    - Name: electricity_trigger
+      Path: Default Work Unit\Triggers\electricity_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: electricity_trigger
+        ObjectType: 3
+      ID: 1568560881
+      Guid: 667855ddbe76784382052d2d9290c653
+      maxAttenuation: 0
     - Name: game_start
       Path: Default Work Unit\MusicEvents\Opening\game_start
       PathAndIcons:
@@ -276,6 +288,28 @@ MonoBehaviour:
         ObjectType: 3
       ID: 733168346
       Guid: 531263253405ab4996fb5b59b7a8c543
+      maxAttenuation: 0
+    - Name: gate
+      Path: Default Work Unit\gate
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: gate
+        ObjectType: 3
+      ID: 1121922920
+      Guid: 05c554dc05fc084785c6676b37525edf
+      maxAttenuation: 0
+    - Name: gate_trigger
+      Path: Default Work Unit\Triggers\gate_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: gate_trigger
+        ObjectType: 3
+      ID: -855914767
+      Guid: 5d708a903b22da4dbf4ba262bd450ddb
       maxAttenuation: 0
     - Name: hover
       Path: Default Work Unit\UI\hover
@@ -310,7 +344,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 538597049
       Guid: ac62c32a5eb5c843827b7269bfa7b694
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: object_slide
       Path: Default Work Unit\object_slide
       PathAndIcons:
@@ -320,7 +354,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1314072818
       Guid: 98fe6b1a5ef9834dbcdf3847ef604db5
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: object_slide_trigger
       Path: Default Work Unit\Triggers\object_slide_trigger
       PathAndIcons:
@@ -332,6 +366,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: 212497099
       Guid: a20935b96c6649478efe3343402cc572
+      maxAttenuation: 0
+    - Name: paper_unravel
+      Path: Default Work Unit\UI\paper_unravel
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: paper_unravel
+        ObjectType: 3
+      ID: 1339907015
+      Guid: 8ae911d37fef10418cca2a382edd5896
       maxAttenuation: 0
     - Name: play_level_music
       Path: Default Work Unit\MusicEvents\Level\play_level_music
@@ -478,7 +524,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -92345639
       Guid: 40a5b796e2b3ea4389ecb78bd86ccc83
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: score
       Path: Default Work Unit\UI\score
       PathAndIcons:
@@ -718,7 +764,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1928594291
       Guid: 92eb6547e9aa3a49a8a4a64be1355dd3
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: weight_drop_trigger
       Path: Default Work Unit\Triggers\weight_drop_trigger
       PathAndIcons:
@@ -740,13 +786,13 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1772950764
       Guid: 2ef64733a043294cb6d310959d30e570
-      maxAttenuation: 100
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: -844086010
-    m_lastTimePart2: -1999240551
+    m_lastTimePsrt1: -1475836496
+    m_lastTimePart2: -1999240323
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -861,8 +907,8 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-    m_lastTimePsrt1: 259328582
-    m_lastTimePart2: -1999240552
+    m_lastTimePsrt1: 1088702007
+    m_lastTimePart2: -1999240534
     List:
     - Name: Buzz
       Path: Default Work Unit\Buzz
@@ -935,8 +981,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -843026010
-    m_lastTimePart2: -1999240551
+    m_lastTimePsrt1: -1048770016
+    m_lastTimePart2: -1999240328
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -1014,8 +1060,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
-    m_lastTimePsrt1: 344999398
-    m_lastTimePart2: -1999240548
+    m_lastTimePsrt1: 1064419579
+    m_lastTimePart2: -1999240534
     List:
     - Name: click_start
       Path: Default Work Unit\click_start
@@ -1044,25 +1090,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Idea4Prototype_WwiseProject
-  - /Idea4Prototype_WwiseProject/Auxiliary Busses
-  - /Idea4Prototype_WwiseProject/Auxiliary Busses/Default Work Unit
-  - /Idea4Prototype_WwiseProject/Auxiliary Busses/Default Work Unit/Master Audio Bus
   - /Idea4Prototype_WwiseProject/Events
   - /Idea4Prototype_WwiseProject/Events/Default Work Unit
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Tut Triggers
-  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Tutorial
-  - /Idea4Prototype_WwiseProject/SoundBanks
-  - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
-  - /Idea4Prototype_WwiseProject/States
-  - /Idea4Prototype_WwiseProject/States/Default Work Unit
-  - /Idea4Prototype_WwiseProject/States/Default Work Unit/Impact_Force
-  - /Idea4Prototype_WwiseProject/States/Default Work Unit/Material
-  - /Idea4Prototype_WwiseProject/States/Default Work Unit/Nationality
-  - /Idea4Prototype_WwiseProject/Switches
-  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit
-  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit/Buzz
-  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit/intro
-  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit/Music_Transition
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
