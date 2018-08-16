@@ -54,23 +54,31 @@ public class GoalRuleCode : MonoBehaviour
             NumPlayers++;
             if (NumPlayers == MenuScript.Instance.GetNumberofPlayers())
             {
-                // Fade to next level if possible else go to main menu
+                col.gameObject.GetComponent<MovementUpdated>().enabled = false;
+                //// Fade to next level if possible else go to main menu
                 ScoreSystem scoreSystem = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>();
                 scoreSystem.AddCheckpointTime();
                 scoreSystem.CalculateFinalScore();
-                gameWonPanel.gameObject.SetActive(true);
-                eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("NextLevel"));
-                gameWonPanel.gameObject.transform.GetChild(0).transform.Find("CheesesImage").gameObject.GetComponent<Image>().sprite = m_camera.GetComponent<ScoreSystem>().ReturnStars();
-                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                foreach(GameObject player in players)
-                {
-                    player.GetComponent<Animator>().SetBool("isMoving", false);
-                    player.GetComponent<MovementUpdated>().enabled = false;
-                    player.GetComponent<Rigidbody>().isKinematic = true;
-                }
-                //MenuScript.Instance.FadeToNextLevel();
+                //gameWonPanel.gameObject.SetActive(true);
+                //eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("NextLevel"));
+                //gameWonPanel.gameObject.transform.GetChild(0).transform.Find("CheesesImage").gameObject.GetComponent<Image>().sprite = m_camera.GetComponent<ScoreSystem>().ReturnStars();
+                //GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                //foreach(GameObject player in players)
+                //{
+                //    player.GetComponent<Animator>().SetBool("isMoving", false);
+                //    player.GetComponent<MovementUpdated>().enabled = false;
+                //    player.GetComponent<Rigidbody>().isKinematic = true;
+                //}
+                AkSoundEngine.PostEvent("stop_level_music", gameObject);
+                Invoke("DelayStop", 3.0f);
+                MenuScript.Instance.FadeToNextLevel();
             }
         }
+    }
+
+    void DelayStop()
+    {
+        AkSoundEngine.StopAll();
     }
 
 }

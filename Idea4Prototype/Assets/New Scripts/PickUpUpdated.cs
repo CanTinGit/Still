@@ -139,7 +139,7 @@ public class PickUpUpdated : MonoBehaviour
                             picked.GetComponent<Rigidbody>().useGravity = false;
                             offsetRotation = picked.transform.rotation.eulerAngles.y - this.gameObject.transform.parent.rotation.eulerAngles.y;
                             //start invoke repeating to keep the object in front of the object
-                            InvokeRepeating("MovePickedUp", 0.0f, 0.01666f);
+                            InvokeRepeating("MovePickedUp", 0.2f, 0.01666f);
                             //picked.transform.parent = gameObject.transform;
                             return;
                         }
@@ -150,7 +150,7 @@ public class PickUpUpdated : MonoBehaviour
                             Invoke("DragPickedUp", 0.0f);
                             return;
                         }
-                        else if (picked.name == "LeverWall")
+                        else if (picked.name == "LeverWall" || picked.name == "Switch")
                         {
                             //run the script the picks up the new Lever and also attachs the character joint
                             if (picked.GetComponent<LeverWallScript>())
@@ -160,6 +160,10 @@ public class PickUpUpdated : MonoBehaviour
                             if (picked.GetComponent<Lever>())
                             {
                                 picked.GetComponent<Lever>().Init();
+                            }
+                            if (picked.GetComponent<Switch>())
+                            {
+                                picked.GetComponent<Switch>().Init();
                             }
                             //we pulled the lever interactable
                             if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
@@ -245,14 +249,14 @@ public class PickUpUpdated : MonoBehaviour
                 }
                 if(canThrow == true)
                 {
-                    if(picked!= null && picked.name == "PickupThrow")
+                    if(picked!= null && picked.name.Contains ("PickupThrow"))
                     {
                         //if the key pressed is the throw button
                         if (Input.GetButtonDown((throwKey.ToString())))
                         {
                             Debug.Log("ButtonDown!");
                             //added the != lever to stop the ability to not throw levers ( MAY CHANGE TO == "Pickup")
-                            if (picked != null&&holdingPickUp == true && picked.tag == "Pickup")
+                            if (picked != null && holdingPickUp == true && picked.tag == "Pickup")
                             {
                                 //Turn throw arc on
                                 Debug.Log("Active!");
@@ -276,6 +280,11 @@ public class PickUpUpdated : MonoBehaviour
                                     currentVelocity = maxVelocity;
                                 }
                                 throwArc.GetComponent<ArcRenderMesh>().SetValue(currentVelocity, angle, 10);
+
+                                if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
+                                {
+                                    gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("ThrowStart", true);
+                                }
                             }
                         }
                         //If the throw key is realsed
@@ -289,6 +298,8 @@ public class PickUpUpdated : MonoBehaviour
                                 if (gameObject.transform.parent.gameObject.GetComponent<Animator>() != null)
                                 {
                                     gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("PickUp", false);
+                                    gameObject.transform.parent.gameObject.GetComponent<Animator>().SetBool("ThrowStart", false);
+                                    gameObject.transform.parent.gameObject.GetComponent<Animator>().SetTrigger("ThrowRelease");
                                 }
                                 //picked.GetComponent<gravityBody>().SetPicked(false);
                                 AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(this.gameObject.transform.parent.GetComponent<MovementUpdated>().PlayerNum));
@@ -422,7 +433,7 @@ public class PickUpUpdated : MonoBehaviour
                 //change color to the players color when over the object
                 if (highlightedObject < 1)
                 {
-                    picked.GetComponent<MeshRenderer>().material.color = playerColor;
+                    //picked.GetComponent<MeshRenderer>().material.color = playerColor;
                     highlightedObject++;
                 }
             }              
@@ -463,7 +474,7 @@ public class PickUpUpdated : MonoBehaviour
                 {
                     return;
                 }
-                col.GetComponent<MeshRenderer>().material.color = col.GetComponent<PickupInfo>().ReturnOriginalColor();
+               // col.GetComponent<MeshRenderer>().material.color = col.GetComponent<PickupInfo>().ReturnOriginalColor();
                 highlightedObject--;
             }
         }

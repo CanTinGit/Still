@@ -5,16 +5,6 @@ using UnityEngine;
 public class BridgeStatic : MonoBehaviour {
 
     public string collisionName;
-    public void StartInvoke()
-    { 
-        Invoke("ReturnKinematic", 2.0f);
-    }
-
-    void ReturnKinematic()
-    {
-        this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-    }
-
     void OnCollisionEnter(Collision col)
     {
         if (col.transform.name == collisionName)

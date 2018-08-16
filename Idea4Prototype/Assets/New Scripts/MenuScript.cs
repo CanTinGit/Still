@@ -11,7 +11,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class MenuScript : MonoBehaviour
 {
     //keep information on pannels and 3 buttons which is required for when we are switching to different screens ( options , home , level select)
-    GameObject LevelSelectPanel, OptionPanel, CharacterPanel, PlayButton, CloseButton, OptionButton, ContinueButton, Level1Button, Level2Button;
+    GameObject StartPanel, LevelSelectPanel, OptionPanel, CharacterPanel, PlayButton, CloseButton, OptionButton, ContinueButton, Level1Button, Level2Button;
     // References to the controller select for each player so they can be reset in the other panels
     GameObject controllerSelect1, controllerSelect2, controllerSelect3, controllerSelect4;
     //the pathway to the text file which stores what levels are in the scene
@@ -49,6 +49,7 @@ public class MenuScript : MonoBehaviour
     GameObject hoveringOver;
     // Booleans to control what players should be visible in game
     public bool p1InGame, p2InGame, p3InGame, p4InGame;
+    public bool backToMenu;
     //hold the AudioClass which stores all the information to control audio
     //AudioClass audioClass;
     public static MenuScript Instance
@@ -90,6 +91,7 @@ public class MenuScript : MonoBehaviour
             DontDestroyOnLoad(gm.gameObject);
             _instance = gm.GetComponent<MenuScript>();
         }
+        backToMenu = false;
         IntialiseAndSetScene();
         LoadPlayerData();
         //Set the max level by the player data
@@ -100,9 +102,9 @@ public class MenuScript : MonoBehaviour
     }
     void Start()
     {
-        InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
-        AkSoundEngine.PostEvent("play_intro", gameObject);
-
+        //AkSoundEngine.SetSwitch("intro", "splash", gameObject);
+        //AkSoundEngine.PostEvent("play_music", gameObject);
+        InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);       
     }
 
     public AudioClass GetAudioClass()
@@ -129,11 +131,12 @@ public class MenuScript : MonoBehaviour
         //set up the file pathway
         LevelTextPath = Application.dataPath + "/StreamingAssets/LevelList.txt";
         //set all the panels and buttons to the correct gameobject
+        StartPanel = GameObject.Find("MenuPanel");
         LevelSelectPanel = GameObject.Find("LevelSelectPanel");
-        OptionPanel = GameObject.Find("OptionPanel");
+       // OptionPanel = GameObject.Find("OptionPanel");
         CharacterPanel = GameObject.Find("CharacterSelectPanel");
         PlayButton = GameObject.Find("PlayButton");
-        OptionButton = GameObject.Find("OptionButton");
+       // OptionButton = GameObject.Find("OptionButton");
         CloseButton = GameObject.Find("CloseButton");
         ContinueButton = GameObject.Find("ContinueButton");
         eventSystem = GameObject.Find("EventSystem");
@@ -145,7 +148,7 @@ public class MenuScript : MonoBehaviour
         // Level2Button = GameObject.Find("Level 2 Button");
         //flip the level and options panel off so they can not be seen
         FlipLevelPanel();
-        FlipOptionPanel();
+       // FlipOptionPanel();                    // Options is no longer included
         FlipCharacterPanel();
 
 
@@ -164,11 +167,15 @@ public class MenuScript : MonoBehaviour
     {
         CharacterPanel.gameObject.SetActive(!CharacterPanel.activeSelf);
     }
+    void FlipStartPanel()
+    {
+        StartPanel.gameObject.SetActive(!StartPanel.activeSelf);
+    }
     //runs this function whent he close button is pressed in the options panel
     public void CloseButtonPressed()
     {
         //flip the options off
-        FlipOptionPanel();
+       // FlipOptionPanel();
         //flip the menu buttons
         FlipMenuButtons();
         //reset the temporary keys to the custom keys ( the keys that are set the player and saved)
@@ -180,11 +187,14 @@ public class MenuScript : MonoBehaviour
     //run the function when play button is pressed
     public void PlayPressed()
     {
-        //flip the character panel on and flip off the menu button
+        //flip the character panel on and flip off the menu panel
         FlipCharacterPanel();
-        AkSoundEngine.PostEvent("game_start", gameObject);
-        AkSoundEngine.SetRTPCValue("click_start", 0f, null, 1000);
-        FlipMenuButtons();
+        //AkSoundEngine.PostEvent("game_start", gameObject);
+        //AkSoundEngine.SetRTPCValue("click_start", 0f, null, 1000);
+        //AkSoundEngine.SetSwitch("intro", "character_select", GameObject.Find);
+        GameObject.Find("StartSetUp").GetComponent<StartGame>().Play("character_select");
+        FlipStartPanel();
+        //FlipMenuButtons();
         //Set the navigable buttons to the character screen buttons
         //eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ContinueButton"));
 
@@ -208,52 +218,65 @@ public class MenuScript : MonoBehaviour
     public void ReturntoMainMenu()
     {
         AkSoundEngine.PostEvent("click_back", gameObject);
+       // AkSoundEngine.PostEvent("stop_character_select_music", gameObject);
         FlipCharacterPanel();
-        FlipMenuButtons();
-        eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
-        AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
-        AkSoundEngine.PostEvent("play_intro", gameObject);
+        //FlipMenuButtons();
+        FlipStartPanel();
+        //eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
+        //AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
+        GameObject.Find("StartSetUp").GetComponent<StartGame>().Play("splash");
 
+
+    }
+
+    public void ReturnToCharacterSelect()
+    {
+        //AkSoundEngine.PostEvent("play_character_select_music", gameObject);
+        AkSoundEngine.PostEvent("click_back", gameObject);
+        FlipLevelPanel();                                           // Flip level select panel off
+        FlipCharacterPanel();                                       // Flip character select panel on
     }
     //sets up all the buttons based on what is passed in
     void SetUpButton()
     {
-        FindButtonAddListener(GameObject.Find("ResetButton"));
-        FindButtonAddListener(GameObject.Find("ApplyButton"));
-        FindButtonAddListener(GameObject.Find("CloseOptionButton"));
+        //FindButtonAddListener(GameObject.Find("ResetButton"));
+       // FindButtonAddListener(GameObject.Find("ApplyButton"));
+       // FindButtonAddListener(GameObject.Find("CloseOptionButton"));
         FindButtonAddListener(GameObject.Find("CloseButton"));
         FindButtonAddListener(GameObject.Find("PlayButton"));
-        FindButtonAddListener(GameObject.Find("OptionButton"));
-        FindButtonAddListener(GameObject.Find("PickUpButton"));
-        FindButtonAddListener(GameObject.Find("ForwardKeyButton"));
-        FindButtonAddListener(GameObject.Find("BackwardKeyButton"));
-        FindButtonAddListener(GameObject.Find("LeftButton"));
-        FindButtonAddListener(GameObject.Find("RightButton"));
-        FindButtonAddListener(GameObject.Find("ThrowButton"));
-        FindButtonAddListener(GameObject.Find("JumpButton"));
+       // FindButtonAddListener(GameObject.Find("OptionButton"));
+        //FindButtonAddListener(GameObject.Find("PickUpButton"));
+        //FindButtonAddListener(GameObject.Find("ForwardKeyButton"));
+        //FindButtonAddListener(GameObject.Find("BackwardKeyButton"));
+        //FindButtonAddListener(GameObject.Find("LeftButton"));
+        //FindButtonAddListener(GameObject.Find("RightButton"));
+        //FindButtonAddListener(GameObject.Find("ThrowButton"));
+        //FindButtonAddListener(GameObject.Find("JumpButton"));
         FindButtonAddListener(GameObject.Find("ReturnToMenuButton"));
         //FindButtonAddListener(GameObject.Find("ContinueButton"));
         //FindButtonAddListener(GameObject.Find("ReturnToSplashScreen"));
-        FindButtonAddListener(GameObject.Find("RightChangeCharButton"));
-        FindButtonAddListener(GameObject.Find("LeftChangeCharButton"));
+        //FindButtonAddListener(GameObject.Find("RightChangeCharButton"));
+        //FindButtonAddListener(GameObject.Find("LeftChangeCharButton"));
         FindButtonAddListener(GameObject.Find("Level 1 Button"));
         FindButtonAddListener(GameObject.Find("Level 2 Button"));
         FindButtonAddListener(GameObject.Find("Level 0 Button"));
     }
     //when the return button is pressed in the level select screen
-    void ReturnToMenuPressed()
+    public void ReturnToMenuPressed()
     {
         //empty the level list
         //EmptyLevelList();
         //flip the level panel off
         FlipLevelPanel();
-        //flip the menu buttons off
-        FlipMenuButtons();
+        //flip the menu panel on
+        //FlipMenuButtons();
+        FlipStartPanel();
         numPlayers = 0;
         AkSoundEngine.PostEvent("click_back", gameObject);
         AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
-        AkSoundEngine.PostEvent("play_intro", gameObject);
-        eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
+        //AkSoundEngine.PostEvent("play_music", gameObject);
+
+        //eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("PlayButton"));
         if(controllerSelect1)
         {
             controllerSelect1.GetComponent<ControllerSelect>().ResetPlayer();
@@ -279,45 +302,45 @@ public class MenuScript : MonoBehaviour
         Button button = button_.GetComponent<Button>();
         switch (button.name)
         {
-            case "ResetButton":
-                button.onClick.AddListener(() => MenuScript.Instance.ResetPressed());
-                break;
-            case "ApplyButton":
-                button.onClick.AddListener(() => MenuScript.Instance.OptionApplyButton());
-                break;
-            case "CloseOptionButton":
-                button.onClick.AddListener(() => MenuScript.Instance.CloseButtonPressed());
-                break;
+            //case "ResetButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.ResetPressed());
+            //    break;
+            //case "ApplyButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.OptionApplyButton());
+            //    break;
+            //case "CloseOptionButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.CloseButtonPressed());
+            //    break;
             case "CloseButton":
                 button.onClick.AddListener(() => MenuScript.Instance.QuitApplication());
                 break;
             case "PlayButton":
                 button.onClick.AddListener(() => MenuScript.Instance.PlayPressed());
                 break;
-            case "OptionButton":
-                button.onClick.AddListener(() => MenuScript.Instance.OptionPressed());
-                break;
-            case "PickUpButton":
-                button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
-                break;
-            case "ForwardKeyButton":
-                button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
-                break;
-            case "BackwardKeyButton":
-                button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
-                break;
-            case "LeftButton":
-                button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
-                break;
-            case "RightButton":
-                button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
-                break;
-            case "ThrowButton":
-                button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
-                break;
-            case "JumpButton":
-                button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
-                break;
+            //case "OptionButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.OptionPressed());
+            //    break;
+            //case "PickUpButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
+            //    break;
+            //case "ForwardKeyButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
+            //    break;
+            //case "BackwardKeyButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
+            //    break;
+            //case "LeftButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
+            //    break;
+            //case "RightButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
+            //    break;
+            //case "ThrowButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
+            //    break;
+            //case "JumpButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
+            //    break;
             case "ReturnToMenuButton":
                 button.onClick.AddListener(() => MenuScript.Instance.ReturnToMenuPressed());
                 break;
@@ -327,17 +350,17 @@ public class MenuScript : MonoBehaviour
             //case "ReturnToSplashScreen":
             //    button.onClick.AddListener(() => MenuScript.Instance.ReturntoMainMenu());
             //    break;
-            case "RightChangeCharButton":
-                button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(1,button.transform.parent.GetChild(0).GetComponent<Text>()));
-                break;
-            case "LeftChangeCharButton":
-                button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(-1, button.transform.parent.GetChild(0).GetComponent<Text>()));
-                break;
+            //case "RightChangeCharButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(1,button.transform.parent.GetChild(0).GetComponent<Text>()));
+            //    break;
+            //case "LeftChangeCharButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.SwitchPlayer(-1, button.transform.parent.GetChild(0).GetComponent<Text>()));
+            //    break;
             case "Level 1 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level 1 designer v3"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level 1 Final Ian Light Pass needed")); //level 1 designer v3
                 break;
             case "Level 2 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_2"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_2_V2"));
                 break;
             case "Level 0 Button":
                 button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Tutorial_Level"));
@@ -578,6 +601,7 @@ public class MenuScript : MonoBehaviour
     public void BackToMenu()
     {
         AkSoundEngine.PostEvent("click_back", gameObject);
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene("MainMenu");
         eventSystem = GameObject.Find("EventSystem");
         InvokeRepeating("CheckToPlayHoverSound", 0.0f, 0.02f);
@@ -588,16 +612,16 @@ public class MenuScript : MonoBehaviour
         ResetGameValues();
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
-
         //AkSoundEngine.PostEvent("play_intro", gameObject);
-
+        backToMenu = true;
 
         //Invoke("DelayReturn", 0.05f);
     }
     void DelayMainMenuMusic()
     {
         AkSoundEngine.SetRTPCValue("click_start", 100f, null, 500);
-        AkSoundEngine.PostEvent("play_intro", gameObject);
+        //AkSoundEngine.PostEvent("play_intro", gameObject);
+        //GameObject.Find("StartSetUp").GetComponent<StartGame>().Play("character_select");
     }
 
     public void GameReturnDelayMusic()
@@ -613,6 +637,7 @@ public class MenuScript : MonoBehaviour
     // UI button to let player reset the level where they are
     public void ResetLevel()
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         ResetGameValues();
     }
@@ -645,10 +670,11 @@ public class MenuScript : MonoBehaviour
         int index = SceneManager.GetActiveScene().buildIndex;
         //if (SceneManager.GetActiveScene().buildIndex != Application.levelCount - 1)
         //{
-            CompleteLevelAndRate();
-            //Turn the trigger on to play the fade animation
-            sceneFade = GameObject.Find("FadeSceneHolder").GetComponent<Animator>();
-            sceneFade.SetTrigger("FadeOut");
+        CompleteLevelAndRate();
+        //Turn the trigger on to play the fade animation
+        sceneFade = GameObject.Find("FadeSceneHolder").GetComponent<Animator>();
+        
+        sceneFade.SetTrigger("FadeOut");
         //}
 
     }
@@ -673,8 +699,12 @@ public class MenuScript : MonoBehaviour
             maxLevel = SceneManager.GetActiveScene().buildIndex + 1;
             //Record the level in player data
             playerdata.setCurrentLevel(maxLevel);
+            AkSoundEngine.StopAll();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+        }
+        else
+        {
+            BackToMenu();
         }
     }
 
@@ -682,6 +712,7 @@ public class MenuScript : MonoBehaviour
     public void LoadLevel(string sceneName)
     {
         CancelInvoke("CheckToPlayHoverSound");
+        AkSoundEngine.StopAll();
         eventSystem = null;
         SceneManager.LoadScene(sceneName);
     }
@@ -692,6 +723,7 @@ public class MenuScript : MonoBehaviour
         CloseButton.gameObject.SetActive(!CloseButton.activeSelf);
         OptionButton.gameObject.SetActive(!OptionButton.activeSelf);
     }
+
     //closes the application
     public void QuitApplication()
     {
@@ -735,6 +767,10 @@ public class MenuScript : MonoBehaviour
     public void SetNumberofPlayers(int player)
     {
         numPlayers +=  player;
+        if(numPlayers!=0 && player>0)
+        {
+            AkSoundEngine.PostEvent("acceptance_" + numPlayers.ToString(), gameObject);
+        }
     }
     // Returns the number of players to be in the scene
     public int GetNumberofPlayers()

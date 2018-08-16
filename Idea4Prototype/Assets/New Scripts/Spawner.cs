@@ -59,6 +59,7 @@ public class Spawner : MonoBehaviour
             }
             //weight.GetComponent<Rigidbody>().mass = m_object[objectIndex].GetComponent<Rigidbody>().mass / MenuScript.Instance.GetNumberofPlayers();
             num_objects = num_objects + 1;
+            AkSoundEngine.PostEvent("weight_drop_trigger", gameObject);
             if(unlimited)
             {
                 max_objects++;

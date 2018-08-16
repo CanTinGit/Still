@@ -5,14 +5,20 @@ using UnityEngine;
 public class PickupInfo : MonoBehaviour
 {
     GameObject holder;
+    GameObject spawnerManager;
     Color originalColor;
     public GameObject onTopOff;
     public bool canAutoSnap = false;
     public bool grounded = false;
+    public bool isOnPlatform;
     void Start()
     {
+        if (GameObject.Find("SpawnerManager").gameObject.GetComponent<Spawner2>() != null)
+        {
+            spawnerManager = GameObject.Find("SpawnerManager");
+        }
         holder = null;
-        originalColor = this.GetComponent<MeshRenderer>().material.color;
+        //originalColor = this.GetComponent<MeshRenderer>().material.color;
     }
     public void SetHolder(GameObject holder_)
     {
@@ -47,6 +53,7 @@ public class PickupInfo : MonoBehaviour
                             transform.eulerAngles = new Vector3(transform.eulerAngles.x, col.transform.eulerAngles.y, transform.eulerAngles.z);
                             col.gameObject.GetComponent<PickupInfo>().SetTopOff(gameObject);
                             gameObject.GetComponent<PickupInfo>().SetGrounded(true);
+                            AkSoundEngine.PostEvent("box_click", gameObject);
                         }
                     }
                 }
@@ -54,17 +61,24 @@ public class PickupInfo : MonoBehaviour
         }
         if (col.transform.tag == "Ground")
         {
+            if (isOnPlatform)
+            {
+                gameObject.GetComponent<Rigidbody>().mass = 10;
+            }
             //Vector3 directionTowardsGrounds = -transform.up;
             //float angle = Vector3.Angle(directionTowardsGrounds, Vector3.down);
             //Debug.Log(angle);
             grounded = true;
         }
-        if(this.name== "PickupThrow")
+        if(this.gameObject.name.Contains("PickupWeight") && col.transform.name.Contains("m_seesaw"))
         {
-            if(col.gameObject.GetComponent<Bridge>())
+            AkSoundEngine.PostEvent("weight_plank", gameObject);
+        }
+        if (gameObject.name.Contains("PickupThrow"))
+        {
+            if (col.transform.name.Contains("Main water"))
             {
-                CancelInvoke();
-                Invoke("DestroyObject", 0.2f);
+                Destroy(this.gameObject, 3.0f);
             }
         }
         //else if(col.transform.name.Contains("Pickup") && col.transform.tag == "Pickup" && col.transform.GetComponent<PickupInfo>().GetGrounded()==true)
@@ -76,6 +90,30 @@ public class PickupInfo : MonoBehaviour
         //    {
         //        gameObject.GetComponent<Rigidbody>().isKinematic = true;
         //    }
+    }
+
+    void OnCollisionStay(Collision col)
+    {
+        Debug.Log(col.transform.name + "0");
+        if (col.gameObject.tag == "Player")
+        {
+            Debug.Log(col.transform.name + "1");
+            if (gameObject.GetComponent<PickupInfo>().onTopOff == null)
+            {
+                Debug.Log(col.transform.name + "3");
+                Vector3 direction = transform.position + Vector3.up - col.transform.position;
+                float degree = Vector3.Angle(direction, Vector3.up);
+                Debug.Log(degree);
+                if (degree < 75)
+                {
+                    onTopOff = col.gameObject;
+                }
+                else if (degree > 75)
+                {
+                    onTopOff = null;
+                }
+            }
+        }
     }
     
     void OnCollisionExit(Collision col)
@@ -126,5 +164,13 @@ public class PickupInfo : MonoBehaviour
     void DestroyObject()
     {
         Destroy(this.gameObject);
+    }
+
+    void OnDestroy()
+    {
+        if (spawnerManager != null)
+        {
+            spawnerManager.GetComponent<Spawner2>().num_objects--;
+        }
     }
 }

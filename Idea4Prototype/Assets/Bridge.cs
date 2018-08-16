@@ -5,11 +5,21 @@ using UnityEngine;
 public class Bridge : MonoBehaviour {
 
     public GameObject bridge;
-
-    void OnDestroy()
+    GameObject throw_;
+    void OnCollisionEnter(Collision col)
     {
-          bridge.GetComponent<Rigidbody>().isKinematic = false;
-
+        if (col.transform.name == "PickupThrow")
+        {
+            throw_ = col.gameObject;
+            Invoke("RemoveThrowObject", 0.02f);
+            this.gameObject.GetComponent<Breakable>().SplitMesh(true);
+            bridge.GetComponent<Rigidbody>().isKinematic = false;
+//Destroy(this.gameObject);           
+        }
+    }
+    void RemoveThrowObject()
+    {
+        Destroy(throw_.gameObject);
     }
 
 }

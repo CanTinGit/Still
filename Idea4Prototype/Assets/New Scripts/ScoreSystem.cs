@@ -6,26 +6,29 @@ using UnityEngine.SceneManagement;
 public class ScoreSystem : MonoBehaviour {
 
     // Use this for initialization
-    float finalScore;
-    List<float> checkpointTime;
-    public float timeScoreMultiplier;
-    public float extraPlayerScore;
-    public float CollectableScore;
-    public float maxCameraTrigger;
-    public float triggerCameraScore;
-    public float highScoreBonus;
-    int collectablesObtained;
-    int timesCameraTriggered;
-    public bool cameraInLevel;
-    Timer timeScript;
-    public int star;
-    int Checkpoint;
+    public float finalScore; //the final score of the level
+    List<float> checkpointTime; // the amount of checkpoints that are in the level
+    int collectablesObtained; //the collectables obtained overall
+    int timesCameraTriggered; // the number of times the camera has been triggered
+    Timer timeScript; //the timer script where we obtain the time for each checkpoint
+    int Checkpoint; //tells the script which checkpoint to record for
+    //values for designers so they cant chaneg the controls
+    [Header("Score Settings")]
+    public float timeScoreMultiplier;  //The multiplier for the time
+    public float extraPlayerScore;  //The point awarded for each extra player
+    public float CollectableScore; //the points awarded for collectables
+    public float maxCameraTrigger; //The max amount of times a camera can be triggered before you lose trigger camera score
+    public float triggerCameraScore; //The points awarded for not triggering over the max camera amount
+    public float highScoreBonus; //the points awarded if you beat your high score
+    public bool cameraInLevel; //the boolean to tell us if there is a camera ai in this level
+    //public int cheese;  //the cheese timer score
+    int lastCheese =9;
     void Start ()
     {
         timeScript = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
         checkpointTime = new List<float>();
         Checkpoint = 0;
-        star = 0;
+        //cheese = 0;
         finalScore = 0;
         timesCameraTriggered = 0;
         collectablesObtained = 0;
@@ -54,7 +57,7 @@ public class ScoreSystem : MonoBehaviour {
         finalScore += ((MenuScript.Instance.GetNumberofPlayers()-1) * extraPlayerScore) + (collectablesObtained * CollectableScore);
         if (cameraInLevel == true)
         {
-            finalScore +=triggerCameraScore;
+            finalScore += triggerCameraScore;
         }
         Debug.Log("Calculation is ( number of players " + MenuScript.Instance.GetNumberofPlayers() +
             " multiplied by extre player score " + extraPlayerScore + " ) + ( collectablesObtained " + collectablesObtained
@@ -65,76 +68,68 @@ public class ScoreSystem : MonoBehaviour {
         Debug.Log("Total score is " + finalScore);       
     }
 
-    public void SetCollectableObtained(int collectableObtained_)
-    {
-        collectablesObtained += collectableObtained_;
-    }
+    //public void SetCollectableObtained(int collectableObtained_)
+    //{
+    //    collectablesObtained += collectableObtained_;
+    //}
 
     public void SetTimesCameraTriggered(int timesCameraTriggered_)
     {
         timesCameraTriggered += timesCameraTriggered_;
-        if(timesCameraTriggered> maxCameraTrigger)
+        if(timesCameraTriggered > maxCameraTrigger)
         {
             triggerCameraScore = 0f;
         }
     }
+    //add the time for that checkpoint
     public void AddCheckpointTime()
     {
-        Debug.Log("time added " + timeScript.GetTimeInSeconds() + " seconds" );
+        //Debug.Log("time added " + timeScript.GetTimeInSeconds() + " seconds" );
         checkpointTime.RemoveAt(Checkpoint);
         checkpointTime.Insert(Checkpoint, timeScript.GetTimeInSeconds());
         //checkpointTime.Add(timeScript.GetTimeInSeconds());
         Checkpoint++;
         if (Checkpoint!=3)
         {
-            Debug.Log("time done" + Checkpoint);
+            //Debug.Log("time done" + Checkpoint);
             timeScript.SetTimer(0, 0, 6, 0);
         }
     }
-
+    //returns the cheese sprite for the timer based on overall time
     public Sprite ReturnStars()
     {
         float time = 0;
-        if(checkpointTime.Count!=0)
+        Debug.Log("Return Score");
+        int star = 0;
+        if (checkpointTime.Count!=0)
         {
-            Debug.Log("checkpoint list");
+            Debug.Log("checkpoint list " + checkpointTime.Count);
             foreach (float checkpoint in checkpointTime)
             {
-                //if (checkpoint > 30 && checkpoint <= 60)
-                //{
-                //    star += 3;
-                //}
-                //else if (checkpoint > 0 && checkpoint <= 30)
-                //{
-                //    star += 2;
-                //}
-                //else
-                //{
-                //    star += 1;
-                //}
-                time += checkpoint;
-            }
+                time = checkpoint;
+                if (time > 30.0f && time <= 60.0f)
+                {
+                    star += 3;
+                }
+                else if (time > 0.0f && time <= 30.0f)
+                {
+                    star += 2;
+                }
+                else if (time == 0.0f)
+                {
+                    star += 1;
+                }
 
-            time = time / 3;
+            }
+            Debug.Log("stars before " + star);
+            star = Mathf.RoundToInt((float)star / 3);
+            Debug.Log(star);
             Debug.Log("time is " + time);
-            if (time > 30.0f && time <= 60.0f)
-            {
-                star += 3;
-            }
-            else if (time > 0.0f && time <= 30.0f)
-            {
-                star += 2;
-            }
-            else if(time==0.0f)
-            {
-                star += 1;
-            }
-            //star = star / 3;
         }
         else
         {
             star = 1;
-        }
+        }    
         Sprite sprite = Resources.Load<Sprite>("UI/ScoreSystem/Star" + star);
         return sprite;
     }
@@ -142,52 +137,70 @@ public class ScoreSystem : MonoBehaviour {
     {
         return finalScore;
     }
-    //return the star of checkpoint ( pass in 1 if u want checkpoint 1 ) 
+    //returns the average star score of the whole levels checkpoint
     public Sprite ChangeTimeToStars()
     {
-
         float timeFromCheckpoint = 0;
-        int stars=3;
-        for(int count = 0; count < checkpointTime.Count;count++)
+        int timestars = 0;
+        Sprite sprite;
+        for (int count = 0; count < checkpointTime.Count; count++)
         {
-            if(count!=Checkpoint)
+            //get the time and then add the star score based on it
+            if (count != Checkpoint)
             {
-                timeFromCheckpoint += checkpointTime[count];
-              //  Debug.Log("total time (fake time ) " + timeFromCheckpoint + " checkpoint" + count + " time is " + checkpointTime[count]);
+                timeFromCheckpoint = checkpointTime[count];
+            }
+            else if(count == Checkpoint)
+            {
+                timeFromCheckpoint = timeScript.GetTimeInSeconds();
+            }
+
+            if (timeFromCheckpoint > 30 && timeFromCheckpoint <= 60)
+            {
+                timestars += 3;
+            }
+            else if (timeFromCheckpoint > 0 && timeFromCheckpoint <= 30)
+            {
+                timestars += 2;
+            }
+            else if (timeFromCheckpoint == 0)
+            {
+                timestars += 1;
             }
         }
-        timeFromCheckpoint += timeScript.GetTimeInSeconds();
-        //Debug.Log("total time (fake time ) " + timeFromCheckpoint + " and the time is " + timeScript.GetTimeInSeconds());
-        timeFromCheckpoint = timeFromCheckpoint / 3;
-       // Debug.Log("averaged time is " + timeFromCheckpoint);
-        if (timeFromCheckpoint > 30 && timeFromCheckpoint <= 60)
+        //stars = Mathf.RoundToInt((float)stars / 3);
+        //doing cheese bit here remember
+        if (lastCheese != timestars)
         {
-            stars = 3;
+            lastCheese = timestars;
+            AkSoundEngine.PostEvent("cheese_bite", gameObject);
         }
-        else if (timeFromCheckpoint > 0 && timeFromCheckpoint <= 30)
+        if (timestars > 3)
         {
-            stars = 2;
+             sprite = Resources.Load<Sprite>("UI/ScoreSystem/Cheese" + timestars);
         }
-        else if (timeFromCheckpoint == 0)
+        else
         {
-            stars = 1;
+             sprite = Resources.Load<Sprite>("UI/ScoreSystem/Cheese3");
         }
-        Sprite sprite = Resources.Load<Sprite>("UI/ScoreSystem/Cheese" + stars);
         return sprite;
-        ////returns a checkpointnumber
-        //int checkpointStar = 3;
-        //float timeToStar = timeScript.GetTimeInSeconds();
-        //if (timeToStar > 0 && timeToStar <= 30)
-        //{
-        //    checkpointStar = 2;
-        //}
-        //else if(timeToStar == 0)
-        //{
-        //    checkpointStar = 1;
-        //}
-        ////if it returns 0 it is a fail return
-        ////return checkpointStar;
-        //Sprite sprite = Resources.Load<Sprite>("UI/ScoreSystem/Star" + checkpointStar);
-        //return sprite;
+    }
+
+    public void LevelSkippedScore()
+    {
+        
+        if(checkpointTime.Count > 0)
+        {
+                for (int index = 0; index < checkpointTime.Count; index++)
+                {
+                    Debug.Log(checkpointTime[index]);
+                    checkpointTime.RemoveAt(index);
+                    checkpointTime.Insert(index, 0.0f);
+                }
+        }
+    }
+    public void IncreaseCollectable()
+    {
+        collectablesObtained++;
     }
 }

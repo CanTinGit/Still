@@ -1,10 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
+	212497099	object_slide_trigger			\Default Work Unit\Triggers\object_slide_trigger	
 	412826751	crane_pickup			\Default Work Unit\Crane\crane_pickup	
 	538597049	object_impact			\Default Work Unit\object_impact	
 	814543256	button_click			\Default Work Unit\button_click	
+	1503347734	weight_drop_trigger			\Default Work Unit\Triggers\weight_drop_trigger	
+	1928594291	weight_drop			\Default Work Unit\weight_drop	
+	2522016532	weight_plank			\Default Work Unit\weight_plank	
+	2917121896	electricity			\Default Work Unit\electricity	
+	2980894478	object_slide			\Default Work Unit\object_slide	
 	3150416619	crane_trigger_release			\Default Work Unit\Triggers\crane_trigger_release	
+	3454382244	button_trigger			\Default Work Unit\Triggers\button_trigger	
 	3550336162	crane_release			\Default Work Unit\Crane\crane_release	
 	3559668272	crane_trigger_pickup			\Default Work Unit\Triggers\crane_trigger_pickup	
+	3850141293	box_click			\Default Work Unit\box_click	
+	4202621657	push_object			\Default Work Unit\push_object	
+	4237746237	player_push			\Default Work Unit\Triggers\player_push	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	2939788855	Impact_Force			\Default Work Unit\Impact_Force	
@@ -22,6 +32,8 @@ State	ID	Name	State Group			Notes
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	279731683	Modulator Envelope (Custom)				
+	343929588	Modulator Envelope (Custom)				
+	862279157	Modulator Envelope (Custom)				
 
 Effect plug-ins	ID	Name	Type				Notes
 	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
@@ -33,8 +45,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	162006207	Wood_Impact_Light	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Wood_Impact_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light		8940
 	175213724	Impact_Can_Very_Light_1	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Impact_Can_Very_Light_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light_1		38464
 	199767411	Impact_Can_Light	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Impact_Can_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Light		38464
+	209955788	box_click	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\box_click_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-Diegetic\box_click		29664
+	217250399	fx_slip_loop	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\fx_slip_loop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fx_slip_loop		630846
+	241725416	WeightDrop	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\WeightDrop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\WeightDrop		92512
 	263401526	Wood_Impact_Light_1	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Wood_Impact_Light_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_1		7586
 	282957980	Wood_Impact_Medium_3	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Wood_Impact_Medium_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Medium\Wood_Impact_Medium_3		10950
+	290648010	fx_push_loop	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\fx_push_loop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fx_push_loop		745022
 	400306442	Impact_Can_Very_Light_2	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Impact_Can_Very_Light_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light_2		38464
 	456681022	Impact_Can_Heavy_1	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Impact_Can_Heavy_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Heavy\Impact_Can_Heavy_1		38464
 	524659892	Wood_Impact_Light_2	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Wood_Impact_Light_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_2		14528
@@ -44,6 +60,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	700689296	Wood_Impact_Heavy_4	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Wood_Impact_Heavy_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy_4		17362
 	725526311	electricity	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\electricity_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\electricity		768064
 	819532865	Wood_Impact_Light_5	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Wood_Impact_Light_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_5		15296
+	821463885	Weight hit's plank	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Weight hit's plank_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Weight hit's plank		60216
 	832918321	Impact_Can_Very_Light	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Impact_Can_Very_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light		38464
 	864353628	Impact_Can_Medium_2	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Impact_Can_Medium_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Medium\Impact_Can_Medium_2		38464
 	890476972	Wood_Impact_Heavy_2	C:\Users\1301755\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Mac\SFX\Wood_Impact_Heavy_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy_2		13480
