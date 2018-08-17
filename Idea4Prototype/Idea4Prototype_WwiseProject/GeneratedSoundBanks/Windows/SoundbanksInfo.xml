@@ -581,6 +581,7 @@
 				<Event Id="2102833423" Name="click_negative" ObjectPath="\Events\Default Work Unit\UI\click_negative"/>
 				<Event Id="1769629947" Name="click_positive" ObjectPath="\Events\Default Work Unit\UI\click_positive"/>
 				<Event Id="3780343222" Name="click_select" ObjectPath="\Events\Default Work Unit\UI\click_select"/>
+				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\UI\game_start"/>
 				<Event Id="3753593413" Name="hover" ObjectPath="\Events\Default Work Unit\UI\hover"/>
 				<Event Id="1339907015" Name="paper_unravel" ObjectPath="\Events\Default Work Unit\UI\paper_unravel"/>
 				<Event Id="2398231425" Name="score" ObjectPath="\Events\Default Work Unit\UI\score"/>
@@ -675,6 +676,10 @@
 					<ShortName>UI_Select.wav</ShortName>
 					<Path>SFX\UI_Select_1C9C67B2.wem</Path>
 				</File>
+				<File Id="921084845" Language="SFX">
+					<ShortName>MoonisCheese_GameStart.wav</ShortName>
+					<Path>SFX\MoonisCheese_GameStart_A9919B5F.wem</Path>
+				</File>
 				<File Id="933883681" Language="SFX">
 					<ShortName>accept_1.wav</ShortName>
 					<Path>SFX\accept_1_0FD37AA7.wem</Path>
@@ -714,7 +719,6 @@
 			<ShortName>Opening</ShortName>
 			<Path>Opening.bnk</Path>
 			<IncludedEvents>
-				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\MusicEvents\Opening\game_start"/>
 				<Event Id="2932040671" Name="play_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Opening\play_music"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -729,10 +733,6 @@
 				<File Id="911699215" Language="SFX">
 					<ShortName>character_selection_loop_1.wav</ShortName>
 					<Path>SFX\character_selection_loop_1_F17FB28C.wem</Path>
-				</File>
-				<File Id="921084845" Language="SFX">
-					<ShortName>MoonisCheese_GameStart.wav</ShortName>
-					<Path>SFX\MoonisCheese_GameStart_A9919B5F.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -769,6 +769,9 @@
 				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup"/>
 				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release"/>
 				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\electricity"/>
+				<Event Id="1568560881" Name="electricity_trigger" ObjectPath="\Events\Default Work Unit\Triggers\electricity_trigger"/>
+				<Event Id="1121922920" Name="gate" ObjectPath="\Events\Default Work Unit\gate"/>
+				<Event Id="3439052529" Name="gate_trigger" ObjectPath="\Events\Default Work Unit\Triggers\gate_trigger"/>
 				<Event Id="3997114622" Name="lever_trigger" ObjectPath="\Events\Default Work Unit\Triggers\lever_trigger"/>
 				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact"/>
 				<Event Id="2980894478" Name="object_slide" ObjectPath="\Events\Default Work Unit\object_slide"/>
@@ -834,6 +837,10 @@
 				<File Id="290648010" Language="SFX">
 					<ShortName>fx_push_loop.wav</ShortName>
 					<Path>SFX\fx_push_loop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="318844511" Language="SFX">
+					<ShortName>gate_1.wav</ShortName>
+					<Path>SFX\gate_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="359920825" Language="SFX">
 					<ShortName>UI_Incorrect_Buzz.wav</ShortName>

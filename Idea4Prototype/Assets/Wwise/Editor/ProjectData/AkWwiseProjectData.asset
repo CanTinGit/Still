@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 1670368656
-    m_lastTimePart2: -1999240309
+    m_lastTimePsrt1: -443170263
+    m_lastTimePart2: -1999240117
     List:
     - Name: acceptance_1
       Path: Default Work Unit\UI\acceptance_1
@@ -263,19 +263,51 @@ MonoBehaviour:
       ID: -1377845400
       Guid: c21f8a9a2abff1429d8fdb5fea24d996
       maxAttenuation: 0
-    - Name: game_start
-      Path: Default Work Unit\MusicEvents\Opening\game_start
+    - Name: electricity_trigger
+      Path: Default Work Unit\Triggers\electricity_trigger
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MusicEvents
+      - ElementName: Triggers
         ObjectType: 4
-      - ElementName: Opening
+      - ElementName: electricity_trigger
+        ObjectType: 3
+      ID: 1568560881
+      Guid: c6a627471326b4409cabe2231e7b29da
+      maxAttenuation: 0
+    - Name: game_start
+      Path: Default Work Unit\UI\game_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
         ObjectType: 4
       - ElementName: game_start
         ObjectType: 3
       ID: 733168346
       Guid: 531263253405ab4996fb5b59b7a8c543
+      maxAttenuation: 0
+    - Name: gate
+      Path: Default Work Unit\gate
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: gate
+        ObjectType: 3
+      ID: 1121922920
+      Guid: 81ad2af6affbd648979f19f3b3b4e53b
+      maxAttenuation: 0
+    - Name: gate_trigger
+      Path: Default Work Unit\Triggers\gate_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: gate_trigger
+        ObjectType: 3
+      ID: -855914767
+      Guid: a4d5dda297254a419ccda03148e3c1e2
       maxAttenuation: 0
     - Name: hover
       Path: Default Work Unit\UI\hover
@@ -801,8 +833,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: -1547831344
-    m_lastTimePart2: -1999240310
+    m_lastTimePsrt1: 998828877
+    m_lastTimePart2: -1999240167
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -819,8 +851,8 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
-    m_lastTimePsrt1: -872730249
-    m_lastTimePart2: -1999240909
+    m_lastTimePsrt1: 1479381878
+    m_lastTimePart2: -1999240724
     List:
     - Name: Impact_Force
       Path: Default Work Unit\Impact_Force
@@ -917,8 +949,8 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-    m_lastTimePsrt1: 1088702007
-    m_lastTimePart2: -1999240534
+    m_lastTimePsrt1: -429033396
+    m_lastTimePart2: -1999240362
     List:
     - Name: Buzz
       Path: Default Work Unit\Buzz
@@ -991,8 +1023,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: -235759456
-    m_lastTimePart2: -1999240313
+    m_lastTimePsrt1: 239106641
+    m_lastTimePart2: -1999240113
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -1070,8 +1102,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
-    m_lastTimePsrt1: -237149456
-    m_lastTimePart2: -1999240313
+    m_lastTimePsrt1: 926416641
+    m_lastTimePart2: -1999240113
     List:
     - Name: click_start
       Path: Default Work Unit\click_start
@@ -1082,6 +1114,15 @@ MonoBehaviour:
         ObjectType: 13
       ID: -1298186826
       Guid: f6245b32d6eaa94589fa17b66fbb2f8b
+    - Name: in_use
+      Path: Default Work Unit\in_use
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: in_use
+        ObjectType: 13
+      ID: -240236456
+      Guid: 03ed3482422efc4a891f392ab4a032cf
     - Name: noise_detection
       Path: Default Work Unit\noise_detection
       PathAndIcons:
@@ -1104,8 +1145,8 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{423FF0F4-4C2C-49B0-BB98-500C1D5DAA9E}'
-    m_lastTimePsrt1: -872720249
-    m_lastTimePart2: -1999240909
+    m_lastTimePsrt1: 1479391878
+    m_lastTimePart2: -1999240724
     List: []
   ExpandedItems:
   - /Idea4Prototype_WwiseProject

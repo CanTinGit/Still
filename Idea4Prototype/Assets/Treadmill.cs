@@ -22,6 +22,9 @@ public class Treadmill : MonoBehaviour
     public float SpeedOfColorChange;
     public float RunMultiplier;
 
+    //for sound
+    float audioAKRTPC=0;
+    float in_UseRTPC = 1.0f;
     //for texture panning
     public Vector2 uvAnimationRate = new Vector2(0.002f,0.0f);
     public string textureName = "_MainTex";
@@ -170,12 +173,19 @@ public class Treadmill : MonoBehaviour
         {
             case ThreadmillState.Powered:
                 ColorToChangeTo = Color.green;
+                audioAKRTPC = 0.4f;
+                if(on==true)
+                {
+                    in_UseRTPC = 0.0f;
+                }
                 break;
             case ThreadmillState.Charging:
                 ColorToChangeTo = new Vector4(1.0f, 0.423f, 0.008f, 1.0f);
+                audioAKRTPC = 0.4f;
                 break;
             case ThreadmillState.Off:
                 ColorToChangeTo = Color.red;
+                audioAKRTPC = 0;
                 break;
         }
         //if the color of the machine needs to be changed then reset time
@@ -189,7 +199,12 @@ public class Treadmill : MonoBehaviour
         {
             timeForSwitching +=  0.001f;
             Color lerpedColor = Color.Lerp(powerIndicator.GetComponent<MeshRenderer>().material.color, ColorToChangeTo, timeForSwitching);
+            //float trackRTCPValue =
             powerIndicator.GetComponent<MeshRenderer>().material.color = lerpedColor;
+            AkSoundEngine.PostEvent("treadmill_trigger", gameObject);
+            AkSoundEngine.SetRTPCValue("run_time", audioAKRTPC, gameObject, 500);
+            AkSoundEngine.SetRTPCValue("in_use", in_UseRTPC, gameObject, 500);
+
         }
     }
 }

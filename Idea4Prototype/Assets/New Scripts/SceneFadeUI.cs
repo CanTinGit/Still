@@ -29,6 +29,7 @@ public class SceneFadeUI : MonoBehaviour
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("NextLevel"));
         gameWonPanel.gameObject.transform.Find("CheesesImage").gameObject.GetComponent<Image>().sprite = m_camera.GetComponent<ScoreSystem>().ReturnStars();
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        //AkSoundEngine.PostEvent("score", gameObject);
         foreach (GameObject player in players)
         {
             player.GetComponent<Animator>().SetBool("isMoving", false);
@@ -51,4 +52,5 @@ public class SceneFadeUI : MonoBehaviour
         //    MenuScript.Instance.ResetGameValues();
         //}
     }
+
 }

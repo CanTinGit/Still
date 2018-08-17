@@ -53,6 +53,7 @@ public class Spawner : MonoBehaviour
             int objectIndex = Random.Range(0, m_object.Length);
             // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
             GameObject weight = Instantiate(m_object[objectIndex], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            weight.name = "PickupWeight";
             if (spawnPointIndex == 1)
             {
                 weight.layer = 0;

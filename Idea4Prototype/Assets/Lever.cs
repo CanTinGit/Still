@@ -16,7 +16,7 @@ public class Lever : MonoBehaviour {
         if (!isLevel2)
         {
             lever.SetTrigger("Level1Lever");
-            animator.SetTrigger(animatorVariable);
+            Invoke("DelayDoorOpen", 1.0f);
             this.tag = "Untagged";
         }
         else
@@ -25,10 +25,15 @@ public class Lever : MonoBehaviour {
             {
                 return;
             }
-            lever.SetTrigger("LeverOn");
+            lever.SetTrigger("buttonOn");
         }
     }
 
+    void DelayDoorOpen()
+    {
+        //AkSoundEngine.PostEvent("gate"); //PLAY THE GATE
+        animator.SetTrigger(animatorVariable);
+    }
     void Delay()
     {
         HingeJoint hammer = GameObject.Find("Hammer").GetComponent<HingeJoint>();
@@ -41,7 +46,7 @@ public class Lever : MonoBehaviour {
         
         HingeJoint hammer = GameObject.Find("Hammer").GetComponent<HingeJoint>();
         air.Play();
-
+        hasPlayed = true;
         this.gameObject.tag = "Untagged";
         Invoke("Delay", 0.5f);
     }

@@ -45,6 +45,16 @@ public class GoalRuleCode : MonoBehaviour
         }
     }
 
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        AkSoundEngine.PostEvent("stop_level_music", gameObject);
+    //        Invoke("DelayStop", 0f);
+    //        MenuScript.Instance.FadeToNextLevel();
+    //    }
+    //}
+
     void OnTriggerEnter(Collider col)
     {
         if(col.gameObject.tag == "Player")
@@ -70,7 +80,7 @@ public class GoalRuleCode : MonoBehaviour
                 //    player.GetComponent<Rigidbody>().isKinematic = true;
                 //}
                 AkSoundEngine.PostEvent("stop_level_music", gameObject);
-                Invoke("DelayStop", 3.0f);
+                Invoke("DelayStop", 0f); 
                 MenuScript.Instance.FadeToNextLevel();
             }
         }
@@ -78,7 +88,9 @@ public class GoalRuleCode : MonoBehaviour
 
     void DelayStop()
     {
+        //AkSoundEngine.PostEvent("score", gameObject);
         AkSoundEngine.StopAll();
+        AkSoundEngine.PostEvent("score", gameObject);
     }
 
 }

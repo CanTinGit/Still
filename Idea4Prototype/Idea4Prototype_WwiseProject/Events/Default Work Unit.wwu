@@ -346,6 +346,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="game_start" ID="{25631253-0534-49AB-96FB-5B59B7A8C543}">
+							<ChildrenList>
+								<Action Name="" ID="{A16DCE8E-1E1E-4B21-A6EB-E3CBF486C549}" ShortID="93461623">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MoonisCheese_GameStart" ID="{8E5BEF19-C6DE-42E6-BB15-F5B1DDD22D07}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" ShortID="618037974">
@@ -462,6 +476,21 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="gate_trigger" ID="{A2DDD5A4-2597-414A-9CCD-A03148E3C1E2}">
+							<ChildrenList>
+								<Action Name="" ID="{7D18EA2D-8B2E-4158-84F7-038EBCA1FEEF}" ShortID="293911245">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gate" ID="{F62AAD81-FBAF-48D6-979F-19F3B3B4E53B}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="electricity_trigger" ID="{4727A6C6-2613-40B4-9CAB-E2231E7B29DA}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Crane" ID="{2573EACF-8DFC-49FF-8CD7-5FD53023BFC6}" ShortID="253771276">
@@ -1012,20 +1041,6 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="game_start" ID="{25631253-0534-49AB-96FB-5B59B7A8C543}">
-									<ChildrenList>
-										<Action Name="" ID="{A16DCE8E-1E1E-4B21-A6EB-E3CBF486C549}" ShortID="93461623">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="MoonisCheese_GameStart" ID="{8E5BEF19-C6DE-42E6-BB15-F5B1DDD22D07}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Level" ID="{4195AA35-AD12-443B-BCD6-E95E67BB8712}" ShortID="448382601">
@@ -1138,6 +1153,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="treadmill" ID="{4F11A042-E47B-4A8F-822B-9176506DF757}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gate" ID="{F62AAD81-FBAF-48D6-979F-19F3B3B4E53B}">
+					<ChildrenList>
+						<Action Name="" ID="{D4003EAB-0D88-424E-A860-22941C9F1BFF}" ShortID="6320520">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gate_1" ID="{01A9A4E7-D437-4896-AD92-0E33CE8B1025}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

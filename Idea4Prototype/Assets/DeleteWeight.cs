@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DeleteWeight : MonoBehaviour {
-
+    public GameObject mButton;
     void OnTriggerEnter(Collider col)
     {
         //Debug.Log("Enter1");
@@ -11,6 +11,7 @@ public class DeleteWeight : MonoBehaviour {
         {
             //Debug.Log("Enter2");
             GameObject.Find("SpawnerManager").GetComponent<Spawner>().SpawnTrue();
+            mButton.GetComponent<SpawnObjectButton>().audioPlayed = false;
             Destroy(col.gameObject);
         }
     }

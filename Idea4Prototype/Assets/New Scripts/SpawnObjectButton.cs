@@ -14,7 +14,7 @@ public class SpawnObjectButton : MonoBehaviour {
     GameObject spawnerManager;      // Reference to the spawner manager
     public bool isForMetalSphere;
     public bool canDispense;
-    bool pressedButton=false;
+    public bool audioPlayed = false;
 
     //controls the blinking lights
     public bool blinkingLights; //controls whether the lights will blink for the button or not
@@ -96,34 +96,30 @@ public class SpawnObjectButton : MonoBehaviour {
             {
                 // Button go down
                 button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
-                Debug.Log("pressed " + pressedButton);
-                if(pressedButton==false)
+                AkSoundEngine.PostEvent("button_click", gameObject);
+                if (GameObject.Find("SpawnerManager").GetComponent<Spawner>().canSpawn == true && audioPlayed ==false)
                 {
-                    pressedButton = true;
-                    //play the button click sound
-                    AkSoundEngine.PostEvent("button_click", gameObject);
-                    if (GameObject.Find("SpawnerManager").GetComponent<Spawner>().spawnPointIndex == 1)
-                    {
-                        Debug.Log("correct");
-                        AkSoundEngine.SetSwitch("Buzz", "Correct", gameObject);
-                    }
-                    else
-                    {
-                        Debug.Log("incorrect");
-                        AkSoundEngine.SetSwitch("Buzz", "Incorrect", gameObject);
-                    }
-                    if(GameObject.FindGameObjectWithTag("Weight")==null)
-                    {
-
+                    audioPlayed = true;
+                        //play the button click sound                      
+                        if (GameObject.Find("SpawnerManager").GetComponent<Spawner>().spawnPointIndex == 1)
+                        {
+                            AkSoundEngine.SetSwitch("Buzz", "Correct", gameObject);
+                        }
+                        else
+                        {
+                            AkSoundEngine.SetSwitch("Buzz", "Incorrect", gameObject);
+                        }
                         PlayBuzzAudio();
-                    }
+                        //Invoke("SpawnWeight", 0.75f);
                     // Spawn the object   
                 }
             }
         }
     }
-
-
+    void SpawnWeight()
+    {
+        spawnerManager.GetComponent<Spawner>().Spawn();
+    }
     public void PlayBuzzAudio()
     {
         AkSoundEngine.PostEvent("button_buzz", gameObject, (uint)AkCallbackType.AK_EndOfEvent, MyCallbackFunction, gameObject);     
@@ -154,10 +150,7 @@ public class SpawnObjectButton : MonoBehaviour {
         if (in_type == AkCallbackType.AK_EndOfEvent)
         {
             AkEventCallbackInfo info = (AkEventCallbackInfo)in_info; //Then do stuff.
-            //plays the sound after the audio finishs
             spawnerManager.GetComponent<Spawner>().Spawn();
-            pressedButton = false;
-            //Invoke("DelaySpawn", 1.0f);
         }
 
     }

@@ -189,7 +189,7 @@ public class MenuScript : MonoBehaviour
     {
         //flip the character panel on and flip off the menu panel
         FlipCharacterPanel();
-        //AkSoundEngine.PostEvent("game_start", gameObject);
+        AkSoundEngine.PostEvent("game_start", gameObject);
         //AkSoundEngine.SetRTPCValue("click_start", 0f, null, 1000);
         //AkSoundEngine.SetSwitch("intro", "character_select", GameObject.Find);
         GameObject.Find("StartSetUp").GetComponent<StartGame>().Play("character_select");
@@ -360,7 +360,7 @@ public class MenuScript : MonoBehaviour
                 button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level 1 Final Ian Light Pass needed")); //level 1 designer v3
                 break;
             case "Level 2 Button":
-                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_2_V2"));
+                button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("level_2_Ian_Lights"));
                 break;
             case "Level 0 Button":
                 button.onClick.AddListener(() => MenuScript.Instance.LoadLevel("Tutorial_Level"));

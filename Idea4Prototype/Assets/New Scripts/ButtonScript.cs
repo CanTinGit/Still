@@ -81,6 +81,7 @@ public class ButtonScript : MonoBehaviour {
     void SetRatingOnBack()
     {
         //GameObject.FindWithTag("Timer").GetComponent<Timer>().SetTimer(0, 0, 0, 0);
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerSetter>().FadeOutLevelMusic();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>().LevelSkippedScore();
         MenuScript.Instance.FadeToNextLevel(GetPause().GetPausePanel());
     }

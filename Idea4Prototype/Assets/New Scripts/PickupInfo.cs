@@ -11,6 +11,7 @@ public class PickupInfo : MonoBehaviour
     public bool canAutoSnap = false;
     public bool grounded = false;
     public bool isOnPlatform;
+    public bool dontDestroyAfterThrow;
     void Start()
     {
         if (GameObject.Find("SpawnerManager").gameObject.GetComponent<Spawner2>() != null)
@@ -94,13 +95,10 @@ public class PickupInfo : MonoBehaviour
 
     void OnCollisionStay(Collision col)
     {
-        Debug.Log(col.transform.name + "0");
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log(col.transform.name + "1");
             if (gameObject.GetComponent<PickupInfo>().onTopOff == null)
             {
-                Debug.Log(col.transform.name + "3");
                 Vector3 direction = transform.position + Vector3.up - col.transform.position;
                 float degree = Vector3.Angle(direction, Vector3.up);
                 Debug.Log(degree);
@@ -158,7 +156,10 @@ public class PickupInfo : MonoBehaviour
     }
     public void SetDestroyActive(float timeToDestroyIn_)
     {
-        Invoke("DestroyObject", timeToDestroyIn_);
+        if(dontDestroyAfterThrow == false)
+        {
+            Invoke("DestroyObject", timeToDestroyIn_);
+        }
     }
 
     void DestroyObject()

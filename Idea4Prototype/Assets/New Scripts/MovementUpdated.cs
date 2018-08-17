@@ -320,6 +320,27 @@ public class MovementUpdated : MonoBehaviour {
             gameObject.GetComponent<CapsuleCollider>().material = originalMaterial;
             
         }
+
+        //if (col.gameObject.tag == "Ground")
+        //{
+        //    if (grounded == false)
+        //    {
+
+        //        Vector3 direction = transform.position - col.transform.position;
+        //        // Debug.Log(transform.position);
+        //        // Debug.Log(col.transform.position);
+        //        // Debug.Log(direction);
+        //        //Debug.Log("direction is " + direction);
+        //        float degree = Vector3.Angle(direction, Vector3.up);
+        //        //Debug.Log(degree);
+        //        //Debug.Log(transform.position.y);
+        //        if (degree < 60)
+        //        {
+        //            grounded = true;
+        //        }
+        //    }
+        //}
+
         if (col.transform.name == "m_seesaw")
         {
             runSpeed = runSpeed / 2;

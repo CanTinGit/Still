@@ -126,4 +126,9 @@ public class PlayerSetter : MonoBehaviour {
     {
         AkSoundEngine.SetSwitch("Music_Transition", section, gameObject);
     }
+
+    public void FadeOutLevelMusic()
+    {
+        AkSoundEngine.PostEvent("stop_level_music", gameObject);
+    }
 }

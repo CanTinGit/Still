@@ -34,7 +34,10 @@ namespace AK
         static const AkUniqueID CRANE_TRIGGER_PICKUP = 3559668272U;
         static const AkUniqueID CRANE_TRIGGER_RELEASE = 3150416619U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
+        static const AkUniqueID ELECTRICITY_TRIGGER = 1568560881U;
         static const AkUniqueID GAME_START = 733168346U;
+        static const AkUniqueID GATE = 1121922920U;
+        static const AkUniqueID GATE_TRIGGER = 3439052529U;
         static const AkUniqueID HOVER = 3753593413U;
         static const AkUniqueID LEVER_TRIGGER = 3997114622U;
         static const AkUniqueID NIGHT_AMBIENCE = 849527464U;
@@ -163,6 +166,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID CLICK_START = 2996780470U;
+        static const AkUniqueID IN_USE = 4054730840U;
         static const AkUniqueID NOISE_DETECTION = 866473373U;
         static const AkUniqueID RUN_TIME = 3498626028U;
     } // namespace GAME_PARAMETERS
