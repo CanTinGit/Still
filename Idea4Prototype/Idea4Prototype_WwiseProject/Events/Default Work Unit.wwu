@@ -145,6 +145,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="player_select" ID="{CA2F5887-7646-41B5-AC6F-7D4B88F39320}">
+							<ChildrenList>
+								<Action Name="" ID="{5D77C8C3-BD5C-4935-85FA-0174467679D5}" ShortID="773617970">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="character_select" ID="{4F271D29-C878-4132-A117-AC3A4F92ED25}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{30275F0C-5C5D-46E9-9ADF-7B335D0BB1E4}" ShortID="864467326">
@@ -341,6 +355,58 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Paper_unravel" ID="{D1A6F8B3-B029-4B5F-8E0B-D72AF0305A1D}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="pause" ID="{59EB79EF-24DB-499C-ABDE-1AF2362B7837}">
+							<ChildrenList>
+								<Action Name="" ID="{356FFBE0-ABD7-4238-AFB0-A273EC63C77D}" ShortID="516308868">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ui_pause_1" ID="{BEE5CB2D-2C00-49CD-BEEA-CA1409B7439F}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EAF14199-61CE-4220-810C-CCD2F28BCF8E}" ShortID="65108688">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="unpause" ID="{BB2722BA-9CFC-4D26-9C12-F80BAC989BC2}">
+							<ChildrenList>
+								<Action Name="" ID="{755989B1-686C-409D-80F2-CD394D66317D}" ShortID="976070237">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ui_unpause_1" ID="{FFC14B84-3CAB-4192-96E7-1AE58A51C5BB}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5E6FED87-D5E8-4332-9720-ED6E7C536362}" ShortID="550336830">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

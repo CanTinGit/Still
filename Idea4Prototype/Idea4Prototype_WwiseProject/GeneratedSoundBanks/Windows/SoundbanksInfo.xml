@@ -84,10 +84,15 @@
 				<Event Id="1922690190" Name="player_drop" ObjectPath="\Events\Default Work Unit\Player\player_drop"/>
 				<Event Id="1305133589" Name="player_jump" ObjectPath="\Events\Default Work Unit\Player\player_jump"/>
 				<Event Id="3762137770" Name="player_lift" ObjectPath="\Events\Default Work Unit\Player\player_lift"/>
+				<Event Id="282749073" Name="player_select" ObjectPath="\Events\Default Work Unit\Player\player_select"/>
 				<Event Id="3937592553" Name="player_shock" ObjectPath="\Events\Default Work Unit\Player\player_shock"/>
 				<Event Id="65181031" Name="player_throw" ObjectPath="\Events\Default Work Unit\Player\player_throw"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="7756645" Language="SFX">
+					<ShortName>sarah_select_2.wav</ShortName>
+					<Path>SFX\sarah_select_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="10576331" Language="English(US)">
 					<ShortName>Campbell_Release_1.wav</ShortName>
 					<Path>Voices\English(US)\Campbell_Release_1_1C9C67B2.wem</Path>
@@ -95,6 +100,10 @@
 				<File Id="12899135" Language="English(US)">
 					<ShortName>campbell_shock_4.wav</ShortName>
 					<Path>Voices\English(US)\campbell_shock_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="14239827" Language="SFX">
+					<ShortName>campbell_select_3.wav</ShortName>
+					<Path>SFX\campbell_select_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="14344387" Language="English(US)">
 					<ShortName>Sanket_Lift_1.wav</ShortName>
@@ -107,6 +116,10 @@
 				<File Id="26883164" Language="English(US)">
 					<ShortName>Mouse_Release_Man_1.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_Release_Man_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="34855617" Language="SFX">
+					<ShortName>richard_select_4.wav</ShortName>
+					<Path>SFX\richard_select_4_1C9C67B2.wem</Path>
 				</File>
 				<File Id="40509239" Language="English(US)">
 					<ShortName>Mouse_Carry_Man_2.wav</ShortName>
@@ -128,9 +141,25 @@
 					<ShortName>Campbell_Lift_1.wav</ShortName>
 					<Path>Voices\English(US)\Campbell_Lift_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="124532692" Language="SFX">
+					<ShortName>richard_select_3.wav</ShortName>
+					<Path>SFX\richard_select_3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="125663267" Language="English(US)">
 					<ShortName>Sarah_Lift_3.wav</ShortName>
 					<Path>Voices\English(US)\Sarah_Lift_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="129575621" Language="SFX">
+					<ShortName>campbell_select_2.wav</ShortName>
+					<Path>SFX\campbell_select_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="134703329" Language="SFX">
+					<ShortName>richard_shock_4.wav</ShortName>
+					<Path>SFX\richard_shock_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="147919496" Language="SFX">
+					<ShortName>sarah_select_4.wav</ShortName>
+					<Path>SFX\sarah_select_4_1C9C67B2.wem</Path>
 				</File>
 				<File Id="148376452" Language="English(US)">
 					<ShortName>sarah_shock_3.wav</ShortName>
@@ -143,6 +172,10 @@
 				<File Id="166574435" Language="English(US)">
 					<ShortName>Sanket_Shock_2.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Shock_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="166616975" Language="SFX">
+					<ShortName>sanket_select_1.wav</ShortName>
+					<Path>SFX\sanket_select_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="168327486" Language="English(US)">
 					<ShortName>Sarah_Lift_1.wav</ShortName>
@@ -204,9 +237,25 @@
 					<ShortName>Sarah_Lift_4.wav</ShortName>
 					<Path>Voices\English(US)\Sarah_Lift_4_1C9C67B2.wem</Path>
 				</File>
+				<File Id="296878875" Language="SFX">
+					<ShortName>campbell_select_1.wav</ShortName>
+					<Path>SFX\campbell_select_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="306739873" Language="SFX">
+					<ShortName>richard_select_1.wav</ShortName>
+					<Path>SFX\richard_select_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="314410797" Language="SFX">
+					<ShortName>sanket_select_5.wav</ShortName>
+					<Path>SFX\sanket_select_5_1C9C67B2.wem</Path>
+				</File>
 				<File Id="321254178" Language="English(US)">
 					<ShortName>Sarah_release_2.wav</ShortName>
 					<Path>Voices\English(US)\Sarah_release_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="323093538" Language="SFX">
+					<ShortName>sarah_select_3.wav</ShortName>
+					<Path>SFX\sarah_select_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="325852278" Language="English(US)">
 					<ShortName>Mouse_No_Man_1.wav</ShortName>
@@ -256,6 +305,14 @@
 					<ShortName>Sanket_Accident_8.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Accident_8_1C9C67B2.wem</Path>
 				</File>
+				<File Id="427267566" Language="SFX">
+					<ShortName>sanket_select_3.wav</ShortName>
+					<Path>SFX\sanket_select_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="442275410" Language="SFX">
+					<ShortName>sanket_select_2.wav</ShortName>
+					<Path>SFX\sanket_select_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="445765875" Language="English(US)">
 					<ShortName>Mouse_Jump_Man_4.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_Jump_Man_4_1C9C67B2.wem</Path>
@@ -296,6 +353,10 @@
 					<ShortName>Sanket_Release_4.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Release_4_1C9C67B2.wem</Path>
 				</File>
+				<File Id="543809674" Language="SFX">
+					<ShortName>richard_shock_2.wav</ShortName>
+					<Path>SFX\richard_shock_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="552144270" Language="English(US)">
 					<ShortName>Sanket_Release_5.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Release_5_1C9C67B2.wem</Path>
@@ -320,6 +381,10 @@
 					<ShortName>Sanket_Jump_5.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Jump_5_1C9C67B2.wem</Path>
 				</File>
+				<File Id="619408082" Language="SFX">
+					<ShortName>campbell_select_5.wav</ShortName>
+					<Path>SFX\campbell_select_5_1C9C67B2.wem</Path>
+				</File>
 				<File Id="621007588" Language="English(US)">
 					<ShortName>Sanket_Jump_1.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Jump_1_1C9C67B2.wem</Path>
@@ -331,6 +396,10 @@
 				<File Id="656439366" Language="English(US)">
 					<ShortName>Campbell_Lift_2.wav</ShortName>
 					<Path>Voices\English(US)\Campbell_Lift_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="664371384" Language="SFX">
+					<ShortName>richard_shock_3.wav</ShortName>
+					<Path>SFX\richard_shock_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="691550126" Language="English(US)">
 					<ShortName>campbell_accident_5.wav</ShortName>
@@ -380,6 +449,10 @@
 					<ShortName>sarah_shock_1.wav</ShortName>
 					<Path>Voices\English(US)\sarah_shock_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="799858516" Language="SFX">
+					<ShortName>richard_shock_1.wav</ShortName>
+					<Path>SFX\richard_shock_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="812866332" Language="English(US)">
 					<ShortName>Sanket_Throw_4.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Throw_4_1C9C67B2.wem</Path>
@@ -395,6 +468,10 @@
 				<File Id="818064353" Language="English(US)">
 					<ShortName>Mouse_Jump_Man_5.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_Jump_Man_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="825064353" Language="SFX">
+					<ShortName>sarah_select_1.wav</ShortName>
+					<Path>SFX\sarah_select_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="832898438" Language="English(US)">
 					<ShortName>campbell_throw_3.wav</ShortName>
@@ -447,6 +524,10 @@
 				<File Id="941221864" Language="English(US)">
 					<ShortName>Mouse_Heavy_Lift_Man_1.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_Heavy_Lift_Man_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="945655350" Language="SFX">
+					<ShortName>richard_select_2.wav</ShortName>
+					<Path>SFX\richard_select_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="947045430" Language="English(US)">
 					<ShortName>Sanket_Lift_3.wav</ShortName>
@@ -508,6 +589,10 @@
 					<ShortName>Sanket_Jump_2.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Jump_2_1C9C67B2.wem</Path>
 				</File>
+				<File Id="1024279193" Language="SFX">
+					<ShortName>sanket_select_4.wav</ShortName>
+					<Path>SFX\sanket_select_4_1C9C67B2.wem</Path>
+				</File>
 				<File Id="1031051921" Language="English(US)">
 					<ShortName>sarah_jump_5.wav</ShortName>
 					<Path>Voices\English(US)\sarah_jump_5_1C9C67B2.wem</Path>
@@ -528,6 +613,10 @@
 					<ShortName>sarah_jump_4.wav</ShortName>
 					<Path>Voices\English(US)\sarah_jump_4_1C9C67B2.wem</Path>
 				</File>
+				<File Id="1055460856" Language="SFX">
+					<ShortName>campbell_select_4.wav</ShortName>
+					<Path>SFX\campbell_select_4_1C9C67B2.wem</Path>
+				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1244594577" Language="SFX">
@@ -535,8 +624,10 @@
 			<ShortName>Level_Music</ShortName>
 			<Path>Level_Music.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3092587493" Name="pause" ObjectPath="\Events\Default Work Unit\UI\pause"/>
 				<Event Id="557932600" Name="play_level_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Level\play_level_music"/>
 				<Event Id="4055353338" Name="stop_level_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Level\stop_level_music" MaxAttenuation="0.000000"/>
+				<Event Id="3412868374" Name="unpause" ObjectPath="\Events\Default Work Unit\UI\unpause"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="13560483" Language="SFX">
@@ -583,8 +674,10 @@
 				<Event Id="3780343222" Name="click_select" ObjectPath="\Events\Default Work Unit\UI\click_select"/>
 				<Event Id="3753593413" Name="hover" ObjectPath="\Events\Default Work Unit\UI\hover"/>
 				<Event Id="1339907015" Name="paper_unravel" ObjectPath="\Events\Default Work Unit\UI\paper_unravel"/>
+				<Event Id="3092587493" Name="pause" ObjectPath="\Events\Default Work Unit\UI\pause"/>
 				<Event Id="2398231425" Name="score" ObjectPath="\Events\Default Work Unit\UI\score"/>
 				<Event Id="2178222430" Name="stop_score" ObjectPath="\Events\Default Work Unit\UI\stop_score" MaxAttenuation="0.000000"/>
+				<Event Id="3412868374" Name="unpause" ObjectPath="\Events\Default Work Unit\UI\unpause"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="42039383" Language="SFX">
@@ -651,6 +744,10 @@
 					<ShortName>accept_2.wav</ShortName>
 					<Path>SFX\accept_2_CEC97D6B.wem</Path>
 				</File>
+				<File Id="679131729" Language="SFX">
+					<ShortName>ui_unpause_1.wav</ShortName>
+					<Path>SFX\ui_unpause_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="727977580" Language="SFX">
 					<ShortName>cheese_bite_1.wav</ShortName>
 					<Path>SFX\cheese_bite_1_2A453821.wem</Path>
@@ -666,6 +763,10 @@
 				<File Id="763357575" Language="SFX">
 					<ShortName>cheese_bite_10.wav</ShortName>
 					<Path>SFX\cheese_bite_10_7902A759.wem</Path>
+				</File>
+				<File Id="784057001" Language="SFX">
+					<ShortName>Ui_pause_1.wav</ShortName>
+					<Path>SFX\Ui_pause_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="792717471" Language="SFX">
 					<ShortName>cheese_bite_12.wav</ShortName>
