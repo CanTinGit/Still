@@ -35,7 +35,6 @@ public class BounckBack : MonoBehaviour {
         }
         if (cur <= 0)
         {
-            Debug.Log("Finish");
             CancelInvoke("Rewind");
             cur = 0;
             gameObject.GetComponent<Rigidbody>().velocity = (distanceTowards.transform.position - gameObject.transform.position).normalized * speed;
@@ -63,7 +62,6 @@ public class BounckBack : MonoBehaviour {
     {
         if (col.name == "Main water")
         {
-            Debug.Log(" first time " + cur + " the max is " + position.Count);
             CancelInvoke("RecordPosition");
             gameObject.GetComponent<MovementUpdated>().enabled = false;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
@@ -99,8 +97,6 @@ public class BounckBack : MonoBehaviour {
             if (position.Count != 0)
             {
                 isStartRecord = false;
-                Debug.Log("this is run clear");
-                //CancelInvoke();
                 position.Clear();
             }
         }	

@@ -20,6 +20,7 @@ public class ScoreSystem : MonoBehaviour {
     public float maxCameraTrigger; //The max amount of times a camera can be triggered before you lose trigger camera score
     public float triggerCameraScore; //The points awarded for not triggering over the max camera amount
     public float highScoreBonus; //the points awarded if you beat your high score
+    private bool skipped = false;
     public bool cameraInLevel; //the boolean to tell us if there is a camera ai in this level
     //public int cheese;  //the cheese timer score
     int lastCheese =9;
@@ -59,13 +60,6 @@ public class ScoreSystem : MonoBehaviour {
         {
             finalScore += triggerCameraScore;
         }
-        Debug.Log("Calculation is ( number of players " + MenuScript.Instance.GetNumberofPlayers() +
-            " multiplied by extre player score " + extraPlayerScore + " ) + ( collectablesObtained " + collectablesObtained
-            + " multipled by colletable score " + "CollectableScore) +  if cameras are in level " + cameraInLevel + 
-            " then the camera score is ( camera score " + triggerCameraScore + " if triggered less than " 
-            + maxCameraTrigger + " which it triggered " + timesCameraTriggered + " ) + (highscore bonus is " + highScoreBonus + " based on if he beat his highscore)" ) ;
-
-        Debug.Log("Total score is " + finalScore);       
     }
 
     //public void SetCollectableObtained(int collectableObtained_)
@@ -99,11 +93,9 @@ public class ScoreSystem : MonoBehaviour {
     public Sprite ReturnStars()
     {
         float time = 0;
-        Debug.Log("Return Score");
         int star = 0;
         if (checkpointTime.Count!=0)
         {
-            Debug.Log("checkpoint list " + checkpointTime.Count);
             foreach (float checkpoint in checkpointTime)
             {
                 time = checkpoint;
@@ -121,10 +113,7 @@ public class ScoreSystem : MonoBehaviour {
                 }
 
             }
-            Debug.Log("stars before " + star);
             star = Mathf.RoundToInt((float)star / 3);
-            Debug.Log(star);
-            Debug.Log("time is " + time);
         }
         else
         {
@@ -143,30 +132,37 @@ public class ScoreSystem : MonoBehaviour {
         float timeFromCheckpoint = 0;
         int timestars = 0;
         Sprite sprite;
-        for (int count = 0; count < checkpointTime.Count; count++)
+        if(skipped!=true)
         {
-            //get the time and then add the star score based on it
-            if (count != Checkpoint)
+            for (int count = 0; count < checkpointTime.Count; count++)
             {
-                timeFromCheckpoint = checkpointTime[count];
-            }
-            else if(count == Checkpoint)
-            {
-                timeFromCheckpoint = timeScript.GetTimeInSeconds();
-            }
+                //get the time and then add the star score based on it
+                if (count != Checkpoint)
+                {
+                    timeFromCheckpoint = checkpointTime[count];
+                }
+                else if (count == Checkpoint)
+                {
+                    timeFromCheckpoint = timeScript.GetTimeInSeconds();
+                }
 
-            if (timeFromCheckpoint > 30 && timeFromCheckpoint <= 60)
-            {
-                timestars += 3;
+                if (timeFromCheckpoint > 30 && timeFromCheckpoint <= 60)
+                {
+                    timestars += 3;
+                }
+                else if (timeFromCheckpoint > 0 && timeFromCheckpoint <= 30)
+                {
+                    timestars += 2;
+                }
+                else if (timeFromCheckpoint == 0)
+                {
+                    timestars += 1;
+                }
             }
-            else if (timeFromCheckpoint > 0 && timeFromCheckpoint <= 30)
-            {
-                timestars += 2;
-            }
-            else if (timeFromCheckpoint == 0)
-            {
-                timestars += 1;
-            }
+        }
+        else
+        {
+            timestars = 3;
         }
         //stars = Mathf.RoundToInt((float)stars / 3);
         //doing cheese bit here remember
@@ -196,6 +192,7 @@ public class ScoreSystem : MonoBehaviour {
                     Debug.Log(checkpointTime[index]);
                     checkpointTime.RemoveAt(index);
                     checkpointTime.Insert(index, 0.0f);
+                    skipped = true;
                 }
         }
     }

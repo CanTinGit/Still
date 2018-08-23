@@ -40,7 +40,6 @@ public class ResettingButon : MonoBehaviour {
             // Button go down
             button.position = new Vector3(originalPosition.x, originalPosition.y - 0.2f, originalPosition.z);
             AkSoundEngine.PostEvent("button_click", gameObject);
-            Debug.Log(noise);
 
             //Check if the trap just run once, if it is, use settrigger to run it, if not, use setbool to run it so that it can run multiply times
             if (isRunOnce == true)
@@ -50,7 +49,6 @@ public class ResettingButon : MonoBehaviour {
             }
             else
             {
-                Debug.Log("Reset LEVER!");
                 Lever.GetComponent<ActiveInScene>().setActive(false);
                 animator.SetBool(animationToReset, false);
             }

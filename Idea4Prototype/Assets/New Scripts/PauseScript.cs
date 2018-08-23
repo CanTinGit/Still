@@ -89,19 +89,26 @@ public class PauseScript : MonoBehaviour
     public void Pause()
     {
         FlipPausePanel();
-        GameObject.Find("PausePanel").transform.Find("Background").GetComponent<Animator>().SetTrigger("BounceIn");
-        GameObject.Find("PausePanel").transform.Find("ControllerImage").GetComponent<Animator>().SetTrigger("FadeIn");
-        MenuScript.Instance.SetPlayerPaused(true);
-        MenuScript.Instance.pausePlayerNum = int.Parse(this.transform.name.Remove(0, 6));
+     //   if (GameObject.Find("PausePanel") != null)
+     //   { 
+            GameObject.Find("PausePanel").transform.Find("Background").GetComponent<Animator>().SetTrigger("BounceIn");
+            GameObject.Find("PausePanel").transform.Find("ControllerImage").GetComponent<Animator>().SetTrigger("FadeIn");
+            MenuScript.Instance.SetPlayerPaused(true);
+            MenuScript.Instance.pausePlayerNum = int.Parse(this.transform.name.Remove(0, 6));
+       // }
     }
     public void UnPause()
     {
-        GameObject.Find("PausePanel").transform.Find("ControllerImage").GetComponent<Animator>().SetTrigger("FadeOut");
-        GameObject.Find("PausePanel").transform.Find("Background").GetComponent<Animator>().SetTrigger("BounceOut");
-        Invoke("FlipPausePanel", 1.0f);
+        // if(GameObject.Find("PausePanel")!=null)
+        // {
+        //GameObject.Find("PausePanel").transform.Find("ControllerImage").GetComponent<Animator>().SetTrigger("FadeOut");
+        // GameObject.Find("PausePanel").transform.Find("Background").GetComponent<Animator>().SetTrigger("BounceOut");
+        //Invoke("FlipPausePanel", 1.0f);
+        FlipPausePanel();
         //FlipPausePanel();
         MenuScript.Instance.SetPlayerPaused(false);
-        MenuScript.Instance.pausePlayerNum = 0;
+            MenuScript.Instance.pausePlayerNum = 0;
+       // }
     }
     public GameObject GetPausePanel()
     {

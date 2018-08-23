@@ -82,7 +82,7 @@ public class ArcRenderMesh : MonoBehaviour {
     Vector3 CalculateArcPoint(float t, float maxDistance)
     {
         float x = t * maxDistance;
-        float y = x * Mathf.Tan(radianAngle) - ((gravity * x * x) / (2 * velocity * velocity * Mathf.Cos(radianAngle) * Mathf.Cos(radianAngle)));
+        float y = x * Mathf.Tan(radianAngle) - ((gravity * x * x) / (2 * velocity * velocity * Mathf.Cos(radianAngle) * Mathf.Cos(radianAngle))); //transform.parent.FindChild("Hand").GetComponent<PickUpUpdated>().picked.transform.position.y;
         return new Vector3(x, y);
     }
 

@@ -29,15 +29,22 @@ namespace AK
         static const AkUniqueID CLICK_NEGATIVE = 2102833423U;
         static const AkUniqueID CLICK_POSITIVE = 1769629947U;
         static const AkUniqueID CLICK_SELECT = 3780343222U;
-        static const AkUniqueID CRANE_PICKUP = 412826751U;
-        static const AkUniqueID CRANE_RELEASE = 3550336162U;
-        static const AkUniqueID CRANE_TRIGGER_PICKUP = 3559668272U;
-        static const AkUniqueID CRANE_TRIGGER_RELEASE = 3150416619U;
-        static const AkUniqueID ELECTRICITY = 2917121896U;
+        static const AkUniqueID COMPUTER_FAN = 644354980U;
+        static const AkUniqueID COMPUTER_FAN_TRIGGER = 446580501U;
+        static const AkUniqueID CUP_FALL = 748714045U;
+        static const AkUniqueID CUP_FALL_TRIGGER = 1688054476U;
+        static const AkUniqueID CUP_SQUEAK = 1212948756U;
+        static const AkUniqueID CUP_SQUEAK_TRIGGER = 325794693U;
         static const AkUniqueID ELECTRICITY_TRIGGER = 1568560881U;
+        static const AkUniqueID FAN = 1183803264U;
+        static const AkUniqueID FAN_SWITCH = 1150021507U;
+        static const AkUniqueID FAN_SWITCH_TRIGGER = 3712382502U;
+        static const AkUniqueID FAN_TRIGGER = 2545869449U;
         static const AkUniqueID GAME_START = 733168346U;
         static const AkUniqueID GATE = 1121922920U;
         static const AkUniqueID GATE_TRIGGER = 3439052529U;
+        static const AkUniqueID GLASS = 2449969375U;
+        static const AkUniqueID GLASS_TRIGGER = 4134466154U;
         static const AkUniqueID HOVER = 3753593413U;
         static const AkUniqueID LEVER_TRIGGER = 3997114622U;
         static const AkUniqueID NIGHT_AMBIENCE = 849527464U;
@@ -45,6 +52,11 @@ namespace AK
         static const AkUniqueID OBJECT_SLIDE = 2980894478U;
         static const AkUniqueID OBJECT_SLIDE_TRIGGER = 212497099U;
         static const AkUniqueID PAPER_UNRAVEL = 1339907015U;
+        static const AkUniqueID PAUSE = 3092587493U;
+        static const AkUniqueID PLANK_FALL = 2429720045U;
+        static const AkUniqueID PLANK_TRIGGER = 316214646U;
+        static const AkUniqueID PLATINUM_CHEESE = 1492487779U;
+        static const AkUniqueID PLATINUM_CHEESE_TRIGGER = 1618369734U;
         static const AkUniqueID PLAY_LEVEL_MUSIC = 557932600U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAYER_ACCIDENT = 4205375722U;
@@ -54,14 +66,22 @@ namespace AK
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
         static const AkUniqueID PLAYER_LIFT = 3762137770U;
         static const AkUniqueID PLAYER_PUSH_TRIGGER = 200872652U;
+        static const AkUniqueID PLAYER_SELECT = 282749073U;
         static const AkUniqueID PLAYER_SHOCK = 3937592553U;
         static const AkUniqueID PLAYER_THROW = 65181031U;
+        static const AkUniqueID POKEY_FINGER_MACHINE = 2733310231U;
+        static const AkUniqueID POKEY_FINGER_TRIGGER = 2754191044U;
         static const AkUniqueID PULL_LEVER = 766957497U;
         static const AkUniqueID PUSH_OBJECT = 4202621657U;
         static const AkUniqueID SCORE = 2398231425U;
+        static const AkUniqueID SPLOOSH = 60542055U;
         static const AkUniqueID STOP_LEVEL_MUSIC = 4055353338U;
         static const AkUniqueID STOP_SCORE = 2178222430U;
+        static const AkUniqueID THROW = 745179803U;
+        static const AkUniqueID THROW_CHARGE = 1625168126U;
+        static const AkUniqueID THROW_TRIGGER = 3540883198U;
         static const AkUniqueID TREADMILL = 3046263293U;
+        static const AkUniqueID TREADMILL_STOP_TRIGGER = 3816797081U;
         static const AkUniqueID TREADMILL_TRIGGER = 931771276U;
         static const AkUniqueID TUT_BOX = 820591094U;
         static const AkUniqueID TUT_BOX_TRIGGER = 1107840467U;
@@ -79,9 +99,9 @@ namespace AK
         static const AkUniqueID TUT_WELCOME_TRIGGER = 2344808488U;
         static const AkUniqueID TUT_WUNDERBAR = 2011545223U;
         static const AkUniqueID TUT_WUNDERBAR_TRIGGER = 3007390098U;
+        static const AkUniqueID UNPAUSE = 3412868374U;
         static const AkUniqueID WEIGHT_DROP = 1928594291U;
         static const AkUniqueID WEIGHT_DROP_TRIGGER = 1503347734U;
-        static const AkUniqueID WEIGHT_PLANK = 2522016532U;
     } // namespace EVENTS
 
     namespace STATES
@@ -167,6 +187,7 @@ namespace AK
     {
         static const AkUniqueID CLICK_START = 2996780470U;
         static const AkUniqueID IN_USE = 4054730840U;
+        static const AkUniqueID NEW_SECTION = 1443829837U;
         static const AkUniqueID NOISE_DETECTION = 866473373U;
         static const AkUniqueID RUN_TIME = 3498626028U;
     } // namespace GAME_PARAMETERS

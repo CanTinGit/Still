@@ -14,7 +14,7 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Buzz" ID="{2D652D58-B463-4F3A-BD99-641B9DAEF6C2}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<ObjectRef Name="electricity" ID="{9A8A1FC2-BF2A-42F1-9D8F-DB5FEA24D996}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
@@ -74,6 +74,10 @@
 							<Position X="2" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="treadmill" ID="{4103F2CA-031F-42F1-AB2D-80FB23E28580}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="tut_box" ID="{C404AE30-8B29-4471-8631-409C5F150E6A}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 							<Position X="3" Y="0"/>
 						</Module>
@@ -93,6 +97,34 @@
 							<ObjectRef Name="game_start" ID="{25631253-0534-49AB-96FB-5B59B7A8C543}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 							<Position X="3" Y="4"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="fan" ID="{01D823F1-6920-4D71-A45C-B24FB0F2A148}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="3" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="throw_charge" ID="{8947313C-94CF-4150-8007-DCBF93F37192}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="throw" ID="{57E77432-6B64-4A7B-9B09-740F3581595D}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="push_object" ID="{96B7A540-B3E2-43EA-89EC-B78BD86CCC83}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="object_slide" ID="{1A6BFE98-F95E-4D83-BCDF-3847EF604DB5}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="box_click" ID="{8001031D-1BC7-4F46-8886-AC7F1A44B28B}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="box_click" ID="{343BABFB-5FD3-4A01-BFCF-5E7124F2DD92}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+							<Position X="4" Y="5"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -104,8 +136,12 @@
 							<Value>-48</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="new_section" ID="{F375A3B7-2B9A-4831-8809-AD211576442C}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="run_time" ID="{095CE668-1941-4884-8D38-4CF84B13C942}"/>
-							<Value>0.42</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="in_use" ID="{8234ED03-2E42-4AFC-891F-392AB4A032CF}"/>
@@ -113,14 +149,14 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="metal_object" ID="{DFD31C6E-66D7-47EA-8F95-1AB34A192F4F}"/>
-						<CurrentStateRef Name="Heavy" ID="{7FD69DDF-28A0-4F25-B23E-7C95E7F638F4}"/>
-						<CurrentStateRef Name="American" ID="{50DA6138-9D06-4974-8314-C7312FE96D70}"/>
+						<CurrentStateRef Name="wood_object" ID="{6EA2ED91-14EF-47AB-A9AA-9C93BFFB8D58}"/>
+						<CurrentStateRef Name="Light" ID="{F78BBE52-E4DB-4079-9BF6-B2042AD91618}"/>
+						<CurrentStateRef Name="Chinese" ID="{A321AB47-489D-40B2-9651-8A3B9723F01C}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="character_select" ID="{9C3B3C6C-220A-41F2-9ADD-4CCD37DF4F32}"/>
 						<CurrentSwitchRef Name="Section3" ID="{2E472B8C-03EA-4053-BAA8-37930875CA73}"/>
-						<CurrentSwitchRef Name="Correct" ID="{EBC666CF-D8EC-4FE3-A6D0-2F421742C332}"/>
+						<CurrentSwitchRef Name="Incorrect" ID="{1EEBC0AD-E7CE-4890-A3D0-71287999FABE}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

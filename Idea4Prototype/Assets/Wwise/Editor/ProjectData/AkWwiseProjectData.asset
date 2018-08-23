@@ -11,13 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915e4feee9c236c46b967faed71c4350, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  CurrentPluginConfig: Release
+  CurrentPluginConfig: 
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: -443170263
-    m_lastTimePart2: -1999240117
+    m_lastTimePsrt1: 1549482934
+    m_lastTimePart2: -1999238955
     List:
     - Name: acceptance_1
       Path: Default Work Unit\UI\acceptance_1
@@ -205,53 +205,71 @@ MonoBehaviour:
       ID: -514624074
       Guid: 16477be0c79afe4b86800e575cd98c49
       maxAttenuation: 0
-    - Name: crane_pickup
-      Path: Default Work Unit\Crane\crane_pickup
+    - Name: computer_fan
+      Path: Default Work Unit\computer_fan
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Crane
-        ObjectType: 4
-      - ElementName: crane_pickup
+      - ElementName: computer_fan
         ObjectType: 3
-      ID: 412826751
-      Guid: 6acad24ca58bf54897afa548d0693919
+      ID: 644354980
+      Guid: d927088dd41c494592537b6eae3ed6fc
       maxAttenuation: 0
-    - Name: crane_release
-      Path: Default Work Unit\Crane\crane_release
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Crane
-        ObjectType: 4
-      - ElementName: crane_release
-        ObjectType: 3
-      ID: -744631134
-      Guid: 112d524b0f771542b0ffe432c0fc841e
-      maxAttenuation: 0
-    - Name: crane_trigger_pickup
-      Path: Default Work Unit\Triggers\crane_trigger_pickup
+    - Name: computer_fan_trigger
+      Path: Default Work Unit\Triggers\computer_fan_trigger
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Triggers
         ObjectType: 4
-      - ElementName: crane_trigger_pickup
+      - ElementName: computer_fan_trigger
         ObjectType: 3
-      ID: -735299024
-      Guid: cdbfb73de760ad4c806a01d2c8c94cf9
+      ID: 446580501
+      Guid: 1be4c17211fc4e4e811dd7974b74d98b
       maxAttenuation: 0
-    - Name: crane_trigger_release
-      Path: Default Work Unit\Triggers\crane_trigger_release
+    - Name: cup_fall
+      Path: Default Work Unit\cup_fall
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: cup_fall
+        ObjectType: 3
+      ID: 748714045
+      Guid: 0583ff35bde9184fa33040c445723575
+      maxAttenuation: 0
+    - Name: cup_fall_trigger
+      Path: Default Work Unit\Triggers\cup_fall_trigger
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Triggers
         ObjectType: 4
-      - ElementName: crane_trigger_release
+      - ElementName: cup_fall_trigger
         ObjectType: 3
-      ID: -1144550677
-      Guid: 8aaa78ca444aa946bc8e839589b392eb
+      ID: 1688054476
+      Guid: 599beab398257a418fb7768cfec8eec7
+      maxAttenuation: 0
+    - Name: cup_squeak
+      Path: Default Work Unit\cup_squeak
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: cup_squeak
+        ObjectType: 3
+      ID: 1212948756
+      Guid: 6703f802526129498977845e8b121c55
+      maxAttenuation: 0
+    - Name: cup_squeak_trigger
+      Path: Default Work Unit\Triggers\cup_squeak_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: cup_squeak_trigger
+        ObjectType: 3
+      ID: 325794693
+      Guid: e8786f80c520ce4c9ca913c70b6c9975
       maxAttenuation: 0
     - Name: electricity
       Path: Default Work Unit\electricity
@@ -274,6 +292,50 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1568560881
       Guid: c6a627471326b4409cabe2231e7b29da
+      maxAttenuation: 0
+    - Name: fan
+      Path: Default Work Unit\fan
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: fan
+        ObjectType: 3
+      ID: 1183803264
+      Guid: f123d8012069714da45cb24fb0f2a148
+      maxAttenuation: 0
+    - Name: fan_switch
+      Path: Default Work Unit\fan_switch
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: fan_switch
+        ObjectType: 3
+      ID: 1150021507
+      Guid: 4bf4d063e1d4464885dea8310106e6c7
+      maxAttenuation: 0
+    - Name: fan_switch_trigger
+      Path: Default Work Unit\Triggers\fan_switch_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: fan_switch_trigger
+        ObjectType: 3
+      ID: -582584794
+      Guid: d6115ace0f400c4cacafa8147614ebc2
+      maxAttenuation: 0
+    - Name: fan_trigger
+      Path: Default Work Unit\Triggers\fan_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: fan_trigger
+        ObjectType: 3
+      ID: -1749097847
+      Guid: 34b48c99346d7d498ce0ac212289b4c5
       maxAttenuation: 0
     - Name: game_start
       Path: Default Work Unit\UI\game_start
@@ -308,6 +370,28 @@ MonoBehaviour:
         ObjectType: 3
       ID: -855914767
       Guid: a4d5dda297254a419ccda03148e3c1e2
+      maxAttenuation: 0
+    - Name: glass
+      Path: Default Work Unit\glass
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: glass
+        ObjectType: 3
+      ID: -1844997921
+      Guid: 8a2ca8064f4d644bb42a50bba3fc04c8
+      maxAttenuation: 0
+    - Name: glass_trigger
+      Path: Default Work Unit\Triggers\glass_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: glass_trigger
+        ObjectType: 3
+      ID: -160501142
+      Guid: 35f59c03a107544fb3b49daf019a2339
       maxAttenuation: 0
     - Name: hover
       Path: Default Work Unit\UI\hover
@@ -388,6 +472,64 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1339907015
       Guid: c96c75ff9a2a2a4bbfbf4e8360f27ed1
+      maxAttenuation: 0
+    - Name: pause
+      Path: Default Work Unit\UI\pause
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: pause
+        ObjectType: 3
+      ID: -1202379803
+      Guid: cc4c32a0493c784f99f36fc8073bbfef
+      maxAttenuation: 0
+    - Name: plank_fall
+      Path: Default Work Unit\plank_fall
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: plank_fall
+        ObjectType: 3
+      ID: -1865247251
+      Guid: b16db63b05c7a5478eee2f9ff429df26
+      maxAttenuation: 0
+    - Name: plank_trigger
+      Path: Default Work Unit\Triggers\plank_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: plank_trigger
+        ObjectType: 3
+      ID: 316214646
+      Guid: f69d034b44d3b348a6ff4dbffc601d30
+      maxAttenuation: 0
+    - Name: platinum_cheese
+      Path: Default Work Unit\UI\platinum_cheese
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: platinum_cheese
+        ObjectType: 3
+      ID: 1492487779
+      Guid: cd711fa333e0464bb74d9edcb51de1b5
+      maxAttenuation: 0
+    - Name: platinum_cheese_trigger
+      Path: Default Work Unit\Triggers\platinum_cheese_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: platinum_cheese_trigger
+        ObjectType: 3
+      ID: 1618369734
+      Guid: 27b2c82c75b97b44bdc11a318b170414
       maxAttenuation: 0
     - Name: play_level_music
       Path: Default Work Unit\MusicEvents\Level\play_level_music
@@ -501,6 +643,18 @@ MonoBehaviour:
       ID: 200872652
       Guid: 1360a18c14c59d48b0e7c0201d72043f
       maxAttenuation: 0
+    - Name: player_select
+      Path: Default Work Unit\Player\player_select
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: player_select
+        ObjectType: 3
+      ID: 282749073
+      Guid: 4b55ef8671fb014cb178dce00f91d04c
+      maxAttenuation: 0
     - Name: player_shock
       Path: Default Work Unit\Player\player_shock
       PathAndIcons:
@@ -524,6 +678,28 @@ MonoBehaviour:
         ObjectType: 3
       ID: 65181031
       Guid: 9ddef41577381d44b9b7b31bb601332e
+      maxAttenuation: 0
+    - Name: pokey_finger_machine
+      Path: Default Work Unit\pokey_finger_machine
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pokey_finger_machine
+        ObjectType: 3
+      ID: -1561657065
+      Guid: 54fa2d4c412f5b4a997770e71a19e888
+      maxAttenuation: 0
+    - Name: pokey_finger_trigger
+      Path: Default Work Unit\Triggers\pokey_finger_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: pokey_finger_trigger
+        ObjectType: 3
+      ID: -1540776252
+      Guid: b1686498c38c994dbb616aca5c0af8a0
       maxAttenuation: 0
     - Name: pull_lever
       Path: Default Work Unit\pull_lever
@@ -557,6 +733,16 @@ MonoBehaviour:
       ID: -1896735871
       Guid: 4766e3a89fcc9249bfa90bb8ffd581c4
       maxAttenuation: 0
+    - Name: sploosh
+      Path: Default Work Unit\sploosh
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: sploosh
+        ObjectType: 3
+      ID: 60542055
+      Guid: ac0980d7b0681f40b938687c297533b7
+      maxAttenuation: 0
     - Name: stop_level_music
       Path: Default Work Unit\MusicEvents\Level\stop_level_music
       PathAndIcons:
@@ -583,6 +769,40 @@ MonoBehaviour:
       ID: -2116744866
       Guid: 7d91431d8d70d74483dcff6f49d93102
       maxAttenuation: 0
+    - Name: throw
+      Path: Default Work Unit\throw
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: throw
+        ObjectType: 3
+      ID: 745179803
+      Guid: 3274e757646b7b4a9b09740f3581595d
+      maxAttenuation: 0
+    - Name: throw_charge
+      Path: Default Work Unit\UI\throw_charge
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: throw_charge
+        ObjectType: 3
+      ID: 1625168126
+      Guid: 3c314789cf9450418007dcbf93f37192
+      maxAttenuation: 0
+    - Name: throw_trigger
+      Path: Default Work Unit\Triggers\throw_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: throw_trigger
+        ObjectType: 3
+      ID: -754084098
+      Guid: 0d2b51d24e08134fa04789090c60dd6c
+      maxAttenuation: 0
     - Name: treadmill
       Path: Default Work Unit\treadmill
       PathAndIcons:
@@ -592,6 +812,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1248704003
       Guid: caf203411f03f142ab2d80fb23e28580
+      maxAttenuation: 0
+    - Name: treadmill_stop_trigger
+      Path: Default Work Unit\Triggers\treadmill_stop_trigger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Triggers
+        ObjectType: 4
+      - ElementName: treadmill_stop_trigger
+        ObjectType: 3
+      ID: -478170215
+      Guid: b9bc70d1838cfc49884c5cdd27668f26
       maxAttenuation: 0
     - Name: treadmill_trigger
       Path: Default Work Unit\Triggers\treadmill_trigger
@@ -797,6 +1029,18 @@ MonoBehaviour:
       ID: -1287577198
       Guid: 7f9760bcf7dbba41b260a9f4cd5a3290
       maxAttenuation: 0
+    - Name: unpause
+      Path: Default Work Unit\UI\unpause
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: unpause
+        ObjectType: 3
+      ID: -882098922
+      Guid: 3f7adc66bda85845bfd8a2d953a8f05a
+      maxAttenuation: 0
     - Name: weight_drop
       Path: Default Work Unit\weight_drop
       PathAndIcons:
@@ -833,8 +1077,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: 998828877
-    m_lastTimePart2: -1999240167
+    m_lastTimePsrt1: -104741610
+    m_lastTimePart2: -1999238917
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -851,8 +1095,8 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{31270FE0-9994-4DF9-9223-04075FC8517C}'
-    m_lastTimePsrt1: 1479381878
-    m_lastTimePart2: -1999240724
+    m_lastTimePsrt1: -323930407
+    m_lastTimePart2: -1999239522
     List:
     - Name: Impact_Force
       Path: Default Work Unit\Impact_Force
@@ -949,8 +1193,8 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{DCD9EADF-CE2D-40CB-AB1F-1106DFAF2C6F}'
-    m_lastTimePsrt1: -429033396
-    m_lastTimePart2: -1999240362
+    m_lastTimePsrt1: -323930407
+    m_lastTimePart2: -1999239522
     List:
     - Name: Buzz
       Path: Default Work Unit\Buzz
@@ -1023,8 +1267,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: 239106641
-    m_lastTimePart2: -1999240113
+    m_lastTimePsrt1: 1723512934
+    m_lastTimePart2: -1999238955
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient
@@ -1102,8 +1346,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E016A5A6-0682-456F-BC10-81BBB135CFD0}'
-    m_lastTimePsrt1: 926416641
-    m_lastTimePart2: -1999240113
+    m_lastTimePsrt1: 2039903828
+    m_lastTimePart2: -1999239145
     List:
     - Name: click_start
       Path: Default Work Unit\click_start
@@ -1123,6 +1367,15 @@ MonoBehaviour:
         ObjectType: 13
       ID: -240236456
       Guid: 03ed3482422efc4a891f392ab4a032cf
+    - Name: new_section
+      Path: Default Work Unit\new_section
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: new_section
+        ObjectType: 13
+      ID: 1443829837
+      Guid: b7a375f39a2b31488809ad211576442c
     - Name: noise_detection
       Path: Default Work Unit\noise_detection
       PathAndIcons:
@@ -1145,13 +1398,32 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{423FF0F4-4C2C-49B0-BB98-500C1D5DAA9E}'
-    m_lastTimePsrt1: 1479391878
-    m_lastTimePart2: -1999240724
+    m_lastTimePsrt1: -323930407
+    m_lastTimePart2: -1999239522
     List: []
   ExpandedItems:
   - /Idea4Prototype_WwiseProject
+  - /Idea4Prototype_WwiseProject/Auxiliary Busses
+  - /Idea4Prototype_WwiseProject/Auxiliary Busses/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Auxiliary Busses/Default Work Unit/Master Audio Bus
   - /Idea4Prototype_WwiseProject/Events
   - /Idea4Prototype_WwiseProject/Events/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Triggers
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Tut Triggers
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/Tutorial
+  - /Idea4Prototype_WwiseProject/Events/Default Work Unit/UI
+  - /Idea4Prototype_WwiseProject/SoundBanks
+  - /Idea4Prototype_WwiseProject/SoundBanks/Default Work Unit
+  - /Idea4Prototype_WwiseProject/States
+  - /Idea4Prototype_WwiseProject/States/Default Work Unit
+  - /Idea4Prototype_WwiseProject/States/Default Work Unit/Impact_Force
+  - /Idea4Prototype_WwiseProject/States/Default Work Unit/Material
+  - /Idea4Prototype_WwiseProject/States/Default Work Unit/Nationality
+  - /Idea4Prototype_WwiseProject/Switches
+  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit
+  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit/Buzz
+  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit/intro
+  - /Idea4Prototype_WwiseProject/Switches/Default Work Unit/Music_Transition
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

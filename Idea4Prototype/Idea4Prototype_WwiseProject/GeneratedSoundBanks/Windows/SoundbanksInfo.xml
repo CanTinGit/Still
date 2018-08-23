@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -84,10 +84,15 @@
 				<Event Id="1922690190" Name="player_drop" ObjectPath="\Events\Default Work Unit\Player\player_drop"/>
 				<Event Id="1305133589" Name="player_jump" ObjectPath="\Events\Default Work Unit\Player\player_jump"/>
 				<Event Id="3762137770" Name="player_lift" ObjectPath="\Events\Default Work Unit\Player\player_lift"/>
+				<Event Id="282749073" Name="player_select" ObjectPath="\Events\Default Work Unit\Player\player_select"/>
 				<Event Id="3937592553" Name="player_shock" ObjectPath="\Events\Default Work Unit\Player\player_shock"/>
 				<Event Id="65181031" Name="player_throw" ObjectPath="\Events\Default Work Unit\Player\player_throw"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="6472743" Language="English(US)">
+					<ShortName>richard_select_1.wav</ShortName>
+					<Path>Voices\English(US)\richard_select_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="10576331" Language="English(US)">
 					<ShortName>Campbell_Release_1.wav</ShortName>
 					<Path>Voices\English(US)\Campbell_Release_1_1C9C67B2.wem</Path>
@@ -128,6 +133,10 @@
 					<ShortName>Campbell_Lift_1.wav</ShortName>
 					<Path>Voices\English(US)\Campbell_Lift_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="115347826" Language="English(US)">
+					<ShortName>sanket_select_5.wav</ShortName>
+					<Path>Voices\English(US)\sanket_select_5_1C9C67B2.wem</Path>
+				</File>
 				<File Id="125663267" Language="English(US)">
 					<ShortName>Sarah_Lift_3.wav</ShortName>
 					<Path>Voices\English(US)\Sarah_Lift_3_1C9C67B2.wem</Path>
@@ -148,6 +157,10 @@
 					<ShortName>Sarah_Lift_1.wav</ShortName>
 					<Path>Voices\English(US)\Sarah_Lift_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="178532682" Language="English(US)">
+					<ShortName>campbell_select_5.wav</ShortName>
+					<Path>Voices\English(US)\campbell_select_5_1C9C67B2.wem</Path>
+				</File>
 				<File Id="180755142" Language="English(US)">
 					<ShortName>Sanket_Release_1.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Release_1_1C9C67B2.wem</Path>
@@ -167,6 +180,10 @@
 				<File Id="195283681" Language="English(US)">
 					<ShortName>Sanket_Accident_2.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Accident_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="202290473" Language="English(US)">
+					<ShortName>richard_select_3.wav</ShortName>
+					<Path>Voices\English(US)\richard_select_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="207493932" Language="English(US)">
 					<ShortName>Mouse_Lift_Man.wav</ShortName>
@@ -200,9 +217,21 @@
 					<ShortName>Sanket_Throw_5.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Throw_5_1C9C67B2.wem</Path>
 				</File>
+				<File Id="263332908" Language="English(US)">
+					<ShortName>campbell_select_4.wav</ShortName>
+					<Path>Voices\English(US)\campbell_select_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="263342806" Language="English(US)">
+					<ShortName>campbell_select_1.wav</ShortName>
+					<Path>Voices\English(US)\campbell_select_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="279337290" Language="English(US)">
 					<ShortName>Sarah_Lift_4.wav</ShortName>
 					<Path>Voices\English(US)\Sarah_Lift_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="319729635" Language="English(US)">
+					<ShortName>richard_shock_1.wav</ShortName>
+					<Path>Voices\English(US)\richard_shock_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="321254178" Language="English(US)">
 					<ShortName>Sarah_release_2.wav</ShortName>
@@ -248,13 +277,29 @@
 					<ShortName>Mouse_Carry_Man.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_Carry_Man_1C9C67B2.wem</Path>
 				</File>
+				<File Id="390452183" Language="English(US)">
+					<ShortName>sarah_select_1.wav</ShortName>
+					<Path>Voices\English(US)\sarah_select_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="403591104" Language="English(US)">
 					<ShortName>sarah_jump_2.wav</ShortName>
 					<Path>Voices\English(US)\sarah_jump_2_1C9C67B2.wem</Path>
 				</File>
+				<File Id="408855279" Language="English(US)">
+					<ShortName>sanket_select_2.wav</ShortName>
+					<Path>Voices\English(US)\sanket_select_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="410938169" Language="English(US)">
 					<ShortName>Sanket_Accident_8.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Accident_8_1C9C67B2.wem</Path>
+				</File>
+				<File Id="428631451" Language="English(US)">
+					<ShortName>sanket_select_4.wav</ShortName>
+					<Path>Voices\English(US)\sanket_select_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="437038077" Language="English(US)">
+					<ShortName>richard_shock_4.wav</ShortName>
+					<Path>Voices\English(US)\richard_shock_4_1C9C67B2.wem</Path>
 				</File>
 				<File Id="445765875" Language="English(US)">
 					<ShortName>Mouse_Jump_Man_4.wav</ShortName>
@@ -296,6 +341,10 @@
 					<ShortName>Sanket_Release_4.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Release_4_1C9C67B2.wem</Path>
 				</File>
+				<File Id="548199773" Language="English(US)">
+					<ShortName>richard_select_4.wav</ShortName>
+					<Path>Voices\English(US)\richard_select_4_1C9C67B2.wem</Path>
+				</File>
 				<File Id="552144270" Language="English(US)">
 					<ShortName>Sanket_Release_5.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Release_5_1C9C67B2.wem</Path>
@@ -320,6 +369,10 @@
 					<ShortName>Sanket_Jump_5.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Jump_5_1C9C67B2.wem</Path>
 				</File>
+				<File Id="615753770" Language="English(US)">
+					<ShortName>sanket_select_3.wav</ShortName>
+					<Path>Voices\English(US)\sanket_select_3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="621007588" Language="English(US)">
 					<ShortName>Sanket_Jump_1.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Jump_1_1C9C67B2.wem</Path>
@@ -335,6 +388,14 @@
 				<File Id="691550126" Language="English(US)">
 					<ShortName>campbell_accident_5.wav</ShortName>
 					<Path>Voices\English(US)\campbell_accident_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="693795734" Language="English(US)">
+					<ShortName>campbell_select_2.wav</ShortName>
+					<Path>Voices\English(US)\campbell_select_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="699338676" Language="English(US)">
+					<ShortName>richard_shock_2.wav</ShortName>
+					<Path>Voices\English(US)\richard_shock_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="705362319" Language="English(US)">
 					<ShortName>Mouse_Jump_Man_6.wav</ShortName>
@@ -363,6 +424,10 @@
 				<File Id="741323757" Language="English(US)">
 					<ShortName>Mouse_Yeet_Man.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_Yeet_Man_1C9C67B2.wem</Path>
+				</File>
+				<File Id="746704656" Language="English(US)">
+					<ShortName>richard_shock_3.wav</ShortName>
+					<Path>Voices\English(US)\richard_shock_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="764871290" Language="English(US)">
 					<ShortName>Sarah_release_1.wav</ShortName>
@@ -412,6 +477,10 @@
 					<ShortName>sarah_jump_6.wav</ShortName>
 					<Path>Voices\English(US)\sarah_jump_6_1C9C67B2.wem</Path>
 				</File>
+				<File Id="857846710" Language="English(US)">
+					<ShortName>campbell_select_3.wav</ShortName>
+					<Path>Voices\English(US)\campbell_select_3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="870760722" Language="English(US)">
 					<ShortName>Sanket_Lift_4.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Lift_4_1C9C67B2.wem</Path>
@@ -447,6 +516,10 @@
 				<File Id="941221864" Language="English(US)">
 					<ShortName>Mouse_Heavy_Lift_Man_1.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_Heavy_Lift_Man_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="945718801" Language="English(US)">
+					<ShortName>sarah_select_2.wav</ShortName>
+					<Path>Voices\English(US)\sarah_select_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="947045430" Language="English(US)">
 					<ShortName>Sanket_Lift_3.wav</ShortName>
@@ -488,6 +561,10 @@
 					<ShortName>Sanket_Lift_5.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Lift_5_1C9C67B2.wem</Path>
 				</File>
+				<File Id="990462516" Language="English(US)">
+					<ShortName>sarah_select_4.wav</ShortName>
+					<Path>Voices\English(US)\sarah_select_4_1C9C67B2.wem</Path>
+				</File>
 				<File Id="994632943" Language="English(US)">
 					<ShortName>Mouse_OhNo_Man_1.wav</ShortName>
 					<Path>Voices\English(US)\Mouse_OhNo_Man_1_1C9C67B2.wem</Path>
@@ -508,6 +585,14 @@
 					<ShortName>Sanket_Jump_2.wav</ShortName>
 					<Path>Voices\English(US)\Sanket_Jump_2_1C9C67B2.wem</Path>
 				</File>
+				<File Id="1023033806" Language="English(US)">
+					<ShortName>sarah_select_3.wav</ShortName>
+					<Path>Voices\English(US)\sarah_select_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1029279581" Language="English(US)">
+					<ShortName>richard_select_2.wav</ShortName>
+					<Path>Voices\English(US)\richard_select_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="1031051921" Language="English(US)">
 					<ShortName>sarah_jump_5.wav</ShortName>
 					<Path>Voices\English(US)\sarah_jump_5_1C9C67B2.wem</Path>
@@ -519,6 +604,10 @@
 				<File Id="1042542963" Language="English(US)">
 					<ShortName>Sarah_release_3.wav</ShortName>
 					<Path>Voices\English(US)\Sarah_release_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1042660489" Language="English(US)">
+					<ShortName>sanket_select_1.wav</ShortName>
+					<Path>Voices\English(US)\sanket_select_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1047762844" Language="English(US)">
 					<ShortName>Sarah_release_4.wav</ShortName>
@@ -535,8 +624,10 @@
 			<ShortName>Level_Music</ShortName>
 			<Path>Level_Music.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3092587493" Name="pause" ObjectPath="\Events\Default Work Unit\UI\pause"/>
 				<Event Id="557932600" Name="play_level_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Level\play_level_music"/>
 				<Event Id="4055353338" Name="stop_level_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Level\stop_level_music"/>
+				<Event Id="3412868374" Name="unpause" ObjectPath="\Events\Default Work Unit\UI\unpause"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="13560483" Language="SFX">
@@ -584,8 +675,12 @@
 				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\UI\game_start"/>
 				<Event Id="3753593413" Name="hover" ObjectPath="\Events\Default Work Unit\UI\hover"/>
 				<Event Id="1339907015" Name="paper_unravel" ObjectPath="\Events\Default Work Unit\UI\paper_unravel"/>
+				<Event Id="3092587493" Name="pause" ObjectPath="\Events\Default Work Unit\UI\pause"/>
+				<Event Id="1492487779" Name="platinum_cheese" ObjectPath="\Events\Default Work Unit\UI\platinum_cheese"/>
 				<Event Id="2398231425" Name="score" ObjectPath="\Events\Default Work Unit\UI\score"/>
 				<Event Id="2178222430" Name="stop_score" ObjectPath="\Events\Default Work Unit\UI\stop_score"/>
+				<Event Id="1625168126" Name="throw_charge" ObjectPath="\Events\Default Work Unit\UI\throw_charge"/>
+				<Event Id="3412868374" Name="unpause" ObjectPath="\Events\Default Work Unit\UI\unpause"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="42039383" Language="SFX">
@@ -595,6 +690,10 @@
 				<File Id="56297018" Language="SFX">
 					<ShortName>accept_4.wav</ShortName>
 					<Path>SFX\accept_4_5B2BC6AF.wem</Path>
+				</File>
+				<File Id="65225508" Language="SFX">
+					<ShortName>UI_plaitnum_Cheese.wav</ShortName>
+					<Path>SFX\UI_plaitnum_Cheese_1C9C67B2.wem</Path>
 				</File>
 				<File Id="89126927" Language="SFX">
 					<ShortName>cheese_bite_11.wav</ShortName>
@@ -644,6 +743,14 @@
 					<ShortName>Paper_unravel.wav</ShortName>
 					<Path>SFX\Paper_unravel_1C9C67B2.wem</Path>
 				</File>
+				<File Id="545076414" Language="SFX">
+					<ShortName>ui_unpause_1.wav</ShortName>
+					<Path>SFX\ui_unpause_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="583525965" Language="SFX">
+					<ShortName>Ui_pause_1.wav</ShortName>
+					<Path>SFX\Ui_pause_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="586344811" Language="SFX">
 					<ShortName>chime_loop.wav</ShortName>
 					<Path>SFX\chime_loop_F17FB28C.wem</Path>
@@ -671,6 +778,10 @@
 				<File Id="792717471" Language="SFX">
 					<ShortName>cheese_bite_12.wav</ShortName>
 					<Path>SFX\cheese_bite_12_8728F8CB.wem</Path>
+				</File>
+				<File Id="848345868" Language="SFX">
+					<ShortName>throw_charge.wav</ShortName>
+					<Path>SFX\throw_charge_1C9C67B2.wem</Path>
 				</File>
 				<File Id="870128884" Language="SFX">
 					<ShortName>UI_Select.wav</ShortName>
@@ -764,39 +875,63 @@
 				<Event Id="255911779" Name="button_buzz" ObjectPath="\Events\Default Work Unit\button_buzz"/>
 				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click"/>
 				<Event Id="3454382244" Name="button_trigger" ObjectPath="\Events\Default Work Unit\Triggers\button_trigger"/>
-				<Event Id="412826751" Name="crane_pickup" ObjectPath="\Events\Default Work Unit\Crane\crane_pickup"/>
-				<Event Id="3550336162" Name="crane_release" ObjectPath="\Events\Default Work Unit\Crane\crane_release"/>
-				<Event Id="3559668272" Name="crane_trigger_pickup" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_pickup"/>
-				<Event Id="3150416619" Name="crane_trigger_release" ObjectPath="\Events\Default Work Unit\Triggers\crane_trigger_release"/>
-				<Event Id="2917121896" Name="electricity" ObjectPath="\Events\Default Work Unit\electricity"/>
+				<Event Id="644354980" Name="computer_fan" ObjectPath="\Events\Default Work Unit\computer_fan"/>
+				<Event Id="446580501" Name="computer_fan_trigger" ObjectPath="\Events\Default Work Unit\Triggers\computer_fan_trigger"/>
+				<Event Id="748714045" Name="cup_fall" ObjectPath="\Events\Default Work Unit\cup_fall"/>
+				<Event Id="1688054476" Name="cup_fall_trigger" ObjectPath="\Events\Default Work Unit\Triggers\cup_fall_trigger"/>
+				<Event Id="1212948756" Name="cup_squeak" ObjectPath="\Events\Default Work Unit\cup_squeak"/>
+				<Event Id="325794693" Name="cup_squeak_trigger" ObjectPath="\Events\Default Work Unit\Triggers\cup_squeak_trigger"/>
 				<Event Id="1568560881" Name="electricity_trigger" ObjectPath="\Events\Default Work Unit\Triggers\electricity_trigger"/>
+				<Event Id="1183803264" Name="fan" ObjectPath="\Events\Default Work Unit\fan"/>
+				<Event Id="1150021507" Name="fan_switch" ObjectPath="\Events\Default Work Unit\fan_switch"/>
+				<Event Id="3712382502" Name="fan_switch_trigger" ObjectPath="\Events\Default Work Unit\Triggers\fan_switch_trigger"/>
+				<Event Id="2545869449" Name="fan_trigger" ObjectPath="\Events\Default Work Unit\Triggers\fan_trigger"/>
 				<Event Id="1121922920" Name="gate" ObjectPath="\Events\Default Work Unit\gate"/>
 				<Event Id="3439052529" Name="gate_trigger" ObjectPath="\Events\Default Work Unit\Triggers\gate_trigger"/>
+				<Event Id="2449969375" Name="glass" ObjectPath="\Events\Default Work Unit\glass"/>
+				<Event Id="4134466154" Name="glass_trigger" ObjectPath="\Events\Default Work Unit\Triggers\glass_trigger"/>
 				<Event Id="3997114622" Name="lever_trigger" ObjectPath="\Events\Default Work Unit\Triggers\lever_trigger"/>
 				<Event Id="538597049" Name="object_impact" ObjectPath="\Events\Default Work Unit\object_impact"/>
 				<Event Id="2980894478" Name="object_slide" ObjectPath="\Events\Default Work Unit\object_slide"/>
 				<Event Id="212497099" Name="object_slide_trigger" ObjectPath="\Events\Default Work Unit\Triggers\object_slide_trigger"/>
+				<Event Id="2429720045" Name="plank_fall" ObjectPath="\Events\Default Work Unit\plank_fall"/>
+				<Event Id="316214646" Name="plank_trigger" ObjectPath="\Events\Default Work Unit\Triggers\plank_trigger"/>
+				<Event Id="1492487779" Name="platinum_cheese" ObjectPath="\Events\Default Work Unit\UI\platinum_cheese"/>
+				<Event Id="1618369734" Name="platinum_cheese_trigger" ObjectPath="\Events\Default Work Unit\Triggers\platinum_cheese_trigger"/>
 				<Event Id="200872652" Name="player_push_trigger" ObjectPath="\Events\Default Work Unit\Triggers\player_push_trigger"/>
+				<Event Id="2733310231" Name="pokey_finger_machine" ObjectPath="\Events\Default Work Unit\pokey_finger_machine"/>
+				<Event Id="2754191044" Name="pokey_finger_trigger" ObjectPath="\Events\Default Work Unit\Triggers\pokey_finger_trigger"/>
 				<Event Id="766957497" Name="pull_lever" ObjectPath="\Events\Default Work Unit\pull_lever"/>
 				<Event Id="4202621657" Name="push_object" ObjectPath="\Events\Default Work Unit\push_object"/>
+				<Event Id="60542055" Name="sploosh" ObjectPath="\Events\Default Work Unit\sploosh"/>
+				<Event Id="745179803" Name="throw" ObjectPath="\Events\Default Work Unit\throw"/>
+				<Event Id="3540883198" Name="throw_trigger" ObjectPath="\Events\Default Work Unit\Triggers\throw_trigger"/>
 				<Event Id="3046263293" Name="treadmill" ObjectPath="\Events\Default Work Unit\treadmill"/>
+				<Event Id="3816797081" Name="treadmill_stop_trigger" ObjectPath="\Events\Default Work Unit\Triggers\treadmill_stop_trigger"/>
 				<Event Id="931771276" Name="treadmill_trigger" ObjectPath="\Events\Default Work Unit\Triggers\treadmill_trigger"/>
 				<Event Id="1928594291" Name="weight_drop" ObjectPath="\Events\Default Work Unit\weight_drop"/>
 				<Event Id="1503347734" Name="weight_drop_trigger" ObjectPath="\Events\Default Work Unit\Triggers\weight_drop_trigger"/>
-				<Event Id="2522016532" Name="weight_plank" ObjectPath="\Events\Default Work Unit\weight_plank"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="10004527" Language="SFX">
 					<ShortName>fx_lever_1.wav</ShortName>
 					<Path>SFX\fx_lever_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="57840789" Language="SFX">
+					<ShortName>plank_fall_4.wav</ShortName>
+					<Path>SFX\plank_fall_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="65225508" Language="SFX">
+					<ShortName>UI_plaitnum_Cheese.wav</ShortName>
+					<Path>SFX\UI_plaitnum_Cheese_1C9C67B2.wem</Path>
+				</File>
+				<File Id="71811338" Language="SFX">
+					<ShortName>fx_throw_5.wav</ShortName>
+					<Path>SFX\fx_throw_5_1C9C67B2.wem</Path>
+				</File>
 				<File Id="76802143" Language="SFX">
 					<ShortName>Impact_Can_Medium_3.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_3_1C9C67B2.wem</Path>
-				</File>
-				<File Id="87040156" Language="English(US)">
-					<ShortName>Crane_Part_1.wav</ShortName>
-					<Path>Voices\English(US)\Crane_Part_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="148856712" Language="SFX">
 					<ShortName>UI_Correct_Buzz.wav</ShortName>
@@ -842,9 +977,29 @@
 					<ShortName>gate_1.wav</ShortName>
 					<Path>SFX\gate_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="322510632" Language="SFX">
+					<ShortName>pokey_finger_squeak.wav</ShortName>
+					<Path>SFX\pokey_finger_squeak_1C9C67B2.wem</Path>
+				</File>
+				<File Id="350443988" Language="SFX">
+					<ShortName>fx_throw_1.wav</ShortName>
+					<Path>SFX\fx_throw_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="353837918" Language="SFX">
+					<ShortName>fx_throw_4.wav</ShortName>
+					<Path>SFX\fx_throw_4_1C9C67B2.wem</Path>
+				</File>
 				<File Id="359920825" Language="SFX">
 					<ShortName>UI_Incorrect_Buzz.wav</ShortName>
 					<Path>SFX\UI_Incorrect_Buzz_3B068DBB.wem</Path>
+				</File>
+				<File Id="377389443" Language="SFX">
+					<ShortName>fan_sound.wav</ShortName>
+					<Path>SFX\fan_sound_1C9C67B2.wem</Path>
+				</File>
+				<File Id="382283543" Language="SFX">
+					<ShortName>fan_click.wav</ShortName>
+					<Path>SFX\fan_click_1C9C67B2.wem</Path>
 				</File>
 				<File Id="400306442" Language="SFX">
 					<ShortName>Impact_Can_Very_Light_2.wav</ShortName>
@@ -854,9 +1009,17 @@
 					<ShortName>treadmill_loop.wav</ShortName>
 					<Path>SFX\treadmill_loop_1C9C67B2.wem</Path>
 				</File>
+				<File Id="448650239" Language="SFX">
+					<ShortName>fan_loop.wav</ShortName>
+					<Path>SFX\fan_loop_F17FB28C.wem</Path>
+				</File>
 				<File Id="456681022" Language="SFX">
 					<ShortName>Impact_Can_Heavy_1.wav</ShortName>
 					<Path>SFX\Impact_Can_Heavy_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="519500528" Language="SFX">
+					<ShortName>sploosh_1.wav</ShortName>
+					<Path>SFX\sploosh_1_22E803E3.wem</Path>
 				</File>
 				<File Id="524659892" Language="SFX">
 					<ShortName>Wood_Impact_Light_2.wav</ShortName>
@@ -866,29 +1029,53 @@
 					<ShortName>Impact_Can_Heavy.wav</ShortName>
 					<Path>SFX\Impact_Can_Heavy_1C9C67B2.wem</Path>
 				</File>
+				<File Id="548425958" Language="SFX">
+					<ShortName>fx_throw_3.wav</ShortName>
+					<Path>SFX\fx_throw_3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="592493198" Language="SFX">
 					<ShortName>Wood_Impact_Heavy.wav</ShortName>
 					<Path>SFX\Wood_Impact_Heavy_1C9C67B2.wem</Path>
+				</File>
+				<File Id="610242187" Language="SFX">
+					<ShortName>plank_fall_5.wav</ShortName>
+					<Path>SFX\plank_fall_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="641819409" Language="SFX">
+					<ShortName>sploosh_4.wav</ShortName>
+					<Path>SFX\sploosh_4_4D0895E7.wem</Path>
 				</File>
 				<File Id="674416996" Language="SFX">
 					<ShortName>Impact_Can_Light_1.wav</ShortName>
 					<Path>SFX\Impact_Can_Light_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="676003497" Language="SFX">
+					<ShortName>sploosh_2.wav</ShortName>
+					<Path>SFX\sploosh_2_C6EE8E13.wem</Path>
+				</File>
+				<File Id="686754252" Language="SFX">
+					<ShortName>glass_breaK-3.wav</ShortName>
+					<Path>SFX\glass_breaK-3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="700689296" Language="SFX">
 					<ShortName>Wood_Impact_Heavy_4.wav</ShortName>
 					<Path>SFX\Wood_Impact_Heavy_4_1C9C67B2.wem</Path>
 				</File>
-				<File Id="725526311" Language="SFX">
-					<ShortName>electricity.wav</ShortName>
-					<Path>SFX\electricity_1C9C67B2.wem</Path>
+				<File Id="744738500" Language="SFX">
+					<ShortName>fx_throw_2.wav</ShortName>
+					<Path>SFX\fx_throw_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="751690579" Language="SFX">
+					<ShortName>pokey_finger_machine.wav</ShortName>
+					<Path>SFX\pokey_finger_machine_1C9C67B2.wem</Path>
+				</File>
+				<File Id="755596131" Language="SFX">
+					<ShortName>glass_break_2.wav</ShortName>
+					<Path>SFX\glass_break_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="819532865" Language="SFX">
 					<ShortName>Wood_Impact_Light_5.wav</ShortName>
 					<Path>SFX\Wood_Impact_Light_5_1C9C67B2.wem</Path>
-				</File>
-				<File Id="821463885" Language="SFX">
-					<ShortName>Weight hit's plank.wav</ShortName>
-					<Path>SFX\Weight hit's plank_1C9C67B2.wem</Path>
 				</File>
 				<File Id="832918321" Language="SFX">
 					<ShortName>Impact_Can_Very_Light.wav</ShortName>
@@ -897,6 +1084,10 @@
 				<File Id="864353628" Language="SFX">
 					<ShortName>Impact_Can_Medium_2.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="875629046" Language="SFX">
+					<ShortName>glass_smash_1.wav</ShortName>
+					<Path>SFX\glass_smash_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="890476972" Language="SFX">
 					<ShortName>Wood_Impact_Heavy_2.wav</ShortName>
@@ -910,13 +1101,17 @@
 					<ShortName>Impact_Can_Medium.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_1C9C67B2.wem</Path>
 				</File>
-				<File Id="931705023" Language="English(US)">
-					<ShortName>Crane_Part_2.wav</ShortName>
-					<Path>Voices\English(US)\Crane_Part_2_1C9C67B2.wem</Path>
-				</File>
 				<File Id="935883449" Language="SFX">
 					<ShortName>Wood_Impact_Medium.wav</ShortName>
 					<Path>SFX\Wood_Impact_Medium_1C9C67B2.wem</Path>
+				</File>
+				<File Id="941566611" Language="SFX">
+					<ShortName>glass_break_4.wav</ShortName>
+					<Path>SFX\glass_break_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="943910946" Language="SFX">
+					<ShortName>plank_fall_2.wav</ShortName>
+					<Path>SFX\plank_fall_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="997798373" Language="SFX">
 					<ShortName>Wood_Impact_Light_4.wav</ShortName>
@@ -934,9 +1129,17 @@
 					<ShortName>Impact_Can_Medium_1.wav</ShortName>
 					<Path>SFX\Impact_Can_Medium_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="1053591560" Language="SFX">
+					<ShortName>fan_startup.wav</ShortName>
+					<Path>SFX\fan_startup_1C9C67B2.wem</Path>
+				</File>
 				<File Id="1063147226" Language="SFX">
 					<ShortName>Wood_Impact_Medium_2.wav</ShortName>
 					<Path>SFX\Wood_Impact_Medium_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1064057086" Language="SFX">
+					<ShortName>sploosh_3.wav</ShortName>
+					<Path>SFX\sploosh_3_8FD04E0B.wem</Path>
 				</File>
 				<File Id="1072654148" Language="SFX">
 					<ShortName>Wood_Impact_Light_3.wav</ShortName>

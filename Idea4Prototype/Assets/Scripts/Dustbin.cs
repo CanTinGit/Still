@@ -17,7 +17,6 @@ public class Dustbin : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.P))
         {
             Push = true;
-            Debug.Log("P");
             rb.AddForce(this.transform.up * 200f, ForceMode.VelocityChange);
         }
 	}

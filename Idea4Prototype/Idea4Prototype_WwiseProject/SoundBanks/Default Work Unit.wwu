@@ -5,20 +5,26 @@
 			<ChildrenList>
 				<SoundBank Name="Test" ID="{40AE69A2-803D-41F7-A8E5-9CD8270E44ED}">
 					<ObjectInclusionList>
+						<ObjectRef Name="sploosh" ID="{D78009AC-68B0-401F-B938-687C297533B7}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="pull_lever" ID="{7FC4CCC3-C3EB-412A-843F-4EE5AF1029BC}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="crane_release" ID="{4B522D11-770F-4215-B0FF-E432C0FC841E}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="treadmill" ID="{4103F2CA-031F-42F1-AB2D-80FB23E28580}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="object_impact" ID="{2AC362AC-B55E-43C8-827B-7269BFA7B694}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="push_object" ID="{96B7A540-B3E2-43EA-89EC-B78BD86CCC83}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="computer_fan" ID="{8D0827D9-1CD4-4549-9253-7B6EAE3ED6FC}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="button_click" ID="{7A5D9E66-BC01-457E-AF86-C4B6CA633B51}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Weight hit's plank" ID="{47CDD3CB-D113-48AD-A9B1-DBFF26370792}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="plank_fall" ID="{3BB66DB1-C705-47A5-8EEE-2F9FF429DF26}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fan_switch" ID="{63D0F44B-D4E1-4846-85DE-A8310106E6C7}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="gate" ID="{F62AAD81-FBAF-48D6-979F-19F3B3B4E53B}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="crane_pickup" ID="{4CD2CA6A-8BA5-48F5-97AF-A548D0693919}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="cup_squeak" ID="{02F80367-6152-4929-8977-845E8B121C55}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="weight_drop" ID="{4765EB92-AAE9-493A-A8A4-A64BE1355DD3}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="electricity" ID="{785360B3-C16A-499D-A27F-518E9B87E5E9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="pokey_finger_machine" ID="{4C2DFA54-2F41-4A5B-9977-70E71A19E888}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="throw" ID="{57E77432-6B64-4A7B-9B09-740F3581595D}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="glass" ID="{06A82C8A-4D4F-4B64-B42A-50BBA3FC04C8}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fan" ID="{01D823F1-6920-4D71-A45C-B24FB0F2A148}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="object_slide" ID="{1A6BFE98-F95E-4D83-BCDF-3847EF604DB5}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="button_buzz" ID="{AD8048F6-D578-4E9C-BAE0-EFDD00D873D2}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="cup_fall" ID="{35FF8305-E9BD-4F18-A330-40C445723575}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="box_click" ID="{8001031D-1BC7-4F46-8886-AC7F1A44B28B}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

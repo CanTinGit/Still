@@ -48,6 +48,7 @@ public class Level2Controller : MonoBehaviour {
     {
         DisableAndEnablePoints(2);
         DisableAndEnablePoints(3);
+        AkSoundEngine.PostEvent("treadmill_stop_trigger", gameObject);
     }
     //change the tags of the camera ai object when we need or dont need them
     void ChangeTag(Transform camera_)

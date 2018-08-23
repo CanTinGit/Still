@@ -8,10 +8,15 @@ public class Respawn : MonoBehaviour {
     {
         if (col.name == "Main water")
         {
-            string respawnPoint = "RespawnPoint" + gameObject.GetComponent<MovementUpdated>().PlayerNum.ToString();
-            gameObject.transform.position = GameObject.Find(respawnPoint).transform.position;
-            gameObject.transform.rotation = GameObject.Find(respawnPoint).transform.rotation;
+            Invoke("PlayerRespawn",1.5f);
         }
     }
 
+
+    void PlayerRespawn()
+    {
+        string respawnPoint = "RespawnPoint" + gameObject.GetComponent<MovementUpdated>().PlayerNum.ToString();
+        gameObject.transform.position = GameObject.Find(respawnPoint).transform.position;
+        gameObject.transform.rotation = GameObject.Find(respawnPoint).transform.rotation;
+    }
 }

@@ -21,7 +21,6 @@ public class CraneCollider : MonoBehaviour
             //print(other.name);
             //craneAnimator.SetBool("isButtonReleased", true);
             Release = true;
-            Debug.Log(Release);
         }
     }
 

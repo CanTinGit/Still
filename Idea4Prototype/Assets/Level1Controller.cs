@@ -12,6 +12,8 @@ public class Level1Controller : MonoBehaviour {
     public float force;
     public GameObject wire_singlePlayer;
     public GameObject wire_multiple;
+    public GameObject cheese_singlePlayer;
+    public GameObject cheese_multiple;
     // Use this for initialization
     void Start ()
     {
@@ -23,6 +25,8 @@ public class Level1Controller : MonoBehaviour {
             leverPlatform.SetActive(true);
             wire_singlePlayer.SetActive(false);
             wire_multiple.SetActive(true);
+            cheese_multiple.SetActive(true);
+            cheese_singlePlayer.SetActive(false);
         }
 	}
 	

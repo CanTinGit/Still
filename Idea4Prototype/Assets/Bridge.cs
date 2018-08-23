@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bridge : MonoBehaviour {
 
+    public GameObject decal;
     public GameObject bridge;
     GameObject throw_;
     void OnCollisionEnter(Collision col)
@@ -14,7 +15,8 @@ public class Bridge : MonoBehaviour {
             Invoke("RemoveThrowObject", 0.02f);
             this.gameObject.GetComponent<Breakable>().SplitMesh(true);
             bridge.GetComponent<Rigidbody>().isKinematic = false;
-//Destroy(this.gameObject);           
+            Destroy(decal);
+            //Destroy(this.gameObject);           
         }
     }
     void RemoveThrowObject()

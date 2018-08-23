@@ -31,7 +31,6 @@ public class Pick_Move : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Holding = true;
-                    Debug.Log("enter pressed");
                 }
             }
             else
@@ -39,7 +38,6 @@ public class Pick_Move : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Keypad1))
                 {
                     Holding = true;
-                    Debug.Log("enter pressed");
                 }
             }
 
@@ -177,7 +175,6 @@ public class Pick_Move : MonoBehaviour
 
                 if ((picked.name == "Cylinder1") || (picked.name == "Cylinder2"))
                 {
-                    Debug.Log("picked up");
                     if (Joint == false)
                     {
                         Joint = true;
@@ -204,7 +201,6 @@ public class Pick_Move : MonoBehaviour
 
                 if (picked.name == "CylinderSide")
                 {
-                    Debug.Log("picked up");
                     if (Joint == false)
                     {
                         Joint = true;

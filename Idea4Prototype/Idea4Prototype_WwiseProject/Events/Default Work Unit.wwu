@@ -145,6 +145,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="player_select" ID="{86EF554B-FB71-4C01-B178-DCE00F91D04C}">
+							<ChildrenList>
+								<Action Name="" ID="{E638C6A5-8A2F-4F45-9B8C-38686921EECC}" ShortID="63458778">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="select" ID="{E85F25D6-1C33-461B-A3FF-F7526FB3C3D8}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{30275F0C-5C5D-46E9-9ADF-7B335D0BB1E4}" ShortID="864467326">
@@ -360,38 +374,88 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="pause" ID="{A0324CCC-3C49-4F78-99F3-6FC8073BBFEF}">
+							<ChildrenList>
+								<Action Name="" ID="{A6E83C62-884C-476D-A5C2-7016E312E20A}" ShortID="1033143183">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ui_pause_1" ID="{EF859894-0600-404D-A334-D367C61DABA9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EC2B5A37-F4D2-43DD-8648-CBB035B1A6C8}" ShortID="716739919">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="unpause" ID="{66DC7A3F-A8BD-4558-BFD8-A2D953A8F05A}">
+							<ChildrenList>
+								<Action Name="" ID="{F2C93B80-13BF-4C9F-82E6-2B84CFC4CCED}" ShortID="757909654">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ui_unpause_1" ID="{FD1633B4-B73F-4C2D-A92F-DDFDF2A0B11D}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{92761D0A-4DC9-40A5-BFCA-63DAD28D399A}" ShortID="703386514">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="platinum_cheese" ID="{A31F71CD-E033-4B46-B74D-9EDCB51DE1B5}">
+							<ChildrenList>
+								<Action Name="" ID="{B15CBA80-9719-4369-BA3F-1C205FF62F93}" ShortID="996688936">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_platinum_Cheese" ID="{B9661C13-448E-4B4E-8A21-A0BAB3796EE5}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="throw_charge" ID="{8947313C-94CF-4150-8007-DCBF93F37192}">
+							<ChildrenList>
+								<Action Name="" ID="{8A7656EB-7632-4895-993D-64735608F5A5}" ShortID="65273673">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="throw_charge" ID="{84E81785-520E-4AE0-8753-1B17CBD9C3AC}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Triggers" ID="{3BEE6F29-EAF4-41F9-BF0F-7F664FC6F761}" ShortID="618037974">
 					<ChildrenList>
-						<Event Name="crane_trigger_pickup" ID="{3DB7BFCD-60E7-4CAD-806A-01D2C8C94CF9}">
-							<ChildrenList>
-								<Action Name="" ID="{BFE262F8-EFA9-4BF6-B5E4-26DBD3AECC0E}" ShortID="963911973">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="41"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="crane_pickup" ID="{4CD2CA6A-8BA5-48F5-97AF-A548D0693919}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="crane_trigger_release" ID="{CA78AA8A-4A44-46A9-BC8E-839589B392EB}">
-							<ChildrenList>
-								<Action Name="" ID="{6228CBEA-3EB0-4ED9-B2FD-8E35B3AAD204}" ShortID="377880620">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="41"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="crane_release" ID="{4B522D11-770F-4215-B0FF-E432C0FC841E}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="player_push_trigger" ID="{8CA16013-C514-489D-B0E7-C0201D72043F}">
 							<ChildrenList>
 								<Action Name="" ID="{7652B01E-AFD9-4FD3-A5F2-25632EE4ED13}" ShortID="86961826">
@@ -491,33 +555,156 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="electricity_trigger" ID="{4727A6C6-2613-40B4-9CAB-E2231E7B29DA}"/>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="Crane" ID="{2573EACF-8DFC-49FF-8CD7-5FD53023BFC6}" ShortID="253771276">
-					<ChildrenList>
-						<Event Name="crane_pickup" ID="{4CD2CA6A-8BA5-48F5-97AF-A548D0693919}">
+						<Event Name="platinum_cheese_trigger" ID="{2CC8B227-B975-447B-BDC1-1A318B170414}">
 							<ChildrenList>
-								<Action Name="" ID="{8AC42CC0-8C51-4C16-84C0-8E72E0D8A347}" ShortID="733599722">
+								<Action Name="" ID="{67CD1D72-AD2E-4184-983B-A72E5E72EFBE}" ShortID="851647635">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="41"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Crane_Part_1" ID="{54268F16-DFAB-4767-A2AC-A4218141C35B}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+											<ObjectRef Name="platinum_cheese" ID="{A31F71CD-E033-4B46-B74D-9EDCB51DE1B5}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="crane_release" ID="{4B522D11-770F-4215-B0FF-E432C0FC841E}">
+						<Event Name="glass_trigger" ID="{039CF535-07A1-4F54-B3B4-9DAF019A2339}">
 							<ChildrenList>
-								<Action Name="" ID="{C0CAFDF8-5F8E-4FB9-9135-2A7B587DCC06}" ShortID="810566534">
+								<Action Name="" ID="{EF57B40A-FB3F-4C7C-8C89-9E2FC3D00B53}" ShortID="498554651">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="41"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Crane_Part_2" ID="{0C15D1FF-F1CF-4661-AE89-ED03B881B07D}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+											<ObjectRef Name="glass" ID="{06A82C8A-4D4F-4B64-B42A-50BBA3FC04C8}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="throw_trigger" ID="{D2512B0D-084E-4F13-A047-89090C60DD6C}">
+							<ChildrenList>
+								<Action Name="" ID="{FA3D04B2-8C08-455F-9525-4387456B8008}" ShortID="658445207">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="throw" ID="{57E77432-6B64-4A7B-9B09-740F3581595D}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="computer_fan_trigger" ID="{72C1E41B-FC11-4E4E-811D-D7974B74D98B}">
+							<ChildrenList>
+								<Action Name="" ID="{FC53ECE6-5B28-4992-832D-D520054BD8D2}" ShortID="384829118">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="computer_fan" ID="{8D0827D9-1CD4-4549-9253-7B6EAE3ED6FC}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="cup_fall_trigger" ID="{B3EA9B59-2598-417A-8FB7-768CFEC8EEC7}">
+							<ChildrenList>
+								<Action Name="" ID="{BCF59ACA-522B-4793-9A3D-DF1BD2E4D35E}" ShortID="378262268">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cup_fall" ID="{35FF8305-E9BD-4F18-A330-40C445723575}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="cup_squeak_trigger" ID="{806F78E8-20C5-4CCE-9CA9-13C70B6C9975}">
+							<ChildrenList>
+								<Action Name="" ID="{0275C390-30E8-4852-B2F8-72FD5B010D0B}" ShortID="510787854">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cup_squeak" ID="{02F80367-6152-4929-8977-845E8B121C55}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="pokey_finger_trigger" ID="{986468B1-8CC3-4D99-BB61-6ACA5C0AF8A0}">
+							<ChildrenList>
+								<Action Name="" ID="{790CC8A7-2CFB-4F2B-8FDF-2E52D444EA77}" ShortID="307304931">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="pokey_finger_machine" ID="{4C2DFA54-2F41-4A5B-9977-70E71A19E888}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fan_switch_trigger" ID="{CE5A11D6-400F-4C0C-ACAF-A8147614EBC2}">
+							<ChildrenList>
+								<Action Name="" ID="{B121D239-FE7D-4665-A512-869A9B4E128C}" ShortID="534212650">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fan_switch" ID="{63D0F44B-D4E1-4846-85DE-A8310106E6C7}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fan_trigger" ID="{998CB434-6D34-497D-8CE0-AC212289B4C5}">
+							<ChildrenList>
+								<Action Name="" ID="{C1ECD122-6E70-43D8-A527-598DA1600915}" ShortID="678603612">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fan" ID="{01D823F1-6920-4D71-A45C-B24FB0F2A148}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plank_trigger" ID="{4B039DF6-D344-48B3-A6FF-4DBFFC601D30}">
+							<ChildrenList>
+								<Action Name="" ID="{BB59AA3B-F5A5-416F-9020-2B821D64BE67}" ShortID="932890476">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="plank_fall" ID="{3BB66DB1-C705-47A5-8EEE-2F9FF429DF26}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="treadmill_stop_trigger" ID="{D170BCB9-8C83-49FC-884C-5CDD27668F26}">
+							<ChildrenList>
+								<Action Name="" ID="{88D1311B-E7C1-44FE-8EEE-308407F1D5BA}" ShortID="484413470">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="treadmill" ID="{4F11A042-E47B-4A8F-822B-9176506DF757}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1167,6 +1354,144 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="gate_1" ID="{01A9A4E7-D437-4896-AD92-0E33CE8B1025}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="throw" ID="{57E77432-6B64-4A7B-9B09-740F3581595D}">
+					<ChildrenList>
+						<Action Name="" ID="{49EE690F-1BB4-4B53-932A-D92B68990C16}" ShortID="676760157">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="throw_charge" ID="{84E81785-520E-4AE0-8753-1B17CBD9C3AC}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6504A336-A510-405D-A7BC-87468FA3A243}" ShortID="289055815">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="throw_woosh" ID="{882281E8-6B56-483A-ADF4-FED4F9A93004}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="glass" ID="{06A82C8A-4D4F-4B64-B42A-50BBA3FC04C8}">
+					<ChildrenList>
+						<Action Name="" ID="{B0FA098C-054B-4A3F-8986-10A69335FA1D}" ShortID="495545786">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Glass" ID="{B9FBB62A-845D-49D5-92AC-F254153BE744}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="computer_fan" ID="{8D0827D9-1CD4-4549-9253-7B6EAE3ED6FC}">
+					<ChildrenList>
+						<Action Name="" ID="{64F3F504-3CCF-49EA-BD06-E48DF8A445E6}" ShortID="1049192512">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="computer_fan" ID="{66507E2A-E7FC-42CA-8406-CE7DA402A48E}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="cup_fall" ID="{35FF8305-E9BD-4F18-A330-40C445723575}"/>
+				<Event Name="cup_squeak" ID="{02F80367-6152-4929-8977-845E8B121C55}">
+					<ChildrenList>
+						<Action Name="" ID="{80D2CA89-3A9A-4080-B2FE-18E267FD0D51}" ShortID="352993612">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pokey_finger_squeak" ID="{AC7A27F4-93C3-44F4-9009-BA81EE3EBFC9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pokey_finger_machine" ID="{4C2DFA54-2F41-4A5B-9977-70E71A19E888}">
+					<ChildrenList>
+						<Action Name="" ID="{1CCAC303-B820-4E01-8183-D2663E71EE44}" ShortID="86711936">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pokey_finger_machine" ID="{84D51DF4-A4EB-4BD1-AB09-EB36F3F7B3FD}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="fan_switch" ID="{63D0F44B-D4E1-4846-85DE-A8310106E6C7}">
+					<ChildrenList>
+						<Action Name="" ID="{C1ACFA19-DB5B-4652-81D2-8BB99D4B4F6D}" ShortID="793764275">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fan_click" ID="{D76F2F90-125E-44E1-8DF2-8D6715C3DF21}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="fan" ID="{01D823F1-6920-4D71-A45C-B24FB0F2A148}">
+					<ChildrenList>
+						<Action Name="" ID="{E98A1184-73CB-4E99-8868-ACD53B4420EA}" ShortID="763082445">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fan_sound" ID="{6840915B-75E0-4D94-9196-88685BFC5A43}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="plank_fall" ID="{3BB66DB1-C705-47A5-8EEE-2F9FF429DF26}">
+					<ChildrenList>
+						<Action Name="" ID="{84A18B95-F13D-48EE-AF67-DAD7792CAB8F}" ShortID="1050797577">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="plank_fall" ID="{C5B2E49B-3AC1-41AC-9CD2-E97D7376B0E9}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="sploosh" ID="{D78009AC-68B0-401F-B938-687C297533B7}">
+					<ChildrenList>
+						<Action Name="" ID="{80D8CCC5-E944-4778-99D7-ACA4B3AF2FB4}" ShortID="265152902">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sploosh" ID="{17462B3F-E2C3-4021-A5A0-324C0CC1F2EE}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

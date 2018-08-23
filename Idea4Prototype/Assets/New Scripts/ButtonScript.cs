@@ -65,7 +65,6 @@ public class ButtonScript : MonoBehaviour {
         {
             if (GameObject.Find("Player1") != null || GameObject.Find("Player2") != null || GameObject.Find("Player3") != null || GameObject.Find("Player4") != null)
             {
-                Debug.Log(pause);
                 pause = GameObject.Find("Player" + MenuScript.Instance.pausePlayerNum).GetComponent<PauseScript>();
                 return pause;
             }            

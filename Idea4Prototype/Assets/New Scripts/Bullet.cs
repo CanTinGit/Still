@@ -29,8 +29,13 @@ public class Bullet : MonoBehaviour {
             if (col.GetComponent<MovementUpdated>().isInBubble == false)
             {
                 // Make the player in Bubble
+                col.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 col.GetComponent<MovementUpdated>().isInBubble = true;
+                AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(col.GetComponent<MovementUpdated>().PlayerNum));
+                AkSoundEngine.PostEvent("player_shock", gameObject);
                 col.gameObject.AddComponent<InBubble>();
+                col.GetComponentInChildren<PickUpUpdated>().LetGoOffItemBulletShot();
+                col.GetComponentInChildren<PickUpUpdated>().enabled = false;
                 Destroy(gameObject);
             }
         }

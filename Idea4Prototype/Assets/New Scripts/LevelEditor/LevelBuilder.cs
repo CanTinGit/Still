@@ -205,7 +205,6 @@ public class LevelBuilder : MonoBehaviour
                     classScript.SetAxis("Z");
                 }
                 classScript.SetObject(interactedObject);
-                Debug.Log("fsfs");
             }
 
         }

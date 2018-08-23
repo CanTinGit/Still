@@ -17,6 +17,7 @@ public class StopWatch : MonoBehaviour
         {
             //increase the amount of collectables obtained
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>().IncreaseCollectable();
+            AkSoundEngine.PostEvent("platinum_cheese_trigger",gameObject);
             //destroy this object since it has been picked up
             Destroy(this.gameObject);
         }

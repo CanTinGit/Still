@@ -1,27 +1,43 @@
 Event	ID	Name			Wwise Object Path	Notes
+	60542055	sploosh			\Default Work Unit\sploosh	
 	200872652	player_push_trigger			\Default Work Unit\Triggers\player_push_trigger	
 	212497099	object_slide_trigger			\Default Work Unit\Triggers\object_slide_trigger	
 	255911779	button_buzz			\Default Work Unit\button_buzz	
-	412826751	crane_pickup			\Default Work Unit\Crane\crane_pickup	
+	316214646	plank_trigger			\Default Work Unit\Triggers\plank_trigger	
+	325794693	cup_squeak_trigger			\Default Work Unit\Triggers\cup_squeak_trigger	
+	446580501	computer_fan_trigger			\Default Work Unit\Triggers\computer_fan_trigger	
 	538597049	object_impact			\Default Work Unit\object_impact	
+	644354980	computer_fan			\Default Work Unit\computer_fan	
+	745179803	throw			\Default Work Unit\throw	
+	748714045	cup_fall			\Default Work Unit\cup_fall	
 	766957497	pull_lever			\Default Work Unit\pull_lever	
 	814543256	button_click			\Default Work Unit\button_click	
 	931771276	treadmill_trigger			\Default Work Unit\Triggers\treadmill_trigger	
 	1121922920	gate			\Default Work Unit\gate	
+	1150021507	fan_switch			\Default Work Unit\fan_switch	
+	1183803264	fan			\Default Work Unit\fan	
+	1212948756	cup_squeak			\Default Work Unit\cup_squeak	
+	1492487779	platinum_cheese			\Default Work Unit\UI\platinum_cheese	
 	1503347734	weight_drop_trigger			\Default Work Unit\Triggers\weight_drop_trigger	
 	1568560881	electricity_trigger			\Default Work Unit\Triggers\electricity_trigger	
+	1618369734	platinum_cheese_trigger			\Default Work Unit\Triggers\platinum_cheese_trigger	
+	1688054476	cup_fall_trigger			\Default Work Unit\Triggers\cup_fall_trigger	
 	1928594291	weight_drop			\Default Work Unit\weight_drop	
-	2522016532	weight_plank			\Default Work Unit\weight_plank	
-	2917121896	electricity			\Default Work Unit\electricity	
+	2429720045	plank_fall			\Default Work Unit\plank_fall	
+	2449969375	glass			\Default Work Unit\glass	
+	2545869449	fan_trigger			\Default Work Unit\Triggers\fan_trigger	
+	2733310231	pokey_finger_machine			\Default Work Unit\pokey_finger_machine	
+	2754191044	pokey_finger_trigger			\Default Work Unit\Triggers\pokey_finger_trigger	
 	2980894478	object_slide			\Default Work Unit\object_slide	
 	3046263293	treadmill			\Default Work Unit\treadmill	
-	3150416619	crane_trigger_release			\Default Work Unit\Triggers\crane_trigger_release	
 	3439052529	gate_trigger			\Default Work Unit\Triggers\gate_trigger	
 	3454382244	button_trigger			\Default Work Unit\Triggers\button_trigger	
-	3550336162	crane_release			\Default Work Unit\Crane\crane_release	
-	3559668272	crane_trigger_pickup			\Default Work Unit\Triggers\crane_trigger_pickup	
+	3540883198	throw_trigger			\Default Work Unit\Triggers\throw_trigger	
+	3712382502	fan_switch_trigger			\Default Work Unit\Triggers\fan_switch_trigger	
+	3816797081	treadmill_stop_trigger			\Default Work Unit\Triggers\treadmill_stop_trigger	
 	3850141293	box_click			\Default Work Unit\box_click	
 	3997114622	lever_trigger			\Default Work Unit\Triggers\lever_trigger	
+	4134466154	glass_trigger			\Default Work Unit\Triggers\glass_trigger	
 	4202621657	push_object			\Default Work Unit\push_object	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -46,56 +62,74 @@ State	ID	Name	State Group			Notes
 	3729124792	wood_object	Material			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	1443829837	new_section			\Default Work Unit\new_section	
 	3498626028	run_time			\Default Work Unit\run_time	
 	4054730840	in_use			\Default Work Unit\in_use	
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
-	279731683	Modulator Envelope (Custom)				
 	343929588	Modulator Envelope (Custom)				
 	862279157	Modulator Envelope (Custom)				
 
 Effect plug-ins	ID	Name	Type				Notes
-	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
 	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	10004527	fx_lever_1	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_lever_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fx_lever_1		95104
-	76802143	Impact_Can_Medium_3	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Medium\Impact_Can_Medium_3		38464
-	87040156	Crane_Part_1	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\Voices\English(US)\Crane_Part_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\Crane_Part_1		601950
-	148856712	UI_Correct_Buzz	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\UI_Correct_Buzz_84060241.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\Buzz\UI_Correct_Buzz		86566
-	162006207	Wood_Impact_Light	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light		8940
-	175213724	Impact_Can_Very_Light_1	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Very_Light_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light_1		38464
-	199767411	Impact_Can_Light	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Light		38464
-	209955788	box_click	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\box_click_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-Diegetic\box_click		29664
-	217250399	fx_slip_loop	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_slip_loop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\fx_slip_loop		630846
-	241725416	WeightDrop	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\WeightDrop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\WeightDrop		92512
-	263401526	Wood_Impact_Light_1	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_1		7586
-	282957980	Wood_Impact_Medium_3	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Medium_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Medium\Wood_Impact_Medium_3		10950
-	290648010	fx_push_loop	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_push_loop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fx_push_loop		745022
-	318844511	gate_1	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\gate_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\gate_1		192128
-	359920825	UI_Incorrect_Buzz	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\UI_Incorrect_Buzz_3B068DBB.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\Buzz\UI_Incorrect_Buzz		86494
-	400306442	Impact_Can_Very_Light_2	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Very_Light_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light_2		38464
-	441082519	treadmill_loop	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\treadmill_loop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\treadmill\treadmill_loop		384064
-	456681022	Impact_Can_Heavy_1	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Heavy_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Heavy\Impact_Can_Heavy_1		38464
-	524659892	Wood_Impact_Light_2	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_2		14528
-	530105447	Impact_Can_Heavy	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Heavy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Heavy\Impact_Can_Heavy		38464
-	592493198	Wood_Impact_Heavy	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Heavy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy		13400
-	674416996	Impact_Can_Light_1	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Light_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Light_1		38464
-	700689296	Wood_Impact_Heavy_4	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Heavy_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy_4		17362
-	725526311	electricity	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\electricity_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\electricity		768064
-	819532865	Wood_Impact_Light_5	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_5		15296
-	821463885	Weight hit's plank	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Weight hit's plank_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Weight hit's plank		60216
-	832918321	Impact_Can_Very_Light	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Very_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light		38464
-	864353628	Impact_Can_Medium_2	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Medium\Impact_Can_Medium_2		38464
-	890476972	Wood_Impact_Heavy_2	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Heavy_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy_2		13480
-	899333888	Wood_Impact_Heavy_1	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Heavy_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy_1		24376
-	931441282	Impact_Can_Medium	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Medium\Impact_Can_Medium		38464
-	931705023	Crane_Part_2	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\Voices\English(US)\Crane_Part_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\Crane_Part_2		1010656
-	935883449	Wood_Impact_Medium	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Medium_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Medium\Wood_Impact_Medium		16424
-	997798373	Wood_Impact_Light_4	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_4		16098
-	1023080845	fx_button	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\Voices\English(US)\fx_button_7EA7B837.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fx_button		48996
-	1030683540	Wood_Impact_Medium_4	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Medium_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Medium\Wood_Impact_Medium_4		22912
-	1042311661	Impact_Can_Medium_1	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Medium_1		38464
-	1063147226	Wood_Impact_Medium_2	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Medium_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Medium\Wood_Impact_Medium_2		15072
-	1072654148	Wood_Impact_Light_3	C:\Users\1605702\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_3		18776
+	10004527	fx_lever_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_lever_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fx_lever_1		95104
+	57840789	plank_fall_4	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\plank_fall_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\plank_fall\plank_fall_4		167920
+	65225508	UI_platinum_Cheese	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\UI_plaitnum_Cheese_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_platinum_Cheese		576064
+	71811338	fx_throw_5	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_throw_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\throw_woosh\fx_throw_5		24064
+	76802143	Impact_Can_Medium_3	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Medium\Impact_Can_Medium_3		38464
+	148856712	UI_Correct_Buzz	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\UI_Correct_Buzz_84060241.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\Buzz\UI_Correct_Buzz		86566
+	162006207	Wood_Impact_Light	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light		8940
+	175213724	Impact_Can_Very_Light_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Very_Light_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light_1		38464
+	199767411	Impact_Can_Light	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Light		38464
+	209955788	box_click	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\box_click_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-Diegetic\box_click		29664
+	217250399	fx_slip_loop	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_slip_loop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\fx_slip_loop		630846
+	241725416	WeightDrop	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\WeightDrop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\WeightDrop		92512
+	263401526	Wood_Impact_Light_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_1		7586
+	282957980	Wood_Impact_Medium_3	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Medium_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Medium\Wood_Impact_Medium_3		10950
+	290648010	fx_push_loop	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_push_loop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fx_push_loop		745022
+	318844511	gate_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\gate_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\gate_1		192128
+	322510632	pokey_finger_squeak	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\pokey_finger_squeak_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\pokey_finger_squeak		84544
+	350443988	fx_throw_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_throw_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\throw_woosh\fx_throw_1		24064
+	353837918	fx_throw_4	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_throw_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\throw_woosh\fx_throw_4		24064
+	359920825	UI_Incorrect_Buzz	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\UI_Incorrect_Buzz_3B068DBB.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\Buzz\UI_Incorrect_Buzz		86494
+	377389443	fan_sound	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fan_sound_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fan_sound		517504
+	382283543	fan_click	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fan_click_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fan_click		36586
+	400306442	Impact_Can_Very_Light_2	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Very_Light_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light_2		38464
+	441082519	treadmill_loop	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\treadmill_loop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\treadmill\treadmill_loop		384064
+	448650239	fan_loop	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fan_loop_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\computer_fan\fan_loop		518464
+	456681022	Impact_Can_Heavy_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Heavy_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Heavy\Impact_Can_Heavy_1		38464
+	519500528	sploosh_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\sploosh_1_22E803E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\sploosh\sploosh_1		48448
+	524659892	Wood_Impact_Light_2	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_2		14528
+	530105447	Impact_Can_Heavy	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Heavy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Heavy\Impact_Can_Heavy		38464
+	548425958	fx_throw_3	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_throw_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\throw_woosh\fx_throw_3		24064
+	592493198	Wood_Impact_Heavy	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Heavy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy		13400
+	610242187	plank_fall_5	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\plank_fall_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\plank_fall\plank_fall_5		87856
+	641819409	sploosh_4	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\sploosh_4_4D0895E7.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\sploosh\sploosh_4		46114
+	674416996	Impact_Can_Light_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Light_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Light_1		38464
+	676003497	sploosh_2	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\sploosh_2_C6EE8E13.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\sploosh\sploosh_2		51502
+	686754252	glass_breaK-3	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\glass_breaK-3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Glass\glass_breaK-3		145024
+	700689296	Wood_Impact_Heavy_4	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Heavy_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy_4		17362
+	744738500	fx_throw_2	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_throw_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\throw_woosh\fx_throw_2		22510
+	751690579	pokey_finger_machine	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\pokey_finger_machine_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\pokey_finger_machine		856384
+	755596131	glass_break_2	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\glass_break_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Glass\glass_break_2		216326
+	819532865	Wood_Impact_Light_5	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_5		15296
+	832918321	Impact_Can_Very_Light	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Very_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light		38464
+	864353628	Impact_Can_Medium_2	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Medium\Impact_Can_Medium_2		38464
+	875629046	glass_smash_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\glass_smash_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Glass\glass_smash_1		637824
+	890476972	Wood_Impact_Heavy_2	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Heavy_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy_2		13480
+	899333888	Wood_Impact_Heavy_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Heavy_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy_1		24376
+	931441282	Impact_Can_Medium	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Medium\Impact_Can_Medium		38464
+	935883449	Wood_Impact_Medium	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Medium_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Medium\Wood_Impact_Medium		16424
+	941566611	glass_break_4	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\glass_break_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Glass\glass_break_4		218944
+	943910946	plank_fall_2	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\plank_fall_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\plank_fall\plank_fall_2		79040
+	997798373	Wood_Impact_Light_4	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_4		16098
+	1023080845	fx_button	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\Voices\English(US)\fx_button_7EA7B837.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fx_button		48996
+	1030683540	Wood_Impact_Medium_4	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Medium_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Medium\Wood_Impact_Medium_4		22912
+	1042311661	Impact_Can_Medium_1	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Medium_1		38464
+	1053591560	fan_startup	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fan_startup_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\computer_fan\fan_startup		153656
+	1063147226	Wood_Impact_Medium_2	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Medium_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Medium\Wood_Impact_Medium_2		15072
+	1064057086	sploosh_3	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\sploosh_3_8FD04E0B.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\sploosh\sploosh_3		68464
+	1072654148	Wood_Impact_Light_3	C:\Users\1200538\Downloads\GitHub\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light_3		18776
 

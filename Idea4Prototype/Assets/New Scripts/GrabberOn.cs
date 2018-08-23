@@ -7,6 +7,7 @@ public class GrabberOn : MonoBehaviour {
     public void CameraMove_GrabberOn()
     {
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>().SetTrigger("CameraMove_GrabberOn");
+        AkSoundEngine.PostEvent("pokey_finger_trigger", gameObject);
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < players.Length; i++)
         {

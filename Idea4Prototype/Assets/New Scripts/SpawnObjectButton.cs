@@ -110,6 +110,7 @@ public class SpawnObjectButton : MonoBehaviour {
                             AkSoundEngine.SetSwitch("Buzz", "Incorrect", gameObject);
                         }
                         PlayBuzzAudio();
+                        
                         //Invoke("SpawnWeight", 0.75f);
                     // Spawn the object   
                 }

@@ -7516,6 +7516,8 @@ MonoBehaviour:
   canAutoSnap: 0
   grounded: 0
   isOnPlatform: 0
+  dontDestroyAfterThrow: 0
+  respawnDice: 0
 --- !u!23 &368669793
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8038,6 +8040,8 @@ MonoBehaviour:
   canAutoSnap: 0
   grounded: 0
   isOnPlatform: 0
+  dontDestroyAfterThrow: 0
+  respawnDice: 0
 --- !u!23 &403018910
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9067,6 +9071,12 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114304970837947980, guid: fb1a791c81182054fa93c57c8991fbbc,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a6d601a2e31325849a595f4da379a134,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb1a791c81182054fa93c57c8991fbbc, type: 2}
   m_IsPrefabParent: 0
@@ -9229,6 +9239,8 @@ MonoBehaviour:
   canAutoSnap: 0
   grounded: 0
   isOnPlatform: 1
+  dontDestroyAfterThrow: 0
+  respawnDice: 0
 --- !u!23 &517100282
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9658,6 +9670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 238a5ef6216ec174d9e2680858ea8ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finalScore: 0
   timeScoreMultiplier: 73
   extraPlayerScore: 112
   CollectableScore: 37
@@ -9944,6 +9957,8 @@ MonoBehaviour:
   canAutoSnap: 0
   grounded: 0
   isOnPlatform: 1
+  dontDestroyAfterThrow: 0
+  respawnDice: 0
 --- !u!23 &560762297
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10768,6 +10783,8 @@ MonoBehaviour:
   canAutoSnap: 0
   grounded: 0
   isOnPlatform: 0
+  dontDestroyAfterThrow: 0
+  respawnDice: 0
 --- !u!23 &665689493
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25228,6 +25245,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0e3e350ba49a4e44882b15682193251, type: 3}
   m_IsPrefabParent: 0
+--- !u!4 &1440258866 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1440258865}
 --- !u!1001 &1465270356
 Prefab:
   m_ObjectHideFlags: 0
@@ -26335,6 +26356,8 @@ MonoBehaviour:
   canAutoSnap: 0
   grounded: 0
   isOnPlatform: 0
+  dontDestroyAfterThrow: 0
+  respawnDice: 0
 --- !u!23 &1563667036
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26502,6 +26525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   padStrength: 16
+  maxHeight: 0
 --- !u!1 &1581612918
 GameObject:
   m_ObjectHideFlags: 0
@@ -26605,6 +26629,8 @@ MonoBehaviour:
   canAutoSnap: 0
   grounded: 0
   isOnPlatform: 1
+  dontDestroyAfterThrow: 0
+  respawnDice: 0
 --- !u!23 &1592994419
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28739,7 +28765,7 @@ Transform:
   m_LocalPosition: {x: 12.9, y: 5.23, z: -15.26}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
-  - {fileID: 2113672745}
+  - {fileID: 1440258866}
   - {fileID: 2019634993}
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -30493,6 +30519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   padStrength: 16
+  maxHeight: 0
 --- !u!65 &1905906246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36123,10 +36150,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13cae671ca9349e4dbb882d61da856ad, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &2113672745 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: a0e3e350ba49a4e44882b15682193251, type: 3}
-  m_PrefabInternal: {fileID: 1440258865}
 --- !u!1 &2125654637
 GameObject:
   m_ObjectHideFlags: 0

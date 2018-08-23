@@ -26,6 +26,9 @@ public class Lever : MonoBehaviour {
                 return;
             }
             lever.SetTrigger("buttonOn");
+            AkSoundEngine.PostEvent("fan_trigger", gameObject);
+            this.tag = "Untagged";
+            AkSoundEngine.PostEvent("fan_switch_trigger", gameObject);
         }
     }
 

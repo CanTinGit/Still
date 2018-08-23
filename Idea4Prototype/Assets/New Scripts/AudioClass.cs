@@ -177,7 +177,6 @@ public class AudioClass:MonoBehaviour
     ////creates the lists and intialises them
     void Awake()
     {
-        Debug.Log("Awake");
         playerNationality = new string[4];
         audioRange = new List<AudioForceStruct>();
         audioDatabase = new AudioDatabaseStructure();

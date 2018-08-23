@@ -98,16 +98,13 @@ public class CamerAIUpdated : MonoBehaviour
                 break;
             //the camera has found the player so do the action
             case CameraState.Found:
-                Debug.Log("found the enemy");
                 break;
             //the camera thinks it heard a noise again
             case CameraState.Cautious:
-                Debug.Log("beleive there is a enemy");
                 break;
             //the camera has finished the serch
             case CameraState.FinishedSearch:
                 CameraFinishedSearch();
-                Debug.Log("camera is done searching");
                 break;
         }
     }

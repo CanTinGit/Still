@@ -252,7 +252,7 @@ public class MenuScript : MonoBehaviour
         //FindButtonAddListener(GameObject.Find("RightButton"));
         //FindButtonAddListener(GameObject.Find("ThrowButton"));
         //FindButtonAddListener(GameObject.Find("JumpButton"));
-        FindButtonAddListener(GameObject.Find("ReturnToMenuButton"));
+        //FindButtonAddListener(GameObject.Find("ReturnToMenuButton"));
         //FindButtonAddListener(GameObject.Find("ContinueButton"));
         //FindButtonAddListener(GameObject.Find("ReturnToSplashScreen"));
         //FindButtonAddListener(GameObject.Find("RightChangeCharButton"));
@@ -341,9 +341,9 @@ public class MenuScript : MonoBehaviour
             //case "JumpButton":
             //    button.onClick.AddListener(() => MenuScript.Instance.KeyBindingButtonPressed(button_));
             //    break;
-            case "ReturnToMenuButton":
-                button.onClick.AddListener(() => MenuScript.Instance.ReturnToMenuPressed());
-                break;
+            //case "ReturnToMenuButton":
+            //    button.onClick.AddListener(() => MenuScript.Instance.ReturnToMenuPressed());
+            //    break;
             //case "ContinueButton":
             //    button.onClick.AddListener(() => MenuScript.Instance.ContinuePressed());
             //    break;
@@ -410,7 +410,6 @@ public class MenuScript : MonoBehaviour
         FlipMenuButtons();
         //get all the options
         GetOptions();
-        Debug.Log(GameObject.Find("ApplyButton"));
         // Set options screen buttons selectible via controller input
         eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("ApplyButton"));
         AkSoundEngine.PostEvent("click_positive", gameObject);
@@ -713,6 +712,7 @@ public class MenuScript : MonoBehaviour
     {
         CancelInvoke("CheckToPlayHoverSound");
         AkSoundEngine.StopAll();
+        AkSoundEngine.PostEvent("click_positive", gameObject);
         eventSystem = null;
         SceneManager.LoadScene(sceneName);
     }
@@ -754,7 +754,6 @@ public class MenuScript : MonoBehaviour
         {
             return;
         }
-        Debug.Log(Application.persistentDataPath);
         //If there is player data, load it
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/PlayerData.dat", FileMode.Open);

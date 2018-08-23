@@ -11,6 +11,7 @@ public class HammerButton : MonoBehaviour {
         ParticleSystem jumpair = GameObject.Find("JumpFan").GetComponent<ParticleSystem>();
 
         jumpair.Play();
+        AkSoundEngine.PostEvent("computer_fan_trigger", gameObject);
         jumpair.transform.Find("AirJumpZone").gameObject.SetActive(true);
     }
 }

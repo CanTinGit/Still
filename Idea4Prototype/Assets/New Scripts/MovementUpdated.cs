@@ -308,7 +308,6 @@ public class MovementUpdated : MonoBehaviour {
             {
                 if(velocity < cameraTrigger)
                 {
-                    Debug.Log("triggered");
                     if (GameObject.FindGameObjectWithTag("AlertSpotlight") == null)
                     {
                         Instantiate(Resources.Load("Prefabs/NewCameraAI"));
@@ -317,8 +316,11 @@ public class MovementUpdated : MonoBehaviour {
                 }
             }
             rigidbody.velocity = Vector3.zero;
-            gameObject.GetComponent<CapsuleCollider>().material = originalMaterial;
-            
+            gameObject.GetComponent<CapsuleCollider>().material = originalMaterial;          
+        }
+        if(col.gameObject.name.Contains("Objective"))
+        {
+            Destroy(col.gameObject);
         }
 
         //if (col.gameObject.tag == "Ground")
@@ -403,7 +405,6 @@ public class MovementUpdated : MonoBehaviour {
             {
                 if (velocity < cameraTrigger)
                 {
-                    Debug.Log("triggered");
                     if (GameObject.FindGameObjectWithTag("AlertSpotlight") == null)
                     {
                         Instantiate(Resources.Load("Prefabs/NewCameraAI"));
@@ -412,6 +413,11 @@ public class MovementUpdated : MonoBehaviour {
                 }
             }
 
+        }
+
+        if (col.transform.name.Contains("waterSploosh"))
+        {
+            AkSoundEngine.PostEvent("sploosh", gameObject);
         }
     }
 

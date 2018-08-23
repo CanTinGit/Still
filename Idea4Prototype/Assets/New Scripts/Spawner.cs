@@ -46,7 +46,7 @@ public class Spawner : MonoBehaviour
                 // ... exit the function.
                 return;
             }
-
+            GameObject.Find("sm_pushcylinder").GetComponent<DispenseControl>().TurnOnVibrate();
             // Find a random index between zero and one less than the number of spawn points.
             //int spawnPointIndex = Random.Range(0, spawnPoints.Length);
             // Find a random index between zero and one less than the number of player_shirts.

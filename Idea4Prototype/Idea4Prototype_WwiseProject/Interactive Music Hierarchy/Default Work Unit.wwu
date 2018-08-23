@@ -19,6 +19,11 @@
 						<MusicPlaylistContainer Name="section_1" ID="{C31024F6-12DF-476B-825F-A41942C0DD48}" ShortID="942212118">
 							<PropertyList>
 								<Property Name="Tempo" Type="Real64" Value="140"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -122,6 +127,11 @@
 						<MusicPlaylistContainer Name="section_2" ID="{3D1A9009-44DF-4752-B151-7FFE74198826}" ShortID="842816139">
 							<PropertyList>
 								<Property Name="Tempo" Type="Real64" Value="140"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -612,6 +622,11 @@
 								<MusicSegment Name="character_selection_loop_1" ID="{3823DFCB-8C3E-4128-8B1E-F8758F72290C}" ShortID="197796957">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="16000"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">

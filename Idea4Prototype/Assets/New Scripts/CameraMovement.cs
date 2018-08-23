@@ -6,7 +6,7 @@ public class CameraMovement : MonoBehaviour {
 
     public GameObject boxColliderStopper;
     public GameObject boxColliderBack;
-    int numbersofPlayer;
+    List<GameObject> players = new List<GameObject>();
     public string CameraMove;
     public Animator camera;
     public string musicSection;
@@ -14,8 +14,11 @@ public class CameraMovement : MonoBehaviour {
     {
         if (col.tag == "Player")
         {
-            numbersofPlayer++;
-            if (numbersofPlayer == MenuScript.Instance.GetNumberofPlayers())
+            if (!players.Exists(x=>x.gameObject == col.gameObject))
+            {
+                players.Add(col.gameObject);
+            }
+            if (players.Count == MenuScript.Instance.GetNumberofPlayers())
             {
                 boxColliderStopper.SetActive(false);
                 boxColliderBack.SetActive(true);
@@ -30,7 +33,10 @@ public class CameraMovement : MonoBehaviour {
     {
         if (col.tag == "Player")
         {
-            numbersofPlayer--;
+            if (players.Exists(x => x.gameObject == col.gameObject))
+            {
+                players.Remove(col.gameObject);
+            }
         }
     }
 }

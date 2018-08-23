@@ -12,7 +12,6 @@ public class Traps : MonoBehaviour
             if (col.transform.tag == "Pickup")
             {
                 Disabled = true;
-                Debug.Log("triggered trap");
                 GetComponent<MeshRenderer>().material = Resources.Load<Material>("TrapDisabled");
                 Destroy(col.gameObject);
             }

@@ -24,7 +24,6 @@ public class GoalRuleCode : MonoBehaviour
         {
             if(col.transform.name=="Bucket")
             {
-                Debug.Log("next levle triggered");
                 //next level set
                 MenuScript.Instance.FadeToNextLevel();
                 Destroy(this.gameObject);                
@@ -64,8 +63,12 @@ public class GoalRuleCode : MonoBehaviour
             NumPlayers++;
             if (NumPlayers == MenuScript.Instance.GetNumberofPlayers())
             {
-                col.gameObject.GetComponent<MovementUpdated>().enabled = false;
+                //col.gameObject.GetComponent<MovementUpdated>().enabled = false;
                 //// Fade to next level if possible else go to main menu
+               // col.GetComponent<MovementUpdated>().isRunning = false;
+               // col.GetComponent<MovementUpdated>().isMoving = false;
+                col.gameObject.GetComponent<MovementUpdated>().enabled = false;
+                col.GetComponent<Animator>().SetBool("isMoving", false);
                 ScoreSystem scoreSystem = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ScoreSystem>();
                 scoreSystem.AddCheckpointTime();
                 scoreSystem.CalculateFinalScore();
@@ -85,7 +88,22 @@ public class GoalRuleCode : MonoBehaviour
             }
         }
     }
-
+    //void OnTriggerStay(Collider col)
+    //{
+    //    if (col.gameObject.tag == "Player")
+    //    {
+    //        if (NumPlayers == MenuScript.Instance.GetNumberofPlayers())
+    //        {
+    //           // if (col.GetComponent<Animator>().GetBool("is Moving") == true)
+    //            {
+    //                Debug.Log("the stay is this " + col.GetComponent<Animator>().GetBool("is Moving"));
+    //                col.GetComponent<MovementUpdated>().isRunning = false;
+    //                col.gameObject.GetComponent<MovementUpdated>().enabled = false;
+    //                col.GetComponent<Animator>().SetBool("is Moving", false);
+    //            }
+    //        }
+    //    }
+    //}
     void DelayStop()
     {
         //AkSoundEngine.PostEvent("score", gameObject);

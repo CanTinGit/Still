@@ -74,7 +74,6 @@ public class ZoomCamera : MonoBehaviour {
         {
             Vector3 dragClickPos = Input.mousePosition;
             Vector3 difference = (dragClickPos - intialRotateClickPos) * movementSensitivity; ;
-            Debug.Log(difference);
             mainCamera.transform.RotateAround(Vector3.zero, Vector3.up, difference.x * Time.deltaTime);
         }
     }

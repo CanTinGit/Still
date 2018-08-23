@@ -5,13 +5,19 @@ using UnityEngine;
 public class DispenseControl : MonoBehaviour
 {
     public GameObject button;
-    public GameObject firstSpawnLight, secondSpawnLight;
+    public GameObject firstSpawnLight, secondSpawnLight,dispenseMachine;
     Material firstSpawnLightMat, secondSpawnLightMat;
-    bool hitDispense,moveback,sliding,hitStopper;
+    bool hitDispense,moveback,sliding,hitStopper, pushing,rotateLeft,delayChange;
+    float angleToRotateBy =5.0f;
+    Quaternion originalQuaternion;
     
     Vector3 positon;
     void Start()
     {
+        originalQuaternion = dispenseMachine.transform.rotation;
+        delayChange = false;
+        pushing = false;
+        rotateLeft = false;
         hitDispense = false;
         moveback = GameObject.Find("Level1Controller").GetComponent<Level1Controller>().moveBack;
         firstSpawnLightMat = firstSpawnLight.GetComponent<MeshRenderer>().material;
@@ -39,6 +45,31 @@ public class DispenseControl : MonoBehaviour
         {
             positon = transform.position;
         }
+        if(pushing==true)
+        {
+            if (!rotateLeft && !delayChange)
+            {
+                dispenseMachine.transform.Rotate(Vector3.forward, angleToRotateBy);
+                rotateLeft = !rotateLeft;
+                delayChange = true;
+                Invoke("TurnDelayOff", 0.05f);
+                angleToRotateBy = 10;
+            }
+            else if (rotateLeft && !delayChange)
+            {
+                dispenseMachine.transform.Rotate(Vector3.back, angleToRotateBy);
+                //rotateLeft = !rotateLeft;
+                delayChange = true;
+                angleToRotateBy = 5.0f;
+                Invoke("TurnVibrateOff", 0.05f);
+                //Invoke("TurnDelayOff", 0.05f);
+            }
+        }
+    }
+
+    public void TurnOnVibrate()
+    {
+        pushing = true;
     }
     void OnCollisionEnter(Collision col)
     {
@@ -56,6 +87,14 @@ public class DispenseControl : MonoBehaviour
         {
             hitStopper = true;
         }
+        //if(col.transform.tag =="Player")
+        //{
+        //    if(!hitDispense && positon!= transform.position && !hitStopper)
+        //    {
+        //        pushing = true;
+        //    }
+        //}
+        
     }
     void OnCollisionExit(Collision col)
     {
@@ -75,7 +114,17 @@ public class DispenseControl : MonoBehaviour
         }
     }
 
+    void TurnDelayOff()
+    {
+        delayChange = false;
+    }
 
+    void TurnVibrateOff()
+    {
+        pushing = false;
+        delayChange = false;
+        dispenseMachine.transform.rotation = originalQuaternion;
+    }
     void OnCollisionStay(Collision col)
     {
         if (col.transform.name == "EnableDispense")
@@ -85,13 +134,12 @@ public class DispenseControl : MonoBehaviour
         }
         if(col.transform.tag=="Player")
         {
-            if (!hitDispense && positon != transform.position && sliding==false)
+            if (!hitDispense && positon != transform.position && sliding == false)
             {
                 playMoveAudio(true);
             }
             //AkSoundEngine.PostEvent("player_push_trigger", gameObject)
         }
-
     }
 
 

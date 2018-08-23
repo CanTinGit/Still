@@ -15,13 +15,11 @@ public class ArrowResize : MonoBehaviour {
 	public void SetObject(GameObject interact_)
     {
         objectInteracted = interact_;
-        Debug.Log("set " + interact_);
     }
 
     public void SetAxis(string axis_)
     {
         axis = axis_;
-        Debug.Log("set " + axis_);
     }
 
     void ResizeAndReposition()

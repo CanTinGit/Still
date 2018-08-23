@@ -25,7 +25,7 @@ public class SimulateThrow : MonoBehaviour {
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
         movementArray = CalculateArcArray();
         i = 0;
-        InvokeRepeating("SimulateMove", 0.0f, 0.016f);
+        InvokeRepeating("SimulateMove", 0.0f, 0.010f);
     }
 	
 
@@ -53,6 +53,10 @@ public class SimulateThrow : MonoBehaviour {
                 else
                 {
                     gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, y, z);
+                }
+                if (!gameObject.AddComponent<BallBetterFalling>())
+                {
+                    gameObject.AddComponent<BallBetterFalling>();
                 }
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
                 //CancelInvoke();
@@ -102,6 +106,11 @@ public class SimulateThrow : MonoBehaviour {
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x, -y, z);
         gameObject.GetComponent<Rigidbody>().useGravity = true;
         CancelInvoke();
+        //if (!gameObject.AddComponent<BallBetterFalling>())
+        //{
+        //    Debug.Log("2");
+        //    gameObject.AddComponent<BallBetterFalling>();
+        //}
         Destroy(this);
     }
 }

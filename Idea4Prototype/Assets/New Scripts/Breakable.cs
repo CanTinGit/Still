@@ -40,7 +40,11 @@ public class Breakable : MonoBehaviour
         {
             materials = GetComponent<SkinnedMeshRenderer>().materials;
         }
-
+        AkSoundEngine.PostEvent("glass_trigger", gameObject);
+        if (GameObject.FindGameObjectWithTag("AlertSpotlight") == null)
+        {
+            Instantiate(Resources.Load("Prefabs/NewCameraAI"));
+        }
         Vector3[] verts = M.vertices;
         Vector3[] normals = M.normals;
         Vector2[] uvs = M.uv;
@@ -79,7 +83,7 @@ public class Breakable : MonoBehaviour
                 Vector3 explosionPos = new Vector3(transform.position.x + Random.Range(-0.5f, 0.5f), transform.position.y + Random.Range(0f, 0.5f), transform.position.z + Random.Range(-0.5f, 0.5f));
                 GO.AddComponent<Rigidbody>().AddExplosionForce(Random.Range(100, 150), explosionPos, 5);
                 Destroy(GO, 5 + Random.Range(0.0f, 0.75f));
-                GO.layer = stopCollisionLayer;
+                GO.layer = 19;//1 << LayerMask.NameToLayer("GlassLayer"); //FIX THIS HERE
             }
         }
 
@@ -93,14 +97,14 @@ public class Breakable : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.transform.tag == "Ground" || col.transform.tag == "Wall")
-        {
-            if (gameObject.GetComponent<Rigidbody>().velocity.magnitude > 3.0f)
-            {
-                StartCoroutine(SplitMesh(true));
-            }
-        }
-    }
+    //void OnCollisionEnter(Collision col)
+    //{
+    //    if (col.transform.tag == "Ground" || col.transform.tag == "Wall")
+    //    {
+    //        if (gameObject.GetComponent<Rigidbody>().velocity.magnitude > 3.0f)
+    //        {
+    //            StartCoroutine(SplitMesh(true));
+    //        }
+    //    }
+    //}
 }

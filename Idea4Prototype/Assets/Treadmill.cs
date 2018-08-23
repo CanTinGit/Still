@@ -161,7 +161,6 @@ public class Treadmill : MonoBehaviour
             if(animateThreadmill!=false)
             {
                 animateThreadmill = false;
-                Debug.Log("trigger " + Time.deltaTime);
             }
         }
     }

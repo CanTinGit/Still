@@ -13,7 +13,6 @@ public class weightTrigger : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ENTERED");
         if(other.gameObject.name == "weight")
         {
             crane.GetComponent<Animator>().SetBool("isWeightReleased", false);

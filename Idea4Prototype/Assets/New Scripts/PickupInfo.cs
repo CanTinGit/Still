@@ -6,14 +6,17 @@ public class PickupInfo : MonoBehaviour
 {
     GameObject holder;
     GameObject spawnerManager;
-    Color originalColor;
+    Color originalColor; //might be useless now  - remove when needed
+    Vector3 originalPos;
     public GameObject onTopOff;
     public bool canAutoSnap = false;
     public bool grounded = false;
     public bool isOnPlatform;
     public bool dontDestroyAfterThrow;
+    public bool respawnDice;
     void Start()
     {
+        originalPos = transform.position;
         if (GameObject.Find("SpawnerManager").gameObject.GetComponent<Spawner2>() != null)
         {
             spawnerManager = GameObject.Find("SpawnerManager");
@@ -34,7 +37,13 @@ public class PickupInfo : MonoBehaviour
     {
         return originalColor;
     }
-
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.transform.name.Contains("waterSploosh"))
+        {
+            AkSoundEngine.PostEvent("sploosh", gameObject);
+        }
+    }
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.GetComponent<PickupInfo>())
@@ -82,6 +91,12 @@ public class PickupInfo : MonoBehaviour
                 Destroy(this.gameObject, 3.0f);
             }
         }
+            if (respawnDice ==true && col.transform.name.Contains("DestroyCubeZone"))
+        {
+            transform.rotation = Quaternion.identity;
+            transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            transform.position = originalPos;
+        }
         //else if(col.transform.name.Contains("Pickup") && col.transform.tag == "Pickup" && col.transform.GetComponent<PickupInfo>().GetGrounded()==true)
         //{
         //    Debug.Log("herekfafas");
@@ -101,7 +116,6 @@ public class PickupInfo : MonoBehaviour
             {
                 Vector3 direction = transform.position + Vector3.up - col.transform.position;
                 float degree = Vector3.Angle(direction, Vector3.up);
-                Debug.Log(degree);
                 if (degree < 75)
                 {
                     onTopOff = col.gameObject;

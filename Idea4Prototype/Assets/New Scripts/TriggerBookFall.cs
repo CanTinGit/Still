@@ -13,7 +13,6 @@ public class TriggerBookFall : MonoBehaviour {
         book.useGravity = true;
         book.isKinematic = false;
         book.transform.GetChild(0).gameObject.SetActive(true);
-        book.transform.GetChild(1).gameObject.SetActive(true);
         Invoke("CubesFall", 2.5f);
     }
 

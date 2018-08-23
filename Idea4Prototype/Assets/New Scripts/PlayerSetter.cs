@@ -24,6 +24,7 @@ public class PlayerSetter : MonoBehaviour {
             {
                 case "Generic":
                     Player1.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = Resources.Load<Material>("PlayerMaterials/PlayerUK");
+                    Player1.transform.Find("jnt_root").transform.Find("jnt_spine_01").transform.Find("jnt_spine_02").transform.Find("jnt_neck_01").transform.Find("jnt_head_01").transform.Find("Mouse_Stache").gameObject.GetComponent<MeshRenderer>().enabled = true;
                     break;
                 case "American":
                     Player1.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = Resources.Load<Material>("PlayerMaterials/PlayerUSA");
@@ -48,6 +49,7 @@ public class PlayerSetter : MonoBehaviour {
             {
                 case "Generic":
                     Player2.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = Resources.Load<Material>("PlayerMaterials/PlayerUK");
+                    Player2.transform.Find("jnt_root").transform.Find("jnt_spine_01").transform.Find("jnt_spine_02").transform.Find("jnt_neck_01").transform.Find("jnt_head_01").transform.Find("Mouse_Stache").gameObject.GetComponent<MeshRenderer>().enabled = true;
                     break;
                 case "American":
                     Player2.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = Resources.Load<Material>("PlayerMaterials/PlayerUSA");
@@ -72,6 +74,7 @@ public class PlayerSetter : MonoBehaviour {
             {
                 case "Generic":
                     Player3.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = Resources.Load<Material>("PlayerMaterials/PlayerUK");
+                    Player3.transform.Find("jnt_root").transform.Find("jnt_spine_01").transform.Find("jnt_spine_02").transform.Find("jnt_neck_01").transform.Find("jnt_head_01").transform.Find("Mouse_Stache").gameObject.GetComponent<MeshRenderer>().enabled = true;
                     break;
                 case "American":
                     Player3.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = Resources.Load<Material>("PlayerMaterials/PlayerUSA");
@@ -96,6 +99,7 @@ public class PlayerSetter : MonoBehaviour {
             {
                 case "Generic":
                     Player4.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = Resources.Load<Material>("PlayerMaterials/PlayerUK");
+                    Player4.transform.Find("jnt_root").transform.Find("jnt_spine_01").transform.Find("jnt_spine_02").transform.Find("jnt_neck_01").transform.Find("jnt_head_01").transform.Find("Mouse_Stache").gameObject.GetComponent<MeshRenderer>().enabled = true;
                     break;
                 case "American":
                     Player4.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = Resources.Load<Material>("PlayerMaterials/PlayerUSA");

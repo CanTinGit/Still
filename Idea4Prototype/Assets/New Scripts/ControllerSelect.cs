@@ -116,6 +116,7 @@ public class ControllerSelect : MonoBehaviour {
                         selectedPlayerMat = Resources.Load<Material>("PlayerMaterials/PlayerUK");
                         this.GetComponent<Image>().sprite = selectedControlSprite;
                         this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = true;       // Enable select UI message, as the player CAN select this character
+                        playerMesh.transform.Find("jnt_root").transform.Find("jnt_spine_01").transform.Find("jnt_spine_02").transform.Find("jnt_neck_01").transform.Find("jnt_head_01").transform.Find("Mouse_Stache").gameObject.GetComponent<MeshRenderer>().enabled = true;
                     }
                     else if(Choice == 2)
                     {
@@ -124,6 +125,7 @@ public class ControllerSelect : MonoBehaviour {
                         selectedPlayerMat = Resources.Load<Material>("PlayerMaterials/PlayerIndia");
                         this.GetComponent<Image>().sprite = selectedControlSprite;
                         this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = true;       // Enable select UI message, as the player CAN select this character
+                        playerMesh.transform.Find("jnt_root").transform.Find("jnt_spine_01").transform.Find("jnt_spine_02").transform.Find("jnt_neck_01").transform.Find("jnt_head_01").transform.Find("Mouse_Stache").gameObject.GetComponent<MeshRenderer>().enabled = false;
                     }
                     else if (Choice == 3)
                     {
@@ -132,6 +134,7 @@ public class ControllerSelect : MonoBehaviour {
                         selectedPlayerMat = Resources.Load<Material>("PlayerMaterials/PlayerUSA");
                         this.GetComponent<Image>().sprite = selectedControlSprite;
                         this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = true;       // Enable select UI message, as the player CAN select this character
+                        playerMesh.transform.Find("jnt_root").transform.Find("jnt_spine_01").transform.Find("jnt_spine_02").transform.Find("jnt_neck_01").transform.Find("jnt_head_01").transform.Find("Mouse_Stache").gameObject.GetComponent<MeshRenderer>().enabled = false;
                     }
                     else if (Choice == 4)
                     {
@@ -140,6 +143,7 @@ public class ControllerSelect : MonoBehaviour {
                         selectedPlayerMat = Resources.Load<Material>("PlayerMaterials/PlayerChina");
                         this.GetComponent<Image>().sprite = selectedControlSprite;
                         this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = true;       // Enable select UI message, as the player CAN select this character
+                        playerMesh.transform.Find("jnt_root").transform.Find("jnt_spine_01").transform.Find("jnt_spine_02").transform.Find("jnt_neck_01").transform.Find("jnt_head_01").transform.Find("Mouse_Stache").gameObject.GetComponent<MeshRenderer>().enabled = false;
                     }
                     else if(Choice == 0)
                     {
@@ -148,6 +152,7 @@ public class ControllerSelect : MonoBehaviour {
                         selectedPlayerMat = deselectedPlayerMat;
                         this.GetComponent<Image>().sprite = deselectedControlSprite;                                // Changed controller sprite image to de-selected
                         this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = false;
+                        playerMesh.transform.Find("jnt_root").transform.Find("jnt_spine_01").transform.Find("jnt_spine_02").transform.Find("jnt_neck_01").transform.Find("jnt_head_01").transform.Find("Mouse_Stache").gameObject.GetComponent<MeshRenderer>().enabled = false;
                     }
                     playerMesh.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;
                     playerMesh.gameObject.transform.Find("CountryFlag").GetComponent<Image>().sprite = flags[Choice].GetSprite();
@@ -164,6 +169,8 @@ public class ControllerSelect : MonoBehaviour {
                     MenuScript.Instance.SetNumberofPlayers(1);                                                      // Add 1 to the number of players in game
                     MenuScript.Instance.SetPlayersInGame(playerNum, true);                                          // Set that player to true in later scenes
                     MenuScript.Instance.GetAudioClass().SetNationality(playerNum, flags[Choice].GetName());         // Set the player character voice to the nationality selected in this menu
+                    AkSoundEngine.SetState("Nationality", MenuScript.Instance.GetAudioClass().GetNationality(playerNum));
+                    AkSoundEngine.PostEvent("player_select", gameObject);
                     playerHalo.gameObject.SetActive(true);                                                          // Show the selected halo, highlighting the player has selected a character & voice
                     this.gameObject.transform.Find("SelectMessage").GetComponent<Image>().enabled = false;          // Set the select message to invisible as the player can now no longer select a player (unless they press back)
                     playerMesh.transform.parent.gameObject.transform.Find("SelectArrow_" + playerNum + "_Left").GetComponent<Image>().enabled = false;    // Set the selected arrows to invisible for the same reason as above
@@ -246,7 +253,7 @@ public class ControllerSelect : MonoBehaviour {
         playerMesh.gameObject.transform.Find("CountryFlag").GetComponent<Image>().sprite = flags[Choice].GetSprite();
         playerMesh.transform.parent.gameObject.transform.Find("SelectArrow_" + playerNum + "_Left").GetComponent<Image>().enabled = true;    // Set the selected arrows to visible for the same reason as above
         playerMesh.transform.parent.gameObject.transform.Find("SelectArrow_" + playerNum + "_Right").GetComponent<Image>().enabled = true;    // Set the selected arrows to visible for the same reason as above
-
+        playerMesh.transform.Find("jnt_root").transform.Find("jnt_spine_01").transform.Find("jnt_spine_02").transform.Find("jnt_neck_01").transform.Find("jnt_head_01").transform.Find("Mouse_Stache").gameObject.GetComponent<MeshRenderer>().enabled = false; // Disable mustache for player mouse
 
         selectedPlayerMat = deselectedPlayerMat;
         playerMesh.transform.Find("Mice_01_Low:polySurface1").GetComponent<SkinnedMeshRenderer>().material = selectedPlayerMat;

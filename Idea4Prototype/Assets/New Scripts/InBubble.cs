@@ -36,14 +36,14 @@ public class InBubble : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
-    {
-        if (isImmune == true)
-        {
-           // lerpedColor = Color.Lerp(originalColor, transparentColor, Mathf.PingPong(Time.time, 1));
-           // gameObject.GetComponent<Renderer>().material.color = lerpedColor;
-        }
-    }
+	//void Update ()
+ //   {
+ //       if (isImmune == true)
+ //       {
+ //          // lerpedColor = Color.Lerp(originalColor, transparentColor, Mathf.PingPong(Time.time, 1));
+ //          // gameObject.GetComponent<Renderer>().material.color = lerpedColor;
+ //       }
+ //   }
 
     void CancelBubble()
     {
@@ -55,6 +55,7 @@ public class InBubble : MonoBehaviour {
             rbs[i].useGravity = true;
         }
         gameObject.GetComponent<MovementUpdated>().enabled = true;
+        gameObject.GetComponentInChildren<PickUpUpdated>().enabled = true;
         isImmune = true;
         Invoke("ChangePlayerBack", 3.0f);
     }
