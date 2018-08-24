@@ -528,6 +528,34 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="fan_switch_trigger" ID="{DD1C92C2-278D-4447-804C-0D2CF7E23997}">
+							<ChildrenList>
+								<Action Name="" ID="{4EF9E1B8-34C7-4534-ABE4-35100DA9B2A5}" ShortID="310530257">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fan_switch" ID="{6914A341-7B30-4422-953C-DC6B49FD941D}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="platinum_cheese_trigger" ID="{B57365DB-D91E-4B92-B0BF-DFCB50735AC4}">
+							<ChildrenList>
+								<Action Name="" ID="{5BEA80B0-B39C-40AD-9570-C9053536BCE4}" ShortID="562898721">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="platinum_cheese_collection" ID="{13E16865-CFC2-4C29-A8BC-BC45DDB98D6B}" WorkUnitID="{500BFCE1-13E5-4744-8483-EE455319E53F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Crane" ID="{2573EACF-8DFC-49FF-8CD7-5FD53023BFC6}" ShortID="253771276">
@@ -1202,6 +1230,34 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="treadmill" ID="{4F11A042-E47B-4A8F-822B-9176506DF757}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="fan_switch" ID="{6914A341-7B30-4422-953C-DC6B49FD941D}">
+					<ChildrenList>
+						<Action Name="" ID="{1FF7BAD6-E2C7-40C4-BAAD-BAE6DD04238A}" ShortID="146277736">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fan_click" ID="{DBAEF5E2-BCE2-498B-B495-B8E3F6837AB1}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="platinum_cheese_collection" ID="{13E16865-CFC2-4C29-A8BC-BC45DDB98D6B}">
+					<ChildrenList>
+						<Action Name="" ID="{711F8D1C-5698-48A5-A85E-7D3233E3534D}" ShortID="717858700">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_plaitnum_Cheese" ID="{2FB23EBA-BC5A-4299-8B2B-60D184256C41}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

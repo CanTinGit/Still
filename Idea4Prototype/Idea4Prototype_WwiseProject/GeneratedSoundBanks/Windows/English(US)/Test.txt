@@ -6,7 +6,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	766957497	pull_lever			\Default Work Unit\pull_lever	
 	814543256	button_click			\Default Work Unit\button_click	
 	931771276	treadmill_trigger			\Default Work Unit\Triggers\treadmill_trigger	
+	1150021507	fan_switch			\Default Work Unit\fan_switch	
 	1503347734	weight_drop_trigger			\Default Work Unit\Triggers\weight_drop_trigger	
+	1618369734	platinum_cheese_trigger			\Default Work Unit\Triggers\platinum_cheese_trigger	
 	1928594291	weight_drop			\Default Work Unit\weight_drop	
 	2522016532	weight_plank			\Default Work Unit\weight_plank	
 	2917121896	electricity			\Default Work Unit\electricity	
@@ -16,6 +18,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	3454382244	button_trigger			\Default Work Unit\Triggers\button_trigger	
 	3550336162	crane_release			\Default Work Unit\Crane\crane_release	
 	3559668272	crane_trigger_pickup			\Default Work Unit\Triggers\crane_trigger_pickup	
+	3712382502	fan_switch_trigger			\Default Work Unit\Triggers\fan_switch_trigger	
+	3804855510	platinum_cheese_collection			\Default Work Unit\platinum_cheese_collection	
 	3850141293	box_click			\Default Work Unit\box_click	
 	3997114622	lever_trigger			\Default Work Unit\Triggers\lever_trigger	
 	4202621657	push_object			\Default Work Unit\push_object	
@@ -48,6 +52,7 @@ Effect plug-ins	ID	Name	Type				Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	10004527	fx_lever_1	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fx_lever_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fx_lever_1		95104
+	75461629	UI_plaitnum_Cheese	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\UI_plaitnum_Cheese_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_plaitnum_Cheese		576064
 	76802143	Impact_Can_Medium_3	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Medium\Impact_Can_Medium_3		38464
 	87040156	Crane_Part_1	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\Voices\English(US)\Crane_Part_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\DiegeticNonCritical\Crane_Part_1		601950
 	162006207	Wood_Impact_Light	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Light\Wood_Impact_Light		8940
@@ -72,6 +77,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	821463885	Weight hit's plank	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Weight hit's plank_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Weight hit's plank		60216
 	832918321	Impact_Can_Very_Light	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Very_Light_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Light\Impact_Can_Very_Light		38464
 	864353628	Impact_Can_Medium_2	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Medium\Impact_Can_Medium_2		38464
+	880798746	fan_click	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\fan_click_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\fan_click		36586
 	890476972	Wood_Impact_Heavy_2	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Heavy_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy_2		13480
 	899333888	Wood_Impact_Heavy_1	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Wood_Impact_Heavy_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Wood\Heavy\Wood_Impact_Heavy_1		24376
 	931441282	Impact_Can_Medium	C:\Users\1502419\Downloads\Still\Idea4Prototype\Idea4Prototype_WwiseProject\.cache\Windows\SFX\Impact_Can_Medium_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Diegetic\Material\Metal\Impact_Can_Medium\Impact_Can_Medium		38464
