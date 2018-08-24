@@ -222,6 +222,7 @@ public class MovementUpdated : MonoBehaviour {
                     {
                         gameObject.GetComponent<Animator>().SetBool("isMoving", false);
                         gameObject.GetComponent<Animator>().SetBool("Jump", true);
+                        gameObject.GetComponent<Animator>().SetBool("isGrounded", false);
                     }
                     rigidbody.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
                     //Debug.Log("Strat");
@@ -248,10 +249,12 @@ public class MovementUpdated : MonoBehaviour {
             {
                 gameObject.GetComponent<Animator>().SetBool("JumpEnd", true);
                 gameObject.GetComponent<Animator>().SetBool("Jump", false);
+                gameObject.GetComponent<Animator>().SetBool("isGrounded", true);
             }
             if (gameObject.GetComponent<Animator>() != null && grounded == false)
             {
                 gameObject.GetComponent<Animator>().SetBool("JumpEnd", false);
+                gameObject.GetComponent<Animator>().SetBool("isGrounded", false);
             }
     }
     // Calculate the direction based on Camera

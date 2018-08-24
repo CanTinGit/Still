@@ -89,6 +89,7 @@ public class PauseScript : MonoBehaviour
     public void Pause()
     {
         FlipPausePanel();
+        AkSoundEngine.PostEvent("pause", gameObject);
      //   if (GameObject.Find("PausePanel") != null)
      //   { 
             GameObject.Find("PausePanel").transform.Find("Background").GetComponent<Animator>().SetTrigger("BounceIn");
@@ -105,6 +106,7 @@ public class PauseScript : MonoBehaviour
         // GameObject.Find("PausePanel").transform.Find("Background").GetComponent<Animator>().SetTrigger("BounceOut");
         //Invoke("FlipPausePanel", 1.0f);
         FlipPausePanel();
+        AkSoundEngine.PostEvent("unpause", gameObject);
         //FlipPausePanel();
         MenuScript.Instance.SetPlayerPaused(false);
             MenuScript.Instance.pausePlayerNum = 0;

@@ -11,13 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915e4feee9c236c46b967faed71c4350, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  CurrentPluginConfig: 
+  CurrentPluginConfig: Profile
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{500BFCE1-13E5-4744-8483-EE455319E53F}'
-    m_lastTimePsrt1: 1549482934
-    m_lastTimePart2: -1999238955
+    m_lastTimePsrt1: -1014738130
+    m_lastTimePart2: -1999238750
     List:
     - Name: acceptance_1
       Path: Default Work Unit\UI\acceptance_1
@@ -769,6 +769,16 @@ MonoBehaviour:
       ID: -2116744866
       Guid: 7d91431d8d70d74483dcff6f49d93102
       maxAttenuation: 0
+    - Name: stop_treadmill
+      Path: Default Work Unit\stop_treadmill
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_treadmill
+        ObjectType: 3
+      ID: 784405062
+      Guid: d77129cc02170a4683d61ac78b77cdca
+      maxAttenuation: 0
     - Name: throw
       Path: Default Work Unit\throw
       PathAndIcons:
@@ -1077,8 +1087,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E06E9023-E71B-4D11-AC67-507EEC9795F1}'
-    m_lastTimePsrt1: -104741610
-    m_lastTimePart2: -1999238917
+    m_lastTimePsrt1: -800268130
+    m_lastTimePart2: -1999238750
     List:
     - Name: Reverb
       Path: Default Work Unit\Master Audio Bus\Reverb
@@ -1267,8 +1277,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{C9727A14-0183-45DE-B6E8-F6F9D7E21B34}'
-    m_lastTimePsrt1: 1723512934
-    m_lastTimePart2: -1999238955
+    m_lastTimePsrt1: -1014628130
+    m_lastTimePart2: -1999238750
     List:
     - Name: Ambient
       Path: Default Work Unit\Ambient

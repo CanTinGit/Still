@@ -624,10 +624,8 @@
 			<ShortName>Level_Music</ShortName>
 			<Path>Level_Music.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3092587493" Name="pause" ObjectPath="\Events\Default Work Unit\UI\pause"/>
 				<Event Id="557932600" Name="play_level_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Level\play_level_music"/>
 				<Event Id="4055353338" Name="stop_level_music" ObjectPath="\Events\Default Work Unit\MusicEvents\Level\stop_level_music"/>
-				<Event Id="3412868374" Name="unpause" ObjectPath="\Events\Default Work Unit\UI\unpause"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="13560483" Language="SFX">
@@ -904,6 +902,7 @@
 				<Event Id="766957497" Name="pull_lever" ObjectPath="\Events\Default Work Unit\pull_lever"/>
 				<Event Id="4202621657" Name="push_object" ObjectPath="\Events\Default Work Unit\push_object"/>
 				<Event Id="60542055" Name="sploosh" ObjectPath="\Events\Default Work Unit\sploosh"/>
+				<Event Id="784405062" Name="stop_treadmill" ObjectPath="\Events\Default Work Unit\stop_treadmill"/>
 				<Event Id="745179803" Name="throw" ObjectPath="\Events\Default Work Unit\throw"/>
 				<Event Id="3540883198" Name="throw_trigger" ObjectPath="\Events\Default Work Unit\Triggers\throw_trigger"/>
 				<Event Id="3046263293" Name="treadmill" ObjectPath="\Events\Default Work Unit\treadmill"/>
@@ -1019,7 +1018,7 @@
 				</File>
 				<File Id="519500528" Language="SFX">
 					<ShortName>sploosh_1.wav</ShortName>
-					<Path>SFX\sploosh_1_22E803E3.wem</Path>
+					<Path>SFX\sploosh_1_7E2CA4EC.wem</Path>
 				</File>
 				<File Id="524659892" Language="SFX">
 					<ShortName>Wood_Impact_Light_2.wav</ShortName>
@@ -1043,7 +1042,7 @@
 				</File>
 				<File Id="641819409" Language="SFX">
 					<ShortName>sploosh_4.wav</ShortName>
-					<Path>SFX\sploosh_4_4D0895E7.wem</Path>
+					<Path>SFX\sploosh_4_121D6943.wem</Path>
 				</File>
 				<File Id="674416996" Language="SFX">
 					<ShortName>Impact_Can_Light_1.wav</ShortName>
@@ -1051,7 +1050,7 @@
 				</File>
 				<File Id="676003497" Language="SFX">
 					<ShortName>sploosh_2.wav</ShortName>
-					<Path>SFX\sploosh_2_C6EE8E13.wem</Path>
+					<Path>SFX\sploosh_2_FD22F83F.wem</Path>
 				</File>
 				<File Id="686754252" Language="SFX">
 					<ShortName>glass_breaK-3.wav</ShortName>

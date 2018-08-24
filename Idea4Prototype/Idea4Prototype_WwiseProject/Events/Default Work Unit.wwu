@@ -388,14 +388,10 @@
 								</Action>
 								<Action Name="" ID="{EC2B5A37-F4D2-43DD-8648-CBB035B1A6C8}" ShortID="716739919">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="ActionType" Type="int16" Value="8"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
 									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-										</Reference>
-									</ReferenceList>
+									<ReferenceList/>
 								</Action>
 							</ChildrenList>
 						</Event>
@@ -413,14 +409,10 @@
 								</Action>
 								<Action Name="" ID="{92761D0A-4DC9-40A5-BFCA-63DAD28D399A}" ShortID="703386514">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="ActionType" Type="int16" Value="10"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
 									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="LevelMusic" ID="{15F292FE-3EAF-4DEE-82E2-1EF5DD77D4AB}" WorkUnitID="{31E1E9BA-4A80-416A-A92F-F706AFA4839E}"/>
-										</Reference>
-									</ReferenceList>
+									<ReferenceList/>
 								</Action>
 							</ChildrenList>
 						</Event>
@@ -1492,6 +1484,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sploosh" ID="{17462B3F-E2C3-4021-A5A0-324C0CC1F2EE}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_treadmill" ID="{CC2971D7-1702-460A-83D6-1AC78B77CDCA}">
+					<ChildrenList>
+						<Action Name="" ID="{E2697FA9-8FA2-4B6E-B374-BC2A4C7C35B3}" ShortID="11864096">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="treadmill" ID="{4F11A042-E47B-4A8F-822B-9176506DF757}" WorkUnitID="{0EBF9503-EC00-49EC-B505-0AE21A5BEEF5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -77,6 +77,7 @@ namespace AK
         static const AkUniqueID SPLOOSH = 60542055U;
         static const AkUniqueID STOP_LEVEL_MUSIC = 4055353338U;
         static const AkUniqueID STOP_SCORE = 2178222430U;
+        static const AkUniqueID STOP_TREADMILL = 784405062U;
         static const AkUniqueID THROW = 745179803U;
         static const AkUniqueID THROW_CHARGE = 1625168126U;
         static const AkUniqueID THROW_TRIGGER = 3540883198U;

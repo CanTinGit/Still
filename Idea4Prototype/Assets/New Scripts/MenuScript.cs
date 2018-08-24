@@ -607,10 +607,13 @@ public class MenuScript : MonoBehaviour
         gamePaused = false;
         //flip the level and options panel off so they can not be seen
         numPlayers = 0;
+        p1InGame = false;
+        p2InGame = false;
+        p3InGame = false;
+        p4InGame = false;
         Invoke("DelayMainMenuMusic", 0.5f);
         ResetGameValues();
         //flip the level and options panel off so they can not be seen
-        numPlayers = 0;
         //AkSoundEngine.PostEvent("play_intro", gameObject);
         backToMenu = true;
 

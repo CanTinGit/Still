@@ -32,7 +32,8 @@ public class Treadmill : MonoBehaviour
     public float threadmillDelayPan;
     bool animateThreadmill;
     bool trigger = false;
-
+    bool audioTriggerChange = false;
+    uint treadmillId;
     void Start()
     {
         powerGenerated = 0.0f;
@@ -41,6 +42,12 @@ public class Treadmill : MonoBehaviour
         InvokeRepeating("IndicatorColorChange",0.0f, SpeedOfColorChange);
         machineUIColor = Color.red;
         buttonOn.transform.parent.GetComponent<MeshRenderer>().material.color = Color.white;
+        treadmillId = 0;
+        //AkSoundEngine.StopAll();
+        treadmillId = AkSoundEngine.PostEvent("treadmill_trigger", gameObject);
+
+        AkSoundEngine.SetRTPCValue("run_time", audioAKRTPC, gameObject, 500);
+        AkSoundEngine.SetRTPCValue("in_use", in_UseRTPC, gameObject, 500);
     }
 
     void LateUpdate()
@@ -92,6 +99,7 @@ public class Treadmill : MonoBehaviour
                     //powerIndicator.GetComponent<MeshRenderer>().material.color = Color.red;
                     threadmillState = ThreadmillState.Off;
                     buttonOn.transform.parent.GetComponent<MeshRenderer>().material.color = Color.white;
+                    audioTriggerChange = false;
                     //Invoke("DelayTreadmillStop", threadmillDelayPan);
                 }
             }
@@ -142,6 +150,7 @@ public class Treadmill : MonoBehaviour
             {
                 buttonOn.GetComponent<PressedButton>().enabled = false;
                 threadmillState = ThreadmillState.Off;
+
             }
             else
             {
@@ -173,26 +182,38 @@ public class Treadmill : MonoBehaviour
             case ThreadmillState.Powered:
                 ColorToChangeTo = Color.green;
                 audioAKRTPC = 0.4f;
-                if(on==true)
+                in_UseRTPC = 1.0f;
+                if (on==true)
                 {
-                    in_UseRTPC = 0.0f;
+                    // in_UseRTPC = 0.0f; old
+                    in_UseRTPC = 0.3f;
                 }
                 break;
             case ThreadmillState.Charging:
                 ColorToChangeTo = new Vector4(1.0f, 0.423f, 0.008f, 1.0f);
                 audioAKRTPC = 0.4f;
+                in_UseRTPC = 1.0f;
                 break;
             case ThreadmillState.Off:
                 ColorToChangeTo = Color.red;
                 audioAKRTPC = 0;
+                in_UseRTPC = 0;
                 break;
         }
+        Debug.Log("run_time " + audioAKRTPC + " in_use "+in_UseRTPC);
+        AkSoundEngine.SetRTPCValue("run_time", audioAKRTPC, gameObject, 500);
+        AkSoundEngine.SetRTPCValue("in_use", in_UseRTPC, gameObject, 500);
         //if the color of the machine needs to be changed then reset time
-        if(machineUIColor!= ColorToChangeTo)
+        if (machineUIColor!= ColorToChangeTo)
         {
             timeForSwitching = 0.0f;
             machineUIColor = ColorToChangeTo;
         }
+        //if(threadmillState==ThreadmillState.Off)
+        //{
+        //    AkSoundEngine.PostEvent("stop_treadmill", gameObject);
+        //    audioTriggerChange = false;
+        //}
         //until we got the correct colour keep lerping
         if (powerIndicator.GetComponent<MeshRenderer>().material.color != ColorToChangeTo)
         {
@@ -200,9 +221,14 @@ public class Treadmill : MonoBehaviour
             Color lerpedColor = Color.Lerp(powerIndicator.GetComponent<MeshRenderer>().material.color, ColorToChangeTo, timeForSwitching);
             //float trackRTCPValue =
             powerIndicator.GetComponent<MeshRenderer>().material.color = lerpedColor;
-            AkSoundEngine.PostEvent("treadmill_trigger", gameObject);
-            AkSoundEngine.SetRTPCValue("run_time", audioAKRTPC, gameObject, 500);
-            AkSoundEngine.SetRTPCValue("in_use", in_UseRTPC, gameObject, 500);
+            //if (audioTriggerChange == false)
+            //{
+            //    AkSoundEngine.PostEvent("treadmill_trigger", gameObject);
+            //    Debug.Log("treadmill called");
+            //    audioTriggerChange = true;
+            //}
+            //AkSoundEngine.SetRTPCValue("run_time", audioAKRTPC, gameObject, 500);
+            //AkSoundEngine.SetRTPCValue("in_use", in_UseRTPC, gameObject, 500);
 
         }
     }
